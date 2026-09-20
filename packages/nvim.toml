@@ -1,0 +1,31 @@
+[package]
+name = "nvim"
+description = "Neovim nightly"
+homepage = "https://neovim.io"
+license = "Apache-2.0"
+
+[version]
+from = "github-releases"
+repo = "neovim/neovim"
+tag = "nightly"
+
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://github.com/neovim/neovim/releases/download/{{tag}}/nvim-macos-arm64.tar.gz"
+strip = 1
+bin = ["bin/nvim"]
+man = ["share/man/man1/nvim.1"]
+
+[[artifact]]
+match = { os = "linux", arch = "amd64", libc = "glibc" }
+url = "https://github.com/neovim/neovim/releases/download/{{tag}}/nvim-linux-x86_64.tar.gz"
+strip = 1
+bin = ["bin/nvim"]
+man = ["share/man/man1/nvim.1"]
+
+[[artifact]]
+match = { os = "linux", arch = "arm64", libc = "glibc" }
+url = "https://github.com/neovim/neovim/releases/download/{{tag}}/nvim-linux-arm64.tar.gz"
+strip = 1
+bin = ["bin/nvim"]
+man = ["share/man/man1/nvim.1"]

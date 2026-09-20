@@ -1,0 +1,17 @@
+# Written by oku. Commit this file, and change it with oku commands only.
+
+include = []
+
+[[package]]
+name = 'nvim'
+ref = './packages/nvim.toml'
+manifest_sha256 = 'b8b44381b34f1aedf7eae5625936ccf997f9a35d1cd3cab94cd7521355b58ba3'
+version = '2026.09.20-a73243f'
+tag = 'nightly'
+tag_commit = 'a73243faa57726df3d80963a7afe604f2bbce1be'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz'
+sha256 = '5f9cff00df52727d4a998790a527668c174f44612ab861261834d07f91a6d745'

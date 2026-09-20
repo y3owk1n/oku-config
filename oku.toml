@@ -1,0 +1,2 @@
+[packages]
+nvim = "./packages/nvim.toml"
