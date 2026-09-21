@@ -1,0 +1,41 @@
+[package]
+name = "mole"
+description = "Clean, uninstall, analyze and monitor a Mac from the terminal"
+homepage = "https://github.com/tw93/Mole"
+license = "MIT"
+
+# The tags start with a capital V.
+[version]
+from = "github-releases"
+repo = "tw93/Mole"
+strip_prefix = "V"
+
+# The release holds the two Go helpers only. The mole program is a shell script
+# that wants lib/ and bin/ next to itself, so the tree goes to libexec and
+# bin/mole links to it. The script follows the link to find its files.
+[build]
+needs = ["git"]
+deps = [{ ref = "./go.toml", version = ">=1.26" }]
+source = { git = "https://github.com/tw93/Mole", tag = "{{tag}}" }
+
+[[build.step]]
+vendor = "go"
+
+[[build.step]]
+run = """
+set -eu
+go build -mod=vendor -trimpath -ldflags="-s -w" -o bin/analyze-go ./cmd/analyze
+go build -mod=vendor -trimpath -ldflags="-s -w" -o bin/status-go ./cmd/status
+"""
+shell = "sh"
+env = { GOFLAGS = "-buildvcs=false" }
+
+[[build.step]]
+run = """
+set -eu
+mkdir -p {{prefix}}/libexec/mole {{prefix}}/bin
+cp -R mole mo bin lib {{prefix}}/libexec/mole/
+ln -s ../libexec/mole/mole {{prefix}}/bin/mole
+ln -s ../libexec/mole/mo {{prefix}}/bin/mo
+"""
+shell = "sh"
