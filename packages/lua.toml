@@ -23,11 +23,13 @@ make install INSTALL_TOP={{prefix}} INSTALL_MAN={{prefix}}/share/man/man1
 shell = "sh"
 when = { os = "darwin" }
 
-# Not tested. Needs the readline headers on the machine.
+# `make linux` needs the readline headers, which a plain machine lacks. This is
+# the same build without readline: POSIX, and dlopen for the C modules that
+# luarocks installs. Only the prompt of `lua` loses line editing.
 [[build.step]]
 run = """
 sed -i.bak 's|#define LUA_ROOT.*|#define LUA_ROOT "{{prefix}}/"|' src/luaconf.h
-make linux -j{{jobs}}
+make posix -j{{jobs}} CFLAGS="-O2 -Wall -DLUA_USE_POSIX -DLUA_USE_DLOPEN" MYLIBS="-Wl,-E -ldl"
 make install INSTALL_TOP={{prefix}} INSTALL_MAN={{prefix}}/share/man/man1
 """
 shell = "sh"

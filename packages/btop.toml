@@ -10,6 +10,20 @@ from = "github-releases"
 repo = "aristocratos/btop"
 strip_prefix = "v"
 
+# Linux gets the static program from the release. The source needs a C++23
+# compiler, which Debian 12 and Ubuntu 22.04 do not have.
+[[artifact]]
+match = { os = "linux", arch = "arm64" }
+url = "https://github.com/aristocratos/btop/releases/download/{{tag}}/btop-aarch64-unknown-linux-musl.tar.gz"
+strip = 1
+bin = ["bin/btop"]
+
+[[artifact]]
+match = { os = "linux", arch = "amd64" }
+url = "https://github.com/aristocratos/btop/releases/download/{{tag}}/btop-x86_64-unknown-linux-musl.tar.gz"
+strip = 1
+bin = ["bin/btop"]
+
 [build]
 needs = ["c++", "make", "git"]
 source = { git = "https://github.com/aristocratos/btop", tag = "{{tag}}" }

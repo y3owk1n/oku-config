@@ -21,6 +21,25 @@ source = { url = "https://distfiles.ariadne.space/pkgconf/pkgconf-{{version}}.ta
 run = """
 ./configure --prefix={{prefix}} --disable-silent-rules --with-pkg-config-dir={{prefix}}/lib/pkgconfig \
   --with-system-libdir=/usr/lib --with-system-includedir=/usr/include
+"""
+shell = "sh"
+when = { os = "darwin" }
+
+# On Linux the libraries of the system, such as zlib and expat, have .pc files
+# in the directories of the distro. Debian and Ubuntu keep them under the name
+# of the machine, such as /usr/lib/aarch64-linux-gnu.
+[[build.step]]
+run = """
+triplet=$(cc -dumpmachine)
+./configure --prefix={{prefix}} --disable-silent-rules \
+  --with-pkg-config-dir={{prefix}}/lib/pkgconfig:/usr/local/lib/pkgconfig:/usr/lib/$triplet/pkgconfig:/usr/lib64/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig \
+  --with-system-libdir=/usr/lib:/usr/lib64:/usr/lib/$triplet --with-system-includedir=/usr/include
+"""
+shell = "sh"
+when = { os = "linux" }
+
+[[build.step]]
+run = """
 make -j{{jobs}}
 make install
 ln -s pkgconf {{prefix}}/bin/pkg-config

@@ -18,9 +18,13 @@ deps = ["./cmake.toml"]
 
 # The absolute install name dir lets the brotli program find its own libraries
 # in the store.
+# The two RPATH flags are for Linux. cmake passes its own -rpath, so the linker
+# ignores the LD_RUN_PATH that oku sets, and cmake drops the paths on install.
+# With the flags a library finds the others of this package and its deps.
 [[build.step]]
 run = """
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX={{prefix}} \
+  -DCMAKE_INSTALL_RPATH="{{prefix}}/lib${LD_RUN_PATH:+:$LD_RUN_PATH}" -DCMAKE_BUILD_RPATH="$LD_RUN_PATH" \
   -DCMAKE_INSTALL_NAME_DIR={{prefix}}/lib -DBUILD_TESTING=OFF
 cmake --build build -j{{jobs}}
 cmake --install build

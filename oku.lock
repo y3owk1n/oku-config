@@ -57,6 +57,16 @@ strategy = 'artifact'
 url = 'https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-darwin-arm64.tar.gz'
 sha256 = 'e2020b073c44f692685a24d6abc378817eb81ffaaf49fd0531ef8565f767f2f5'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-linux-amd64.tar.gz'
+sha256 = 'cbe24006683f8eb669266162894b9a522a1af52f2665fbc63a4bb032ed26ac10'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-linux-arm64.tar.gz'
+sha256 = '6b8dc4333c53a5a57c9e5834e3a48f92605d7154014cd07269ff3327db5d37f4'
+
 [[package]]
 name = 'ast-grep'
 ref = 'github:ast-grep/ast-grep'
@@ -72,6 +82,16 @@ strategy = 'artifact'
 url = 'https://github.com/ast-grep/ast-grep/releases/download/0.45.3/app-aarch64-apple-darwin.zip'
 sha256 = '6d2279dea5bea2ad79c66ea93f5fe54ba926e398a8a26de76c56db68fe59eac6'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/ast-grep/ast-grep/releases/download/0.45.3/app-x86_64-unknown-linux-gnu.zip'
+sha256 = 'f8ac830881339d1edee6b2652f54798c0f4da5a827f2db38a08ee31117783ce8'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/ast-grep/ast-grep/releases/download/0.45.3/app-aarch64-unknown-linux-gnu.zip'
+sha256 = 'b39cfbc58da4b869a88b8a4bc57bd5deb0d24541e704cf7c257da7b53ec81c8f'
+
 [[package]]
 name = 'atuin'
 ref = './packages/atuin.toml'
@@ -85,22 +105,41 @@ strategy = 'artifact'
 url = 'https://github.com/atuinsh/atuin/releases/download/v18.22.0/atuin-aarch64-apple-darwin.tar.gz'
 sha256 = '5e6e525f60147351f114397e7f09aeded87f302e99ef83a5eee74c524b805812'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/atuinsh/atuin/releases/download/v18.22.0/atuin-x86_64-unknown-linux-musl.tar.gz'
+sha256 = 'b3c123df1887cf27c6480a87d148c86831cd83da478e0a8ab773ca188f3f3222'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/atuinsh/atuin/releases/download/v18.22.0/atuin-aarch64-unknown-linux-musl.tar.gz'
+sha256 = '76d12818e3dff64ddac3b9f4ec63b305070ddcf5fc382a2a23dc0826fa9bf5a8'
+
 [[package]]
 name = 'bash-language-server'
 ref = 'npm:bash-language-server'
-manifest_sha256 = '6deca41be7764afc35a1f864cf8d78aef475df9be057c9e3a992c6bb631452d6'
+manifest_sha256 = 'd6e566163f95777d0e993ab75589c105349c8cb6c1849797b85e7dc6c99a4a93'
 version = '5.8.1'
 inferred = true
-manifest = "[package]\nname = \"bash-language-server\"\nhomepage = \"https://www.npmjs.com/package/bash-language-server\"\n\n[version]\nfrom = \"npm\"\nrepo = \"bash-language-server\"\n\n[runtime]\ndeps = [\"/Users/kylewong/.config/oku/packages/node.toml\"]\n\n[build]\ndeps = [\"/Users/kylewong/.config/oku/packages/node.toml\"]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"bash-language-server\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"bash-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/bash-language-server/out/cli.js\"] },\n] }\n"
+manifest = "[package]\nname = \"bash-language-server\"\nhomepage = \"https://www.npmjs.com/package/bash-language-server\"\n\n[version]\nfrom = \"npm\"\nrepo = \"bash-language-server\"\n\n[runtime]\ndeps = [\"./packages/node.toml\"]\n\n[build]\ndeps = [\"./packages/node.toml\"]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"bash-language-server\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"bash-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/bash-language-server/out/cli.js\"] },\n] }\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
+vendor_sha256 = '90d3f5e39ab327bea4f69955db3b589836e0851db641214d3e3a22be8838af0e'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
+vendor_sha256 = '90d3f5e39ab327bea4f69955db3b589836e0851db641214d3e3a22be8838af0e'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'build'
+vendor_sha256 = '90d3f5e39ab327bea4f69955db3b589836e0851db641214d3e3a22be8838af0e'
 
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
 version = '22.20.0'
 
 [package.dep.platform]
@@ -109,10 +148,20 @@ strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
 sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
 
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
+sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
+sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
+
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
 version = '22.20.0'
 
 [package.dep.platform]
@@ -120,6 +169,16 @@ version = '22.20.0'
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
 sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
+sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
+sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
 
 [[package]]
 name = 'bat'
@@ -133,6 +192,16 @@ tag = 'v0.26.1'
 strategy = 'artifact'
 url = 'https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-aarch64-apple-darwin.tar.gz'
 sha256 = 'e30beff26779c9bf60bb541e1d79046250cb74378f2757f8eb250afddb19e114'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-x86_64-unknown-linux-musl.tar.gz'
+sha256 = '0dcd8ac79732c0d5b136f11f4ee00e581440e16a44eab5b3105b611bbf2cf191'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-aarch64-unknown-linux-musl.tar.gz'
+sha256 = '6369242c584065f195fb20cb36fbd7cb63ae690605bbe89868a7596b596c2c23'
 
 [[package]]
 name = 'brave'
@@ -149,12 +218,18 @@ sha256 = 'f6823d53b3e9a287b8f8830b728ba9b34fe2d4a9f6ee4e05b3bcd4a21ee25eaf'
 [[package]]
 name = 'brotli'
 ref = './packages/brotli.toml'
-manifest_sha256 = '06188c5bcac8c9eb520830e7ba9cc3fcc5b1f474df56119a333f313e942e2ab5'
+manifest_sha256 = 'f4d7507099f7165764951db620037e6e1dcdb650b8d98ad40ea13ef78befdda0'
 version = '1.2.0'
 tag = 'v1.2.0'
 
 [package.platform]
 [package.platform.darwin-arm64]
+strategy = 'build'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.platform.linux-arm64-glibc]
 strategy = 'build'
 
 [[package.dep]]
@@ -170,16 +245,36 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package]]
 name = 'btop'
 ref = './packages/btop.toml'
-manifest_sha256 = 'cd3315f900d7ceeaa2b00e607c2af15956276cbc232796b0a125af132eed9404'
+manifest_sha256 = '6deca646505697313be5da7de82a1f57270fb744d990e6eb06a8eb8d95c138f7'
 version = '1.4.7'
 tag = 'v1.4.7'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/aristocratos/btop/releases/download/v1.4.7/btop-x86_64-unknown-linux-musl.tar.gz'
+sha256 = '5099054dd6a101bd12eb6ff3702a9a6a3f57aaa27923a0da478ae5b517faf335'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/aristocratos/btop/releases/download/v1.4.7/btop-aarch64-unknown-linux-musl.tar.gz'
+sha256 = '6270de0ef4c84cf0eea61cb148b3ad9ae91a11e9c3309867ffc6b3751024c252'
 
 [[package]]
 name = 'claude-code'
@@ -193,6 +288,16 @@ strategy = 'artifact'
 url = 'https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.278/darwin-arm64/claude'
 sha256 = 'bd245662fb8a0e321b3bf133e930371d6563c387527885f30b2613aef3ba14d6'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.278/linux-x64/claude'
+sha256 = '5c4735937844e84f8a93306e841a5b0e12252909b07870f789b190468da147ab'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.278/linux-arm64/claude'
+sha256 = '7de6cab134e48321148e30182c98614118e8f4666819412bead45865190b34ed'
+
 [[package]]
 name = 'coreutils'
 ref = './packages/coreutils.toml'
@@ -203,6 +308,8 @@ tag = 'v9.12'
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://ftp.gnu.org/gnu/coreutils/coreutils-9.12.tar.xz'
+sha256 = 'a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210'
 
 [[package]]
 name = 'difftastic'
@@ -219,6 +326,16 @@ strategy = 'artifact'
 url = 'https://github.com/Wilfred/difftastic/releases/download/0.71.0/difft-0.71.0-aarch64-apple-darwin.tar.gz'
 sha256 = '92acf8890543b6d6f436a87a7a5ec64f82a4b8dbe3a7e564c1e5cbfe60823bc7'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Wilfred/difftastic/releases/download/0.71.0/difft-0.71.0-x86_64-unknown-linux-gnu.tar.gz'
+sha256 = '61aea5394a53c56f144637cf39b3a0c0dafa27769731745e5851ff276e6478da'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Wilfred/difftastic/releases/download/0.71.0/difft-0.71.0-aarch64-unknown-linux-gnu.tar.gz'
+sha256 = '5f046098b36ff985d0f99fec6f22cf74961db60386ff9d40df39fd99660aae2c'
+
 [[package]]
 name = 'direnv'
 ref = 'github:direnv/direnv'
@@ -234,6 +351,16 @@ manifest = "[package]\nname = \"direnv\"\nhomepage = \"https://github.com/direnv
 strategy = 'artifact'
 url = 'https://github.com/direnv/direnv/releases/download/v2.37.1/direnv.darwin-arm64'
 sha256 = '4f569f3a36732bfd8b8fea7bfcc6ad87a59745c109022164d0ca4832451d5369'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/direnv/direnv/releases/download/v2.37.1/direnv.linux-amd64'
+sha256 = '1f1b93dd6f38523fde26dfac96151ef9d31a374e3005cd3345fb93555ae0c9b5'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/direnv/direnv/releases/download/v2.37.1/direnv.linux-arm64'
+sha256 = '2a9cef8d73521d6a3ec3f2871c4b747b8c4cc038628c1b57a7efa42b393a2d82'
 
 [[package]]
 name = 'discord'
@@ -257,6 +384,15 @@ tag = 'v0.23.5'
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
+vendor_sha256 = '9e2b544906cef85c54fa15a06960d8d2fa249aa7e65f183bf831d56a39458b4d'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
+vendor_sha256 = '9e2b544906cef85c54fa15a06960d8d2fa249aa7e65f183bf831d56a39458b4d'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'build'
+vendor_sha256 = '9e2b544906cef85c54fa15a06960d8d2fa249aa7e65f183bf831d56a39458b4d'
 
 [[package.dep]]
 name = 'rust'
@@ -266,6 +402,12 @@ version = '1.98.1'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 
 [[package]]
@@ -281,6 +423,16 @@ strategy = 'artifact'
 url = 'https://github.com/sharkdp/fd/releases/download/v10.5.0/fd-v10.5.0-aarch64-apple-darwin.tar.gz'
 sha256 = 'b67e1836c468e42e411984b56e52fa7abec08c2bd22c867398e7cc134aac5e12'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/sharkdp/fd/releases/download/v10.5.0/fd-v10.5.0-x86_64-unknown-linux-musl.tar.gz'
+sha256 = '761c72dc8e120d85b22292063be8a796e2eeb20eb3e4f38b8fa2343ccf3514a7'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/sharkdp/fd/releases/download/v10.5.0/fd-v10.5.0-aarch64-unknown-linux-musl.tar.gz'
+sha256 = 'd76c4317f7d5dba69f8a2a15856c90c777e7f0dd4e85f0de8c76de6992c374d4'
+
 [[package]]
 name = 'ffmpeg'
 ref = './packages/ffmpeg.toml'
@@ -294,6 +446,16 @@ strategy = 'artifact'
 url = 'https://github.com/eugeneware/ffmpeg-static/releases/download/b6.1.1/ffmpeg-darwin-arm64.gz'
 sha256 = '8923876afa8db5585022d7860ec7e589af192f441c56793971276d450ed3bbfa'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/eugeneware/ffmpeg-static/releases/download/b6.1.1/ffmpeg-linux-x64.gz'
+sha256 = 'bfe8a8fc511530457b528c48d77b5737527b504a3797a9bc4866aeca69c2dffa'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/eugeneware/ffmpeg-static/releases/download/b6.1.1/ffmpeg-linux-arm64.gz'
+sha256 = '754a678672298bc68156adff58aa7385a592c2b30b1d0ae8750c45c915c4bac0'
+
 [[package]]
 name = 'ffprobe'
 ref = './packages/ffprobe.toml'
@@ -306,6 +468,16 @@ tag = 'b6.1.1'
 strategy = 'artifact'
 url = 'https://github.com/eugeneware/ffmpeg-static/releases/download/b6.1.1/ffprobe-darwin-arm64.gz'
 sha256 = 'd986a8ec7b030899fe66a8a288ed809a3543338705a3ce178cfb85869c5d80be'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/eugeneware/ffmpeg-static/releases/download/b6.1.1/ffprobe-linux-x64.gz'
+sha256 = '25d9b6ccb05e3d9de9e04e31e2506d8dd7f9f0418981965ac6df12e8d3afd067'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/eugeneware/ffmpeg-static/releases/download/b6.1.1/ffprobe-linux-arm64.gz'
+sha256 = '2ab6aba60ee84412dff9188720703376cb4e7aaf7e0b5e43aa8249f2acae5bf8'
 
 [[package]]
 name = 'firefox'
@@ -331,22 +503,41 @@ strategy = 'artifact'
 url = 'https://github.com/fish-shell/fish-shell/releases/download/4.9.3/fish-4.9.3.app.zip'
 sha256 = '3619fa92d540ed0dff4816594429290550d21b92226e0523457e5f0242c5e9a8'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/fish-shell/fish-shell/releases/download/4.9.3/fish-4.9.3-linux-x86_64.tar.xz'
+sha256 = '8f643d10ad1abb0ef7072764c01ceb5cf61b2d373fda400cf60f0bad69b7e095'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/fish-shell/fish-shell/releases/download/4.9.3/fish-4.9.3-linux-aarch64.tar.xz'
+sha256 = '57349f0111728c64b703a84e611aa97ff4d1fa8466385d64e67bd5bc3ffa49fc'
+
 [[package]]
 name = 'fish-lsp'
 ref = 'npm:fish-lsp'
-manifest_sha256 = '46d2e6239c0ae05f36800dae6618058beb80854310ba6832f5cd726c37e7ae15'
+manifest_sha256 = 'ff8f26ea2ed3beed0064cbee595030a6231f1414656f16a62372fde0cf6e8992'
 version = '1.1.4'
 inferred = true
-manifest = "[package]\nname = \"fish-lsp\"\nhomepage = \"https://www.npmjs.com/package/fish-lsp\"\n\n[version]\nfrom = \"npm\"\nrepo = \"fish-lsp\"\n\n[runtime]\ndeps = [\"/Users/kylewong/.config/oku/packages/node.toml\"]\n\n[build]\ndeps = [\"/Users/kylewong/.config/oku/packages/node.toml\"]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"fish-lsp\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"fish-lsp\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/fish-lsp/dist/fish-lsp\"] },\n] }\n"
+manifest = "[package]\nname = \"fish-lsp\"\nhomepage = \"https://www.npmjs.com/package/fish-lsp\"\n\n[version]\nfrom = \"npm\"\nrepo = \"fish-lsp\"\n\n[runtime]\ndeps = [\"./packages/node.toml\"]\n\n[build]\ndeps = [\"./packages/node.toml\"]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"fish-lsp\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"fish-lsp\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/fish-lsp/dist/fish-lsp\"] },\n] }\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
+vendor_sha256 = 'bb7fc69f2a69f74ba69bdb42f551f30e14a23c24310c90f8bbc581ec26a920dd'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
+vendor_sha256 = 'bb7fc69f2a69f74ba69bdb42f551f30e14a23c24310c90f8bbc581ec26a920dd'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'build'
+vendor_sha256 = 'bb7fc69f2a69f74ba69bdb42f551f30e14a23c24310c90f8bbc581ec26a920dd'
 
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
 version = '22.20.0'
 
 [package.dep.platform]
@@ -355,10 +546,20 @@ strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
 sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
 
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
+sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
+sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
+
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
 version = '22.20.0'
 
 [package.dep.platform]
@@ -366,6 +567,16 @@ version = '22.20.0'
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
 sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
+sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
+sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
 
 [[package]]
 name = 'freebuff'
@@ -378,6 +589,16 @@ version = '0.0.180'
 strategy = 'artifact'
 url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.180/freebuff-darwin-arm64.tar.gz'
 sha256 = '4aa64802456762ab94e1d097ccd820f05c5d2b875a5f6f531c69c5d7cd21cb2f'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.180/freebuff-linux-x64.tar.gz'
+sha256 = 'f8d646cde3c89b47990ad47deb33cc91f0797c98b081c27fb2c8a4d56e4ce518'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.180/freebuff-linux-arm64.tar.gz'
+sha256 = 'cbdd673bdbb2b0075ce9436a02a74290d55bcb440a218b329015159fbb3a26cd'
 
 [[package]]
 name = 'fzf'
@@ -395,6 +616,16 @@ strategy = 'artifact'
 url = 'https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-darwin_arm64.tar.gz'
 sha256 = '4f6a113bfc0c7959e0005c78d566a51afc4fcefc956f43735c62a9deb19e92ae'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-linux_amd64.tar.gz'
+sha256 = '05e6813a337cc722c3ed07e54a764b75cc5d671e2e60459db0ba696ee5fa7504'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-linux_arm64.tar.gz'
+sha256 = '5d673b849f494f0d64ec471d8640b153ca8849e3846a31da17abdcfce8df6b46'
+
 [[package]]
 name = 'gh'
 ref = './packages/gh.toml'
@@ -408,6 +639,16 @@ strategy = 'artifact'
 url = 'https://github.com/cli/cli/releases/download/v2.101.0/gh_2.101.0_macOS_arm64.zip'
 sha256 = 'e4303e39d8f07141c4bad4b99b01079f05029c59b27076e8fbc825c985ecdd8b'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/cli/cli/releases/download/v2.101.0/gh_2.101.0_linux_amd64.tar.gz'
+sha256 = '9bca2d1c16825f109907a23307628a2f0698fbf99662b73a5cf0b020293072b8'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/cli/cli/releases/download/v2.101.0/gh_2.101.0_linux_arm64.tar.gz'
+sha256 = 'b57e8063f18862647c9d22727c32e9da1b963f8bf9db648fe123a6975695640f'
+
 [[package]]
 name = 'gh-actions-language-server'
 ref = './packages/gh-action-language-server.toml'
@@ -420,10 +661,20 @@ strategy = 'artifact'
 url = 'https://registry.npmjs.org/@actions/languageserver/-/languageserver-0.3.61.tgz'
 sha256 = 'd152725064c64f862da5158cd630d4c67973edfb58bdabaa44054ffef03b9d03'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://registry.npmjs.org/@actions/languageserver/-/languageserver-0.3.61.tgz'
+sha256 = 'd152725064c64f862da5158cd630d4c67973edfb58bdabaa44054ffef03b9d03'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://registry.npmjs.org/@actions/languageserver/-/languageserver-0.3.61.tgz'
+sha256 = 'd152725064c64f862da5158cd630d4c67973edfb58bdabaa44054ffef03b9d03'
+
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
 version = '22.20.0'
 
 [package.dep.platform]
@@ -431,6 +682,16 @@ version = '22.20.0'
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
 sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
+sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
+sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
 
 [[package]]
 name = 'ghostscript'
@@ -441,6 +702,18 @@ version = '10.08.0'
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10080/ghostscript-10.08.0.tar.xz'
+sha256 = 'c20492bc8ebb96c87fa2e52a0926e1cda8cde95d66145e018ac713fed5da38cf'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10080/ghostscript-10.08.0.tar.xz'
+sha256 = 'c20492bc8ebb96c87fa2e52a0926e1cda8cde95d66145e018ac713fed5da38cf'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10080/ghostscript-10.08.0.tar.xz'
+sha256 = 'c20492bc8ebb96c87fa2e52a0926e1cda8cde95d66145e018ac713fed5da38cf'
 
 [[package]]
 name = 'ghostty'
@@ -465,6 +738,18 @@ tag = 'v1.96'
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://www.lcdf.org/gifsicle/gifsicle-1.96.tar.gz'
+sha256 = 'fd23d279681a6dfe3c15264e33f344045b3ba473da4d19f49e67a50994b077fb'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://www.lcdf.org/gifsicle/gifsicle-1.96.tar.gz'
+sha256 = 'fd23d279681a6dfe3c15264e33f344045b3ba473da4d19f49e67a50994b077fb'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://www.lcdf.org/gifsicle/gifsicle-1.96.tar.gz'
+sha256 = 'fd23d279681a6dfe3c15264e33f344045b3ba473da4d19f49e67a50994b077fb'
 
 [[package]]
 name = 'git-lfs'
@@ -482,34 +767,68 @@ strategy = 'artifact'
 url = 'https://github.com/git-lfs/git-lfs/releases/download/v3.8.0/git-lfs-darwin-arm64-v3.8.0.zip'
 sha256 = 'caff76a7d070d8160c89bc39b6e85d98f24135b6fed038a3b4de2590d25102d8'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/git-lfs/git-lfs/releases/download/v3.8.0/git-lfs-linux-amd64-v3.8.0.tar.gz'
+sha256 = 'e455e00f15d9b95661b8d53498ffb0c3367962cf1ec73c31ab7369516cd6ab8d'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/git-lfs/git-lfs/releases/download/v3.8.0/git-lfs-linux-arm64-v3.8.0.tar.gz'
+sha256 = 'ac9c8efac980bb0505ead384d087e2acb6486fd8498691a2165fa174ec6118c2'
+
 [[package]]
 name = 'imagemagick'
 ref = './packages/imagemagick.toml'
-manifest_sha256 = '7c48859d4dd61519be2f2ef4545232f967f5ac6c3a2d1469c74afccab23e200e'
+manifest_sha256 = '460cb0a00a182e086846e151780b4def0757afd684a2ca38e8151ad49b788ccb'
 version = '7.1.2-31'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'build'
+
 [[package.dep]]
 name = 'pkgconf'
 ref = './packages/pkgconf.toml'
-manifest_sha256 = 'e07a24e7d6363cebc7d42579b533ecfe76846e2cc7fce460cf493851486cd878'
+manifest_sha256 = '1f781ae264f88c2031cc4ceac137b04c09f2f1d61d51f605851002ecfb38b306'
 version = '3.0.7'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.7.tar.xz'
+sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.7.tar.xz'
+sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.7.tar.xz'
+sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
 
 [[package.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
 version = '3.2.0'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 
 [[package.dep.dep]]
@@ -525,6 +844,16 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
@@ -534,16 +863,40 @@ version = '1.6.58'
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep]]
 name = 'libtiff'
 ref = './packages/libtiff.toml'
-manifest_sha256 = '9480822043b3122a68ac5e7a7378111feb3f703177acee1732824d66d22f2025'
+manifest_sha256 = 'b83986384e07d6b94ffc39107b3b6e329af2eb840befc94545620f32cd7bfde3'
 version = '4.7.2'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz'
+sha256 = '672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz'
+sha256 = '672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz'
+sha256 = '672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a'
 
 [[package.dep.dep]]
 name = 'cmake'
@@ -558,14 +911,30 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
 version = '3.2.0'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 
 [[package.dep.dep.dep]]
@@ -581,14 +950,30 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
 version = '3.2.0'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 
 [[package.dep.dep.dep]]
@@ -603,16 +988,38 @@ tag = 'v4.4.3'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[package.dep.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 
 [[package.dep]]
 name = 'libwebp-lib'
 ref = './packages/libwebp-lib.toml'
-manifest_sha256 = '83dc6b3957c9ed933f5f54ab6f25297f56c6515ab0795866153979c9af465768'
+manifest_sha256 = '59c81ec848630dec995be8422d8acc8c325f6dbdde6359313cdf674c8332ef4a'
 version = '1.6.0'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz'
+sha256 = 'e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz'
+sha256 = 'e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz'
+sha256 = 'e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564'
 
 [[package.dep.dep]]
 name = 'cmake'
@@ -627,15 +1034,37 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '145ef172ca8f1dc9b6fa9dee610307136a4f6ece60c9aa0dc055b4be76713aad'
+manifest_sha256 = 'ded58fce74e5b5c2da4ce4532350877a727cacc4742334e64c953828db3e3616'
 version = '2.14.3'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
 
 [[package.dep.dep]]
 name = 'cmake'
@@ -650,6 +1079,16 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
@@ -659,6 +1098,18 @@ version = '1.6.58'
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep.dep]]
 name = 'libpng'
@@ -669,6 +1120,18 @@ version = '1.6.58'
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep]]
 name = 'xz'
@@ -680,15 +1143,33 @@ tag = 'v5.8.4'
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz'
+sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz'
+sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz'
+sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
 
 [[package.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
 version = '3.2.0'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 
 [[package.dep.dep]]
@@ -704,6 +1185,16 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
@@ -713,16 +1204,40 @@ version = '1.6.58'
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep]]
 name = 'libtiff'
 ref = './packages/libtiff.toml'
-manifest_sha256 = '9480822043b3122a68ac5e7a7378111feb3f703177acee1732824d66d22f2025'
+manifest_sha256 = 'b83986384e07d6b94ffc39107b3b6e329af2eb840befc94545620f32cd7bfde3'
 version = '4.7.2'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz'
+sha256 = '672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz'
+sha256 = '672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz'
+sha256 = '672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a'
 
 [[package.dep.dep]]
 name = 'cmake'
@@ -737,14 +1252,30 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
 version = '3.2.0'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 
 [[package.dep.dep.dep]]
@@ -760,14 +1291,30 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
 version = '3.2.0'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 
 [[package.dep.dep.dep]]
@@ -782,16 +1329,38 @@ tag = 'v4.4.3'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[package.dep.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 
 [[package.dep]]
 name = 'libwebp-lib'
 ref = './packages/libwebp-lib.toml'
-manifest_sha256 = '83dc6b3957c9ed933f5f54ab6f25297f56c6515ab0795866153979c9af465768'
+manifest_sha256 = '59c81ec848630dec995be8422d8acc8c325f6dbdde6359313cdf674c8332ef4a'
 version = '1.6.0'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz'
+sha256 = 'e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz'
+sha256 = 'e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz'
+sha256 = 'e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564'
 
 [[package.dep.dep]]
 name = 'cmake'
@@ -806,15 +1375,37 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '145ef172ca8f1dc9b6fa9dee610307136a4f6ece60c9aa0dc055b4be76713aad'
+manifest_sha256 = 'ded58fce74e5b5c2da4ce4532350877a727cacc4742334e64c953828db3e3616'
 version = '2.14.3'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
 
 [[package.dep.dep]]
 name = 'cmake'
@@ -829,6 +1420,16 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
@@ -838,6 +1439,18 @@ version = '1.6.58'
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep.dep]]
 name = 'libpng'
@@ -848,6 +1461,18 @@ version = '1.6.58'
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep]]
 name = 'xz'
@@ -859,6 +1484,18 @@ tag = 'v5.8.4'
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz'
+sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz'
+sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz'
+sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
 
 [[package]]
 name = 'jetbrains-mono-nerd-font'
@@ -869,6 +1506,16 @@ tag = 'v3.5.1'
 
 [package.platform]
 [package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/JetBrainsMono.zip'
+sha256 = 'fab782a66f7d3019da64f6572db9fc5d3a4bcb19f9fa13e2d8a62e3693d6396e'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/JetBrainsMono.zip'
+sha256 = 'fab782a66f7d3019da64f6572db9fc5d3a4bcb19f9fa13e2d8a62e3693d6396e'
+
+[package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/JetBrainsMono.zip'
 sha256 = 'fab782a66f7d3019da64f6572db9fc5d3a4bcb19f9fa13e2d8a62e3693d6396e'
@@ -884,14 +1531,26 @@ tag = 'v1.5.6'
 [package.platform.darwin-arm64]
 strategy = 'build'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'build'
+
 [[package.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
 version = '3.2.0'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 
 [[package.dep.dep]]
@@ -907,14 +1566,30 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
 version = '3.2.0'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 
 [[package.dep.dep]]
@@ -929,6 +1604,16 @@ tag = 'v4.4.3'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 
 [[package]]
 name = 'jq'
@@ -945,6 +1630,16 @@ manifest = "[package]\nname = \"jq\"\nhomepage = \"https://github.com/jqlang/jq\
 strategy = 'artifact'
 url = 'https://github.com/jqlang/jq/releases/download/jq-1.8.2/jq-macos-arm64'
 sha256 = '2d75340ba57a4b4b4c8708a21c2dc8e958a48aaa8bba13b27f77f6e4c0eca07e'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/jqlang/jq/releases/download/jq-1.8.2/jq-linux-amd64'
+sha256 = 'b1c22172dd303f3be49e935aa56aa48a8b7a46e0bc838b4997d3bb451495870f'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/jqlang/jq/releases/download/jq-1.8.2/jq-linux-arm64'
+sha256 = '8b85c817833814ddca00a144c33705546355afccf0cf39b188f3cdb48b852309'
 
 [[package]]
 name = 'kanata'
@@ -975,6 +1670,16 @@ strategy = 'artifact'
 url = 'https://github.com/jesseduffield/lazygit/releases/download/v0.65.1/lazygit_0.65.1_darwin_arm64.tar.gz'
 sha256 = '65a367c6ea9a88efebaaf7998a6835eedb987e04916cef677264ff9b31b1b13e'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/jesseduffield/lazygit/releases/download/v0.65.1/lazygit_0.65.1_linux_x86_64.tar.gz'
+sha256 = '02beacbcda0fa342e50ae3480ba8147307353af3fb28e1d5f790e02329c201a6'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/jesseduffield/lazygit/releases/download/v0.65.1/lazygit_0.65.1_linux_arm64.tar.gz'
+sha256 = '49abecdf6adf4f2dfdb11bf7b9bfada267ea523612ed809d1c6d87f6c04000a7'
+
 [[package]]
 name = 'libwebp'
 ref = './packages/libwebp.toml'
@@ -988,15 +1693,37 @@ strategy = 'artifact'
 url = 'https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0-mac-arm64.tar.gz'
 sha256 = 'bc6bf84cc70f3f8574fba797d1e4a7dea4feebe9fa4be919f202413ea2b3b8f2'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0-linux-x86-64.tar.gz'
+sha256 = '1c5ffab71efecefa0e3c23516c3a3a1dccb45cc310ae1095c6f14ae268e38067'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0-linux-aarch64.tar.gz'
+sha256 = '69f5eebe203e0f3942fe37986209a1725741be19c152950a4283b376c95ec798'
+
 [[package]]
 name = 'lua'
 ref = './packages/lua.toml'
-manifest_sha256 = 'f29ce7c2afd76a55735a2bf8c0d0341f5060407cabb6a8736f718f14970a2338'
+manifest_sha256 = '773e83423d5120463d3dcee417c5ca2f7d64d43ccab4dfd78192d33f2a38096b'
 version = '5.1.5'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://www.lua.org/ftp/lua-5.1.5.tar.gz'
+sha256 = '2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://www.lua.org/ftp/lua-5.1.5.tar.gz'
+sha256 = '2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://www.lua.org/ftp/lua-5.1.5.tar.gz'
+sha256 = '2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333'
 
 [[package]]
 name = 'luarocks'
@@ -1008,31 +1735,67 @@ tag = 'v3.13.0'
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://luarocks.org/releases/luarocks-3.13.0.tar.gz'
+sha256 = '245bf6ec560c042cb8948e3d661189292587c5949104677f1eecddc54dbe7e37'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://luarocks.org/releases/luarocks-3.13.0.tar.gz'
+sha256 = '245bf6ec560c042cb8948e3d661189292587c5949104677f1eecddc54dbe7e37'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://luarocks.org/releases/luarocks-3.13.0.tar.gz'
+sha256 = '245bf6ec560c042cb8948e3d661189292587c5949104677f1eecddc54dbe7e37'
 
 [[package.dep]]
 name = 'lua'
 ref = './packages/lua.toml'
-manifest_sha256 = 'f29ce7c2afd76a55735a2bf8c0d0341f5060407cabb6a8736f718f14970a2338'
+manifest_sha256 = '773e83423d5120463d3dcee417c5ca2f7d64d43ccab4dfd78192d33f2a38096b'
 version = '5.1.5'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://www.lua.org/ftp/lua-5.1.5.tar.gz'
+sha256 = '2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://www.lua.org/ftp/lua-5.1.5.tar.gz'
+sha256 = '2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://www.lua.org/ftp/lua-5.1.5.tar.gz'
+sha256 = '2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333'
 
 [[package.dep]]
 name = 'lua'
 ref = './packages/lua.toml'
-manifest_sha256 = 'f29ce7c2afd76a55735a2bf8c0d0341f5060407cabb6a8736f718f14970a2338'
+manifest_sha256 = '773e83423d5120463d3dcee417c5ca2f7d64d43ccab4dfd78192d33f2a38096b'
 version = '5.1.5'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://www.lua.org/ftp/lua-5.1.5.tar.gz'
+sha256 = '2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://www.lua.org/ftp/lua-5.1.5.tar.gz'
+sha256 = '2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://www.lua.org/ftp/lua-5.1.5.tar.gz'
+sha256 = '2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333'
 
 [[package]]
 name = 'marksman'
 ref = './packages/marksman.toml'
-manifest_sha256 = 'a79bcae8b58c5c188657fc5646c03e98af76e1cc5481485cb10aed5beecb5e78'
+manifest_sha256 = '47a802ac909c5f0c52029abdfe25c8b5e03b60b1e93fa60a26c53b955b4da36f'
 version = '2026-02-08'
 
 [package.platform]
@@ -1040,6 +1803,16 @@ version = '2026-02-08'
 strategy = 'artifact'
 url = 'https://github.com/artempyanykh/marksman/releases/download/2026-02-08/marksman-macos'
 sha256 = '6a801c17b5ac0dba69787c5282b3b3bd416e66c96253fae098d311c6bbd1833b'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/artempyanykh/marksman/releases/download/2026-02-08/marksman-linux-x64'
+sha256 = 'be5098e8213219269c47fc0d916a66fa31ce0602ec967475c722260aabf26087'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/artempyanykh/marksman/releases/download/2026-02-08/marksman-linux-arm64'
+sha256 = 'db8e124527f7f8048e3e6c91821b9c52ef173d92c01e47d221bf1337afd962fb'
 
 [[package]]
 name = 'mimi'
@@ -1052,6 +1825,7 @@ tag_commit = '08e2b73280c89fcade25b19a42e161da2a06cb3b'
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
+vendor_sha256 = '57c96443cdb57e8b66883f800ec66fbb806d679fb42757aa4403fe4a3c0b7a9c'
 
 [[package.dep]]
 name = 'go'
@@ -1082,6 +1856,16 @@ strategy = 'artifact'
 url = 'https://github.com/FiloSottile/mkcert/releases/download/v1.4.4/mkcert-v1.4.4-darwin-arm64'
 sha256 = 'c8af0df44bce04359794dad8ea28d750437411d632748049d08644ffb66a60c6'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/FiloSottile/mkcert/releases/download/v1.4.4/mkcert-v1.4.4-linux-amd64'
+sha256 = '6d31c65b03972c6dc4a14ab429f2928300518b26503f58723e532d1b0a3bbb52'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/FiloSottile/mkcert/releases/download/v1.4.4/mkcert-v1.4.4-linux-arm64'
+sha256 = 'b98f2cc69fd9147fe4d405d859c57504571adec0d3611c3eefd04107c7ac00d0'
+
 [[package]]
 name = 'mole'
 ref = './packages/mole.toml'
@@ -1092,6 +1876,7 @@ tag = 'V1.55.0'
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
+vendor_sha256 = 'f09966fbbfa813463809f39ef2d7996d681617e22d5c608a8a704ebd48619cc1'
 
 [[package.dep]]
 name = 'go'
@@ -1109,14 +1894,23 @@ sha256 = 'ee215d57e0ec269c60cc9ceca68e6bda321ba9ee5afe24f4b0988703c2d87d12'
 [[package]]
 name = 'neru'
 ref = './packages/neru.toml'
-manifest_sha256 = 'f6d02a2dec637bd970b1d88ae7f0d37687b47cc743c75b3ca718f4f639eb4c56'
-version = '2026.09.19-1f70879'
+manifest_sha256 = '22e7924ef57f1e7f13b422b41a40f64afc55f031a423254cf2d055bf739154b7'
+version = '2026.09.21-4e71937'
 tag = 'main'
-tag_commit = '1f70879fb095143a5c450d707d7f9985f84c914c'
+tag_commit = '4e7193750a7b4894790869176f873155129b9019'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
+vendor_sha256 = '22df635c77134304b158d10e10c8ace5c6b0d9a732d1522517c809af7b0da7c3'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
+vendor_sha256 = '22df635c77134304b158d10e10c8ace5c6b0d9a732d1522517c809af7b0da7c3'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'build'
+vendor_sha256 = '22df635c77134304b158d10e10c8ace5c6b0d9a732d1522517c809af7b0da7c3'
 
 [[package.dep]]
 name = 'go'
@@ -1130,6 +1924,38 @@ tag = 'go1.26.8'
 strategy = 'artifact'
 url = 'https://dl.google.com/go/go1.26.8.darwin-arm64.tar.gz'
 sha256 = 'a012b25b571bd0138a03dcd25375ceba866fe5ca822f426d2c66a4de56fd3f4b'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://dl.google.com/go/go1.26.8.linux-amd64.tar.gz'
+sha256 = 'd0f743b33e8d8945e6b1f432edd15785c70507121d6e2a723b21285eddf8b57b'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://dl.google.com/go/go1.26.8.linux-arm64.tar.gz'
+sha256 = '211ffced9dcb9633a55eac6364816ec0ddd951389a740e88fa8b3337971bdda0'
+
+[[package]]
+name = 'node'
+ref = './packages/node.toml'
+manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
+version = '22.20.0'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
+sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
+sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
+sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
 
 [[package]]
 name = 'nvim'
@@ -1145,6 +1971,16 @@ strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz'
 sha256 = '02dc20462996c957aec1a4cecac113aac6395617d3c456bf787984d783647007'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz'
+sha256 = '971e0541910bfde3d9d22d44bfa3651ae4b9dc005b9484208994c43a775275eb'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-arm64.tar.gz'
+sha256 = '6110de36c7e04e6a3b13f766f53c457b768b13cc8c0489dfdbf21ccdc94e37dc'
+
 [[package]]
 name = 'opencode'
 ref = './packages/opencode.toml'
@@ -1158,6 +1994,16 @@ strategy = 'artifact'
 url = 'https://github.com/anomalyco/opencode/releases/download/v1.18.31/opencode-darwin-arm64.zip'
 sha256 = 'caf7f31fa1aec2353ea859d4ef9ab824c6273d941b016e88d51193fa3028d34e'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/anomalyco/opencode/releases/download/v1.18.31/opencode-linux-x64.tar.gz'
+sha256 = 'e9312be75ed803b7415fc2aeabda1f4fe938912a39673762dc0c38c0e11ebde4'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/anomalyco/opencode/releases/download/v1.18.31/opencode-linux-arm64.tar.gz'
+sha256 = 'd4e332f46b227448582c0d9fc75f6f826dfe95c9f751bc2011fc4d937a042be6'
+
 [[package]]
 name = 'optipng'
 ref = './packages/optipng.toml'
@@ -1167,11 +2013,23 @@ version = '7.9.1'
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/optipng/OptiPNG/optipng-7.9.1/optipng-7.9.1.tar.gz'
+sha256 = 'c2579be58c2c66dae9d63154edcb3d427fef64cb00ec0aff079c9d156ec46f29'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/optipng/OptiPNG/optipng-7.9.1/optipng-7.9.1.tar.gz'
+sha256 = 'c2579be58c2c66dae9d63154edcb3d427fef64cb00ec0aff079c9d156ec46f29'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/optipng/OptiPNG/optipng-7.9.1/optipng-7.9.1.tar.gz'
+sha256 = 'c2579be58c2c66dae9d63154edcb3d427fef64cb00ec0aff079c9d156ec46f29'
 
 [[package]]
 name = 'orbstack'
 ref = './packages/orbstack.toml'
-manifest_sha256 = '5566f820a51552387582c4a75c7a768fdb9f3fc774dc689a5f99121ed219f1b0'
+manifest_sha256 = '97f535a6ff803211badcf93cd7bec745f6be6fba75dacb9d557593ddf4fb13d2'
 version = '2.2.3'
 
 [package.platform]
@@ -1189,6 +2047,21 @@ version = '3.0.3'
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://crates.io/api/v1/crates/pngquant/3.0.3/download'
+sha256 = '68a12bdd8825f9989f4ee9a6ab0b42727dae57728b939ef63453366697a07232'
+vendor_sha256 = '54e379e8254c0a9b244e3bc31d1dae84ab2e56eb038cc36ea2d2313ba1b5a641'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://crates.io/api/v1/crates/pngquant/3.0.3/download'
+sha256 = '68a12bdd8825f9989f4ee9a6ab0b42727dae57728b939ef63453366697a07232'
+vendor_sha256 = '54e379e8254c0a9b244e3bc31d1dae84ab2e56eb038cc36ea2d2313ba1b5a641'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://crates.io/api/v1/crates/pngquant/3.0.3/download'
+sha256 = '68a12bdd8825f9989f4ee9a6ab0b42727dae57728b939ef63453366697a07232'
+vendor_sha256 = '54e379e8254c0a9b244e3bc31d1dae84ab2e56eb038cc36ea2d2313ba1b5a641'
 
 [[package.dep]]
 name = 'rust'
@@ -1198,6 +2071,12 @@ version = '1.98.1'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 
 [[package]]
@@ -1212,15 +2091,37 @@ strategy = 'artifact'
 url = 'https://github.com/itfoundry/Poppins/raw/v4.003/products/Poppins-4.003-GoogleFonts-TTF.zip'
 sha256 = '69cdf3e8bacecc99fd420186d26dd5769c004ee218034457b3691a1cf408967c'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/itfoundry/Poppins/raw/v4.003/products/Poppins-4.003-GoogleFonts-TTF.zip'
+sha256 = '69cdf3e8bacecc99fd420186d26dd5769c004ee218034457b3691a1cf408967c'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/itfoundry/Poppins/raw/v4.003/products/Poppins-4.003-GoogleFonts-TTF.zip'
+sha256 = '69cdf3e8bacecc99fd420186d26dd5769c004ee218034457b3691a1cf408967c'
+
 [[package]]
 name = 'poppler'
 ref = './packages/poppler.toml'
-manifest_sha256 = '38ae79db5e2c1fdf2d82ea319a012ff2ee0b9940a796ae93030a86be3a910034'
+manifest_sha256 = 'adeaea8e832d1ba35fe0d9a9c4c0072bc69426355308ae683e5d90db2b1a2de4'
 version = '26.09.0'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://poppler.freedesktop.org/poppler-26.09.0.tar.xz'
+sha256 = '8059eadb6805340768f138c465b57f8164c92b4a0773c37ef031ea6c0d987b2e'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://poppler.freedesktop.org/poppler-26.09.0.tar.xz'
+sha256 = '8059eadb6805340768f138c465b57f8164c92b4a0773c37ef031ea6c0d987b2e'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://poppler.freedesktop.org/poppler-26.09.0.tar.xz'
+sha256 = '8059eadb6805340768f138c465b57f8164c92b4a0773c37ef031ea6c0d987b2e'
 
 [[package.dep]]
 name = 'cmake'
@@ -1235,15 +2136,37 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '145ef172ca8f1dc9b6fa9dee610307136a4f6ece60c9aa0dc055b4be76713aad'
+manifest_sha256 = 'ded58fce74e5b5c2da4ce4532350877a727cacc4742334e64c953828db3e3616'
 version = '2.14.3'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
 
 [[package.dep.dep]]
 name = 'cmake'
@@ -1258,6 +2181,16 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
@@ -1267,6 +2200,18 @@ version = '1.6.58'
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep.dep]]
 name = 'libpng'
@@ -1277,6 +2222,18 @@ version = '1.6.58'
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep]]
 name = 'fontconfig'
@@ -1287,26 +2244,62 @@ version = '2.15.0'
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.15.0.tar.xz'
+sha256 = '63a0658d0e06e0fa886106452b58ef04f21f58202ea02a94c39de0d3335d7c0e'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.15.0.tar.xz'
+sha256 = '63a0658d0e06e0fa886106452b58ef04f21f58202ea02a94c39de0d3335d7c0e'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.15.0.tar.xz'
+sha256 = '63a0658d0e06e0fa886106452b58ef04f21f58202ea02a94c39de0d3335d7c0e'
 
 [[package.dep.dep]]
 name = 'pkgconf'
 ref = './packages/pkgconf.toml'
-manifest_sha256 = 'e07a24e7d6363cebc7d42579b533ecfe76846e2cc7fce460cf493851486cd878'
+manifest_sha256 = '1f781ae264f88c2031cc4ceac137b04c09f2f1d61d51f605851002ecfb38b306'
 version = '3.0.7'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.7.tar.xz'
+sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.7.tar.xz'
+sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.7.tar.xz'
+sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
 
 [[package.dep.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '145ef172ca8f1dc9b6fa9dee610307136a4f6ece60c9aa0dc055b4be76713aad'
+manifest_sha256 = 'ded58fce74e5b5c2da4ce4532350877a727cacc4742334e64c953828db3e3616'
 version = '2.14.3'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
 
 [[package.dep.dep.dep]]
 name = 'cmake'
@@ -1321,6 +2314,16 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
@@ -1330,6 +2333,18 @@ version = '1.6.58'
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep.dep.dep]]
 name = 'libpng'
@@ -1340,6 +2355,18 @@ version = '1.6.58'
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep.dep]]
 name = 'libpng'
@@ -1350,16 +2377,40 @@ version = '1.6.58'
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '145ef172ca8f1dc9b6fa9dee610307136a4f6ece60c9aa0dc055b4be76713aad'
+manifest_sha256 = 'ded58fce74e5b5c2da4ce4532350877a727cacc4742334e64c953828db3e3616'
 version = '2.14.3'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
 
 [[package.dep.dep.dep]]
 name = 'cmake'
@@ -1374,6 +2425,16 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
@@ -1383,6 +2444,18 @@ version = '1.6.58'
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep.dep.dep]]
 name = 'libpng'
@@ -1393,6 +2466,18 @@ version = '1.6.58'
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep.dep]]
 name = 'libpng'
@@ -1403,17 +2488,35 @@ version = '1.6.58'
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
 version = '3.2.0'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
 
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+
 [[package.dep.dep]]
 name = 'cmake'
 ref = './packages/cmake.toml'
@@ -1427,6 +2530,16 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
@@ -1436,16 +2549,40 @@ version = '1.6.58'
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep]]
 name = 'libtiff'
 ref = './packages/libtiff.toml'
-manifest_sha256 = '9480822043b3122a68ac5e7a7378111feb3f703177acee1732824d66d22f2025'
+manifest_sha256 = 'b83986384e07d6b94ffc39107b3b6e329af2eb840befc94545620f32cd7bfde3'
 version = '4.7.2'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz'
+sha256 = '672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz'
+sha256 = '672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz'
+sha256 = '672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a'
 
 [[package.dep.dep]]
 name = 'cmake'
@@ -1460,14 +2597,30 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
 version = '3.2.0'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 
 [[package.dep.dep.dep]]
@@ -1483,14 +2636,30 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
 version = '3.2.0'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 
 [[package.dep.dep.dep]]
@@ -1505,11 +2674,21 @@ tag = 'v4.4.3'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[package.dep.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 
 [[package.dep]]
 name = 'openjpeg'
 ref = './packages/openjpeg.toml'
-manifest_sha256 = 'c4bdc8bd41fc7dfa4ed0cdfecf82bf9ce8cbe463f13f8ee37a6b229c41f08392'
+manifest_sha256 = 'e0e7af3fb406b8318e2c0435888c9b6171efec9fa2252b185a6e963a4ee5a5b5'
 version = '2.5.4'
 tag = 'v2.5.4'
 
@@ -1517,6 +2696,12 @@ tag = 'v2.5.4'
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
 
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+
 [[package.dep.dep]]
 name = 'cmake'
 ref = './packages/cmake.toml'
@@ -1530,15 +2715,37 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '145ef172ca8f1dc9b6fa9dee610307136a4f6ece60c9aa0dc055b4be76713aad'
+manifest_sha256 = 'ded58fce74e5b5c2da4ce4532350877a727cacc4742334e64c953828db3e3616'
 version = '2.14.3'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
 
 [[package.dep.dep]]
 name = 'cmake'
@@ -1553,6 +2760,16 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
@@ -1562,6 +2779,18 @@ version = '1.6.58'
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep.dep]]
 name = 'libpng'
@@ -1572,6 +2801,18 @@ version = '1.6.58'
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep]]
 name = 'fontconfig'
@@ -1582,26 +2823,62 @@ version = '2.15.0'
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.15.0.tar.xz'
+sha256 = '63a0658d0e06e0fa886106452b58ef04f21f58202ea02a94c39de0d3335d7c0e'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.15.0.tar.xz'
+sha256 = '63a0658d0e06e0fa886106452b58ef04f21f58202ea02a94c39de0d3335d7c0e'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.15.0.tar.xz'
+sha256 = '63a0658d0e06e0fa886106452b58ef04f21f58202ea02a94c39de0d3335d7c0e'
 
 [[package.dep.dep]]
 name = 'pkgconf'
 ref = './packages/pkgconf.toml'
-manifest_sha256 = 'e07a24e7d6363cebc7d42579b533ecfe76846e2cc7fce460cf493851486cd878'
+manifest_sha256 = '1f781ae264f88c2031cc4ceac137b04c09f2f1d61d51f605851002ecfb38b306'
 version = '3.0.7'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.7.tar.xz'
+sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.7.tar.xz'
+sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.7.tar.xz'
+sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
 
 [[package.dep.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '145ef172ca8f1dc9b6fa9dee610307136a4f6ece60c9aa0dc055b4be76713aad'
+manifest_sha256 = 'ded58fce74e5b5c2da4ce4532350877a727cacc4742334e64c953828db3e3616'
 version = '2.14.3'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
 
 [[package.dep.dep.dep]]
 name = 'cmake'
@@ -1616,6 +2893,16 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
@@ -1625,6 +2912,18 @@ version = '1.6.58'
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep.dep.dep]]
 name = 'libpng'
@@ -1635,6 +2934,18 @@ version = '1.6.58'
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep.dep]]
 name = 'libpng'
@@ -1645,16 +2956,40 @@ version = '1.6.58'
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '145ef172ca8f1dc9b6fa9dee610307136a4f6ece60c9aa0dc055b4be76713aad'
+manifest_sha256 = 'ded58fce74e5b5c2da4ce4532350877a727cacc4742334e64c953828db3e3616'
 version = '2.14.3'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
+sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
 
 [[package.dep.dep.dep]]
 name = 'cmake'
@@ -1669,6 +3004,16 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
@@ -1678,6 +3023,18 @@ version = '1.6.58'
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep.dep.dep]]
 name = 'libpng'
@@ -1688,6 +3045,18 @@ version = '1.6.58'
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep.dep]]
 name = 'libpng'
@@ -1698,17 +3067,35 @@ version = '1.6.58'
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
 version = '3.2.0'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
 
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+
 [[package.dep.dep]]
 name = 'cmake'
 ref = './packages/cmake.toml'
@@ -1722,6 +3109,16 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
@@ -1731,16 +3128,40 @@ version = '1.6.58'
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
+sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 
 [[package.dep]]
 name = 'libtiff'
 ref = './packages/libtiff.toml'
-manifest_sha256 = '9480822043b3122a68ac5e7a7378111feb3f703177acee1732824d66d22f2025'
+manifest_sha256 = 'b83986384e07d6b94ffc39107b3b6e329af2eb840befc94545620f32cd7bfde3'
 version = '4.7.2'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz'
+sha256 = '672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz'
+sha256 = '672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz'
+sha256 = '672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a'
 
 [[package.dep.dep]]
 name = 'cmake'
@@ -1755,14 +3176,30 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
 version = '3.2.0'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 
 [[package.dep.dep.dep]]
@@ -1778,14 +3215,30 @@ strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
 
+[package.dep.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
+
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
 version = '3.2.0'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 
 [[package.dep.dep.dep]]
@@ -1800,11 +3253,21 @@ tag = 'v4.4.3'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[package.dep.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 
 [[package.dep]]
 name = 'openjpeg'
 ref = './packages/openjpeg.toml'
-manifest_sha256 = 'c4bdc8bd41fc7dfa4ed0cdfecf82bf9ce8cbe463f13f8ee37a6b229c41f08392'
+manifest_sha256 = 'e0e7af3fb406b8318e2c0435888c9b6171efec9fa2252b185a6e963a4ee5a5b5'
 version = '2.5.4'
 tag = 'v2.5.4'
 
@@ -1812,6 +3275,12 @@ tag = 'v2.5.4'
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
 
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+
 [[package.dep.dep]]
 name = 'cmake'
 ref = './packages/cmake.toml'
@@ -1824,23 +3293,42 @@ tag = 'v4.4.3'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
 sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-x86_64.tar.gz'
+sha256 = 'd6c83076c575bc00b823522ac974bda66d0af05d6ddc30e739c12385cf32c6cc'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-linux-aarch64.tar.gz'
+sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 
 [[package]]
 name = 'prettierd'
 ref = 'npm:@fsouza/prettierd'
-manifest_sha256 = '470052929b16bce7dd4bdbaf871341f7b7b6d63f44d3a48fe547e88bd88690d2'
+manifest_sha256 = '7fa41d7e3dd01749a50e3861509ae630f86ef31d96919c2adf98710d2a157b95'
 version = '0.29.0'
 inferred = true
-manifest = "[package]\nname = \"prettierd\"\nhomepage = \"https://www.npmjs.com/package/@fsouza/prettierd\"\n\n[version]\nfrom = \"npm\"\nrepo = \"@fsouza/prettierd\"\n\n[runtime]\ndeps = [\"/Users/kylewong/.config/oku/packages/node.toml\"]\n\n[build]\ndeps = [\"/Users/kylewong/.config/oku/packages/node.toml\"]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"@fsouza/prettierd\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"prettierd\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/@fsouza/prettierd/bin/prettierd\"] },\n] }\n"
+manifest = "[package]\nname = \"prettierd\"\nhomepage = \"https://www.npmjs.com/package/@fsouza/prettierd\"\n\n[version]\nfrom = \"npm\"\nrepo = \"@fsouza/prettierd\"\n\n[runtime]\ndeps = [\"./packages/node.toml\"]\n\n[build]\ndeps = [\"./packages/node.toml\"]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"@fsouza/prettierd\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"prettierd\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/@fsouza/prettierd/bin/prettierd\"] },\n] }\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
+vendor_sha256 = '62fc7f6aa5bf2da521ef14c26b703fe3367f7dd7a1023cff97104216eb30fe68'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
+vendor_sha256 = '62fc7f6aa5bf2da521ef14c26b703fe3367f7dd7a1023cff97104216eb30fe68'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'build'
+vendor_sha256 = '62fc7f6aa5bf2da521ef14c26b703fe3367f7dd7a1023cff97104216eb30fe68'
 
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
 version = '22.20.0'
 
 [package.dep.platform]
@@ -1849,10 +3337,20 @@ strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
 sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
 
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
+sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
+sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
+
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
 version = '22.20.0'
 
 [package.dep.platform]
@@ -1860,6 +3358,16 @@ version = '22.20.0'
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
 sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
+sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
+sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
 
 [[package]]
 name = 'rip2'
@@ -1877,6 +3385,16 @@ strategy = 'artifact'
 url = 'https://github.com/MilesCranmer/rip2/releases/download/v0.9.6/rip-macOS-Darwin-aarch64.tar.gz'
 sha256 = 'b8fbf7b5acb14ce5d5746cc17c8e4b8ef7e60f8c83e3cfcd5243f822219afbcd'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/MilesCranmer/rip2/releases/download/v0.9.6/rip-Linux-x86_64-musl.tar.gz'
+sha256 = '305841c106173a78a11685074d2b1014e3bb66bf20a9da08b3d887e411b8cdd5'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/MilesCranmer/rip2/releases/download/v0.9.6/rip-Linux-aarch64-musl.tar.gz'
+sha256 = 'd0049710f0063ab810bfd58e7dc52ff54aa36da967487d4ac7f50200f6f800ac'
+
 [[package]]
 name = 'ripgrep'
 ref = './packages/ripgrep.toml'
@@ -1888,6 +3406,16 @@ version = '15.2.0'
 strategy = 'artifact'
 url = 'https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-aarch64-apple-darwin.tar.gz'
 sha256 = '3750b2e93f37e0c692657da574d7019a101c0084da05a790c83fd335bad973e4'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-unknown-linux-musl.tar.gz'
+sha256 = '33e15bcf1624b25cdd2a55813a47a2f95dbe126268203e76aa6a585d1e7b149c'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-aarch64-unknown-linux-gnu.tar.gz'
+sha256 = 'a740b91c82eaf9914cfedd353572f2791cbe0162c84101ee0951058f4dcbc90d'
 
 [[package]]
 name = 'sesh'
@@ -1904,6 +3432,16 @@ manifest = "[package]\nname = \"sesh\"\nhomepage = \"https://github.com/joshmede
 strategy = 'artifact'
 url = 'https://github.com/joshmedeski/sesh/releases/download/v2.30.1/sesh_Darwin_arm64.tar.gz'
 sha256 = 'fb4bc819ee82adffb004dd223f17a3436318abffb00c252b562128481fb9c441'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/joshmedeski/sesh/releases/download/v2.30.1/sesh_Linux_x86_64.tar.gz'
+sha256 = '55b15db5b03b9864c4c2c45bd1099225e46ff67f1fbfdb596ea26e95d87a3ac0'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/joshmedeski/sesh/releases/download/v2.30.1/sesh_Linux_arm64.tar.gz'
+sha256 = '75a45ff751e514e40588e086c55b3c7f8a853a577ad1a7da045cffac478485b6'
 
 [[package]]
 name = 'skhd'
@@ -1930,6 +3468,16 @@ strategy = 'artifact'
 url = 'https://github.com/anthropics/skills/archive/34040c9c568585f6929bedeaad110ad08f079624.tar.gz'
 sha256 = '94527d9bf3b49a8951aba1ce9420a37079f1a6677accca4b04435c79aabbe5bb'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/anthropics/skills/archive/34040c9c568585f6929bedeaad110ad08f079624.tar.gz'
+sha256 = '94527d9bf3b49a8951aba1ce9420a37079f1a6677accca4b04435c79aabbe5bb'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/anthropics/skills/archive/34040c9c568585f6929bedeaad110ad08f079624.tar.gz'
+sha256 = '94527d9bf3b49a8951aba1ce9420a37079f1a6677accca4b04435c79aabbe5bb'
+
 [[package]]
 name = 'skills-caveman'
 ref = './packages/skills-caveman.toml'
@@ -1938,6 +3486,16 @@ version = '2026.09.20-3ee70a1'
 
 [package.platform]
 [package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/JuliusBrussee/caveman/archive/3ee70a102609e550bd2e68004bf5990a9341c851.tar.gz'
+sha256 = 'c4c00c40e3d4db1c3223f5f8433f09ed847cede7fdfce3bb839fdacb8a0d7d50'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/JuliusBrussee/caveman/archive/3ee70a102609e550bd2e68004bf5990a9341c851.tar.gz'
+sha256 = 'c4c00c40e3d4db1c3223f5f8433f09ed847cede7fdfce3bb839fdacb8a0d7d50'
+
+[package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/JuliusBrussee/caveman/archive/3ee70a102609e550bd2e68004bf5990a9341c851.tar.gz'
 sha256 = 'c4c00c40e3d4db1c3223f5f8433f09ed847cede7fdfce3bb839fdacb8a0d7d50'
@@ -1954,6 +3512,16 @@ strategy = 'artifact'
 url = 'https://github.com/cursor/plugins/archive/032be146865d973682535de75f2287da438550bf.tar.gz'
 sha256 = '1d9c0f75def9a97cedd8cfff5eadc60475c03913a33ed9880bf8987999b3761f'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/cursor/plugins/archive/032be146865d973682535de75f2287da438550bf.tar.gz'
+sha256 = '1d9c0f75def9a97cedd8cfff5eadc60475c03913a33ed9880bf8987999b3761f'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/cursor/plugins/archive/032be146865d973682535de75f2287da438550bf.tar.gz'
+sha256 = '1d9c0f75def9a97cedd8cfff5eadc60475c03913a33ed9880bf8987999b3761f'
+
 [[package]]
 name = 'skills-emil'
 ref = './packages/skills-emil.toml'
@@ -1966,6 +3534,16 @@ strategy = 'artifact'
 url = 'https://github.com/emilkowalski/skills/archive/85e8e2363b713506e1d5b6e07a0eb2da66be1bc3.tar.gz'
 sha256 = '69f46138691673003b6487381c6126463b1cd32a5f5c17b4cf610124a72840a4'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/emilkowalski/skills/archive/85e8e2363b713506e1d5b6e07a0eb2da66be1bc3.tar.gz'
+sha256 = '69f46138691673003b6487381c6126463b1cd32a5f5c17b4cf610124a72840a4'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/emilkowalski/skills/archive/85e8e2363b713506e1d5b6e07a0eb2da66be1bc3.tar.gz'
+sha256 = '69f46138691673003b6487381c6126463b1cd32a5f5c17b4cf610124a72840a4'
+
 [[package]]
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
@@ -1974,6 +3552,16 @@ version = '2026.09.17-a87a63b'
 
 [package.platform]
 [package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/shadcn-ui/ui/archive/a87a63b2ca25143d26c8bd0903e4e9bc77b3f824.tar.gz'
+sha256 = '1b4af84e6362ed3273b78ac16e262149b32e6b8369588909fb8a2047e3014291'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/shadcn-ui/ui/archive/a87a63b2ca25143d26c8bd0903e4e9bc77b3f824.tar.gz'
+sha256 = '1b4af84e6362ed3273b78ac16e262149b32e6b8369588909fb8a2047e3014291'
+
+[package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/shadcn-ui/ui/archive/a87a63b2ca25143d26c8bd0903e4e9bc77b3f824.tar.gz'
 sha256 = '1b4af84e6362ed3273b78ac16e262149b32e6b8369588909fb8a2047e3014291'
@@ -1994,6 +3582,16 @@ strategy = 'artifact'
 url = 'https://github.com/getsops/sops/releases/download/v3.13.3/sops-v3.13.3.darwin.arm64'
 sha256 = 'b97c0d434aab577dc40310e8d22ff9e45eef4c80638ab978daae9b4681c59286'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/getsops/sops/releases/download/v3.13.3/sops-v3.13.3.linux.amd64'
+sha256 = 'e5bec3346a873ae91d871550f3e698c1aad962aff462a080e40f25fde17fef6b'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/getsops/sops/releases/download/v3.13.3/sops-v3.13.3.linux.arm64'
+sha256 = '53b0abacd38ef1b12a66d6c100956691b9cefce018d91f81e73ddf7438b94d77'
+
 [[package]]
 name = 'starship'
 ref = 'github:starship/starship'
@@ -2009,6 +3607,16 @@ manifest = "[package]\nname = \"starship\"\nhomepage = \"https://github.com/star
 strategy = 'artifact'
 url = 'https://github.com/starship/starship/releases/download/v1.26.0/starship-aarch64-apple-darwin.tar.gz'
 sha256 = 'c40b27b11f580411e068f2fa6c1be7830a387c0bc47a94d1d37f32b054c5361d'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/starship/starship/releases/download/v1.26.0/starship-x86_64-unknown-linux-gnu.tar.gz'
+sha256 = '321f0dd7af8340a5f2e6a8fec6538a04f617486f9ec70d878f91c09cd8deef22'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/starship/starship/releases/download/v1.26.0/starship-aarch64-unknown-linux-musl.tar.gz'
+sha256 = 'dc30189378d2f2e287384e8a692d3f95ad1df64cf0e8c36aa9201516028aed6b'
 
 [[package]]
 name = 'stripe-cli'
@@ -2026,6 +3634,16 @@ strategy = 'artifact'
 url = 'https://github.com/stripe/stripe-cli/releases/download/v1.51.0/stripe_1.51.0_mac-os_arm64.tar.gz'
 sha256 = '1c678a9a8e19b88a608878903a61caac6a9a513660772a1f6dc9a08c0f863ffb'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/stripe/stripe-cli/releases/download/v1.51.0/stripe_1.51.0_linux_x86_64.tar.gz'
+sha256 = 'e49d94a6805d726aeec50353436c665d22aa3258b8ccf85c207968e5c99be52d'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/stripe/stripe-cli/releases/download/v1.51.0/stripe_1.51.0_linux_arm64.tar.gz'
+sha256 = 'c4b0a2e0d2d44497154aa98deece3abe859d40098493766055949b80828dcd7d'
+
 [[package]]
 name = 'symbols-nerd-font'
 ref = './packages/symbols-nerd-font.toml'
@@ -2035,6 +3653,16 @@ tag = 'v3.5.1'
 
 [package.platform]
 [package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/NerdFontsSymbolsOnly.zip'
+sha256 = 'fdca3682534f6f65e1ccb2345b0362ccf67d9b8eca7c8025330946e93e2473bc'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/NerdFontsSymbolsOnly.zip'
+sha256 = 'fdca3682534f6f65e1ccb2345b0362ccf67d9b8eca7c8025330946e93e2473bc'
+
+[package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/NerdFontsSymbolsOnly.zip'
 sha256 = 'fdca3682534f6f65e1ccb2345b0362ccf67d9b8eca7c8025330946e93e2473bc'
@@ -2052,6 +3680,16 @@ strategy = 'artifact'
 url = 'https://github.com/tmux/tmux-builds/releases/download/v3.7c/tmux-3.7c-macos-arm64.tar.gz'
 sha256 = '0a763dd0380aa980d239509654da1bc7455843706a3c050f6709c8cd2e13d12d'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/tmux/tmux-builds/releases/download/v3.7c/tmux-3.7c-linux-x86_64.tar.gz'
+sha256 = 'cc56bd1cc873eb6089c615f0496b072385bda8a6d944069f38564a5d49c128aa'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/tmux/tmux-builds/releases/download/v3.7c/tmux-3.7c-linux-arm64.tar.gz'
+sha256 = '29dcb978da2a4b0cf6790f9e004865dac239a3ba03bbf776dddacce23d03831b'
+
 [[package]]
 name = 'tree-sitter'
 ref = 'github:tree-sitter/tree-sitter'
@@ -2067,6 +3705,16 @@ manifest = "[package]\nname = \"tree-sitter\"\nhomepage = \"https://github.com/t
 strategy = 'artifact'
 url = 'https://github.com/tree-sitter/tree-sitter/releases/download/v0.27.0/tree-sitter-cli-macos-arm64.zip'
 sha256 = 'f278063d8544160f6f89f7f8dba6ba112cb0dd1669757788d2bb7a8a613d2c58'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/tree-sitter/tree-sitter/releases/download/v0.27.0/tree-sitter-cli-linux-x64.zip'
+sha256 = 'e4a3826bcd0fe099ee3a5617767374939cbc23c4a35b5b53f5fc04142525a2c1'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/tree-sitter/tree-sitter/releases/download/v0.27.0/tree-sitter-cli-linux-arm64.zip'
+sha256 = '6260b621bf5ab87027dfb463bf955504ef32cdcda62b81f28447753e48c83a62'
 
 [[package]]
 name = 'utm'
@@ -2092,6 +3740,15 @@ tag_commit = '642ffbdcf9ef3f0dec16f769b491c1ddee685aad'
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
+vendor_sha256 = 'c811091b33bc4d469b6486407436ba84f17e2d8f0e1a0ef300a4920b793909d7'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
+vendor_sha256 = 'c811091b33bc4d469b6486407436ba84f17e2d8f0e1a0ef300a4920b793909d7'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'build'
+vendor_sha256 = 'c811091b33bc4d469b6486407436ba84f17e2d8f0e1a0ef300a4920b793909d7'
 
 [[package.dep]]
 name = 'go'
@@ -2105,6 +3762,16 @@ tag = 'go1.26.8'
 strategy = 'artifact'
 url = 'https://dl.google.com/go/go1.26.8.darwin-arm64.tar.gz'
 sha256 = 'a012b25b571bd0138a03dcd25375ceba866fe5ca822f426d2c66a4de56fd3f4b'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://dl.google.com/go/go1.26.8.linux-amd64.tar.gz'
+sha256 = 'd0f743b33e8d8945e6b1f432edd15785c70507121d6e2a723b21285eddf8b57b'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://dl.google.com/go/go1.26.8.linux-arm64.tar.gz'
+sha256 = '211ffced9dcb9633a55eac6364816ec0ddd951389a740e88fa8b3337971bdda0'
 
 [[package]]
 name = 'virtualbuddy'
@@ -2121,19 +3788,28 @@ sha256 = '6ed17e8d7245931fd405c419321ace7ef9333fe2e3d59b3a7f78e34fcbe628b6'
 [[package]]
 name = 'vscode-langservers-extracted'
 ref = 'npm:vscode-langservers-extracted'
-manifest_sha256 = 'd3087031097ca752ff8c159285e9b4e17c9500a5aaddf873f92b3993bca6a95d'
+manifest_sha256 = '029ecfa98f1aa588dfe173ea9567c0d17d97856f6f18d2fef784dc8b6765f4fc'
 version = '4.10.0'
 inferred = true
-manifest = "[package]\nname = \"vscode-langservers-extracted\"\nhomepage = \"https://www.npmjs.com/package/vscode-langservers-extracted\"\n\n[version]\nfrom = \"npm\"\nrepo = \"vscode-langservers-extracted\"\n\n[runtime]\ndeps = [\"/Users/kylewong/.config/oku/packages/node.toml\"]\n\n[build]\ndeps = [\"/Users/kylewong/.config/oku/packages/node.toml\"]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"vscode-langservers-extracted\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"vscode-css-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-css-language-server\"] },\n  { name = \"vscode-eslint-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-eslint-language-server\"] },\n  { name = \"vscode-html-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-html-language-server\"] },\n  { name = \"vscode-json-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-json-language-server\"] },\n  { name = \"vscode-markdown-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-markdown-language-server\"] },\n] }\n"
+manifest = "[package]\nname = \"vscode-langservers-extracted\"\nhomepage = \"https://www.npmjs.com/package/vscode-langservers-extracted\"\n\n[version]\nfrom = \"npm\"\nrepo = \"vscode-langservers-extracted\"\n\n[runtime]\ndeps = [\"./packages/node.toml\"]\n\n[build]\ndeps = [\"./packages/node.toml\"]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"vscode-langservers-extracted\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"vscode-css-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-css-language-server\"] },\n  { name = \"vscode-eslint-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-eslint-language-server\"] },\n  { name = \"vscode-html-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-html-language-server\"] },\n  { name = \"vscode-json-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-json-language-server\"] },\n  { name = \"vscode-markdown-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-markdown-language-server\"] },\n] }\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
+vendor_sha256 = '82e13674de56d0089177cffec31095ae9cf58cfc0d9d18a850e306178f246329'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
+vendor_sha256 = '82e13674de56d0089177cffec31095ae9cf58cfc0d9d18a850e306178f246329'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'build'
+vendor_sha256 = '82e13674de56d0089177cffec31095ae9cf58cfc0d9d18a850e306178f246329'
 
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
 version = '22.20.0'
 
 [package.dep.platform]
@@ -2142,10 +3818,20 @@ strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
 sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
 
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
+sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
+sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
+
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
 version = '22.20.0'
 
 [package.dep.platform]
@@ -2153,6 +3839,16 @@ version = '22.20.0'
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
 sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
+sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
+sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
 
 [[package]]
 name = 'whatsapp'
@@ -2176,23 +3872,44 @@ tag = 'v5.8.4'
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
+url = 'https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz'
+sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz'
+sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz'
+sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
 
 [[package]]
 name = 'yaml-language-server'
 ref = 'npm:yaml-language-server'
-manifest_sha256 = '2be6d3b03f9de6b20283db3005618e7898fb87572bd6155903496d0cf6b5aab5'
+manifest_sha256 = '86d0186a9a72d40f1cf9c03460dc296fb76fbff8e1dcd02ae42b4dcdfc8ee71c'
 version = '1.24.0'
 inferred = true
-manifest = "[package]\nname = \"yaml-language-server\"\nhomepage = \"https://www.npmjs.com/package/yaml-language-server\"\n\n[version]\nfrom = \"npm\"\nrepo = \"yaml-language-server\"\n\n[runtime]\ndeps = [\"/Users/kylewong/.config/oku/packages/node.toml\"]\n\n[build]\ndeps = [\"/Users/kylewong/.config/oku/packages/node.toml\"]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"yaml-language-server\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"yaml-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/yaml-language-server/bin/yaml-language-server\"] },\n] }\n"
+manifest = "[package]\nname = \"yaml-language-server\"\nhomepage = \"https://www.npmjs.com/package/yaml-language-server\"\n\n[version]\nfrom = \"npm\"\nrepo = \"yaml-language-server\"\n\n[runtime]\ndeps = [\"./packages/node.toml\"]\n\n[build]\ndeps = [\"./packages/node.toml\"]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"yaml-language-server\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"yaml-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/yaml-language-server/bin/yaml-language-server\"] },\n] }\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
+vendor_sha256 = '70ca5478a6e76a3d437e66b8a2a9c7d70d12d19c1489f5ba8e332c628cd84386'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
+vendor_sha256 = '70ca5478a6e76a3d437e66b8a2a9c7d70d12d19c1489f5ba8e332c628cd84386'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'build'
+vendor_sha256 = '70ca5478a6e76a3d437e66b8a2a9c7d70d12d19c1489f5ba8e332c628cd84386'
 
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
 version = '22.20.0'
 
 [package.dep.platform]
@@ -2201,10 +3918,20 @@ strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
 sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
 
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
+sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
+sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
+
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
 version = '22.20.0'
 
 [package.dep.platform]
@@ -2212,6 +3939,16 @@ version = '22.20.0'
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
 sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
+sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
+sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
 
 [[package]]
 name = 'zoxide'
@@ -2226,6 +3963,16 @@ strategy = 'artifact'
 url = 'https://github.com/ajeetdsouza/zoxide/releases/download/v0.10.0/zoxide-0.10.0-aarch64-apple-darwin.tar.gz'
 sha256 = 'b55ae6f2f5f23d0a6ccb3bd4eeb2af9c7e0a6556e5255c82100e40305129bbb0'
 
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/ajeetdsouza/zoxide/releases/download/v0.10.0/zoxide-0.10.0-x86_64-unknown-linux-musl.tar.gz'
+sha256 = '2d93385b99f3e82cf2701609a1bffcad863fbeb75aa3fe7eb6be4d29be68b1ae'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/ajeetdsouza/zoxide/releases/download/v0.10.0/zoxide-0.10.0-aarch64-unknown-linux-musl.tar.gz'
+sha256 = 'f1f16c5d6298d63dee467eedea1cdcd8490e43e493bea43acd416dc9033ef641'
+
 [[package]]
 name = 'zstd'
 ref = './packages/zstd.toml'
@@ -2237,15 +3984,10 @@ tag = 'v1.5.7'
 [package.platform.darwin-arm64]
 strategy = 'build'
 
-[[package.dep]]
-name = 'lz4'
-ref = './packages/lz4.toml'
-manifest_sha256 = 'c7c5b83aa3273db33afe39f00028c85a82179e74fabcdb3dcd345fc81ad230c9'
-version = '1.10.0'
-tag = 'v1.10.0'
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
 
-[package.dep.platform]
-[package.dep.platform.darwin-arm64]
+[package.platform.linux-arm64-glibc]
 strategy = 'build'
 
 [[package.dep]]
@@ -2257,4 +3999,27 @@ tag = 'v1.10.0'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+
+[[package.dep]]
+name = 'lz4'
+ref = './packages/lz4.toml'
+manifest_sha256 = 'c7c5b83aa3273db33afe39f00028c85a82179e74fabcdb3dcd345fc81ad230c9'
+version = '1.10.0'
+tag = 'v1.10.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.platform.linux-arm64-glibc]
 strategy = 'build'

@@ -1,7 +1,8 @@
 # Media tools that oku builds from source: ImageMagick for image conversion
 # and resizing, poppler for pdftoppm and pdftotext. Each manifest pulls in its
-# own libraries as deps. Built and tested on macOS arm64. The Linux side is
-# untested.
+# own libraries as deps. Built and tested on macOS arm64, and on Debian 12 and
+# Fedora 44 arm64.
+# zlib, bzip2 and expat come from the system, see bootstrap/linux.sh.
 
 [packages]
 imagemagick = "../packages/imagemagick.toml"

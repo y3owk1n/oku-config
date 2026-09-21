@@ -10,6 +10,9 @@ from = "git-branch"
 repo = "https://github.com/y3owk1n/neru"
 branch = "main"
 
+# On Linux the build links the X11 and Wayland libraries of the system through
+# cgo. bootstrap/linux.sh installs their -dev packages, as neru's
+# docs/LINUX_SETUP.md lists them. libei needs Debian 13 or Ubuntu 24.04.
 [build]
 needs = ["git", "cc"]
 deps = [{ ref = "./go.toml", version = ">=1.26, <1.27" }]
@@ -41,14 +44,20 @@ sed -e "s/BUNDLE_VERSION/${v%%-*}/g" -e "s/SHORT_VERSION/${v%%-*}/g" -e 's/BUILD
 codesign --force --deep --sign - --entitlements resources/Neru.entitlements --options runtime $app
 """
 shell = "sh"
+when = { os = "darwin" }
 
 [[build.step]]
 install = { bin = ["neru"], man = ["man/neru.1"] }
 
 # The daemon runs from inside its bundle, as the Nix module did. It reads
 # ~/.config/neru/config.toml by default, so no --config is passed.
+#
+# The service is for macOS alone. On Linux the daemon needs the display of the
+# session, and `neru services install` writes a unit that waits for
+# graphical-session.target, which the unit of oku does not.
 [[service]]
 name = "neru"
 command = "Neru.app/Contents/MacOS/neru"
 args = ["launch"]
 restart = "always"
+when = { os = "darwin" }

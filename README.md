@@ -25,6 +25,7 @@ way or not at all.
 | `files/` | The configs and templates that `lists/files.toml` and `lists/ai.toml` place |
 | `secrets/` | The sops file with my SSH key. Only ciphertext |
 | `bootstrap/macos.sh` | What needs root on a new Mac. I run it once, by hand |
+| `bootstrap/linux.sh` | The system packages that the source builds need, for apt, dnf and pacman |
 
 Each list has a notes file beside it: `lists/packages-todo.md` (what did not
 move and why), `lists/files-notes.md`, `lists/ai-notes.md` and
@@ -92,6 +93,40 @@ move and why), `lists/files-notes.md`, `lists/ai-notes.md` and
 
 `oku rollback` goes back one generation: packages, files, settings and
 secrets together.
+
+## A new Linux machine
+
+Debian, Ubuntu or Fedora. Everything but neru was built and run on Debian 12
+and Fedora 44, arm64. `bootstrap/linux.sh` also knows pacman, which was never
+run. neru was built on Debian 13. It needs Debian 13, Ubuntu 24.04 or Fedora,
+because older releases have no libei, and the script says what to do there.
+
+1. Install oku, copy the age key and clone this repo, as in steps 1 to 3 above.
+   The Command Line Tools step does not apply.
+
+2. Install what the source builds take from the system:
+
+   ```sh
+   sh ~/.config/oku/bootstrap/linux.sh
+   ```
+
+3. `oku sync --yes`. oku skips the macOS apps, the macOS settings in
+   `lists/macos.toml` and every entry with `when = { os = "darwin" }`.
+
+`oku.lock` pins the Linux downloads too, because `[lock] platforms` in
+`oku.toml` names them. That includes what the Go, Rust and npm builds download:
+oku pins those from the Mac. So a Linux machine installs from the lock that the
+Mac wrote, and `oku sync --locked` proves it.
+
+After the first sync run `neru services install` once. oku runs neru as a
+service on macOS alone, because on Linux the daemon has to wait for the
+graphical session, and neru's own unit does that.
+
+Known limits on Linux:
+
+- On a machine that systemd does not run, such as a container, oku installs
+  everything and skips the atuin service with one notice.
+- tree-sitter's download needs glibc 2.39, so Debian 13 or Ubuntu 24.04.
 
 ## Daily use
 

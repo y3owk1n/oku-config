@@ -20,9 +20,13 @@ deps = ["./jpeg-turbo.toml"]
 
 # zlib comes from the system. JPEG is the one codec from another package, and
 # the rest stay off so the library has one runtime dep.
+# The two RPATH flags are for Linux. cmake passes its own -rpath, so the linker
+# ignores the LD_RUN_PATH that oku sets, and cmake drops the paths on install.
+# With the flags a library finds the others of this package and its deps.
 [[build.step]]
 run = """
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX={{prefix}} \
+  -DCMAKE_INSTALL_RPATH="{{prefix}}/lib${LD_RUN_PATH:+:$LD_RUN_PATH}" -DCMAKE_BUILD_RPATH="$LD_RUN_PATH" \
   -DCMAKE_INSTALL_LIBDIR={{prefix}}/lib -DCMAKE_INSTALL_NAME_DIR={{prefix}}/lib \
   -DBUILD_SHARED_LIBS=ON -Djpeg=ON -Dzlib=ON -Dlzma=OFF -Dzstd=OFF -Dwebp=OFF -Dlerc=OFF \
   -Djbig=OFF -Dlibdeflate=OFF -Dtiff-opengl=OFF -Dtiff-docs=OFF -Dtiff-tests=OFF -Dtiff-contrib=OFF

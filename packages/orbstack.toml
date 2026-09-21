@@ -10,11 +10,21 @@ homepage = "https://orbstack.dev"
 [version]
 value = "2.2.3"
 
-# orb and orbctl run from the copy in the oku store, not from the app in
-# ~/Applications, so they stay at this version when the app updates itself.
+# orb, orbctl, docker and kubectl run from the copy in the oku store, not from
+# the app in ~/Applications, so they stay at this version when the app updates
+# itself. docker, docker-buildx and docker-compose are links to docker-tools,
+# which picks the program by the name it was called with.
 [[artifact]]
 match = { os = "darwin", arch = "arm64" }
 url = "https://cdn-updates.orbstack.dev/arm64/OrbStack_v{{version}}_20963_arm64.dmg"
 sha256 = "7ca77868f3a0d7d9f57b3f98615aad30cc59d23cc84bbff13f78846df0b493d4"
 app = ["OrbStack.app"]
-bin = ["OrbStack.app/Contents/MacOS/bin/orb", "OrbStack.app/Contents/MacOS/bin/orbctl"]
+bin = [
+  "OrbStack.app/Contents/MacOS/bin/orb",
+  "OrbStack.app/Contents/MacOS/bin/orbctl",
+  "OrbStack.app/Contents/MacOS/xbin/docker",
+  "OrbStack.app/Contents/MacOS/xbin/docker-buildx",
+  "OrbStack.app/Contents/MacOS/xbin/docker-compose",
+  "OrbStack.app/Contents/MacOS/xbin/docker-credential-osxkeychain",
+  "OrbStack.app/Contents/MacOS/xbin/kubectl",
+]

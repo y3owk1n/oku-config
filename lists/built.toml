@@ -1,8 +1,10 @@
 # Tools that oku builds from source, each proven on macOS arm64 with the Xcode
 # command line tools. The libraries they use (cmake, lz4, libpng, jpeg-turbo)
 # have manifests in ../packages/ and are deps only, so they are not listed.
-# The builds were tested on macOS only. lua.toml holds a Linux step that was
-# never run, and the rest use the same steps on every system, untested on Linux.
+# They also build on Debian 12 and Fedora 44, arm64, with the packages of
+# bootstrap/linux.sh.
+# btop takes the static program of its release on Linux, because the source
+# needs a C++23 compiler.
 
 [packages]
 
@@ -22,6 +24,7 @@ lua = "../packages/lua.toml"
 luarocks = "../packages/luarocks.toml"
 
 # cli
-coreutils = "../packages/coreutils.toml" # every program has a g prefix, such as gls
+# Linux has these as its own tools, so the g-prefixed copy is for macOS alone.
+coreutils = { ref = "../packages/coreutils.toml", when = { os = "darwin" } } # every program has a g prefix, such as gls
 btop = "../packages/btop.toml"
 mole = { ref = "../packages/mole.toml", when = { os = "darwin" } }

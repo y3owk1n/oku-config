@@ -20,9 +20,13 @@ deps = ["./libpng.toml"]
 
 # zlib and bzip2 come from the system. HarfBuzz and brotli stay off, so the
 # library needs libpng alone.
+# The two RPATH flags are for Linux. cmake passes its own -rpath, so the linker
+# ignores the LD_RUN_PATH that oku sets, and cmake drops the paths on install.
+# With the flags a library finds the others of this package and its deps.
 [[build.step]]
 run = """
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX={{prefix}} \
+  -DCMAKE_INSTALL_RPATH="{{prefix}}/lib${LD_RUN_PATH:+:$LD_RUN_PATH}" -DCMAKE_BUILD_RPATH="$LD_RUN_PATH" \
   -DCMAKE_INSTALL_LIBDIR={{prefix}}/lib -DCMAKE_INSTALL_NAME_DIR={{prefix}}/lib \
   -DBUILD_SHARED_LIBS=ON -DFT_REQUIRE_ZLIB=ON -DFT_REQUIRE_PNG=ON -DFT_REQUIRE_BZIP2=ON \
   -DFT_DISABLE_HARFBUZZ=ON -DFT_DISABLE_BROTLI=ON

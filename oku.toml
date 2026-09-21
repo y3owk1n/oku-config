@@ -12,6 +12,11 @@ include = [
   "./lists/macos.toml",    # macOS settings, skipped on other systems
 ]
 
+# oku.lock pins every package for these platforms besides the machine that
+# runs oku, so a Linux machine installs from the lock that the Mac wrote.
+[lock]
+platforms = ["darwin-arm64", "linux-arm64-glibc", "linux-amd64-glibc"]
+
 [packages]
 nvim = "./packages/nvim.toml"
 gh-actions-language-server = "./packages/gh-action-language-server.toml"

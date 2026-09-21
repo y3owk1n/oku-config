@@ -35,7 +35,7 @@ from source, the way their Homebrew formulae do it (`lists/built.toml`,
 - coreutils: every program has a `g` prefix, such as `gls` and `gdate`, so none takes the place of a macOS tool.
 - ghostscript: built with its bundled libraries, without X11, cups and tesseract.
 - discord, whatsapp, orbstack, brave, firefox: fixed versions with the sha256 from the Homebrew cask data. Each app also updates itself in `~/Applications`, and oku replaces that copy on the next `oku update` of the package. OrbStack and Brave have a build number in the URL, see the top of their manifests.
-- orbstack: `orb` and `orbctl` come from the store copy of the app, so they stay at the store version until `oku update`. oku does not run the postflight step of the cask, and OrbStack finishes its own setup on first launch.
+- orbstack: `orb`, `orbctl`, `docker`, `docker-compose`, `docker-buildx`, `docker-credential-osxkeychain` and `kubectl` come from the store copy of the app, so they stay at the store version until `oku update`. oku does not run the postflight step of the cask, and OrbStack finishes its own setup on first launch.
 - fish as the login shell: oku installs fish, but `/etc/shells` and `chsh` need root. `bootstrap/macos.sh` does it. The path is `~/.local/share/oku/profiles/global/current/bin/fish`.
 - kanata: installed as a program only. It needs root and the Karabiner driver, so it has no oku service.
 - mimi, neru, skhd: macOS asks for Accessibility permission again after each update, because the program moves to a new store path. The same happened with Nix. Their services find the other oku programs by name, because oku puts the profile first on the PATH of a service.

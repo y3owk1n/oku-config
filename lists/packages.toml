@@ -37,6 +37,9 @@ nvim = "../packages/nvim.toml"
 tree-sitter = "github:tree-sitter/tree-sitter"
 marksman = "../packages/marksman.toml"
 gh-actions-language-server = "../packages/gh-action-language-server.toml"
+# prettierd starts its daemon as `node` from PATH, so node is a package of its
+# own too, and not only the runtime dep of the npm packages.
+node = "../packages/node.toml"
 bash-language-server = "npm:bash-language-server"
 fish-lsp = "npm:fish-lsp"
 prettierd = "npm:@fsouza/prettierd"
@@ -77,5 +80,7 @@ symbols-nerd-font = "../packages/symbols-nerd-font.toml"
 
 # my own tools
 mimi = { ref = "../packages/mimi.toml", service = true, when = { os = "darwin" } }
-neru = { ref = "../packages/neru.toml", service = true, when = { os = "darwin" } }
+# neru also builds on Linux, with the libraries of bootstrap/linux.sh. There
+# `service = true` does nothing, run `neru services install` once instead.
+neru = { ref = "../packages/neru.toml", service = true }
 uts = "../packages/uts.toml"

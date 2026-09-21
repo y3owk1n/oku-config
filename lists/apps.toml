@@ -7,3 +7,8 @@ discord = { ref = "../packages/discord.toml", when = { os = "darwin" } }
 firefox = { ref = "../packages/firefox.toml", when = { os = "darwin" } }
 orbstack = { ref = "../packages/orbstack.toml", when = { os = "darwin" } }
 whatsapp = { ref = "../packages/whatsapp.toml", when = { os = "darwin" } }
+
+# docker finds `docker compose` and `docker buildx` here.
+[files]
+"{{home}}/.docker/cli-plugins/docker-buildx" = { link = "{{pkg.orbstack}}/OrbStack.app/Contents/MacOS/xbin/docker-buildx", when = { os = "darwin" } }
+"{{home}}/.docker/cli-plugins/docker-compose" = { link = "{{pkg.orbstack}}/OrbStack.app/Contents/MacOS/xbin/docker-compose", when = { os = "darwin" } }

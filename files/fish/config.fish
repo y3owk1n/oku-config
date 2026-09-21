@@ -76,10 +76,12 @@ status is-interactive; and begin
         source "$GHOSTTY_RESOURCES_DIR/shell-integration/fish/vendor_conf.d/ghostty-shell-integration.fish"
     end
 
-    set -gx MANPATH /opt/homebrew/share/man $MANPATH
+    if test -d /opt/homebrew
+        set -gx MANPATH /opt/homebrew/share/man $MANPATH
 
-    if not contains /opt/homebrew/share/fish/vendor_completions.d $fish_complete_path
-        set -gx fish_complete_path $fish_complete_path /opt/homebrew/share/fish/vendor_completions.d
+        if not contains /opt/homebrew/share/fish/vendor_completions.d $fish_complete_path
+            set -gx fish_complete_path $fish_complete_path /opt/homebrew/share/fish/vendor_completions.d
+        end
     end
 
     command -q fzf; and fzf --fish | source
