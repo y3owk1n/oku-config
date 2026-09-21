@@ -7,21 +7,12 @@ name = "home (~)"
 path = "~"
 
 [[session]]
-name = "start kanata"
-path = "~/nix-system-config-v2/"
-startup_command = "just kanata"
-
-[[session]]
 name = "downloads"
 path = "~/Downloads"
 
 [[session]]
 name = "dot config"
 path = "~/.config"
-
-[[session]]
-name = "nix config"
-path = "~/nix-system-config-v2"
 
 [[session]]
 name = "oku config"
