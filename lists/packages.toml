@@ -8,7 +8,6 @@
 # cli
 ast-grep = "github:ast-grep/ast-grep"
 bat = "../packages/bat.toml"
-devbox = "github:jetify-com/devbox" # still needs nix on the machine
 direnv = "github:direnv/direnv"
 fd = "../packages/fd.toml"
 fzf = "github:junegunn/fzf"
