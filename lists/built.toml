@@ -24,3 +24,4 @@ luarocks = "../packages/luarocks.toml"
 # cli
 coreutils = "../packages/coreutils.toml" # every program has a g prefix, such as gls
 btop = "../packages/btop.toml"
+mole = { ref = "../packages/mole.toml", when = { os = "darwin" } }

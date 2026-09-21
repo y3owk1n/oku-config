@@ -21,7 +21,6 @@ from source, the way their Homebrew formulae do it (`lists/built.toml`,
 
 ## Not moved yet
 
-- mole: the release holds two Go helpers only. The `mole` program is a shell script in the source tree that looks for its `lib/` next to itself, and Nix patched that path. It wants a `[build]` manifest that copies the tree and fixes the path.
 - hunspell en_US dictionary and the extension and flag settings of Brave (brave.nix): they need a managed policy file, which is not a package. Brave itself is in `lists/apps.toml`.
 - pam_reattach and pam-watchid: they gave Touch ID inside tmux and Apple Watch unlock for sudo. Both build from source, and both go in `/usr/local/lib/pam`, which needs root, so they belong in bootstrap/ once there is a manifest for them.
 - nvs, jankyborders: disabled in the Nix config, skipped.
@@ -32,6 +31,7 @@ from source, the way their Homebrew formulae do it (`lists/built.toml`,
 - eza: no man pages, because upstream writes them in markdown and converts them with pandoc.
 - Most source builds follow upstream, so `oku update` takes a new release: xz, gifsicle, luarocks, coreutils, brotli, lz4, zstd, jpeg-turbo, jpegoptim, btop, eza, imagemagick, openjpeg and cmake. oku pins the digest of a source archive in `oku.lock` the first time it downloads it.
 - lua, libpng, libtiff, freetype, fontconfig, optipng, ghostscript, poppler, pkgconf, libwebp-lib and pngquant hold a fixed version, each for a reason that the top of its manifest gives. Take a newer one by editing `value` and `sha256` there.
+- mole: built from source, because the release holds the two Go helpers only. The tree sits in `libexec/mole` and `bin/mole` links to it. `mo update` and `mo remove` have no use here, take a new version with `oku update mole`.
 - coreutils: every program has a `g` prefix, such as `gls` and `gdate`, so none takes the place of a macOS tool.
 - ghostscript: built with its bundled libraries, without X11, cups and tesseract.
 - discord, whatsapp, orbstack, brave, firefox: fixed versions with the sha256 from the Homebrew cask data. Each app also updates itself in `~/Applications`, and oku replaces that copy on the next `oku update` of the package. OrbStack and Brave have a build number in the URL, see the top of their manifests.

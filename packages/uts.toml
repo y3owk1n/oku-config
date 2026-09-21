@@ -4,14 +4,15 @@ description = "Compress, convert and inspect media files with one command patter
 homepage = "https://github.com/y3owk1n/uts"
 license = "MIT"
 
+# Built from main, before a release. `oku update uts` takes the newest commit.
 [version]
-from = "github-releases"
-repo = "y3owk1n/uts"
-strip_prefix = "v"
+from = "git-branch"
+repo = "https://github.com/y3owk1n/uts"
+branch = "main"
 
 [build]
 needs = ["git"]
-deps = ["./go.toml"]
+deps = [{ ref = "./go.toml", version = ">=1.26, <1.27" }]
 source = { git = "https://github.com/y3owk1n/uts", tag = "{{tag}}" }
 
 [[build.step]]
@@ -20,7 +21,7 @@ vendor = "go"
 [[build.step]]
 run = """
 set -eu
-go build -mod=vendor -trimpath -ldflags="-s -w -X github.com/y3owk1n/uts/cmd.Version={{tag}}" -o uts ./main.go
+go build -mod=vendor -trimpath -ldflags="-s -w -X github.com/y3owk1n/uts/cmd.Version={{version}}" -o uts ./main.go
 mkdir -p man
 go run -mod=vendor ./cmd/genman man
 """

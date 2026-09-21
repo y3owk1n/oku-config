@@ -130,12 +130,12 @@ opencode and the nvim palette file render again in one generation. Then run
 ## What did not move
 
 `lists/packages-todo.md` has the full list. In short: Tailscale and the
-Karabiner driver need an installer, which `bootstrap/macos.sh` covers. `mole`,
-the policy settings of Brave and the two PAM modules for Touch ID in tmux have
-no manifest yet. macOS ships git, ssh, python3 and less.
+Karabiner driver need an installer, which `bootstrap/macos.sh` covers. The
+policy settings of Brave and the two PAM modules for Touch ID in tmux have no
+manifest yet. macOS ships git, ssh, python3 and less.
 
 The tools with no macOS program from upstream are built from source, the way
 their Homebrew formulae do it: eza, pngquant, gifsicle, optipng, jpegoptim,
-brotli, xz, zstd, lua 5.1, luarocks, GNU coreutils with a `g` prefix, btop,
+brotli, xz, zstd, lua 5.1, luarocks, GNU coreutils with a `g` prefix, btop, mole,
 ghostscript, imagemagick and poppler. They need the Command Line Tools
 (`xcode-select --install`) and they compile on the first sync.

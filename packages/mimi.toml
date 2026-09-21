@@ -4,14 +4,15 @@ description = "Window and space utility daemon for macOS"
 homepage = "https://github.com/y3owk1n/mimi"
 license = "MIT"
 
+# Built from main, before a release. `oku update mimi` takes the newest commit.
 [version]
-from = "github-releases"
-repo = "y3owk1n/mimi"
-strip_prefix = "v"
+from = "git-branch"
+repo = "https://github.com/y3owk1n/mimi"
+branch = "main"
 
 [build]
 needs = ["git", "cc"]
-deps = ["./go.toml"]
+deps = [{ ref = "./go.toml", version = ">=1.26, <1.27" }]
 source = { git = "https://github.com/y3owk1n/mimi", tag = "{{tag}}" }
 
 [[build.step]]
@@ -20,7 +21,7 @@ vendor = "go"
 [[build.step]]
 run = """
 set -eu
-go build -mod=vendor -trimpath -ldflags="-s -w -X github.com/y3owk1n/mimi/cmd/mimi/cmd.Version={{tag}}" -o mimi ./cmd/mimi
+go build -mod=vendor -trimpath -ldflags="-s -w -X github.com/y3owk1n/mimi/cmd/mimi/cmd.Version={{version}}" -o mimi ./cmd/mimi
 mkdir -p man
 go run -mod=vendor ./cmd/genman man
 """
@@ -30,11 +31,12 @@ env = { CGO_ENABLED = "1", GOFLAGS = "-buildvcs=false" }
 [[build.step]]
 run = """
 set -eu
+v={{version}}
 app={{prefix}}/Mimi.app
 mkdir -p $app/Contents/MacOS $app/Contents/Resources
 cp mimi $app/Contents/MacOS/mimi
 cp resources/Mimi.entitlements $app/Contents/Resources/
-sed -e 's/BUNDLE_VERSION/{{version}}/g' -e 's/SHORT_VERSION/{{version}}/g' -e 's/BUILD_ID/{{tag}}/g' resources/Info.plist.template > $app/Contents/Info.plist
+sed -e "s/BUNDLE_VERSION/${v%%-*}/g" -e "s/SHORT_VERSION/${v%%-*}/g" -e 's/BUILD_ID/{{version}}/g' resources/Info.plist.template > $app/Contents/Info.plist
 codesign --force --deep --sign - --entitlements resources/Mimi.entitlements --options runtime $app
 """
 shell = "sh"

@@ -1,6 +1,412 @@
 # Written by oku. Commit this file, and change it with oku commands only.
 
-include = []
+[[include]]
+ref = './lists/packages.toml'
+sha256 = ''
+
+[[include]]
+ref = './lists/apps.toml'
+sha256 = ''
+
+[[include]]
+ref = './lists/rust-built.toml'
+sha256 = ''
+
+[[include]]
+ref = './lists/built.toml'
+sha256 = ''
+
+[[include]]
+ref = './lists/built-media.toml'
+sha256 = ''
+
+[[include]]
+ref = './lists/files.toml'
+sha256 = ''
+
+[[include]]
+ref = './lists/ai.toml'
+sha256 = ''
+
+[[include]]
+ref = './lists/macos.toml'
+sha256 = ''
+
+[[package]]
+name = 'affinity'
+ref = './packages/affinity.toml'
+manifest_sha256 = '4c7bd8e5c0e4d44558e36c68c4da38eca9f7458bf1f99d86dfa1f439f3f6327e'
+version = '3.3.0'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://affinity-update.s3.amazonaws.com/mac2/retail/Affinity%20Affinity%20Store%204850.zip'
+sha256 = '317f5cf64a5364319898576b4648b6a96dc9ec39f50039aebf9901b7ed3a5d96'
+
+[[package]]
+name = 'age'
+ref = './packages/age.toml'
+manifest_sha256 = '1b0ef7dcd3dfa98bc10e9df9c0cfa7bb5a96b4ce24e29831a544a0854652871f'
+version = '1.3.2'
+tag = 'v1.3.2'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-darwin-arm64.tar.gz'
+sha256 = 'e2020b073c44f692685a24d6abc378817eb81ffaaf49fd0531ef8565f767f2f5'
+
+[[package]]
+name = 'ast-grep'
+ref = 'github:ast-grep/ast-grep'
+commit = '6175e07b668b388a1a326d8fc543c4856eb5f54b'
+manifest_sha256 = 'd8b25ea4cbe6931b496f3e63409aca6b1c82a8605345b5b983250c628a6c7253'
+version = '0.45.3'
+inferred = true
+manifest = "[package]\nname = \"ast-grep\"\nhomepage = \"https://github.com/ast-grep/ast-grep\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"ast-grep/ast-grep\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\", libc = \"glibc\" }\nurl = \"https://github.com/ast-grep/ast-grep/releases/download/{{tag}}/app-x86_64-unknown-linux-gnu.zip\"\nbin = [\"ast-grep\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/ast-grep/ast-grep/releases/download/{{tag}}/app-x86_64-apple-darwin.zip\"\nbin = [\"ast-grep\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"amd64\" }\nurl = \"https://github.com/ast-grep/ast-grep/releases/download/{{tag}}/app-x86_64-pc-windows-msvc.zip\"\nbin = [\"ast-grep.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\", libc = \"glibc\" }\nurl = \"https://github.com/ast-grep/ast-grep/releases/download/{{tag}}/app-aarch64-unknown-linux-gnu.zip\"\nbin = [\"ast-grep\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/ast-grep/ast-grep/releases/download/{{tag}}/app-aarch64-apple-darwin.zip\"\nbin = [\"ast-grep\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"arm64\" }\nurl = \"https://github.com/ast-grep/ast-grep/releases/download/{{tag}}/app-aarch64-pc-windows-msvc.zip\"\nbin = [\"ast-grep.exe\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"386\" }\nurl = \"https://github.com/ast-grep/ast-grep/releases/download/{{tag}}/app-i686-pc-windows-msvc.zip\"\nbin = [\"ast-grep.exe\"]\n"
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/ast-grep/ast-grep/releases/download/0.45.3/app-aarch64-apple-darwin.zip'
+sha256 = '6d2279dea5bea2ad79c66ea93f5fe54ba926e398a8a26de76c56db68fe59eac6'
+
+[[package]]
+name = 'atuin'
+ref = './packages/atuin.toml'
+manifest_sha256 = '0b1768c9e1ad446f48f6917058d3da0480f1ef6c08906e7b3e2094243204778b'
+version = '18.22.0'
+tag = 'v18.22.0'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/atuinsh/atuin/releases/download/v18.22.0/atuin-aarch64-apple-darwin.tar.gz'
+sha256 = '5e6e525f60147351f114397e7f09aeded87f302e99ef83a5eee74c524b805812'
+
+[[package]]
+name = 'bash-language-server'
+ref = 'npm:bash-language-server'
+manifest_sha256 = '6deca41be7764afc35a1f864cf8d78aef475df9be057c9e3a992c6bb631452d6'
+version = '5.8.1'
+inferred = true
+manifest = "[package]\nname = \"bash-language-server\"\nhomepage = \"https://www.npmjs.com/package/bash-language-server\"\n\n[version]\nfrom = \"npm\"\nrepo = \"bash-language-server\"\n\n[runtime]\ndeps = [\"/Users/kylewong/.config/oku/packages/node.toml\"]\n\n[build]\ndeps = [\"/Users/kylewong/.config/oku/packages/node.toml\"]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"bash-language-server\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"bash-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/bash-language-server/out/cli.js\"] },\n] }\n"
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'node'
+ref = './packages/node.toml'
+manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+version = '22.20.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
+sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+
+[[package.dep]]
+name = 'node'
+ref = './packages/node.toml'
+manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+version = '22.20.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
+sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+
+[[package]]
+name = 'bat'
+ref = './packages/bat.toml'
+manifest_sha256 = 'e9f367062e7d716b768c990ee4005cbf08e24d851e50bcd1fbfe0979cc89f600'
+version = '0.26.1'
+tag = 'v0.26.1'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-aarch64-apple-darwin.tar.gz'
+sha256 = 'e30beff26779c9bf60bb541e1d79046250cb74378f2757f8eb250afddb19e114'
+
+[[package]]
+name = 'brave'
+ref = './packages/brave.toml'
+manifest_sha256 = '7bff569ff9af627c5221d378a8f737679d9eb11e01ef21e7e15538e9935ac9be'
+version = '1.95.104.0'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/stable-arm64/195.104/Brave-Browser-arm64.dmg'
+sha256 = 'f6823d53b3e9a287b8f8830b728ba9b34fe2d4a9f6ee4e05b3bcd4a21ee25eaf'
+
+[[package]]
+name = 'brotli'
+ref = './packages/brotli.toml'
+manifest_sha256 = '06188c5bcac8c9eb520830e7ba9cc3fcc5b1f474df56119a333f313e942e2ab5'
+version = '1.2.0'
+tag = 'v1.2.0'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package]]
+name = 'btop'
+ref = './packages/btop.toml'
+manifest_sha256 = 'cd3315f900d7ceeaa2b00e607c2af15956276cbc232796b0a125af132eed9404'
+version = '1.4.7'
+tag = 'v1.4.7'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package]]
+name = 'claude-code'
+ref = './packages/claude-code.toml'
+manifest_sha256 = '132b96a4a061ec0c306b1436f12c23e796256c1c0471f0273520c6aba0fa290e'
+version = '2.1.278'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.278/darwin-arm64/claude'
+sha256 = 'bd245662fb8a0e321b3bf133e930371d6563c387527885f30b2613aef3ba14d6'
+
+[[package]]
+name = 'coreutils'
+ref = './packages/coreutils.toml'
+manifest_sha256 = '2d202458716f97cc94d4524532abb8678b77df4a00c579a59d33ae9af8eea80d'
+version = '9.12'
+tag = 'v9.12'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package]]
+name = 'difftastic'
+ref = 'github:Wilfred/difftastic'
+commit = '867fd946f2e2d74679214b6006b44475a5a9b979'
+manifest_sha256 = '48e89c0643b80502bc36f53aa7252fb861022c38585942c80a53b5fcb82e2242'
+version = '0.71.0'
+inferred = true
+manifest = "[package]\nname = \"difftastic\"\nhomepage = \"https://github.com/Wilfred/difftastic\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"Wilfred/difftastic\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\", libc = \"glibc\" }\nurl = \"https://github.com/Wilfred/difftastic/releases/download/{{tag}}/difft-{{tag}}-x86_64-unknown-linux-gnu.tar.gz\"\nbin = [\"difft\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/Wilfred/difftastic/releases/download/{{tag}}/difft-{{tag}}-x86_64-unknown-linux-musl.tar.gz\"\nbin = [\"difft\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/Wilfred/difftastic/releases/download/{{tag}}/difft-{{tag}}-x86_64-apple-darwin.tar.gz\"\nbin = [\"difft\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"amd64\" }\nurl = \"https://github.com/Wilfred/difftastic/releases/download/{{tag}}/difft-{{tag}}-x86_64-pc-windows-msvc.zip\"\nbin = [\"difft.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\", libc = \"glibc\" }\nurl = \"https://github.com/Wilfred/difftastic/releases/download/{{tag}}/difft-{{tag}}-aarch64-unknown-linux-gnu.tar.gz\"\nbin = [\"difft\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/Wilfred/difftastic/releases/download/{{tag}}/difft-{{tag}}-aarch64-apple-darwin.tar.gz\"\nbin = [\"difft\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"arm64\" }\nurl = \"https://github.com/Wilfred/difftastic/releases/download/{{tag}}/difft-{{tag}}-aarch64-pc-windows-msvc.zip\"\nbin = [\"difft.exe\"]\n"
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Wilfred/difftastic/releases/download/0.71.0/difft-0.71.0-aarch64-apple-darwin.tar.gz'
+sha256 = '92acf8890543b6d6f436a87a7a5ec64f82a4b8dbe3a7e564c1e5cbfe60823bc7'
+
+[[package]]
+name = 'direnv'
+ref = 'github:direnv/direnv'
+commit = 'b00e451f547f39be7ab836d969054114a465a0f9'
+manifest_sha256 = '21ec49f4d0b8c63367d22e3326e9eb656bdb8dd7834f8f85795f78abf1b9fb20'
+version = '2.37.1'
+tag = 'v2.37.1'
+inferred = true
+manifest = "[package]\nname = \"direnv\"\nhomepage = \"https://github.com/direnv/direnv\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"direnv/direnv\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/direnv/direnv/releases/download/{{tag}}/direnv.linux-amd64\"\nbin = [\"direnv\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/direnv/direnv/releases/download/{{tag}}/direnv.darwin-amd64\"\nbin = [\"direnv\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"amd64\" }\nurl = \"https://github.com/direnv/direnv/releases/download/{{tag}}/direnv.windows-amd64\"\nbin = [\"direnv.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/direnv/direnv/releases/download/{{tag}}/direnv.linux-arm64\"\nbin = [\"direnv\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/direnv/direnv/releases/download/{{tag}}/direnv.darwin-arm64\"\nbin = [\"direnv\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"arm64\" }\nurl = \"https://github.com/direnv/direnv/releases/download/{{tag}}/direnv.windows-arm64\"\nbin = [\"direnv.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"386\" }\nurl = \"https://github.com/direnv/direnv/releases/download/{{tag}}/direnv.linux-386\"\nbin = [\"direnv\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"386\" }\nurl = \"https://github.com/direnv/direnv/releases/download/{{tag}}/direnv.windows-386\"\nbin = [\"direnv.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm\" }\nurl = \"https://github.com/direnv/direnv/releases/download/{{tag}}/direnv.linux-arm\"\nbin = [\"direnv\"]\n"
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/direnv/direnv/releases/download/v2.37.1/direnv.darwin-arm64'
+sha256 = '4f569f3a36732bfd8b8fea7bfcc6ad87a59745c109022164d0ca4832451d5369'
+
+[[package]]
+name = 'discord'
+ref = './packages/discord.toml'
+manifest_sha256 = '33cf81525adb1d41a4a7d9f38a25c2d8bbc63d598e8d47fafe85b9d19e9c9327'
+version = '0.0.412'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://dl.discordapp.net/apps/osx/0.0.412/Discord.dmg'
+sha256 = '5102d468e5593a5ffd5a3ecd38a10e9f63b349e7a3caa074eee8d6532f573a19'
+
+[[package]]
+name = 'eza'
+ref = './packages/eza.toml'
+manifest_sha256 = 'f18574bf6d784b5e8a98ab9fd5850a5a14d2690a774685fad61cc2fb8100a86f'
+version = '0.23.5'
+tag = 'v0.23.5'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'rust'
+ref = './packages/rust.toml'
+manifest_sha256 = '91b66c71fbee6fe544ab4d7815cd92a64b6041eb6b2972c12b5219f212e87729'
+version = '1.98.1'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package]]
+name = 'fd'
+ref = './packages/fd.toml'
+manifest_sha256 = '3c9e1c4b3c89a20dde3e9efbdb92b90f28d2b55e7007dbaa6180ae19f5e21325'
+version = '10.5.0'
+tag = 'v10.5.0'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/sharkdp/fd/releases/download/v10.5.0/fd-v10.5.0-aarch64-apple-darwin.tar.gz'
+sha256 = 'b67e1836c468e42e411984b56e52fa7abec08c2bd22c867398e7cc134aac5e12'
+
+[[package]]
+name = 'ffmpeg'
+ref = './packages/ffmpeg.toml'
+manifest_sha256 = '39c883b8b6fa4ef53ab7bf199062b651b6eb78e915ffbfe488274aad0307218b'
+version = '6.1.1'
+tag = 'b6.1.1'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/eugeneware/ffmpeg-static/releases/download/b6.1.1/ffmpeg-darwin-arm64.gz'
+sha256 = '8923876afa8db5585022d7860ec7e589af192f441c56793971276d450ed3bbfa'
+
+[[package]]
+name = 'ffprobe'
+ref = './packages/ffprobe.toml'
+manifest_sha256 = '4fc4dd3232895be15f3b7e94e00b7eec703327f2e08115483c4e611d0d5cc9ad'
+version = '6.1.1'
+tag = 'b6.1.1'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/eugeneware/ffmpeg-static/releases/download/b6.1.1/ffprobe-darwin-arm64.gz'
+sha256 = 'd986a8ec7b030899fe66a8a288ed809a3543338705a3ce178cfb85869c5d80be'
+
+[[package]]
+name = 'firefox'
+ref = './packages/firefox.toml'
+manifest_sha256 = 'b12fb193cdda1c73a751616a8c44f62101120d99d7eb9efc94cb2ad53e5e5f94'
+version = '156.0'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/156.0/mac/en-US/Firefox%20156.0.dmg'
+sha256 = 'fecc46103039ca4a77ecb2b2ef7b03892f922e13db0782f8570c512b2e458515'
+
+[[package]]
+name = 'fish'
+ref = './packages/fish.toml'
+manifest_sha256 = '2d18094e86e081400f8bb91455042a7433f9952038c754d02f004f38bf8ef97c'
+version = '4.9.3'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/fish-shell/fish-shell/releases/download/4.9.3/fish-4.9.3.app.zip'
+sha256 = '3619fa92d540ed0dff4816594429290550d21b92226e0523457e5f0242c5e9a8'
+
+[[package]]
+name = 'fish-lsp'
+ref = 'npm:fish-lsp'
+manifest_sha256 = '46d2e6239c0ae05f36800dae6618058beb80854310ba6832f5cd726c37e7ae15'
+version = '1.1.4'
+inferred = true
+manifest = "[package]\nname = \"fish-lsp\"\nhomepage = \"https://www.npmjs.com/package/fish-lsp\"\n\n[version]\nfrom = \"npm\"\nrepo = \"fish-lsp\"\n\n[runtime]\ndeps = [\"/Users/kylewong/.config/oku/packages/node.toml\"]\n\n[build]\ndeps = [\"/Users/kylewong/.config/oku/packages/node.toml\"]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"fish-lsp\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"fish-lsp\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/fish-lsp/dist/fish-lsp\"] },\n] }\n"
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'node'
+ref = './packages/node.toml'
+manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+version = '22.20.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
+sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+
+[[package.dep]]
+name = 'node'
+ref = './packages/node.toml'
+manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+version = '22.20.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
+sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+
+[[package]]
+name = 'freebuff'
+ref = './packages/freebuff.toml'
+manifest_sha256 = '5a05ed5b3b754299066e214b6b8ac17044226cff4b4fa856f6b6d699c8eb6508'
+version = '0.0.180'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.180/freebuff-darwin-arm64.tar.gz'
+sha256 = '4aa64802456762ab94e1d097ccd820f05c5d2b875a5f6f531c69c5d7cd21cb2f'
+
+[[package]]
+name = 'fzf'
+ref = 'github:junegunn/fzf'
+commit = 'b1be3a8be1b833ce5b92fbbac11637643d60a046'
+manifest_sha256 = '007705fa3f2deb466134303bf0714defdd1878b1ec3f5a76ed69b3c8387f3915'
+version = '0.74.4'
+tag = 'v0.74.4'
+inferred = true
+manifest = "[package]\nname = \"fzf\"\nhomepage = \"https://github.com/junegunn/fzf\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"junegunn/fzf\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf-{{version}}-linux_amd64.tar.gz\"\nsha256_url = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf_{{version}}_checksums.txt\"\nbin = [\"fzf\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf-{{version}}-darwin_amd64.tar.gz\"\nsha256_url = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf_{{version}}_checksums.txt\"\nbin = [\"fzf\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"amd64\" }\nurl = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf-{{version}}-windows_amd64.zip\"\nsha256_url = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf_{{version}}_checksums.txt\"\nbin = [\"fzf.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf-{{version}}-linux_arm64.tar.gz\"\nsha256_url = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf_{{version}}_checksums.txt\"\nbin = [\"fzf\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf-{{version}}-darwin_arm64.tar.gz\"\nsha256_url = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf_{{version}}_checksums.txt\"\nbin = [\"fzf\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"arm64\" }\nurl = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf-{{version}}-windows_arm64.zip\"\nsha256_url = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf_{{version}}_checksums.txt\"\nbin = [\"fzf.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm\" }\nurl = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf-{{version}}-linux_armv7.tar.gz\"\nsha256_url = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf_{{version}}_checksums.txt\"\nbin = [\"fzf\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"riscv64\" }\nurl = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf-{{version}}-linux_riscv64.tar.gz\"\nsha256_url = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf_{{version}}_checksums.txt\"\nbin = [\"fzf\"]\n"
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-darwin_arm64.tar.gz'
+sha256 = '4f6a113bfc0c7959e0005c78d566a51afc4fcefc956f43735c62a9deb19e92ae'
+
+[[package]]
+name = 'gh'
+ref = './packages/gh.toml'
+manifest_sha256 = '1d911ba5638970fbc8fbbda1486ea4c808ed60ff38be9c915c2c9a7e9232ebad'
+version = '2.101.0'
+tag = 'v2.101.0'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/cli/cli/releases/download/v2.101.0/gh_2.101.0_macOS_arm64.zip'
+sha256 = 'e4303e39d8f07141c4bad4b99b01079f05029c59b27076e8fbc825c985ecdd8b'
 
 [[package]]
 name = 'gh-actions-language-server'
@@ -27,6 +433,705 @@ url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
 sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
 
 [[package]]
+name = 'ghostscript'
+ref = './packages/ghostscript.toml'
+manifest_sha256 = '3ecbe5b76407bbcb93c35c9454ef2d1cb9827ec0126bd1f935d5445309a74abf'
+version = '10.08.0'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package]]
+name = 'ghostty'
+ref = './packages/ghostty.toml'
+manifest_sha256 = '55f720eb2ecf5b40beca42cedaffde1e2aa8ef9d1649f97d49e002700fdee59c'
+version = '1.3.1'
+tag = 'v1.3.1'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://release.files.ghostty.org/1.3.1/Ghostty.dmg'
+sha256 = '18cff2b0a6cee90eead9c7d3064e808a252a40baf214aa752c1ecb793b8f5f69'
+
+[[package]]
+name = 'gifsicle'
+ref = './packages/gifsicle.toml'
+manifest_sha256 = '0b808f1666946c13430000b11eeb18e88bf82cff6155d2bf17708abf835e6cfd'
+version = '1.96'
+tag = 'v1.96'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package]]
+name = 'git-lfs'
+ref = 'github:git-lfs/git-lfs'
+commit = 'f0bffc4fe998fe5cb004dbca9e8951ea662ff66b'
+manifest_sha256 = '8ae4f8efd0cf61ea579a055bdbeadb90a5e0d3f238825f6c8043febc6788c018'
+version = '3.8.0'
+tag = 'v3.8.0'
+inferred = true
+manifest = "[package]\nname = \"git-lfs\"\nhomepage = \"https://github.com/git-lfs/git-lfs\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"git-lfs/git-lfs\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/git-lfs/git-lfs/releases/download/{{tag}}/git-lfs-linux-amd64-{{tag}}.tar.gz\"\nstrip = 1\nbin = [\"git-lfs\"]\nman = [\"man/man1/git-lfs.1\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/git-lfs/git-lfs/releases/download/{{tag}}/git-lfs-darwin-amd64-{{tag}}.zip\"\nstrip = 1\nbin = [\"git-lfs\"]\nman = [\"man/man1/git-lfs.1\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"amd64\" }\nurl = \"https://github.com/git-lfs/git-lfs/releases/download/{{tag}}/git-lfs-windows-amd64-{{tag}}.zip\"\nstrip = 1\nbin = [\"git-lfs.exe\"]\nman = [\"man/man1/git-lfs.1\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/git-lfs/git-lfs/releases/download/{{tag}}/git-lfs-linux-arm64-{{tag}}.tar.gz\"\nstrip = 1\nbin = [\"git-lfs\"]\nman = [\"man/man1/git-lfs.1\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/git-lfs/git-lfs/releases/download/{{tag}}/git-lfs-darwin-arm64-{{tag}}.zip\"\nstrip = 1\nbin = [\"git-lfs\"]\nman = [\"man/man1/git-lfs.1\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"arm64\" }\nurl = \"https://github.com/git-lfs/git-lfs/releases/download/{{tag}}/git-lfs-windows-arm64-{{tag}}.zip\"\nstrip = 1\nbin = [\"git-lfs.exe\"]\nman = [\"man/man1/git-lfs.1\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"386\" }\nurl = \"https://github.com/git-lfs/git-lfs/releases/download/{{tag}}/git-lfs-linux-386-{{tag}}.tar.gz\"\nstrip = 1\nbin = [\"git-lfs\"]\nman = [\"man/man1/git-lfs.1\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"386\" }\nurl = \"https://github.com/git-lfs/git-lfs/releases/download/{{tag}}/git-lfs-windows-386-{{tag}}.zip\"\nstrip = 1\nbin = [\"git-lfs.exe\"]\nman = [\"man/man1/git-lfs.1\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm\" }\nurl = \"https://github.com/git-lfs/git-lfs/releases/download/{{tag}}/git-lfs-linux-arm-{{tag}}.tar.gz\"\nstrip = 1\nbin = [\"git-lfs\"]\nman = [\"man/man1/git-lfs.1\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"riscv64\" }\nurl = \"https://github.com/git-lfs/git-lfs/releases/download/{{tag}}/git-lfs-linux-riscv64-{{tag}}.tar.gz\"\nstrip = 1\nbin = [\"git-lfs\"]\nman = [\"man/man1/git-lfs.1\"]\n"
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/git-lfs/git-lfs/releases/download/v3.8.0/git-lfs-darwin-arm64-v3.8.0.zip'
+sha256 = 'caff76a7d070d8160c89bc39b6e85d98f24135b6fed038a3b4de2590d25102d8'
+
+[[package]]
+name = 'imagemagick'
+ref = './packages/imagemagick.toml'
+manifest_sha256 = '7c48859d4dd61519be2f2ef4545232f967f5ac6c3a2d1469c74afccab23e200e'
+version = '7.1.2-31'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'pkgconf'
+ref = './packages/pkgconf.toml'
+manifest_sha256 = 'e07a24e7d6363cebc7d42579b533ecfe76846e2cc7fce460cf493851486cd878'
+version = '3.0.7'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'jpeg-turbo'
+ref = './packages/jpeg-turbo.toml'
+manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+version = '3.2.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'libtiff'
+ref = './packages/libtiff.toml'
+manifest_sha256 = '9480822043b3122a68ac5e7a7378111feb3f703177acee1732824d66d22f2025'
+version = '4.7.2'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep.dep]]
+name = 'jpeg-turbo'
+ref = './packages/jpeg-turbo.toml'
+manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+version = '3.2.0'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep.dep]]
+name = 'jpeg-turbo'
+ref = './packages/jpeg-turbo.toml'
+manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+version = '3.2.0'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep]]
+name = 'libwebp-lib'
+ref = './packages/libwebp-lib.toml'
+manifest_sha256 = '83dc6b3957c9ed933f5f54ab6f25297f56c6515ab0795866153979c9af465768'
+version = '1.6.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep]]
+name = 'freetype'
+ref = './packages/freetype.toml'
+manifest_sha256 = '145ef172ca8f1dc9b6fa9dee610307136a4f6ece60c9aa0dc055b4be76713aad'
+version = '2.14.3'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'xz'
+ref = './packages/xz.toml'
+manifest_sha256 = '1ef55f559710b517b58a002384aa268675247615337b0d156cccfc3070eb68b4'
+version = '5.8.4'
+tag = 'v5.8.4'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'jpeg-turbo'
+ref = './packages/jpeg-turbo.toml'
+manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+version = '3.2.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'libtiff'
+ref = './packages/libtiff.toml'
+manifest_sha256 = '9480822043b3122a68ac5e7a7378111feb3f703177acee1732824d66d22f2025'
+version = '4.7.2'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep.dep]]
+name = 'jpeg-turbo'
+ref = './packages/jpeg-turbo.toml'
+manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+version = '3.2.0'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep.dep]]
+name = 'jpeg-turbo'
+ref = './packages/jpeg-turbo.toml'
+manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+version = '3.2.0'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep]]
+name = 'libwebp-lib'
+ref = './packages/libwebp-lib.toml'
+manifest_sha256 = '83dc6b3957c9ed933f5f54ab6f25297f56c6515ab0795866153979c9af465768'
+version = '1.6.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep]]
+name = 'freetype'
+ref = './packages/freetype.toml'
+manifest_sha256 = '145ef172ca8f1dc9b6fa9dee610307136a4f6ece60c9aa0dc055b4be76713aad'
+version = '2.14.3'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'xz'
+ref = './packages/xz.toml'
+manifest_sha256 = '1ef55f559710b517b58a002384aa268675247615337b0d156cccfc3070eb68b4'
+version = '5.8.4'
+tag = 'v5.8.4'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package]]
+name = 'jetbrains-mono-nerd-font'
+ref = './packages/jetbrains-mono-nerd-font.toml'
+manifest_sha256 = 'fa57ab57d310837bbf2ac634dfff69c85ae84a19ed1a22933f94015ac4e56efd'
+version = '3.5.1'
+tag = 'v3.5.1'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/JetBrainsMono.zip'
+sha256 = 'fab782a66f7d3019da64f6572db9fc5d3a4bcb19f9fa13e2d8a62e3693d6396e'
+
+[[package]]
+name = 'jpegoptim'
+ref = './packages/jpegoptim.toml'
+manifest_sha256 = '1dd83ed90c19da2eb58f7644d6283408a3c43e978a328867b6c786b6109e81ae'
+version = '1.5.6'
+tag = 'v1.5.6'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'jpeg-turbo'
+ref = './packages/jpeg-turbo.toml'
+manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+version = '3.2.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep]]
+name = 'jpeg-turbo'
+ref = './packages/jpeg-turbo.toml'
+manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+version = '3.2.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package]]
+name = 'jq'
+ref = 'github:jqlang/jq'
+commit = 'df24981307658868759faaea76b817cc62dd6be0'
+manifest_sha256 = 'c17d80d96bc6127b32874ddd24bf0b75d4ec1d2045477ee1533e0bc5dd0bc636'
+version = '1.8.2'
+tag = 'jq-1.8.2'
+inferred = true
+manifest = "[package]\nname = \"jq\"\nhomepage = \"https://github.com/jqlang/jq\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"jqlang/jq\"\nstrip_prefix = \"jq-\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/jqlang/jq/releases/download/{{tag}}/jq-linux-amd64\"\nsha256_url = \"https://github.com/jqlang/jq/releases/download/{{tag}}/sha256sum.txt\"\nbin = [\"jq\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/jqlang/jq/releases/download/{{tag}}/jq-osx-amd64\"\nsha256_url = \"https://github.com/jqlang/jq/releases/download/{{tag}}/sha256sum.txt\"\nbin = [\"jq\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"amd64\" }\nurl = \"https://github.com/jqlang/jq/releases/download/{{tag}}/jq-windows-amd64.exe\"\nsha256_url = \"https://github.com/jqlang/jq/releases/download/{{tag}}/sha256sum.txt\"\nbin = [\"jq.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/jqlang/jq/releases/download/{{tag}}/jq-linux-arm64\"\nsha256_url = \"https://github.com/jqlang/jq/releases/download/{{tag}}/sha256sum.txt\"\nbin = [\"jq\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/jqlang/jq/releases/download/{{tag}}/jq-macos-arm64\"\nsha256_url = \"https://github.com/jqlang/jq/releases/download/{{tag}}/sha256sum.txt\"\nbin = [\"jq\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"arm64\" }\nurl = \"https://github.com/jqlang/jq/releases/download/{{tag}}/jq-windows-arm64.exe\"\nsha256_url = \"https://github.com/jqlang/jq/releases/download/{{tag}}/sha256sum.txt\"\nbin = [\"jq.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"386\" }\nurl = \"https://github.com/jqlang/jq/releases/download/{{tag}}/jq-linux-i386\"\nsha256_url = \"https://github.com/jqlang/jq/releases/download/{{tag}}/sha256sum.txt\"\nbin = [\"jq\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"386\" }\nurl = \"https://github.com/jqlang/jq/releases/download/{{tag}}/jq-windows-i386.exe\"\nsha256_url = \"https://github.com/jqlang/jq/releases/download/{{tag}}/sha256sum.txt\"\nbin = [\"jq.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm\" }\nurl = \"https://github.com/jqlang/jq/releases/download/{{tag}}/jq-linux-armhf\"\nsha256_url = \"https://github.com/jqlang/jq/releases/download/{{tag}}/sha256sum.txt\"\nbin = [\"jq\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"riscv64\" }\nurl = \"https://github.com/jqlang/jq/releases/download/{{tag}}/jq-linux-riscv64\"\nsha256_url = \"https://github.com/jqlang/jq/releases/download/{{tag}}/sha256sum.txt\"\nbin = [\"jq\"]\n"
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/jqlang/jq/releases/download/jq-1.8.2/jq-macos-arm64'
+sha256 = '2d75340ba57a4b4b4c8708a21c2dc8e958a48aaa8bba13b27f77f6e4c0eca07e'
+
+[[package]]
+name = 'kanata'
+ref = './packages/kanata.toml'
+manifest_sha256 = '2fbde2b87212747730622287840d06339b8a7649237d591a439e5a2f40e809ed'
+version = '1.12.0'
+tag = 'v1.12.0'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/jtroo/kanata/releases/download/v1.12.0/macos-binaries-arm64.zip'
+sha256 = '839769d189911b5881e11550eaa2039705213fb725865d088f5a2e3a6c10de32'
+
+[[package]]
+name = 'lazygit'
+ref = 'github:jesseduffield/lazygit'
+commit = 'f8499e3b490b843d74e3c3b7b9897cd6d8e57c03'
+manifest_sha256 = 'eca8d2e00561d17adc2bdcdcd01f985df7aa549fe32e4227305e256fe4ffccc4'
+version = '0.65.1'
+tag = 'v0.65.1'
+inferred = true
+manifest = "[package]\nname = \"lazygit\"\nhomepage = \"https://github.com/jesseduffield/lazygit\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"jesseduffield/lazygit\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/lazygit_{{version}}_linux_x86_64.tar.gz\"\nsha256_url = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/checksums.txt\"\nbin = [\"lazygit\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/lazygit_{{version}}_darwin_x86_64.tar.gz\"\nsha256_url = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/checksums.txt\"\nbin = [\"lazygit\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"amd64\" }\nurl = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/lazygit_{{version}}_windows_x86_64.zip\"\nsha256_url = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/checksums.txt\"\nbin = [\"lazygit.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/lazygit_{{version}}_linux_arm64.tar.gz\"\nsha256_url = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/checksums.txt\"\nbin = [\"lazygit\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/lazygit_{{version}}_darwin_arm64.tar.gz\"\nsha256_url = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/checksums.txt\"\nbin = [\"lazygit\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"arm64\" }\nurl = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/lazygit_{{version}}_windows_arm64.zip\"\nsha256_url = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/checksums.txt\"\nbin = [\"lazygit.exe\"]\n"
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/jesseduffield/lazygit/releases/download/v0.65.1/lazygit_0.65.1_darwin_arm64.tar.gz'
+sha256 = '65a367c6ea9a88efebaaf7998a6835eedb987e04916cef677264ff9b31b1b13e'
+
+[[package]]
+name = 'libwebp'
+ref = './packages/libwebp.toml'
+manifest_sha256 = 'aaa7c4a8e3c46f92d884e3369b94c432e0febbc706d5e5d3cbf42dc5415d6dc0'
+version = '1.6.0'
+tag = 'v1.6.0'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0-mac-arm64.tar.gz'
+sha256 = 'bc6bf84cc70f3f8574fba797d1e4a7dea4feebe9fa4be919f202413ea2b3b8f2'
+
+[[package]]
+name = 'lua'
+ref = './packages/lua.toml'
+manifest_sha256 = 'f29ce7c2afd76a55735a2bf8c0d0341f5060407cabb6a8736f718f14970a2338'
+version = '5.1.5'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package]]
+name = 'luarocks'
+ref = './packages/luarocks.toml'
+manifest_sha256 = '11447e22ae7f986d02320a67c2cb7cbb6660ae635943fc361988e1003957111f'
+version = '3.13.0'
+tag = 'v3.13.0'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'lua'
+ref = './packages/lua.toml'
+manifest_sha256 = 'f29ce7c2afd76a55735a2bf8c0d0341f5060407cabb6a8736f718f14970a2338'
+version = '5.1.5'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'lua'
+ref = './packages/lua.toml'
+manifest_sha256 = 'f29ce7c2afd76a55735a2bf8c0d0341f5060407cabb6a8736f718f14970a2338'
+version = '5.1.5'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package]]
+name = 'marksman'
+ref = './packages/marksman.toml'
+manifest_sha256 = 'a79bcae8b58c5c188657fc5646c03e98af76e1cc5481485cb10aed5beecb5e78'
+version = '2026-02-08'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/artempyanykh/marksman/releases/download/2026-02-08/marksman-macos'
+sha256 = '6a801c17b5ac0dba69787c5282b3b3bd416e66c96253fae098d311c6bbd1833b'
+
+[[package]]
+name = 'mimi'
+ref = './packages/mimi.toml'
+manifest_sha256 = 'b34563a343bf5e25be3d1195bc473a5348d1b97200f8d2fe86908e3697a2f950'
+version = '2026.09.18-08e2b73'
+tag = 'main'
+tag_commit = '08e2b73280c89fcade25b19a42e161da2a06cb3b'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'go'
+ref = './packages/go.toml'
+manifest_sha256 = '850dfc0af428be9b5da144c08de9d6c247b2bd41a401c160d99a076a8ce62691'
+version = '1.26.8'
+tag = 'go1.26.8'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://dl.google.com/go/go1.26.8.darwin-arm64.tar.gz'
+sha256 = 'a012b25b571bd0138a03dcd25375ceba866fe5ca822f426d2c66a4de56fd3f4b'
+
+[[package]]
+name = 'mkcert'
+ref = 'github:FiloSottile/mkcert'
+commit = '1c1dc4ed27ed5936046b6398d39cab4d657a2d8e'
+manifest_sha256 = '6a1363a58bb02fd5f9fa51aab95fab4d7f671799de03a70ddfec4e02147cab6f'
+version = '1.4.4'
+tag = 'v1.4.4'
+inferred = true
+manifest = "[package]\nname = \"mkcert\"\nhomepage = \"https://github.com/FiloSottile/mkcert\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"FiloSottile/mkcert\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/FiloSottile/mkcert/releases/download/{{tag}}/mkcert-{{tag}}-linux-amd64\"\nbin = [\"mkcert\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/FiloSottile/mkcert/releases/download/{{tag}}/mkcert-{{tag}}-darwin-amd64\"\nbin = [\"mkcert\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"amd64\" }\nurl = \"https://github.com/FiloSottile/mkcert/releases/download/{{tag}}/mkcert-{{tag}}-windows-amd64.exe\"\nbin = [\"mkcert.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/FiloSottile/mkcert/releases/download/{{tag}}/mkcert-{{tag}}-linux-arm64\"\nbin = [\"mkcert\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/FiloSottile/mkcert/releases/download/{{tag}}/mkcert-{{tag}}-darwin-arm64\"\nbin = [\"mkcert\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"arm64\" }\nurl = \"https://github.com/FiloSottile/mkcert/releases/download/{{tag}}/mkcert-{{tag}}-windows-arm64.exe\"\nbin = [\"mkcert.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm\" }\nurl = \"https://github.com/FiloSottile/mkcert/releases/download/{{tag}}/mkcert-{{tag}}-linux-arm\"\nbin = [\"mkcert\"]\n"
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/FiloSottile/mkcert/releases/download/v1.4.4/mkcert-v1.4.4-darwin-arm64'
+sha256 = 'c8af0df44bce04359794dad8ea28d750437411d632748049d08644ffb66a60c6'
+
+[[package]]
+name = 'mole'
+ref = './packages/mole.toml'
+manifest_sha256 = 'e269d982613487f992e7466af60e68966338e31872b67cbe50476b43509a3223'
+version = '1.55.0'
+tag = 'V1.55.0'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'go'
+ref = './packages/go.toml'
+manifest_sha256 = '850dfc0af428be9b5da144c08de9d6c247b2bd41a401c160d99a076a8ce62691'
+version = '1.27.1'
+tag = 'go1.27.1'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://dl.google.com/go/go1.27.1.darwin-arm64.tar.gz'
+sha256 = 'ee215d57e0ec269c60cc9ceca68e6bda321ba9ee5afe24f4b0988703c2d87d12'
+
+[[package]]
+name = 'neru'
+ref = './packages/neru.toml'
+manifest_sha256 = 'f6d02a2dec637bd970b1d88ae7f0d37687b47cc743c75b3ca718f4f639eb4c56'
+version = '2026.09.19-1f70879'
+tag = 'main'
+tag_commit = '1f70879fb095143a5c450d707d7f9985f84c914c'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'go'
+ref = './packages/go.toml'
+manifest_sha256 = '850dfc0af428be9b5da144c08de9d6c247b2bd41a401c160d99a076a8ce62691'
+version = '1.26.8'
+tag = 'go1.26.8'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://dl.google.com/go/go1.26.8.darwin-arm64.tar.gz'
+sha256 = 'a012b25b571bd0138a03dcd25375ceba866fe5ca822f426d2c66a4de56fd3f4b'
+
+[[package]]
 name = 'nvim'
 ref = './packages/nvim.toml'
 manifest_sha256 = 'b8b44381b34f1aedf7eae5625936ccf997f9a35d1cd3cab94cd7521355b58ba3'
@@ -39,3 +1144,1117 @@ tag_commit = '0ea627cfb7713dd77dab00fff1073e5e407f263e'
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz'
 sha256 = '02dc20462996c957aec1a4cecac113aac6395617d3c456bf787984d783647007'
+
+[[package]]
+name = 'opencode'
+ref = './packages/opencode.toml'
+manifest_sha256 = '016840d429a3f5cc1dc46121795c49ab9c4fb71c8d2ea6ea14b558e03c77e1f8'
+version = '1.18.31'
+tag = 'v1.18.31'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/anomalyco/opencode/releases/download/v1.18.31/opencode-darwin-arm64.zip'
+sha256 = 'caf7f31fa1aec2353ea859d4ef9ab824c6273d941b016e88d51193fa3028d34e'
+
+[[package]]
+name = 'optipng'
+ref = './packages/optipng.toml'
+manifest_sha256 = 'd3aff0dc3bc5e5c4c92bf60cacea704e6fe40253e3dda077aa68dfc408a487ff'
+version = '7.9.1'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package]]
+name = 'orbstack'
+ref = './packages/orbstack.toml'
+manifest_sha256 = '5566f820a51552387582c4a75c7a768fdb9f3fc774dc689a5f99121ed219f1b0'
+version = '2.2.3'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://cdn-updates.orbstack.dev/arm64/OrbStack_v2.2.3_20963_arm64.dmg'
+sha256 = '7ca77868f3a0d7d9f57b3f98615aad30cc59d23cc84bbff13f78846df0b493d4'
+
+[[package]]
+name = 'pngquant'
+ref = './packages/pngquant.toml'
+manifest_sha256 = 'a0c10fd6ad3b77bdbef235f23f8d98e9d39f42f97af9cc4102516b05125d70b5'
+version = '3.0.3'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'rust'
+ref = './packages/rust.toml'
+manifest_sha256 = '91b66c71fbee6fe544ab4d7815cd92a64b6041eb6b2972c12b5219f212e87729'
+version = '1.98.1'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package]]
+name = 'poppins'
+ref = './packages/poppins.toml'
+manifest_sha256 = 'e83b3e96e61d3a8da4541403e063cbba2374206b21e1eab116fd417f14352443'
+version = '4.003'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/itfoundry/Poppins/raw/v4.003/products/Poppins-4.003-GoogleFonts-TTF.zip'
+sha256 = '69cdf3e8bacecc99fd420186d26dd5769c004ee218034457b3691a1cf408967c'
+
+[[package]]
+name = 'poppler'
+ref = './packages/poppler.toml'
+manifest_sha256 = '38ae79db5e2c1fdf2d82ea319a012ff2ee0b9940a796ae93030a86be3a910034'
+version = '26.09.0'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep]]
+name = 'freetype'
+ref = './packages/freetype.toml'
+manifest_sha256 = '145ef172ca8f1dc9b6fa9dee610307136a4f6ece60c9aa0dc055b4be76713aad'
+version = '2.14.3'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'fontconfig'
+ref = './packages/fontconfig.toml'
+manifest_sha256 = '14f151173cb3878cc3f0aeca3ea14880fd8894387d59b6554c749cb011299ea3'
+version = '2.15.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'pkgconf'
+ref = './packages/pkgconf.toml'
+manifest_sha256 = 'e07a24e7d6363cebc7d42579b533ecfe76846e2cc7fce460cf493851486cd878'
+version = '3.0.7'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'freetype'
+ref = './packages/freetype.toml'
+manifest_sha256 = '145ef172ca8f1dc9b6fa9dee610307136a4f6ece60c9aa0dc055b4be76713aad'
+version = '2.14.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep.dep.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'freetype'
+ref = './packages/freetype.toml'
+manifest_sha256 = '145ef172ca8f1dc9b6fa9dee610307136a4f6ece60c9aa0dc055b4be76713aad'
+version = '2.14.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep.dep.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'jpeg-turbo'
+ref = './packages/jpeg-turbo.toml'
+manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+version = '3.2.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'libtiff'
+ref = './packages/libtiff.toml'
+manifest_sha256 = '9480822043b3122a68ac5e7a7378111feb3f703177acee1732824d66d22f2025'
+version = '4.7.2'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep.dep]]
+name = 'jpeg-turbo'
+ref = './packages/jpeg-turbo.toml'
+manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+version = '3.2.0'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep.dep]]
+name = 'jpeg-turbo'
+ref = './packages/jpeg-turbo.toml'
+manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+version = '3.2.0'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep]]
+name = 'openjpeg'
+ref = './packages/openjpeg.toml'
+manifest_sha256 = 'c4bdc8bd41fc7dfa4ed0cdfecf82bf9ce8cbe463f13f8ee37a6b229c41f08392'
+version = '2.5.4'
+tag = 'v2.5.4'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep]]
+name = 'freetype'
+ref = './packages/freetype.toml'
+manifest_sha256 = '145ef172ca8f1dc9b6fa9dee610307136a4f6ece60c9aa0dc055b4be76713aad'
+version = '2.14.3'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'fontconfig'
+ref = './packages/fontconfig.toml'
+manifest_sha256 = '14f151173cb3878cc3f0aeca3ea14880fd8894387d59b6554c749cb011299ea3'
+version = '2.15.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'pkgconf'
+ref = './packages/pkgconf.toml'
+manifest_sha256 = 'e07a24e7d6363cebc7d42579b533ecfe76846e2cc7fce460cf493851486cd878'
+version = '3.0.7'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'freetype'
+ref = './packages/freetype.toml'
+manifest_sha256 = '145ef172ca8f1dc9b6fa9dee610307136a4f6ece60c9aa0dc055b4be76713aad'
+version = '2.14.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep.dep.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'freetype'
+ref = './packages/freetype.toml'
+manifest_sha256 = '145ef172ca8f1dc9b6fa9dee610307136a4f6ece60c9aa0dc055b4be76713aad'
+version = '2.14.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep.dep.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'jpeg-turbo'
+ref = './packages/jpeg-turbo.toml'
+manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+version = '3.2.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep]]
+name = 'libpng'
+ref = './packages/libpng.toml'
+manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+version = '1.6.58'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'libtiff'
+ref = './packages/libtiff.toml'
+manifest_sha256 = '9480822043b3122a68ac5e7a7378111feb3f703177acee1732824d66d22f2025'
+version = '4.7.2'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep.dep]]
+name = 'jpeg-turbo'
+ref = './packages/jpeg-turbo.toml'
+manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+version = '3.2.0'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep.dep]]
+name = 'jpeg-turbo'
+ref = './packages/jpeg-turbo.toml'
+manifest_sha256 = '8ad719b6f2d35f26edaa93d80984d8becb8301e016b74a897aa512bee824fddb'
+version = '3.2.0'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package.dep]]
+name = 'openjpeg'
+ref = './packages/openjpeg.toml'
+manifest_sha256 = 'c4bdc8bd41fc7dfa4ed0cdfecf82bf9ce8cbe463f13f8ee37a6b229c41f08392'
+version = '2.5.4'
+tag = 'v2.5.4'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.3'
+tag = 'v4.4.3'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.3/cmake-4.4.3-macos-universal.tar.gz'
+sha256 = '0c5d65251c14cc884bfa16bdbed3c263ce5bffe2e21c0d0d00962cb0610464fa'
+
+[[package]]
+name = 'prettierd'
+ref = 'npm:@fsouza/prettierd'
+manifest_sha256 = '470052929b16bce7dd4bdbaf871341f7b7b6d63f44d3a48fe547e88bd88690d2'
+version = '0.29.0'
+inferred = true
+manifest = "[package]\nname = \"prettierd\"\nhomepage = \"https://www.npmjs.com/package/@fsouza/prettierd\"\n\n[version]\nfrom = \"npm\"\nrepo = \"@fsouza/prettierd\"\n\n[runtime]\ndeps = [\"/Users/kylewong/.config/oku/packages/node.toml\"]\n\n[build]\ndeps = [\"/Users/kylewong/.config/oku/packages/node.toml\"]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"@fsouza/prettierd\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"prettierd\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/@fsouza/prettierd/bin/prettierd\"] },\n] }\n"
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'node'
+ref = './packages/node.toml'
+manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+version = '22.20.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
+sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+
+[[package.dep]]
+name = 'node'
+ref = './packages/node.toml'
+manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+version = '22.20.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
+sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+
+[[package]]
+name = 'rip2'
+ref = 'github:MilesCranmer/rip2'
+commit = '269f486dcfd56d2bc8399426d9135120b33ac99f'
+manifest_sha256 = '82cbddc122ebbe2c66abe9b2c227fb026196272109a81a4a28dd2a58f2e3c1ef'
+version = '0.9.6'
+tag = 'v0.9.6'
+inferred = true
+manifest = "[package]\nname = \"rip2\"\nhomepage = \"https://github.com/MilesCranmer/rip2\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"MilesCranmer/rip2\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/MilesCranmer/rip2/releases/download/{{tag}}/rip-Linux-x86_64-musl.tar.gz\"\nbin = [\"rip\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/MilesCranmer/rip2/releases/download/{{tag}}/rip-macOS-Darwin-x86_64.tar.gz\"\nbin = [\"rip\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"amd64\" }\nurl = \"https://github.com/MilesCranmer/rip2/releases/download/{{tag}}/rip-Windows-x86_64.zip\"\nbin = [\"rip.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/MilesCranmer/rip2/releases/download/{{tag}}/rip-Linux-aarch64-musl.tar.gz\"\nbin = [\"rip\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/MilesCranmer/rip2/releases/download/{{tag}}/rip-macOS-Darwin-aarch64.tar.gz\"\nbin = [\"rip\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"386\" }\nurl = \"https://github.com/MilesCranmer/rip2/releases/download/{{tag}}/rip-Linux-i686-musl.tar.gz\"\nbin = [\"rip\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"386\" }\nurl = \"https://github.com/MilesCranmer/rip2/releases/download/{{tag}}/rip-Windows-i686.zip\"\nbin = [\"rip.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm\" }\nurl = \"https://github.com/MilesCranmer/rip2/releases/download/{{tag}}/rip-Linux-arm-musl.tar.gz\"\nbin = [\"rip\"]\n"
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/MilesCranmer/rip2/releases/download/v0.9.6/rip-macOS-Darwin-aarch64.tar.gz'
+sha256 = 'b8fbf7b5acb14ce5d5746cc17c8e4b8ef7e60f8c83e3cfcd5243f822219afbcd'
+
+[[package]]
+name = 'ripgrep'
+ref = './packages/ripgrep.toml'
+manifest_sha256 = '907d9ac41b9d1a6c91bb260ef0033d6c88849ac595dbcc8c8a6259c0d8d57bfb'
+version = '15.2.0'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-aarch64-apple-darwin.tar.gz'
+sha256 = '3750b2e93f37e0c692657da574d7019a101c0084da05a790c83fd335bad973e4'
+
+[[package]]
+name = 'sesh'
+ref = 'github:joshmedeski/sesh'
+commit = 'f470ccf2e336c21382689d5cea08f163b64cd9a7'
+manifest_sha256 = 'e7042907e752c9be5ac41162ca7f1db2b3d687f4303f0c59ff7bec6667d4570b'
+version = '2.30.1'
+tag = 'v2.30.1'
+inferred = true
+manifest = "[package]\nname = \"sesh\"\nhomepage = \"https://github.com/joshmedeski/sesh\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"joshmedeski/sesh\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_Linux_x86_64.tar.gz\"\nsha256_url = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_{{version}}_checksums.txt\"\nbin = [\"sesh\"]\nman = [\"share/man/man1/sesh.1\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_Darwin_x86_64.tar.gz\"\nsha256_url = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_{{version}}_checksums.txt\"\nbin = [\"sesh\"]\nman = [\"share/man/man1/sesh.1\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"amd64\" }\nurl = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_Windows_x86_64.zip\"\nsha256_url = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_{{version}}_checksums.txt\"\nbin = [\"sesh.exe\"]\nman = [\"share/man/man1/sesh.1\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_Linux_arm64.tar.gz\"\nsha256_url = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_{{version}}_checksums.txt\"\nbin = [\"sesh\"]\nman = [\"share/man/man1/sesh.1\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_Darwin_arm64.tar.gz\"\nsha256_url = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_{{version}}_checksums.txt\"\nbin = [\"sesh\"]\nman = [\"share/man/man1/sesh.1\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"arm64\" }\nurl = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_Windows_arm64.zip\"\nsha256_url = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_{{version}}_checksums.txt\"\nbin = [\"sesh.exe\"]\nman = [\"share/man/man1/sesh.1\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"386\" }\nurl = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_Linux_i386.tar.gz\"\nsha256_url = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_{{version}}_checksums.txt\"\nbin = [\"sesh\"]\nman = [\"share/man/man1/sesh.1\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"386\" }\nurl = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_Windows_i386.zip\"\nsha256_url = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_{{version}}_checksums.txt\"\nbin = [\"sesh.exe\"]\nman = [\"share/man/man1/sesh.1\"]\n"
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/joshmedeski/sesh/releases/download/v2.30.1/sesh_Darwin_arm64.tar.gz'
+sha256 = 'fb4bc819ee82adffb004dd223f17a3436318abffb00c252b562128481fb9c441'
+
+[[package]]
+name = 'skhd'
+ref = './packages/skhd.toml'
+manifest_sha256 = 'bf4c4f049d15c25d7cb795af2f2c59ea3a8b7572e526c58e10799e239140fb9a'
+version = '0.2.0'
+tag = 'v0.2.0'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/jackielii/skhd.zig/releases/download/v0.2.0/skhd-arm64-macos.tar.gz'
+sha256 = '0b48d8f349f6b73849e338fe8dfa5dc14077f58baee98e01e2aa784d6721b340'
+
+[[package]]
+name = 'skills-anthropic'
+ref = './packages/skills-anthropic.toml'
+manifest_sha256 = 'b23b767b3efa677e4da7e34651f0f626eab621f2dfcf874120670a21ffa26943'
+version = '2026.09.10-34040c9'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/anthropics/skills/archive/34040c9c568585f6929bedeaad110ad08f079624.tar.gz'
+sha256 = '94527d9bf3b49a8951aba1ce9420a37079f1a6677accca4b04435c79aabbe5bb'
+
+[[package]]
+name = 'skills-caveman'
+ref = './packages/skills-caveman.toml'
+manifest_sha256 = 'ea8c1297e26b572eb37e5a3780a04f44dc219220ffb9e47b0ec79944f46262aa'
+version = '2026.09.20-3ee70a1'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/JuliusBrussee/caveman/archive/3ee70a102609e550bd2e68004bf5990a9341c851.tar.gz'
+sha256 = 'c4c00c40e3d4db1c3223f5f8433f09ed847cede7fdfce3bb839fdacb8a0d7d50'
+
+[[package]]
+name = 'skills-cursor'
+ref = './packages/skills-cursor.toml'
+manifest_sha256 = '5abe027651edd7cc1d7e8bffb83c0b5beb106f6264f7ba0e986a98683ae5888f'
+version = '2026.09.18-032be14'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/cursor/plugins/archive/032be146865d973682535de75f2287da438550bf.tar.gz'
+sha256 = '1d9c0f75def9a97cedd8cfff5eadc60475c03913a33ed9880bf8987999b3761f'
+
+[[package]]
+name = 'skills-emil'
+ref = './packages/skills-emil.toml'
+manifest_sha256 = '4c242431df88929bb6c83c45fd443a0771c8c46ecdf3388a36f2d8bfc59f3362'
+version = '2026.09.15-85e8e23'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/emilkowalski/skills/archive/85e8e2363b713506e1d5b6e07a0eb2da66be1bc3.tar.gz'
+sha256 = '69f46138691673003b6487381c6126463b1cd32a5f5c17b4cf610124a72840a4'
+
+[[package]]
+name = 'skills-shadcn'
+ref = './packages/skills-shadcn.toml'
+manifest_sha256 = 'd333d9e10be7ed70fc2cdbffab2155574db85cecbb08640c3541056a9ae1133e'
+version = '2026.09.17-a87a63b'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/shadcn-ui/ui/archive/a87a63b2ca25143d26c8bd0903e4e9bc77b3f824.tar.gz'
+sha256 = '1b4af84e6362ed3273b78ac16e262149b32e6b8369588909fb8a2047e3014291'
+
+[[package]]
+name = 'sops'
+ref = 'github:getsops/sops'
+commit = 'f3556a48bee79ce780512cc6023058d027de68b6'
+manifest_sha256 = '902e09cd3892dfd1e56f748a5ecf65ff7b643040925410a3bc56c3d1649b09ca'
+version = '3.13.3'
+tag = 'v3.13.3'
+inferred = true
+manifest = "[package]\nname = \"sops\"\nhomepage = \"https://github.com/getsops/sops\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"getsops/sops\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/getsops/sops/releases/download/{{tag}}/sops-{{tag}}.linux.amd64\"\nsha256_url = \"https://github.com/getsops/sops/releases/download/{{tag}}/sops-{{tag}}.checksums.txt\"\nbin = [\"sops\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/getsops/sops/releases/download/{{tag}}/sops-{{tag}}.darwin.amd64\"\nsha256_url = \"https://github.com/getsops/sops/releases/download/{{tag}}/sops-{{tag}}.checksums.txt\"\nbin = [\"sops\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/getsops/sops/releases/download/{{tag}}/sops-{{tag}}.linux.arm64\"\nsha256_url = \"https://github.com/getsops/sops/releases/download/{{tag}}/sops-{{tag}}.checksums.txt\"\nbin = [\"sops\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/getsops/sops/releases/download/{{tag}}/sops-{{tag}}.darwin.arm64\"\nsha256_url = \"https://github.com/getsops/sops/releases/download/{{tag}}/sops-{{tag}}.checksums.txt\"\nbin = [\"sops\"]\n"
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/getsops/sops/releases/download/v3.13.3/sops-v3.13.3.darwin.arm64'
+sha256 = 'b97c0d434aab577dc40310e8d22ff9e45eef4c80638ab978daae9b4681c59286'
+
+[[package]]
+name = 'starship'
+ref = 'github:starship/starship'
+commit = '1d3f11e6d5d772c2cf8f45d44337e5cf6c9f0f95'
+manifest_sha256 = '9412e8ed2b0045b2d0935e3582ad5a78a9a5023b1b446bef9fb52e3da7cfaadc'
+version = '1.26.0'
+tag = 'v1.26.0'
+inferred = true
+manifest = "[package]\nname = \"starship\"\nhomepage = \"https://github.com/starship/starship\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"starship/starship\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\", libc = \"glibc\" }\nurl = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-x86_64-unknown-linux-gnu.tar.gz\"\nsha256_url = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-x86_64-unknown-linux-gnu.tar.gz.sha256\"\nbin = [\"starship\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-x86_64-unknown-linux-musl.tar.gz\"\nsha256_url = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-x86_64-unknown-linux-musl.tar.gz.sha256\"\nbin = [\"starship\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-x86_64-apple-darwin.tar.gz\"\nsha256_url = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-x86_64-apple-darwin.tar.gz.sha256\"\nbin = [\"starship\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"amd64\" }\nurl = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-x86_64-pc-windows-msvc.zip\"\nsha256_url = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-x86_64-pc-windows-msvc.zip.sha256\"\nbin = [\"starship.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-aarch64-unknown-linux-musl.tar.gz\"\nsha256_url = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-aarch64-unknown-linux-musl.tar.gz.sha256\"\nbin = [\"starship\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-aarch64-apple-darwin.tar.gz\"\nsha256_url = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-aarch64-apple-darwin.tar.gz.sha256\"\nbin = [\"starship\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"arm64\" }\nurl = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-aarch64-pc-windows-msvc.zip\"\nsha256_url = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-aarch64-pc-windows-msvc.zip.sha256\"\nbin = [\"starship.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"386\" }\nurl = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-i686-unknown-linux-musl.tar.gz\"\nsha256_url = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-i686-unknown-linux-musl.tar.gz.sha256\"\nbin = [\"starship\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"386\" }\nurl = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-i686-pc-windows-msvc.zip\"\nsha256_url = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-i686-pc-windows-msvc.zip.sha256\"\nbin = [\"starship.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm\" }\nurl = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-arm-unknown-linux-musleabihf.tar.gz\"\nsha256_url = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-arm-unknown-linux-musleabihf.tar.gz.sha256\"\nbin = [\"starship\"]\n"
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/starship/starship/releases/download/v1.26.0/starship-aarch64-apple-darwin.tar.gz'
+sha256 = 'c40b27b11f580411e068f2fa6c1be7830a387c0bc47a94d1d37f32b054c5361d'
+
+[[package]]
+name = 'stripe-cli'
+ref = 'github:stripe/stripe-cli'
+commit = 'afbfd857a2ba2927c03d507b4a703b55f102e717'
+manifest_sha256 = 'f6b0c0aa90443982c5617dddf0c70e0c536c0ef0423be86363d8297a8ba45132'
+version = '1.51.0'
+tag = 'v1.51.0'
+inferred = true
+manifest = "[package]\nname = \"stripe-cli\"\nhomepage = \"https://github.com/stripe/stripe-cli\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"stripe/stripe-cli\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe_{{version}}_linux_x86_64.tar.gz\"\nsha256_url = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe-linux-checksums.txt\"\nbin = [\"stripe\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe_{{version}}_mac-os_x86_64.tar.gz\"\nsha256_url = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe-mac-checksums.txt\"\nbin = [\"stripe\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"amd64\" }\nurl = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe_{{version}}_windows_x86_64.zip\"\nsha256_url = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe-windows-checksums.txt\"\nbin = [\"stripe.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe_{{version}}_linux_arm64.tar.gz\"\nsha256_url = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe-linux-checksums.txt\"\nbin = [\"stripe\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe_{{version}}_mac-os_arm64.tar.gz\"\nsha256_url = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe-mac-checksums.txt\"\nbin = [\"stripe\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"386\" }\nurl = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe_{{version}}_windows_i386.zip\"\nsha256_url = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe-windows-checksums.txt\"\nbin = [\"stripe.exe\"]\n"
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/stripe/stripe-cli/releases/download/v1.51.0/stripe_1.51.0_mac-os_arm64.tar.gz'
+sha256 = '1c678a9a8e19b88a608878903a61caac6a9a513660772a1f6dc9a08c0f863ffb'
+
+[[package]]
+name = 'symbols-nerd-font'
+ref = './packages/symbols-nerd-font.toml'
+manifest_sha256 = 'de1833352b890e3b9c471fc785f0fcd0d15bc3f6ecaacf0fd7aeb0de2aebb2cb'
+version = '3.5.1'
+tag = 'v3.5.1'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/NerdFontsSymbolsOnly.zip'
+sha256 = 'fdca3682534f6f65e1ccb2345b0362ccf67d9b8eca7c8025330946e93e2473bc'
+
+[[package]]
+name = 'tmux'
+ref = './packages/tmux.toml'
+manifest_sha256 = 'aa64595e7bf517bf101977f7919deca18cef61c9f68d666207c6de3c47ced47c'
+version = '3.7c'
+tag = 'v3.7c'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/tmux/tmux-builds/releases/download/v3.7c/tmux-3.7c-macos-arm64.tar.gz'
+sha256 = '0a763dd0380aa980d239509654da1bc7455843706a3c050f6709c8cd2e13d12d'
+
+[[package]]
+name = 'tree-sitter'
+ref = 'github:tree-sitter/tree-sitter'
+commit = '5b951eff4f8b1431e933ed0fe45e48fcd4036a38'
+manifest_sha256 = 'a3124b3d0d8892de2e5de8bc5a262427669d7910c890b4934ffbf768004689e3'
+version = '0.27.0'
+tag = 'v0.27.0'
+inferred = true
+manifest = "[package]\nname = \"tree-sitter\"\nhomepage = \"https://github.com/tree-sitter/tree-sitter\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"tree-sitter/tree-sitter\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/tree-sitter/tree-sitter/releases/download/{{tag}}/tree-sitter-cli-linux-x64.zip\"\nbin = [\"tree-sitter\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/tree-sitter/tree-sitter/releases/download/{{tag}}/tree-sitter-cli-macos-x64.zip\"\nbin = [\"tree-sitter\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"amd64\" }\nurl = \"https://github.com/tree-sitter/tree-sitter/releases/download/{{tag}}/tree-sitter-cli-windows-x64.zip\"\nbin = [\"tree-sitter.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/tree-sitter/tree-sitter/releases/download/{{tag}}/tree-sitter-cli-linux-arm64.zip\"\nbin = [\"tree-sitter\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/tree-sitter/tree-sitter/releases/download/{{tag}}/tree-sitter-cli-macos-arm64.zip\"\nbin = [\"tree-sitter\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"arm64\" }\nurl = \"https://github.com/tree-sitter/tree-sitter/releases/download/{{tag}}/tree-sitter-cli-windows-arm64.zip\"\nbin = [\"tree-sitter.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm\" }\nurl = \"https://github.com/tree-sitter/tree-sitter/releases/download/{{tag}}/tree-sitter-cli-linux-arm.zip\"\nbin = [\"tree-sitter\"]\n"
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/tree-sitter/tree-sitter/releases/download/v0.27.0/tree-sitter-cli-macos-arm64.zip'
+sha256 = 'f278063d8544160f6f89f7f8dba6ba112cb0dd1669757788d2bb7a8a613d2c58'
+
+[[package]]
+name = 'utm'
+ref = './packages/utm.toml'
+manifest_sha256 = 'a4f32d2ed8d69efbec6f160fbe357e09080bcb9583fced4e5eda2cb72ae475c7'
+version = '4.7.5'
+tag = 'v4.7.5'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/utmapp/UTM/releases/download/v4.7.5/UTM.dmg'
+sha256 = 'a8435c93cfb5f8bbfeea4b134cfad1ac66b67632b75e438c63b1a8ae043bef0e'
+
+[[package]]
+name = 'uts'
+ref = './packages/uts.toml'
+manifest_sha256 = '5db571311ce21f2483ecba1ffe626c19b0d1f6aae4f0507ef0009724f8d677bb'
+version = '2026.09.18-642ffbd'
+tag = 'main'
+tag_commit = '642ffbdcf9ef3f0dec16f769b491c1ddee685aad'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'go'
+ref = './packages/go.toml'
+manifest_sha256 = '850dfc0af428be9b5da144c08de9d6c247b2bd41a401c160d99a076a8ce62691'
+version = '1.26.8'
+tag = 'go1.26.8'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://dl.google.com/go/go1.26.8.darwin-arm64.tar.gz'
+sha256 = 'a012b25b571bd0138a03dcd25375ceba866fe5ca822f426d2c66a4de56fd3f4b'
+
+[[package]]
+name = 'virtualbuddy'
+ref = './packages/virtualbuddy.toml'
+manifest_sha256 = 'ed0e187aa5b0356e31b8784e6bd4b72793f50a61b17b01f490b9ad2ec991f373'
+version = '2.1'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/insidegui/VirtualBuddy/releases/download/2.1/VirtualBuddy_v2.1-325.dmg'
+sha256 = '6ed17e8d7245931fd405c419321ace7ef9333fe2e3d59b3a7f78e34fcbe628b6'
+
+[[package]]
+name = 'vscode-langservers-extracted'
+ref = 'npm:vscode-langservers-extracted'
+manifest_sha256 = 'd3087031097ca752ff8c159285e9b4e17c9500a5aaddf873f92b3993bca6a95d'
+version = '4.10.0'
+inferred = true
+manifest = "[package]\nname = \"vscode-langservers-extracted\"\nhomepage = \"https://www.npmjs.com/package/vscode-langservers-extracted\"\n\n[version]\nfrom = \"npm\"\nrepo = \"vscode-langservers-extracted\"\n\n[runtime]\ndeps = [\"/Users/kylewong/.config/oku/packages/node.toml\"]\n\n[build]\ndeps = [\"/Users/kylewong/.config/oku/packages/node.toml\"]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"vscode-langservers-extracted\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"vscode-css-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-css-language-server\"] },\n  { name = \"vscode-eslint-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-eslint-language-server\"] },\n  { name = \"vscode-html-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-html-language-server\"] },\n  { name = \"vscode-json-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-json-language-server\"] },\n  { name = \"vscode-markdown-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-markdown-language-server\"] },\n] }\n"
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'node'
+ref = './packages/node.toml'
+manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+version = '22.20.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
+sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+
+[[package.dep]]
+name = 'node'
+ref = './packages/node.toml'
+manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+version = '22.20.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
+sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+
+[[package]]
+name = 'whatsapp'
+ref = './packages/whatsapp.toml'
+manifest_sha256 = '5121998be02f98cefdfd8f70c42655d32bbb9e787a917346c2d4d25386bdae45'
+version = '26.37.22'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://web.whatsapp.com/desktop/mac_native/release/?version=2.26.37.22&extension=zip&configuration=Release&branch=master&is_buck=true'
+sha256 = '6f471e73bff882bb0b32271514b728f63dd74fb74f1abe90305f9fbb47e9e965'
+
+[[package]]
+name = 'xz'
+ref = './packages/xz.toml'
+manifest_sha256 = '1ef55f559710b517b58a002384aa268675247615337b0d156cccfc3070eb68b4'
+version = '5.8.4'
+tag = 'v5.8.4'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package]]
+name = 'yaml-language-server'
+ref = 'npm:yaml-language-server'
+manifest_sha256 = '2be6d3b03f9de6b20283db3005618e7898fb87572bd6155903496d0cf6b5aab5'
+version = '1.24.0'
+inferred = true
+manifest = "[package]\nname = \"yaml-language-server\"\nhomepage = \"https://www.npmjs.com/package/yaml-language-server\"\n\n[version]\nfrom = \"npm\"\nrepo = \"yaml-language-server\"\n\n[runtime]\ndeps = [\"/Users/kylewong/.config/oku/packages/node.toml\"]\n\n[build]\ndeps = [\"/Users/kylewong/.config/oku/packages/node.toml\"]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"yaml-language-server\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"yaml-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/yaml-language-server/bin/yaml-language-server\"] },\n] }\n"
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'node'
+ref = './packages/node.toml'
+manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+version = '22.20.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
+sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+
+[[package.dep]]
+name = 'node'
+ref = './packages/node.toml'
+manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+version = '22.20.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
+sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+
+[[package]]
+name = 'zoxide'
+ref = './packages/zoxide.toml'
+manifest_sha256 = 'd382c13257169f55f19dca349777005b1c8da6fbc456af1ef353989332a86505'
+version = '0.10.0'
+tag = 'v0.10.0'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/ajeetdsouza/zoxide/releases/download/v0.10.0/zoxide-0.10.0-aarch64-apple-darwin.tar.gz'
+sha256 = 'b55ae6f2f5f23d0a6ccb3bd4eeb2af9c7e0a6556e5255c82100e40305129bbb0'
+
+[[package]]
+name = 'zstd'
+ref = './packages/zstd.toml'
+manifest_sha256 = '0f2e03a9006a09d51ea9c4e33a18a7d9615c137745d6e1ea6de75d62bfe14cb0'
+version = '1.5.7'
+tag = 'v1.5.7'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'lz4'
+ref = './packages/lz4.toml'
+manifest_sha256 = 'c7c5b83aa3273db33afe39f00028c85a82179e74fabcdb3dcd345fc81ad230c9'
+version = '1.10.0'
+tag = 'v1.10.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep]]
+name = 'lz4'
+ref = './packages/lz4.toml'
+manifest_sha256 = 'c7c5b83aa3273db33afe39f00028c85a82179e74fabcdb3dcd345fc81ad230c9'
+version = '1.10.0'
+tag = 'v1.10.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
