@@ -78,4 +78,4 @@ symbols-nerd-font = "../packages/symbols-nerd-font.toml"
 # my own tools
 mimi = { ref = "../packages/mimi.toml", service = true, when = { os = "darwin" } }
 neru = { ref = "../packages/neru.toml", service = true, when = { os = "darwin" } }
-uts = "github:y3owk1n/uts"
+uts = "../packages/uts.toml"

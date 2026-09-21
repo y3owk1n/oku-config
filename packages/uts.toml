@@ -1,0 +1,31 @@
+[package]
+name = "uts"
+description = "Compress, convert and inspect media files with one command pattern"
+homepage = "https://github.com/y3owk1n/uts"
+license = "MIT"
+
+[version]
+from = "github-releases"
+repo = "y3owk1n/uts"
+strip_prefix = "v"
+
+[build]
+needs = ["git"]
+deps = ["./go.toml"]
+source = { git = "https://github.com/y3owk1n/uts", tag = "{{tag}}" }
+
+[[build.step]]
+vendor = "go"
+
+[[build.step]]
+run = """
+set -eu
+go build -mod=vendor -trimpath -ldflags="-s -w -X github.com/y3owk1n/uts/cmd.Version={{tag}}" -o uts ./main.go
+mkdir -p man
+go run -mod=vendor ./cmd/genman man
+"""
+shell = "sh"
+env = { CGO_ENABLED = "0", GOFLAGS = "-buildvcs=false" }
+
+[[build.step]]
+install = { bin = ["uts"], man = ["man/uts.1"] }

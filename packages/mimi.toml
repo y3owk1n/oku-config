@@ -9,24 +9,43 @@ from = "github-releases"
 repo = "y3owk1n/mimi"
 strip_prefix = "v"
 
-[[artifact]]
-match = { os = "darwin", arch = "arm64" }
-url = "https://github.com/y3owk1n/mimi/releases/download/{{tag}}/mimi-darwin-arm64.zip"
-sha256_url = "https://github.com/y3owk1n/mimi/releases/download/{{tag}}/mimi-darwin-arm64.zip.sha256"
-bin = ["bin/mimi"]
-man = ["share/man/man1/mimi.1"]
+[build]
+needs = ["git", "cc"]
+deps = ["./go.toml"]
+source = { git = "https://github.com/y3owk1n/mimi", tag = "{{tag}}" }
 
-[[artifact]]
-match = { os = "darwin", arch = "amd64" }
-url = "https://github.com/y3owk1n/mimi/releases/download/{{tag}}/mimi-darwin-amd64.zip"
-sha256_url = "https://github.com/y3owk1n/mimi/releases/download/{{tag}}/mimi-darwin-amd64.zip.sha256"
-bin = ["bin/mimi"]
-man = ["share/man/man1/mimi.1"]
+[[build.step]]
+vendor = "go"
+
+[[build.step]]
+run = """
+set -eu
+go build -mod=vendor -trimpath -ldflags="-s -w -X github.com/y3owk1n/mimi/cmd/mimi/cmd.Version={{tag}}" -o mimi ./cmd/mimi
+mkdir -p man
+go run -mod=vendor ./cmd/genman man
+"""
+shell = "sh"
+env = { CGO_ENABLED = "1", GOFLAGS = "-buildvcs=false" }
+
+[[build.step]]
+run = """
+set -eu
+app={{prefix}}/Mimi.app
+mkdir -p $app/Contents/MacOS $app/Contents/Resources
+cp mimi $app/Contents/MacOS/mimi
+cp resources/Mimi.entitlements $app/Contents/Resources/
+sed -e 's/BUNDLE_VERSION/{{version}}/g' -e 's/SHORT_VERSION/{{version}}/g' -e 's/BUILD_ID/{{tag}}/g' resources/Info.plist.template > $app/Contents/Info.plist
+codesign --force --deep --sign - --entitlements resources/Mimi.entitlements --options runtime $app
+"""
+shell = "sh"
+
+[[build.step]]
+install = { bin = ["mimi"], man = ["man/mimi.1"] }
 
 # The daemon runs from inside its bundle, as the Nix module did. It reads
 # ~/.config/mimi/config.toml by default, so no --config is passed.
 [[service]]
 name = "mimi"
-command = "pkg/Mimi.app/Contents/MacOS/mimi"
+command = "Mimi.app/Contents/MacOS/mimi"
 args = ["start"]
 restart = "always"

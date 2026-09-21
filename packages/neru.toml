@@ -9,24 +9,44 @@ from = "github-releases"
 repo = "y3owk1n/neru"
 strip_prefix = "v"
 
-[[artifact]]
-match = { os = "darwin", arch = "arm64" }
-url = "https://github.com/y3owk1n/neru/releases/download/{{tag}}/neru-darwin-arm64.zip"
-sha256_url = "https://github.com/y3owk1n/neru/releases/download/{{tag}}/neru-darwin-arm64.zip.sha256"
-bin = ["bin/neru"]
-man = ["share/man/man1/neru.1"]
+[build]
+needs = ["git", "cc"]
+deps = ["./go.toml"]
+source = { git = "https://github.com/y3owk1n/neru", tag = "{{tag}}" }
 
-[[artifact]]
-match = { os = "darwin", arch = "amd64" }
-url = "https://github.com/y3owk1n/neru/releases/download/{{tag}}/neru-darwin-amd64.zip"
-sha256_url = "https://github.com/y3owk1n/neru/releases/download/{{tag}}/neru-darwin-amd64.zip.sha256"
-bin = ["bin/neru"]
-man = ["share/man/man1/neru.1"]
+[[build.step]]
+vendor = "go"
+
+[[build.step]]
+run = """
+set -eu
+go build -mod=vendor -trimpath -ldflags="-s -w -X github.com/y3owk1n/neru/internal/buildinfo.Version={{tag}}" -o neru ./cmd/neru
+mkdir -p man
+go run -mod=vendor ./cmd/genman man
+"""
+shell = "sh"
+env = { CGO_ENABLED = "1", GOFLAGS = "-buildvcs=false" }
+
+[[build.step]]
+run = """
+set -eu
+app={{prefix}}/Neru.app
+mkdir -p $app/Contents/MacOS $app/Contents/Resources
+cp neru $app/Contents/MacOS/neru
+cp resources/icon.icns $app/Contents/Resources/
+cp resources/Neru.entitlements $app/Contents/Resources/
+sed -e 's/BUNDLE_VERSION/{{version}}/g' -e 's/SHORT_VERSION/{{version}}/g' -e 's/BUILD_ID/{{tag}}/g' resources/Info.plist.template > $app/Contents/Info.plist
+codesign --force --deep --sign - --entitlements resources/Neru.entitlements --options runtime $app
+"""
+shell = "sh"
+
+[[build.step]]
+install = { bin = ["neru"], man = ["man/neru.1"] }
 
 # The daemon runs from inside its bundle, as the Nix module did. It reads
 # ~/.config/neru/config.toml by default, so no --config is passed.
 [[service]]
 name = "neru"
-command = "pkg/Neru.app/Contents/MacOS/neru"
+command = "Neru.app/Contents/MacOS/neru"
 args = ["launch"]
 restart = "always"
