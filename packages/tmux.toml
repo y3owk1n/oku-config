@@ -1,0 +1,27 @@
+[package]
+name = "tmux"
+description = "Terminal multiplexer"
+homepage = "https://github.com/tmux/tmux"
+license = "ISC"
+
+# The tmux project builds these in its own tmux-builds repo. The archive holds
+# the program only, with no man page, and there is no checksum file.
+[version]
+from = "github-releases"
+repo = "tmux/tmux-builds"
+strip_prefix = "v"
+
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://github.com/tmux/tmux-builds/releases/download/{{tag}}/tmux-{{version}}-macos-arm64.tar.gz"
+bin = ["tmux"]
+
+[[artifact]]
+match = { os = "linux", arch = "arm64" }
+url = "https://github.com/tmux/tmux-builds/releases/download/{{tag}}/tmux-{{version}}-linux-arm64.tar.gz"
+bin = ["tmux"]
+
+[[artifact]]
+match = { os = "linux", arch = "amd64" }
+url = "https://github.com/tmux/tmux-builds/releases/download/{{tag}}/tmux-{{version}}-linux-x86_64.tar.gz"
+bin = ["tmux"]

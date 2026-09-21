@@ -1,0 +1,38 @@
+[package]
+name = "poppler"
+description = "PDF rendering library with pdftoppm, pdftotext and other tools"
+homepage = "https://poppler.freedesktop.org"
+license = "GPL-2.0-only OR GPL-3.0-only"
+
+# The version and the sha256 are fixed. The archives are on the project's own
+# server, and its tags on gitlab.freedesktop.org lag behind them. To take a
+# newer release, change both.
+[version]
+value = "26.09.0"
+
+[build]
+needs = ["cc", "make"]
+source = { url = "https://poppler.freedesktop.org/poppler-{{version}}.tar.xz", sha256 = "8059eadb6805340768f138c465b57f8164c92b4a0773c37ef031ea6c0d987b2e", strip = 1 }
+deps = ["./cmake.toml", "./freetype.toml", "./fontconfig.toml", "./jpeg-turbo.toml", "./libpng.toml", "./libtiff.toml", "./openjpeg.toml"]
+
+[runtime]
+deps = ["./freetype.toml", "./fontconfig.toml", "./jpeg-turbo.toml", "./libpng.toml", "./libtiff.toml", "./openjpeg.toml"]
+
+# The command line tools and the library they share, nothing else. cairo is
+# off, so there is no pdftocairo. The glib, Qt and C++ bindings, signatures
+# (NSS, GPGME), curl, Boost, HarfBuzz and colour management (lcms2) are off
+# as well.
+# JPEG 2000 images decode through openjpeg. zlib comes from the system.
+[[build.step]]
+run = """
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX={{prefix}} \
+  -DCMAKE_INSTALL_LIBDIR={{prefix}}/lib -DCMAKE_INSTALL_NAME_DIR={{prefix}}/lib \
+  -DBUILD_SHARED_LIBS=ON -DENABLE_UTILS=ON -DENABLE_CPP=OFF -DENABLE_GLIB=OFF -DENABLE_QT5=OFF -DENABLE_QT6=OFF \
+  -DENABLE_BOOST=OFF -DENABLE_NSS3=OFF -DENABLE_GPGME=OFF -DENABLE_LIBCURL=OFF -DENABLE_LCMS=OFF -DENABLE_HARFBUZZ=OFF \
+  -DENABLE_GTK_DOC=OFF -DENABLE_LIBOPENJPEG=openjpeg2 -DENABLE_DCTDECODER=libjpeg -DENABLE_LIBTIFF=ON \
+  -DWITH_Cairo=OFF -DFONT_CONFIGURATION=fontconfig -DBUILD_GTK_TESTS=OFF -DBUILD_QT5_TESTS=OFF \
+  -DBUILD_QT6_TESTS=OFF -DBUILD_CPP_TESTS=OFF -DBUILD_MANUAL_TESTS=OFF -DRUN_GPERF_IF_PRESENT=OFF
+cmake --build build -j{{jobs}}
+cmake --install build
+"""
+shell = "sh"

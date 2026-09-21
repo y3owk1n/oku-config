@@ -1,0 +1,20 @@
+[package]
+name = "orbstack"
+description = "Docker containers and Linux machines, a replacement for Docker Desktop"
+homepage = "https://orbstack.dev"
+
+# OrbStack updates itself in ~/Applications. oku replaces that copy on the next
+# `oku update` of this package. For a newer version change `value`,
+# the build number behind the version in the url (20963 here) and the sha256.
+# The Homebrew cask `orbstack` lists the current ones, as `version,build`.
+[version]
+value = "2.2.3"
+
+# orb and orbctl run from the copy in the oku store, not from the app in
+# ~/Applications, so they stay at this version when the app updates itself.
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://cdn-updates.orbstack.dev/arm64/OrbStack_v{{version}}_20963_arm64.dmg"
+sha256 = "7ca77868f3a0d7d9f57b3f98615aad30cc59d23cc84bbff13f78846df0b493d4"
+app = ["OrbStack.app"]
+bin = ["OrbStack.app/Contents/MacOS/bin/orb", "OrbStack.app/Contents/MacOS/bin/orbctl"]

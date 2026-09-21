@@ -1,0 +1,18 @@
+# Agent skills from github.com/cursor/plugins, pinned to one commit.
+# The version is fixed, so `oku update` never moves it. To take a newer
+# commit, follow lists/ai-notes.md, "Update an external skill repo".
+
+[package]
+name = "skills-cursor"
+description = "Agent skills from the cursor/plugins repo"
+homepage = "https://github.com/cursor/plugins"
+
+[version]
+value = "2026.09.18-032be14"
+
+[[artifact]]
+url = "https://github.com/cursor/plugins/archive/032be146865d973682535de75f2287da438550bf.tar.gz"
+sha256 = "1d9c0f75def9a97cedd8cfff5eadc60475c03913a33ed9880bf8987999b3761f"
+strip = 1
+# The package only holds files. lists/ai.toml links the skills out of it.
+data = true

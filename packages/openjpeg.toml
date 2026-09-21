@@ -1,0 +1,28 @@
+[package]
+name = "openjpeg"
+description = "JPEG 2000 codec library"
+homepage = "https://www.openjpeg.org"
+license = "BSD-2-Clause"
+
+# The source is a git tag, which needs no sha256, so oku follows new releases.
+[version]
+from = "github-releases"
+repo = "uclouvain/openjpeg"
+strip_prefix = "v"
+
+# The library alone. The opj_compress tools would need libpng, libtiff and
+# lcms2.
+[build]
+needs = ["cc", "make", "git"]
+source = { git = "https://github.com/uclouvain/openjpeg", tag = "{{tag}}" }
+deps = ["./cmake.toml"]
+
+[[build.step]]
+run = """
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX={{prefix}} \
+  -DCMAKE_INSTALL_LIBDIR={{prefix}}/lib -DCMAKE_INSTALL_NAME_DIR={{prefix}}/lib \
+  -DBUILD_SHARED_LIBS=ON -DBUILD_STATIC_LIBS=OFF -DBUILD_CODEC=OFF -DBUILD_DOC=OFF -DBUILD_TESTING=OFF
+cmake --build build -j{{jobs}}
+cmake --install build
+"""
+shell = "sh"

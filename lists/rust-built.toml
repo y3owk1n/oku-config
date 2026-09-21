@@ -1,0 +1,5 @@
+# Tools that oku builds from source with cargo. The Rust toolchain is a build
+# dep of each, so it is not listed here.
+[packages]
+eza = "../packages/eza.toml"
+pngquant = "../packages/pngquant.toml"

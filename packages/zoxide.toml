@@ -1,0 +1,31 @@
+[package]
+name = "zoxide"
+description = "A smarter cd command"
+homepage = "https://github.com/ajeetdsouza/zoxide"
+license = "MIT"
+
+[version]
+from = "github-releases"
+repo = "ajeetdsouza/zoxide"
+strip_prefix = "v"
+
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://github.com/ajeetdsouza/zoxide/releases/download/{{tag}}/zoxide-{{version}}-aarch64-apple-darwin.tar.gz"
+bin = ["zoxide"]
+man = ["man/man1/zoxide.1", "man/man1/zoxide-add.1", "man/man1/zoxide-import.1", "man/man1/zoxide-init.1", "man/man1/zoxide-query.1", "man/man1/zoxide-remove.1"]
+completions = { fish = "completions/zoxide.fish", zsh = "completions/_zoxide", bash = "completions/zoxide.bash" }
+
+[[artifact]]
+match = { os = "linux", arch = "arm64" }
+url = "https://github.com/ajeetdsouza/zoxide/releases/download/{{tag}}/zoxide-{{version}}-aarch64-unknown-linux-musl.tar.gz"
+bin = ["zoxide"]
+man = ["man/man1/zoxide.1", "man/man1/zoxide-add.1", "man/man1/zoxide-import.1", "man/man1/zoxide-init.1", "man/man1/zoxide-query.1", "man/man1/zoxide-remove.1"]
+completions = { fish = "completions/zoxide.fish", zsh = "completions/_zoxide", bash = "completions/zoxide.bash" }
+
+[[artifact]]
+match = { os = "linux", arch = "amd64" }
+url = "https://github.com/ajeetdsouza/zoxide/releases/download/{{tag}}/zoxide-{{version}}-x86_64-unknown-linux-musl.tar.gz"
+bin = ["zoxide"]
+man = ["man/man1/zoxide.1", "man/man1/zoxide-add.1", "man/man1/zoxide-import.1", "man/man1/zoxide-init.1", "man/man1/zoxide-query.1", "man/man1/zoxide-remove.1"]
+completions = { fish = "completions/zoxide.fish", zsh = "completions/_zoxide", bash = "completions/zoxide.bash" }

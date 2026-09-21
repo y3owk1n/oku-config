@@ -1,0 +1,17 @@
+[package]
+name = "whatsapp"
+description = "Native desktop client for WhatsApp"
+homepage = "https://www.whatsapp.com"
+
+# WhatsApp updates itself in ~/Applications. oku replaces that copy on the next
+# `oku update` of this package. For a newer version change `value`,
+# and the sha256. The url takes the version from `value`, behind a leading
+# `2.`. The Homebrew cask `whatsapp` lists the current one.
+[version]
+value = "26.37.22"
+
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://web.whatsapp.com/desktop/mac_native/release/?version=2.{{version}}&extension=zip&configuration=Release&branch=master&is_buck=true"
+sha256 = "6f471e73bff882bb0b32271514b728f63dd74fb74f1abe90305f9fbb47e9e965"
+app = ["WhatsApp.app"]

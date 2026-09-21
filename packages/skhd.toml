@@ -1,0 +1,27 @@
+[package]
+name = "skhd"
+description = "Hotkey daemon for macOS, the Zig port"
+homepage = "https://github.com/jackielii/skhd.zig"
+license = "MIT"
+
+[version]
+from = "github-releases"
+repo = "jackielii/skhd.zig"
+strip_prefix = "v"
+
+# Upstream publishes no checksum file, so oku pins the first download.
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://github.com/jackielii/skhd.zig/releases/download/{{tag}}/skhd-arm64-macos.tar.gz"
+bin = ["skhd.app/Contents/MacOS/skhd", "skhd.app/Contents/MacOS/skhd-grabber"]
+
+[[artifact]]
+match = { os = "darwin", arch = "amd64" }
+url = "https://github.com/jackielii/skhd.zig/releases/download/{{tag}}/skhd-x86_64-macos.tar.gz"
+bin = ["skhd.app/Contents/MacOS/skhd", "skhd.app/Contents/MacOS/skhd-grabber"]
+
+# skhd reads ~/.config/skhd/skhdrc by default.
+[[service]]
+name = "skhd"
+command = "pkg/skhd.app/Contents/MacOS/skhd"
+restart = "always"

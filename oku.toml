@@ -1,2 +1,50 @@
+# My machines, described for oku. `oku sync` applies this file and the lists it
+# includes. Nothing here needs root. What does is in bootstrap/.
+
+include = [
+  "./lists/packages.toml", # every package and font
+  "./lists/apps.toml",     # macOS apps, written from the Homebrew cask data
+  "./lists/rust-built.toml", # tools built from source with cargo
+  "./lists/built.toml",    # tools built from source with cc and make
+  "./lists/built-media.toml", # imagemagick and poppler, built from source
+  "./lists/files.toml",    # program configs and templates
+  "./lists/ai.toml",       # agent skills and instructions
+  "./lists/macos.toml",    # macOS settings, skipped on other systems
+]
+
 [packages]
 nvim = "./packages/nvim.toml"
+gh-actions-language-server = "./packages/gh-action-language-server.toml"
+
+# Values that the templates under files/ use as {{name}}.
+[vars]
+name = "Kyle Wong"
+email = "62775956+y3owk1n@users.noreply.github.com"
+githubuser = "y3owk1n"
+sshpubkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINE+DcJD2D/tw74/b0mh4E+rnZNSLqCYHB5igImNo6Ol"
+font = "JetBrainsMono Nerd Font Propo"
+
+# Forest Ink, my base16 scheme. Hex without the leading #. Change a colour here
+# and `oku sync` renders every themed config again, in one generation.
+[vars.theme]
+base00 = "0c1410"
+base01 = "162119"
+base02 = "1f3025"
+base03 = "445c48"
+base04 = "7a9e7e"
+base05 = "c2d6ba"
+base06 = "daecd2"
+base07 = "eef7e8"
+base08 = "e06c75"
+base09 = "d09040"
+base0A = "c8b860"
+base0B = "7ec688"
+base0C = "5ab5a0"
+base0D = "6aadcf"
+base0E = "c595d4"
+base0F = "bf8a6e"
+
+# The private SSH key, from the sops file. oku decrypts it on sync with the age
+# key at ~/.config/sops/age/keys.txt, which I copy to a new machine by hand.
+[files]
+"{{home}}/.ssh/id_ed25519" = { secret = "./secrets/secrets.yaml", key = "ssh/id_ed25519" }

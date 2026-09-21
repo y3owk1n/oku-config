@@ -1,0 +1,19 @@
+[package]
+name = "libpng"
+description = "Library for reading and writing PNG images"
+homepage = "http://www.libpng.org/pub/png/libpng.html"
+license = "libpng-2.0"
+
+# The git tags mix in betas of 1.7, such as v1.7.0beta89, that oku would take
+# for the newest version, so the version and the sha256 are fixed. To take a
+# newer release, change both.
+[version]
+value = "1.6.58"
+
+[build]
+needs = ["cc", "make"]
+source = { url = "https://downloads.sourceforge.net/project/libpng/libpng16/{{version}}/libpng-{{version}}.tar.xz", sha256 = "28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775", strip = 1 }
+
+[[build.step]]
+run = "./configure --prefix={{prefix}} --disable-silent-rules && make -j{{jobs}} && make install"
+shell = "sh"

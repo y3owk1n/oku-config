@@ -1,0 +1,39 @@
+[package]
+name = "pngquant"
+description = "Lossy PNG compressor"
+homepage = "https://pngquant.org"
+license = "GPL-3.0-or-later"
+
+# The git repo keeps libimagequant in a submodule, which a tag archive leaves
+# out. The crate from crates.io is complete and has its Cargo.lock. crates.io
+# has nothing a version source can read, so the version and the sha256 are
+# fixed. To take a newer release, change both.
+[version]
+value = "3.0.3"
+
+# The static feature makes libpng-sys and lcms2-sys compile their bundled C
+# with cc alone, so the build needs no cmake and no pkg-config. The libpng that
+# the locked libpng-sys 1.1.9 bundles includes <fp.h> when
+# TARGET_OS_MAC is defined. Apple clang now defines it by itself and the macOS
+# SDK has no fp.h, so the macOS build turns those built-in macros off.
+[build]
+needs = ["cc"]
+deps = ["./rust.toml"]
+source = { url = "https://crates.io/api/v1/crates/pngquant/{{version}}/download", sha256 = "68a12bdd8825f9989f4ee9a6ab0b42727dae57728b939ef63453366697a07232", strip = 1 }
+
+[[build.step]]
+vendor = "cargo"
+
+[[build.step]]
+run = "cargo build --release --offline --locked --features static -j{{jobs}}"
+shell = "sh"
+when = { os = "darwin" }
+env = { CFLAGS = "-fno-define-target-os-macros" }
+
+[[build.step]]
+when = { os = "linux" }
+run = "cargo build --release --offline --locked --features static -j{{jobs}}"
+shell = "sh"
+
+[[build.step]]
+install = { bin = ["target/release/pngquant"] }

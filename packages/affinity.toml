@@ -1,0 +1,16 @@
+[package]
+name = "affinity"
+description = "Image editing and design app, Affinity Studio"
+homepage = "https://affinity.serif.com"
+
+# The download is named after a build number, so the version is fixed. For a
+# newer release change `value`, the build in the url and the sha256. The
+# Homebrew cask `affinity` lists the current build.
+[version]
+value = "3.3.0"
+
+[[artifact]]
+match = { os = "darwin" }
+url = "https://affinity-update.s3.amazonaws.com/mac2/retail/Affinity%20Affinity%20Store%204850.zip"
+sha256 = "317f5cf64a5364319898576b4648b6a96dc9ec39f50039aebf9901b7ed3a5d96"
+app = ["Affinity.app"]

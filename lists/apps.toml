@@ -1,0 +1,9 @@
+# macOS apps that Homebrew installs as casks. Each one fixes a version, see the
+# top of its manifest for how to take a newer one.
+
+[packages]
+brave = { ref = "../packages/brave.toml", when = { os = "darwin" } }
+discord = { ref = "../packages/discord.toml", when = { os = "darwin" } }
+firefox = { ref = "../packages/firefox.toml", when = { os = "darwin" } }
+orbstack = { ref = "../packages/orbstack.toml", when = { os = "darwin" } }
+whatsapp = { ref = "../packages/whatsapp.toml", when = { os = "darwin" } }

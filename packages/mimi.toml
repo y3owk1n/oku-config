@@ -1,0 +1,32 @@
+[package]
+name = "mimi"
+description = "Window and space utility daemon for macOS"
+homepage = "https://github.com/y3owk1n/mimi"
+license = "MIT"
+
+[version]
+from = "github-releases"
+repo = "y3owk1n/mimi"
+strip_prefix = "v"
+
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://github.com/y3owk1n/mimi/releases/download/{{tag}}/mimi-darwin-arm64.zip"
+sha256_url = "https://github.com/y3owk1n/mimi/releases/download/{{tag}}/mimi-darwin-arm64.zip.sha256"
+bin = ["bin/mimi"]
+man = ["share/man/man1/mimi.1"]
+
+[[artifact]]
+match = { os = "darwin", arch = "amd64" }
+url = "https://github.com/y3owk1n/mimi/releases/download/{{tag}}/mimi-darwin-amd64.zip"
+sha256_url = "https://github.com/y3owk1n/mimi/releases/download/{{tag}}/mimi-darwin-amd64.zip.sha256"
+bin = ["bin/mimi"]
+man = ["share/man/man1/mimi.1"]
+
+# The daemon runs from inside its bundle, as the Nix module did. It reads
+# ~/.config/mimi/config.toml by default, so no --config is passed.
+[[service]]
+name = "mimi"
+command = "pkg/Mimi.app/Contents/MacOS/mimi"
+args = ["start"]
+restart = "always"

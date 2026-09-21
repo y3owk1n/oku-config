@@ -1,0 +1,103 @@
+# Agent skills, the global instructions file and the quick agent.
+# Notes and the steps to add or update a skill: ./ai-notes.md
+
+[packages]
+# External skill repos, each pinned to one commit. The [files] entries below
+# link single skill directories out of them with {{pkg.<name>}}.
+skills-anthropic = "../packages/skills-anthropic.toml"
+skills-caveman = "../packages/skills-caveman.toml"
+skills-cursor = "../packages/skills-cursor.toml"
+skills-emil = "../packages/skills-emil.toml"
+skills-shadcn = "../packages/skills-shadcn.toml"
+
+[files]
+# Both files are links, so an edit in files/claude/ shows at once.
+"{{home}}/.claude/CLAUDE.md" = { link = "../files/claude/CLAUDE.md" }
+"{{home}}/.claude/agents/quick.md" = { link = "../files/claude/agents/quick.md" }
+
+# ~/.claude/skills: local skills from files/skills/
+"{{home}}/.claude/skills/add-skill" = { link = "../files/skills/add-skill" }
+"{{home}}/.claude/skills/diagnose" = { link = "../files/skills/diagnose" }
+"{{home}}/.claude/skills/find-skills" = { link = "../files/skills/find-skills" }
+"{{home}}/.claude/skills/grill" = { link = "../files/skills/grill" }
+"{{home}}/.claude/skills/implement" = { link = "../files/skills/implement" }
+"{{home}}/.claude/skills/improve-codebase-architecture" = { link = "../files/skills/improve-codebase-architecture" }
+"{{home}}/.claude/skills/pr" = { link = "../files/skills/pr" }
+"{{home}}/.claude/skills/prd" = { link = "../files/skills/prd" }
+"{{home}}/.claude/skills/research" = { link = "../files/skills/research" }
+"{{home}}/.claude/skills/review" = { link = "../files/skills/review" }
+"{{home}}/.claude/skills/ship" = { link = "../files/skills/ship" }
+"{{home}}/.claude/skills/spec" = { link = "../files/skills/spec" }
+"{{home}}/.claude/skills/triage" = { link = "../files/skills/triage" }
+"{{home}}/.claude/skills/writing-for-agents" = { link = "../files/skills/writing-for-agents" }
+
+# ~/.claude/skills: external skills, named <prefix>_<skill>
+"{{home}}/.claude/skills/anthropic_frontend-design" = { link = "{{pkg.skills-anthropic}}/skills/frontend-design" }
+"{{home}}/.claude/skills/caveman_caveman" = { link = "{{pkg.skills-caveman}}/skills/caveman" }
+"{{home}}/.claude/skills/cursor_unslop" = { link = "{{pkg.skills-cursor}}/pstack/skills/unslop" }
+"{{home}}/.claude/skills/cursor-team-kit_deslop" = { link = "{{pkg.skills-cursor}}/cursor-team-kit/skills/deslop" }
+"{{home}}/.claude/skills/emil_animate" = { link = "{{pkg.skills-emil}}/skills/animate" }
+"{{home}}/.claude/skills/emil_animation-vocabulary" = { link = "{{pkg.skills-emil}}/skills/animation-vocabulary" }
+"{{home}}/.claude/skills/emil_emil-design-eng" = { link = "{{pkg.skills-emil}}/skills/emil-design-eng" }
+"{{home}}/.claude/skills/emil_find-animation-opportunities" = { link = "{{pkg.skills-emil}}/skills/find-animation-opportunities" }
+"{{home}}/.claude/skills/emil_improve-animations" = { link = "{{pkg.skills-emil}}/skills/improve-animations" }
+"{{home}}/.claude/skills/emil_prototype" = { link = "{{pkg.skills-emil}}/skills/prototype" }
+"{{home}}/.claude/skills/shadcn_shadcn" = { link = "{{pkg.skills-shadcn}}/skills/shadcn" }
+
+# ~/.agents/skills: local skills from files/skills/
+"{{home}}/.agents/skills/add-skill" = { link = "../files/skills/add-skill" }
+"{{home}}/.agents/skills/diagnose" = { link = "../files/skills/diagnose" }
+"{{home}}/.agents/skills/find-skills" = { link = "../files/skills/find-skills" }
+"{{home}}/.agents/skills/grill" = { link = "../files/skills/grill" }
+"{{home}}/.agents/skills/implement" = { link = "../files/skills/implement" }
+"{{home}}/.agents/skills/improve-codebase-architecture" = { link = "../files/skills/improve-codebase-architecture" }
+"{{home}}/.agents/skills/pr" = { link = "../files/skills/pr" }
+"{{home}}/.agents/skills/prd" = { link = "../files/skills/prd" }
+"{{home}}/.agents/skills/research" = { link = "../files/skills/research" }
+"{{home}}/.agents/skills/review" = { link = "../files/skills/review" }
+"{{home}}/.agents/skills/ship" = { link = "../files/skills/ship" }
+"{{home}}/.agents/skills/spec" = { link = "../files/skills/spec" }
+"{{home}}/.agents/skills/triage" = { link = "../files/skills/triage" }
+"{{home}}/.agents/skills/writing-for-agents" = { link = "../files/skills/writing-for-agents" }
+
+# ~/.agents/skills: external skills, named <prefix>_<skill>
+"{{home}}/.agents/skills/anthropic_frontend-design" = { link = "{{pkg.skills-anthropic}}/skills/frontend-design" }
+"{{home}}/.agents/skills/caveman_caveman" = { link = "{{pkg.skills-caveman}}/skills/caveman" }
+"{{home}}/.agents/skills/cursor_unslop" = { link = "{{pkg.skills-cursor}}/pstack/skills/unslop" }
+"{{home}}/.agents/skills/cursor-team-kit_deslop" = { link = "{{pkg.skills-cursor}}/cursor-team-kit/skills/deslop" }
+"{{home}}/.agents/skills/emil_animate" = { link = "{{pkg.skills-emil}}/skills/animate" }
+"{{home}}/.agents/skills/emil_animation-vocabulary" = { link = "{{pkg.skills-emil}}/skills/animation-vocabulary" }
+"{{home}}/.agents/skills/emil_emil-design-eng" = { link = "{{pkg.skills-emil}}/skills/emil-design-eng" }
+"{{home}}/.agents/skills/emil_find-animation-opportunities" = { link = "{{pkg.skills-emil}}/skills/find-animation-opportunities" }
+"{{home}}/.agents/skills/emil_improve-animations" = { link = "{{pkg.skills-emil}}/skills/improve-animations" }
+"{{home}}/.agents/skills/emil_prototype" = { link = "{{pkg.skills-emil}}/skills/prototype" }
+"{{home}}/.agents/skills/shadcn_shadcn" = { link = "{{pkg.skills-shadcn}}/skills/shadcn" }
+
+# ~/.config/opencode/skills: local skills from files/skills/
+"{{config}}/opencode/skills/add-skill" = { link = "../files/skills/add-skill" }
+"{{config}}/opencode/skills/diagnose" = { link = "../files/skills/diagnose" }
+"{{config}}/opencode/skills/find-skills" = { link = "../files/skills/find-skills" }
+"{{config}}/opencode/skills/grill" = { link = "../files/skills/grill" }
+"{{config}}/opencode/skills/implement" = { link = "../files/skills/implement" }
+"{{config}}/opencode/skills/improve-codebase-architecture" = { link = "../files/skills/improve-codebase-architecture" }
+"{{config}}/opencode/skills/pr" = { link = "../files/skills/pr" }
+"{{config}}/opencode/skills/prd" = { link = "../files/skills/prd" }
+"{{config}}/opencode/skills/research" = { link = "../files/skills/research" }
+"{{config}}/opencode/skills/review" = { link = "../files/skills/review" }
+"{{config}}/opencode/skills/ship" = { link = "../files/skills/ship" }
+"{{config}}/opencode/skills/spec" = { link = "../files/skills/spec" }
+"{{config}}/opencode/skills/triage" = { link = "../files/skills/triage" }
+"{{config}}/opencode/skills/writing-for-agents" = { link = "../files/skills/writing-for-agents" }
+
+# ~/.config/opencode/skills: external skills, named <prefix>_<skill>
+"{{config}}/opencode/skills/anthropic_frontend-design" = { link = "{{pkg.skills-anthropic}}/skills/frontend-design" }
+"{{config}}/opencode/skills/caveman_caveman" = { link = "{{pkg.skills-caveman}}/skills/caveman" }
+"{{config}}/opencode/skills/cursor_unslop" = { link = "{{pkg.skills-cursor}}/pstack/skills/unslop" }
+"{{config}}/opencode/skills/cursor-team-kit_deslop" = { link = "{{pkg.skills-cursor}}/cursor-team-kit/skills/deslop" }
+"{{config}}/opencode/skills/emil_animate" = { link = "{{pkg.skills-emil}}/skills/animate" }
+"{{config}}/opencode/skills/emil_animation-vocabulary" = { link = "{{pkg.skills-emil}}/skills/animation-vocabulary" }
+"{{config}}/opencode/skills/emil_emil-design-eng" = { link = "{{pkg.skills-emil}}/skills/emil-design-eng" }
+"{{config}}/opencode/skills/emil_find-animation-opportunities" = { link = "{{pkg.skills-emil}}/skills/find-animation-opportunities" }
+"{{config}}/opencode/skills/emil_improve-animations" = { link = "{{pkg.skills-emil}}/skills/improve-animations" }
+"{{config}}/opencode/skills/emil_prototype" = { link = "{{pkg.skills-emil}}/skills/prototype" }
+"{{config}}/opencode/skills/shadcn_shadcn" = { link = "{{pkg.skills-shadcn}}/skills/shadcn" }

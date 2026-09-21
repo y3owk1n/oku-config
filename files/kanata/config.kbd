@@ -1,0 +1,158 @@
+(defcfg
+    process-unmapped-keys yes
+    log-layer-changes no
+    macos-dev-names-exclude (
+		"Voyager"
+		"MX Master 3"
+	)
+)
+
+(defsrc
+    esc  f1   f2    f3    f4    f5    f6    f7    f8    f9    f10    f11    f12
+    grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+    tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+    caps a    s    d    f    g    h    j    k    l    ;    '    ret
+    lsft z    x    c    v    b    n    m    ,    .    /    rsft
+    fn lctl lalt lmeta           spc            rmeta ralt
+)
+
+;; This is the dvorak layout for reference
+;; (deflayer dvorak
+    ;; esc  f1   f2    f3    f4    f5    f6    f7    f8    f9    f10    f11    f12
+    ;; grv  1    2    3    4    5    6    7    8    9    0    [    ]    bspc
+    ;; tab  '    ,    .    p    y    f    g    c    r    l    /    =    \
+    ;; caps a    o    e    u    i    d    h    t    n    s    -    ret
+    ;; lsft ;    q    j    k    x    b    m    w    v    z    rsft
+    ;; lctl lmet lalt           spc            ralt rmet rctl
+;; )
+
+(deflayer dvorak
+    @esc    _    _    _    _    _    _    _    _    _    _    _    _
+    @grl 1    2    3    4    5    6    7    8    9    0    \    =    bspc
+    tab  @'    @,    @.    @p    @y    @f    @g    @c    @r    @l    @/    [    ]
+    esc @met_a    @alt_o    @ctl_e    @sft_u    @arr_i    @arr_d    @sft_h    @ctl_t    @alt_n    @met_s    -    ret
+    XX @;    @q    @j    @k    @x    @b    @m    @w    @v    @z    =
+    fn XX XX XX           @hyper_spc            XX XX
+)
+
+(deflayer dvorak-tp
+    @esc    _    _    _    _    _    _    _    _    _    _    _    _
+    @grl 1    2    3    4    5    6    7    8    9    0    \    =    bspc
+    tab  '    ,    .    p    y    f    g    c    r    l    /    XX    XX
+    esc a    o    e    u    i    d    h    t    n    l    -    ret
+    XX ;    q    j    k    x    b    m    w    v    z   =
+    fn XX XX  XX          spc            XX XX
+)
+
+(deflayer arrows
+    _    _    _    _    _    _    _    _    _    _    _    _    _
+    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+    _    _    _    _    _    _    _    _    _    _    rght    _    _    _
+    _    _    _    _    _    _    _    lft    _    _    _    _    _
+    _    _    _    down    up    _    _    _    _    _    _    _
+    _ _    _    _              _              _    _
+)
+
+(deflayer fns
+    _  brdown    brup    _    _    _    _    prev    pp    next    mute    voldwn    volu
+    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+    _    _    _    _    _    _    _    _    _    _    _    _    _
+    _    _    _    _    _    _    _    _    _    _    _    _
+    _ _    _    _              _              _    _
+)
+
+(defvar
+  tap-timeout   1
+  hold-timeout  160
+  one-shot-timeout  200
+  tt $tap-timeout
+  ht $hold-timeout
+  ot $one-shot-timeout
+)
+
+;; https://github.com/jtroo/kanata/issues/502#issuecomment-1671910161
+(deffakekeys
+  to-dvorak (layer-switch dvorak)
+)
+
+(defalias
+  ;; alias to cancel tap-hold keys if typing rapidly but restore after a shord idle period
+  tp (multi
+    (layer-switch dvorak-tp)
+    (on-idle-fakekey to-dvorak tap 35)
+  )
+
+  ' (multi ' @tp)
+  , (multi , @tp)
+  p (multi p @tp)
+  y (multi y @tp)
+  f (multi f @tp)
+  g (multi g @tp)
+  c (multi c @tp)
+  r (multi r @tp)
+  l (multi l @tp)
+  / (multi / @tp)
+  = (multi = @tp)
+  i (multi i @tp)
+  d (multi d @tp)
+  h (multi h @tp)
+  t (multi t @tp)
+  n (multi n @tp)
+  s (multi s @tp)
+  - (multi - @tp)
+  ; (multi ; @tp)
+  q (multi q @tp)
+  j (multi j @tp)
+  k (multi k @tp)
+  x (multi x @tp)
+  b (multi b @tp)
+  m (multi m @tp)
+  w (multi w @tp)
+  v (multi v @tp)
+  z (multi z @tp)
+  . (multi . @tp)
+  a (multi a @tp)
+  o (multi o @tp)
+  e (multi e @tp)
+  u (multi u @tp)
+  [ (multi [ @tp)
+  ] (multi ] @tp)
+)
+
+(defalias
+    ;; tap: backtick (grave), hold: toggle layer-switching layer while held
+    grl (tap-hold $tt $ht grv (layer-toggle layers))
+
+    ;; layer-switch changes the base layer.
+    dvk (layer-switch dvorak)
+
+    ;; arrow key layer
+    arr_i (tap-hold $tt $ht i (layer-toggle arrows))
+    arr_d (tap-hold $tt $ht d (layer-toggle arrows))
+
+    ;; tap for esc, hold to enter fn layer
+    esc (tap-hold $tt $ht esc (layer-toggle fns))
+
+    ;; hyper key
+    hyper_spc (tap-hold $tt $ht spc (multi lalt lctl lmet lsft))
+
+    met_a (tap-hold-release $tt $ht a (one-shot $ot lmet))
+    alt_o (tap-hold-release $tt $ht o (one-shot $ot lalt))
+    ctl_e (tap-hold-release $tt $ht e (one-shot $ot lctl))
+    sft_u (tap-hold-release $tt $ht u (one-shot $ot lsft))
+
+    sft_h (tap-hold-release $tt $ht h (one-shot $ot rsft))
+    ctl_t (tap-hold-release $tt $ht t (one-shot $ot rctl))
+    alt_n (tap-hold-release $tt $ht n (one-shot $ot lalt))
+    met_s (tap-hold-release $tt $ht s (one-shot $ot rmet))
+)
+
+(deflayer layers
+    _    _    _    _    _    _    _    _    _    _    _    _    _
+    _    @dvk _    lrld _    _    _    _    _    _    _    _    _    _
+    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+    _    _    _    _    _    _    _    _    _    _    _    _    _
+    _    _    _    _    _    _    _    _    _    _    _    _
+    _ _    _    _              _              _    _
+)

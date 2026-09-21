@@ -1,0 +1,26 @@
+[package]
+name = "coreutils"
+description = "GNU file, shell and text utilities, each with a g prefix"
+homepage = "https://www.gnu.org/software/coreutils/"
+license = "GPL-3.0-or-later"
+
+# GNU publishes archives on its own servers only. The tags of the GitHub mirror
+# name the versions, and the archive comes from ftp.gnu.org.
+[version]
+from = "git-tags"
+repo = "https://github.com/coreutils/coreutils"
+strip_prefix = "v"
+
+[build]
+needs = ["cc", "make"]
+source = { url = "https://ftp.gnu.org/gnu/coreutils/coreutils-{{version}}.tar.xz", strip = 1 }
+
+# Every program gets a g prefix, such as gls and gdate, so none of them takes
+# the place of a macOS tool. This release has no --without-gmp flag any more.
+[[build.step]]
+run = """
+./configure --prefix={{prefix}} --program-prefix=g --without-selinux --disable-nls
+make -j{{jobs}}
+make install
+"""
+shell = "sh"

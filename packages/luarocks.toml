@@ -1,0 +1,24 @@
+[package]
+name = "luarocks"
+description = "Package manager for Lua modules, set up for Lua 5.1"
+homepage = "https://luarocks.org"
+license = "MIT"
+
+# The tags name the versions, and the archive comes from luarocks.org.
+[version]
+from = "git-tags"
+repo = "https://github.com/luarocks/luarocks"
+strip_prefix = "v"
+
+[build]
+needs = ["make"]
+source = { url = "https://luarocks.org/releases/luarocks-{{version}}.tar.gz", strip = 1 }
+deps = ["./lua.toml"]
+
+# The luarocks script starts the lua it was configured with.
+[runtime]
+deps = ["./lua.toml"]
+
+[[build.step]]
+run = "./configure --prefix={{prefix}} --sysconfdir={{prefix}}/etc --with-lua={{dep.lua.prefix}} && make && make install"
+shell = "sh"

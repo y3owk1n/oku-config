@@ -1,0 +1,18 @@
+# Agent skills from github.com/JuliusBrussee/caveman, pinned to one commit.
+# The version is fixed, so `oku update` never moves it. To take a newer
+# commit, follow lists/ai-notes.md, "Update an external skill repo".
+
+[package]
+name = "skills-caveman"
+description = "Agent skills from the JuliusBrussee/caveman repo"
+homepage = "https://github.com/JuliusBrussee/caveman"
+
+[version]
+value = "2026.09.20-3ee70a1"
+
+[[artifact]]
+url = "https://github.com/JuliusBrussee/caveman/archive/3ee70a102609e550bd2e68004bf5990a9341c851.tar.gz"
+sha256 = "c4c00c40e3d4db1c3223f5f8433f09ed847cede7fdfce3bb839fdacb8a0d7d50"
+strip = 1
+# The package only holds files. lists/ai.toml links the skills out of it.
+data = true

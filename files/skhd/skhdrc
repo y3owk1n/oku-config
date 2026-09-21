@@ -1,0 +1,101 @@
+.shell "/bin/dash"
+
+.define open : mimi action focus_app "{{1}}" || open -a "{{1}}"
+.define mimi_space : mimi action space "{{1}}"
+.define mimi_move : mimi action move_window_to_space "{{1}}" --follow
+.define mimi_resize : mimi action resize_window "{{1}}"
+.define mimi_focus : mimi action focus_window "{{1}}"
+.define mimi_tile : mimi tiling cmd "{{1}}"
+.define mimi_tile_sub : mimi tiling cmd "{{1}}" "{{2}}"
+
+# launchers
+hyper - f : @open("finder")
+hyper - b : @open("safari")
+# hyper - b : @open("helium")
+# hyper - b : @open("Brave Browser")
+hyper - t : @open("ghostty")
+hyper - n : @open("notes")
+hyper - r : @open("reminders")
+hyper - m : @open("mail")
+hyper - c : @open("calendar")
+hyper - w : @open("WhatsApp")
+hyper - d : @open("Discord")
+hyper - p : @open("Passwords")
+hyper - s : @open("System Settings")
+hyper - a : @open("Activity Monitor")
+
+hyper - 1 : @mimi_space("1")
+hyper - 2 : @mimi_space("2")
+hyper - 3 : @mimi_space("3")
+hyper - 4 : @mimi_space("4")
+hyper - 5 : @mimi_space("5")
+hyper - 6 : @mimi_space("6")
+hyper - 7 : @mimi_space("7")
+hyper - 8 : @mimi_space("8")
+hyper - 9 : @mimi_space("9")
+hyper - 0 : @mimi_space("10")
+
+alt + shift - 1 : @mimi_move("1")
+alt + shift - 2 : @mimi_move("2")
+alt + shift - 3 : @mimi_move("3")
+alt + shift - 4 : @mimi_move("4")
+alt + shift - 5 : @mimi_move("5")
+alt + shift - 6 : @mimi_move("6")
+alt + shift - 7 : @mimi_move("7")
+alt + shift - 8 : @mimi_move("8")
+alt + shift - 9 : @mimi_move("9")
+alt + shift - 0 : @mimi_move("10")
+
+# standard non tile
+# alt - h : @mimi_focus("--left")
+# alt - l : @mimi_focus("--right")
+# alt - j : @mimi_focus("--down")
+# alt - k : @mimi_focus("--up")
+# alt - tab : @mimi_focus("")
+# alt + shift - tab : @mimi_focus("--backward")
+# alt + shift - c : @mimi_resize("center")
+# alt + shift - f : @mimi_resize("fill")
+# alt + shift - h : @mimi_resize("left-half")
+# alt + shift - l : @mimi_resize("right-half")
+# alt + shift - j : @mimi_resize("bottom-half")
+# alt + shift - k : @mimi_resize("top-half")
+
+# strip
+alt - left : @mimi_tile_sub("scroll", "left")
+alt - right : @mimi_tile_sub("scroll", "right")
+alt - 9 : @mimi_tile("consume")
+alt - 0 : @mimi_tile("expel")
+alt - h : @mimi_tile_sub("focus", "left")
+alt - l : @mimi_tile_sub("focus", "right")
+alt - j : @mimi_tile_sub("focus", "down")
+alt - k : @mimi_tile_sub("focus", "up")
+alt - f : @mimi_tile("togglefloat")
+alt - m : @mimi_tile("togglemax")
+alt - t : @mimi_tile("togglestack")
+alt - r : @mimi_tile("width")
+alt - c : @mimi_tile("center")
+alt + shift - h : @mimi_tile_sub("move", "left")
+alt + shift - l : @mimi_tile_sub("move", "right")
+alt + shift - j : @mimi_tile_sub("move", "down")
+alt + shift - k : @mimi_tile_sub("move", "up")
+alt + shift - c : @mimi_resize("center")
+
+# bsp
+# alt - h : @mimi_tile_sub("focus", "left")
+# alt - l : @mimi_tile_sub("focus", "right")
+# alt - j : @mimi_tile_sub("focus", "down")
+# alt - k : @mimi_tile_sub("focus", "up")
+# alt - t : @mimi_tile("togglesplit")
+# alt - f : @mimi_tile("togglefloat")
+# alt - m : @mimi_tile("togglemax")
+# alt - left : @mimi_tile_sub("stack", "left")
+# alt - right : @mimi_tile_sub("stack", "right")
+# alt - up : @mimi_tile_sub("stack", "up")
+# alt - down : @mimi_tile_sub("stack", "down")
+# alt - 0 : @mimi_tile("unstack")
+# alt - 8 : @mimi_tile("next")
+# alt - 9 : @mimi_tile("prev")
+# alt + shift - h : @mimi_tile_sub("swap", "left")
+# alt + shift - l : @mimi_tile_sub("swap", "right")
+# alt + shift - j : @mimi_tile_sub("swap", "down")
+# alt + shift - k : @mimi_tile_sub("swap", "up")

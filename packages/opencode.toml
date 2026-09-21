@@ -1,0 +1,38 @@
+[package]
+name = "opencode"
+description = "Coding agent for the terminal"
+homepage = "https://opencode.ai"
+license = "MIT"
+
+# Inference takes the musl build on every Linux, because the glibc archives
+# carry no libc in their names, so the assets are named here.
+# Upstream publishes no checksum file.
+[version]
+from = "github-releases"
+repo = "anomalyco/opencode"
+strip_prefix = "v"
+
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://github.com/anomalyco/opencode/releases/download/{{tag}}/opencode-darwin-arm64.zip"
+bin = ["opencode"]
+
+[[artifact]]
+match = { os = "linux", arch = "arm64", libc = "glibc" }
+url = "https://github.com/anomalyco/opencode/releases/download/{{tag}}/opencode-linux-arm64.tar.gz"
+bin = ["opencode"]
+
+[[artifact]]
+match = { os = "linux", arch = "arm64" }
+url = "https://github.com/anomalyco/opencode/releases/download/{{tag}}/opencode-linux-arm64-musl.tar.gz"
+bin = ["opencode"]
+
+[[artifact]]
+match = { os = "linux", arch = "amd64", libc = "glibc" }
+url = "https://github.com/anomalyco/opencode/releases/download/{{tag}}/opencode-linux-x64.tar.gz"
+bin = ["opencode"]
+
+[[artifact]]
+match = { os = "linux", arch = "amd64" }
+url = "https://github.com/anomalyco/opencode/releases/download/{{tag}}/opencode-linux-x64-musl.tar.gz"
+bin = ["opencode"]

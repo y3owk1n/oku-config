@@ -1,0 +1,388 @@
+-- =========================================================
+--  Tmux Navigation
+-- =========================================================
+
+local nvim_tmux_navigation = require("nvim-tmux-navigation")
+
+nvim_tmux_navigation.setup({})
+
+vim.keymap.set("n", "<c-h>", "<cmd>NvimTmuxNavigateLeft<cr>", { desc = "Navigate left" })
+vim.keymap.set("n", "<c-j>", "<cmd>NvimTmuxNavigateDown<cr>", { desc = "Navigate down" })
+vim.keymap.set("n", "<c-k>", "<cmd>NvimTmuxNavigateUp<cr>", { desc = "Navigate up" })
+vim.keymap.set("n", "<c-l>", "<cmd>NvimTmuxNavigateRight<cr>", { desc = "Navigate right" })
+
+-- =========================================================
+--  Formatting
+-- =========================================================
+
+local conform = require("conform")
+
+conform.setup({
+  formatters_by_ft = {
+    javascript = { "biome", "prettierd", stop_after_first = true },
+    javascriptreact = { "biome", "prettierd", stop_after_first = true },
+    typescript = { "biome", "prettierd", stop_after_first = true },
+    typescriptreact = { "biome", "prettierd", stop_after_first = true },
+    json = { "biome", "prettierd", stop_after_first = true },
+    jsonc = { "biome", "prettierd", stop_after_first = true },
+    css = { "biome", "prettierd", stop_after_first = true },
+    ["markdown"] = { "prettierd" },
+    ["markdown.mdx"] = { "prettierd" },
+    go = { "goimports", "gofumpt" },
+  },
+  format_on_save = {
+    timeout_ms = 500,
+    lsp_format = "fallback",
+  },
+})
+
+-- =========================================================
+--  AI completions
+-- =========================================================
+
+local supermaven = require("supermaven-nvim")
+
+supermaven.setup({
+  keymaps = {
+    accept_suggestion = "<C-y>",
+  },
+  ignore_filetypes = { "bigfile", "float_info", "minifiles", "minipick", "fff_input" },
+})
+
+-- =========================================================
+--  Treesitter
+-- =========================================================
+
+local nvim_treesitter = require("nvim-treesitter")
+
+nvim_treesitter.install({
+  "awk",
+  "bash",
+  "c",
+  "cairo",
+  "cmake",
+  "comment",
+  "css",
+  "dockerfile",
+  "diff",
+  "editorconfig",
+  "fish",
+  "git_config",
+  "git_rebase",
+  "gitattributes",
+  "gitcommit",
+  "gitignore",
+  "go",
+  "gomod",
+  "gosum",
+  "gowork",
+  "gpg",
+  "html",
+  "javascript",
+  "jq",
+  "jsdoc",
+  "json",
+  "json5",
+  "jsx",
+  "just",
+  "kdl",
+  "lua",
+  "luadoc",
+  "luap",
+  "make",
+  "markdown",
+  "markdown_inline",
+  "nix",
+  "objc",
+  "pem",
+  "prisma",
+  "python",
+  "query",
+  "regex",
+  "ruby",
+  "rust",
+  "toml",
+  "tsx",
+  "typescript",
+  "vim",
+  "vimdoc",
+  "xml",
+  "yaml",
+  "zsh",
+})
+
+vim.filetype.add({
+  pattern = {
+    ["docker%-compose%.ya?ml"] = "yaml.docker-compose",
+    ["docker%-compose%..*%.ya?ml"] = "yaml.docker-compose", -- e.g. docker-compose.dev.yml
+  },
+})
+
+vim.filetype.add({
+  extension = { just = "just" },
+  filename = {
+    justfile = "just",
+    Justfile = "just",
+    [".Justfile"] = "just",
+    [".justfile"] = "just",
+  },
+})
+
+vim.filetype.add({
+  extension = { mdx = "markdown.mdx" },
+})
+
+vim.treesitter.language.register("markdown", "markdown.mdx")
+
+-- =========================================================
+--  Git Diff
+-- =========================================================
+
+local mini_diff = require("mini.diff")
+
+mini_diff.setup({
+  view = {
+    style = "sign",
+    signs = {
+      add = "▎",
+      change = "▎",
+      delete = "",
+    },
+  },
+})
+
+vim.keymap.set("n", "<leader>gd", function()
+  mini_diff.toggle_overlay(0)
+end, { desc = "Toggle diff overlay" })
+
+-- =========================================================
+--  Icons
+-- =========================================================
+
+local mini_icons = require("mini.icons")
+
+mini_icons.setup({
+  file = {
+    [".keep"] = { glyph = "󰊢", hl = "MiniIconsGrey" },
+    ["devcontainer.json"] = { glyph = "", hl = "MiniIconsAzure" },
+    [".go-version"] = { glyph = "", hl = "MiniIconsBlue" },
+    [".eslintrc.js"] = { glyph = "󰱺", hl = "MiniIconsYellow" },
+    [".node-version"] = { glyph = "", hl = "MiniIconsGreen" },
+    [".prettierrc"] = { glyph = "", hl = "MiniIconsPurple" },
+    [".yarnrc.yml"] = { glyph = "", hl = "MiniIconsBlue" },
+    ["eslint.config.js"] = { glyph = "󰱺", hl = "MiniIconsYellow" },
+    ["package.json"] = { glyph = "", hl = "MiniIconsGreen" },
+    ["tsconfig.json"] = { glyph = "", hl = "MiniIconsAzure" },
+    ["tsconfig.build.json"] = { glyph = "", hl = "MiniIconsAzure" },
+    ["yarn.lock"] = { glyph = "", hl = "MiniIconsBlue" },
+  },
+  filetype = {
+    dotenv = { glyph = "", hl = "MiniIconsYellow" },
+    gotmpl = { glyph = "󰟓", hl = "MiniIconsGrey" },
+  },
+})
+
+mini_icons.mock_nvim_web_devicons()
+
+-- =========================================================
+--  LSP Rename
+-- =========================================================
+
+local lsp_rename = require("custom.lsp-rename")
+
+lsp_rename.setup()
+
+-- =========================================================
+--  Bigfile
+-- =========================================================
+
+local bigfile = require("custom.bigfile")
+
+bigfile.setup()
+
+-- =========================================================
+--  Markdown utils
+-- =========================================================
+
+local markdown_utils = require("custom.markdown-utils")
+
+markdown_utils.setup()
+
+vim.keymap.set("n", "<leader>cc", markdown_utils.toggle_markdown_checkbox, { desc = "Toggle markdown checkbox" })
+vim.keymap.set("n", "<leader>cgC", markdown_utils.insert_markdown_checkbox, { desc = "Insert markdown checkbox" })
+vim.keymap.set("n", "<leader>cgc", markdown_utils.insert_markdown_checkbox_below, { desc = "Insert checkbox below" })
+
+-- =========================================================
+--  Undo glow
+-- =========================================================
+
+local undo_glow = require("undo-glow")
+
+undo_glow.setup({
+  animation = {
+    enabled = true,
+    duration = 300,
+    window_scoped = true,
+  },
+  priority = 2048 * 3,
+})
+
+local api = require("undo-glow.api")
+
+api.register_hook("pre_animation", function(data)
+  local search = { "search_next", "search_prev", "search_star", "search_hash" }
+
+  if vim.tbl_contains(search, data.operation) then
+    data.animation_type = "strobe"
+  elseif data.operation == "cursor_moved" then
+    data.animation_type = "slide"
+  elseif data.operation == "search_cmd" then
+    data.animation_type = "fade"
+  end
+end, 75)
+
+local function preserve_cursor()
+  local pos = vim.fn.getpos(".")
+
+  vim.schedule(function()
+    vim.g.ug_ignore_cursor_moved = true
+    vim.fn.setpos(".", pos)
+  end)
+end
+
+vim.keymap.set({ "n", "x" }, "y", function()
+  -- Preserve the current cursor position when yanking.
+  local pos = vim.fn.getpos(".")
+
+  vim.schedule(function()
+    vim.g.ug_ignore_cursor_moved = true
+    vim.fn.setpos(".", pos)
+  end)
+  return "y"
+end, { expr = true, noremap = true, desc = "Yank and remain cursor" })
+
+vim.keymap.set("n", "u", function()
+  undo_glow.undo()
+end, { desc = "Undo with highlight", noremap = true })
+
+vim.keymap.set("n", "<C-r>", function()
+  undo_glow.redo()
+end, { desc = "Redo with highlight", noremap = true })
+
+vim.keymap.set("n", "p", function()
+  undo_glow.paste_below()
+end, { desc = "Paste below with highlight", noremap = true })
+
+vim.keymap.set("n", "P", function()
+  undo_glow.paste_above()
+end, { desc = "Paste above with highlight", noremap = true })
+
+vim.keymap.set("n", "n", function()
+  undo_glow.search_next()
+end, { desc = "Search next with highlight", noremap = true })
+
+vim.keymap.set("n", "N", function()
+  undo_glow.search_prev()
+end, { desc = "Search prev with highlight", noremap = true })
+
+vim.keymap.set("n", "*", function()
+  undo_glow.search_star()
+end, { desc = "Search star with highlight", noremap = true })
+
+vim.keymap.set("n", "#", function()
+  undo_glow.search_hash()
+end, { desc = "Search hash with highlight", noremap = true })
+
+vim.keymap.set({ "n", "x" }, "gc", function()
+  preserve_cursor()
+  return undo_glow.comment()
+end, { desc = "Toggle comment with highlight", noremap = true, expr = true })
+
+vim.keymap.set("o", "gc", function()
+  undo_glow.comment_textobject()
+end, { desc = "Toggle textobject with highlight", noremap = true })
+
+vim.keymap.set("n", "gcc", function()
+  return undo_glow.comment_line()
+end, { desc = "Toggle comment line with highlight", noremap = true, expr = true })
+
+local augroup = vim.api.nvim_create_augroup("UndoGlow", { clear = true })
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+  group = augroup,
+  desc = "Highlight when yanking (copying) text",
+  callback = function()
+    undo_glow.yank()
+  end,
+})
+
+-- This only handles neovim instance and do not highlight when switching panes in tmux
+vim.api.nvim_create_autocmd("CursorMoved", {
+  group = augroup,
+  desc = "Highlight when cursor moved significantly",
+  callback = function()
+    undo_glow.cursor_moved()
+  end,
+})
+
+-- This will handle highlights when focus gained, including switching panes in tmux
+vim.api.nvim_create_autocmd("FocusGained", {
+  group = augroup,
+  desc = "Highlight when focus gained",
+  callback = function()
+    local opts = {
+      animation = {
+        animation_type = "slide",
+      },
+    }
+
+    opts = require("undo-glow.utils").merge_command_opts("UgCursor", opts)
+    local pos = require("undo-glow.utils").get_current_cursor_row()
+
+    undo_glow.highlight_region(vim.tbl_extend("force", opts, {
+      s_row = pos.s_row,
+      s_col = pos.s_col,
+      e_row = pos.e_row,
+      e_col = pos.e_col,
+      force_edge = opts.force_edge == nil and true or opts.force_edge,
+    }))
+  end,
+})
+
+vim.api.nvim_create_autocmd("CmdlineLeave", {
+  group = augroup,
+  desc = "Highlight when search cmdline leave",
+  callback = function()
+    undo_glow.search_cmd()
+  end,
+})
+
+-- =========================================================
+--  fff.nvim
+-- =========================================================
+
+local fff = require("fff")
+
+fff.setup({
+  prompt = "> ",
+  layout = {
+    prompt_position = "top",
+  },
+})
+
+vim.keymap.set("n", "<leader><leader>", fff.find_files, { desc = "FFF files" })
+vim.keymap.set("n", "<leader>sg", function()
+  fff.live_grep()
+end, { desc = "FFF live grep" })
+vim.keymap.set("n", "<leader>sw", function()
+  fff.live_grep({ query = vim.fn.expand("<cword>") })
+end, { desc = "Grep word" })
+vim.keymap.set("n", "<leader>sr", ":FFFResume<cr>", { desc = "FFF Resume" })
+
+-- =========================================================
+-- grug-far.nvim
+-- =========================================================
+
+local grug_far = require("grug-far")
+
+grug_far.setup()

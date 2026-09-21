@@ -1,0 +1,36 @@
+[package]
+name = "ripgrep"
+description = "Recursively search directories for a regex pattern"
+homepage = "https://github.com/BurntSushi/ripgrep"
+license = "Unlicense OR MIT"
+
+[version]
+from = "github-releases"
+repo = "BurntSushi/ripgrep"
+
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://github.com/BurntSushi/ripgrep/releases/download/{{tag}}/ripgrep-{{version}}-aarch64-apple-darwin.tar.gz"
+sha256_url = "https://github.com/BurntSushi/ripgrep/releases/download/{{tag}}/ripgrep-{{version}}-aarch64-apple-darwin.tar.gz.sha256"
+strip = 1
+bin = ["rg"]
+man = ["doc/rg.1"]
+completions = { fish = "complete/rg.fish", zsh = "complete/_rg", bash = "complete/rg.bash" }
+
+[[artifact]]
+match = { os = "linux", arch = "arm64" }
+url = "https://github.com/BurntSushi/ripgrep/releases/download/{{tag}}/ripgrep-{{version}}-aarch64-unknown-linux-gnu.tar.gz"
+sha256_url = "https://github.com/BurntSushi/ripgrep/releases/download/{{tag}}/ripgrep-{{version}}-aarch64-unknown-linux-gnu.tar.gz.sha256"
+strip = 1
+bin = ["rg"]
+man = ["doc/rg.1"]
+completions = { fish = "complete/rg.fish", zsh = "complete/_rg", bash = "complete/rg.bash" }
+
+[[artifact]]
+match = { os = "linux", arch = "amd64" }
+url = "https://github.com/BurntSushi/ripgrep/releases/download/{{tag}}/ripgrep-{{version}}-x86_64-unknown-linux-musl.tar.gz"
+sha256_url = "https://github.com/BurntSushi/ripgrep/releases/download/{{tag}}/ripgrep-{{version}}-x86_64-unknown-linux-musl.tar.gz.sha256"
+strip = 1
+bin = ["rg"]
+man = ["doc/rg.1"]
+completions = { fish = "complete/rg.fish", zsh = "complete/_rg", bash = "complete/rg.bash" }

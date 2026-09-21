@@ -1,0 +1,19 @@
+[package]
+name = "firefox"
+description = "Web browser"
+homepage = "https://www.mozilla.org/firefox/"
+license = "MPL-2.0"
+
+# Firefox updates itself in ~/Applications. oku replaces that copy on the next
+# `oku update` of this package. For a newer version change `value`,
+# and the sha256. `oku manifest bump --to <version>` does both, the url takes
+# the version from `value`. The Homebrew cask `firefox` lists the current one.
+[version]
+value = "156.0"
+
+# The image holds one app for both Intel and Apple silicon, in US English.
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://download-installer.cdn.mozilla.net/pub/firefox/releases/{{version}}/mac/en-US/Firefox%20{{version}}.dmg"
+sha256 = "fecc46103039ca4a77ecb2b2ef7b03892f922e13db0782f8570c512b2e458515"
+app = ["Firefox.app"]

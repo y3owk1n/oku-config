@@ -1,0 +1,84 @@
+# Program config files. Sources are relative to this file.
+# link: a symlink into this repo, an edit shows at once.
+# render: a template with {{variables}}, written read-only by `oku sync`.
+# Notes and manual steps are in files-notes.md.
+
+[files]
+
+# Directories that change all day
+"{{config}}/nvim" = { link = "../files/nvim" }
+"{{config}}/kanata" = { link = "../files/kanata", when = { os = "darwin" } }
+
+# The palette that nvim (base16-pro-max) reads
+"{{config}}/stylix/palette.json" = { render = "../files/stylix/palette.json.tmpl" }
+
+# fish
+"{{config}}/fish/config.fish" = { link = "../files/fish/config.fish" }
+"{{config}}/fish/functions" = { link = "../files/fish/functions" }
+"{{config}}/fish/conf.d/theme.fish" = { render = "../files/fish/conf.d/theme.fish.tmpl" }
+
+# starship
+"{{config}}/starship.toml" = { render = "../files/starship/starship.toml.tmpl" }
+
+# git
+"{{config}}/git/config" = { render = "../files/git/config.tmpl" }
+"{{config}}/git/config-darwin" = { link = "../files/git/config-darwin", when = { os = "darwin" } }
+
+# ssh. The private key belongs to the secrets list.
+"{{home}}/.ssh/config" = { link = "../files/ssh/config" }
+"{{home}}/.ssh/config-darwin" = { link = "../files/ssh/config-darwin", when = { os = "darwin" } }
+"{{home}}/.ssh/id_ed25519.pub" = { text = "{{sshpubkey}} {{email}}\n", mode = "0644" }
+"{{home}}/.ssh/allowed_signers" = { text = "{{email}} {{sshpubkey}}\n", mode = "0644" }
+
+# gh. hosts.yml holds a token and stays out of this repo.
+"{{config}}/gh/config.yml" = { link = "../files/gh/config.yml" }
+
+# tmux
+"{{config}}/tmux/tmux.conf" = { render = "../files/tmux/tmux.conf.tmpl" }
+"{{config}}/tmux/theme.conf" = { render = "../files/tmux/theme.conf.tmpl" }
+"{{config}}/tmux/vim-tmux-navigator.tmux" = { link = "../files/tmux/vim-tmux-navigator.tmux" }
+
+# sesh
+"{{config}}/sesh/sesh.toml" = { link = "../files/sesh/sesh.toml" }
+
+# ghostty
+"{{config}}/ghostty/config" = { render = "../files/ghostty/config.tmpl" }
+"{{config}}/ghostty/themes/stylix" = { render = "../files/ghostty/themes/stylix.tmpl" }
+
+# lazygit
+"{{config}}/lazygit/config.yml" = { render = "../files/lazygit/config.yml.tmpl" }
+
+# bat. Run `bat cache --build` once after the first sync.
+"{{config}}/bat/config" = { render = "../files/bat/config.tmpl" }
+"{{config}}/bat/themes/base16-stylix.tmTheme" = { render = "../files/bat/themes/base16-stylix.tmTheme.tmpl" }
+"{{config}}/bat/syntaxes/ghostty.sublime-syntax" = { link = "../files/bat/syntaxes/ghostty.sublime-syntax" }
+
+# btop. Read-only, so that btop does not write its full settings back.
+"{{config}}/btop/btop.conf" = { text = "color_theme = \"stylix\"\n" }
+"{{config}}/btop/themes/stylix.theme" = { render = "../files/btop/themes/stylix.theme.tmpl" }
+
+# atuin
+"{{config}}/atuin/config.toml" = { render = "../files/atuin/config.toml.tmpl" }
+
+# ripgrep
+"{{config}}/ripgrep/ripgreprc" = { link = "../files/ripgrep/ripgreprc" }
+
+# editorconfig
+"{{home}}/.editorconfig" = { link = "../files/editorconfig/editorconfig" }
+
+# mimi and skhd are macOS only. neru holds the macOS exec_shell, see the notes.
+"{{config}}/mimi/config.toml" = { render = "../files/mimi/config.toml.tmpl", when = { os = "darwin" } }
+"{{config}}/mimi/tiling" = { link = "../files/mimi/tiling", when = { os = "darwin" } }
+"{{config}}/neru/config.toml" = { render = "../files/neru/config.toml.tmpl" }
+"{{config}}/skhd/skhdrc" = { link = "../files/skhd/skhdrc", when = { os = "darwin" } }
+
+# opencode
+"{{config}}/opencode/tui.json" = { link = "../files/opencode/tui.json" }
+"{{config}}/opencode/themes/stylix.json" = { render = "../files/opencode/themes/stylix.json.tmpl" }
+
+# My own scripts, which were Nix packages. They are links, so they keep their
+# execute bit. ~/.local/bin is on PATH through the oku hook, because oku lives
+# there.
+"{{home}}/.local/bin/asr" = { link = "../files/bin/asr" }
+"{{home}}/.local/bin/cmd" = { link = "../files/bin/cmd" }
+"{{home}}/.local/bin/diagnose" = { link = "../files/bin/diagnose" }

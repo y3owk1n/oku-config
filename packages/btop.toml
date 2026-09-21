@@ -1,0 +1,19 @@
+[package]
+name = "btop"
+description = "Resource monitor for processor, memory, disks, network and processes"
+homepage = "https://github.com/aristocratos/btop"
+license = "Apache-2.0"
+
+# The source is a git tag, which needs no sha256, so oku follows new releases.
+[version]
+from = "github-releases"
+repo = "aristocratos/btop"
+strip_prefix = "v"
+
+[build]
+needs = ["c++", "make", "git"]
+source = { git = "https://github.com/aristocratos/btop", tag = "{{tag}}" }
+
+[[build.step]]
+run = "make -j{{jobs}} PREFIX={{prefix}} && make install PREFIX={{prefix}}"
+shell = "sh"

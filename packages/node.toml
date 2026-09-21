@@ -1,0 +1,12 @@
+[package]
+name = "node"
+
+[version]
+value = "22.20.0"
+
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://nodejs.org/dist/v{{version}}/node-v{{version}}-darwin-arm64.tar.gz"
+sha256_url = "https://nodejs.org/dist/v{{version}}/SHASUMS256.txt"
+strip = 1
+bin = ["bin/node", "bin/npm", "bin/npx"]

@@ -1,0 +1,21 @@
+[package]
+name = "ghostty"
+description = "Fast, native terminal emulator"
+homepage = "https://ghostty.org"
+license = "MIT"
+
+# Versions come from the tags of the source repo, the download from the
+# release server. Upstream signs its source archives only, so oku pins the
+# first download of the app. Set `auto-update = off` in the Ghostty config,
+# so that the app does not replace itself behind oku.
+[version]
+from = "git-tags"
+repo = "https://github.com/ghostty-org/ghostty"
+strip_prefix = "v"
+
+[[artifact]]
+match = { os = "darwin" }
+url = "https://release.files.ghostty.org/{{version}}/Ghostty.dmg"
+app = ["Ghostty.app"]
+bin = ["Ghostty.app/Contents/MacOS/ghostty"]
+man = ["Ghostty.app/Contents/Resources/man/man1/ghostty.1"]

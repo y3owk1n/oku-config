@@ -1,0 +1,24 @@
+[package]
+name = "jpegoptim"
+description = "Optimises and compresses JPEG files"
+homepage = "https://github.com/tjko/jpegoptim"
+license = "GPL-3.0-or-later"
+
+# The repo holds its configure script, so the source can be a git tag, which
+# needs no sha256, and oku follows new releases.
+[version]
+from = "github-releases"
+repo = "tjko/jpegoptim"
+strip_prefix = "v"
+
+[build]
+needs = ["cc", "make", "git"]
+source = { git = "https://github.com/tjko/jpegoptim", tag = "{{tag}}" }
+deps = ["./jpeg-turbo.toml"]
+
+[runtime]
+deps = ["./jpeg-turbo.toml"]
+
+[[build.step]]
+run = "./configure --prefix={{prefix}} && make -j{{jobs}} && make install"
+shell = "sh"

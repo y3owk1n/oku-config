@@ -1,0 +1,34 @@
+[package]
+name = "gh"
+description = "The GitHub command line tool"
+homepage = "https://cli.github.com"
+license = "MIT"
+
+[version]
+from = "github-releases"
+repo = "cli/cli"
+strip_prefix = "v"
+
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://github.com/cli/cli/releases/download/{{tag}}/gh_{{version}}_macOS_arm64.zip"
+sha256_url = "https://github.com/cli/cli/releases/download/{{tag}}/gh_{{version}}_checksums.txt"
+strip = 1
+bin = ["bin/gh"]
+man = ["share/man/man1/gh.1"]
+
+[[artifact]]
+match = { os = "linux", arch = "arm64" }
+url = "https://github.com/cli/cli/releases/download/{{tag}}/gh_{{version}}_linux_arm64.tar.gz"
+sha256_url = "https://github.com/cli/cli/releases/download/{{tag}}/gh_{{version}}_checksums.txt"
+strip = 1
+bin = ["bin/gh"]
+man = ["share/man/man1/gh.1"]
+
+[[artifact]]
+match = { os = "linux", arch = "amd64" }
+url = "https://github.com/cli/cli/releases/download/{{tag}}/gh_{{version}}_linux_amd64.tar.gz"
+sha256_url = "https://github.com/cli/cli/releases/download/{{tag}}/gh_{{version}}_checksums.txt"
+strip = 1
+bin = ["bin/gh"]
+man = ["share/man/man1/gh.1"]

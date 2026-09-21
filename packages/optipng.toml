@@ -1,0 +1,21 @@
+[package]
+name = "optipng"
+description = "PNG optimiser that recompresses images without loss"
+homepage = "https://optipng.sourceforge.net"
+license = "Zlib"
+
+# The project is on SourceForge, which has nothing a version source can read,
+# so the version and the sha256 are fixed. To take a newer release, change both.
+[version]
+value = "7.9.1"
+
+# The build uses the libpng and zlib copies in the archive, so the program
+# needs no other package.
+[build]
+needs = ["cc", "make"]
+source = { url = "https://downloads.sourceforge.net/project/optipng/OptiPNG/optipng-{{version}}/optipng-{{version}}.tar.gz", sha256 = "c2579be58c2c66dae9d63154edcb3d427fef64cb00ec0aff079c9d156ec46f29", strip = 1 }
+
+# oku links man pages from share/man only.
+[[build.step]]
+run = "./configure --prefix={{prefix}} --mandir={{prefix}}/share/man && make -j{{jobs}} && make install"
+shell = "sh"
