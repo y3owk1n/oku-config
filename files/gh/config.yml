@@ -1,0 +1,6 @@
+editor: nvim
+git_protocol: ssh
+prefer_editor_prompt: disabled
+prompt: enabled
+aliases: {}
+version: '1'

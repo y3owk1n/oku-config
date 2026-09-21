@@ -1,0 +1,17 @@
+[package]
+name = "gh-actions-language-server"
+description = "Language server for GitHub Actions workflow files"
+homepage = "https://github.com/actions/languageservices"
+license = "MIT"
+
+[version]
+from = "npm"
+repo = "@actions/languageserver"
+
+[runtime]
+deps = ["./node.toml"]
+
+[[artifact]]
+url = "https://registry.npmjs.org/@actions/languageserver/-/languageserver-{{version}}.tgz"
+strip = 1
+bin = [{ name = "gh-actions-language-server", run = "{{dep.node.prefix}}/bin/node", args = ["{{pkg}}/bin/actions-languageserver"] }]

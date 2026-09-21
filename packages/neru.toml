@@ -1,0 +1,32 @@
+[package]
+name = "neru"
+description = "Keyboard driven navigation for the mouse"
+homepage = "https://github.com/y3owk1n/neru"
+license = "MIT"
+
+[version]
+from = "github-releases"
+repo = "y3owk1n/neru"
+strip_prefix = "v"
+
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://github.com/y3owk1n/neru/releases/download/{{tag}}/neru-darwin-arm64.zip"
+sha256_url = "https://github.com/y3owk1n/neru/releases/download/{{tag}}/neru-darwin-arm64.zip.sha256"
+bin = ["bin/neru"]
+man = ["share/man/man1/neru.1"]
+
+[[artifact]]
+match = { os = "darwin", arch = "amd64" }
+url = "https://github.com/y3owk1n/neru/releases/download/{{tag}}/neru-darwin-amd64.zip"
+sha256_url = "https://github.com/y3owk1n/neru/releases/download/{{tag}}/neru-darwin-amd64.zip.sha256"
+bin = ["bin/neru"]
+man = ["share/man/man1/neru.1"]
+
+# The daemon runs from inside its bundle, as the Nix module did. It reads
+# ~/.config/neru/config.toml by default, so no --config is passed.
+[[service]]
+name = "neru"
+command = "pkg/Neru.app/Contents/MacOS/neru"
+args = ["launch"]
+restart = "always"

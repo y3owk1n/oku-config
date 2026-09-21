@@ -1,0 +1,33 @@
+[package]
+name = "fish"
+description = "The friendly interactive shell"
+homepage = "https://fishshell.com"
+license = "GPL-2.0-only"
+
+[version]
+from = "github-releases"
+repo = "fish-shell/fish-shell"
+
+# The macOS download is an app bundle that holds a relocatable fish. Upstream
+# signs its source archive only and publishes no checksum file.
+[[artifact]]
+match = { os = "darwin" }
+url = "https://github.com/fish-shell/fish-shell/releases/download/{{tag}}/fish-{{version}}.app.zip"
+strip = 1
+bin = [
+  "Contents/Resources/base/usr/local/bin/fish",
+  "Contents/Resources/base/usr/local/bin/fish_indent",
+  "Contents/Resources/base/usr/local/bin/fish_key_reader",
+]
+man = ["Contents/Resources/base/usr/local/share/man/man1/fish.1"]
+
+# One static program that holds its own functions and completions.
+[[artifact]]
+match = { os = "linux", arch = "arm64" }
+url = "https://github.com/fish-shell/fish-shell/releases/download/{{tag}}/fish-{{version}}-linux-aarch64.tar.xz"
+bin = ["fish"]
+
+[[artifact]]
+match = { os = "linux", arch = "amd64" }
+url = "https://github.com/fish-shell/fish-shell/releases/download/{{tag}}/fish-{{version}}-linux-x86_64.tar.xz"
+bin = ["fish"]

@@ -1,0 +1,34 @@
+[package]
+name = "bat"
+description = "A cat clone with syntax highlighting and git integration"
+homepage = "https://github.com/sharkdp/bat"
+license = "MIT OR Apache-2.0"
+
+[version]
+from = "github-releases"
+repo = "sharkdp/bat"
+strip_prefix = "v"
+
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://github.com/sharkdp/bat/releases/download/{{tag}}/bat-{{tag}}-aarch64-apple-darwin.tar.gz"
+strip = 1
+bin = ["bat"]
+man = ["bat.1"]
+completions = { fish = "autocomplete/bat.fish", zsh = "autocomplete/bat.zsh", bash = "autocomplete/bat.bash" }
+
+[[artifact]]
+match = { os = "linux", arch = "arm64" }
+url = "https://github.com/sharkdp/bat/releases/download/{{tag}}/bat-{{tag}}-aarch64-unknown-linux-musl.tar.gz"
+strip = 1
+bin = ["bat"]
+man = ["bat.1"]
+completions = { fish = "autocomplete/bat.fish", zsh = "autocomplete/bat.zsh", bash = "autocomplete/bat.bash" }
+
+[[artifact]]
+match = { os = "linux", arch = "amd64" }
+url = "https://github.com/sharkdp/bat/releases/download/{{tag}}/bat-{{tag}}-x86_64-unknown-linux-musl.tar.gz"
+strip = 1
+bin = ["bat"]
+man = ["bat.1"]
+completions = { fish = "autocomplete/bat.fish", zsh = "autocomplete/bat.zsh", bash = "autocomplete/bat.bash" }

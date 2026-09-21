@@ -1,0 +1,81 @@
+# Every package, font and app, moved over from nix-system-config-v2.
+# A ref that starts with ../packages/ is a manifest in this repo. A github: ref
+# with no #name has no manifest, oku infers one from the newest release.
+# What could not move is in packages-todo.md.
+
+[packages]
+
+# cli
+ast-grep = "github:ast-grep/ast-grep"
+bat = "../packages/bat.toml"
+direnv = "github:direnv/direnv"
+fd = "../packages/fd.toml"
+fzf = "github:junegunn/fzf"
+jq = "github:jqlang/jq"
+mkcert = "github:FiloSottile/mkcert"
+rip2 = "github:MilesCranmer/rip2" # the program is rip
+ripgrep = "../packages/ripgrep.toml"
+stripe-cli = "github:stripe/stripe-cli" # the program is stripe
+
+# shell
+atuin = { ref = "../packages/atuin.toml", service = true }
+fish = "../packages/fish.toml"
+sesh = "github:joshmedeski/sesh"
+starship = "github:starship/starship"
+tmux = "../packages/tmux.toml"
+zoxide = "../packages/zoxide.toml"
+
+# git
+difftastic = "github:Wilfred/difftastic" # the program is difft
+gh = "../packages/gh.toml"
+git-lfs = "github:git-lfs/git-lfs"
+lazygit = "github:jesseduffield/lazygit"
+
+# editors and language servers
+# The npm: packages run on the node that config.toml names under [runtimes].
+nvim = "../packages/nvim.toml"
+tree-sitter = "github:tree-sitter/tree-sitter"
+marksman = "../packages/marksman.toml"
+gh-actions-language-server = "../packages/gh-action-language-server.toml"
+bash-language-server = "npm:bash-language-server"
+fish-lsp = "npm:fish-lsp"
+prettierd = "npm:@fsouza/prettierd"
+vscode-langservers-extracted = "npm:vscode-langservers-extracted"
+yaml-language-server = "npm:yaml-language-server"
+
+# media tools for uts
+ffmpeg = "../packages/ffmpeg.toml"
+ffprobe = "../packages/ffprobe.toml"
+libwebp = "../packages/libwebp.toml" # cwebp and dwebp
+
+# security
+age = "../packages/age.toml"
+sops = "github:getsops/sops"
+
+# terminal
+ghostty = { ref = "../packages/ghostty.toml", when = { os = "darwin" } }
+
+# coding agents
+claude-code = "../packages/claude-code.toml"
+freebuff = "../packages/freebuff.toml"
+opencode = "../packages/opencode.toml"
+
+# macos apps
+affinity = { ref = "../packages/affinity.toml", when = { os = "darwin" } }
+kanata = { ref = "../packages/kanata.toml", when = { os = "darwin" } }
+skhd = { ref = "../packages/skhd.toml", service = true, when = { os = "darwin" } }
+utm = { ref = "../packages/utm.toml", when = { os = "darwin" } }
+virtualbuddy = { ref = "../packages/virtualbuddy.toml", when = { os = "darwin" } }
+
+# messaging
+# Discord and WhatsApp update themselves, see packages-todo.md.
+
+# fonts
+jetbrains-mono-nerd-font = "../packages/jetbrains-mono-nerd-font.toml"
+poppins = "../packages/poppins.toml"
+symbols-nerd-font = "../packages/symbols-nerd-font.toml"
+
+# my own tools
+mimi = { ref = "../packages/mimi.toml", service = true, when = { os = "darwin" } }
+neru = { ref = "../packages/neru.toml", service = true, when = { os = "darwin" } }
+uts = "github:y3owk1n/uts"

@@ -1,0 +1,28 @@
+[package]
+name = "brotli"
+description = "Generic-purpose lossless compressor from Google"
+homepage = "https://github.com/google/brotli"
+license = "MIT"
+
+# The source is a git tag, which needs no sha256, so oku follows new releases.
+[version]
+from = "github-releases"
+repo = "google/brotli"
+strip_prefix = "v"
+
+# Upstream builds with cmake only.
+[build]
+needs = ["cc", "make", "git"]
+source = { git = "https://github.com/google/brotli", tag = "{{tag}}" }
+deps = ["./cmake.toml"]
+
+# The absolute install name dir lets the brotli program find its own libraries
+# in the store.
+[[build.step]]
+run = """
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX={{prefix}} \
+  -DCMAKE_INSTALL_NAME_DIR={{prefix}}/lib -DBUILD_TESTING=OFF
+cmake --build build -j{{jobs}}
+cmake --install build
+"""
+shell = "sh"

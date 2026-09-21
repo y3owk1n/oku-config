@@ -1,0 +1,19 @@
+[package]
+name = "xz"
+description = "General-purpose data compression with a high compression ratio"
+homepage = "https://tukaani.org/xz/"
+license = "0BSD AND GPL-2.0-or-later"
+
+# The release archive holds the configure script, a git tag does not.
+[version]
+from = "github-releases"
+repo = "tukaani-project/xz"
+strip_prefix = "v"
+
+[build]
+needs = ["cc", "make"]
+source = { url = "https://github.com/tukaani-project/xz/releases/download/{{tag}}/xz-{{version}}.tar.gz", strip = 1 }
+
+[[build.step]]
+run = "./configure --prefix={{prefix}} --disable-silent-rules --disable-nls && make -j{{jobs}} && make install"
+shell = "sh"

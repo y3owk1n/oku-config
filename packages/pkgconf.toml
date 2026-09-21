@@ -1,0 +1,28 @@
+[package]
+name = "pkgconf"
+description = "Finds the compiler and linker flags of a library, with a pkg-config link"
+homepage = "https://github.com/pkgconf/pkgconf"
+license = "ISC"
+
+# The release archive holds the configure script, a git tag does not. The
+# version and the sha256 are fixed. To take a newer release, change both.
+[version]
+value = "3.0.7"
+
+[build]
+needs = ["cc", "make"]
+source = { url = "https://distfiles.ariadne.space/pkgconf/pkgconf-{{version}}.tar.xz", sha256 = "c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a", strip = 1 }
+
+# Configure scripts ask for the name pkg-config, so the link gives it to them.
+# The search path comes from PKG_CONFIG_PATH, which oku sets for every build
+# dep. On macOS oku adds the .pc files of the system libraries there too, such
+# as zlib and libxml-2.0, because macOS ships none.
+[[build.step]]
+run = """
+./configure --prefix={{prefix}} --disable-silent-rules --with-pkg-config-dir={{prefix}}/lib/pkgconfig \
+  --with-system-libdir=/usr/lib --with-system-includedir=/usr/include
+make -j{{jobs}}
+make install
+ln -s pkgconf {{prefix}}/bin/pkg-config
+"""
+shell = "sh"

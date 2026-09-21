@@ -1,0 +1,29 @@
+[package]
+name = "age"
+description = "A simple, modern and secure file encryption tool"
+homepage = "https://github.com/FiloSottile/age"
+license = "BSD-3-Clause"
+
+[version]
+from = "github-releases"
+repo = "FiloSottile/age"
+strip_prefix = "v"
+
+# Upstream publishes no checksum file, so oku pins the first download.
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://github.com/FiloSottile/age/releases/download/{{tag}}/age-{{tag}}-darwin-arm64.tar.gz"
+strip = 1
+bin = ["age", "age-keygen", "age-inspect", "age-plugin-batchpass"]
+
+[[artifact]]
+match = { os = "linux", arch = "arm64" }
+url = "https://github.com/FiloSottile/age/releases/download/{{tag}}/age-{{tag}}-linux-arm64.tar.gz"
+strip = 1
+bin = ["age", "age-keygen", "age-inspect", "age-plugin-batchpass"]
+
+[[artifact]]
+match = { os = "linux", arch = "amd64" }
+url = "https://github.com/FiloSottile/age/releases/download/{{tag}}/age-{{tag}}-linux-amd64.tar.gz"
+strip = 1
+bin = ["age", "age-keygen", "age-inspect", "age-plugin-batchpass"]

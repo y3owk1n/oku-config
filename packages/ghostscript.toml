@@ -1,0 +1,22 @@
+[package]
+name = "ghostscript"
+description = "Interpreter for PostScript and PDF"
+homepage = "https://www.ghostscript.com"
+license = "AGPL-3.0-or-later"
+
+# The release tag is the version without its dots, such as gs10080, which no
+# version source can turn into 10.08.0, so the version and the sha256 are
+# fixed. To take a newer release, change both, and the tag in the url.
+[version]
+value = "10.08.0"
+
+# The archive holds freetype, jpeg, libpng, zlib, lcms2, openjpeg, jbig2dec and
+# tiff, and the build uses those copies, so gs needs no other package. The
+# fonts are compiled into the program.
+[build]
+needs = ["cc", "make"]
+source = { url = "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10080/ghostscript-{{version}}.tar.xz", sha256 = "c20492bc8ebb96c87fa2e52a0926e1cda8cde95d66145e018ac713fed5da38cf", strip = 1 }
+
+[[build.step]]
+run = "./configure --prefix={{prefix}} --without-x --disable-cups --disable-gtk --without-libidn --without-tesseract --without-libpaper && make -j{{jobs}} && make install"
+shell = "sh"

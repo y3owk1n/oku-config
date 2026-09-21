@@ -1,0 +1,25 @@
+[package]
+name = "zstd"
+description = "Zstandard, a fast real-time compression algorithm"
+homepage = "https://facebook.github.io/zstd/"
+license = "BSD-3-Clause OR GPL-2.0-only"
+
+# The source is a git tag, which needs no sha256, so oku follows new releases.
+[version]
+from = "github-releases"
+repo = "facebook/zstd"
+strip_prefix = "v"
+
+# The Makefile turns lz4 support on when it finds the header, and zlib comes
+# from the system.
+[build]
+needs = ["cc", "make", "git"]
+source = { git = "https://github.com/facebook/zstd", tag = "{{tag}}" }
+deps = ["./lz4.toml"]
+
+[runtime]
+deps = ["./lz4.toml"]
+
+[[build.step]]
+run = "make -j{{jobs}} PREFIX={{prefix}} && make install PREFIX={{prefix}}"
+shell = "sh"

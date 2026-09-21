@@ -1,0 +1,44 @@
+[package]
+name = "imagemagick"
+description = "Converts, resizes and edits images in many formats"
+homepage = "https://imagemagick.org"
+license = "ImageMagick"
+
+# The repo holds its configure script, so the source can be a git tag, which
+# needs no sha256, and `oku update` follows upstream. Upstream counts patch
+# releases after a dash, as in 7.1.2-31.
+[version]
+from = "github-releases"
+repo = "ImageMagick/ImageMagick"
+
+[build]
+needs = ["cc", "make", "git"]
+source = { git = "https://github.com/ImageMagick/ImageMagick", tag = "{{tag}}" }
+deps = ["./pkgconf.toml", "./jpeg-turbo.toml", "./libpng.toml", "./libtiff.toml", "./libwebp-lib.toml", "./freetype.toml", "./xz.toml"]
+
+[runtime]
+deps = ["./jpeg-turbo.toml", "./libpng.toml", "./libtiff.toml", "./libwebp-lib.toml", "./freetype.toml", "./xz.toml"]
+
+# The coders are compiled into one static MagickCore with no loadable modules,
+# so magick needs nothing but the delegate libraries above. zlib, bzip2 and
+# libxml2 come from the system. configure finds them, libpng, libtiff and
+# freetype through pkg-config alone, and oku provides the .pc files of the
+# system libraries on macOS. libxml2 gives the built-in SVG coder.
+# HEIC is left out, because libheif needs a video codec stack. Apple clang has
+# no OpenMP.
+# A git clone gives every file the time of the clone, so make may believe that
+# configure.ac is newer than aclocal.m4 and call the autotools. Naming `true`
+# for each of them keeps the files the repo holds.
+[[build.step]]
+run = """
+./configure --prefix={{prefix}} --disable-silent-rules --disable-dependency-tracking \
+  --disable-shared --enable-static --without-modules --disable-openmp --disable-opencl --disable-docs \
+  --with-jpeg --with-png --with-tiff --with-webp --with-freetype --with-lzma --with-zlib --with-bzlib \
+  --without-x --without-heic --without-jxl --without-openexr --without-gvc --without-rsvg --without-pango \
+  --without-perl --with-xml --without-magick-plus-plus --without-fontconfig --without-lcms --without-openjp2 \
+  --without-raw --without-raqm --without-djvu --without-fftw --without-wmf --without-lqr --without-zstd \
+  --without-zip --without-jbig --without-dps --without-flif --without-fpx --without-gslib --without-uhdr
+make -j{{jobs}} ACLOCAL=true AUTOCONF=true AUTOMAKE=true AUTOHEADER=true MAKEINFO=true
+make install ACLOCAL=true AUTOCONF=true AUTOMAKE=true AUTOHEADER=true MAKEINFO=true
+"""
+shell = "sh"

@@ -1,0 +1,28 @@
+[package]
+name = "eza"
+description = "A modern replacement for ls"
+homepage = "https://github.com/eza-community/eza"
+license = "EUPL-1.2"
+
+[version]
+from = "github-releases"
+repo = "eza-community/eza"
+strip_prefix = "v"
+
+# vendored-libgit2 makes libgit2-sys compile its bundled libgit2 with cc alone,
+# so the build needs no system libgit2, no cmake and no pkg-config. The man
+# pages are markdown that only pandoc can convert, so they are left out.
+[build]
+needs = ["cc", "git"]
+deps = ["./rust.toml"]
+source = { git = "https://github.com/eza-community/eza", tag = "{{tag}}" }
+
+[[build.step]]
+vendor = "cargo"
+
+[[build.step]]
+run = "cargo build --release --offline --locked --features vendored-libgit2 -j{{jobs}}"
+shell = "sh"
+
+[[build.step]]
+install = { bin = ["target/release/eza"], completions = { fish = "completions/fish/eza.fish", zsh = "completions/zsh/_eza", bash = "completions/bash/eza" } }

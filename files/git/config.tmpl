@@ -1,0 +1,124 @@
+[advise]
+	addEmptyPathSpec = false
+	pushNonFastForward = false
+	statusHints = false
+
+[branch]
+	sort = "-committerdate"
+
+[checkout]
+	defaultRemote = "origin"
+
+[color]
+	branch = "auto"
+	diff = "auto"
+	status = "auto"
+	ui = true
+
+[column]
+	ui = "auto"
+
+[commit]
+	gpgSign = true
+	verbose = true
+
+[core]
+	autocrlf = "input"
+	commitgraph = true
+	compression = 9
+	preloadindex = true
+	whitespace = "error"
+
+[credential "https://gist.github.com"]
+	helper = ""
+	helper = "{{data}}/oku/profiles/global/current/bin/gh auth git-credential"
+
+[credential "https://github.com"]
+	helper = ""
+	helper = "{{data}}/oku/profiles/global/current/bin/gh auth git-credential"
+
+[diff]
+	context = 3
+	external = "{{data}}/oku/profiles/global/current/bin/difft '--background=dark' '--color=always'"
+	innerHunkContext = 10
+	mnemonicprefix = true
+	renames = "copies"
+	tool = "difftastic"
+
+[difftool "difftastic"]
+	cmd = "{{data}}/oku/profiles/global/current/bin/difft '--background=dark' '--color=always' $LOCAL $REMOTE"
+
+[fetch]
+	writeCommitGraph = true
+
+[filter "lfs"]
+	clean = "{{data}}/oku/profiles/global/current/bin/git-lfs clean -- %f"
+	process = "{{data}}/oku/profiles/global/current/bin/git-lfs filter-process"
+	required = true
+	smudge = "{{data}}/oku/profiles/global/current/bin/git-lfs smudge -- %f"
+
+[gc]
+	writeCommitGraph = true
+
+[github]
+	user = "{{githubuser}}"
+
+[gpg]
+	format = "ssh"
+
+[gpg "ssh"]
+	allowedSignersFile = "{{home}}/.ssh/allowed_signers"
+
+[http]
+	sslVerify = true
+
+[init]
+	defaultBranch = "main"
+
+[interactive]
+	singlekey = true
+
+[log]
+	abbrevCommit = true
+	date = "iso"
+
+[merge]
+	conflictstyle = "diff3"
+
+[protocol]
+	version = "2"
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+	default = "current"
+	followTags = true
+
+[rebase]
+	autoStash = true
+	missingCommitsCheck = "warn"
+	stat = true
+	updateRefs = true
+
+[status]
+	branch = true
+	showStash = true
+	showUntrackedFiles = "all"
+
+[tag]
+	gpgSign = true
+
+[url "git@github.com:"]
+	insteadOf = "https://github.com/"
+
+[user]
+	email = "{{email}}"
+	name = "{{name}}"
+	signingKey = "{{home}}/.ssh/id_ed25519"
+
+# macOS only, placed by a second entry with when.os = "darwin".
+# git skips an include whose file is missing.
+[include]
+	path = "{{config}}/git/config-darwin"

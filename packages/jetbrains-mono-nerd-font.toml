@@ -1,0 +1,15 @@
+[package]
+name = "jetbrains-mono-nerd-font"
+description = "JetBrains Mono patched with Nerd Fonts glyphs"
+homepage = "https://www.nerdfonts.com"
+license = "OFL-1.1"
+
+[version]
+from = "github-releases"
+repo = "ryanoasis/nerd-fonts"
+strip_prefix = "v"
+
+[[artifact]]
+url = "https://github.com/ryanoasis/nerd-fonts/releases/download/{{tag}}/JetBrainsMono.zip"
+sha256_url = "https://github.com/ryanoasis/nerd-fonts/releases/download/{{tag}}/SHA-256.txt"
+font = ["JetBrainsMono*.ttf"]

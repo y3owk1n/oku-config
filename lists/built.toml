@@ -1,0 +1,26 @@
+# Tools that oku builds from source, each proven on macOS arm64 with the Xcode
+# command line tools. The libraries they use (cmake, lz4, libpng, jpeg-turbo)
+# have manifests in ../packages/ and are deps only, so they are not listed.
+# The builds were tested on macOS only. lua.toml holds a Linux step that was
+# never run, and the rest use the same steps on every system, untested on Linux.
+
+[packages]
+
+# images
+gifsicle = "../packages/gifsicle.toml"
+optipng = "../packages/optipng.toml"
+jpegoptim = "../packages/jpegoptim.toml"
+ghostscript = "../packages/ghostscript.toml" # the program is gs
+
+# compression
+brotli = "../packages/brotli.toml"
+xz = "../packages/xz.toml"
+zstd = "../packages/zstd.toml" # brings lz4 as a dep
+
+# lua 5.1 for Neovim plugins
+lua = "../packages/lua.toml"
+luarocks = "../packages/luarocks.toml"
+
+# cli
+coreutils = "../packages/coreutils.toml" # every program has a g prefix, such as gls
+btop = "../packages/btop.toml"

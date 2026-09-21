@@ -1,0 +1,316 @@
+# macOS settings of the user, moved from nix-darwin (modules/darwin/defaults.nix).
+# oku writes these through /usr/bin/defaults in user scope. Nothing here needs root.
+# What needs root is in bootstrap/macos.sh, and lists/macos-notes.md says what went where.
+#
+# The type comes from the TOML value. A float setting keeps its decimal point
+# even when the value is whole (0.0, 3.0), otherwise macOS gets an integer.
+
+# Clock in the menu bar. ShowDate: 0 when space allows, 1 always, 2 never.
+[defaults."com.apple.menuextra.clock"]
+FlashDateSeparators = false
+Show24Hour = false
+ShowAMPM = true
+ShowDate = 0
+ShowDayOfMonth = false
+ShowDayOfWeek = false
+ShowSeconds = false
+
+# Dock. oku restarts the Dock when a key here changed.
+# Floats: autohide-delay, autohide-time-modifier, expose-animation-duration.
+[defaults."com.apple.dock"]
+autohide = true
+autohide-delay = 0.0
+autohide-time-modifier = 0.0
+expose-animation-duration = 0.1
+expose-group-apps = true
+launchanim = false
+magnification = false
+mru-spaces = false
+orientation = "left"
+show-recents = false
+show-process-indicators = true
+showAppExposeGestureEnabled = true
+showDesktopGestureEnabled = true
+showLaunchpadGestureEnabled = true
+showMissionControlGestureEnabled = true
+showhidden = true
+static-only = true
+tilesize = 48
+# Hot corners. Top left: 13 is Lock Screen, with modifier 131072 (Shift).
+# Bottom right: 1 is no action.
+wvous-tl-corner = 13
+wvous-tl-modifier = 131072
+wvous-br-corner = 1
+# Launchpad animation times. Whole numbers in the Nix config, so integers.
+springboard-show-duration = 0
+springboard-hide-duration = 0
+springboard-page-duration = 0
+
+# Finder. Restart Finder to see a change (killall Finder).
+# NewWindowTarget "PfLo" is what nix-darwin writes for "Other", it uses NewWindowTargetPath.
+[defaults."com.apple.finder"]
+AppleShowAllExtensions = true
+AppleShowAllFiles = true
+CreateDesktop = false
+FXDefaultSearchScope = "SCcf"
+FXEnableExtensionChangeWarning = false
+FXPreferredViewStyle = "Nlsv"
+NewWindowTarget = "PfLo"
+NewWindowTargetPath = "file:///Users/kylewong/Downloads"
+QuitMenuItem = true
+ShowExternalHardDrivesOnDesktop = false
+ShowHardDrivesOnDesktop = false
+ShowMountedServersOnDesktop = false
+ShowPathbar = true
+ShowRemovableMediaOnDesktop = false
+ShowStatusBar = true
+_FXShowPosixPathInTitle = true
+_FXSortFoldersFirst = true
+
+# Trackpad. nix-darwin writes the same keys to the built-in and the Bluetooth domain.
+# ActuationStrength 0 is silent clicking.
+[defaults."com.apple.AppleMultitouchTrackpad"]
+ActuationStrength = 0
+Clicking = true
+Dragging = true
+TrackpadFourFingerHorizSwipeGesture = 2
+TrackpadFourFingerPinchGesture = 2
+TrackpadFourFingerVertSwipeGesture = 2
+TrackpadPinch = true
+TrackpadRightClick = true
+TrackpadThreeFingerDrag = true
+TrackpadThreeFingerHorizSwipeGesture = 0
+TrackpadThreeFingerTapGesture = 2
+TrackpadThreeFingerVertSwipeGesture = 0
+TrackpadTwoFingerFromRightEdgeSwipeGesture = 3
+
+[defaults."com.apple.driver.AppleBluetoothMultitouch.trackpad"]
+ActuationStrength = 0
+Clicking = true
+Dragging = true
+TrackpadFourFingerHorizSwipeGesture = 2
+TrackpadFourFingerPinchGesture = 2
+TrackpadFourFingerVertSwipeGesture = 2
+TrackpadPinch = true
+TrackpadRightClick = true
+TrackpadThreeFingerDrag = true
+TrackpadThreeFingerHorizSwipeGesture = 0
+TrackpadThreeFingerTapGesture = 2
+TrackpadThreeFingerVertSwipeGesture = 0
+TrackpadTwoFingerFromRightEdgeSwipeGesture = 3
+
+# Magic Mouse. The value is a string on macOS too.
+# The second domain is the one nix-darwin writes. See macos-notes.md about the
+# domain that macOS itself uses for a Bluetooth mouse.
+[defaults."com.apple.AppleMultitouchMouse"]
+MouseButtonMode = "TwoButton"
+
+[defaults."com.apple.driver.AppleMultitouchMouse.mouse"]
+MouseButtonMode = "TwoButton"
+
+# Launch Services. true keeps the quarantine question for downloaded apps.
+[defaults."com.apple.LaunchServices"]
+LSQuarantine = true
+
+# Spaces. false means the displays have separate Spaces. Needs a logout.
+[defaults."com.apple.spaces"]
+spans-displays = false
+
+# Screenshots.
+[defaults."com.apple.screencapture"]
+disable-shadow = true
+include-date = true
+location = "~/Downloads"
+type = "jpg"
+
+# Screen saver. See macos-notes.md, current macOS ignores these two keys.
+[defaults."com.apple.screensaver"]
+askForPassword = true
+askForPasswordDelay = 0
+
+# Window Manager (Stage Manager, tiling, desktop).
+[defaults."com.apple.WindowManager"]
+EnableStandardClickToShowDesktop = false
+EnableTiledWindowMargins = true
+EnableTilingByEdgeDrag = true
+EnableTilingOptionAccelerator = true
+EnableTopTilingByEdgeDrag = true
+GloballyEnabled = false
+HideDesktop = true
+StageManagerHideWidgets = true
+StandardHideDesktopIcons = true
+StandardHideWidgets = true
+
+# Control Center. macOS keeps this setting per Mac, not per user, so it goes in
+# the table that `defaults -currentHost` writes. It is in the home directory, no
+# root.
+[defaults-currenthost."com.apple.controlcenter"]
+BatteryShowPercentage = true
+
+# Global domain, the options nix-darwin knows.
+# Floats: NSWindowResizeTime, com.apple.sound.beep.volume, com.apple.trackpad.scaling.
+[defaults.NSGlobalDomain]
+AppleEnableSwipeNavigateWithScrolls = true
+AppleEnableMouseSwipeNavigateWithScrolls = true
+AppleFontSmoothing = 2
+AppleInterfaceStyle = "Dark"
+AppleInterfaceStyleSwitchesAutomatically = false
+AppleKeyboardUIMode = 3
+AppleMeasurementUnits = "Centimeters"
+ApplePressAndHoldEnabled = false
+AppleShowAllExtensions = true
+AppleShowAllFiles = true
+AppleShowScrollBars = "Automatic"
+AppleSpacesSwitchOnActivate = true
+AppleTemperatureUnit = "Celsius"
+InitialKeyRepeat = 10
+KeyRepeat = 1
+NSAutomaticCapitalizationEnabled = false
+NSAutomaticDashSubstitutionEnabled = false
+NSAutomaticInlinePredictionEnabled = false
+NSAutomaticPeriodSubstitutionEnabled = false
+NSAutomaticQuoteSubstitutionEnabled = false
+NSAutomaticSpellingCorrectionEnabled = false
+NSAutomaticWindowAnimationsEnabled = true
+NSDocumentSaveNewDocumentsToCloud = false
+NSNavPanelExpandedStateForSaveMode = true
+NSNavPanelExpandedStateForSaveMode2 = true
+NSScrollAnimationEnabled = true
+NSWindowResizeTime = 0.001
+PMPrintingExpandedStateForPrint = true
+PMPrintingExpandedStateForPrint2 = true
+"com.apple.keyboard.fnState" = false
+"com.apple.mouse.tapBehavior" = 1
+"com.apple.sound.beep.feedback" = 1
+"com.apple.sound.beep.volume" = 0.606531
+"com.apple.springing.enabled" = false
+"com.apple.swipescrolldirection" = true
+"com.apple.trackpad.enableSecondaryClick" = true
+"com.apple.trackpad.scaling" = 3.0
+# From CustomUserPreferences.NSGlobalDomain.
+WebKitDeveloperExtras = true
+AppleMiniaturizeOnDoubleClick = false
+NSAutomaticTextCompletionEnabled = true
+"com.apple.sound.beep.flash" = false
+NSTextMovementDefaultKeyTimeout = 0.03
+NSToolbarTitleViewRolloverDelay = 0
+
+# The same global domain under its file name, as in the Nix config.
+# com.apple.mouse.scaling is a float.
+[defaults.".GlobalPreferences"]
+"com.apple.mouse.scaling" = 9.0
+AppleLanguages = ["en-SG", "ms-MY", "zh-Hant-MY"]
+
+# No .DS_Store files on network and USB volumes.
+[defaults."com.apple.desktopservices"]
+DSDontWriteNetworkStores = true
+DSDontWriteUSBStores = true
+
+# Helium browser, menu key equivalents. @ is Command, ^ is Control.
+[defaults."net.imput.helium".NSUserKeyEquivalents]
+"Pin Tab" = "@d"
+"Select Next Tab" = "^l"
+"Select Previous Tab" = "^h"
+
+# Safari. Read the Safari caveat in macos-notes.md first: the terminal that runs
+# oku needs Full Disk Access, because these settings live in Safari's container.
+# The Nix config wrote the switches as integers 1 and 0, and so does this list.
+# Two keys are booleans on the live machine, because Safari stores them so:
+# IncludeDevelopMenu and ShowSidebarInNewWindows.
+[defaults."com.apple.Safari"]
+AllowJavaScriptFromAppleEvents = 0
+AlwaysRestoreSessionAtLaunch = 1
+AutoFillCreditCardData = 0
+AutoFillMiscellaneousForms = 0
+AutoOpenSafeDownloads = 0
+EnableEnhancedPrivacyInRegularBrowsing = 1
+EnableNarrowTabs = 1
+ExcludePrivateWindowWhenRestoringSessionAtLaunch = 1
+ExtensionsEnabled = 1
+HideHighlightsEmptyItemViewPreferenceKey = 1
+HideStartPageFrecentsEmptyItemView = 1
+HomePage = ""
+IncludeDevelopMenu = true
+NewTabBehavior = 1
+NewTabPageSetByUserGesture = 1
+NewWindowBehavior = 1
+OpenPrivateWindowWhenNotRestoringSessionAtLaunch = 0
+PrivateBrowsingRequiresAuthentication = 1
+PrivateSearchEngineUsesNormalSearchEngineToggle = 1
+SearchProviderShortName = "DuckDuckGo"
+ShowFavoritesUnderSmartSearchField = 0
+ShowFullURLInSmartSearchField = 1
+ShowOverlayStatusBar = 0
+ShowSidebarInNewWindows = false
+ShowSidebarInTopSites = 0
+ShowStandaloneTabBar = 0
+SidebarSplitViewDividerPosition = 240
+SidebarTabGroupHeaderExpansionState = 1
+UseHTTPSOnly = 0
+SuppressSearchSuggestions = 1
+UserStyleSheetEnabled = 0
+WebKitDeveloperExtrasEnabledPreferenceKey = 1
+WebKitJavaScriptEnabled = 1
+WebKitMinimumFontSize = 9
+"WebKitPreferences.allowsPictureInPictureMediaPlayback" = 1
+"WebKitPreferences.applePayEnabled" = 1
+"WebKitPreferences.developerExtrasEnabled" = 1
+"WebKitPreferences.hiddenPageDOMTimerThrottlingAutoIncreases" = 1
+"WebKitPreferences.invisibleMediaAutoplayNotPermitted" = 1
+"WebKitPreferences.javaScriptCanOpenWindowsAutomatically" = 1
+"WebKitPreferences.javaScriptEnabled" = 1
+"WebKitPreferences.minimumFontSize" = 9
+"WebKitPreferences.needsStorageAccessFromFileURLsQuirk" = 0
+"WebKitPreferences.pushAPIEnabled" = 1
+"WebKitPreferences.shouldAllowUserInstalledFonts" = 0
+"WebKitPreferences.shouldSuppressKeyboardInputDuringProvisionalNavigation" = 1
+WebKitRespectStandardStyleKeyEquivalents = 1
+"com.apple.Safari.WebInspectorPageGroupIdentifier.WebKit2InspectorAttachedWidth" = 1098
+"com.apple.Safari.WebInspectorPageGroupIdentifier.WebKit2InspectorAttachmentSide" = 1
+
+# Safari menu key equivalents. oku owns this whole dictionary.
+# The first 8 are the remaps, the last 6 open the profile windows
+# (safariWorkspaces of the host Kyles-MacBook-Air).
+[defaults."com.apple.Safari".NSUserKeyEquivalents]
+"Go To Next Tab Group" = "^j"
+"Go To Previous Tab Group" = "^k"
+"Show Next Tab" = "^l"
+"Show Previous Tab" = "^h"
+"Move Tab to New Window" = "^\\"
+"Merge All Windows" = "^-"
+"Pin Tab" = "@d"
+"Unpin Tab" = "@d"
+"New Kyle Window" = "^1"
+"New MDA Window" = "^2"
+"New SKBA Window" = "^3"
+"New Traworld Window" = "^4"
+"New Madani TRX Window" = "^5"
+"New Wakesport Window" = "^6"
+
+# No personalised ads from Apple.
+[defaults."com.apple.AdLib"]
+allowApplePersonalizedAdvertising = false
+
+# Quit the printer app when the print jobs are done.
+[defaults."com.apple.print.PrintingPrefs"]
+"Quit When Finished" = true
+
+# Software Update, user scope, as CustomUserPreferences wrote it.
+# The copy that the system reads is set in bootstrap/macos.sh.
+[defaults."com.apple.SoftwareUpdate"]
+AutomaticCheckEnabled = true
+ScheduleFrequency = 1
+AutomaticDownload = 1
+CriticalUpdateInstall = 1
+
+# Time Machine does not ask about each new disk.
+[defaults."com.apple.TimeMachine"]
+DoNotOfferNewDisksForBackup = true
+
+# Photos and Image Capture do not open when a device is plugged in.
+[defaults."com.apple.ImageCapture"]
+disableHotPlug = true
+
+# App Store updates apps by itself. User scope copy, see bootstrap/macos.sh.
+[defaults."com.apple.commerce"]
+AutoUpdate = true

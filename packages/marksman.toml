@@ -1,0 +1,36 @@
+[package]
+name = "marksman"
+description = "Language server for Markdown"
+homepage = "https://github.com/artempyanykh/marksman"
+license = "MIT"
+
+# Upstream tags are dates, such as 2026-02-08, and it publishes no checksums.
+[version]
+from = "github-releases"
+repo = "artempyanykh/marksman"
+
+# A universal binary.
+[[artifact]]
+match = { os = "darwin" }
+url = "https://github.com/artempyanykh/marksman/releases/download/{{tag}}/marksman-macos"
+bin = ["marksman"]
+
+[[artifact]]
+match = { os = "linux", arch = "arm64", libc = "glibc" }
+url = "https://github.com/artempyanykh/marksman/releases/download/{{tag}}/marksman-linux-arm64"
+bin = ["marksman"]
+
+[[artifact]]
+match = { os = "linux", arch = "arm64" }
+url = "https://github.com/artempyanykh/marksman/releases/download/{{tag}}/marksman-linux-musl-arm64"
+bin = ["marksman"]
+
+[[artifact]]
+match = { os = "linux", arch = "amd64", libc = "glibc" }
+url = "https://github.com/artempyanykh/marksman/releases/download/{{tag}}/marksman-linux-x64"
+bin = ["marksman"]
+
+[[artifact]]
+match = { os = "linux", arch = "amd64" }
+url = "https://github.com/artempyanykh/marksman/releases/download/{{tag}}/marksman-linux-musl-x64"
+bin = ["marksman"]

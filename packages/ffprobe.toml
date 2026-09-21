@@ -1,0 +1,28 @@
+[package]
+name = "ffprobe"
+description = "Static ffprobe from the ffmpeg-static project"
+homepage = "https://github.com/eugeneware/ffmpeg-static"
+license = "GPL-3.0-or-later"
+
+# FFmpeg itself publishes source only. These are the static builds that the
+# ffmpeg-static npm package downloads. They trail upstream, and the project
+# publishes no checksum file.
+[version]
+from = "github-releases"
+repo = "eugeneware/ffmpeg-static"
+strip_prefix = "b"
+
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://github.com/eugeneware/ffmpeg-static/releases/download/{{tag}}/ffprobe-darwin-arm64.gz"
+bin = ["ffprobe"]
+
+[[artifact]]
+match = { os = "linux", arch = "arm64" }
+url = "https://github.com/eugeneware/ffmpeg-static/releases/download/{{tag}}/ffprobe-linux-arm64.gz"
+bin = ["ffprobe"]
+
+[[artifact]]
+match = { os = "linux", arch = "amd64" }
+url = "https://github.com/eugeneware/ffmpeg-static/releases/download/{{tag}}/ffprobe-linux-x64.gz"
+bin = ["ffprobe"]

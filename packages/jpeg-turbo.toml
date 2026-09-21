@@ -1,0 +1,27 @@
+[package]
+name = "jpeg-turbo"
+description = "JPEG codec library with cjpeg, djpeg and jpegtran"
+homepage = "https://libjpeg-turbo.org"
+license = "IJG AND Zlib AND BSD-3-Clause"
+
+# The source is a git tag, which needs no sha256, so oku follows new releases.
+[version]
+from = "github-releases"
+repo = "libjpeg-turbo/libjpeg-turbo"
+
+# arm64 needs no assembler. On x86 the SIMD code wants nasm, and without it
+# the build turns SIMD off.
+[build]
+needs = ["cc", "make", "git"]
+source = { git = "https://github.com/libjpeg-turbo/libjpeg-turbo", tag = "{{tag}}" }
+deps = ["./cmake.toml"]
+
+[[build.step]]
+run = """
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX={{prefix}} \
+  -DCMAKE_INSTALL_LIBDIR={{prefix}}/lib -DCMAKE_INSTALL_NAME_DIR={{prefix}}/lib \
+  -DWITH_JPEG8=1 -DENABLE_STATIC=OFF
+cmake --build build -j{{jobs}}
+cmake --install build
+"""
+shell = "sh"

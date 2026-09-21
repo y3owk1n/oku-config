@@ -1,0 +1,241 @@
+# ============================================================================
+# Theme
+# ============================================================================
+[theme.light]
+surface = "#{{theme.base00}}"
+accent = "#{{theme.base04}}"
+accent_alt = "#{{theme.base04}}"
+on_accent_alt = "#{{theme.base07}}"
+text = "#{{theme.base05}}"
+
+[theme.dark]
+surface = "#{{theme.base00}}"
+accent = "#{{theme.base04}}"
+accent_alt = "#{{theme.base04}}"
+on_accent_alt = "#{{theme.base07}}"
+text = "#{{theme.base05}}"
+
+# ============================================================================
+# General Settings
+# ============================================================================
+[general]
+hide_overlay_in_screen_share = true
+passthrough_unbounded_keys = true
+exec_shell = "/bin/dash"
+exec_shell_args = ["-lc"]
+
+# ============================================================================
+# Hotkeys
+# ============================================================================
+[hotkeys]
+"Ctrl+F" = "recursive_grid --cursor-selection-mode hold --capture-scope window,screen"
+# "Ctrl+F" = "bisect --cursor-selection-mode hold --capture-scope window,screen"
+"Ctrl+S" = "scroll"
+
+# ============================================================================
+# Hints
+# ============================================================================
+[hints]
+enabled = false
+
+# ============================================================================
+# Grid Navigation
+# ============================================================================
+[grid]
+enabled = false
+
+# ============================================================================
+# Recursive Grid Navigation
+# ============================================================================
+[recursive_grid]
+enabled = true
+grid_cols = 3
+grid_rows = 3
+keys = "gcrhtnmwv"
+min_size_width = 1
+min_size_height = 1
+
+[recursive_grid.animation]
+enabled = true
+
+[recursive_grid.ui]
+font_family = "JetBrainsMonoNLNFP-Bold"
+line_width = 1
+# highlight_color = "#00000000"
+text_color = "#00000000"
+
+[recursive_grid.hotkeys]
+# disable defaults
+# "space" = "__disabled__"
+# "shift+l" = "__disabled__"
+"Shift+M" = "__disabled__"
+"Shift+I" = "__disabled__"
+"Shift+U" = "__disabled__"
+"Shift+R" = "__disabled__"
+"`" = "__disabled__"
+
+"Tab" = "toggle-cursor-follow-selection"
+
+"," = "action move_mouse --window"
+"." = "action reset"
+"p" = "action left_click --toggle"
+"i" = "action move_mouse"
+"u" = "action left_click"
+"e" = "action middle_click"
+"o" = "action right_click"
+"s" = "action feed ctrl+s"
+"f" = "action feed ctrl+f"
+
+# "Ctrl+F" = "run 'idle' 'recursive_grid --cursor-selection-mode hold --zoom-to-depth 2'"
+"Ctrl+C" = "idle"
+"Ctrl+J" = "action scroll_down"
+"Ctrl+K" = "action scroll_up"
+"Ctrl+H" = "action scroll_left"
+"Ctrl+L" = "action scroll_right"
+"Ctrl+S" = "macro move_and_scroll"
+
+"Shift+H" = "action move_cell --direction left"
+"Shift+L" = "action move_cell --direction right"
+"Shift+K" = "action move_cell --direction up"
+"Shift+J" = "action move_cell --direction down"
+
+# ============================================================================
+# Bisect Navigation
+# ============================================================================
+[bisect]
+enabled = false
+
+[bisect.hotkeys]
+# "Shift+M" = "__disabled__"
+"Shift+I" = "__disabled__"
+"Shift+U" = "__disabled__"
+# "Shift+R" = "__disabled__"
+"Shift+L" = "__disabled__"
+"`" = "__disabled__"
+"Space" = "__disabled__"
+
+"Tab" = "toggle-cursor-follow-selection"
+
+"," = "action move_mouse --window"
+"." = "action reset"
+"p" = "action left_click --toggle"
+"i" = "action move_mouse"
+"u" = "action left_click"
+"e" = "action middle_click"
+"o" = "action right_click"
+"s" = "action feed ctrl+s"
+"f" = "action feed ctrl+f"
+
+"j" = "__disabled__"
+"k" = "__disabled__"
+"l" = "__disabled__"
+"y" = "__disabled__"
+"b" = "__disabled__"
+
+"h" = "action bisect --direction=left"
+"w" = "action bisect --direction=down"
+"c" = "action bisect --direction=up"
+"n" = "action bisect --direction=right"
+"g" = "action bisect --direction=up_left"
+"r" = "action bisect --direction=up_right"
+"m" = "action bisect --direction=down_left"
+"v" = "action bisect --direction=down_right"
+
+"Shift+H" = "action bisect --direction=left --count 2"
+"Shift+W" = "action bisect --direction=down -count 2"
+"Shift+C" = "action bisect --direction=up --count 2"
+"Shift+N" = "action bisect --direction=right --count 2"
+"Shift+G" = "action bisect --direction=up_left --count 2"
+"Shift+R" = "action bisect --direction=up_right --count 2"
+"Shift+M" = "action bisect --direction=down_left --count 2"
+"Shift+V" = "action bisect --direction=down_right --count 2"
+
+"Ctrl+C" = "idle"
+"Ctrl+J" = "action scroll_down"
+"Ctrl+K" = "action scroll_up"
+"Ctrl+H" = "action scroll_left"
+"Ctrl+L" = "action scroll_right"
+"Ctrl+S" = "macro move_and_scroll"
+
+[bisect.ui]
+font_family = "JetBrainsMonoNLNFP-Bold"
+line_width = 1
+# highlight_color = "#00000000"
+text_color = "#00000000"
+
+# ============================================================================
+# Scroll
+# ============================================================================
+[scroll]
+scroll_step = 100
+
+[scroll.hotkeys]
+# disable defaults
+"Shift+L" = "__disabled__"
+"Shift+M" = "__disabled__"
+"Shift+I" = "__disabled__"
+"Shift+U" = "__disabled__"
+"Shift+R" = "__disabled__"
+"d" = "__disabled__"
+
+"Ctrl+C" = "idle"
+"Ctrl+D" = "action page_down"
+"Ctrl+U" = "action page_up"
+
+"," = "action move_mouse --window"
+"p" = "action left_click --toggle"
+"i" = "action move_mouse"
+"u" = "action left_click"
+"e" = "action middle_click"
+"o" = "action right_click"
+
+"f" = "action feed ctrl+f"
+
+# ============================================================================
+# Held Repeat
+# ============================================================================
+[held_repeat]
+enabled = true
+accel_enabled = true
+accel_max_multiplier = 10
+
+# ============================================================================
+# Smooth Cursor
+# ============================================================================
+[smooth_cursor]
+move_mouse_enabled = true
+steps = 30
+max_duration = 100
+
+# ============================================================================
+# Smooth Scroll
+# ============================================================================
+[smooth_scroll]
+enabled = true
+steps = 300
+max_duration = 300
+duration_per_pixel = 20.00
+
+# ============================================================================
+# Mouse Action Indicator
+# ============================================================================
+[mouse_action_indicator]
+enabled = true
+
+# ============================================================================
+# Mode Indicator
+# ============================================================================
+[mode_indicator.ui]
+font_family = "JetBrainsMonoNLNFP-Bold"
+
+# ============================================================================
+# Virtual Pointer
+# ============================================================================
+[virtual_pointer.ui]
+font_family = "JetBrainsMonoNLNFP-Bold"
+
+# ============================================================================
+# Macro
+# ============================================================================
+[macros]
+move_and_scroll = "run 'action move_mouse --selection' 'scroll'"

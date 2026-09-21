@@ -3,15 +3,39 @@
 include = []
 
 [[package]]
+name = 'gh-actions-language-server'
+ref = './packages/gh-action-language-server.toml'
+manifest_sha256 = 'be88ef1337b5fc8f6f06c87d5fcf829c242d15f9053dff8a35d351a1400e8c09'
+version = '0.3.61'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://registry.npmjs.org/@actions/languageserver/-/languageserver-0.3.61.tgz'
+sha256 = 'd152725064c64f862da5158cd630d4c67973edfb58bdabaa44054ffef03b9d03'
+
+[[package.dep]]
+name = 'node'
+ref = './packages/node.toml'
+manifest_sha256 = 'c26ac34447aa06238e39070690bf62c191fbefcc422c55c58a8083b65f0f2f8b'
+version = '22.20.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
+sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+
+[[package]]
 name = 'nvim'
 ref = './packages/nvim.toml'
 manifest_sha256 = 'b8b44381b34f1aedf7eae5625936ccf997f9a35d1cd3cab94cd7521355b58ba3'
-version = '2026.09.20-a73243f'
+version = '2026.09.20-0ea627c'
 tag = 'nightly'
-tag_commit = 'a73243faa57726df3d80963a7afe604f2bbce1be'
+tag_commit = '0ea627cfb7713dd77dab00fff1073e5e407f263e'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz'
-sha256 = '5f9cff00df52727d4a998790a527668c174f44612ab861261834d07f91a6d745'
+sha256 = '02dc20462996c957aec1a4cecac113aac6395617d3c456bf787984d783647007'

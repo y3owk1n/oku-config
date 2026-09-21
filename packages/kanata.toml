@@ -1,0 +1,18 @@
+[package]
+name = "kanata"
+description = "Software keyboard remapper"
+homepage = "https://github.com/jtroo/kanata"
+license = "LGPL-3.0-only"
+
+[version]
+from = "github-releases"
+repo = "jtroo/kanata"
+strip_prefix = "v"
+
+# kanata needs root and the Karabiner VirtualHIDDevice driver on macOS.
+# oku installs the program only, the owner starts it by hand as before.
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://github.com/jtroo/kanata/releases/download/{{tag}}/macos-binaries-arm64.zip"
+sha256_url = "https://github.com/jtroo/kanata/releases/download/{{tag}}/sha256sums"
+bin = [{ name = "kanata", run = "{{pkg}}/kanata_macos_arm64" }]

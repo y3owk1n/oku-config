@@ -1,0 +1,8 @@
+# These speed up tools that watch git repos, such as nvim-tree.
+# See https://github.com/nvim-tree/nvim-tree.lua/wiki/Troubleshooting#git-fsmonitor-daemon
+[core]
+	fsmonitor = true
+	untrackedcache = true
+
+[feature]
+	manyFiles = true

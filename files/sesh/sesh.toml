@@ -1,0 +1,61 @@
+[default_session]
+preview_command = "eza --tree --level=1 --color=always --group-directories-first -a {}"
+startup_command = "ls"
+
+[[session]]
+name = "home (~)"
+path = "~"
+
+[[session]]
+name = "start kanata"
+path = "~/nix-system-config-v2/"
+startup_command = "just kanata"
+
+[[session]]
+name = "downloads"
+path = "~/Downloads"
+
+[[session]]
+name = "dot config"
+path = "~/.config"
+
+[[session]]
+name = "nix config"
+path = "~/nix-system-config-v2"
+
+[[session]]
+name = "oku config"
+path = "~/.config/oku"
+
+[[session]]
+name = "neovim config"
+path = "~/.config/oku/files/nvim"
+
+[[session]]
+name = "sesh config"
+path = "~/.config/oku/files/sesh"
+preview_command = "bat --color=always ~/.config/oku/files/sesh/sesh.toml"
+startup_command = "nvim sesh.toml"
+
+[[session]]
+name = "ghostty config"
+path = "~/.config/oku/files/ghostty"
+preview_command = "bat --color=always ~/.config/oku/files/ghostty/config.tmpl"
+startup_command = "nvim config.tmpl"
+
+[[session]]
+name = "tmux config"
+path = "~/.config/oku/files/tmux"
+preview_command = "bat --color=always ~/.config/oku/files/tmux/tmux.conf.tmpl"
+startup_command = "nvim tmux.conf.tmpl"
+
+[[session]]
+name = "neru config"
+path = "~/.config/oku/files/neru"
+preview_command = "bat --color=always ~/.config/oku/files/neru/config.toml.tmpl"
+startup_command = "nvim config.toml.tmpl"
+
+[[session]]
+name = "btop"
+path = "~"
+startup_command = "btop"

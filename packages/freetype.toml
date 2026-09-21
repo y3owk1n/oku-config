@@ -1,0 +1,32 @@
+[package]
+name = "freetype"
+description = "Library that renders fonts"
+homepage = "https://freetype.org"
+license = "FTL OR GPL-2.0-or-later"
+
+# The version and the sha256 are fixed. The tags of the project look like
+# VER-2-14-3, which no version source turns into 2.14.3. To take a newer
+# release, change both.
+[version]
+value = "2.14.3"
+
+[build]
+needs = ["cc", "make"]
+source = { url = "https://downloads.sourceforge.net/project/freetype/freetype2/{{version}}/freetype-{{version}}.tar.xz", sha256 = "36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f", strip = 1 }
+deps = ["./cmake.toml", "./libpng.toml"]
+
+[runtime]
+deps = ["./libpng.toml"]
+
+# zlib and bzip2 come from the system. HarfBuzz and brotli stay off, so the
+# library needs libpng alone.
+[[build.step]]
+run = """
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX={{prefix}} \
+  -DCMAKE_INSTALL_LIBDIR={{prefix}}/lib -DCMAKE_INSTALL_NAME_DIR={{prefix}}/lib \
+  -DBUILD_SHARED_LIBS=ON -DFT_REQUIRE_ZLIB=ON -DFT_REQUIRE_PNG=ON -DFT_REQUIRE_BZIP2=ON \
+  -DFT_DISABLE_HARFBUZZ=ON -DFT_DISABLE_BROTLI=ON
+cmake --build build -j{{jobs}}
+cmake --install build
+"""
+shell = "sh"

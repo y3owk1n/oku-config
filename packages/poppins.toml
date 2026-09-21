@@ -1,0 +1,15 @@
+[package]
+name = "poppins"
+description = "Poppins, a geometric sans serif family"
+homepage = "https://github.com/itfoundry/Poppins"
+license = "OFL-1.1"
+
+# The foundry repo keeps the built fonts in its tree and attaches nothing to
+# its newest releases, so this pins the file at the tag that nixpkgs uses.
+[version]
+value = "4.003"
+
+[[artifact]]
+url = "https://github.com/itfoundry/Poppins/raw/v{{version}}/products/Poppins-{{version}}-GoogleFonts-TTF.zip"
+sha256 = "69cdf3e8bacecc99fd420186d26dd5769c004ee218034457b3691a1cf408967c"
+font = ["Poppins-*.ttf"]

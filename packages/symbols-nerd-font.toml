@@ -1,0 +1,15 @@
+[package]
+name = "symbols-nerd-font"
+description = "Nerd Fonts symbols only"
+homepage = "https://www.nerdfonts.com"
+license = "MIT"
+
+[version]
+from = "github-releases"
+repo = "ryanoasis/nerd-fonts"
+strip_prefix = "v"
+
+[[artifact]]
+url = "https://github.com/ryanoasis/nerd-fonts/releases/download/{{tag}}/NerdFontsSymbolsOnly.zip"
+sha256_url = "https://github.com/ryanoasis/nerd-fonts/releases/download/{{tag}}/SHA-256.txt"
+font = ["SymbolsNerdFont-Regular.ttf", "SymbolsNerdFontMono-Regular.ttf"]

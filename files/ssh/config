@@ -1,0 +1,20 @@
+# OrbStack on macOS. ssh skips an Include that matches no file.
+Include ~/.orbstack/ssh/config
+# macOS only part, placed with when.os = "darwin".
+Include ~/.ssh/config-darwin
+
+Host github.com
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_ed25519
+
+Host *
+  AddKeysToAgent yes
+  Compression no
+  ControlMaster no
+  ControlPath ~/.ssh/master-%r@%h:%p
+  ControlPersist no
+  ForwardAgent no
+  HashKnownHosts no
+  ServerAliveCountMax 3
+  ServerAliveInterval 0
+  UserKnownHostsFile ~/.ssh/known_hosts

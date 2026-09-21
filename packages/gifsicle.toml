@@ -1,0 +1,22 @@
+[package]
+name = "gifsicle"
+description = "Makes, edits and optimises GIF images and animations"
+homepage = "https://www.lcdf.org/gifsicle/"
+license = "GPL-2.0-only"
+
+# Upstream publishes its release archive on lcdf.org only, and the GitHub tags
+# hold no configure script. The tags name the versions, and the archive comes
+# from lcdf.org.
+[version]
+from = "git-tags"
+repo = "https://github.com/kohler/gifsicle"
+strip_prefix = "v"
+
+[build]
+needs = ["cc", "make"]
+source = { url = "https://www.lcdf.org/gifsicle/gifsicle-{{version}}.tar.gz", strip = 1 }
+
+# gifview needs X11, which macOS does not have.
+[[build.step]]
+run = "./configure --prefix={{prefix}} --disable-gifview && make -j{{jobs}} && make install"
+shell = "sh"
