@@ -56,7 +56,7 @@ age = "../packages/age.toml"
 sops = "github:getsops/sops"
 
 # terminal
-ghostty = { ref = "../packages/ghostty.toml", when = { os = "darwin" } }
+ghostty = "../packages/ghostty.toml"
 
 # coding agents
 claude-code = "../packages/claude-code.toml"

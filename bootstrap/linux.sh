@@ -14,6 +14,8 @@
 # neru line in lists/packages.toml needs `when = { os = "darwin" }` on that
 # machine.
 #
+# fuse is for the AppImage of ghostty, which mounts itself to run.
+#
 # The ssh client is here because files/git/config.tmpl sends every github.com
 # URL through ssh, so oku needs it to read a git source once that config is in
 # place.
@@ -39,7 +41,7 @@ if command -v apt-get >/dev/null 2>&1; then
 	$SUDO apt-get update
 	$SUDO apt-get install -y --no-install-recommends \
 		build-essential pkg-config git curl ca-certificates xz-utils unzip bzip2 file python3 gperf \
-		zlib1g-dev libbz2-dev libexpat1-dev openssh-client
+		zlib1g-dev libbz2-dev libexpat1-dev openssh-client libfuse2t64
 	$SUDO apt-get install -y --no-install-recommends \
 		libcairo2-dev libwayland-dev libx11-dev libxtst-dev libxrandr-dev libxrender-dev \
 		libxext-dev libxfixes-dev libxkbcommon-dev libei-dev liboeffis-dev libfontconfig-dev \
@@ -48,7 +50,7 @@ if command -v apt-get >/dev/null 2>&1; then
 elif command -v dnf >/dev/null 2>&1; then
 	$SUDO dnf install -y \
 		gcc gcc-c++ make pkgconf-pkg-config git curl ca-certificates xz unzip bzip2 file python3 gperf \
-		zlib-devel bzip2-devel expat-devel openssh-clients \
+		zlib-devel bzip2-devel expat-devel openssh-clients fuse fuse-libs \
 		tar gzip diffutils findutils which perl-core \
 		cairo-devel wayland-devel libX11-devel libXtst-devel libXrandr-devel libXrender-devel \
 		libXext-devel libXfixes-devel libxkbcommon-devel libei-devel liboeffis-devel fontconfig-devel \
@@ -57,7 +59,7 @@ elif command -v dnf >/dev/null 2>&1; then
 elif command -v pacman >/dev/null 2>&1; then
 	$SUDO pacman -S --needed --noconfirm \
 		base-devel git curl ca-certificates xz unzip bzip2 file python gperf \
-		zlib expat openssh \
+		zlib expat openssh fuse2 \
 		cairo wayland libx11 libxtst libxrandr libxrender libxext libxfixes libxkbcommon libei \
 		fontconfig tesseract tesseract-data-eng libpipewire wayland-protocols ttf-dejavu
 else

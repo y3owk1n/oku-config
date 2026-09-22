@@ -19,3 +19,16 @@ url = "https://release.files.ghostty.org/{{version}}/Ghostty.dmg"
 app = ["Ghostty.app"]
 bin = ["Ghostty.app/Contents/MacOS/ghostty"]
 man = ["Ghostty.app/Contents/Resources/man/man1/ghostty.1"]
+
+# Upstream ships no Linux binary. The AppImage comes from pkgforge-dev, which
+# the install page of ghostty.org links, and follows the same version tags. An
+# AppImage needs FUSE, which bootstrap/linux.sh installs.
+[[artifact]]
+match = { os = "linux", arch = "arm64" }
+url = "https://github.com/pkgforge-dev/ghostty-appimage/releases/download/{{tag}}/Ghostty-{{version}}-aarch64.AppImage"
+bin = ["ghostty"]
+
+[[artifact]]
+match = { os = "linux", arch = "amd64" }
+url = "https://github.com/pkgforge-dev/ghostty-appimage/releases/download/{{tag}}/Ghostty-{{version}}-x86_64.AppImage"
+bin = ["ghostty"]
