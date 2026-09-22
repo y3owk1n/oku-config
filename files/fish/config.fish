@@ -93,5 +93,4 @@ status is-interactive; and begin
     end
 
     command -q atuin; and atuin init fish --disable-up-arrow | source
-    command -q direnv; and direnv hook fish | source
 end

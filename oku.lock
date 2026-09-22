@@ -344,32 +344,6 @@ url = 'https://github.com/Wilfred/difftastic/releases/download/0.71.0/difft-0.71
 sha256 = '5f046098b36ff985d0f99fec6f22cf74961db60386ff9d40df39fd99660aae2c'
 
 [[package]]
-name = 'direnv'
-ref = 'github:direnv/direnv'
-commit = 'b00e451f547f39be7ab836d969054114a465a0f9'
-manifest_sha256 = '21ec49f4d0b8c63367d22e3326e9eb656bdb8dd7834f8f85795f78abf1b9fb20'
-version = '2.37.1'
-tag = 'v2.37.1'
-inferred = true
-manifest = "[package]\nname = \"direnv\"\nhomepage = \"https://github.com/direnv/direnv\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"direnv/direnv\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/direnv/direnv/releases/download/{{tag}}/direnv.linux-amd64\"\nbin = [\"direnv\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/direnv/direnv/releases/download/{{tag}}/direnv.darwin-amd64\"\nbin = [\"direnv\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"amd64\" }\nurl = \"https://github.com/direnv/direnv/releases/download/{{tag}}/direnv.windows-amd64\"\nbin = [\"direnv.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/direnv/direnv/releases/download/{{tag}}/direnv.linux-arm64\"\nbin = [\"direnv\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/direnv/direnv/releases/download/{{tag}}/direnv.darwin-arm64\"\nbin = [\"direnv\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"arm64\" }\nurl = \"https://github.com/direnv/direnv/releases/download/{{tag}}/direnv.windows-arm64\"\nbin = [\"direnv.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"386\" }\nurl = \"https://github.com/direnv/direnv/releases/download/{{tag}}/direnv.linux-386\"\nbin = [\"direnv\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"386\" }\nurl = \"https://github.com/direnv/direnv/releases/download/{{tag}}/direnv.windows-386\"\nbin = [\"direnv.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm\" }\nurl = \"https://github.com/direnv/direnv/releases/download/{{tag}}/direnv.linux-arm\"\nbin = [\"direnv\"]\n"
-
-[package.platform]
-[package.platform.darwin-arm64]
-strategy = 'artifact'
-url = 'https://github.com/direnv/direnv/releases/download/v2.37.1/direnv.darwin-arm64'
-sha256 = '4f569f3a36732bfd8b8fea7bfcc6ad87a59745c109022164d0ca4832451d5369'
-
-[package.platform.linux-amd64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/direnv/direnv/releases/download/v2.37.1/direnv.linux-amd64'
-sha256 = '1f1b93dd6f38523fde26dfac96151ef9d31a374e3005cd3345fb93555ae0c9b5'
-
-[package.platform.linux-arm64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/direnv/direnv/releases/download/v2.37.1/direnv.linux-arm64'
-sha256 = '2a9cef8d73521d6a3ec3f2871c4b747b8c4cc038628c1b57a7efa42b393a2d82'
-
-[[package]]
 name = 'discord'
 ref = './packages/discord.toml'
 manifest_sha256 = '33cf81525adb1d41a4a7d9f38a25c2d8bbc63d598e8d47fafe85b9d19e9c9327'

@@ -8,7 +8,6 @@
 # cli
 ast-grep = "../packages/ast-grep.toml"
 bat = "../packages/bat.toml"
-direnv = "github:direnv/direnv"
 fd = "../packages/fd.toml"
 fzf = "github:junegunn/fzf"
 jq = "github:jqlang/jq"
