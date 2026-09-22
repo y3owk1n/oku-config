@@ -73,23 +73,28 @@ if [ -n "$NERU" ]; then
 	echo "Give its line in lists/packages.toml when = { os = \"darwin\" } on this machine."
 fi
 
-# fish from oku as the login shell, as bootstrap/macos.sh does. chsh takes only
-# a shell that /etc/shells lists. The path goes through oku's "current" link, so
-# it stays valid when oku updates fish. fish exists after the first sync, so
-# run the script again then.
+# fish from oku as the login shell, as bootstrap/macos.sh does. The chsh of
+# util-linux refuses a path that goes through a symlink, and both "current" and
+# bin/fish are links. So a script in /usr/local/bin execs the fish of the
+# profile, and that script is the login shell. It stays valid when oku updates
+# fish. fish exists after the first sync, so run the script again then.
 OKU_FISH="$HOME/.local/share/oku/profiles/global/current/bin/fish"
+LOGIN_FISH=/usr/local/bin/oku-fish
 login_shell=$(getent passwd "$(id -un)" | cut -d: -f7)
 
 echo
 if [ ! -x "$OKU_FISH" ]; then
 	echo "login shell: $OKU_FISH does not exist yet. Run 'oku sync --yes', then this script again."
-elif [ "$login_shell" = "$OKU_FISH" ]; then
-	echo "login shell: already $OKU_FISH"
+elif [ "$login_shell" = "$LOGIN_FISH" ]; then
+	echo "login shell: already $LOGIN_FISH"
 else
 	echo "login shell: now $login_shell"
-	grep -qxF "$OKU_FISH" /etc/shells || printf '%s\n' "$OKU_FISH" | $SUDO tee -a /etc/shells >/dev/null
+	printf '#!/bin/sh\nexec "$HOME/.local/share/oku/profiles/global/current/bin/fish" "$@"\n' |
+		$SUDO tee "$LOGIN_FISH" >/dev/null
+	$SUDO chmod 755 "$LOGIN_FISH"
+	grep -qxF "$LOGIN_FISH" /etc/shells || printf '%s\n' "$LOGIN_FISH" | $SUDO tee -a /etc/shells >/dev/null
 	# chsh asks for your own password, so it does not run through sudo.
-	chsh -s "$OKU_FISH" && echo "login shell: $OKU_FISH, from the next login"
+	chsh -s "$LOGIN_FISH" && echo "login shell: $LOGIN_FISH, from the next login"
 fi
 
 echo
