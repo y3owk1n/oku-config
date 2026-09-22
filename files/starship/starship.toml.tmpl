@@ -21,6 +21,13 @@ command = 'case "$OKU_HOOK_HINT" in *"not allowed"*) echo "not allowed";; *sync*
 format = '[oku $output]($style) '
 style = 'bold red'
 
+[custom.oku_shell]
+when = 'test -n "$OKU_SHELL"'
+shell = ['sh']
+command = 'echo $OKU_SHELL'
+format = '[oku $output]($style) '
+style = 'bold blue'
+
 [docker_context]
 symbol = " "
 
