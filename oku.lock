@@ -287,23 +287,23 @@ sha256 = '6270de0ef4c84cf0eea61cb148b3ad9ae91a11e9c3309867ffc6b3751024c252'
 name = 'claude-code'
 ref = './packages/claude-code.toml'
 manifest_sha256 = '132b96a4a061ec0c306b1436f12c23e796256c1c0471f0273520c6aba0fa290e'
-version = '2.1.278'
+version = '2.1.280'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.278/darwin-arm64/claude'
-sha256 = 'bd245662fb8a0e321b3bf133e930371d6563c387527885f30b2613aef3ba14d6'
+url = 'https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.280/darwin-arm64/claude'
+sha256 = '387a5c5dcdbb815085edf0baf79591f9d8894efe922bceaf3d75b1b08055229d'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.278/linux-x64/claude'
-sha256 = '5c4735937844e84f8a93306e841a5b0e12252909b07870f789b190468da147ab'
+url = 'https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.280/linux-x64/claude'
+sha256 = '1e08503dbdf3c2cb0d706d32f3408277388d1c76ef108673e8fe42c1b322925b'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.278/linux-arm64/claude'
-sha256 = '7de6cab134e48321148e30182c98614118e8f4666819412bead45865190b34ed'
+url = 'https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.280/linux-arm64/claude'
+sha256 = '92f2b4fd05d0bdcf7b9a0d4e0ecef4a1e4b368b290cd8fd07cff9a50013f45a2'
 
 [[package]]
 name = 'coreutils'
