@@ -93,8 +93,14 @@ else
 		$SUDO tee "$LOGIN_FISH" >/dev/null
 	$SUDO chmod 755 "$LOGIN_FISH"
 	grep -qxF "$LOGIN_FISH" /etc/shells || printf '%s\n' "$LOGIN_FISH" | $SUDO tee -a /etc/shells >/dev/null
-	# chsh asks for your own password, so it does not run through sudo.
-	chsh -s "$LOGIN_FISH" && echo "login shell: $LOGIN_FISH, from the next login"
+	# chsh refuses to change away from a shell that /etc/shells does not list,
+	# such as the fish of a removed Nix profile. usermod does not check that.
+	if grep -qxF "$login_shell" /etc/shells; then
+		# chsh asks for your own password, so it does not run through sudo.
+		chsh -s "$LOGIN_FISH"
+	else
+		$SUDO usermod -s "$LOGIN_FISH" "$(id -un)"
+	fi && echo "login shell: $LOGIN_FISH, from the next login"
 fi
 
 echo
