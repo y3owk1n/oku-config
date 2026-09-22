@@ -18,7 +18,8 @@
 # URL through ssh, so oku needs it to read a git source once that config is in
 # place.
 #
-# Run it once by hand, as your own user:
+# Run it once by hand, as your own user, and again after the first sync, which
+# makes fish from oku the login shell:
 #
 #     sh ~/.config/oku/bootstrap/linux.sh
 #
@@ -70,6 +71,25 @@ if [ -n "$NERU" ]; then
 	echo
 	echo "neru cannot build here: $NERU."
 	echo "Give its line in lists/packages.toml when = { os = \"darwin\" } on this machine."
+fi
+
+# fish from oku as the login shell, as bootstrap/macos.sh does. chsh takes only
+# a shell that /etc/shells lists. The path goes through oku's "current" link, so
+# it stays valid when oku updates fish. fish exists after the first sync, so
+# run the script again then.
+OKU_FISH="$HOME/.local/share/oku/profiles/global/current/bin/fish"
+login_shell=$(getent passwd "$(id -un)" | cut -d: -f7)
+
+echo
+if [ ! -x "$OKU_FISH" ]; then
+	echo "login shell: $OKU_FISH does not exist yet. Run 'oku sync --yes', then this script again."
+elif [ "$login_shell" = "$OKU_FISH" ]; then
+	echo "login shell: already $OKU_FISH"
+else
+	echo "login shell: now $login_shell"
+	grep -qxF "$OKU_FISH" /etc/shells || printf '%s\n' "$OKU_FISH" | $SUDO tee -a /etc/shells >/dev/null
+	# chsh asks for your own password, so it does not run through sudo.
+	chsh -s "$OKU_FISH" && echo "login shell: $OKU_FISH, from the next login"
 fi
 
 echo

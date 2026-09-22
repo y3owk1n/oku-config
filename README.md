@@ -118,7 +118,9 @@ because older releases have no libei, and the script says what to do there.
 oku pins those from the Mac. So a Linux machine installs from the lock that the
 Mac wrote, and `oku sync --locked` proves it.
 
-After the first sync run `neru services install` once. oku runs neru as a
+After the first sync run the bootstrap script again. It now finds fish and
+makes it the login shell, which needs your password once for `chsh`. Then run
+`neru services install` once. oku runs neru as a
 service on macOS alone, because on Linux the daemon has to wait for the
 graphical session, and neru's own unit does that.
 
