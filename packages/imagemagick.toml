@@ -30,10 +30,12 @@ deps = ["./jpeg-turbo.toml", "./libpng.toml", "./libtiff.toml", "./libwebp-lib.t
 # configure.ac is newer than aclocal.m4 and call the autotools. Naming `true`
 # for each of them keeps the files the repo holds.
 # On Linux libtool passes its own -rpath, so the linker ignores the LD_RUN_PATH
-# that oku sets, and magick would not find libtiff and the other deps.
+# that oku sets, and magick would not find libtiff and the other deps. The -L
+# flags put the deps before the libraries of the system: Fedora's libjpeg.so is
+# jpeg-turbo with the libjpeg 6.2 ABI, and -ljpeg took it over the store's.
 [[build.step]]
 run = """
-if [ "$(uname)" = Linux ]; then export LDFLAGS="-Wl,-rpath,$LD_RUN_PATH"; fi
+if [ "$(uname)" = Linux ]; then export LDFLAGS="-Wl,-rpath,$LD_RUN_PATH -L$(printf %s "$LD_RUN_PATH" | sed 's/:/ -L/g')"; fi
 ./configure --prefix={{prefix}} --disable-silent-rules --disable-dependency-tracking \
   --disable-shared --enable-static --without-modules --disable-openmp --disable-opencl --disable-docs \
   --with-jpeg --with-png --with-tiff --with-webp --with-freetype --with-lzma --with-zlib --with-bzlib \
