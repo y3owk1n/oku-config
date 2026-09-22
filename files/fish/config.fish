@@ -76,13 +76,6 @@ status is-interactive; and begin
         source "$GHOSTTY_RESOURCES_DIR/shell-integration/fish/vendor_conf.d/ghostty-shell-integration.fish"
     end
 
-    # oku links each package's completions here. First, so its programs win as
-    # they do on PATH.
-    set -l _oku_comp $XDG_DATA_HOME/oku/profiles/global/current/share/completions/fish
-    if test -d $_oku_comp; and not contains $_oku_comp $fish_complete_path
-        set -g fish_complete_path $_oku_comp $fish_complete_path
-    end
-
     if test -d /opt/homebrew
         set -gx MANPATH /opt/homebrew/share/man $MANPATH
 
