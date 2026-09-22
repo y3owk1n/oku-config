@@ -32,7 +32,7 @@ env = { CGO_ENABLED = "1", GOFLAGS = "-buildvcs=false" }
 run = """
 set -eu
 v={{version}}
-app={{prefix}}/Mimi.app
+app=Mimi.app
 mkdir -p $app/Contents/MacOS $app/Contents/Resources
 cp mimi $app/Contents/MacOS/mimi
 cp resources/Mimi.entitlements $app/Contents/Resources/
@@ -44,10 +44,16 @@ shell = "sh"
 [[build.step]]
 install = { bin = ["mimi"], man = ["man/mimi.1"], completions = { generate = "./mimi completion {{shell}}" } }
 
+# The bundle goes to ~/Applications too, so macOS lists it under Accessibility
+# by name and Spotlight finds it.
+[[build.step]]
+install = { app = ["Mimi.app"] }
+when = { os = "darwin" }
+
 # The daemon runs from inside its bundle, as the Nix module did. It reads
 # ~/.config/mimi/config.toml by default, so no --config is passed.
 [[service]]
 name = "mimi"
-command = "Mimi.app/Contents/MacOS/mimi"
+command = "apps/Mimi.app/Contents/MacOS/mimi"
 args = ["start"]
 restart = "always"

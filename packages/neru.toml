@@ -37,7 +37,7 @@ env = { CGO_ENABLED = "1", GOFLAGS = "-buildvcs=false", CGO_CFLAGS_ALLOW = "-fno
 run = """
 set -eu
 v={{version}}
-app={{prefix}}/Neru.app
+app=Neru.app
 mkdir -p $app/Contents/MacOS $app/Contents/Resources
 cp neru $app/Contents/MacOS/neru
 cp resources/icon.icns $app/Contents/Resources/
@@ -51,6 +51,12 @@ when = { os = "darwin" }
 [[build.step]]
 install = { bin = ["neru"], man = ["man/neru.1"], completions = { generate = "./neru completion {{shell}}" } }
 
+# The bundle goes to ~/Applications too, so macOS lists it under Accessibility
+# by name and Spotlight finds it.
+[[build.step]]
+install = { app = ["Neru.app"] }
+when = { os = "darwin" }
+
 # The daemon runs from inside its bundle, as the Nix module did. It reads
 # ~/.config/neru/config.toml by default, so no --config is passed.
 #
@@ -59,7 +65,7 @@ install = { bin = ["neru"], man = ["man/neru.1"], completions = { generate = "./
 # graphical-session.target, which the unit of oku does not.
 [[service]]
 name = "neru"
-command = "Neru.app/Contents/MacOS/neru"
+command = "apps/Neru.app/Contents/MacOS/neru"
 args = ["launch"]
 restart = "always"
 when = { os = "darwin" }
