@@ -1,0 +1,32 @@
+[package]
+name = "lazygit"
+description = "Terminal UI for git"
+homepage = "https://github.com/jesseduffield/lazygit"
+license = "MIT"
+
+[version]
+from = "github-releases"
+repo = "jesseduffield/lazygit"
+strip_prefix = "v"
+
+# Completions come from the program itself, the release holds none.
+[[artifact]]
+match = { os = "linux", arch = "amd64" }
+url = "https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/lazygit_{{version}}_linux_x86_64.tar.gz"
+sha256_url = "https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/checksums.txt"
+bin = ["lazygit"]
+completions = { generate = "lazygit completion {{shell}}" }
+
+[[artifact]]
+match = { os = "linux", arch = "arm64" }
+url = "https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/lazygit_{{version}}_linux_arm64.tar.gz"
+sha256_url = "https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/checksums.txt"
+bin = ["lazygit"]
+completions = { generate = "lazygit completion {{shell}}" }
+
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/lazygit_{{version}}_darwin_arm64.tar.gz"
+sha256_url = "https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/checksums.txt"
+bin = ["lazygit"]
+completions = { generate = "lazygit completion {{shell}}" }

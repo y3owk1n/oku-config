@@ -49,7 +49,7 @@ shell = "sh"
 when = { os = "darwin" }
 
 [[build.step]]
-install = { bin = ["neru"], man = ["man/neru.1"] }
+install = { bin = ["neru"], man = ["man/neru.1"], completions = { generate = "./neru completion {{shell}}" } }
 
 # The daemon runs from inside its bundle, as the Nix module did. It reads
 # ~/.config/neru/config.toml by default, so no --config is passed.

@@ -16,6 +16,7 @@ sha256_url = "https://github.com/cli/cli/releases/download/{{tag}}/gh_{{version}
 strip = 1
 bin = ["bin/gh"]
 man = ["share/man/man1/gh.1"]
+completions = { generate = "gh completion -s {{shell}}" }
 
 [[artifact]]
 match = { os = "linux", arch = "arm64" }
@@ -24,6 +25,7 @@ sha256_url = "https://github.com/cli/cli/releases/download/{{tag}}/gh_{{version}
 strip = 1
 bin = ["bin/gh"]
 man = ["share/man/man1/gh.1"]
+completions = { generate = "gh completion -s {{shell}}" }
 
 [[artifact]]
 match = { os = "linux", arch = "amd64" }
@@ -32,3 +34,4 @@ sha256_url = "https://github.com/cli/cli/releases/download/{{tag}}/gh_{{version}
 strip = 1
 bin = ["bin/gh"]
 man = ["share/man/man1/gh.1"]
+completions = { generate = "gh completion -s {{shell}}" }

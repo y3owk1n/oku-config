@@ -15,6 +15,7 @@ url = "https://github.com/atuinsh/atuin/releases/download/{{tag}}/atuin-aarch64-
 sha256_url = "https://github.com/atuinsh/atuin/releases/download/{{tag}}/atuin-aarch64-apple-darwin.tar.gz.sha256"
 strip = 1
 bin = ["atuin"]
+completions = { generate = "atuin gen-completions --shell {{shell}}" }
 
 [[artifact]]
 match = { os = "linux", arch = "arm64" }
@@ -22,6 +23,7 @@ url = "https://github.com/atuinsh/atuin/releases/download/{{tag}}/atuin-aarch64-
 sha256_url = "https://github.com/atuinsh/atuin/releases/download/{{tag}}/atuin-aarch64-unknown-linux-musl.tar.gz.sha256"
 strip = 1
 bin = ["atuin"]
+completions = { generate = "atuin gen-completions --shell {{shell}}" }
 
 [[artifact]]
 match = { os = "linux", arch = "amd64" }
@@ -29,6 +31,7 @@ url = "https://github.com/atuinsh/atuin/releases/download/{{tag}}/atuin-x86_64-u
 sha256_url = "https://github.com/atuinsh/atuin/releases/download/{{tag}}/atuin-x86_64-unknown-linux-musl.tar.gz.sha256"
 strip = 1
 bin = ["atuin"]
+completions = { generate = "atuin gen-completions --shell {{shell}}" }
 
 # The same command the home-manager module runs for atuin 18.13.0 and newer.
 # It needs `[daemon] enabled = true` in ~/.config/atuin/config.toml.

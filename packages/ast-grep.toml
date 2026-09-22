@@ -1,0 +1,28 @@
+[package]
+name = "ast-grep"
+description = "Structural code search and rewrite"
+homepage = "https://github.com/ast-grep/ast-grep"
+license = "MIT"
+
+[version]
+from = "github-releases"
+repo = "ast-grep/ast-grep"
+
+# Completions come from the program itself, the release holds none.
+[[artifact]]
+match = { os = "linux", arch = "amd64", libc = "glibc" }
+url = "https://github.com/ast-grep/ast-grep/releases/download/{{tag}}/app-x86_64-unknown-linux-gnu.zip"
+bin = ["ast-grep"]
+completions = { generate = "ast-grep completions {{shell}}" }
+
+[[artifact]]
+match = { os = "linux", arch = "arm64", libc = "glibc" }
+url = "https://github.com/ast-grep/ast-grep/releases/download/{{tag}}/app-aarch64-unknown-linux-gnu.zip"
+bin = ["ast-grep"]
+completions = { generate = "ast-grep completions {{shell}}" }
+
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://github.com/ast-grep/ast-grep/releases/download/{{tag}}/app-aarch64-apple-darwin.zip"
+bin = ["ast-grep"]
+completions = { generate = "ast-grep completions {{shell}}" }

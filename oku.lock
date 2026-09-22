@@ -73,33 +73,33 @@ sha256 = '6b8dc4333c53a5a57c9e5834e3a48f92605d7154014cd07269ff3327db5d37f4'
 
 [[package]]
 name = 'ast-grep'
-ref = 'github:ast-grep/ast-grep'
-commit = '6175e07b668b388a1a326d8fc543c4856eb5f54b'
-manifest_sha256 = 'd8b25ea4cbe6931b496f3e63409aca6b1c82a8605345b5b983250c628a6c7253'
+ref = './packages/ast-grep.toml'
+manifest_sha256 = '285a45487c51993261ff1a5599db7fed20f2ec755230472be8c787b13c6f9c77'
 version = '0.45.3'
-inferred = true
-manifest = "[package]\nname = \"ast-grep\"\nhomepage = \"https://github.com/ast-grep/ast-grep\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"ast-grep/ast-grep\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\", libc = \"glibc\" }\nurl = \"https://github.com/ast-grep/ast-grep/releases/download/{{tag}}/app-x86_64-unknown-linux-gnu.zip\"\nbin = [\"ast-grep\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/ast-grep/ast-grep/releases/download/{{tag}}/app-x86_64-apple-darwin.zip\"\nbin = [\"ast-grep\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"amd64\" }\nurl = \"https://github.com/ast-grep/ast-grep/releases/download/{{tag}}/app-x86_64-pc-windows-msvc.zip\"\nbin = [\"ast-grep.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\", libc = \"glibc\" }\nurl = \"https://github.com/ast-grep/ast-grep/releases/download/{{tag}}/app-aarch64-unknown-linux-gnu.zip\"\nbin = [\"ast-grep\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/ast-grep/ast-grep/releases/download/{{tag}}/app-aarch64-apple-darwin.zip\"\nbin = [\"ast-grep\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"arm64\" }\nurl = \"https://github.com/ast-grep/ast-grep/releases/download/{{tag}}/app-aarch64-pc-windows-msvc.zip\"\nbin = [\"ast-grep.exe\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"386\" }\nurl = \"https://github.com/ast-grep/ast-grep/releases/download/{{tag}}/app-i686-pc-windows-msvc.zip\"\nbin = [\"ast-grep.exe\"]\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/ast-grep/ast-grep/releases/download/0.45.3/app-aarch64-apple-darwin.zip'
 sha256 = '6d2279dea5bea2ad79c66ea93f5fe54ba926e398a8a26de76c56db68fe59eac6'
+commands = true
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/ast-grep/ast-grep/releases/download/0.45.3/app-x86_64-unknown-linux-gnu.zip'
 sha256 = 'f8ac830881339d1edee6b2652f54798c0f4da5a827f2db38a08ee31117783ce8'
+commands = true
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/ast-grep/ast-grep/releases/download/0.45.3/app-aarch64-unknown-linux-gnu.zip'
 sha256 = 'b39cfbc58da4b869a88b8a4bc57bd5deb0d24541e704cf7c257da7b53ec81c8f'
+commands = true
 
 [[package]]
 name = 'atuin'
 ref = './packages/atuin.toml'
-manifest_sha256 = '0b1768c9e1ad446f48f6917058d3da0480f1ef6c08906e7b3e2094243204778b'
+manifest_sha256 = '7c90e9c1e0f945008cebd35931706479f6238c65581adf9bbc2c5f23caebe902'
 version = '18.23.0'
 tag = 'v18.23.0'
 
@@ -108,16 +108,19 @@ tag = 'v18.23.0'
 strategy = 'artifact'
 url = 'https://github.com/atuinsh/atuin/releases/download/v18.23.0/atuin-aarch64-apple-darwin.tar.gz'
 sha256 = 'c988be1cde19cd7295ce64bc8b955d42fb1855e5227cb640c87fc09c8408c3fc'
+commands = true
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/atuinsh/atuin/releases/download/v18.23.0/atuin-x86_64-unknown-linux-musl.tar.gz'
 sha256 = 'd1b40dd6e7cd3d823867ffe22b39a025bc420f7875926ae9ca974155378da14d'
+commands = true
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/atuinsh/atuin/releases/download/v18.23.0/atuin-aarch64-unknown-linux-musl.tar.gz'
 sha256 = 'faf91adc71e6b661b21ed4f486babbd7af9d17363d4276da4a0251f83c72498d'
+commands = true
 
 [[package]]
 name = 'bash-language-server'
@@ -318,7 +321,7 @@ sha256 = 'a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210'
 [[package]]
 name = 'difftastic'
 ref = 'github:Wilfred/difftastic'
-commit = '867fd946f2e2d74679214b6006b44475a5a9b979'
+commit = 'e2e1e3b7f5be18290135cc16ec521c16284eb21b'
 manifest_sha256 = '48e89c0643b80502bc36f53aa7252fb861022c38585942c80a53b5fcb82e2242'
 version = '0.71.0'
 inferred = true
@@ -633,7 +636,7 @@ sha256 = '5d673b849f494f0d64ec471d8640b153ca8849e3846a31da17abdcfce8df6b46'
 [[package]]
 name = 'gh'
 ref = './packages/gh.toml'
-manifest_sha256 = '1d911ba5638970fbc8fbbda1486ea4c808ed60ff38be9c915c2c9a7e9232ebad'
+manifest_sha256 = '2355918be6f6adc3557316aac1398c8fc55c44c5073385f04ec3c254e84afecd'
 version = '2.101.0'
 tag = 'v2.101.0'
 
@@ -642,16 +645,19 @@ tag = 'v2.101.0'
 strategy = 'artifact'
 url = 'https://github.com/cli/cli/releases/download/v2.101.0/gh_2.101.0_macOS_arm64.zip'
 sha256 = 'e4303e39d8f07141c4bad4b99b01079f05029c59b27076e8fbc825c985ecdd8b'
+commands = true
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/cli/cli/releases/download/v2.101.0/gh_2.101.0_linux_amd64.tar.gz'
 sha256 = '9bca2d1c16825f109907a23307628a2f0698fbf99662b73a5cf0b020293072b8'
+commands = true
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/cli/cli/releases/download/v2.101.0/gh_2.101.0_linux_arm64.tar.gz'
 sha256 = 'b57e8063f18862647c9d22727c32e9da1b963f8bf9db648fe123a6975695640f'
+commands = true
 
 [[package]]
 name = 'gh-actions-language-server'
@@ -1670,29 +1676,29 @@ sha256 = '839769d189911b5881e11550eaa2039705213fb725865d088f5a2e3a6c10de32'
 
 [[package]]
 name = 'lazygit'
-ref = 'github:jesseduffield/lazygit'
-commit = 'f8499e3b490b843d74e3c3b7b9897cd6d8e57c03'
-manifest_sha256 = 'eca8d2e00561d17adc2bdcdcd01f985df7aa549fe32e4227305e256fe4ffccc4'
+ref = './packages/lazygit.toml'
+manifest_sha256 = 'cc927bbbb42456c52ec496797aba9c4d1a42bb8b17b22595eb43fa5acf3fe6f8'
 version = '0.65.1'
 tag = 'v0.65.1'
-inferred = true
-manifest = "[package]\nname = \"lazygit\"\nhomepage = \"https://github.com/jesseduffield/lazygit\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"jesseduffield/lazygit\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/lazygit_{{version}}_linux_x86_64.tar.gz\"\nsha256_url = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/checksums.txt\"\nbin = [\"lazygit\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/lazygit_{{version}}_darwin_x86_64.tar.gz\"\nsha256_url = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/checksums.txt\"\nbin = [\"lazygit\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"amd64\" }\nurl = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/lazygit_{{version}}_windows_x86_64.zip\"\nsha256_url = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/checksums.txt\"\nbin = [\"lazygit.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/lazygit_{{version}}_linux_arm64.tar.gz\"\nsha256_url = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/checksums.txt\"\nbin = [\"lazygit\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/lazygit_{{version}}_darwin_arm64.tar.gz\"\nsha256_url = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/checksums.txt\"\nbin = [\"lazygit\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"arm64\" }\nurl = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/lazygit_{{version}}_windows_arm64.zip\"\nsha256_url = \"https://github.com/jesseduffield/lazygit/releases/download/{{tag}}/checksums.txt\"\nbin = [\"lazygit.exe\"]\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/jesseduffield/lazygit/releases/download/v0.65.1/lazygit_0.65.1_darwin_arm64.tar.gz'
 sha256 = '65a367c6ea9a88efebaaf7998a6835eedb987e04916cef677264ff9b31b1b13e'
+commands = true
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/jesseduffield/lazygit/releases/download/v0.65.1/lazygit_0.65.1_linux_x86_64.tar.gz'
 sha256 = '02beacbcda0fa342e50ae3480ba8147307353af3fb28e1d5f790e02329c201a6'
+commands = true
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/jesseduffield/lazygit/releases/download/v0.65.1/lazygit_0.65.1_linux_arm64.tar.gz'
 sha256 = '49abecdf6adf4f2dfdb11bf7b9bfada267ea523612ed809d1c6d87f6c04000a7'
+commands = true
 
 [[package]]
 name = 'libwebp'
@@ -1831,7 +1837,7 @@ sha256 = 'db8e124527f7f8048e3e6c91821b9c52ef173d92c01e47d221bf1337afd962fb'
 [[package]]
 name = 'mimi'
 ref = './packages/mimi.toml'
-manifest_sha256 = 'b34563a343bf5e25be3d1195bc473a5348d1b97200f8d2fe86908e3697a2f950'
+manifest_sha256 = 'f20f32ac3a36889d10d0a5994949237496e9ebc8c62b0f8cb8e894a98fa63891'
 version = '2026.09.21-4571d50'
 tag = 'main'
 tag_commit = '4571d500b1df6fd98719170e4b51d5921688a541'
@@ -1883,7 +1889,7 @@ sha256 = 'b98f2cc69fd9147fe4d405d859c57504571adec0d3611c3eefd04107c7ac00d0'
 [[package]]
 name = 'mole'
 ref = './packages/mole.toml'
-manifest_sha256 = 'e269d982613487f992e7466af60e68966338e31872b67cbe50476b43509a3223'
+manifest_sha256 = 'ecb5c4e2b693a351c9932246c10b79baf704991ad39c0dd6f285c8c31c527868'
 version = '1.55.0'
 tag = 'V1.55.0'
 
@@ -1908,7 +1914,7 @@ sha256 = 'ee215d57e0ec269c60cc9ceca68e6bda321ba9ee5afe24f4b0988703c2d87d12'
 [[package]]
 name = 'neru'
 ref = './packages/neru.toml'
-manifest_sha256 = '0f252ace33aa6125c5d3367abf3703c75d416d9cd89ad7f70e56625d596f423d'
+manifest_sha256 = '4b386fdf8f4e775c54c38e415f3ec2574566e358a84674ef9f124779b8c73e84'
 version = '2026.09.22-f1c126d'
 tag = 'main'
 tag_commit = 'f1c126d1c6cc01718cd45aa1e77842434f25708b'
@@ -3385,29 +3391,29 @@ sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
 
 [[package]]
 name = 'rip2'
-ref = 'github:MilesCranmer/rip2'
-commit = '269f486dcfd56d2bc8399426d9135120b33ac99f'
-manifest_sha256 = '82cbddc122ebbe2c66abe9b2c227fb026196272109a81a4a28dd2a58f2e3c1ef'
+ref = './packages/rip2.toml'
+manifest_sha256 = 'ca7c6be190263e4797cd2c7d652b88952f3e2452615246b2e52dc1a55942e46f'
 version = '0.9.6'
 tag = 'v0.9.6'
-inferred = true
-manifest = "[package]\nname = \"rip2\"\nhomepage = \"https://github.com/MilesCranmer/rip2\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"MilesCranmer/rip2\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/MilesCranmer/rip2/releases/download/{{tag}}/rip-Linux-x86_64-musl.tar.gz\"\nbin = [\"rip\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/MilesCranmer/rip2/releases/download/{{tag}}/rip-macOS-Darwin-x86_64.tar.gz\"\nbin = [\"rip\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"amd64\" }\nurl = \"https://github.com/MilesCranmer/rip2/releases/download/{{tag}}/rip-Windows-x86_64.zip\"\nbin = [\"rip.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/MilesCranmer/rip2/releases/download/{{tag}}/rip-Linux-aarch64-musl.tar.gz\"\nbin = [\"rip\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/MilesCranmer/rip2/releases/download/{{tag}}/rip-macOS-Darwin-aarch64.tar.gz\"\nbin = [\"rip\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"386\" }\nurl = \"https://github.com/MilesCranmer/rip2/releases/download/{{tag}}/rip-Linux-i686-musl.tar.gz\"\nbin = [\"rip\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"386\" }\nurl = \"https://github.com/MilesCranmer/rip2/releases/download/{{tag}}/rip-Windows-i686.zip\"\nbin = [\"rip.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm\" }\nurl = \"https://github.com/MilesCranmer/rip2/releases/download/{{tag}}/rip-Linux-arm-musl.tar.gz\"\nbin = [\"rip\"]\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/MilesCranmer/rip2/releases/download/v0.9.6/rip-macOS-Darwin-aarch64.tar.gz'
 sha256 = 'b8fbf7b5acb14ce5d5746cc17c8e4b8ef7e60f8c83e3cfcd5243f822219afbcd'
+commands = true
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/MilesCranmer/rip2/releases/download/v0.9.6/rip-Linux-x86_64-musl.tar.gz'
 sha256 = '305841c106173a78a11685074d2b1014e3bb66bf20a9da08b3d887e411b8cdd5'
+commands = true
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/MilesCranmer/rip2/releases/download/v0.9.6/rip-Linux-aarch64-musl.tar.gz'
 sha256 = 'd0049710f0063ab810bfd58e7dc52ff54aa36da967487d4ac7f50200f6f800ac'
+commands = true
 
 [[package]]
 name = 'ripgrep'
@@ -3433,29 +3439,29 @@ sha256 = 'a740b91c82eaf9914cfedd353572f2791cbe0162c84101ee0951058f4dcbc90d'
 
 [[package]]
 name = 'sesh'
-ref = 'github:joshmedeski/sesh'
-commit = 'e1c00d5793c276d2f73146e2c83083e6aaf24ea3'
-manifest_sha256 = 'e7042907e752c9be5ac41162ca7f1db2b3d687f4303f0c59ff7bec6667d4570b'
+ref = './packages/sesh.toml'
+manifest_sha256 = '896c2280241ed87d361b98ce5663651076312bec4d153549b689d47eb3f6e9ad'
 version = '2.31.0'
 tag = 'v2.31.0'
-inferred = true
-manifest = "[package]\nname = \"sesh\"\nhomepage = \"https://github.com/joshmedeski/sesh\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"joshmedeski/sesh\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_Linux_x86_64.tar.gz\"\nsha256_url = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_{{version}}_checksums.txt\"\nbin = [\"sesh\"]\nman = [\"share/man/man1/sesh.1\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_Darwin_x86_64.tar.gz\"\nsha256_url = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_{{version}}_checksums.txt\"\nbin = [\"sesh\"]\nman = [\"share/man/man1/sesh.1\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"amd64\" }\nurl = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_Windows_x86_64.zip\"\nsha256_url = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_{{version}}_checksums.txt\"\nbin = [\"sesh.exe\"]\nman = [\"share/man/man1/sesh.1\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_Linux_arm64.tar.gz\"\nsha256_url = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_{{version}}_checksums.txt\"\nbin = [\"sesh\"]\nman = [\"share/man/man1/sesh.1\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_Darwin_arm64.tar.gz\"\nsha256_url = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_{{version}}_checksums.txt\"\nbin = [\"sesh\"]\nman = [\"share/man/man1/sesh.1\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"arm64\" }\nurl = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_Windows_arm64.zip\"\nsha256_url = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_{{version}}_checksums.txt\"\nbin = [\"sesh.exe\"]\nman = [\"share/man/man1/sesh.1\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"386\" }\nurl = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_Linux_i386.tar.gz\"\nsha256_url = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_{{version}}_checksums.txt\"\nbin = [\"sesh\"]\nman = [\"share/man/man1/sesh.1\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"386\" }\nurl = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_Windows_i386.zip\"\nsha256_url = \"https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_{{version}}_checksums.txt\"\nbin = [\"sesh.exe\"]\nman = [\"share/man/man1/sesh.1\"]\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/joshmedeski/sesh/releases/download/v2.31.0/sesh_Darwin_arm64.tar.gz'
 sha256 = 'c063cb3d2a6bc9b64e9640ef7c19a8feb9018b9bb87213c7f721e9cc5fd43e34'
+commands = true
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/joshmedeski/sesh/releases/download/v2.31.0/sesh_Linux_x86_64.tar.gz'
 sha256 = '83c07290cc13c4f80a3a99ba4496134ba60553ad24fb9302f88c1ee922fe6a69'
+commands = true
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/joshmedeski/sesh/releases/download/v2.31.0/sesh_Linux_arm64.tar.gz'
 sha256 = 'd83d00a6f0c3c961b6f248c89dcbb0916db6c054bde6be19001a3fd8acf88748'
+commands = true
 
 [[package]]
 name = 'skhd'
@@ -3608,29 +3614,29 @@ sha256 = '53b0abacd38ef1b12a66d6c100956691b9cefce018d91f81e73ddf7438b94d77'
 
 [[package]]
 name = 'starship'
-ref = 'github:starship/starship'
-commit = '1d3f11e6d5d772c2cf8f45d44337e5cf6c9f0f95'
-manifest_sha256 = '9412e8ed2b0045b2d0935e3582ad5a78a9a5023b1b446bef9fb52e3da7cfaadc'
+ref = './packages/starship.toml'
+manifest_sha256 = '7a5da54c5750b7c51ecc13eb23c5bdfcf3ea2915c70a1bfe9f22418d5c01b891'
 version = '1.26.0'
 tag = 'v1.26.0'
-inferred = true
-manifest = "[package]\nname = \"starship\"\nhomepage = \"https://github.com/starship/starship\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"starship/starship\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\", libc = \"glibc\" }\nurl = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-x86_64-unknown-linux-gnu.tar.gz\"\nsha256_url = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-x86_64-unknown-linux-gnu.tar.gz.sha256\"\nbin = [\"starship\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-x86_64-unknown-linux-musl.tar.gz\"\nsha256_url = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-x86_64-unknown-linux-musl.tar.gz.sha256\"\nbin = [\"starship\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-x86_64-apple-darwin.tar.gz\"\nsha256_url = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-x86_64-apple-darwin.tar.gz.sha256\"\nbin = [\"starship\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"amd64\" }\nurl = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-x86_64-pc-windows-msvc.zip\"\nsha256_url = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-x86_64-pc-windows-msvc.zip.sha256\"\nbin = [\"starship.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-aarch64-unknown-linux-musl.tar.gz\"\nsha256_url = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-aarch64-unknown-linux-musl.tar.gz.sha256\"\nbin = [\"starship\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-aarch64-apple-darwin.tar.gz\"\nsha256_url = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-aarch64-apple-darwin.tar.gz.sha256\"\nbin = [\"starship\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"arm64\" }\nurl = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-aarch64-pc-windows-msvc.zip\"\nsha256_url = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-aarch64-pc-windows-msvc.zip.sha256\"\nbin = [\"starship.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"386\" }\nurl = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-i686-unknown-linux-musl.tar.gz\"\nsha256_url = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-i686-unknown-linux-musl.tar.gz.sha256\"\nbin = [\"starship\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"386\" }\nurl = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-i686-pc-windows-msvc.zip\"\nsha256_url = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-i686-pc-windows-msvc.zip.sha256\"\nbin = [\"starship.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm\" }\nurl = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-arm-unknown-linux-musleabihf.tar.gz\"\nsha256_url = \"https://github.com/starship/starship/releases/download/{{tag}}/starship-arm-unknown-linux-musleabihf.tar.gz.sha256\"\nbin = [\"starship\"]\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/starship/starship/releases/download/v1.26.0/starship-aarch64-apple-darwin.tar.gz'
 sha256 = 'c40b27b11f580411e068f2fa6c1be7830a387c0bc47a94d1d37f32b054c5361d'
+commands = true
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/starship/starship/releases/download/v1.26.0/starship-x86_64-unknown-linux-gnu.tar.gz'
 sha256 = '321f0dd7af8340a5f2e6a8fec6538a04f617486f9ec70d878f91c09cd8deef22'
+commands = true
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/starship/starship/releases/download/v1.26.0/starship-aarch64-unknown-linux-musl.tar.gz'
 sha256 = 'dc30189378d2f2e287384e8a692d3f95ad1df64cf0e8c36aa9201516028aed6b'
+commands = true
 
 [[package]]
 name = 'stripe-cli'
@@ -3706,29 +3712,29 @@ sha256 = '29dcb978da2a4b0cf6790f9e004865dac239a3ba03bbf776dddacce23d03831b'
 
 [[package]]
 name = 'tree-sitter'
-ref = 'github:tree-sitter/tree-sitter'
-commit = '5b951eff4f8b1431e933ed0fe45e48fcd4036a38'
-manifest_sha256 = 'a3124b3d0d8892de2e5de8bc5a262427669d7910c890b4934ffbf768004689e3'
+ref = './packages/tree-sitter.toml'
+manifest_sha256 = '220260409f5ab1ebac7cadf96ce67d26188a02f4f98dd0c62285dd0c45e46ffe'
 version = '0.27.0'
 tag = 'v0.27.0'
-inferred = true
-manifest = "[package]\nname = \"tree-sitter\"\nhomepage = \"https://github.com/tree-sitter/tree-sitter\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"tree-sitter/tree-sitter\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/tree-sitter/tree-sitter/releases/download/{{tag}}/tree-sitter-cli-linux-x64.zip\"\nbin = [\"tree-sitter\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/tree-sitter/tree-sitter/releases/download/{{tag}}/tree-sitter-cli-macos-x64.zip\"\nbin = [\"tree-sitter\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"amd64\" }\nurl = \"https://github.com/tree-sitter/tree-sitter/releases/download/{{tag}}/tree-sitter-cli-windows-x64.zip\"\nbin = [\"tree-sitter.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/tree-sitter/tree-sitter/releases/download/{{tag}}/tree-sitter-cli-linux-arm64.zip\"\nbin = [\"tree-sitter\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/tree-sitter/tree-sitter/releases/download/{{tag}}/tree-sitter-cli-macos-arm64.zip\"\nbin = [\"tree-sitter\"]\n\n[[artifact]]\nmatch = { os = \"windows\", arch = \"arm64\" }\nurl = \"https://github.com/tree-sitter/tree-sitter/releases/download/{{tag}}/tree-sitter-cli-windows-arm64.zip\"\nbin = [\"tree-sitter.exe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm\" }\nurl = \"https://github.com/tree-sitter/tree-sitter/releases/download/{{tag}}/tree-sitter-cli-linux-arm.zip\"\nbin = [\"tree-sitter\"]\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/tree-sitter/tree-sitter/releases/download/v0.27.0/tree-sitter-cli-macos-arm64.zip'
 sha256 = 'f278063d8544160f6f89f7f8dba6ba112cb0dd1669757788d2bb7a8a613d2c58'
+commands = true
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/tree-sitter/tree-sitter/releases/download/v0.27.0/tree-sitter-cli-linux-x64.zip'
 sha256 = 'e4a3826bcd0fe099ee3a5617767374939cbc23c4a35b5b53f5fc04142525a2c1'
+commands = true
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/tree-sitter/tree-sitter/releases/download/v0.27.0/tree-sitter-cli-linux-arm64.zip'
 sha256 = '6260b621bf5ab87027dfb463bf955504ef32cdcda62b81f28447753e48c83a62'
+commands = true
 
 [[package]]
 name = 'utm'
@@ -3746,10 +3752,10 @@ sha256 = 'a8435c93cfb5f8bbfeea4b134cfad1ac66b67632b75e438c63b1a8ae043bef0e'
 [[package]]
 name = 'uts'
 ref = './packages/uts.toml'
-manifest_sha256 = '5db571311ce21f2483ecba1ffe626c19b0d1f6aae4f0507ef0009724f8d677bb'
-version = '2026.09.22-e634687'
+manifest_sha256 = '271e171fd3eb8d18e44a7f719afb2b7fb3262e86b862af813473cea27c68c493'
+version = '2026.09.22-7461520'
 tag = 'main'
-tag_commit = 'e6346874fa8ff236425d7e5f47992d735614e16e'
+tag_commit = '7461520cd1017684011ecc3208261ea7abcf6a3b'
 
 [package.platform]
 [package.platform.darwin-arm64]

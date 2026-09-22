@@ -6,22 +6,22 @@
 [packages]
 
 # cli
-ast-grep = "github:ast-grep/ast-grep"
+ast-grep = "../packages/ast-grep.toml"
 bat = "../packages/bat.toml"
 direnv = "github:direnv/direnv"
 fd = "../packages/fd.toml"
 fzf = "github:junegunn/fzf"
 jq = "github:jqlang/jq"
 mkcert = "github:FiloSottile/mkcert"
-rip2 = "github:MilesCranmer/rip2" # the program is rip
+rip2 = "../packages/rip2.toml" # the program is rip
 ripgrep = "../packages/ripgrep.toml"
 stripe-cli = "github:stripe/stripe-cli" # the program is stripe
 
 # shell
 atuin = { ref = "../packages/atuin.toml", service = true }
 fish = "../packages/fish.toml"
-sesh = "github:joshmedeski/sesh"
-starship = "github:starship/starship"
+sesh = "../packages/sesh.toml"
+starship = "../packages/starship.toml"
 tmux = "../packages/tmux.toml"
 zoxide = "../packages/zoxide.toml"
 
@@ -29,12 +29,12 @@ zoxide = "../packages/zoxide.toml"
 difftastic = "github:Wilfred/difftastic" # the program is difft
 gh = "../packages/gh.toml"
 git-lfs = "github:git-lfs/git-lfs"
-lazygit = "github:jesseduffield/lazygit"
+lazygit = "../packages/lazygit.toml"
 
 # editors and language servers
 # The npm: packages run on the node that config.toml names under [runtimes].
 nvim = "../packages/nvim.toml"
-tree-sitter = "github:tree-sitter/tree-sitter"
+tree-sitter = "../packages/tree-sitter.toml"
 marksman = "../packages/marksman.toml"
 gh-actions-language-server = "../packages/gh-action-language-server.toml"
 # prettierd starts its daemon as `node` from PATH, so node is a package of its

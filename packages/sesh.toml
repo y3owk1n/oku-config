@@ -1,0 +1,35 @@
+[package]
+name = "sesh"
+description = "Smart tmux session manager"
+homepage = "https://github.com/joshmedeski/sesh"
+license = "MIT"
+
+[version]
+from = "github-releases"
+repo = "joshmedeski/sesh"
+strip_prefix = "v"
+
+# Completions come from the program itself, the release holds none.
+[[artifact]]
+match = { os = "linux", arch = "amd64" }
+url = "https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_Linux_x86_64.tar.gz"
+sha256_url = "https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_{{version}}_checksums.txt"
+bin = ["sesh"]
+completions = { generate = "sesh completion {{shell}}" }
+man = ["share/man/man1/sesh.1"]
+
+[[artifact]]
+match = { os = "linux", arch = "arm64" }
+url = "https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_Linux_arm64.tar.gz"
+sha256_url = "https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_{{version}}_checksums.txt"
+bin = ["sesh"]
+completions = { generate = "sesh completion {{shell}}" }
+man = ["share/man/man1/sesh.1"]
+
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_Darwin_arm64.tar.gz"
+sha256_url = "https://github.com/joshmedeski/sesh/releases/download/{{tag}}/sesh_{{version}}_checksums.txt"
+bin = ["sesh"]
+completions = { generate = "sesh completion {{shell}}" }
+man = ["share/man/man1/sesh.1"]

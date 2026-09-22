@@ -42,7 +42,7 @@ codesign --force --deep --sign - --entitlements resources/Mimi.entitlements --op
 shell = "sh"
 
 [[build.step]]
-install = { bin = ["mimi"], man = ["man/mimi.1"] }
+install = { bin = ["mimi"], man = ["man/mimi.1"], completions = { generate = "./mimi completion {{shell}}" } }
 
 # The daemon runs from inside its bundle, as the Nix module did. It reads
 # ~/.config/mimi/config.toml by default, so no --config is passed.

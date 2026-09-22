@@ -39,3 +39,7 @@ ln -s ../libexec/mole/mole {{prefix}}/bin/mole
 ln -s ../libexec/mole/mo {{prefix}}/bin/mo
 """
 shell = "sh"
+
+# The script finds lib/ next to itself, so it runs from the source tree.
+[[build.step]]
+install = { completions = { generate = "./mole completion {{shell}}", name = "mole" } }

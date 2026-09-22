@@ -1,0 +1,29 @@
+[package]
+name = "rip2"
+description = "A safer rm, moves files to a graveyard"
+homepage = "https://github.com/MilesCranmer/rip2"
+license = "GPL-3.0-only"
+
+[version]
+from = "github-releases"
+repo = "MilesCranmer/rip2"
+strip_prefix = "v"
+
+# Completions come from the program itself, the release holds none.
+[[artifact]]
+match = { os = "linux", arch = "amd64" }
+url = "https://github.com/MilesCranmer/rip2/releases/download/{{tag}}/rip-Linux-x86_64-musl.tar.gz"
+bin = ["rip"]
+completions = { generate = "rip completions {{shell}}" }
+
+[[artifact]]
+match = { os = "linux", arch = "arm64" }
+url = "https://github.com/MilesCranmer/rip2/releases/download/{{tag}}/rip-Linux-aarch64-musl.tar.gz"
+bin = ["rip"]
+completions = { generate = "rip completions {{shell}}" }
+
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://github.com/MilesCranmer/rip2/releases/download/{{tag}}/rip-macOS-Darwin-aarch64.tar.gz"
+bin = ["rip"]
+completions = { generate = "rip completions {{shell}}" }
