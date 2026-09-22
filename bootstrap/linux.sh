@@ -8,7 +8,8 @@
 # imagemagick, expat for fontconfig, gperf and python3 for fontconfig.
 #
 # neru links the X11 and Wayland libraries of the system, tesseract and
-# pipewire, as its docs/LINUX_SETUP.md lists them. Debian 12 and Ubuntu 22.04
+# pipewire, as its docs/LINUX_SETUP.md lists them. On Fedora liboeffis-devel is
+# its own package, other than those docs say. Debian 12 and Ubuntu 22.04
 # have no libei, so neru cannot build there. The script says so, and then the
 # neru line in lists/packages.toml needs `when = { os = "darwin" }` on that
 # machine.
@@ -49,7 +50,7 @@ elif command -v dnf >/dev/null 2>&1; then
 		zlib-devel bzip2-devel expat-devel openssh-clients \
 		tar gzip diffutils findutils which perl-core \
 		cairo-devel wayland-devel libX11-devel libXtst-devel libXrandr-devel libXrender-devel \
-		libXext-devel libXfixes-devel libxkbcommon-devel libei-devel fontconfig-devel \
+		libXext-devel libXfixes-devel libxkbcommon-devel libei-devel liboeffis-devel fontconfig-devel \
 		tesseract-devel tesseract-langpack-eng pipewire-devel wayland-protocols-devel \
 		dejavu-sans-fonts
 elif command -v pacman >/dev/null 2>&1; then

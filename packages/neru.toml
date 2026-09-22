@@ -29,7 +29,9 @@ mkdir -p man
 go run -mod=vendor ./cmd/genman man
 """
 shell = "sh"
-env = { CGO_ENABLED = "1", GOFLAGS = "-buildvcs=false" }
+# Fedora's libspa-0.2.pc, which pipewire pulls in, carries -fno-strict-overflow,
+# and cgo rejects a flag it does not know unless it is allowed.
+env = { CGO_ENABLED = "1", GOFLAGS = "-buildvcs=false", CGO_CFLAGS_ALLOW = "-fno-strict-overflow" }
 
 [[build.step]]
 run = """
