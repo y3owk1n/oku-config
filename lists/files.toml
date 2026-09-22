@@ -66,10 +66,11 @@
 # editorconfig
 "{{home}}/.editorconfig" = { link = "../files/editorconfig/editorconfig" }
 
-# mimi and skhd are macOS only. neru holds the macOS exec_shell, see the notes.
+# mimi and skhd are macOS only. neru's exec_shell differs by OS, and the Linux
+# entry is in files-linux.toml, because TOML allows a key once per table.
 "{{config}}/mimi/config.toml" = { render = "../files/mimi/config.toml.tmpl", when = { os = "darwin" } }
 "{{config}}/mimi/tiling" = { link = "../files/mimi/tiling", when = { os = "darwin" } }
-"{{config}}/neru/config.toml" = { render = "../files/neru/config.toml.tmpl" }
+"{{config}}/neru/config.toml" = { render = "../files/neru/config.toml.tmpl", when = { os = "darwin" }, vars = { neru-shell = "/bin/dash" } }
 "{{config}}/skhd/skhdrc" = { link = "../files/skhd/skhdrc", when = { os = "darwin" } }
 
 # opencode

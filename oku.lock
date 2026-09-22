@@ -25,6 +25,10 @@ ref = './lists/files.toml'
 sha256 = ''
 
 [[include]]
+ref = './lists/files-linux.toml'
+sha256 = ''
+
+[[include]]
 ref = './lists/ai.toml'
 sha256 = ''
 

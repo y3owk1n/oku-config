@@ -109,8 +109,8 @@ first (switch home-manager off, or delete the links). These need a look:
 ### neru, mimi, skhd
 - The apps, their launchd agents and the ad-hoc codesign step belong to the
   package and service lists, not to this one.
-- neru: `exec_shell` is `/bin/dash`, the macOS value. The Nix module used
-  `/bin/sh` on Linux. A template has no conditionals, so change it by hand there.
+- neru: `exec_shell` is `{{neru-shell}}`, set per entry: `/bin/dash` on macOS
+  in files.toml and `/bin/sh` on Linux in files-linux.toml.
 - neru: `font_family = "JetBrainsMonoNLNFP-Bold"` is a PostScript name and not
   the `font` variable, so it stays literal.
 - skhd is a link, not a template, because its own `{{1}}` syntax would need an

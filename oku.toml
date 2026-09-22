@@ -8,6 +8,7 @@ include = [
   "./lists/built.toml",    # tools built from source with cc and make
   "./lists/built-media.toml", # imagemagick and poppler, built from source
   "./lists/files.toml",    # program configs and templates
+  "./lists/files-linux.toml", # the Linux side of entries that differ by OS
   "./lists/ai.toml",       # agent skills and instructions
   "./lists/macos.toml",    # macOS settings, skipped on other systems
 ]

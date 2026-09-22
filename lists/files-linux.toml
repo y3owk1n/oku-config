@@ -1,0 +1,5 @@
+# Entries that share a target with files.toml and differ by OS. TOML allows a
+# key once per table, so the second entry for a target lives here.
+
+[files]
+"{{config}}/neru/config.toml" = { render = "../files/neru/config.toml.tmpl", when = { os = "linux" }, vars = { neru-shell = "/bin/sh" } }
