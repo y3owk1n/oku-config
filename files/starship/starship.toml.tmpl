@@ -7,6 +7,20 @@ read_only = " 󰌾"
 [direnv]
 disabled = false
 
+[custom.oku_allowed]
+when = 'test -n "$OKU_HOOK_PATH"'
+shell = ['sh']
+command = 'echo allowed'
+format = '[oku $output]($style) '
+style = 'bold green'
+
+[custom.oku_hint]
+when = 'test -n "$OKU_HOOK_HINT"'
+shell = ['sh']
+command = 'case "$OKU_HOOK_HINT" in *"not allowed"*) echo "not allowed";; *sync*) echo stale;; *) echo attention;; esac'
+format = '[oku $output]($style) '
+style = 'bold red'
+
 [docker_context]
 symbol = " "
 
