@@ -18,6 +18,12 @@ include = [
 [lock]
 platforms = ["darwin-arm64", "linux-arm64-glibc", "linux-amd64-glibc"]
 
+# The node that the npm packages run through. A machine that adopts this repo
+# with `oku sync github:y3owk1n/oku-config` reads it from here, because it gets
+# no config.toml. config.toml names the same node for an oku older than this.
+[runtimes]
+node = "./packages/node.toml"
+
 [packages]
 nvim = "./packages/nvim.toml"
 gh-actions-language-server = "./packages/gh-action-language-server.toml"
