@@ -11,6 +11,7 @@ repo = "https://github.com/y3owk1n/mimi"
 branch = "main"
 
 [build]
+when = { os = "darwin" }
 needs = ["git", "cc"]
 deps = [{ ref = "./go.toml", version = "~1.26" }]
 source = { git = "https://github.com/y3owk1n/mimi", tag = "{{tag}}" }
