@@ -7,13 +7,17 @@ license = "BSD-3-Clause"
 # libwebp.toml installs upstream's prebuilt tools. That archive holds static
 # libraries and no .pc file, and ImageMagick finds WebP through pkg-config
 # alone. This package builds the libraries with their .pc files. The version
-# and the sha256 are fixed. To take a newer release, change both.
+# follows the git tags, as libwebp.toml does, so both stay on one release.
+# Google publishes no checksum, so oku.lock pins each version's archive when
+# oku first downloads it.
 [version]
-value = "1.6.0"
+from = "git-tags"
+repo = "https://github.com/webmproject/libwebp"
+strip_prefix = "v"
 
 [build]
 needs = ["cc", "make"]
-source = { url = "https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-{{version}}.tar.gz", sha256 = "e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564", strip = 1 }
+source = { url = "https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-{{version}}.tar.gz", strip = 1 }
 deps = ["./cmake.toml"]
 
 # The two RPATH flags are for Linux. cmake passes its own -rpath, so the linker

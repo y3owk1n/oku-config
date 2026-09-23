@@ -5,25 +5,26 @@ homepage = "https://www.rust-lang.org"
 license = "MIT OR Apache-2.0"
 
 [version]
-value = "1.98.1"
+from = "github-releases"
+repo = "rust-lang/rust"
 
 # The standalone installer keeps rustc, cargo and the standard library in
 # separate directories. rustc cannot find std until install.sh has merged them
-# into one prefix, so this is a build and not an artifact. The checksums are
-# from the .sha256 file beside each download.
+# into one prefix, so this is a build and not an artifact. Each download is
+# checked against the .sha256 file beside it.
 [build]
 
 [[build.step]]
 when = { os = "darwin", arch = "arm64" }
-fetch = { url = "https://static.rust-lang.org/dist/rust-{{version}}-aarch64-apple-darwin.tar.xz", sha256 = "8f7c9de34c12c66dc55a6dbdd63b2b9645d4418775d4b975b0078a602f66e3e8", to = "rust.tar.xz" }
+fetch = { url = "https://static.rust-lang.org/dist/rust-{{version}}-aarch64-apple-darwin.tar.xz", sha256_url = "https://static.rust-lang.org/dist/rust-{{version}}-aarch64-apple-darwin.tar.xz.sha256", to = "rust.tar.xz" }
 
 [[build.step]]
 when = { os = "linux", arch = "amd64" }
-fetch = { url = "https://static.rust-lang.org/dist/rust-{{version}}-x86_64-unknown-linux-gnu.tar.xz", sha256 = "5326b36c53de11d148c8f8dab6553a3d1006c2cfd32123683073fad3c302605b", to = "rust.tar.xz" }
+fetch = { url = "https://static.rust-lang.org/dist/rust-{{version}}-x86_64-unknown-linux-gnu.tar.xz", sha256_url = "https://static.rust-lang.org/dist/rust-{{version}}-x86_64-unknown-linux-gnu.tar.xz.sha256", to = "rust.tar.xz" }
 
 [[build.step]]
 when = { os = "linux", arch = "arm64" }
-fetch = { url = "https://static.rust-lang.org/dist/rust-{{version}}-aarch64-unknown-linux-gnu.tar.xz", sha256 = "0b514a8cc1cbcd939bff0f151661fe58b6ea5c7a7f645a5098c69e32e8c1e0a2", to = "rust.tar.xz" }
+fetch = { url = "https://static.rust-lang.org/dist/rust-{{version}}-aarch64-unknown-linux-gnu.tar.xz", sha256_url = "https://static.rust-lang.org/dist/rust-{{version}}-aarch64-unknown-linux-gnu.tar.xz.sha256", to = "rust.tar.xz" }
 
 [[build.step]]
 extract = { file = "rust.tar.xz", to = "rust", strip = 1 }

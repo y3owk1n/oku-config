@@ -15,7 +15,7 @@ branch = "main"
 # docs/LINUX_SETUP.md lists them. libei needs Debian 13 or Ubuntu 24.04.
 [build]
 needs = ["git", "cc"]
-deps = [{ ref = "./go.toml", version = ">=1.26, <1.27" }]
+deps = [{ ref = "./go.toml", version = "~1.26" }]
 source = { git = "https://github.com/y3owk1n/neru", tag = "{{tag}}" }
 
 [[build.step]]

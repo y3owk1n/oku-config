@@ -9,7 +9,7 @@ from = "npm"
 repo = "@actions/languageserver"
 
 [runtime]
-deps = ["./node.toml"]
+deps = [{ ref = "./node.toml", version = "^22" }]
 
 [[artifact]]
 url = "https://registry.npmjs.org/@actions/languageserver/-/languageserver-{{version}}.tgz"

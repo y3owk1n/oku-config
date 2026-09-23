@@ -12,7 +12,7 @@ branch = "main"
 
 [build]
 needs = ["git"]
-deps = [{ ref = "./go.toml", version = ">=1.26, <1.27" }]
+deps = [{ ref = "./go.toml", version = "~1.26" }]
 source = { git = "https://github.com/y3owk1n/uts", tag = "{{tag}}" }
 
 [[build.step]]

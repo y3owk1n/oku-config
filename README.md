@@ -12,9 +12,8 @@ way or not at all.
 
 | Path | What it holds |
 |---|---|
-| `oku.toml` | The lists to include, my variables, the Forest Ink theme and the SSH key entry |
+| `oku.toml` | The lists to include, the node of the npm packages, my variables, the Forest Ink theme and the SSH key entry |
 | `oku.lock` | Resolved versions and hashes. oku writes it, change it with oku commands only |
-| `config.toml` | The node that npm packages run with |
 | `lists/packages.toml` | Packages with a prebuilt download, and the fonts |
 | `lists/apps.toml` | macOS apps, written from the Homebrew cask data |
 | `lists/built.toml`, `lists/rust-built.toml`, `lists/built-media.toml` | Tools that oku builds from source |

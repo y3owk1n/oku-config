@@ -13,10 +13,10 @@ value = "2.14.3"
 [build]
 needs = ["cc", "make"]
 source = { url = "https://downloads.sourceforge.net/project/freetype/freetype2/{{version}}/freetype-{{version}}.tar.xz", sha256 = "36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f", strip = 1 }
-deps = ["./cmake.toml", "./libpng.toml"]
+deps = ["./cmake.toml", { ref = "./libpng.toml", version = "~1.6" }]
 
 [runtime]
-deps = ["./libpng.toml"]
+deps = [{ ref = "./libpng.toml", version = "~1.6" }]
 
 # zlib and bzip2 come from the system. HarfBuzz and brotli stay off, so the
 # library needs libpng alone.

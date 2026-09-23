@@ -4,15 +4,17 @@ description = "Library and tools for TIFF images"
 homepage = "https://libtiff.gitlab.io/libtiff/"
 license = "libtiff"
 
-# The version and the sha256 are fixed. The project tags its release
-# candidates as v4.7.2rc2, with no dash, and oku would take one for a release.
-# To take a newer release, change both.
+# The version follows the project's GitLab releases, which leave out the
+# release candidates it tags as v4.7.2rc2. GitLab reports no checksum, so
+# oku.lock pins each version's archive when oku first downloads it.
 [version]
-value = "4.7.2"
+from = "gitlab-releases"
+repo = "libtiff/libtiff"
+strip_prefix = "v"
 
 [build]
 needs = ["cc", "make"]
-source = { url = "https://download.osgeo.org/libtiff/tiff-{{version}}.tar.gz", sha256 = "672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a", strip = 1 }
+source = { url = "https://download.osgeo.org/libtiff/tiff-{{version}}.tar.gz", strip = 1 }
 deps = ["./cmake.toml", "./jpeg-turbo.toml"]
 
 [runtime]

@@ -14,10 +14,10 @@ repo = "ImageMagick/ImageMagick"
 [build]
 needs = ["cc", "make", "git"]
 source = { git = "https://github.com/ImageMagick/ImageMagick", tag = "{{tag}}" }
-deps = ["./pkgconf.toml", "./jpeg-turbo.toml", "./libpng.toml", "./libtiff.toml", "./libwebp-lib.toml", "./freetype.toml", "./xz.toml"]
+deps = ["./pkgconf.toml", "./jpeg-turbo.toml", { ref = "./libpng.toml", version = "~1.6" }, "./libtiff.toml", "./libwebp-lib.toml", "./freetype.toml", "./xz.toml"]
 
 [runtime]
-deps = ["./jpeg-turbo.toml", "./libpng.toml", "./libtiff.toml", "./libwebp-lib.toml", "./freetype.toml", "./xz.toml"]
+deps = ["./jpeg-turbo.toml", { ref = "./libpng.toml", version = "~1.6" }, "./libtiff.toml", "./libwebp-lib.toml", "./freetype.toml", "./xz.toml"]
 
 # The coders are compiled into one static MagickCore with no loadable modules,
 # so magick needs nothing but the delegate libraries above. zlib, bzip2 and

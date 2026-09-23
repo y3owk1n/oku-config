@@ -1,8 +1,15 @@
 [package]
 name = "node"
+description = "JavaScript runtime"
+homepage = "https://nodejs.org"
+license = "MIT"
 
+# Every release line is here, so a list picks its line with a version such as
+# "^22", and `oku update` follows that line's patch releases.
 [version]
-value = "22.20.0"
+from = "github-releases"
+repo = "nodejs/node"
+strip_prefix = "v"
 
 [[artifact]]
 match = { os = "darwin", arch = "arm64" }

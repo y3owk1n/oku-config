@@ -31,14 +31,14 @@ git-lfs = "github:git-lfs/git-lfs"
 lazygit = "../packages/lazygit.toml"
 
 # editors and language servers
-# The npm: packages run on the node that config.toml names under [runtimes].
+# The npm: packages run on the node that ../oku.toml names under [runtimes].
 nvim = "../packages/nvim.toml"
 tree-sitter = "../packages/tree-sitter.toml"
 marksman = "../packages/marksman.toml"
 gh-actions-language-server = "../packages/gh-action-language-server.toml"
 # prettierd starts its daemon as `node` from PATH, so node is a package of its
 # own too, and not only the runtime dep of the npm packages.
-node = "../packages/node.toml"
+node = { ref = "../packages/node.toml", version = "^22" }
 bash-language-server = "npm:bash-language-server"
 fish-lsp = "npm:fish-lsp"
 prettierd = "npm:@fsouza/prettierd"

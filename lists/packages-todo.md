@@ -29,8 +29,8 @@ from source, the way their Homebrew formulae do it (`lists/built.toml`,
 
 - The source builds need the Command Line Tools on the machine first, and they compile on the first sync. A build cache (`oku cache`) would let a new machine download the results.
 - eza: no man pages, because upstream writes them in markdown and converts them with pandoc.
-- Most source builds follow upstream, so `oku update` takes a new release: xz, gifsicle, luarocks, coreutils, brotli, lz4, zstd, jpeg-turbo, jpegoptim, btop, eza, imagemagick, openjpeg and cmake. oku pins the digest of a source archive in `oku.lock` the first time it downloads it.
-- lua, libpng, libtiff, freetype, fontconfig, optipng, ghostscript, poppler, pkgconf, libwebp-lib and pngquant hold a fixed version, each for a reason that the top of its manifest gives. Take a newer one by editing `value` and `sha256` there.
+- Most source builds follow upstream, so `oku update` takes a new release: xz, gifsicle, luarocks, coreutils, brotli, lz4, zstd, jpeg-turbo, jpegoptim, btop, eza, imagemagick, openjpeg, cmake, libpng, libtiff, pkgconf, libwebp-lib and pngquant. pngquant gets each version's sha256 from crates.io, and xz and pkgconf from GitHub. oku pins the digest of a source archive in `oku.lock` the first time it downloads it.
+- lua, freetype, fontconfig, optipng, ghostscript and poppler hold a fixed version, each for a reason that the top of its manifest gives. Take a newer one by editing `value` and `sha256` there.
 - mole: built from source, because the release holds the two Go helpers only. The tree sits in `libexec/mole` and `bin/mole` links to it. `mo update` and `mo remove` have no use here, take a new version with `oku update mole`.
 - coreutils: every program has a `g` prefix, such as `gls` and `gdate`, so none takes the place of a macOS tool.
 - ghostscript: built with its bundled libraries, without X11, cups and tesseract.

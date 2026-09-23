@@ -1,3 +1,0 @@
-[sources]
-[runtimes]
-node = './packages/node.toml'

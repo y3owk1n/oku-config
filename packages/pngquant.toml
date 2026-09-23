@@ -5,11 +5,12 @@ homepage = "https://pngquant.org"
 license = "GPL-3.0-or-later"
 
 # The git repo keeps libimagequant in a submodule, which a tag archive leaves
-# out. The crate from crates.io is complete and has its Cargo.lock. crates.io
-# has nothing a version source can read, so the version and the sha256 are
-# fixed. To take a newer release, change both.
+# out. The crate from crates.io is complete and has its Cargo.lock, so the
+# version follows crates.io, and oku checks each .crate against the sha256
+# that crates.io publishes for it.
 [version]
-value = "3.0.3"
+from = "crates"
+repo = "pngquant"
 
 # The static feature makes libpng-sys and lcms2-sys compile their bundled C
 # with cc alone, so the build needs no cmake and no pkg-config. The libpng that
@@ -19,7 +20,7 @@ value = "3.0.3"
 [build]
 needs = ["cc"]
 deps = ["./rust.toml"]
-source = { url = "https://crates.io/api/v1/crates/pngquant/{{version}}/download", sha256 = "68a12bdd8825f9989f4ee9a6ab0b42727dae57728b939ef63453366697a07232", strip = 1 }
+source = { url = "https://static.crates.io/crates/pngquant/pngquant-{{version}}.crate", strip = 1 }
 
 [[build.step]]
 vendor = "cargo"

@@ -125,10 +125,10 @@ commands = true
 [[package]]
 name = 'bash-language-server'
 ref = 'npm:bash-language-server'
-manifest_sha256 = 'd6e566163f95777d0e993ab75589c105349c8cb6c1849797b85e7dc6c99a4a93'
+manifest_sha256 = 'bbf6bf5915590997814e07f0d59fece2ebcc0c2e7fa9e0167e9ca2c717dfd99b'
 version = '5.8.1'
 inferred = true
-manifest = "[package]\nname = \"bash-language-server\"\nhomepage = \"https://www.npmjs.com/package/bash-language-server\"\n\n[version]\nfrom = \"npm\"\nrepo = \"bash-language-server\"\n\n[runtime]\ndeps = [\"./packages/node.toml\"]\n\n[build]\ndeps = [\"./packages/node.toml\"]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"bash-language-server\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"bash-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/bash-language-server/out/cli.js\"] },\n] }\n"
+manifest = "[package]\nname = \"bash-language-server\"\nhomepage = \"https://www.npmjs.com/package/bash-language-server\"\n\n[version]\nfrom = \"npm\"\nrepo = \"bash-language-server\"\n\n[runtime]\ndeps = [{ ref = \"./packages/node.toml\", version = \"^22\" }]\n\n[build]\ndeps = [{ ref = \"./packages/node.toml\", version = \"^22\" }]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"bash-language-server\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"bash-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/bash-language-server/out/cli.js\"] },\n] }\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -146,46 +146,48 @@ vendor_sha256 = '90d3f5e39ab327bea4f69955db3b589836e0851db641214d3e3a22be8838af0
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
-version = '22.20.0'
+manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+version = '22.23.2'
+tag = 'v22.23.2'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
-sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-darwin-arm64.tar.gz'
+sha256 = '61130f394c1630d211dd50aecc4353d379480f36d3ac913cd85dbba1aed585c6'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
-sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-x64.tar.gz'
+sha256 = 'b294a556e639d64338823920e5866c21c02741742d2e1529ee1a225c1ec9252a'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
-sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-arm64.tar.gz'
+sha256 = '013b59cfd2819703a6f4a14ab891fc46fc2a4e3f5bcd92de3fb4929b43e35b30'
 
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
-version = '22.20.0'
+manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+version = '22.23.2'
+tag = 'v22.23.2'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
-sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-darwin-arm64.tar.gz'
+sha256 = '61130f394c1630d211dd50aecc4353d379480f36d3ac913cd85dbba1aed585c6'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
-sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-x64.tar.gz'
+sha256 = 'b294a556e639d64338823920e5866c21c02741742d2e1529ee1a225c1ec9252a'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
-sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-arm64.tar.gz'
+sha256 = '013b59cfd2819703a6f4a14ab891fc46fc2a4e3f5bcd92de3fb4929b43e35b30'
 
 [[package]]
 name = 'bat'
@@ -378,7 +380,7 @@ vendor_sha256 = '9e2b544906cef85c54fa15a06960d8d2fa249aa7e65f183bf831d56a39458b4
 [[package.dep]]
 name = 'rust'
 ref = './packages/rust.toml'
-manifest_sha256 = '91b66c71fbee6fe544ab4d7815cd92a64b6041eb6b2972c12b5219f212e87729'
+manifest_sha256 = '8f5d9e747320d4f26a533c5488eda3f798d24decb9e5db886b9cba70b5a23056'
 version = '1.98.1'
 
 [package.dep.platform]
@@ -497,10 +499,10 @@ sha256 = '57349f0111728c64b703a84e611aa97ff4d1fa8466385d64e67bd5bc3ffa49fc'
 [[package]]
 name = 'fish-lsp'
 ref = 'npm:fish-lsp'
-manifest_sha256 = 'ff8f26ea2ed3beed0064cbee595030a6231f1414656f16a62372fde0cf6e8992'
+manifest_sha256 = '22dc6435c7c3291b59244ef2647e7bca19ce0ef782f0640e406c60cd3df3a18d'
 version = '1.1.4'
 inferred = true
-manifest = "[package]\nname = \"fish-lsp\"\nhomepage = \"https://www.npmjs.com/package/fish-lsp\"\n\n[version]\nfrom = \"npm\"\nrepo = \"fish-lsp\"\n\n[runtime]\ndeps = [\"./packages/node.toml\"]\n\n[build]\ndeps = [\"./packages/node.toml\"]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"fish-lsp\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"fish-lsp\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/fish-lsp/dist/fish-lsp\"] },\n] }\n"
+manifest = "[package]\nname = \"fish-lsp\"\nhomepage = \"https://www.npmjs.com/package/fish-lsp\"\n\n[version]\nfrom = \"npm\"\nrepo = \"fish-lsp\"\n\n[runtime]\ndeps = [{ ref = \"./packages/node.toml\", version = \"^22\" }]\n\n[build]\ndeps = [{ ref = \"./packages/node.toml\", version = \"^22\" }]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"fish-lsp\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"fish-lsp\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/fish-lsp/dist/fish-lsp\"] },\n] }\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -518,68 +520,70 @@ vendor_sha256 = 'bb7fc69f2a69f74ba69bdb42f551f30e14a23c24310c90f8bbc581ec26a920d
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
-version = '22.20.0'
+manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+version = '22.23.2'
+tag = 'v22.23.2'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
-sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-darwin-arm64.tar.gz'
+sha256 = '61130f394c1630d211dd50aecc4353d379480f36d3ac913cd85dbba1aed585c6'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
-sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-x64.tar.gz'
+sha256 = 'b294a556e639d64338823920e5866c21c02741742d2e1529ee1a225c1ec9252a'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
-sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-arm64.tar.gz'
+sha256 = '013b59cfd2819703a6f4a14ab891fc46fc2a4e3f5bcd92de3fb4929b43e35b30'
 
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
-version = '22.20.0'
+manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+version = '22.23.2'
+tag = 'v22.23.2'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
-sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-darwin-arm64.tar.gz'
+sha256 = '61130f394c1630d211dd50aecc4353d379480f36d3ac913cd85dbba1aed585c6'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
-sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-x64.tar.gz'
+sha256 = 'b294a556e639d64338823920e5866c21c02741742d2e1529ee1a225c1ec9252a'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
-sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-arm64.tar.gz'
+sha256 = '013b59cfd2819703a6f4a14ab891fc46fc2a4e3f5bcd92de3fb4929b43e35b30'
 
 [[package]]
 name = 'freebuff'
 ref = './packages/freebuff.toml'
 manifest_sha256 = '5a05ed5b3b754299066e214b6b8ac17044226cff4b4fa856f6b6d699c8eb6508'
-version = '0.0.183'
+version = '0.0.185'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.183/freebuff-darwin-arm64.tar.gz'
-sha256 = '29985d404ffe57ad34d02058e6a1b53757c206bd77073c21714ea591d1b1935e'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.185/freebuff-darwin-arm64.tar.gz'
+sha256 = '95b042a8515c50e4b46b5813a8b99cf8d114b9058f933c59a93543ce28637e29'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.183/freebuff-linux-x64.tar.gz'
-sha256 = '5dcbf275204b4b8778d1f321f41a23cff6b738b315935190ddedb32f74405c57'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.185/freebuff-linux-x64.tar.gz'
+sha256 = '1e4486baa6be32c5473279b2cbc748b5ce6f703da498def2926a7fb09bff28b1'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.183/freebuff-linux-arm64.tar.gz'
-sha256 = 'ebd8afad2c3ca67d59bbd2d96bbd8a45c780b9428e79a729ffb7faf2fd918411'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.185/freebuff-linux-arm64.tar.gz'
+sha256 = '6e3703aafcc1b18ef764eff22f48a7778dddd17a070f6253a5f6085321aae6d6'
 
 [[package]]
 name = 'fzf'
@@ -636,7 +640,7 @@ commands = true
 [[package]]
 name = 'gh-actions-language-server'
 ref = './packages/gh-action-language-server.toml'
-manifest_sha256 = 'be88ef1337b5fc8f6f06c87d5fcf829c242d15f9053dff8a35d351a1400e8c09'
+manifest_sha256 = '6afe247a479ce8f4f740f34162b31810d2205a138d88cff9485760ddba1491df'
 version = '0.3.61'
 
 [package.platform]
@@ -658,24 +662,25 @@ sha256 = 'd152725064c64f862da5158cd630d4c67973edfb58bdabaa44054ffef03b9d03'
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
-version = '22.20.0'
+manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+version = '22.23.2'
+tag = 'v22.23.2'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
-sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-darwin-arm64.tar.gz'
+sha256 = '61130f394c1630d211dd50aecc4353d379480f36d3ac913cd85dbba1aed585c6'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
-sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-x64.tar.gz'
+sha256 = 'b294a556e639d64338823920e5866c21c02741742d2e1529ee1a225c1ec9252a'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
-sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-arm64.tar.gz'
+sha256 = '013b59cfd2819703a6f4a14ab891fc46fc2a4e3f5bcd92de3fb4929b43e35b30'
 
 [[package]]
 name = 'ghostscript'
@@ -748,7 +753,7 @@ sha256 = 'fd23d279681a6dfe3c15264e33f344045b3ba473da4d19f49e67a50994b077fb'
 [[package]]
 name = 'git-lfs'
 ref = 'github:git-lfs/git-lfs'
-commit = 'f0bffc4fe998fe5cb004dbca9e8951ea662ff66b'
+commit = '0043a645047926f4bd7f7091299095528253d575'
 manifest_sha256 = '8ae4f8efd0cf61ea579a055bdbeadb90a5e0d3f238825f6c8043febc6788c018'
 version = '3.8.0'
 tag = 'v3.8.0'
@@ -774,7 +779,7 @@ sha256 = 'ac9c8efac980bb0505ead384d087e2acb6486fd8498691a2165fa174ec6118c2'
 [[package]]
 name = 'imagemagick'
 ref = './packages/imagemagick.toml'
-manifest_sha256 = '25fc723ba8621562d6aea4549ee6fef2e84afa18b9392d0fac0be713848194e0'
+manifest_sha256 = 'b88b77a1279167969543407a62886cde604915f19dc1cc65324b5b400b29fd88'
 version = '7.1.2-31'
 
 [package.platform]
@@ -790,23 +795,24 @@ strategy = 'build'
 [[package.dep]]
 name = 'pkgconf'
 ref = './packages/pkgconf.toml'
-manifest_sha256 = '1f781ae264f88c2031cc4ceac137b04c09f2f1d61d51f605851002ecfb38b306'
+manifest_sha256 = 'd9a4e6cb0ba7845e1cf5dce83ab6d69cb1d8386551a735f5c9092b1254e48725'
 version = '3.0.7'
+tag = 'pkgconf-3.0.7'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.7.tar.xz'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
 sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.7.tar.xz'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
 sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.7.tar.xz'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
 sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
 
 [[package.dep]]
@@ -851,8 +857,9 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
@@ -873,8 +880,9 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep]]
 name = 'libtiff'
 ref = './packages/libtiff.toml'
-manifest_sha256 = 'b83986384e07d6b94ffc39107b3b6e329af2eb840befc94545620f32cd7bfde3'
+manifest_sha256 = '3f7ee3774909dd31a983ee10b41bfe14670f79a3a6c933b564a7ed5485693656'
 version = '4.7.2'
+tag = 'v4.7.2'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
@@ -996,8 +1004,9 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'libwebp-lib'
 ref = './packages/libwebp-lib.toml'
-manifest_sha256 = '59c81ec848630dec995be8422d8acc8c325f6dbdde6359313cdf674c8332ef4a'
+manifest_sha256 = '4a1c76bc4205b3228785e5da8d0839e8085afd94bf9c3f7c973001baa7537663'
 version = '1.6.0'
+tag = 'v1.6.0'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
@@ -1041,7 +1050,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = 'ded58fce74e5b5c2da4ce4532350877a727cacc4742334e64c953828db3e3616'
+manifest_sha256 = 'b4064f6beb55baafe69823457a12ecccd66a23e580dc8182f3d60588ab8ad459'
 version = '2.14.3'
 
 [package.dep.platform]
@@ -1086,8 +1095,9 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
@@ -1108,8 +1118,9 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
@@ -1192,8 +1203,9 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
@@ -1214,8 +1226,9 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep]]
 name = 'libtiff'
 ref = './packages/libtiff.toml'
-manifest_sha256 = 'b83986384e07d6b94ffc39107b3b6e329af2eb840befc94545620f32cd7bfde3'
+manifest_sha256 = '3f7ee3774909dd31a983ee10b41bfe14670f79a3a6c933b564a7ed5485693656'
 version = '4.7.2'
+tag = 'v4.7.2'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
@@ -1337,8 +1350,9 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'libwebp-lib'
 ref = './packages/libwebp-lib.toml'
-manifest_sha256 = '59c81ec848630dec995be8422d8acc8c325f6dbdde6359313cdf674c8332ef4a'
+manifest_sha256 = '4a1c76bc4205b3228785e5da8d0839e8085afd94bf9c3f7c973001baa7537663'
 version = '1.6.0'
+tag = 'v1.6.0'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
@@ -1382,7 +1396,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = 'ded58fce74e5b5c2da4ce4532350877a727cacc4742334e64c953828db3e3616'
+manifest_sha256 = 'b4064f6beb55baafe69823457a12ecccd66a23e580dc8182f3d60588ab8ad459'
 version = '2.14.3'
 
 [package.dep.platform]
@@ -1427,8 +1441,9 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
@@ -1449,8 +1464,9 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
@@ -1811,7 +1827,7 @@ sha256 = 'db8e124527f7f8048e3e6c91821b9c52ef173d92c01e47d221bf1337afd962fb'
 [[package]]
 name = 'mimi'
 ref = './packages/mimi.toml'
-manifest_sha256 = '9e4901aca0fc3201a69bace5a56b7116aedb843ddf3ef7f3a935971ccc1d3bc0'
+manifest_sha256 = 'd89e28ece2d590be814c0a6b73c0f2b0d033d3f4b805cd77f74b7021cf99e259'
 version = '2026.09.21-4571d50'
 tag = 'main'
 tag_commit = '4571d500b1df6fd98719170e4b51d5921688a541'
@@ -1888,7 +1904,7 @@ sha256 = 'ee215d57e0ec269c60cc9ceca68e6bda321ba9ee5afe24f4b0988703c2d87d12'
 [[package]]
 name = 'neru'
 ref = './packages/neru.toml'
-manifest_sha256 = '3eccd019091cd8af343c717308fdb79f3085acc6939f2d83fe86a7d2c1527c8f'
+manifest_sha256 = '700d843fa76540823c688fe431d2e2e86bc1450f7e81131a9683d60c5cd721cf'
 version = '2026.09.22-f1c126d'
 tag = 'main'
 tag_commit = 'f1c126d1c6cc01718cd45aa1e77842434f25708b'
@@ -1932,48 +1948,49 @@ sha256 = '211ffced9dcb9633a55eac6364816ec0ddd951389a740e88fa8b3337971bdda0'
 [[package]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
-version = '22.20.0'
+manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+version = '22.23.2'
+tag = 'v22.23.2'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
-sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-darwin-arm64.tar.gz'
+sha256 = '61130f394c1630d211dd50aecc4353d379480f36d3ac913cd85dbba1aed585c6'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
-sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-x64.tar.gz'
+sha256 = 'b294a556e639d64338823920e5866c21c02741742d2e1529ee1a225c1ec9252a'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
-sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-arm64.tar.gz'
+sha256 = '013b59cfd2819703a6f4a14ab891fc46fc2a4e3f5bcd92de3fb4929b43e35b30'
 
 [[package]]
 name = 'nvim'
 ref = './packages/nvim.toml'
 manifest_sha256 = 'b8b44381b34f1aedf7eae5625936ccf997f9a35d1cd3cab94cd7521355b58ba3'
-version = '2026.09.22-0f7538c'
+version = '2026.09.22-51d7d99'
 tag = 'nightly'
-tag_commit = '0f7538c4abb2cebdb34ab9736deea63006858542'
+tag_commit = '51d7d99fe7c3625f524b47f3f5d041c6a5895f81'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz'
-sha256 = '612b1c7ab6bbdb895b84db59e09487b228f372549337e9c2ecee7be7a8f90427'
+sha256 = 'e0f11a08286b1f7664d749a99b8fe3bd0732623a274630b6fd579a3293d217ff'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz'
-sha256 = 'bc1ffe6b225b8796093facfe6947d329979c62f314bd0c93eb90b48874b29b5e'
+sha256 = 'aa302e432b16c884638cb486fc5f97bfaf605e8d37fec8a83cbea1650f90091b'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-arm64.tar.gz'
-sha256 = 'cf358ffe32d906b9ba4efe7faebb2c533cd20937ce188904dfac245fbd13f126'
+sha256 = 'c02b721b2c756d224ae86034342f5eaac3dab3d1d7f4637ca2807de077697866'
 
 [[package]]
 name = 'opencode'
@@ -2035,32 +2052,32 @@ sha256 = '7ca77868f3a0d7d9f57b3f98615aad30cc59d23cc84bbff13f78846df0b493d4'
 [[package]]
 name = 'pngquant'
 ref = './packages/pngquant.toml'
-manifest_sha256 = 'a0c10fd6ad3b77bdbef235f23f8d98e9d39f42f97af9cc4102516b05125d70b5'
+manifest_sha256 = 'c34b0e562765c075cafd69dfccf643ff4c7a44efb208fae1661f6d9577f5346a'
 version = '3.0.3'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://crates.io/api/v1/crates/pngquant/3.0.3/download'
+url = 'https://static.crates.io/crates/pngquant/pngquant-3.0.3.crate'
 sha256 = '68a12bdd8825f9989f4ee9a6ab0b42727dae57728b939ef63453366697a07232'
 vendor_sha256 = '54e379e8254c0a9b244e3bc31d1dae84ab2e56eb038cc36ea2d2313ba1b5a641'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://crates.io/api/v1/crates/pngquant/3.0.3/download'
+url = 'https://static.crates.io/crates/pngquant/pngquant-3.0.3.crate'
 sha256 = '68a12bdd8825f9989f4ee9a6ab0b42727dae57728b939ef63453366697a07232'
 vendor_sha256 = '54e379e8254c0a9b244e3bc31d1dae84ab2e56eb038cc36ea2d2313ba1b5a641'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://crates.io/api/v1/crates/pngquant/3.0.3/download'
+url = 'https://static.crates.io/crates/pngquant/pngquant-3.0.3.crate'
 sha256 = '68a12bdd8825f9989f4ee9a6ab0b42727dae57728b939ef63453366697a07232'
 vendor_sha256 = '54e379e8254c0a9b244e3bc31d1dae84ab2e56eb038cc36ea2d2313ba1b5a641'
 
 [[package.dep]]
 name = 'rust'
 ref = './packages/rust.toml'
-manifest_sha256 = '91b66c71fbee6fe544ab4d7815cd92a64b6041eb6b2972c12b5219f212e87729'
+manifest_sha256 = '8f5d9e747320d4f26a533c5488eda3f798d24decb9e5db886b9cba70b5a23056'
 version = '1.98.1'
 
 [package.dep.platform]
@@ -2098,7 +2115,7 @@ sha256 = '69cdf3e8bacecc99fd420186d26dd5769c004ee218034457b3691a1cf408967c'
 [[package]]
 name = 'poppler'
 ref = './packages/poppler.toml'
-manifest_sha256 = 'adeaea8e832d1ba35fe0d9a9c4c0072bc69426355308ae683e5d90db2b1a2de4'
+manifest_sha256 = '1e7aa31b584ed244f5d3ac773b76528aed2a7cfdec2719b63d79d00cb248ea73'
 version = '26.09.0'
 
 [package.platform]
@@ -2143,7 +2160,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = 'ded58fce74e5b5c2da4ce4532350877a727cacc4742334e64c953828db3e3616'
+manifest_sha256 = 'b4064f6beb55baafe69823457a12ecccd66a23e580dc8182f3d60588ab8ad459'
 version = '2.14.3'
 
 [package.dep.platform]
@@ -2188,8 +2205,9 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
@@ -2210,8 +2228,9 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
@@ -2232,7 +2251,7 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep]]
 name = 'fontconfig'
 ref = './packages/fontconfig.toml'
-manifest_sha256 = '14f151173cb3878cc3f0aeca3ea14880fd8894387d59b6554c749cb011299ea3'
+manifest_sha256 = '4e2340ff25879ceeb25af553052098370eafcea57e9450b123e83000694ec454'
 version = '2.15.0'
 
 [package.dep.platform]
@@ -2254,29 +2273,30 @@ sha256 = '63a0658d0e06e0fa886106452b58ef04f21f58202ea02a94c39de0d3335d7c0e'
 [[package.dep.dep]]
 name = 'pkgconf'
 ref = './packages/pkgconf.toml'
-manifest_sha256 = '1f781ae264f88c2031cc4ceac137b04c09f2f1d61d51f605851002ecfb38b306'
+manifest_sha256 = 'd9a4e6cb0ba7845e1cf5dce83ab6d69cb1d8386551a735f5c9092b1254e48725'
 version = '3.0.7'
+tag = 'pkgconf-3.0.7'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.7.tar.xz'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
 sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.7.tar.xz'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
 sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.7.tar.xz'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
 sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
 
 [[package.dep.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = 'ded58fce74e5b5c2da4ce4532350877a727cacc4742334e64c953828db3e3616'
+manifest_sha256 = 'b4064f6beb55baafe69823457a12ecccd66a23e580dc8182f3d60588ab8ad459'
 version = '2.14.3'
 
 [package.dep.dep.platform]
@@ -2321,8 +2341,9 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
@@ -2343,8 +2364,9 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
@@ -2365,8 +2387,9 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
@@ -2387,7 +2410,7 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = 'ded58fce74e5b5c2da4ce4532350877a727cacc4742334e64c953828db3e3616'
+manifest_sha256 = 'b4064f6beb55baafe69823457a12ecccd66a23e580dc8182f3d60588ab8ad459'
 version = '2.14.3'
 
 [package.dep.dep.platform]
@@ -2432,8 +2455,9 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
@@ -2454,8 +2478,9 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
@@ -2476,8 +2501,9 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
@@ -2537,8 +2563,9 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
@@ -2559,8 +2586,9 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep]]
 name = 'libtiff'
 ref = './packages/libtiff.toml'
-manifest_sha256 = 'b83986384e07d6b94ffc39107b3b6e329af2eb840befc94545620f32cd7bfde3'
+manifest_sha256 = '3f7ee3774909dd31a983ee10b41bfe14670f79a3a6c933b564a7ed5485693656'
 version = '4.7.2'
+tag = 'v4.7.2'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
@@ -2722,7 +2750,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = 'ded58fce74e5b5c2da4ce4532350877a727cacc4742334e64c953828db3e3616'
+manifest_sha256 = 'b4064f6beb55baafe69823457a12ecccd66a23e580dc8182f3d60588ab8ad459'
 version = '2.14.3'
 
 [package.dep.platform]
@@ -2767,8 +2795,9 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
@@ -2789,8 +2818,9 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
@@ -2811,7 +2841,7 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep]]
 name = 'fontconfig'
 ref = './packages/fontconfig.toml'
-manifest_sha256 = '14f151173cb3878cc3f0aeca3ea14880fd8894387d59b6554c749cb011299ea3'
+manifest_sha256 = '4e2340ff25879ceeb25af553052098370eafcea57e9450b123e83000694ec454'
 version = '2.15.0'
 
 [package.dep.platform]
@@ -2833,29 +2863,30 @@ sha256 = '63a0658d0e06e0fa886106452b58ef04f21f58202ea02a94c39de0d3335d7c0e'
 [[package.dep.dep]]
 name = 'pkgconf'
 ref = './packages/pkgconf.toml'
-manifest_sha256 = '1f781ae264f88c2031cc4ceac137b04c09f2f1d61d51f605851002ecfb38b306'
+manifest_sha256 = 'd9a4e6cb0ba7845e1cf5dce83ab6d69cb1d8386551a735f5c9092b1254e48725'
 version = '3.0.7'
+tag = 'pkgconf-3.0.7'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.7.tar.xz'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
 sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.7.tar.xz'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
 sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.7.tar.xz'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
 sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
 
 [[package.dep.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = 'ded58fce74e5b5c2da4ce4532350877a727cacc4742334e64c953828db3e3616'
+manifest_sha256 = 'b4064f6beb55baafe69823457a12ecccd66a23e580dc8182f3d60588ab8ad459'
 version = '2.14.3'
 
 [package.dep.dep.platform]
@@ -2900,8 +2931,9 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
@@ -2922,8 +2954,9 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
@@ -2944,8 +2977,9 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
@@ -2966,7 +3000,7 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = 'ded58fce74e5b5c2da4ce4532350877a727cacc4742334e64c953828db3e3616'
+manifest_sha256 = 'b4064f6beb55baafe69823457a12ecccd66a23e580dc8182f3d60588ab8ad459'
 version = '2.14.3'
 
 [package.dep.dep.platform]
@@ -3011,8 +3045,9 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
@@ -3033,8 +3068,9 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
@@ -3055,8 +3091,9 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
@@ -3116,8 +3153,9 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '99f790aacf288822c622ccf9414e68bc19fdfeb271ee6145c1a2c1790322bc5c'
+manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
 version = '1.6.58'
+tag = 'v1.6.58'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
@@ -3138,8 +3176,9 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep]]
 name = 'libtiff'
 ref = './packages/libtiff.toml'
-manifest_sha256 = 'b83986384e07d6b94ffc39107b3b6e329af2eb840befc94545620f32cd7bfde3'
+manifest_sha256 = '3f7ee3774909dd31a983ee10b41bfe14670f79a3a6c933b564a7ed5485693656'
 version = '4.7.2'
+tag = 'v4.7.2'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
@@ -3301,10 +3340,10 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package]]
 name = 'prettierd'
 ref = 'npm:@fsouza/prettierd'
-manifest_sha256 = '7fa41d7e3dd01749a50e3861509ae630f86ef31d96919c2adf98710d2a157b95'
+manifest_sha256 = '0c5ec02d4c59953f8fff3dab03d657c9bc2dff16356b0e968f369cbe6035244a'
 version = '0.29.0'
 inferred = true
-manifest = "[package]\nname = \"prettierd\"\nhomepage = \"https://www.npmjs.com/package/@fsouza/prettierd\"\n\n[version]\nfrom = \"npm\"\nrepo = \"@fsouza/prettierd\"\n\n[runtime]\ndeps = [\"./packages/node.toml\"]\n\n[build]\ndeps = [\"./packages/node.toml\"]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"@fsouza/prettierd\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"prettierd\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/@fsouza/prettierd/bin/prettierd\"] },\n] }\n"
+manifest = "[package]\nname = \"prettierd\"\nhomepage = \"https://www.npmjs.com/package/@fsouza/prettierd\"\n\n[version]\nfrom = \"npm\"\nrepo = \"@fsouza/prettierd\"\n\n[runtime]\ndeps = [{ ref = \"./packages/node.toml\", version = \"^22\" }]\n\n[build]\ndeps = [{ ref = \"./packages/node.toml\", version = \"^22\" }]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"@fsouza/prettierd\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"prettierd\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/@fsouza/prettierd/bin/prettierd\"] },\n] }\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -3322,46 +3361,48 @@ vendor_sha256 = '62fc7f6aa5bf2da521ef14c26b703fe3367f7dd7a1023cff97104216eb30fe6
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
-version = '22.20.0'
+manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+version = '22.23.2'
+tag = 'v22.23.2'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
-sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-darwin-arm64.tar.gz'
+sha256 = '61130f394c1630d211dd50aecc4353d379480f36d3ac913cd85dbba1aed585c6'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
-sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-x64.tar.gz'
+sha256 = 'b294a556e639d64338823920e5866c21c02741742d2e1529ee1a225c1ec9252a'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
-sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-arm64.tar.gz'
+sha256 = '013b59cfd2819703a6f4a14ab891fc46fc2a4e3f5bcd92de3fb4929b43e35b30'
 
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
-version = '22.20.0'
+manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+version = '22.23.2'
+tag = 'v22.23.2'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
-sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-darwin-arm64.tar.gz'
+sha256 = '61130f394c1630d211dd50aecc4353d379480f36d3ac913cd85dbba1aed585c6'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
-sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-x64.tar.gz'
+sha256 = 'b294a556e639d64338823920e5866c21c02741742d2e1529ee1a225c1ec9252a'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
-sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-arm64.tar.gz'
+sha256 = '013b59cfd2819703a6f4a14ab891fc46fc2a4e3f5bcd92de3fb4929b43e35b30'
 
 [[package]]
 name = 'rip2'
@@ -3615,7 +3656,7 @@ commands = true
 [[package]]
 name = 'stripe-cli'
 ref = 'github:stripe/stripe-cli'
-commit = '39798caac896b9716f3417ca8d50db999a461a01'
+commit = 'ce127e24d975dde238a8cd3eb395a00179a11310'
 manifest_sha256 = 'a1f28c24ef1e91ac3473c88a3cb28701a1706ba4c39c75984e6bc89727d1e047'
 version = '1.51.1'
 tag = 'v1.51.1'
@@ -3726,7 +3767,7 @@ sha256 = 'a8435c93cfb5f8bbfeea4b134cfad1ac66b67632b75e438c63b1a8ae043bef0e'
 [[package]]
 name = 'uts'
 ref = './packages/uts.toml'
-manifest_sha256 = '271e171fd3eb8d18e44a7f719afb2b7fb3262e86b862af813473cea27c68c493'
+manifest_sha256 = '1c8f9a4b9c762d3118d44a27ac34d4d31140f35437434c201f1a122c5c3de72d'
 version = '2026.09.22-7461520'
 tag = 'main'
 tag_commit = '7461520cd1017684011ecc3208261ea7abcf6a3b'
@@ -3782,10 +3823,10 @@ sha256 = '6ed17e8d7245931fd405c419321ace7ef9333fe2e3d59b3a7f78e34fcbe628b6'
 [[package]]
 name = 'vscode-langservers-extracted'
 ref = 'npm:vscode-langservers-extracted'
-manifest_sha256 = '029ecfa98f1aa588dfe173ea9567c0d17d97856f6f18d2fef784dc8b6765f4fc'
+manifest_sha256 = '659fc57eeebfff968bad449df35a2043e9c50710bb4203c2bfec7571c576eb6a'
 version = '4.10.0'
 inferred = true
-manifest = "[package]\nname = \"vscode-langservers-extracted\"\nhomepage = \"https://www.npmjs.com/package/vscode-langservers-extracted\"\n\n[version]\nfrom = \"npm\"\nrepo = \"vscode-langservers-extracted\"\n\n[runtime]\ndeps = [\"./packages/node.toml\"]\n\n[build]\ndeps = [\"./packages/node.toml\"]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"vscode-langservers-extracted\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"vscode-css-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-css-language-server\"] },\n  { name = \"vscode-eslint-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-eslint-language-server\"] },\n  { name = \"vscode-html-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-html-language-server\"] },\n  { name = \"vscode-json-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-json-language-server\"] },\n  { name = \"vscode-markdown-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-markdown-language-server\"] },\n] }\n"
+manifest = "[package]\nname = \"vscode-langservers-extracted\"\nhomepage = \"https://www.npmjs.com/package/vscode-langservers-extracted\"\n\n[version]\nfrom = \"npm\"\nrepo = \"vscode-langservers-extracted\"\n\n[runtime]\ndeps = [{ ref = \"./packages/node.toml\", version = \"^22\" }]\n\n[build]\ndeps = [{ ref = \"./packages/node.toml\", version = \"^22\" }]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"vscode-langservers-extracted\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"vscode-css-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-css-language-server\"] },\n  { name = \"vscode-eslint-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-eslint-language-server\"] },\n  { name = \"vscode-html-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-html-language-server\"] },\n  { name = \"vscode-json-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-json-language-server\"] },\n  { name = \"vscode-markdown-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-markdown-language-server\"] },\n] }\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -3803,46 +3844,48 @@ vendor_sha256 = '82e13674de56d0089177cffec31095ae9cf58cfc0d9d18a850e306178f24632
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
-version = '22.20.0'
+manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+version = '22.23.2'
+tag = 'v22.23.2'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
-sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-darwin-arm64.tar.gz'
+sha256 = '61130f394c1630d211dd50aecc4353d379480f36d3ac913cd85dbba1aed585c6'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
-sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-x64.tar.gz'
+sha256 = 'b294a556e639d64338823920e5866c21c02741742d2e1529ee1a225c1ec9252a'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
-sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-arm64.tar.gz'
+sha256 = '013b59cfd2819703a6f4a14ab891fc46fc2a4e3f5bcd92de3fb4929b43e35b30'
 
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
-version = '22.20.0'
+manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+version = '22.23.2'
+tag = 'v22.23.2'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
-sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-darwin-arm64.tar.gz'
+sha256 = '61130f394c1630d211dd50aecc4353d379480f36d3ac913cd85dbba1aed585c6'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
-sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-x64.tar.gz'
+sha256 = 'b294a556e639d64338823920e5866c21c02741742d2e1529ee1a225c1ec9252a'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
-sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-arm64.tar.gz'
+sha256 = '013b59cfd2819703a6f4a14ab891fc46fc2a4e3f5bcd92de3fb4929b43e35b30'
 
 [[package]]
 name = 'whatsapp'
@@ -3882,10 +3925,10 @@ sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
 [[package]]
 name = 'yaml-language-server'
 ref = 'npm:yaml-language-server'
-manifest_sha256 = '86d0186a9a72d40f1cf9c03460dc296fb76fbff8e1dcd02ae42b4dcdfc8ee71c'
+manifest_sha256 = '6e0c9ee4eec2dc67c9fdbbf645d7736320f99b9831519156317580990a7ca2d7'
 version = '1.24.0'
 inferred = true
-manifest = "[package]\nname = \"yaml-language-server\"\nhomepage = \"https://www.npmjs.com/package/yaml-language-server\"\n\n[version]\nfrom = \"npm\"\nrepo = \"yaml-language-server\"\n\n[runtime]\ndeps = [\"./packages/node.toml\"]\n\n[build]\ndeps = [\"./packages/node.toml\"]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"yaml-language-server\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"yaml-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/yaml-language-server/bin/yaml-language-server\"] },\n] }\n"
+manifest = "[package]\nname = \"yaml-language-server\"\nhomepage = \"https://www.npmjs.com/package/yaml-language-server\"\n\n[version]\nfrom = \"npm\"\nrepo = \"yaml-language-server\"\n\n[runtime]\ndeps = [{ ref = \"./packages/node.toml\", version = \"^22\" }]\n\n[build]\ndeps = [{ ref = \"./packages/node.toml\", version = \"^22\" }]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"yaml-language-server\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"yaml-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/yaml-language-server/bin/yaml-language-server\"] },\n] }\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -3903,46 +3946,48 @@ vendor_sha256 = '70ca5478a6e76a3d437e66b8a2a9c7d70d12d19c1489f5ba8e332c628cd8438
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
-version = '22.20.0'
+manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+version = '22.23.2'
+tag = 'v22.23.2'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
-sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-darwin-arm64.tar.gz'
+sha256 = '61130f394c1630d211dd50aecc4353d379480f36d3ac913cd85dbba1aed585c6'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
-sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-x64.tar.gz'
+sha256 = 'b294a556e639d64338823920e5866c21c02741742d2e1529ee1a225c1ec9252a'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
-sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-arm64.tar.gz'
+sha256 = '013b59cfd2819703a6f4a14ab891fc46fc2a4e3f5bcd92de3fb4929b43e35b30'
 
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '9da97c8364a6348ae0d02b186432e59b1df54d0b40aae6e5fe58300f68b36887'
-version = '22.20.0'
+manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+version = '22.23.2'
+tag = 'v22.23.2'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz'
-sha256 = 'cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-darwin-arm64.tar.gz'
+sha256 = '61130f394c1630d211dd50aecc4353d379480f36d3ac913cd85dbba1aed585c6'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz'
-sha256 = 'eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-x64.tar.gz'
+sha256 = 'b294a556e639d64338823920e5866c21c02741742d2e1529ee1a225c1ec9252a'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-arm64.tar.gz'
-sha256 = '4181609e03dcb9880e7e5bf956061ecc0503c77a480c6631d868cb1f65a2c7dd'
+url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-arm64.tar.gz'
+sha256 = '013b59cfd2819703a6f4a14ab891fc46fc2a4e3f5bcd92de3fb4929b43e35b30'
 
 [[package]]
 name = 'zoxide'
