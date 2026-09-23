@@ -567,23 +567,23 @@ sha256 = '013b59cfd2819703a6f4a14ab891fc46fc2a4e3f5bcd92de3fb4929b43e35b30'
 name = 'freebuff'
 ref = './packages/freebuff.toml'
 manifest_sha256 = '5a05ed5b3b754299066e214b6b8ac17044226cff4b4fa856f6b6d699c8eb6508'
-version = '0.0.185'
+version = '0.0.186'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.185/freebuff-darwin-arm64.tar.gz'
-sha256 = '95b042a8515c50e4b46b5813a8b99cf8d114b9058f933c59a93543ce28637e29'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.186/freebuff-darwin-arm64.tar.gz'
+sha256 = '231d31896225b9cd67b23bd9050a3099ca5e9d6928fea61d0e3e1b2e479c3910'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.185/freebuff-linux-x64.tar.gz'
-sha256 = '1e4486baa6be32c5473279b2cbc748b5ce6f703da498def2926a7fb09bff28b1'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.186/freebuff-linux-x64.tar.gz'
+sha256 = '3235b4a873799bc69ebb7be314506011bdcbd0e74f5459401268f01d7bc908fa'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.185/freebuff-linux-arm64.tar.gz'
-sha256 = '6e3703aafcc1b18ef764eff22f48a7778dddd17a070f6253a5f6085321aae6d6'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.186/freebuff-linux-arm64.tar.gz'
+sha256 = 'd76cdac794034674d906a34104df9601b8af59581b1b0fc92ee7d3f222729947'
 
 [[package]]
 name = 'fzf'
@@ -1827,10 +1827,10 @@ sha256 = 'db8e124527f7f8048e3e6c91821b9c52ef173d92c01e47d221bf1337afd962fb'
 [[package]]
 name = 'mimi'
 ref = './packages/mimi.toml'
-manifest_sha256 = 'd89e28ece2d590be814c0a6b73c0f2b0d033d3f4b805cd77f74b7021cf99e259'
-version = '2026.09.21-4571d50'
+manifest_sha256 = '374eaa327912b5bdabc92eb9b2176944e1d3601f357ec570a9260e29789c55b1'
+version = '2026.09.23-1107d3e'
 tag = 'main'
-tag_commit = '4571d500b1df6fd98719170e4b51d5921688a541'
+tag_commit = '1107d3e16d4e699537e2229844f5c894d3180b04'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -1905,9 +1905,9 @@ sha256 = 'ee215d57e0ec269c60cc9ceca68e6bda321ba9ee5afe24f4b0988703c2d87d12'
 name = 'neru'
 ref = './packages/neru.toml'
 manifest_sha256 = '700d843fa76540823c688fe431d2e2e86bc1450f7e81131a9683d60c5cd721cf'
-version = '2026.09.22-f1c126d'
+version = '2026.09.23-4b1e760'
 tag = 'main'
-tag_commit = 'f1c126d1c6cc01718cd45aa1e77842434f25708b'
+tag_commit = '4b1e760075da0abf42997cfe55aafc947be0a821'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -1944,29 +1944,6 @@ sha256 = 'd0f743b33e8d8945e6b1f432edd15785c70507121d6e2a723b21285eddf8b57b'
 strategy = 'artifact'
 url = 'https://dl.google.com/go/go1.26.8.linux-arm64.tar.gz'
 sha256 = '211ffced9dcb9633a55eac6364816ec0ddd951389a740e88fa8b3337971bdda0'
-
-[[package]]
-name = 'node'
-ref = './packages/node.toml'
-manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
-version = '22.23.2'
-tag = 'v22.23.2'
-
-[package.platform]
-[package.platform.darwin-arm64]
-strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-darwin-arm64.tar.gz'
-sha256 = '61130f394c1630d211dd50aecc4353d379480f36d3ac913cd85dbba1aed585c6'
-
-[package.platform.linux-amd64-glibc]
-strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-x64.tar.gz'
-sha256 = 'b294a556e639d64338823920e5866c21c02741742d2e1529ee1a225c1ec9252a'
-
-[package.platform.linux-arm64-glibc]
-strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.2/node-v22.23.2-linux-arm64.tar.gz'
-sha256 = '013b59cfd2819703a6f4a14ab891fc46fc2a4e3f5bcd92de3fb4929b43e35b30'
 
 [[package]]
 name = 'nvim'
@@ -3768,9 +3745,9 @@ sha256 = 'a8435c93cfb5f8bbfeea4b134cfad1ac66b67632b75e438c63b1a8ae043bef0e'
 name = 'uts'
 ref = './packages/uts.toml'
 manifest_sha256 = '1c8f9a4b9c762d3118d44a27ac34d4d31140f35437434c201f1a122c5c3de72d'
-version = '2026.09.22-7461520'
+version = '2026.09.23-a735d93'
 tag = 'main'
-tag_commit = '7461520cd1017684011ecc3208261ea7abcf6a3b'
+tag_commit = 'a735d93e2759ffba3bb74bea959d8dfab3868cac'
 
 [package.platform]
 [package.platform.darwin-arm64]
