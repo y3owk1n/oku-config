@@ -39,8 +39,8 @@ sha256 = ''
 [[package]]
 name = 'affinity'
 ref = './packages/affinity.toml'
-manifest_sha256 = '4c7bd8e5c0e4d44558e36c68c4da38eca9f7458bf1f99d86dfa1f439f3f6327e'
-version = '3.3.0'
+manifest_sha256 = 'a8d9be80c003a3df02bc9fe6460d1d0e706f96777c2618cf1b945d30e9994adf'
+version = '3.3.0+4850'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -485,24 +485,24 @@ sha256 = '2ab6aba60ee84412dff9188720703376cb4e7aaf7e0b5e43aa8249f2acae5bf8'
 [[package]]
 name = 'firefox'
 ref = './packages/firefox.toml'
-manifest_sha256 = 'bc2dba9ad09d71a9a4f1428badd23fba2f91088b024ee16ec279f5ad84052c9c'
-version = '156.0'
+manifest_sha256 = '34485929124c3677d9aae59c936c3b381eb43fe04bbdd30a01b7208b90d23f29'
+version = '156.0.1'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/156.0/mac/en-US/Firefox%20156.0.dmg'
-sha256 = 'fecc46103039ca4a77ecb2b2ef7b03892f922e13db0782f8570c512b2e458515'
+url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/156.0.1/mac/en-US/Firefox%20156.0.1.dmg'
+sha256 = '7eda94829670b892524eddfee575d16fe74b9329d3d0795367cce035207d34a4'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/156.0/linux-x86_64/en-US/firefox-156.0.tar.xz'
-sha256 = '1d44cd02351c307c3e19061ea2a4d18a30f236e6be862b94f2282564afdb0167'
+url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/156.0.1/linux-x86_64/en-US/firefox-156.0.1.tar.xz'
+sha256 = '7405c0487fa3e517c1e20e5aec0ed14014185dad6357d99a59b53f65acb10ed6'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/156.0/linux-aarch64/en-US/firefox-156.0.tar.xz'
-sha256 = '7dd9425eafa0decf61c0f6bc56dc71cba84595495dc01395d3eea38a18aaf710'
+url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/156.0.1/linux-aarch64/en-US/firefox-156.0.1.tar.xz'
+sha256 = 'ab705ced251327e99e71493ca55698c9b7c07c5eb219ff2bfd3fe497a6b0f78c'
 
 [[package]]
 name = 'fish'
@@ -597,23 +597,23 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 name = 'freebuff'
 ref = './packages/freebuff.toml'
 manifest_sha256 = '5a05ed5b3b754299066e214b6b8ac17044226cff4b4fa856f6b6d699c8eb6508'
-version = '0.0.189'
+version = '0.0.192'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.189/freebuff-darwin-arm64.tar.gz'
-sha256 = '5e55d86fce10160e83d9dc5dd181f37aa804dbc245401dac8e22d2cd13c976f8'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.192/freebuff-darwin-arm64.tar.gz'
+sha256 = '4c3839bcae59f64c0c781008d952ebfb561b0ad03d72621c8b228e766f489ab2'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.189/freebuff-linux-x64.tar.gz'
-sha256 = 'e045f736fec7420c7a23b4461f22e8d8060497533bb9835b3e5142d2eddca3e1'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.192/freebuff-linux-x64.tar.gz'
+sha256 = 'd40ca43245d7cafef4f9b072e75e3cc6a9921fb5981cce6af187445c1985eaef'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.189/freebuff-linux-arm64.tar.gz'
-sha256 = 'bfbe902cb4efd98391516ae1f597d94ca0bc18b74094f2846d64abce9fd36e20'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.192/freebuff-linux-arm64.tar.gz'
+sha256 = '0feac08285132b88cb86c7d7b982605b641f9c83aa18f66c1e7a2fe5fe84e653'
 
 [[package]]
 name = 'fzf'
@@ -737,25 +737,29 @@ sha256 = 'c20492bc8ebb96c87fa2e52a0926e1cda8cde95d66145e018ac713fed5da38cf'
 [[package]]
 name = 'ghostty'
 ref = './packages/ghostty.toml'
-manifest_sha256 = '052aa948e56f26a212fe0812e5170bfd6e13f60aa2ea80d49822e05ebc9b1ccf'
+manifest_sha256 = '8a8e5aa5761440e079ceebec74342107512d141e772499953eb89fc1d36bcaf5'
 version = '1.3.1'
-tag = 'v1.3.1'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://release.files.ghostty.org/1.3.1/Ghostty.dmg'
 sha256 = '18cff2b0a6cee90eead9c7d3064e808a252a40baf214aa752c1ecb793b8f5f69'
+version = '1.3.1'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/pkgforge-dev/ghostty-appimage/releases/download/v1.3.1/Ghostty-1.3.1-x86_64.AppImage'
 sha256 = 'fde48d2b716afd1978766879bbf1aae30dd305e8ad86a1037a2614a14d82dc28'
+version = '1.3.1'
+tag = 'v1.3.1'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/pkgforge-dev/ghostty-appimage/releases/download/v1.3.1/Ghostty-1.3.1-aarch64.AppImage'
 sha256 = '55b7d1e2073b80954e23167a70f9e5994189d81e954d36dad4d2dc2d2fe6c121'
+version = '1.3.1'
+tag = 'v1.3.1'
 
 [[package]]
 name = 'gifsicle'
@@ -1984,25 +1988,25 @@ sha256 = '211ffced9dcb9633a55eac6364816ec0ddd951389a740e88fa8b3337971bdda0'
 name = 'nvim'
 ref = './packages/nvim.toml'
 manifest_sha256 = 'b8b44381b34f1aedf7eae5625936ccf997f9a35d1cd3cab94cd7521355b58ba3'
-version = '2026.09.22-51d7d99'
+version = '2026.09.24-ac1a060'
 tag = 'nightly'
-tag_commit = '51d7d99fe7c3625f524b47f3f5d041c6a5895f81'
+tag_commit = 'ac1a06021de60ae2b94ac23aa51729c867f57ce0'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz'
-sha256 = 'e0f11a08286b1f7664d749a99b8fe3bd0732623a274630b6fd579a3293d217ff'
+sha256 = '5732b7860e9bcf8f6a2c04a3a7a8d7c9d1cad645f1d8621902b5ec14cbdb4a05'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz'
-sha256 = 'aa302e432b16c884638cb486fc5f97bfaf605e8d37fec8a83cbea1650f90091b'
+sha256 = '1a8991ec22b125d02504a0648a22f2017e17a951dfa76cd9efb5e347399dfc17'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-arm64.tar.gz'
-sha256 = 'c02b721b2c756d224ae86034342f5eaac3dab3d1d7f4637ca2807de077697866'
+sha256 = '51bc30ca31b058e6bc908f9464b345a57a3de156fbea9c9c493452538154e7c9'
 
 [[package]]
 name = 'opencode'
@@ -3746,7 +3750,7 @@ commands = true
 [[package]]
 name = 'utm'
 ref = './packages/utm.toml'
-manifest_sha256 = 'a4f32d2ed8d69efbec6f160fbe357e09080bcb9583fced4e5eda2cb72ae475c7'
+manifest_sha256 = 'd787f13708d049b7cb04dac5d0f240d6ce0cbda9a1405ad6d9e2449391e351b8'
 version = '4.7.5'
 tag = 'v4.7.5'
 
@@ -3803,13 +3807,13 @@ sha256 = '211ffced9dcb9633a55eac6364816ec0ddd951389a740e88fa8b3337971bdda0'
 [[package]]
 name = 'virtualbuddy'
 ref = './packages/virtualbuddy.toml'
-manifest_sha256 = 'ed0e187aa5b0356e31b8784e6bd4b72793f50a61b17b01f490b9ad2ec991f373'
-version = '2.1'
+manifest_sha256 = '905b7675182599d80c93cfea0ea0a2592e8f8b80c2580bd41ac4d152bdb0deb1'
+version = '2.1+325'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/insidegui/VirtualBuddy/releases/download/2.1/VirtualBuddy_v2.1-325.dmg'
+url = 'https://su.virtualbuddy.app/VirtualBuddy_v2.1-325.dmg'
 sha256 = '6ed17e8d7245931fd405c419321ace7ef9333fe2e3d59b3a7f78e34fcbe628b6'
 
 [[package]]
@@ -3882,14 +3886,14 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 [[package]]
 name = 'whatsapp'
 ref = './packages/whatsapp.toml'
-manifest_sha256 = '5121998be02f98cefdfd8f70c42655d32bbb9e787a917346c2d4d25386bdae45'
-version = '26.37.22'
+manifest_sha256 = '899c45c2fb9ba4689b30e5aa2d93d556606c3cf234030f31f378111ac8ee6b96'
+version = '26.38.18'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://web.whatsapp.com/desktop/mac_native/release/?version=2.26.37.22&extension=zip&configuration=Release&branch=master&is_buck=true'
-sha256 = '6f471e73bff882bb0b32271514b728f63dd74fb74f1abe90305f9fbb47e9e965'
+url = 'https://web.whatsapp.com/desktop/mac_native/release/?version=2.26.38.18&extension=zip&configuration=Release&branch=master&is_buck=true'
+sha256 = 'b6c6dac534bb8038e7ad9f8274ecd9c2514e208465e27f596bf784bdd3906d94'
 
 [[package]]
 name = 'xz'
