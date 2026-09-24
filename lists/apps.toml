@@ -1,10 +1,10 @@
-# macOS apps that Homebrew installs as casks. Each one fixes a version, see the
-# top of its manifest for how to take a newer one.
+# Desktop apps. The top of each manifest says where its versions come from.
+# orbstack and whatsapp have no Linux build, and discord none for arm64 Linux.
 
 [packages]
-brave = { ref = "../packages/brave.toml", when = { os = "darwin" } }
-discord = { ref = "../packages/discord.toml", when = { os = "darwin" } }
-firefox = { ref = "../packages/firefox.toml", when = { os = "darwin" } }
+brave = "../packages/brave.toml"
+discord = { ref = "../packages/discord.toml", when = [{ os = "darwin" }, { os = "linux", arch = "amd64" }] }
+firefox = "../packages/firefox.toml"
 orbstack = { ref = "../packages/orbstack.toml", when = { os = "darwin" } }
 whatsapp = { ref = "../packages/whatsapp.toml", when = { os = "darwin" } }
 

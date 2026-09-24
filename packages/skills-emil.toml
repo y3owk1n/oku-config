@@ -1,6 +1,6 @@
-# Agent skills from github.com/emilkowalski/skills, pinned to one commit.
-# The version is fixed, so `oku update` never moves it. To take a newer
-# commit, follow lists/ai-notes.md, "Update an external skill repo".
+# Agent skills from github.com/emilkowalski/skills, following its main branch.
+# oku.lock records the commit, so every machine links the same files.
+# `oku update skills-emil` takes the newest commit.
 
 [package]
 name = "skills-emil"
@@ -8,11 +8,19 @@ description = "Agent skills by Emil Kowalski, animation and design"
 homepage = "https://github.com/emilkowalski/skills"
 
 [version]
-value = "2026.09.15-85e8e23"
+from = "git-branch"
+repo = "https://github.com/emilkowalski/skills"
+branch = "main"
 
-[[artifact]]
-url = "https://github.com/emilkowalski/skills/archive/85e8e2363b713506e1d5b6e07a0eb2da66be1bc3.tar.gz"
-sha256 = "69f46138691673003b6487381c6126463b1cd32a5f5c17b4cf610124a72840a4"
-strip = 1
 # The package only holds files. lists/ai.toml links the skills out of it.
-data = true
+[build]
+needs = ["git"]
+source = { git = "https://github.com/emilkowalski/skills", tag = "{{tag}}" }
+
+[[build.step]]
+run = """
+set -eu
+rm -rf .git
+cp -R . {{prefix}}
+"""
+shell = "sh"

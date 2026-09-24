@@ -4,15 +4,18 @@ description = "Library that renders fonts"
 homepage = "https://freetype.org"
 license = "FTL OR GPL-2.0-or-later"
 
-# The version and the sha256 are fixed. The tags of the project look like
-# VER-2-14-3, which no version source turns into 2.14.3. To take a newer
-# release, change both.
+# The tags of the project look like VER-2-14-3, so the version comes from
+# SourceForge, whose link to the newest file redirects to a path that holds
+# it. The project publishes no checksum, so oku pins the first download of
+# each version.
 [version]
-value = "2.14.3"
+from = "redirect"
+repo = "https://sourceforge.net/projects/freetype/files/latest/download"
+regex = '/freetype2/([0-9.]+)/'
 
 [build]
 needs = ["cc", "make"]
-source = { url = "https://downloads.sourceforge.net/project/freetype/freetype2/{{version}}/freetype-{{version}}.tar.xz", sha256 = "36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f", strip = 1 }
+source = { url = "https://downloads.sourceforge.net/project/freetype/freetype2/{{version}}/freetype-{{version}}.tar.xz", strip = 1 }
 deps = ["./cmake.toml", { ref = "./libpng.toml", version = "~1.6" }]
 
 [runtime]

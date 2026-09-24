@@ -42,25 +42,17 @@ Clone and list the SKILL.md files:
 cd /tmp && git clone --depth 1 <repo-url> && find <repo> -name 'SKILL.md'
 ```
 
-Note the path of each skill directory from the repo root, such as `skills/foo` or `pstack/skills/foo`. The `find` output is the source of truth. Note the commit too, with `git -C <repo> rev-parse HEAD`.
+Note the path of each skill directory from the repo root, such as `skills/foo` or `pstack/skills/foo`. The `find` output is the source of truth. Note the default branch too, with `git -C <repo> branch --show-current`.
 
-### 2. Hash the tarball
+### 2. Write the package
 
-```
-oku manifest hash https://github.com/<owner>/<repo>/archive/<commit>.tar.gz
-```
+Copy an existing `packages/skills-<source>.toml` to a new name. Change `name`, `description` and `homepage`, the repo URL in `[version] repo` and in `[build] source`, and `branch` when the default branch is not `main`.
 
-It prints the `sha256` line.
-
-### 3. Write the package
-
-Copy an existing `packages/skills-<source>.toml` to a new name. Change `name`, `description`, `homepage`, the `url` and the `sha256`. Set `[version] value` to `<date>-<short commit>`, the commit's day in UTC, such as `2026.09.15-85e8e23`.
-
-Keep `data = true`. It tells oku that the package only holds files, so nothing goes on `PATH`.
+The package follows that branch. `oku.lock` records the commit, and `oku update skills-<source>` takes the newest one. The build step copies the repo into the package and nothing goes on `PATH`.
 
 Check it with `oku manifest lint packages/skills-<source>.toml`.
 
-### 4. List the package and link the skills
+### 3. List the package and link the skills
 
 In `lists/ai.toml`, add the package under `[packages]`:
 
@@ -78,7 +70,7 @@ Add three entries under `[files]` for each skill you want, one per target:
 
 Skill id format: `<prefix>_<skill>`, such as `cursor_unslop`. The prefix names the source. One repo with two skill directories gets two prefixes, as `cursor` and `cursor-team-kit` do. A skill is only installed when it has link entries. The rest of the repo stays in the store, unused.
 
-### 5. Apply and verify
+### 4. Apply and verify
 
 ```
 oku update
@@ -89,7 +81,7 @@ oku refuses a target path that exists and that it did not write. Move that path 
 
 ## Update an external repo
 
-The commit is fixed, so `oku update` never moves it. To take a newer commit, change the commit in `url`, the `sha256` and the `[version] value` in the package file, then run `oku update skills-<source>`. `oku sync` refuses a package file that changed since `oku.lock` was written, and `oku update` accepts it. The links follow the new version. Read the diff of the skills you use first, because their text goes into your context every session.
+`oku sync` keeps the commit that `oku.lock` records. `oku outdated` shows which repos have a newer one, and `oku update skills-<source>` takes it. The links follow the new version. Read the diff of the skills you use first, because their text goes into your context every session.
 
 ## Skill sources
 

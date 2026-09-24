@@ -83,13 +83,12 @@ That is on purpose:
 
 ### Update an external skill repo
 
-1. Pick the new commit: `gh api repos/<owner>/<repo>/commits/HEAD --jq .sha`.
-2. `oku manifest hash https://github.com/<owner>/<repo>/archive/<commit>.tar.gz`
-3. In `packages/skills-<source>.toml` change the commit in `url`, the `sha256`,
-   and the `[version] value`.
-4. `oku update skills-<source>`. `oku sync` refuses with "the manifest changed
-   since oku.lock was written" until then. The links follow the new version.
-5. oku stops when a linked skill is gone upstream and names the link. Remove or
+Each `packages/skills-<source>.toml` follows the main branch of its repo, and
+`oku.lock` records the commit.
+
+1. `oku update skills-<source>` takes the newest commit. `oku outdated` shows
+   which repos have one.
+2. oku stops when a linked skill is gone upstream and names the link. Remove or
    fix that entry.
 
 ### Add a skill

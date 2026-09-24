@@ -9,10 +9,17 @@ from = "github-releases"
 repo = "jtroo/kanata"
 strip_prefix = "v"
 
-# kanata needs root and the Karabiner VirtualHIDDevice driver on macOS.
-# oku installs the program only, the owner starts it by hand as before.
+# kanata needs root and the Karabiner VirtualHIDDevice driver on macOS, and
+# access to /dev/uinput on Linux. oku installs the program only, the owner
+# starts it by hand as before. Upstream builds Linux for x86-64 only.
 [[artifact]]
 match = { os = "darwin", arch = "arm64" }
 url = "https://github.com/jtroo/kanata/releases/download/{{tag}}/macos-binaries-arm64.zip"
 sha256_url = "https://github.com/jtroo/kanata/releases/download/{{tag}}/sha256sums"
 bin = [{ name = "kanata", run = "{{pkg}}/kanata_macos_arm64" }]
+
+[[artifact]]
+match = { os = "linux", arch = "amd64" }
+url = "https://github.com/jtroo/kanata/releases/download/{{tag}}/linux-binaries-x64.zip"
+sha256_url = "https://github.com/jtroo/kanata/releases/download/{{tag}}/sha256sums"
+bin = [{ name = "kanata", run = "{{pkg}}/kanata_linux_x64" }]

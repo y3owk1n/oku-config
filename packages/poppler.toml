@@ -4,15 +4,19 @@ description = "PDF rendering library with pdftoppm, pdftotext and other tools"
 homepage = "https://poppler.freedesktop.org"
 license = "GPL-2.0-only OR GPL-3.0-only"
 
-# The version and the sha256 are fixed. The archives are on the project's own
-# server, and its tags on gitlab.freedesktop.org lag behind them. To take a
-# newer release, change both.
+# The archives are on the project's own server, and its tags on
+# gitlab.freedesktop.org lag behind them, so the version is the first archive
+# that the home page names, which is the newest. The project signs its
+# archives but publishes no checksum, so oku pins the first download of each
+# version.
 [version]
-value = "26.09.0"
+from = "page"
+repo = "https://poppler.freedesktop.org/"
+regex = 'poppler-([0-9.]+)\.tar\.xz'
 
 [build]
 needs = ["cc", "make"]
-source = { url = "https://poppler.freedesktop.org/poppler-{{version}}.tar.xz", sha256 = "8059eadb6805340768f138c465b57f8164c92b4a0773c37ef031ea6c0d987b2e", strip = 1 }
+source = { url = "https://poppler.freedesktop.org/poppler-{{version}}.tar.xz", strip = 1 }
 deps = ["./cmake.toml", "./freetype.toml", "./fontconfig.toml", "./jpeg-turbo.toml", { ref = "./libpng.toml", version = "~1.6" }, "./libtiff.toml", "./openjpeg.toml"]
 
 [runtime]

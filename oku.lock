@@ -218,14 +218,24 @@ sha256 = '6369242c584065f195fb20cb36fbd7cb63ae690605bbe89868a7596b596c2c23'
 [[package]]
 name = 'brave'
 ref = './packages/brave.toml'
-manifest_sha256 = '7bff569ff9af627c5221d378a8f737679d9eb11e01ef21e7e15538e9935ac9be'
-version = '1.95.104.0'
+manifest_sha256 = 'd88f8e95ae6cf5d266e11dd1f647ae40da107fc6171c6b592763dd48e20188e7'
+version = '1.95.104'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/stable-arm64/195.104/Brave-Browser-arm64.dmg'
+url = 'https://github.com/brave/brave-browser/releases/download/v1.95.104/Brave-Browser-arm64.dmg'
 sha256 = 'f6823d53b3e9a287b8f8830b728ba9b34fe2d4a9f6ee4e05b3bcd4a21ee25eaf'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/brave/brave-browser/releases/download/v1.95.104/brave-browser-1.95.104-linux-amd64.zip'
+sha256 = '1d2a6fc3e32ad7b62bb2aeae6d1ba4ba01acbec12a8a7a8310ea6ae1293816cc'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/brave/brave-browser/releases/download/v1.95.104/brave-browser-1.95.104-linux-arm64.zip'
+sha256 = '9f2dab1cd328cdaa88302be319bd269d59a8a84c8dfc6ccaa71287b8c0629ac2'
 
 [[package]]
 name = 'brotli'
@@ -351,14 +361,21 @@ sha256 = '5f046098b36ff985d0f99fec6f22cf74961db60386ff9d40df39fd99660aae2c'
 [[package]]
 name = 'discord'
 ref = './packages/discord.toml'
-manifest_sha256 = '33cf81525adb1d41a4a7d9f38a25c2d8bbc63d598e8d47fafe85b9d19e9c9327'
-version = '0.0.412'
+manifest_sha256 = 'ac6f2d800befe3dc2d00869ea013b2063e3aa54e4e1c469d48297c43a49c3575'
+version = '0.0.413'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://dl.discordapp.net/apps/osx/0.0.412/Discord.dmg'
-sha256 = '5102d468e5593a5ffd5a3ecd38a10e9f63b349e7a3caa074eee8d6532f573a19'
+url = 'https://stable.dl2.discordapp.net/apps/osx/0.0.413/Discord.dmg'
+sha256 = '4bd4cd81c78095f0bf866437b92c78c06ebf2671e8b2f97635fd5556efa6f25b'
+version = '0.0.413'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://stable.dl2.discordapp.net/apps/linux/1.0.159/discord-1.0.159.tar.gz'
+sha256 = 'bdc731ee87a59cff44f843e7c477971d1cc5c58dd60b025a94d6c611ef9400a1'
+version = '1.0.159'
 
 [[package]]
 name = 'eza'
@@ -468,7 +485,7 @@ sha256 = '2ab6aba60ee84412dff9188720703376cb4e7aaf7e0b5e43aa8249f2acae5bf8'
 [[package]]
 name = 'firefox'
 ref = './packages/firefox.toml'
-manifest_sha256 = 'b12fb193cdda1c73a751616a8c44f62101120d99d7eb9efc94cb2ad53e5e5f94'
+manifest_sha256 = 'bc2dba9ad09d71a9a4f1428badd23fba2f91088b024ee16ec279f5ad84052c9c'
 version = '156.0'
 
 [package.platform]
@@ -476,6 +493,16 @@ version = '156.0'
 strategy = 'artifact'
 url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/156.0/mac/en-US/Firefox%20156.0.dmg'
 sha256 = 'fecc46103039ca4a77ecb2b2ef7b03892f922e13db0782f8570c512b2e458515'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/156.0/linux-x86_64/en-US/firefox-156.0.tar.xz'
+sha256 = '1d44cd02351c307c3e19061ea2a4d18a30f236e6be862b94f2282564afdb0167'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/156.0/linux-aarch64/en-US/firefox-156.0.tar.xz'
+sha256 = '7dd9425eafa0decf61c0f6bc56dc71cba84595495dc01395d3eea38a18aaf710'
 
 [[package]]
 name = 'fish'
@@ -570,23 +597,23 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 name = 'freebuff'
 ref = './packages/freebuff.toml'
 manifest_sha256 = '5a05ed5b3b754299066e214b6b8ac17044226cff4b4fa856f6b6d699c8eb6508'
-version = '0.0.188'
+version = '0.0.189'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.188/freebuff-darwin-arm64.tar.gz'
-sha256 = '196acfcdca27f5fa6a5b8b1ab450259da8c2f23d29414bac234f7dd62187b4e4'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.189/freebuff-darwin-arm64.tar.gz'
+sha256 = '5e55d86fce10160e83d9dc5dd181f37aa804dbc245401dac8e22d2cd13c976f8'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.188/freebuff-linux-x64.tar.gz'
-sha256 = '68a3f65d9413dbc1204757a4751dec376856004d3eef451cc7f205f51bffb879'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.189/freebuff-linux-x64.tar.gz'
+sha256 = 'e045f736fec7420c7a23b4461f22e8d8060497533bb9835b3e5142d2eddca3e1'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.188/freebuff-linux-arm64.tar.gz'
-sha256 = '3081dda43a18506828ea67c4d99fdeb48ebefca0674fd0f7ff62ab7cc2bb2e48'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.189/freebuff-linux-arm64.tar.gz'
+sha256 = 'bfbe902cb4efd98391516ae1f597d94ca0bc18b74094f2846d64abce9fd36e20'
 
 [[package]]
 name = 'fzf'
@@ -1053,7 +1080,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = 'b4064f6beb55baafe69823457a12ecccd66a23e580dc8182f3d60588ab8ad459'
+manifest_sha256 = '958a1a7d6be992401ed230c95d6a71a194fe5ccfa57a19f4232ded3db35d1b10'
 version = '2.14.3'
 
 [package.dep.platform]
@@ -1399,7 +1426,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = 'b4064f6beb55baafe69823457a12ecccd66a23e580dc8182f3d60588ab8ad459'
+manifest_sha256 = '958a1a7d6be992401ed230c95d6a71a194fe5ccfa57a19f4232ded3db35d1b10'
 version = '2.14.3'
 
 [package.dep.platform]
@@ -1657,7 +1684,7 @@ sha256 = '8b85c817833814ddca00a144c33705546355afccf0cf39b188f3cdb48b852309'
 [[package]]
 name = 'kanata'
 ref = './packages/kanata.toml'
-manifest_sha256 = '2fbde2b87212747730622287840d06339b8a7649237d591a439e5a2f40e809ed'
+manifest_sha256 = 'bf26fcb0fdcea326f9a7283eb27cf502125f8fc0cba874dc08ed48c774e2bf9c'
 version = '1.12.0'
 tag = 'v1.12.0'
 
@@ -1666,6 +1693,11 @@ tag = 'v1.12.0'
 strategy = 'artifact'
 url = 'https://github.com/jtroo/kanata/releases/download/v1.12.0/macos-binaries-arm64.zip'
 sha256 = '839769d189911b5881e11550eaa2039705213fb725865d088f5a2e3a6c10de32'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/jtroo/kanata/releases/download/v1.12.0/linux-binaries-x64.zip'
+sha256 = '0bedd91567c5d7c54679061baadc37e4f83fb71750003999bc1d11f2c9754f36'
 
 [[package]]
 name = 'lazygit'
@@ -1998,7 +2030,7 @@ sha256 = '568461b7d4d8c19865c97e9a1102e613049c6039d01fe772154de873c1865840'
 [[package]]
 name = 'optipng'
 ref = './packages/optipng.toml'
-manifest_sha256 = 'd3aff0dc3bc5e5c4c92bf60cacea704e6fe40253e3dda077aa68dfc408a487ff'
+manifest_sha256 = 'af4244b322277ba7cb62c21d9d26cfabe8d22d212a111c99ae18afe92b83e00c'
 version = '7.9.1'
 
 [package.platform]
@@ -2020,8 +2052,8 @@ sha256 = 'c2579be58c2c66dae9d63154edcb3d427fef64cb00ec0aff079c9d156ec46f29'
 [[package]]
 name = 'orbstack'
 ref = './packages/orbstack.toml'
-manifest_sha256 = '97f535a6ff803211badcf93cd7bec745f6be6fba75dacb9d557593ddf4fb13d2'
-version = '2.2.3'
+manifest_sha256 = 'f16e7fdf769adcdd94aec1def8207147cffedb95bc8b136e21cf8cacb4212d0a'
+version = '2.2.3_20963'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -2095,7 +2127,7 @@ sha256 = '69cdf3e8bacecc99fd420186d26dd5769c004ee218034457b3691a1cf408967c'
 [[package]]
 name = 'poppler'
 ref = './packages/poppler.toml'
-manifest_sha256 = '1e7aa31b584ed244f5d3ac773b76528aed2a7cfdec2719b63d79d00cb248ea73'
+manifest_sha256 = '64195270678ad2980d098757b3a3d2b706f087f5a139beddb89540b311e29add'
 version = '26.09.0'
 
 [package.platform]
@@ -2140,7 +2172,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = 'b4064f6beb55baafe69823457a12ecccd66a23e580dc8182f3d60588ab8ad459'
+manifest_sha256 = '958a1a7d6be992401ed230c95d6a71a194fe5ccfa57a19f4232ded3db35d1b10'
 version = '2.14.3'
 
 [package.dep.platform]
@@ -2276,7 +2308,7 @@ sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
 [[package.dep.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = 'b4064f6beb55baafe69823457a12ecccd66a23e580dc8182f3d60588ab8ad459'
+manifest_sha256 = '958a1a7d6be992401ed230c95d6a71a194fe5ccfa57a19f4232ded3db35d1b10'
 version = '2.14.3'
 
 [package.dep.dep.platform]
@@ -2390,7 +2422,7 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = 'b4064f6beb55baafe69823457a12ecccd66a23e580dc8182f3d60588ab8ad459'
+manifest_sha256 = '958a1a7d6be992401ed230c95d6a71a194fe5ccfa57a19f4232ded3db35d1b10'
 version = '2.14.3'
 
 [package.dep.dep.platform]
@@ -2730,7 +2762,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = 'b4064f6beb55baafe69823457a12ecccd66a23e580dc8182f3d60588ab8ad459'
+manifest_sha256 = '958a1a7d6be992401ed230c95d6a71a194fe5ccfa57a19f4232ded3db35d1b10'
 version = '2.14.3'
 
 [package.dep.platform]
@@ -2866,7 +2898,7 @@ sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
 [[package.dep.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = 'b4064f6beb55baafe69823457a12ecccd66a23e580dc8182f3d60588ab8ad459'
+manifest_sha256 = '958a1a7d6be992401ed230c95d6a71a194fe5ccfa57a19f4232ded3db35d1b10'
 version = '2.14.3'
 
 [package.dep.dep.platform]
@@ -2980,7 +3012,7 @@ sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
 [[package.dep.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = 'b4064f6beb55baafe69823457a12ecccd66a23e580dc8182f3d60588ab8ad459'
+manifest_sha256 = '958a1a7d6be992401ed230c95d6a71a194fe5ccfa57a19f4232ded3db35d1b10'
 version = '2.14.3'
 
 [package.dep.dep.platform]
@@ -3474,112 +3506,92 @@ sha256 = '0b48d8f349f6b73849e338fe8dfa5dc14077f58baee98e01e2aa784d6721b340'
 [[package]]
 name = 'skills-anthropic'
 ref = './packages/skills-anthropic.toml'
-manifest_sha256 = 'b23b767b3efa677e4da7e34651f0f626eab621f2dfcf874120670a21ffa26943'
+manifest_sha256 = '474af7afe6e9fc0bb77a2b4a451e4466a0ab723a1b1264a10af63d0a6a518ffd'
 version = '2026.09.10-34040c9'
+tag = 'main'
+tag_commit = '34040c9c568585f6929bedeaad110ad08f079624'
 
 [package.platform]
 [package.platform.darwin-arm64]
-strategy = 'artifact'
-url = 'https://github.com/anthropics/skills/archive/34040c9c568585f6929bedeaad110ad08f079624.tar.gz'
-sha256 = '94527d9bf3b49a8951aba1ce9420a37079f1a6677accca4b04435c79aabbe5bb'
+strategy = 'build'
 
 [package.platform.linux-amd64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/anthropics/skills/archive/34040c9c568585f6929bedeaad110ad08f079624.tar.gz'
-sha256 = '94527d9bf3b49a8951aba1ce9420a37079f1a6677accca4b04435c79aabbe5bb'
+strategy = 'build'
 
 [package.platform.linux-arm64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/anthropics/skills/archive/34040c9c568585f6929bedeaad110ad08f079624.tar.gz'
-sha256 = '94527d9bf3b49a8951aba1ce9420a37079f1a6677accca4b04435c79aabbe5bb'
+strategy = 'build'
 
 [[package]]
 name = 'skills-caveman'
 ref = './packages/skills-caveman.toml'
-manifest_sha256 = 'ea8c1297e26b572eb37e5a3780a04f44dc219220ffb9e47b0ec79944f46262aa'
-version = '2026.09.20-3ee70a1'
+manifest_sha256 = '205eb512a5e8d343daed4f4c2834fd1f91ed36c2bbdbfbd4b96f78f80d237213'
+version = '2026.09.22-2fd153c'
+tag = 'main'
+tag_commit = '2fd153c67988e980fb0b2455c90832159a6a5a25'
 
 [package.platform]
 [package.platform.darwin-arm64]
-strategy = 'artifact'
-url = 'https://github.com/JuliusBrussee/caveman/archive/3ee70a102609e550bd2e68004bf5990a9341c851.tar.gz'
-sha256 = 'c4c00c40e3d4db1c3223f5f8433f09ed847cede7fdfce3bb839fdacb8a0d7d50'
+strategy = 'build'
 
 [package.platform.linux-amd64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/JuliusBrussee/caveman/archive/3ee70a102609e550bd2e68004bf5990a9341c851.tar.gz'
-sha256 = 'c4c00c40e3d4db1c3223f5f8433f09ed847cede7fdfce3bb839fdacb8a0d7d50'
+strategy = 'build'
 
 [package.platform.linux-arm64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/JuliusBrussee/caveman/archive/3ee70a102609e550bd2e68004bf5990a9341c851.tar.gz'
-sha256 = 'c4c00c40e3d4db1c3223f5f8433f09ed847cede7fdfce3bb839fdacb8a0d7d50'
+strategy = 'build'
 
 [[package]]
 name = 'skills-cursor'
 ref = './packages/skills-cursor.toml'
-manifest_sha256 = '5abe027651edd7cc1d7e8bffb83c0b5beb106f6264f7ba0e986a98683ae5888f'
-version = '2026.09.18-032be14'
+manifest_sha256 = 'c3ce250f0af9558c91c53ece8f2a415cdd7fb1010335527087111f96d48fbcfc'
+version = '2026.09.23-12d587d'
+tag = 'main'
+tag_commit = '12d587dfb20741cafc376c42c696c5f6e2a64487'
 
 [package.platform]
 [package.platform.darwin-arm64]
-strategy = 'artifact'
-url = 'https://github.com/cursor/plugins/archive/032be146865d973682535de75f2287da438550bf.tar.gz'
-sha256 = '1d9c0f75def9a97cedd8cfff5eadc60475c03913a33ed9880bf8987999b3761f'
+strategy = 'build'
 
 [package.platform.linux-amd64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/cursor/plugins/archive/032be146865d973682535de75f2287da438550bf.tar.gz'
-sha256 = '1d9c0f75def9a97cedd8cfff5eadc60475c03913a33ed9880bf8987999b3761f'
+strategy = 'build'
 
 [package.platform.linux-arm64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/cursor/plugins/archive/032be146865d973682535de75f2287da438550bf.tar.gz'
-sha256 = '1d9c0f75def9a97cedd8cfff5eadc60475c03913a33ed9880bf8987999b3761f'
+strategy = 'build'
 
 [[package]]
 name = 'skills-emil'
 ref = './packages/skills-emil.toml'
-manifest_sha256 = '4c242431df88929bb6c83c45fd443a0771c8c46ecdf3388a36f2d8bfc59f3362'
-version = '2026.09.15-85e8e23'
+manifest_sha256 = '4ae7a6dd17029692f1649e4550d84662833f97208a880553f3978ec3abb4ad1c'
+version = '2026.09.23-d16ebe6'
+tag = 'main'
+tag_commit = 'd16ebe60d09a5ba2afcb7054ede9d0a10c9f6128'
 
 [package.platform]
 [package.platform.darwin-arm64]
-strategy = 'artifact'
-url = 'https://github.com/emilkowalski/skills/archive/85e8e2363b713506e1d5b6e07a0eb2da66be1bc3.tar.gz'
-sha256 = '69f46138691673003b6487381c6126463b1cd32a5f5c17b4cf610124a72840a4'
+strategy = 'build'
 
 [package.platform.linux-amd64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/emilkowalski/skills/archive/85e8e2363b713506e1d5b6e07a0eb2da66be1bc3.tar.gz'
-sha256 = '69f46138691673003b6487381c6126463b1cd32a5f5c17b4cf610124a72840a4'
+strategy = 'build'
 
 [package.platform.linux-arm64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/emilkowalski/skills/archive/85e8e2363b713506e1d5b6e07a0eb2da66be1bc3.tar.gz'
-sha256 = '69f46138691673003b6487381c6126463b1cd32a5f5c17b4cf610124a72840a4'
+strategy = 'build'
 
 [[package]]
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
-manifest_sha256 = 'd333d9e10be7ed70fc2cdbffab2155574db85cecbb08640c3541056a9ae1133e'
-version = '2026.09.17-a87a63b'
+manifest_sha256 = '0c8d9b9d01b43706533a6edb8bc8da4e4a1f9e0c952b042fe433d6925aab618a'
+version = '2026.09.21-98a1fe6'
+tag = 'main'
+tag_commit = '98a1fe67b439324ddc857f47fbdce056600a4329'
 
 [package.platform]
 [package.platform.darwin-arm64]
-strategy = 'artifact'
-url = 'https://github.com/shadcn-ui/ui/archive/a87a63b2ca25143d26c8bd0903e4e9bc77b3f824.tar.gz'
-sha256 = '1b4af84e6362ed3273b78ac16e262149b32e6b8369588909fb8a2047e3014291'
+strategy = 'build'
 
 [package.platform.linux-amd64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/shadcn-ui/ui/archive/a87a63b2ca25143d26c8bd0903e4e9bc77b3f824.tar.gz'
-sha256 = '1b4af84e6362ed3273b78ac16e262149b32e6b8369588909fb8a2047e3014291'
+strategy = 'build'
 
 [package.platform.linux-arm64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/shadcn-ui/ui/archive/a87a63b2ca25143d26c8bd0903e4e9bc77b3f824.tar.gz'
-sha256 = '1b4af84e6362ed3273b78ac16e262149b32e6b8369588909fb8a2047e3014291'
+strategy = 'build'
 
 [[package]]
 name = 'sops'

@@ -59,9 +59,11 @@ claude-code = "../packages/claude-code.toml"
 freebuff = "../packages/freebuff.toml"
 opencode = "../packages/opencode.toml"
 
+# keyboard remapper, which upstream builds for x86-64 Linux only
+kanata = { ref = "../packages/kanata.toml", when = [{ os = "darwin" }, { os = "linux", arch = "amd64" }] }
+
 # macos apps
 affinity = { ref = "../packages/affinity.toml", when = { os = "darwin" } }
-kanata = { ref = "../packages/kanata.toml", when = { os = "darwin" } }
 skhd = { ref = "../packages/skhd.toml", service = true, when = { os = "darwin" } }
 utm = { ref = "../packages/utm.toml", when = { os = "darwin" } }
 virtualbuddy = { ref = "../packages/virtualbuddy.toml", when = { os = "darwin" } }

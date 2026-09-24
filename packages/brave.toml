@@ -4,16 +4,38 @@ description = "Web browser focusing on privacy"
 homepage = "https://brave.com"
 license = "MPL-2.0"
 
-# Brave Browser updates itself in ~/Applications. oku replaces that copy on the next
-# `oku update` of this package. For a newer version change `value`,
-# the build in the url and the sha256. The build is the version without its
-# first dot and its last part, so 1.95.104.0 is 195.104. The Homebrew cask
-# `brave-browser` lists the current one.
+# Brave Browser updates itself in ~/Applications. oku replaces that copy on the
+# next `oku update` of this package. The repo marks some nightlies as full
+# releases, so the version comes from where releases/latest points, which is
+# the stable release. Each file has a .sha256 beside it.
 [version]
-value = "1.95.104.0"
+from = "redirect"
+repo = "https://github.com/brave/brave-browser/releases/latest"
+regex = '/tag/v([0-9.]+)$'
 
 [[artifact]]
 match = { os = "darwin", arch = "arm64" }
-url = "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/stable-arm64/195.104/Brave-Browser-arm64.dmg"
-sha256 = "f6823d53b3e9a287b8f8830b728ba9b34fe2d4a9f6ee4e05b3bcd4a21ee25eaf"
+url = "https://github.com/brave/brave-browser/releases/download/v{{version}}/Brave-Browser-arm64.dmg"
+sha256_url = "https://github.com/brave/brave-browser/releases/download/v{{version}}/Brave-Browser-arm64.dmg.sha256"
 app = ["Brave Browser.app"]
+
+# The zip is the portable build. brave-browser is the launcher script, which
+# finds the rest of the files next to itself. The store cannot keep the setuid
+# bit of chrome-sandbox, so Brave uses the user namespace sandbox, which a
+# current kernel allows.
+[[artifact]]
+match = { os = "linux", arch = "arm64" }
+url = "https://github.com/brave/brave-browser/releases/download/v{{version}}/brave-browser-{{version}}-linux-arm64.zip"
+sha256_url = "https://github.com/brave/brave-browser/releases/download/v{{version}}/brave-browser-{{version}}-linux-arm64.zip.sha256"
+bin = ["brave-browser"]
+
+[[artifact]]
+match = { os = "linux", arch = "amd64" }
+url = "https://github.com/brave/brave-browser/releases/download/v{{version}}/brave-browser-{{version}}-linux-amd64.zip"
+sha256_url = "https://github.com/brave/brave-browser/releases/download/v{{version}}/brave-browser-{{version}}-linux-amd64.zip.sha256"
+bin = ["brave-browser"]
+
+[[app]]
+name = "Brave"
+exec = "bin/brave-browser"
+icon = "pkg/product_logo_128.png"

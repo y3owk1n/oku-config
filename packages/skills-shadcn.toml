@@ -1,6 +1,6 @@
-# Agent skills from github.com/shadcn-ui/ui, pinned to one commit.
-# The version is fixed, so `oku update` never moves it. To take a newer
-# commit, follow lists/ai-notes.md, "Update an external skill repo".
+# Agent skills from github.com/shadcn-ui/ui, following its main branch.
+# oku.lock records the commit, so every machine links the same files.
+# `oku update skills-shadcn` takes the newest commit.
 
 [package]
 name = "skills-shadcn"
@@ -8,11 +8,19 @@ description = "Agent skills from the shadcn-ui/ui repo"
 homepage = "https://github.com/shadcn-ui/ui"
 
 [version]
-value = "2026.09.17-a87a63b"
+from = "git-branch"
+repo = "https://github.com/shadcn-ui/ui"
+branch = "main"
 
-[[artifact]]
-url = "https://github.com/shadcn-ui/ui/archive/a87a63b2ca25143d26c8bd0903e4e9bc77b3f824.tar.gz"
-sha256 = "1b4af84e6362ed3273b78ac16e262149b32e6b8369588909fb8a2047e3014291"
-strip = 1
 # The package only holds files. lists/ai.toml links the skills out of it.
-data = true
+[build]
+needs = ["git"]
+source = { git = "https://github.com/shadcn-ui/ui", tag = "{{tag}}" }
+
+[[build.step]]
+run = """
+set -eu
+rm -rf .git
+cp -R . {{prefix}}
+"""
+shell = "sh"

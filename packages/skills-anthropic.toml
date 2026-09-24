@@ -1,6 +1,6 @@
-# Agent skills from github.com/anthropics/skills, pinned to one commit.
-# The version is fixed, so `oku update` never moves it. To take a newer
-# commit, follow lists/ai-notes.md, "Update an external skill repo".
+# Agent skills from github.com/anthropics/skills, following its main branch.
+# oku.lock records the commit, so every machine links the same files.
+# `oku update skills-anthropic` takes the newest commit.
 
 [package]
 name = "skills-anthropic"
@@ -8,11 +8,19 @@ description = "Agent skills from the anthropics/skills repo"
 homepage = "https://github.com/anthropics/skills"
 
 [version]
-value = "2026.09.10-34040c9"
+from = "git-branch"
+repo = "https://github.com/anthropics/skills"
+branch = "main"
 
-[[artifact]]
-url = "https://github.com/anthropics/skills/archive/34040c9c568585f6929bedeaad110ad08f079624.tar.gz"
-sha256 = "94527d9bf3b49a8951aba1ce9420a37079f1a6677accca4b04435c79aabbe5bb"
-strip = 1
 # The package only holds files. lists/ai.toml links the skills out of it.
-data = true
+[build]
+needs = ["git"]
+source = { git = "https://github.com/anthropics/skills", tag = "{{tag}}" }
+
+[[build.step]]
+run = """
+set -eu
+rm -rf .git
+cp -R . {{prefix}}
+"""
+shell = "sh"
