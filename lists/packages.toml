@@ -36,8 +36,6 @@ nvim = "../packages/nvim.toml"
 tree-sitter = "../packages/tree-sitter.toml"
 marksman = "../packages/marksman.toml"
 gh-actions-language-server = "../packages/gh-action-language-server.toml"
-# prettierd starts its daemon as `node` from PATH, so node is a package of its
-# own too, and not only the runtime dep of the npm packages.
 bash-language-server = "npm:bash-language-server"
 fish-lsp = "npm:fish-lsp"
 prettierd = "npm:@fsouza/prettierd"
@@ -50,7 +48,7 @@ ffprobe = "../packages/ffprobe.toml"
 libwebp = "../packages/libwebp.toml" # cwebp and dwebp
 
 # security
-age = "../packages/age.toml"
+age = "github:FiloSottile/age" # age, age-keygen and the plugins
 sops = "github:getsops/sops"
 
 # terminal
