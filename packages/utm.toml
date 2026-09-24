@@ -4,8 +4,6 @@ description = "Virtual machines for macOS"
 homepage = "https://mac.getutm.app"
 license = "Apache-2.0"
 
-# oku checks the download against the sha256 that GitHub reports only for a
-# moving tag, so this pins the first download.
 [version]
 from = "github-releases"
 repo = "utmapp/UTM"

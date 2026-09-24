@@ -34,7 +34,7 @@ from source, the way their Homebrew formulae do it (`lists/built.toml`,
 - mole: built from source, because the release holds the two Go helpers only. The tree sits in `libexec/mole` and `bin/mole` links to it. `mo update` and `mo remove` have no use here, take a new version with `oku update mole`.
 - coreutils: every program has a `g` prefix, such as `gls` and `gdate`, so none takes the place of a macOS tool.
 - ghostscript: built with its bundled libraries, without X11, cups and tesseract.
-- discord, whatsapp, orbstack, brave, firefox: fixed versions with the sha256 from the Homebrew cask data. Each app also updates itself in `~/Applications`, and oku replaces that copy on the next `oku update` of the package. OrbStack and Brave have a build number in the URL, see the top of their manifests.
+- discord, whatsapp, orbstack, brave, firefox, affinity, virtualbuddy, ghostty: each follows its vendor's versions, and the top of its manifest says from where. Each app also updates itself in `~/Applications`, and oku replaces that copy on the next `oku update` of the package. Turn the app's own updates off where it lets you.
 - orbstack: `orb`, `orbctl`, `docker`, `docker-compose`, `docker-buildx`, `docker-credential-osxkeychain` and `kubectl` come from the store copy of the app, so they stay at the store version until `oku update`. oku does not run the postflight step of the cask, and OrbStack finishes its own setup on first launch.
 - fish as the login shell: oku installs fish, but `/etc/shells` and `chsh` need root. `bootstrap/macos.sh` does it. The path is `~/.local/share/oku/profiles/global/current/bin/fish`.
 - kanata: installed as a program only. It needs root and the Karabiner driver, so it has no oku service.
@@ -42,6 +42,5 @@ from source, the way their Homebrew formulae do it (`lists/built.toml`,
 - ffmpeg and ffprobe: the static builds of the ffmpeg-static project, a third party. The macOS arm64 build reports ffmpeg 6.0 under the tag b6.1.1. A source build would replace it.
 - devbox: installs, but it drives nix, so it only works on a machine that still has nix.
 - ast-grep: only `ast-grep` is linked, not the short name `sg`.
-- virtualbuddy, affinity: fixed versions, because the file names hold a build number. Both apps can also update themselves, turn that off in their settings.
 - ghostty: set `auto-update = off` so the app does not replace itself behind oku.
 - asr, cmd, diagnose: my own scripts. They are in `files/bin/` and linked into `~/.local/bin` by `lists/files.toml`.

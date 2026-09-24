@@ -4,13 +4,16 @@ description = "Virtualize macOS 12 and later on Apple Silicon"
 homepage = "https://github.com/insidegui/VirtualBuddy"
 license = "BSD-2-Clause"
 
-# The file name holds a build number that no template variable gives, so the
-# version is fixed. For a newer release change `value`, the url and the sha256.
+# Versions come from the app's own update feed. With join = "+" the version is
+# the release and its build, such as 2.1+325, and the file name holds both.
+# The update server publishes no checksum, so oku pins the first download of
+# each version.
 [version]
-value = "2.1"
+from = "sparkle"
+repo = "https://su.virtualbuddy.app/appcast.xml?channel=release"
+join = "+"
 
 [[artifact]]
 match = { os = "darwin", arch = "arm64" }
-url = "https://github.com/insidegui/VirtualBuddy/releases/download/2.1/VirtualBuddy_v2.1-325.dmg"
-sha256 = "6ed17e8d7245931fd405c419321ace7ef9333fe2e3d59b3a7f78e34fcbe628b6"
+url = "https://su.virtualbuddy.app/VirtualBuddy_v{{version_part1}}-{{version_part2}}.dmg"
 app = ["VirtualBuddy.app"]

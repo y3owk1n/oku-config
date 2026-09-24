@@ -5,32 +5,30 @@ homepage = "https://www.mozilla.org/firefox/"
 license = "MPL-2.0"
 
 # Firefox updates itself in ~/Applications. oku replaces that copy on the next
-# `oku update` of this package. For a newer version change `value`,
-# and the sha256s. `oku manifest bump --to <version>` does both, the urls take
-# the version from `value`. The Homebrew cask `firefox` lists the current one.
+# `oku update` of this package. Versions come from Mozilla's product details.
 # Mozilla's SHA256SUMS names both Linux files firefox-<version>.tar.xz, so
-# sha256_url cannot tell them apart and each artifact states its digest.
+# sha256_url cannot tell them apart, and oku pins the first download of each
+# version.
 [version]
-value = "156.0"
+from = "page"
+repo = "https://product-details.mozilla.org/1.0/firefox_versions.json"
+regex = '"LATEST_FIREFOX_VERSION"\s*:\s*"([0-9][0-9A-Za-z._+-]*)"'
 
 # The image holds one app for both Intel and Apple silicon, in US English.
 [[artifact]]
 match = { os = "darwin", arch = "arm64" }
 url = "https://download-installer.cdn.mozilla.net/pub/firefox/releases/{{version}}/mac/en-US/Firefox%20{{version}}.dmg"
-sha256 = "fecc46103039ca4a77ecb2b2ef7b03892f922e13db0782f8570c512b2e458515"
 app = ["Firefox.app"]
 
 [[artifact]]
 match = { os = "linux", arch = "arm64" }
 url = "https://download-installer.cdn.mozilla.net/pub/firefox/releases/{{version}}/linux-aarch64/en-US/firefox-{{version}}.tar.xz"
-sha256 = "7dd9425eafa0decf61c0f6bc56dc71cba84595495dc01395d3eea38a18aaf710"
 strip = 1
 bin = ["firefox"]
 
 [[artifact]]
 match = { os = "linux", arch = "amd64" }
 url = "https://download-installer.cdn.mozilla.net/pub/firefox/releases/{{version}}/linux-x86_64/en-US/firefox-{{version}}.tar.xz"
-sha256 = "1d44cd02351c307c3e19061ea2a4d18a30f236e6be862b94f2282564afdb0167"
 strip = 1
 bin = ["firefox"]
 

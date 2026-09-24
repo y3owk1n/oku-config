@@ -4,31 +4,30 @@ description = "Fast, native terminal emulator"
 homepage = "https://ghostty.org"
 license = "MIT"
 
-# Versions come from the tags of the source repo, the download from the
-# release server. Upstream signs its source archives only, so oku pins the
-# first download of the app. Set `auto-update = off` in the Ghostty config,
-# so that the app does not replace itself behind oku.
-[version]
-from = "git-tags"
-repo = "https://github.com/ghostty-org/ghostty"
-strip_prefix = "v"
-
+# Each artifact follows its own source. The app follows Ghostty's update feed,
+# which names a release once its download exists. Ghostty publishes no
+# checksum for it, so oku pins the first download. Set `auto-update = off` in the Ghostty
+# config, so that the app does not replace itself behind oku.
 [[artifact]]
 match = { os = "darwin" }
+version = { from = "sparkle", repo = "https://release.files.ghostty.org/appcast.xml" }
 url = "https://release.files.ghostty.org/{{version}}/Ghostty.dmg"
 app = ["Ghostty.app"]
 bin = ["Ghostty.app/Contents/MacOS/ghostty"]
 man = ["Ghostty.app/Contents/Resources/man/man1/ghostty.1"]
 
 # Upstream ships no Linux binary. The AppImage comes from pkgforge-dev, which
-# the install page of ghostty.org links, and follows the same version tags. An
-# AppImage needs FUSE, which bootstrap/linux.sh installs.
+# the install page of ghostty.org links, and follows that repo's releases,
+# whose files GitHub reports a sha256 for. An AppImage needs FUSE, which
+# bootstrap/linux.sh installs.
 [[artifact]]
 match = { os = "linux", arch = "arm64" }
+version = { from = "github-releases", repo = "pkgforge-dev/ghostty-appimage", strip_prefix = "v" }
 url = "https://github.com/pkgforge-dev/ghostty-appimage/releases/download/{{tag}}/Ghostty-{{version}}-aarch64.AppImage"
 bin = ["ghostty"]
 
 [[artifact]]
 match = { os = "linux", arch = "amd64" }
+version = { from = "github-releases", repo = "pkgforge-dev/ghostty-appimage", strip_prefix = "v" }
 url = "https://github.com/pkgforge-dev/ghostty-appimage/releases/download/{{tag}}/Ghostty-{{version}}-x86_64.AppImage"
 bin = ["ghostty"]
