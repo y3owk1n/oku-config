@@ -8,7 +8,7 @@ read_only = " 󰌾"
 disabled = false
 
 [custom.oku_allowed]
-when = 'test -n "$OKU_HOOK_PATH"'
+when = 'test -n "$OKU_PROJECT"'
 shell = ['sh']
 command = 'echo allowed'
 format = '[oku $output]($style) '
