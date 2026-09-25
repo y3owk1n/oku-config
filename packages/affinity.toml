@@ -1,12 +1,8 @@
 [package]
 name = "affinity"
-description = "Image editing and design app, Affinity Studio"
-homepage = "https://affinity.serif.com"
+description = "Image editing and design software"
+homepage = "https://www.affinity.studio/"
 
-# Versions come from the app's own update feed. With join = "+" the version is
-# the release and its build, such as 3.3.0+4850, and the name of the download
-# holds the build. Serif publishes no checksum, so oku pins the first download
-# of each version.
 [version]
 from = "sparkle"
 repo = "https://things.seriflabs.com/affinity-update-mac-retail-studiopro"
