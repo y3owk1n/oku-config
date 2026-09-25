@@ -301,24 +301,24 @@ sha256 = '6270de0ef4c84cf0eea61cb148b3ad9ae91a11e9c3309867ffc6b3751024c252'
 [[package]]
 name = 'claude-code'
 ref = './packages/claude-code.toml'
-manifest_sha256 = '132b96a4a061ec0c306b1436f12c23e796256c1c0471f0273520c6aba0fa290e'
-version = '2.1.282'
+manifest_sha256 = 'b23c5f92838f50c064f5e487537562e4ce7fb37f4a48230d0b00937a34169c2c'
+version = '2.1.274'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.282/darwin-arm64/claude'
-sha256 = 'fcfd837103965c64de34a6b9b94370d77a347ea71819715a27d5f0ef01775ea4'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.274/darwin-arm64/claude'
+sha256 = '3509913f9d1576316c8845b88837f8fd3bbbcf26625833ac82cfb6b8985da94a'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.282/linux-x64/claude'
-sha256 = '3afe8535c0cc33f0e24f7b25dab7a1727b8b592196f8496a8bc302ba2161eed3'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.274/linux-x64/claude'
+sha256 = '15e2d05148f801b5774032faad87e624ecd172e9903288bda448b892eb58fa07'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.282/linux-arm64/claude'
-sha256 = '6764ffc39e9fed425a493ff61ea28506d1ba83996ce81a48d1177dbb393419c9'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.274/linux-arm64/claude'
+sha256 = '2db904daea17addff9de557ba26a725916888aa7b546e2c5dd989c20d9d49ab3'
 
 [[package]]
 name = 'coreutils'
@@ -597,23 +597,23 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 name = 'freebuff'
 ref = './packages/freebuff.toml'
 manifest_sha256 = '5a05ed5b3b754299066e214b6b8ac17044226cff4b4fa856f6b6d699c8eb6508'
-version = '0.0.196'
+version = '0.0.197'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.196/freebuff-darwin-arm64.tar.gz'
-sha256 = '31481e33ebd1ce657871e638814a0cf40983ee34826f320948e7c3a27c1aa606'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.197/freebuff-darwin-arm64.tar.gz'
+sha256 = 'f732bf1a71a57e312a973264a835ca68eb55ce5e56371f052c5894576df2b016'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.196/freebuff-linux-x64.tar.gz'
-sha256 = '43a19d7def718fbd3ab316ae9dcf90b0839e50c4ed9688c9b99794a7b258d2aa'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.197/freebuff-linux-x64.tar.gz'
+sha256 = 'd7c809028c05beedda432b6bedb8defbdaa63f9ab189ca212306a539d351ca1f'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.196/freebuff-linux-arm64.tar.gz'
-sha256 = '481d8becd750d13ce5da9e41e33029bfae63d417a29752cbdd36b9c5fef42f8b'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.197/freebuff-linux-arm64.tar.gz'
+sha256 = '22d7607e57d215e3f1a290111c6e2bb1c71bbc5b84136e6661b626437fecad99'
 
 [[package]]
 name = 'fzf'
@@ -3652,7 +3652,7 @@ commands = true
 [[package]]
 name = 'stripe-cli'
 ref = 'github:stripe/stripe-cli'
-commit = '4a5d9d6c1bb2c70b9403f42847bffc918b7ef6da'
+commit = '2e8979c3f92d4384846524d23779f3090d752a53'
 manifest_sha256 = 'a1f28c24ef1e91ac3473c88a3cb28701a1706ba4c39c75984e6bc89727d1e047'
 version = '1.52.0'
 tag = 'v1.52.0'
