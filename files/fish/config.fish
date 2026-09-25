@@ -14,16 +14,7 @@ if not set -q __session_vars_set
     set -gx LANG en_US.UTF-8
     set -gx LC_ALL en_US.UTF-8
     set -gx TERM xterm-256color
-    set -gx COLORTERM truecolor
-    set -gx TERMINAL ghostty
-    set -gx KEYTIMEOUT 1
-    set -gx EDITOR nvim
-    set -gx VISUAL nvim
-    set -gx GIT_EDITOR nvim
-    set -gx PAGER less
-    set -gx LESS -R
-    set -gx CLICOLOR 1
-    set -gx SYSTEMD_COLORS true
+    # EDITOR, PAGER and the other plain variables are in [env] of oku.toml.
     set -gx RIPGREP_CONFIG_PATH $XDG_CONFIG_HOME/ripgrep/ripgreprc
 end
 
