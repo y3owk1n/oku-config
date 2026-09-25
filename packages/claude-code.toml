@@ -1,33 +1,29 @@
 [package]
 name = "claude-code"
-description = "Coding agent for the terminal"
-homepage = "https://github.com/anthropics/claude-code"
+description = "Terminal-based AI coding assistant"
+homepage = "https://claude.com/product/claude-code"
 
-# The npm package needs its install script, which oku never runs. The vendor
-# publishes the same versions as single programs in its release bucket, so the
-# versions come from npm and the download from the bucket. The bucket has a
-# manifest.json with checksums, which is not a format sha256_url reads, so oku
-# pins the first download.
 [version]
-from = "npm"
-repo = "@anthropic-ai/claude-code"
+from = "page"
+repo = "https://downloads.claude.ai/claude-code-releases/stable"
+regex = "(?i)^v?(\\d+(?:\\.\\d+)+)$"
 
 [[artifact]]
 match = { os = "darwin", arch = "arm64" }
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/{{version}}/darwin-arm64/claude"
+url = "https://downloads.claude.ai/claude-code-releases/{{version}}/darwin-arm64/claude"
+bin = ["claude"]
+
+[[artifact]]
+match = { os = "darwin", arch = "amd64" }
+url = "https://downloads.claude.ai/claude-code-releases/{{version}}/darwin-x64/claude"
 bin = ["claude"]
 
 [[artifact]]
 match = { os = "linux", arch = "arm64", libc = "glibc" }
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/{{version}}/linux-arm64/claude"
-bin = ["claude"]
-
-[[artifact]]
-match = { os = "linux", arch = "arm64" }
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/{{version}}/linux-arm64-musl/claude"
+url = "https://downloads.claude.ai/claude-code-releases/{{version}}/linux-arm64/claude"
 bin = ["claude"]
 
 [[artifact]]
 match = { os = "linux", arch = "amd64", libc = "glibc" }
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/{{version}}/linux-x64/claude"
+url = "https://downloads.claude.ai/claude-code-releases/{{version}}/linux-x64/claude"
 bin = ["claude"]
