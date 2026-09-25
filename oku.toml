@@ -59,8 +59,6 @@ base0F = "bf8a6e"
 [files]
 "{{home}}/.ssh/id_ed25519" = { secret = "./secrets/secrets.yaml", key = "ssh/id_ed25519" }
 
-[packages]
-
 # Variables for every shell and for oku exec. Fish's own startup values, such
 # as the XDG folders, the locale and TERM, stay in files/fish/config.fish.
 [env]
@@ -74,3 +72,5 @@ COLORTERM = "truecolor"
 TERMINAL = "ghostty"
 KEYTIMEOUT = "1"
 SYSTEMD_COLORS = "true"
+
+[packages]

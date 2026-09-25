@@ -28,14 +28,11 @@ match = { os = "linux", arch = "arm64" }
 url = "https://github.com/brave/brave-browser/releases/download/v{{version}}/brave-browser-{{version}}-linux-arm64.zip"
 sha256_url = "https://github.com/brave/brave-browser/releases/download/v{{version}}/brave-browser-{{version}}-linux-arm64.zip.sha256"
 bin = ["brave-browser"]
+app = [{ path = "brave-browser", name = "Brave", icon = "product_logo_128.png" }]
 
 [[artifact]]
 match = { os = "linux", arch = "amd64" }
 url = "https://github.com/brave/brave-browser/releases/download/v{{version}}/brave-browser-{{version}}-linux-amd64.zip"
 sha256_url = "https://github.com/brave/brave-browser/releases/download/v{{version}}/brave-browser-{{version}}-linux-amd64.zip.sha256"
 bin = ["brave-browser"]
-
-[[app]]
-name = "Brave"
-exec = "bin/brave-browser"
-icon = "pkg/product_logo_128.png"
+app = [{ path = "brave-browser", name = "Brave", icon = "product_logo_128.png" }]

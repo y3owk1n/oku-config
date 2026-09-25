@@ -43,18 +43,19 @@ codesign --force --deep --sign - --entitlements resources/Mimi.entitlements --op
 shell = "sh"
 
 [[build.step]]
-install = { bin = ["mimi"], man = ["man/mimi.1"], completions = { generate = "./mimi completion {{shell}}" } }
+install = { man = ["man/mimi.1"], completions = { generate = "./mimi completion {{shell}}", name = "mimi" } }
 
 # The bundle goes to ~/Applications too, so macOS lists it under Accessibility
-# by name and Spotlight finds it.
+# by name and Spotlight finds it. The command is the bundle's program, which
+# runs the copy in ~/Applications, so it shares the app's permissions.
 [[build.step]]
-install = { app = ["Mimi.app"] }
+install = { bin = ["Mimi.app/Contents/MacOS/mimi"], app = ["Mimi.app"] }
 when = { os = "darwin" }
 
 # The daemon runs from inside its bundle, as the Nix module did. It reads
 # ~/.config/mimi/config.toml by default, so no --config is passed.
 [[service]]
 name = "mimi"
-command = "apps/Mimi.app/Contents/MacOS/mimi"
+command = "bin/mimi"
 args = ["start"]
 restart = "always"

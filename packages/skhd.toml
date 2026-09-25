@@ -14,14 +14,16 @@ strip_prefix = "v"
 match = { os = "darwin", arch = "arm64" }
 url = "https://github.com/jackielii/skhd.zig/releases/download/{{tag}}/skhd-arm64-macos.tar.gz"
 bin = ["skhd.app/Contents/MacOS/skhd", "skhd.app/Contents/MacOS/skhd-grabber"]
+app = ["skhd.app"]
 
 [[artifact]]
 match = { os = "darwin", arch = "amd64" }
 url = "https://github.com/jackielii/skhd.zig/releases/download/{{tag}}/skhd-x86_64-macos.tar.gz"
 bin = ["skhd.app/Contents/MacOS/skhd", "skhd.app/Contents/MacOS/skhd-grabber"]
+app = ["skhd.app"]
 
 # skhd reads ~/.config/skhd/skhdrc by default.
 [[service]]
 name = "skhd"
-command = "pkg/skhd.app/Contents/MacOS/skhd"
+command = "bin/skhd"
 restart = "always"

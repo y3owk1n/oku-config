@@ -23,8 +23,4 @@ version = { from = "redirect", repo = "https://discord.com/api/download?platform
 url = "https://stable.dl2.discordapp.net/apps/linux/{{version}}/discord-{{version}}.tar.gz"
 strip = 1
 bin = ["discord"]
-
-[[app]]
-name = "Discord"
-exec = "bin/discord"
-icon = "pkg/discord.png"
+app = [{ path = "discord", name = "Discord", icon = "discord.png" }]

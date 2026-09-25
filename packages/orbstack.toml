@@ -13,9 +13,9 @@ from = "redirect"
 repo = "https://orbstack.dev/download/stable/latest/arm64"
 regex = '/OrbStack_v([0-9.]+_[0-9]+)_arm64\.dmg'
 
-# orb, orbctl, docker and kubectl run from the copy in the oku store, not from
-# the app in ~/Applications, so they stay at this version when the app updates
-# itself. docker, docker-buildx and docker-compose are links to docker-tools,
+# orb, orbctl, docker and kubectl run the app's copy in ~/Applications while it
+# is this version, and the copy in the oku store once the app updates itself.
+# docker, docker-buildx and docker-compose are links to docker-tools,
 # which picks the program by the name it was called with.
 [[artifact]]
 match = { os = "darwin", arch = "arm64" }

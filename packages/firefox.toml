@@ -25,14 +25,11 @@ match = { os = "linux", arch = "arm64" }
 url = "https://download-installer.cdn.mozilla.net/pub/firefox/releases/{{version}}/linux-aarch64/en-US/firefox-{{version}}.tar.xz"
 strip = 1
 bin = ["firefox"]
+app = [{ path = "firefox", name = "Firefox", icon = "browser/chrome/icons/default/default128.png" }]
 
 [[artifact]]
 match = { os = "linux", arch = "amd64" }
 url = "https://download-installer.cdn.mozilla.net/pub/firefox/releases/{{version}}/linux-x86_64/en-US/firefox-{{version}}.tar.xz"
 strip = 1
 bin = ["firefox"]
-
-[[app]]
-name = "Firefox"
-exec = "bin/firefox"
-icon = "pkg/browser/chrome/icons/default/default128.png"
+app = [{ path = "firefox", name = "Firefox", icon = "browser/chrome/icons/default/default128.png" }]
