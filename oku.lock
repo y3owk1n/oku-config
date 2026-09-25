@@ -149,7 +149,7 @@ vendor_sha256 = '90d3f5e39ab327bea4f69955db3b589836e0851db641214d3e3a22be8838af0
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
 version = '22.23.3'
 tag = 'v22.23.3'
 
@@ -172,7 +172,7 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
 version = '22.23.3'
 tag = 'v22.23.3'
 
@@ -400,7 +400,7 @@ vendor_sha256 = '9e2b544906cef85c54fa15a06960d8d2fa249aa7e65f183bf831d56a39458b4
 [[package.dep]]
 name = 'rust'
 ref = './packages/rust.toml'
-manifest_sha256 = '8f5d9e747320d4f26a533c5488eda3f798d24decb9e5db886b9cba70b5a23056'
+manifest_sha256 = '5c7a01646842fd44ae181aad5b5093c0d68611cf12057a88f9cd6c2aa251b2eb'
 version = '1.98.1'
 
 [package.dep.platform]
@@ -550,7 +550,7 @@ vendor_sha256 = 'bb7fc69f2a69f74ba69bdb42f551f30e14a23c24310c90f8bbc581ec26a920d
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
 version = '22.23.3'
 tag = 'v22.23.3'
 
@@ -573,7 +573,7 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
 version = '22.23.3'
 tag = 'v22.23.3'
 
@@ -692,7 +692,7 @@ sha256 = 'd152725064c64f862da5158cd630d4c67973edfb58bdabaa44054ffef03b9d03'
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
 version = '22.23.3'
 tag = 'v22.23.3'
 
@@ -1879,7 +1879,7 @@ vendor_sha256 = '57c96443cdb57e8b66883f800ec66fbb806d679fb42757aa4403fe4a3c0b7a9
 [[package.dep]]
 name = 'go'
 ref = './packages/go.toml'
-manifest_sha256 = '850dfc0af428be9b5da144c08de9d6c247b2bd41a401c160d99a076a8ce62691'
+manifest_sha256 = '4e86afdeda4063d8c7cc15bedb7857112496c03e8608295229e30bd61a6dd9d8'
 version = '1.26.8'
 tag = 'go1.26.8'
 
@@ -1930,7 +1930,7 @@ vendor_sha256 = 'f09966fbbfa813463809f39ef2d7996d681617e22d5c608a8a704ebd48619cc
 [[package.dep]]
 name = 'go'
 ref = './packages/go.toml'
-manifest_sha256 = '850dfc0af428be9b5da144c08de9d6c247b2bd41a401c160d99a076a8ce62691'
+manifest_sha256 = '4e86afdeda4063d8c7cc15bedb7857112496c03e8608295229e30bd61a6dd9d8'
 version = '1.27.1'
 tag = 'go1.27.1'
 
@@ -1964,7 +1964,7 @@ vendor_sha256 = '22df635c77134304b158d10e10c8ace5c6b0d9a732d1522517c809af7b0da7c
 [[package.dep]]
 name = 'go'
 ref = './packages/go.toml'
-manifest_sha256 = '850dfc0af428be9b5da144c08de9d6c247b2bd41a401c160d99a076a8ce62691'
+manifest_sha256 = '4e86afdeda4063d8c7cc15bedb7857112496c03e8608295229e30bd61a6dd9d8'
 version = '1.26.8'
 tag = 'go1.26.8'
 
@@ -2093,7 +2093,7 @@ vendor_sha256 = '54e379e8254c0a9b244e3bc31d1dae84ab2e56eb038cc36ea2d2313ba1b5a64
 [[package.dep]]
 name = 'rust'
 ref = './packages/rust.toml'
-manifest_sha256 = '8f5d9e747320d4f26a533c5488eda3f798d24decb9e5db886b9cba70b5a23056'
+manifest_sha256 = '5c7a01646842fd44ae181aad5b5093c0d68611cf12057a88f9cd6c2aa251b2eb'
 version = '1.98.1'
 
 [package.dep.platform]
@@ -3377,7 +3377,7 @@ vendor_sha256 = '62fc7f6aa5bf2da521ef14c26b703fe3367f7dd7a1023cff97104216eb30fe6
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
 version = '22.23.3'
 tag = 'v22.23.3'
 
@@ -3400,7 +3400,7 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
 version = '22.23.3'
 tag = 'v22.23.3'
 
@@ -3784,7 +3784,7 @@ vendor_sha256 = 'c811091b33bc4d469b6486407436ba84f17e2d8f0e1a0ef300a4920b793909d
 [[package.dep]]
 name = 'go'
 ref = './packages/go.toml'
-manifest_sha256 = '850dfc0af428be9b5da144c08de9d6c247b2bd41a401c160d99a076a8ce62691'
+manifest_sha256 = '4e86afdeda4063d8c7cc15bedb7857112496c03e8608295229e30bd61a6dd9d8'
 version = '1.26.8'
 tag = 'go1.26.8'
 
@@ -3819,28 +3819,31 @@ sha256 = '6ed17e8d7245931fd405c419321ace7ef9333fe2e3d59b3a7f78e34fcbe628b6'
 [[package]]
 name = 'vscode-langservers-extracted'
 ref = 'npm:vscode-langservers-extracted'
-manifest_sha256 = '659fc57eeebfff968bad449df35a2043e9c50710bb4203c2bfec7571c576eb6a'
+manifest_sha256 = '1d0f200ea6b591e4ec117f78d8b1acb32bf23eafc86212a76e62012953508576'
 version = '4.10.0'
 inferred = true
-manifest = "[package]\nname = \"vscode-langservers-extracted\"\nhomepage = \"https://www.npmjs.com/package/vscode-langservers-extracted\"\n\n[version]\nfrom = \"npm\"\nrepo = \"vscode-langservers-extracted\"\n\n[runtime]\ndeps = [{ ref = \"./packages/node.toml\", version = \"^22\" }]\n\n[build]\ndeps = [{ ref = \"./packages/node.toml\", version = \"^22\" }]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"vscode-langservers-extracted\"\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"vscode-css-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-css-language-server\"] },\n  { name = \"vscode-eslint-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-eslint-language-server\"] },\n  { name = \"vscode-html-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-html-language-server\"] },\n  { name = \"vscode-json-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-json-language-server\"] },\n  { name = \"vscode-markdown-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-markdown-language-server\"] },\n] }\n"
+manifest = "[package]\nname = \"vscode-langservers-extracted\"\nhomepage = \"https://www.npmjs.com/package/vscode-langservers-extracted\"\n\n[version]\nfrom = \"npm\"\nrepo = \"vscode-langservers-extracted\"\n\n[runtime]\ndeps = [{ ref = \"./packages/node.toml\", version = \"^22\" }]\n\n[build]\ndeps = [{ ref = \"./packages/node.toml\", version = \"^22\" }]\n\n[[build.step]]\nvendor = \"npm\"\npackage = \"vscode-langservers-extracted\"\nscripts = [\"core-js\"]\n\n[[build.step]]\ninstall = { bin = [\n  { name = \"vscode-css-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-css-language-server\"] },\n  { name = \"vscode-eslint-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-eslint-language-server\"] },\n  { name = \"vscode-html-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-html-language-server\"] },\n  { name = \"vscode-json-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-json-language-server\"] },\n  { name = \"vscode-markdown-language-server\", run = \"{{dep.node.prefix}}/bin/node\", args = [\"{{prefix}}/lib/node_modules/vscode-langservers-extracted/bin/vscode-markdown-language-server\"] },\n] }\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
+impure = true
 vendor_sha256 = '82e13674de56d0089177cffec31095ae9cf58cfc0d9d18a850e306178f246329'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'build'
+impure = true
 vendor_sha256 = '82e13674de56d0089177cffec31095ae9cf58cfc0d9d18a850e306178f246329'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
+impure = true
 vendor_sha256 = '82e13674de56d0089177cffec31095ae9cf58cfc0d9d18a850e306178f246329'
 
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
 version = '22.23.3'
 tag = 'v22.23.3'
 
@@ -3863,7 +3866,7 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
 version = '22.23.3'
 tag = 'v22.23.3'
 
@@ -3942,7 +3945,7 @@ vendor_sha256 = '70ca5478a6e76a3d437e66b8a2a9c7d70d12d19c1489f5ba8e332c628cd8438
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
 version = '22.23.3'
 tag = 'v22.23.3'
 
@@ -3965,7 +3968,7 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
-manifest_sha256 = '2561a916c8348415b96281ace85f5cc77265f22e5cc2d69dbd88127a03e7e494'
+manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
 version = '22.23.3'
 tag = 'v22.23.3'
 

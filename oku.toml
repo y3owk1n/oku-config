@@ -22,6 +22,9 @@ platforms = ["darwin-arm64", "linux-arm64-glibc", "linux-amd64-glibc"]
 # with `oku sync github:y3owk1n/oku-config` reads it from here too.
 [runtimes]
 node = { ref = "./packages/node.toml", version = "^22" }
+python = "./packages/python.toml"
+go = "./packages/go.toml"
+rust = "./packages/rust.toml"
 
 # Values that the templates under files/ use as {{name}}.
 [vars]
