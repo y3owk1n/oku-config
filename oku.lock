@@ -52,11 +52,11 @@ sha256 = '317f5cf64a5364319898576b4648b6a96dc9ec39f50039aebf9901b7ed3a5d96'
 name = 'age'
 ref = 'github:FiloSottile/age'
 commit = 'b74dce4cdbe35b5e5f66c06d9612b72f89028758'
-manifest_sha256 = 'e1a759bfc35ec3095bf751c5d6173e3bd3e7a783f9f728faafd645275f08cb9e'
+manifest_sha256 = 'bc37a0e19508e2f0df787bd183e6a5471bfc710baa7c21f1cbb827e7ba9be3d8'
 version = '1.3.2'
 tag = 'v1.3.2'
 inferred = true
-manifest = "[package]\nname = \"age\"\nhomepage = \"https://github.com/FiloSottile/age\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"FiloSottile/age\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/FiloSottile/age/releases/download/{{tag}}/age-{{tag}}-linux-amd64.tar.gz\"\nstrip = 1\nbin = [\"age\", \"age-inspect\", \"age-keygen\", \"age-plugin-batchpass\", \"age-plugin-pq\", \"age-plugin-tag\", \"age-plugin-tagpq\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/FiloSottile/age/releases/download/{{tag}}/age-{{tag}}-darwin-amd64.tar.gz\"\nstrip = 1\nbin = [\"age\", \"age-inspect\", \"age-keygen\", \"age-plugin-batchpass\", \"age-plugin-pq\", \"age-plugin-tag\", \"age-plugin-tagpq\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/FiloSottile/age/releases/download/{{tag}}/age-{{tag}}-linux-arm64.tar.gz\"\nstrip = 1\nbin = [\"age\", \"age-inspect\", \"age-keygen\", \"age-plugin-batchpass\", \"age-plugin-pq\", \"age-plugin-tag\", \"age-plugin-tagpq\"]\n\n# These assets fit this machine too: age-v1.3.2-darwin-arm64.tar.gz.proof\n# Choose one with --asset.\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/FiloSottile/age/releases/download/{{tag}}/age-{{tag}}-darwin-arm64.tar.gz\"\nstrip = 1\nbin = [\"age\", \"age-inspect\", \"age-keygen\", \"age-plugin-batchpass\", \"age-plugin-pq\", \"age-plugin-tag\", \"age-plugin-tagpq\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm\" }\nurl = \"https://github.com/FiloSottile/age/releases/download/{{tag}}/age-{{tag}}-linux-arm.tar.gz\"\nstrip = 1\nbin = [\"age\", \"age-inspect\", \"age-keygen\", \"age-plugin-batchpass\", \"age-plugin-pq\", \"age-plugin-tag\", \"age-plugin-tagpq\"]\n"
+manifest = "[package]\nname = \"age\"\nhomepage = \"https://github.com/FiloSottile/age\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"FiloSottile/age\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/FiloSottile/age/releases/download/{{tag}}/age-{{tag}}-linux-amd64.tar.gz\"\nstrip = 1\nbin = [\"age\", \"age-inspect\", \"age-keygen\", \"age-plugin-batchpass\", \"age-plugin-pq\", \"age-plugin-tag\", \"age-plugin-tagpq\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/FiloSottile/age/releases/download/{{tag}}/age-{{tag}}-darwin-amd64.tar.gz\"\nstrip = 1\nbin = [\"age\", \"age-inspect\", \"age-keygen\", \"age-plugin-batchpass\", \"age-plugin-pq\", \"age-plugin-tag\", \"age-plugin-tagpq\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/FiloSottile/age/releases/download/{{tag}}/age-{{tag}}-linux-arm64.tar.gz\"\nstrip = 1\nbin = [\"age\", \"age-inspect\", \"age-keygen\", \"age-plugin-batchpass\", \"age-plugin-pq\", \"age-plugin-tag\", \"age-plugin-tagpq\"]\n\n# These assets fit darwin-arm64 too: age-v1.3.2-darwin-arm64.tar.gz.proof\n# Choose one with --asset.\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/FiloSottile/age/releases/download/{{tag}}/age-{{tag}}-darwin-arm64.tar.gz\"\nstrip = 1\nbin = [\"age\", \"age-inspect\", \"age-keygen\", \"age-plugin-batchpass\", \"age-plugin-pq\", \"age-plugin-tag\", \"age-plugin-tagpq\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm\" }\nurl = \"https://github.com/FiloSottile/age/releases/download/{{tag}}/age-{{tag}}-linux-arm.tar.gz\"\nstrip = 1\nbin = [\"age\", \"age-inspect\", \"age-keygen\", \"age-plugin-batchpass\", \"age-plugin-pq\", \"age-plugin-tag\", \"age-plugin-tagpq\"]\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -219,23 +219,23 @@ sha256 = '6369242c584065f195fb20cb36fbd7cb63ae690605bbe89868a7596b596c2c23'
 name = 'brave'
 ref = './packages/brave.toml'
 manifest_sha256 = 'd88f8e95ae6cf5d266e11dd1f647ae40da107fc6171c6b592763dd48e20188e7'
-version = '1.95.104'
+version = '1.96.59'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/brave/brave-browser/releases/download/v1.95.104/Brave-Browser-arm64.dmg'
-sha256 = 'f6823d53b3e9a287b8f8830b728ba9b34fe2d4a9f6ee4e05b3bcd4a21ee25eaf'
+url = 'https://github.com/brave/brave-browser/releases/download/v1.96.59/Brave-Browser-arm64.dmg'
+sha256 = '57690cf24e5ce5e15768b220d46621e575e0caabd3d651bdad5afc2b184f118a'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/brave/brave-browser/releases/download/v1.95.104/brave-browser-1.95.104-linux-amd64.zip'
-sha256 = '1d2a6fc3e32ad7b62bb2aeae6d1ba4ba01acbec12a8a7a8310ea6ae1293816cc'
+url = 'https://github.com/brave/brave-browser/releases/download/v1.96.59/brave-browser-1.96.59-linux-amd64.zip'
+sha256 = 'ee36d0fb939ebdf1922d47d7b4cb8879507733b2a76605a31bfe9dede3297139'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/brave/brave-browser/releases/download/v1.95.104/brave-browser-1.95.104-linux-arm64.zip'
-sha256 = '9f2dab1cd328cdaa88302be319bd269d59a8a84c8dfc6ccaa71287b8c0629ac2'
+url = 'https://github.com/brave/brave-browser/releases/download/v1.96.59/brave-browser-1.96.59-linux-arm64.zip'
+sha256 = 'faa8a26f1e7c0c3b8632633503f82e571a798212d8e6fe9baba77f0c73509867'
 
 [[package]]
 name = 'brotli'
@@ -302,23 +302,23 @@ sha256 = '6270de0ef4c84cf0eea61cb148b3ad9ae91a11e9c3309867ffc6b3751024c252'
 name = 'claude-code'
 ref = './packages/claude-code.toml'
 manifest_sha256 = '132b96a4a061ec0c306b1436f12c23e796256c1c0471f0273520c6aba0fa290e'
-version = '2.1.281'
+version = '2.1.282'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.281/darwin-arm64/claude'
-sha256 = 'a922981f6f3b55a251ef9f9dbaa0621a5f99cbcb5ca67f8a797476ccfc83f626'
+url = 'https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.282/darwin-arm64/claude'
+sha256 = 'fcfd837103965c64de34a6b9b94370d77a347ea71819715a27d5f0ef01775ea4'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.281/linux-x64/claude'
-sha256 = '56fe3da88458465fb27d7e9299dddb3fead55750fb9c2de795f233b5eea6dce1'
+url = 'https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.282/linux-x64/claude'
+sha256 = '3afe8535c0cc33f0e24f7b25dab7a1727b8b592196f8496a8bc302ba2161eed3'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.281/linux-arm64/claude'
-sha256 = 'dd27b36438a4fed1670cd29bad2fda6a73b628b6da55443e5c2f647fe6ed328f'
+url = 'https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.282/linux-arm64/claude'
+sha256 = '6764ffc39e9fed425a493ff61ea28506d1ba83996ce81a48d1177dbb393419c9'
 
 [[package]]
 name = 'coreutils'
@@ -597,23 +597,23 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 name = 'freebuff'
 ref = './packages/freebuff.toml'
 manifest_sha256 = '5a05ed5b3b754299066e214b6b8ac17044226cff4b4fa856f6b6d699c8eb6508'
-version = '0.0.192'
+version = '0.0.195'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.192/freebuff-darwin-arm64.tar.gz'
-sha256 = '4c3839bcae59f64c0c781008d952ebfb561b0ad03d72621c8b228e766f489ab2'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.195/freebuff-darwin-arm64.tar.gz'
+sha256 = 'f4eda7196c7b865bbb4760282ad8b621764cd93ae35fa76faf6ad2bafca913a5'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.192/freebuff-linux-x64.tar.gz'
-sha256 = 'd40ca43245d7cafef4f9b072e75e3cc6a9921fb5981cce6af187445c1985eaef'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.195/freebuff-linux-x64.tar.gz'
+sha256 = '792acb144b1261b0c3f4348eb76417e8c34797d198c0eddab9731258a32bcb8b'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.192/freebuff-linux-arm64.tar.gz'
-sha256 = '0feac08285132b88cb86c7d7b982605b641f9c83aa18f66c1e7a2fe5fe84e653'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.195/freebuff-linux-arm64.tar.gz'
+sha256 = 'fb6d84d4a478e27fa509f0563e5dff4691891483f04eb4b0005a1aeae4e67191'
 
 [[package]]
 name = 'fzf'
@@ -3511,9 +3511,9 @@ sha256 = '0b48d8f349f6b73849e338fe8dfa5dc14077f58baee98e01e2aa784d6721b340'
 name = 'skills-anthropic'
 ref = './packages/skills-anthropic.toml'
 manifest_sha256 = '474af7afe6e9fc0bb77a2b4a451e4466a0ab723a1b1264a10af63d0a6a518ffd'
-version = '2026.09.10-34040c9'
+version = '2026.09.24-3337550'
 tag = 'main'
-tag_commit = '34040c9c568585f6929bedeaad110ad08f079624'
+tag_commit = '33375500bcea98d610eb30ce10ac4e59b89c390d'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -3547,9 +3547,9 @@ strategy = 'build'
 name = 'skills-cursor'
 ref = './packages/skills-cursor.toml'
 manifest_sha256 = 'c3ce250f0af9558c91c53ece8f2a415cdd7fb1010335527087111f96d48fbcfc'
-version = '2026.09.23-12d587d'
+version = '2026.09.24-fadd237'
 tag = 'main'
-tag_commit = '12d587dfb20741cafc376c42c696c5f6e2a64487'
+tag_commit = 'fadd23794c0075468eb8964b0fd93e06e09486ad'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -3652,28 +3652,28 @@ commands = true
 [[package]]
 name = 'stripe-cli'
 ref = 'github:stripe/stripe-cli'
-commit = '160f23112c198cf0de2fc600866d9e445a2e191b'
+commit = '4a5d9d6c1bb2c70b9403f42847bffc918b7ef6da'
 manifest_sha256 = 'a1f28c24ef1e91ac3473c88a3cb28701a1706ba4c39c75984e6bc89727d1e047'
-version = '1.51.1'
-tag = 'v1.51.1'
+version = '1.52.0'
+tag = 'v1.52.0'
 inferred = true
 manifest = "[package]\nname = \"stripe-cli\"\nhomepage = \"https://github.com/stripe/stripe-cli\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"stripe/stripe-cli\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe_{{version}}_linux_x86_64.tar.gz\"\nsha256_url = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe-linux-checksums.txt\"\nbin = [\"stripe\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe_{{version}}_mac-os_x86_64.tar.gz\"\nsha256_url = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe-mac-checksums.txt\"\nbin = [\"stripe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe_{{version}}_linux_arm64.tar.gz\"\nsha256_url = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe-linux-checksums.txt\"\nbin = [\"stripe\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe_{{version}}_mac-os_arm64.tar.gz\"\nsha256_url = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe-mac-checksums.txt\"\nbin = [\"stripe\"]\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/stripe/stripe-cli/releases/download/v1.51.1/stripe_1.51.1_mac-os_arm64.tar.gz'
-sha256 = '066c56d5d04b64478c86517eebc76cacbf7b1b3cdbd17c9794ec5a81b425677a'
+url = 'https://github.com/stripe/stripe-cli/releases/download/v1.52.0/stripe_1.52.0_mac-os_arm64.tar.gz'
+sha256 = '5946baab218d43d4d7e3f43ec30a05e0dd3deadbcded5d11b67398e3cfe30830'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/stripe/stripe-cli/releases/download/v1.51.1/stripe_1.51.1_linux_x86_64.tar.gz'
-sha256 = '38c8de73a8cab810a4aab8a4015cd4e3398b7b87aa42b6944d09d89ed524ac53'
+url = 'https://github.com/stripe/stripe-cli/releases/download/v1.52.0/stripe_1.52.0_linux_x86_64.tar.gz'
+sha256 = 'd18bd167981ae9549f1297c2ed9729ae60849ec232fd09e813ccd1d135406335'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/stripe/stripe-cli/releases/download/v1.51.1/stripe_1.51.1_linux_arm64.tar.gz'
-sha256 = 'b4f2dccfce8784ff43bf7e80e03cc2668f52532d9649d21d41d71927d83a9021'
+url = 'https://github.com/stripe/stripe-cli/releases/download/v1.52.0/stripe_1.52.0_linux_arm64.tar.gz'
+sha256 = 'f60d34b6b6ec5bfa7d408839b5a5096a25fcc1111f6ff3cd694d87296ea21932'
 
 [[package]]
 name = 'symbols-nerd-font'
@@ -3887,13 +3887,13 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 name = 'whatsapp'
 ref = './packages/whatsapp.toml'
 manifest_sha256 = '899c45c2fb9ba4689b30e5aa2d93d556606c3cf234030f31f378111ac8ee6b96'
-version = '26.38.18'
+version = '26.38.20'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://web.whatsapp.com/desktop/mac_native/release/?version=2.26.38.18&extension=zip&configuration=Release&branch=master&is_buck=true'
-sha256 = 'b6c6dac534bb8038e7ad9f8274ecd9c2514e208465e27f596bf784bdd3906d94'
+url = 'https://web.whatsapp.com/desktop/mac_native/release/?version=2.26.38.20&extension=zip&configuration=Release&branch=master&is_buck=true'
+sha256 = 'ab8341b772d3c97286549f7ba8274053d07679367ee550b3b5220b9a7bcab2c3'
 
 [[package]]
 name = 'xz'
