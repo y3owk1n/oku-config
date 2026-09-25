@@ -15,7 +15,7 @@ strip_prefix = "V"
 # bin/mole links to it. The script follows the link to find its files.
 [build]
 needs = ["git"]
-deps = [{ ref = "./go.toml", version = ">=1.26" }]
+deps = [{ ref = "./go.toml", version = "~1.26" }]
 source = { git = "https://github.com/tw93/Mole", tag = "{{tag}}" }
 
 [[build.step]]

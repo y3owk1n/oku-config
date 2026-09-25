@@ -1918,7 +1918,7 @@ sha256 = 'b98f2cc69fd9147fe4d405d859c57504571adec0d3611c3eefd04107c7ac00d0'
 [[package]]
 name = 'mole'
 ref = './packages/mole.toml'
-manifest_sha256 = 'ecb5c4e2b693a351c9932246c10b79baf704991ad39c0dd6f285c8c31c527868'
+manifest_sha256 = '683fe1cdc21a2c32f460455d46bb9205cce93f25e1fad61dadeb1bf8e2a7c0f4'
 version = '1.55.0'
 tag = 'V1.55.0'
 
@@ -1931,14 +1931,14 @@ vendor_sha256 = 'f09966fbbfa813463809f39ef2d7996d681617e22d5c608a8a704ebd48619cc
 name = 'go'
 ref = './packages/go.toml'
 manifest_sha256 = '4e86afdeda4063d8c7cc15bedb7857112496c03e8608295229e30bd61a6dd9d8'
-version = '1.27.1'
-tag = 'go1.27.1'
+version = '1.26.8'
+tag = 'go1.26.8'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.27.1.darwin-arm64.tar.gz'
-sha256 = 'ee215d57e0ec269c60cc9ceca68e6bda321ba9ee5afe24f4b0988703c2d87d12'
+url = 'https://dl.google.com/go/go1.26.8.darwin-arm64.tar.gz'
+sha256 = 'a012b25b571bd0138a03dcd25375ceba866fe5ca822f426d2c66a4de56fd3f4b'
 
 [[package]]
 name = 'neru'
