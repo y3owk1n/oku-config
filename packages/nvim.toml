@@ -29,3 +29,17 @@ url = "https://github.com/neovim/neovim/releases/download/{{tag}}/nvim-linux-arm
 strip = 1
 bin = ["bin/nvim"]
 man = ["share/man/man1/nvim.1"]
+
+[[artifact]]
+match = { os = "windows", arch = "amd64" }
+url = "https://github.com/neovim/neovim/releases/download/{{tag}}/nvim-win64.zip"
+strip = 1
+bin = ["bin/nvim.exe"]
+man = ["share/man/man1/nvim.1"]
+
+[[artifact]]
+match = { os = "windows", arch = "arm64" }
+url = "https://github.com/neovim/neovim/releases/download/{{tag}}/nvim-win-arm64.zip"
+strip = 1
+bin = ["bin/nvim.exe"]
+man = ["share/man/man1/nvim.1"]

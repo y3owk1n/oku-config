@@ -1987,7 +1987,7 @@ sha256 = '211ffced9dcb9633a55eac6364816ec0ddd951389a740e88fa8b3337971bdda0'
 [[package]]
 name = 'nvim'
 ref = './packages/nvim.toml'
-manifest_sha256 = 'b8b44381b34f1aedf7eae5625936ccf997f9a35d1cd3cab94cd7521355b58ba3'
+manifest_sha256 = 'e3ae4d0f5cabfa79a7b360bbd09bcf50c508487ceff65665b86c01b6f7952b50'
 version = '2026.09.26-521edde'
 tag = 'nightly'
 tag_commit = '521eddec7c243a8166609bf1734cb940e9510fc5'
