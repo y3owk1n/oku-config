@@ -597,23 +597,23 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 name = 'freebuff'
 ref = './packages/freebuff.toml'
 manifest_sha256 = '5a05ed5b3b754299066e214b6b8ac17044226cff4b4fa856f6b6d699c8eb6508'
-version = '0.0.199'
+version = '0.0.200'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.199/freebuff-darwin-arm64.tar.gz'
-sha256 = '046aa68b756dd53119d372e4f530c0a423d1f9d626f27d9d33e588f814289337'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.200/freebuff-darwin-arm64.tar.gz'
+sha256 = 'cfa8df1c6283cd3d9bcf8b78f9e39d1651836d535f395b1eebc005ef4141471b'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.199/freebuff-linux-x64.tar.gz'
-sha256 = '5723475c4fbd4c5b95e61f79b3e867287ee83ba8fb2638738d096cdd95f9b082'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.200/freebuff-linux-x64.tar.gz'
+sha256 = 'ab94f9ce3ace72212cd4b10c78759c3b31f87ae131a101cbdc26673853167c50'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.199/freebuff-linux-arm64.tar.gz'
-sha256 = '6a0f68a7e9fa253bb1cdc9d5d47ce24a8c1af6fd0c023392a72b1c4d6f2671e6'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.200/freebuff-linux-arm64.tar.gz'
+sha256 = 'c1d32dbfe0050882225d5d1eb278c0197faf1b6cc02d139db7dd555bf103a88f'
 
 [[package]]
 name = 'fzf'
@@ -1944,9 +1944,9 @@ sha256 = 'a012b25b571bd0138a03dcd25375ceba866fe5ca822f426d2c66a4de56fd3f4b'
 name = 'neru'
 ref = './packages/neru.toml'
 manifest_sha256 = 'd5351326e897b2d3c608726198d157702106f513efb015a8d83d6fc8ae0c5565'
-version = '2026.09.23-4b1e760'
+version = '2026.09.27-324c051'
 tag = 'main'
-tag_commit = '4b1e760075da0abf42997cfe55aafc947be0a821'
+tag_commit = '324c051bca3c9d637f2ac18dfac0f2f9681d93bc'
 
 [package.platform]
 [package.platform.darwin-arm64]
