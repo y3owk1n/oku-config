@@ -2,4 +2,4 @@
 # key once per table, so the second entry for a target lives here.
 
 [files]
-"{{config}}/neru/config.toml" = { render = "../files/neru/config.toml.tmpl", when = { os = "linux" }, vars = { neru-shell = "/bin/sh" } }
+"{{config}}/neru/config.toml" = { render = "../files/neru/config.toml.tmpl", when = { os = "linux" }, vars = { neru-shell = "/bin/sh", neru-shell-arg = "-lc" } }

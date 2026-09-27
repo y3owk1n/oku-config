@@ -29,6 +29,10 @@ ref = './lists/files-linux.toml'
 sha256 = ''
 
 [[include]]
+ref = './lists/files-windows.toml'
+sha256 = ''
+
+[[include]]
 ref = './lists/ai.toml'
 sha256 = ''
 
@@ -597,23 +601,23 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 name = 'freebuff'
 ref = './packages/freebuff.toml'
 manifest_sha256 = '5a05ed5b3b754299066e214b6b8ac17044226cff4b4fa856f6b6d699c8eb6508'
-version = '0.0.200'
+version = '0.0.203'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.200/freebuff-darwin-arm64.tar.gz'
-sha256 = 'cfa8df1c6283cd3d9bcf8b78f9e39d1651836d535f395b1eebc005ef4141471b'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.203/freebuff-darwin-arm64.tar.gz'
+sha256 = '6123822ba29d42dba4b920df4489a6352e4932dc8784bde203f1da1cf63de797'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.200/freebuff-linux-x64.tar.gz'
-sha256 = 'ab94f9ce3ace72212cd4b10c78759c3b31f87ae131a101cbdc26673853167c50'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.203/freebuff-linux-x64.tar.gz'
+sha256 = '17736b598de43d5f2ead05cba2b7cf3990ca09c0045c4f22bee25fe00ba15ce0'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.200/freebuff-linux-arm64.tar.gz'
-sha256 = 'c1d32dbfe0050882225d5d1eb278c0197faf1b6cc02d139db7dd555bf103a88f'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.203/freebuff-linux-arm64.tar.gz'
+sha256 = '1803fa1dc35ac5ec5372d8ed7ea6eead423f03168edd3d940fe80a85e322e63d'
 
 [[package]]
 name = 'fzf'
@@ -1662,7 +1666,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package]]
 name = 'jq'
 ref = 'github:jqlang/jq'
-commit = '32580f5d83f4321588a1ebf8e3893f7fbecefe4e'
+commit = '9a75bb0d4318bb6f6509635d89319ff40ee9ecac'
 manifest_sha256 = 'c17d80d96bc6127b32874ddd24bf0b75d4ec1d2045477ee1533e0bc5dd0bc636'
 version = '1.8.2'
 tag = 'jq-1.8.2'
@@ -1943,7 +1947,7 @@ sha256 = 'a012b25b571bd0138a03dcd25375ceba866fe5ca822f426d2c66a4de56fd3f4b'
 [[package]]
 name = 'neru'
 ref = './packages/neru.toml'
-manifest_sha256 = 'd5351326e897b2d3c608726198d157702106f513efb015a8d83d6fc8ae0c5565'
+manifest_sha256 = '30d79447a07a24a4d01e4929e003379aee4b55a08d29b0d0e89bc8cb9b89cd0a'
 version = '2026.09.27-324c051'
 tag = 'main'
 tag_commit = '324c051bca3c9d637f2ac18dfac0f2f9681d93bc'
@@ -1996,7 +2000,7 @@ tag_commit = '521eddec7c243a8166609bf1734cb940e9510fc5'
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz'
-sha256 = '642bdce3c533f6117f94fbf4877fd3b17f05c771e157dff152114e8cb4995563'
+sha256 = '80abc3abadc0e3f3b18bbe7f5600cbe6b80c68e4e0f27f30ed7338bd3add0834'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'

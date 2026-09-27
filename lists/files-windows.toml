@@ -1,0 +1,6 @@
+# The Windows side of entries that differ by OS, as files-linux.toml is for
+# Linux. TOML allows a key once per table.
+
+[files]
+# neru wants an absolute exec_shell. cmd.exe is its own default on Windows.
+"{{config}}/neru/config.toml" = { render = "../files/neru/config.toml.tmpl", when = { os = "windows" }, vars = { neru-shell = "C:/Windows/System32/cmd.exe", neru-shell-arg = "/c" } }
