@@ -301,24 +301,24 @@ sha256 = '6270de0ef4c84cf0eea61cb148b3ad9ae91a11e9c3309867ffc6b3751024c252'
 [[package]]
 name = 'claude-code'
 ref = './packages/claude-code.toml'
-manifest_sha256 = 'b23c5f92838f50c064f5e487537562e4ce7fb37f4a48230d0b00937a34169c2c'
-version = '2.1.274'
+manifest_sha256 = '1b9285b5b755fe2cf571042fcd0a46c0f3fb4de4b3198c9c3a896a78a200498a'
+version = '2.1.283'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.274/darwin-arm64/claude'
-sha256 = '3509913f9d1576316c8845b88837f8fd3bbbcf26625833ac82cfb6b8985da94a'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.283/darwin-arm64/claude'
+sha256 = 'd8cb1e5c79684cc12a8bfc813e3a2073406921b6245744b3009be3ab5651d21e'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.274/linux-x64/claude'
-sha256 = '15e2d05148f801b5774032faad87e624ecd172e9903288bda448b892eb58fa07'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.283/linux-x64/claude'
+sha256 = '1859583ce32920595c61ef868bee52e1b1594f7486db209935e01f1e5e804ae2'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.274/linux-arm64/claude'
-sha256 = '2db904daea17addff9de557ba26a725916888aa7b546e2c5dd989c20d9d49ab3'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.283/linux-arm64/claude'
+sha256 = '346d294f0103d6fc0de11ac953579b5c62dfa90698a4cfc486b6f927c615e697'
 
 [[package]]
 name = 'coreutils'
@@ -1867,9 +1867,9 @@ sha256 = 'db8e124527f7f8048e3e6c91821b9c52ef173d92c01e47d221bf1337afd962fb'
 name = 'mimi'
 ref = './packages/mimi.toml'
 manifest_sha256 = '66ea987a59222b17808360e08deb3d20916ed53d3b643d448d80b3f1bd00c274'
-version = '2026.09.25-5ed2781'
+version = '2026.09.27-8fbd775'
 tag = 'main'
-tag_commit = '5ed278112dd449365eb311ff109900d2cd5af12c'
+tag_commit = '8fbd775a4434c023ae1146d6449c18aa2e658c38'
 
 [package.platform]
 [package.platform.darwin-arm64]
