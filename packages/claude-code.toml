@@ -5,7 +5,7 @@ homepage = "https://claude.com/product/claude-code"
 
 [version]
 from = "page"
-repo = "https://downloads.claude.ai/claude-code-releases/stable"
+repo = "https://downloads.claude.ai/claude-code-releases/latest"
 regex = "(?i)^v?(\\d+(?:\\.\\d+)+)$"
 
 [[artifact]]
