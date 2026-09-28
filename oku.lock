@@ -601,23 +601,23 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 name = 'freebuff'
 ref = './packages/freebuff.toml'
 manifest_sha256 = '5a05ed5b3b754299066e214b6b8ac17044226cff4b4fa856f6b6d699c8eb6508'
-version = '0.0.203'
+version = '0.0.204'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.203/freebuff-darwin-arm64.tar.gz'
-sha256 = '6123822ba29d42dba4b920df4489a6352e4932dc8784bde203f1da1cf63de797'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.204/freebuff-darwin-arm64.tar.gz'
+sha256 = '4d2350e0fc99addf4c0285a4a4365ed1f7b34a64dcce3c34d05886923d7ea830'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.203/freebuff-linux-x64.tar.gz'
-sha256 = '17736b598de43d5f2ead05cba2b7cf3990ca09c0045c4f22bee25fe00ba15ce0'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.204/freebuff-linux-x64.tar.gz'
+sha256 = '9b090e66c07804bd1975e6986d73826ad07fb1fbb70b10268067a2d5371f10e7'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.203/freebuff-linux-arm64.tar.gz'
-sha256 = '1803fa1dc35ac5ec5372d8ed7ea6eead423f03168edd3d940fe80a85e322e63d'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.204/freebuff-linux-arm64.tar.gz'
+sha256 = '1a1adc10b7af2a3a32de1fb8e60ca4a8b527421ec9655cb02742040de93d6bcd'
 
 [[package]]
 name = 'fzf'
