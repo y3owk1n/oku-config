@@ -601,23 +601,23 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 name = 'freebuff'
 ref = './packages/freebuff.toml'
 manifest_sha256 = '5a05ed5b3b754299066e214b6b8ac17044226cff4b4fa856f6b6d699c8eb6508'
-version = '0.0.204'
+version = '0.1.0'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.204/freebuff-darwin-arm64.tar.gz'
-sha256 = '4d2350e0fc99addf4c0285a4a4365ed1f7b34a64dcce3c34d05886923d7ea830'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.1.0/freebuff-darwin-arm64.tar.gz'
+sha256 = '61162d40633a86e0c1d467f2bcb06b7405de36fab5f7c89428e5622903bebfff'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.204/freebuff-linux-x64.tar.gz'
-sha256 = '9b090e66c07804bd1975e6986d73826ad07fb1fbb70b10268067a2d5371f10e7'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.1.0/freebuff-linux-x64.tar.gz'
+sha256 = 'b904f3fe1e4c010676badefdf465a35df639a07c7d4d9d82fba8170d41aa3bb9'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.0.204/freebuff-linux-arm64.tar.gz'
-sha256 = '1a1adc10b7af2a3a32de1fb8e60ca4a8b527421ec9655cb02742040de93d6bcd'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.1.0/freebuff-linux-arm64.tar.gz'
+sha256 = 'c96ef984c330b004dc9cc8f5547b753dccaa40c4488f150510bd112a3714dc0d'
 
 [[package]]
 name = 'fzf'
@@ -818,7 +818,7 @@ sha256 = 'ac9c8efac980bb0505ead384d087e2acb6486fd8498691a2165fa174ec6118c2'
 name = 'imagemagick'
 ref = './packages/imagemagick.toml'
 manifest_sha256 = 'b88b77a1279167969543407a62886cde604915f19dc1cc65324b5b400b29fd88'
-version = '7.1.2-31'
+version = '7.1.2-32'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -1948,9 +1948,9 @@ sha256 = 'a012b25b571bd0138a03dcd25375ceba866fe5ca822f426d2c66a4de56fd3f4b'
 name = 'neru'
 ref = './packages/neru.toml'
 manifest_sha256 = '30d79447a07a24a4d01e4929e003379aee4b55a08d29b0d0e89bc8cb9b89cd0a'
-version = '2026.09.27-324c051'
+version = '2026.09.28-24b01fc'
 tag = 'main'
-tag_commit = '324c051bca3c9d637f2ac18dfac0f2f9681d93bc'
+tag_commit = '24b01fcef7a78289986df3808cc1b07646e1e13f'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -1992,25 +1992,25 @@ sha256 = '211ffced9dcb9633a55eac6364816ec0ddd951389a740e88fa8b3337971bdda0'
 name = 'nvim'
 ref = './packages/nvim.toml'
 manifest_sha256 = 'e3ae4d0f5cabfa79a7b360bbd09bcf50c508487ceff65665b86c01b6f7952b50'
-version = '2026.09.26-521edde'
+version = '2026.09.28-6512282'
 tag = 'nightly'
-tag_commit = '521eddec7c243a8166609bf1734cb940e9510fc5'
+tag_commit = '6512282c55651d21a64c9e43624b84f013cdde14'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz'
-sha256 = '80abc3abadc0e3f3b18bbe7f5600cbe6b80c68e4e0f27f30ed7338bd3add0834'
+sha256 = 'c43f4b7a71e5e1b93220eee94564a7a762169c8afc277df3099db10daeb7895b'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz'
-sha256 = '1c93b8e92372b85de435f4d13daf67dbbb1b32f9d130642435a740ece1e7cffa'
+sha256 = '50908f8162f70d71a1859c2bc3544177679728c9e773d573321920a5cd8517b5'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-arm64.tar.gz'
-sha256 = '8d0719d1eb5e6744b13f569b6fd09936ba7a3442b74e1dca85ac60503e70fe9f'
+sha256 = '247c3a238ebcb53d9a9c8584c4bb9014d65fd50248fe732f3b297f9e4c89e5e0'
 
 [[package]]
 name = 'opencode'
@@ -3587,9 +3587,9 @@ strategy = 'build'
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
 manifest_sha256 = '0c8d9b9d01b43706533a6edb8bc8da4e4a1f9e0c952b042fe433d6925aab618a'
-version = '2026.09.21-98a1fe6'
+version = '2026.09.28-db2db46'
 tag = 'main'
-tag_commit = '98a1fe67b439324ddc857f47fbdce056600a4329'
+tag_commit = 'db2db460a26fa84fb65c8d903b213925fbdee9ed'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -3894,13 +3894,13 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 name = 'whatsapp'
 ref = './packages/whatsapp.toml'
 manifest_sha256 = '899c45c2fb9ba4689b30e5aa2d93d556606c3cf234030f31f378111ac8ee6b96'
-version = '26.38.20'
+version = '26.38.22'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://web.whatsapp.com/desktop/mac_native/release/?version=2.26.38.20&extension=zip&configuration=Release&branch=master&is_buck=true'
-sha256 = 'ab8341b772d3c97286549f7ba8274053d07679367ee550b3b5220b9a7bcab2c3'
+url = 'https://web.whatsapp.com/desktop/mac_native/release/?version=2.26.38.22&extension=zip&configuration=Release&branch=master&is_buck=true'
+sha256 = '5464958d95178c121c8569dd2b1c3630b7e61ecd895b504ff172985e42f58342'
 
 [[package]]
 name = 'xz'
