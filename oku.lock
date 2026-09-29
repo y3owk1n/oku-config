@@ -1939,8 +1939,8 @@ sha256 = 'b98f2cc69fd9147fe4d405d859c57504571adec0d3611c3eefd04107c7ac00d0'
 name = 'mole'
 ref = './packages/mole.toml'
 manifest_sha256 = 'd2de62f69c4618f4fc5d3ee6dbf0ecc2fa2f1b1224ba176a1553ff6ea1d0a69a'
-version = '1.56.0'
-tag = 'V1.56.0'
+version = '1.56.1'
+tag = 'V1.56.1'
 
 [package.platform]
 [package.platform.darwin-arm64]
