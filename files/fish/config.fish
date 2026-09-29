@@ -57,9 +57,6 @@ status is-interactive; and begin
     alias tx 'tmux kill-server'
     alias vim nvim
     alias x exit
-    if test -x /Applications/Tailscale.app/Contents/MacOS/Tailscale
-        alias tailscale '/Applications/Tailscale.app/Contents/MacOS/Tailscale'
-    end
 
     set fish_greeting # Disable greeting
 

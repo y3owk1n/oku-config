@@ -747,7 +747,6 @@ name = 'ghostty'
 ref = './packages/ghostty.toml'
 manifest_sha256 = '0fb4516cd4c2ac07835cc6295aa5b0381baf99ab18e5d0e7ebb55868c1aa7577'
 version = '1.3.1'
-tag = 'v1.3.1'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -3722,7 +3721,7 @@ sha256 = 'fdca3682534f6f65e1ccb2345b0362ccf67d9b8eca7c8025330946e93e2473bc'
 [[package]]
 name = 'tailscale-app'
 ref = './packages/tailscale.toml'
-manifest_sha256 = 'd4eb316da60e846f7313606756dbcf8e277742af9c8ae48d2136465e88278a09'
+manifest_sha256 = '4201aee4a64a6af359fb98f3070236e360ddfb9e1f92b590577c4a6369b56a0f'
 version = '1.102.4'
 
 [package.platform]

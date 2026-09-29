@@ -11,3 +11,4 @@ repo = "https://pkgs.tailscale.com/stable/appcast.xml"
 match = { os = "darwin" }
 url = "https://pkgs.tailscale.com/stable/Tailscale-{{version}}-macos.pkg"
 app = ["Distribution.pkg/Payload/Tailscale.app"]
+bin = [{ name = "tailscale", path = "Distribution.pkg/Payload/Tailscale.app/Contents/MacOS/Tailscale" }]
