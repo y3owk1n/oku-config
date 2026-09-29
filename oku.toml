@@ -12,6 +12,7 @@ include = [
   "./lists/files-windows.toml", # the Windows side of entries that differ by OS
   "./lists/ai.toml",       # agent skills and instructions
   "./lists/macos.toml",    # macOS settings, skipped on other systems
+  "./lists/system-apps.toml" # system apps
 ]
 
 # oku.lock pins every package for these platforms besides the machine that

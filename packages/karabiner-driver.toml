@@ -1,0 +1,21 @@
+[package]
+name = "karabiner-driver"
+description = "Karabiner's virtual keyboard driver and its daemon, which kanata needs on macOS"
+homepage = "https://github.com/pqrs-org/Karabiner-DriverKit-VirtualHIDDevice"
+
+# kanata before v1.13.0 speaks protocol 5, which only driver 6.x serves.
+# Move to v8.0.0 together with kanata v1.13.0.
+[version]
+value = "6.2.0"
+
+[[artifact]]
+match = { os = "darwin" }
+url = "https://github.com/pqrs-org/Karabiner-DriverKit-VirtualHIDDevice/releases/download/v{{version}}/Karabiner-DriverKit-VirtualHIDDevice-{{version}}.pkg"
+sha256 = "9e8c46239f0748161241e42444857901224e5c82f5b58a1731df4c70bf0736a8"
+app = ["Payload/Applications/.Karabiner-VirtualHIDDevice-Manager.app"]
+bin = [{ name = "karabiner-vhid-daemon", path = "Payload/Library/Application Support/org.pqrs/Karabiner-DriverKit-VirtualHIDDevice/Applications/Karabiner-VirtualHIDDevice-Daemon.app/Contents/MacOS/Karabiner-VirtualHIDDevice-Daemon" }]
+
+[[service]]
+name = "karabiner-vhid-daemon"
+command = "bin/karabiner-vhid-daemon"
+restart = "always"

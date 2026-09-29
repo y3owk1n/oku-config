@@ -1,0 +1,3 @@
+[packages]
+tailscale-app = { ref = "../packages/tailscale.toml", system = true, when = { os = "darwin" } }
+karabiner-driver = { ref = "../packages/karabiner-driver.toml", service = true, system = true, run_as = "root", when = { os = "darwin" } }

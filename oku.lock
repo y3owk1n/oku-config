@@ -40,6 +40,10 @@ sha256 = ''
 ref = './lists/macos.toml'
 sha256 = ''
 
+[[include]]
+ref = './lists/system-apps.toml'
+sha256 = ''
+
 [[package]]
 name = 'affinity'
 ref = './packages/affinity.toml'
@@ -1692,7 +1696,7 @@ sha256 = '8b85c817833814ddca00a144c33705546355afccf0cf39b188f3cdb48b852309'
 [[package]]
 name = 'kanata'
 ref = './packages/kanata.toml'
-manifest_sha256 = 'bf26fcb0fdcea326f9a7283eb27cf502125f8fc0cba874dc08ed48c774e2bf9c'
+manifest_sha256 = '210a9dee3a876755325f434547b935e492371e741edb6d99205b6a0c7338e483'
 version = '1.12.0'
 tag = 'v1.12.0'
 
@@ -1706,6 +1710,18 @@ sha256 = '839769d189911b5881e11550eaa2039705213fb725865d088f5a2e3a6c10de32'
 strategy = 'artifact'
 url = 'https://github.com/jtroo/kanata/releases/download/v1.12.0/linux-binaries-x64.zip'
 sha256 = '0bedd91567c5d7c54679061baadc37e4f83fb71750003999bc1d11f2c9754f36'
+
+[[package]]
+name = 'karabiner-driver'
+ref = './packages/karabiner-driver.toml'
+manifest_sha256 = '09de3045b2504e52a128550742287c9620cd77dfe625a5e9a64d4848f0f8c0b3'
+version = '6.2.0'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/pqrs-org/Karabiner-DriverKit-VirtualHIDDevice/releases/download/v6.2.0/Karabiner-DriverKit-VirtualHIDDevice-6.2.0.pkg'
+sha256 = '9e8c46239f0748161241e42444857901224e5c82f5b58a1731df4c70bf0736a8'
 
 [[package]]
 name = 'lazygit'
@@ -1948,9 +1964,9 @@ sha256 = 'a012b25b571bd0138a03dcd25375ceba866fe5ca822f426d2c66a4de56fd3f4b'
 name = 'neru'
 ref = './packages/neru.toml'
 manifest_sha256 = '30d79447a07a24a4d01e4929e003379aee4b55a08d29b0d0e89bc8cb9b89cd0a'
-version = '2026.09.28-24b01fc'
+version = '2026.09.29-55c7f18'
 tag = 'main'
-tag_commit = '24b01fcef7a78289986df3808cc1b07646e1e13f'
+tag_commit = '55c7f1821ed60184b879d0f7ff001062651380af'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -2016,24 +2032,24 @@ sha256 = '247c3a238ebcb53d9a9c8584c4bb9014d65fd50248fe732f3b297f9e4c89e5e0'
 name = 'opencode'
 ref = './packages/opencode.toml'
 manifest_sha256 = '016840d429a3f5cc1dc46121795c49ab9c4fb71c8d2ea6ea14b558e03c77e1f8'
-version = '1.18.32'
-tag = 'v1.18.32'
+version = '1.18.33'
+tag = 'v1.18.33'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/anomalyco/opencode/releases/download/v1.18.32/opencode-darwin-arm64.zip'
-sha256 = 'fa643f93401c13508d8d513780e54ce9cc01203d501114be9b88d62408b8101f'
+url = 'https://github.com/anomalyco/opencode/releases/download/v1.18.33/opencode-darwin-arm64.zip'
+sha256 = '24b12873e605b3db3387cb355f43ba7451cd6065c180d8c188663337d2eeb553'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/anomalyco/opencode/releases/download/v1.18.32/opencode-linux-x64.tar.gz'
-sha256 = '3046e0404fdc60fb80307e7a47824ba07477364178a4d09baa8548496dd6d43b'
+url = 'https://github.com/anomalyco/opencode/releases/download/v1.18.33/opencode-linux-x64.tar.gz'
+sha256 = 'e546123213ae47909a4268692aa4b94950d011afe9cac9938753a2194f1c16d5'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/anomalyco/opencode/releases/download/v1.18.32/opencode-linux-arm64.tar.gz'
-sha256 = '568461b7d4d8c19865c97e9a1102e613049c6039d01fe772154de873c1865840'
+url = 'https://github.com/anomalyco/opencode/releases/download/v1.18.33/opencode-linux-arm64.tar.gz'
+sha256 = 'c63486624621924bf43be5c01abd252885661a734814224f6d70188a33aea858'
 
 [[package]]
 name = 'optipng'
@@ -3515,9 +3531,9 @@ sha256 = '0b48d8f349f6b73849e338fe8dfa5dc14077f58baee98e01e2aa784d6721b340'
 name = 'skills-anthropic'
 ref = './packages/skills-anthropic.toml'
 manifest_sha256 = '474af7afe6e9fc0bb77a2b4a451e4466a0ab723a1b1264a10af63d0a6a518ffd'
-version = '2026.09.24-3337550'
+version = '2026.09.29-8a1541c'
 tag = 'main'
-tag_commit = '33375500bcea98d610eb30ce10ac4e59b89c390d'
+tag_commit = '8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -3703,6 +3719,18 @@ url = 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/NerdFont
 sha256 = 'fdca3682534f6f65e1ccb2345b0362ccf67d9b8eca7c8025330946e93e2473bc'
 
 [[package]]
+name = 'tailscale-app'
+ref = './packages/tailscale.toml'
+manifest_sha256 = 'd4eb316da60e846f7313606756dbcf8e277742af9c8ae48d2136465e88278a09'
+version = '1.102.4'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://pkgs.tailscale.com/stable/Tailscale-1.102.4-macos.pkg'
+sha256 = 'b40b733af76233fd1e4af7acaeb325268e55e6818c15c6e9aa9e78f427245c5b'
+
+[[package]]
 name = 'tmux'
 ref = './packages/tmux.toml'
 manifest_sha256 = 'aa64595e7bf517bf101977f7919deca18cef61c9f68d666207c6de3c47ced47c'
@@ -3768,9 +3796,9 @@ sha256 = 'a8435c93cfb5f8bbfeea4b134cfad1ac66b67632b75e438c63b1a8ae043bef0e'
 name = 'uts'
 ref = './packages/uts.toml'
 manifest_sha256 = '1c8f9a4b9c762d3118d44a27ac34d4d31140f35437434c201f1a122c5c3de72d'
-version = '2026.09.23-a735d93'
+version = '2026.09.29-f32c2c9'
 tag = 'main'
-tag_commit = 'a735d93e2759ffba3bb74bea959d8dfab3868cac'
+tag_commit = 'f32c2c9fddeb2d7f7441bde8a377110a9b9fedfa'
 
 [package.platform]
 [package.platform.darwin-arm64]

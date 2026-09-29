@@ -83,9 +83,13 @@ move and why), `lists/files-notes.md`, `lists/ai-notes.md` and
    oku sync --yes
    ```
 
-8. Run `bootstrap/macos.sh`. It asks before each group: host name, firewall,
-   time zone, login window, Touch ID for sudo, fish as the login shell, the
-   Karabiner driver that kanata needs.
+8. Run `oku sync --system` for the apps and services in
+   `lists/system-apps.toml`: Tailscale, and the Karabiner driver and daemon
+   that kanata needs.
+
+   Then run `bootstrap/macos.sh`. It asks before each group: host name,
+   firewall, time zone, login window, Touch ID for sudo, fish as the login
+   shell, and turning on the Karabiner driver.
 
 9. Once, by hand: `bat cache --build`, `gh auth login`, `atuin login`. Grant
    Accessibility to mimi, neru and skhd when macOS asks.
@@ -165,9 +169,9 @@ opencode and the nvim palette file render again in one generation. Then run
 
 ## What did not move
 
-`lists/packages-todo.md` has the full list. In short: Tailscale and the
-Karabiner driver need an installer, which `bootstrap/macos.sh` covers. The
-policy settings of Brave and the two PAM modules for Touch ID in tmux have no
+`lists/packages-todo.md` has the full list. In short: the Karabiner driver
+has to be turned on once, which `bootstrap/macos.sh` does, and Tailscale asks
+you to approve its extension on first launch. The policy settings of Brave and the two PAM modules for Touch ID in tmux have no
 manifest yet. macOS ships git, ssh, python3 and less.
 
 The tools with no macOS program from upstream are built from source, the way

@@ -1,0 +1,13 @@
+[package]
+name = "tailscale-app"
+description = "Mesh VPN based on WireGuard"
+homepage = "https://tailscale.com/"
+
+[version]
+from = "sparkle"
+repo = "https://pkgs.tailscale.com/stable/appcast.xml"
+
+[[artifact]]
+match = { os = "darwin" }
+url = "https://pkgs.tailscale.com/stable/Tailscale-{{version}}-macos.pkg"
+app = ["Distribution.pkg/Payload/Tailscale.app"]

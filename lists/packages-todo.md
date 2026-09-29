@@ -14,10 +14,10 @@ from source, the way their Homebrew formulae do it (`lists/built.toml`,
 - less: macOS ships `/usr/bin/less`. Nothing to install.
 - reattach-to-user-namespace (tmux.nix): not needed since macOS 10.10 with a current tmux. The tmux config no longer uses it.
 
-## Needs an installer that oku never runs
+## Needs a step by hand after oku
 
-- tailscale: the standalone build is a `.pkg` that installs a system extension through its install scripts. `bootstrap/macos.sh` says how to install it.
-- karabiner driver for kanata: a system driver from a `.pkg` with install scripts, needs root. `bootstrap/macos.sh` downloads it, checks its sha256 and installs it.
+- tailscale: oku puts the standalone app in /Applications (`lists/system-apps.toml`). On first launch you approve its network extension and the VPN configuration. Before removing it, turn the extension off with `tailscale configure sysext deactivate`, or oku refuses.
+- karabiner driver for kanata: oku puts the Manager app in /Applications and runs the daemon as a root service (`lists/system-apps.toml`). `bootstrap/macos.sh` turns the driver on once. The driver stays at 6.2.0 while kanata is older than v1.13.0, see packages/karabiner-driver.toml.
 
 ## Not moved yet
 
@@ -37,7 +37,7 @@ from source, the way their Homebrew formulae do it (`lists/built.toml`,
 - discord, whatsapp, orbstack, brave, firefox, affinity, virtualbuddy, ghostty: each follows its vendor's versions, and the top of its manifest says from where. Each app also updates itself in `~/Applications`, and oku replaces that copy on the next `oku update` of the package. Turn the app's own updates off where it lets you.
 - orbstack: `orb`, `orbctl`, `docker`, `docker-compose`, `docker-buildx`, `docker-credential-osxkeychain` and `kubectl` come from the store copy of the app, so they stay at the store version until `oku update`. oku does not run the postflight step of the cask, and OrbStack finishes its own setup on first launch.
 - fish as the login shell: oku installs fish, but `/etc/shells` and `chsh` need root. `bootstrap/macos.sh` does it. The path is `~/.local/share/oku/profiles/global/current/bin/fish`.
-- kanata: installed as a program only. It needs root and the Karabiner driver, so it has no oku service.
+- kanata: installed as a program only, started by hand with sudo. The Karabiner daemon it talks to is an oku service (packages/karabiner-driver.toml).
 - mimi, neru, skhd: macOS asks for Accessibility permission again after each update, because the program moves to a new store path. The same happened with Nix. Their services find the other oku programs by name, because oku puts the profile first on the PATH of a service.
 - ffmpeg and ffprobe: the static builds of the ffmpeg-static project, a third party. The macOS arm64 build reports ffmpeg 6.0 under the tag b6.1.1. A source build would replace it.
 - devbox: installs, but it drives nix, so it only works on a machine that still has nix.

@@ -26,11 +26,6 @@ TIME_ZONE="Asia/Kuala_Lumpur"          # base.nix, time.timeZone
 MAXFILES="524288"                      # base.nix, launchd daemon limits.maxfile
 MAXPROC="2048"                         # base.nix, launchd daemon limits.maxproc
 
-KARABINER_VERSION="6.2.0"              # karabiner.nix
-KARABINER_URL="https://github.com/pqrs-org/Karabiner-DriverKit-VirtualHIDDevice/releases/download/v${KARABINER_VERSION}/Karabiner-DriverKit-VirtualHIDDevice-${KARABINER_VERSION}.pkg"
-# karabiner.nix has sha256-noxGI58HSBYSQeQkRIV5ASJOXIL1tYoXMd9McL8HNqg= (base64).
-# This is the same hash in hex, which is what shasum prints.
-KARABINER_SHA256="9e8c46239f0748161241e42444857901224e5c82f5b58a1731df4c70bf0736a8"
 KARABINER_APP="/Applications/.Karabiner-VirtualHIDDevice-Manager.app"
 KARABINER_BIN="${KARABINER_APP}/Contents/MacOS/Karabiner-VirtualHIDDevice-Manager"
 
@@ -343,44 +338,18 @@ fi
 # ---------------------------------------------------------------------------
 # 9. Karabiner DriverKit VirtualHIDDevice (kanata needs it)
 # ---------------------------------------------------------------------------
-# karabiner.nix: install the pkg when the Manager app is missing or has another
-# version, then "activate". On a version change it runs "deactivate" first.
-# After the first activate macOS asks to allow the system extension in
-# System Settings > General > Login Items & Extensions > Driver Extensions.
+# packages/karabiner-driver.toml in lists/system-apps.toml puts the Manager app
+# in /Applications and runs the daemon as a root service, after
+# `oku sync --system`. What is left is to turn the driver on once, then allow
+# it in System Settings > General > Login Items & Extensions > Driver
+# Extensions. oku runs no command of a package, so this step stays here.
 
-group "Karabiner DriverKit VirtualHIDDevice $KARABINER_VERSION"
-installed_version=""
-if [ -f "$KARABINER_BIN" ]; then
-    installed_version=$(/usr/bin/defaults read "${KARABINER_APP}/Contents/Info.plist" CFBundleVersion 2>/dev/null || true)
-fi
-say "Installed: ${installed_version:-none}. Wanted: $KARABINER_VERSION"
-
-if [ "$installed_version" = "$KARABINER_VERSION" ]; then
-    if ask "It is up to date. Activate the driver again?"; then
-        run sudo "$KARABINER_BIN" activate
-    fi
-elif ask "Download, verify and install the pkg, then activate the driver?"; then
-    workdir=$(mktemp -d)
-    pkg="${workdir}/Karabiner-DriverKit-VirtualHIDDevice-${KARABINER_VERSION}.pkg"
-    run curl --fail --location --silent --show-error --output "$pkg" "$KARABINER_URL"
-
-    actual=$(shasum -a 256 "$pkg" | awk '{print $1}')
-    if [ "$actual" != "$KARABINER_SHA256" ]; then
-        say "ERROR: the sha256 of the download does not match." >&2
-        say "  wanted: $KARABINER_SHA256" >&2
-        say "  got:    $actual" >&2
-        rm -rf "$workdir"
-        exit 1
-    fi
-    say "  sha256 matches."
-
-    run sudo /usr/sbin/installer -pkg "$pkg" -target /
-    rm -rf "$workdir"
-
-    if [ -n "$installed_version" ]; then
-        # Another version was there: deactivate the old driver first.
-        run sudo "$KARABINER_BIN" deactivate || true
-    fi
+group "Karabiner DriverKit VirtualHIDDevice"
+if [ ! -f "$KARABINER_BIN" ]; then
+    say "The Manager app is missing. Run \`oku sync --system\` first."
+elif /usr/bin/systemextensionsctl list | grep -q 'org.pqrs.Karabiner-DriverKit-VirtualHIDDevice.*\[activated enabled\]'; then
+    say "The driver is on."
+elif ask "Turn the driver on?"; then
     run sudo "$KARABINER_BIN" activate
     say "Now allow the driver extension in System Settings when macOS asks."
 fi
@@ -388,14 +357,13 @@ fi
 # ---------------------------------------------------------------------------
 # 10. Tailscale (advice only, nothing is installed here)
 # ---------------------------------------------------------------------------
-# tailscale.nix ran the open source tailscaled from nixpkgs as a launch daemon
-# (/Library/LaunchDaemons/com.tailscale.tailscaled.plist). Without Nix the
-# better choice is the official standalone pkg:
+# packages/tailscale.toml in lists/system-apps.toml puts the standalone app in
+# /Applications after `oku sync --system`. On its first launch it asks to turn
+# on its network extension, and you approve that and the VPN configuration
+# once and sign in. None of that can be done unattended.
 #
-#     https://pkgs.tailscale.com/stable/#macos
-#
-# Why the standalone pkg and not tailscaled again:
-#   - it is signed and notarised by Tailscale and updates itself,
+# Why the standalone app and not tailscaled, which tailscale.nix ran:
+#   - it is signed and notarised by Tailscale,
 #   - it uses the system network extension, so MagicDNS and split DNS work as
 #     macOS expects, and it has the menu bar app, Taildrop and exit node picker,
 #   - it needs no Apple ID and has none of the App Store limits, and it still
@@ -404,17 +372,16 @@ fi
 #     tailscaled only for unattended installs (tailscale.com/kb/1065).
 # What is lost against tailscaled: it does not run before login, and it cannot
 # be a Tailscale SSH server (it can still connect out over SSH).
-# It is not scripted here on purpose: the installer needs you to approve a
-# system extension and a VPN configuration and to sign in, which cannot be
-# done unattended.
+# To remove it, turn the extension off first with
+# `tailscale configure sysext deactivate`, or oku refuses to delete the app.
 
 group "Tailscale (advice only)"
-say "Install the standalone pkg by hand: https://pkgs.tailscale.com/stable/#macos"
+say "Open Tailscale from /Applications once, approve its extension and sign in."
 if [ -f /Library/LaunchDaemons/com.tailscale.tailscaled.plist ]; then
     say "NOTE: the tailscaled daemon from nix-darwin is still installed"
     say "      (/Library/LaunchDaemons/com.tailscale.tailscaled.plist)."
-    say "      Remove it with nix-darwin's uninstaller before you install the pkg,"
-    say "      two Tailscale daemons on one Mac fight over the network."
+    say "      Remove it with nix-darwin's uninstaller, two Tailscale daemons on"
+    say "      one Mac fight over the network."
 fi
 
 say ""
