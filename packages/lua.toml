@@ -8,6 +8,14 @@ license = "MIT"
 [version]
 value = "5.1.5"
 
+# What the build needs of the machine, which oku checks and does not install.
+# The Command Line Tools give macOS its compiler, make and git. On Linux
+# bootstrap/linux.sh installs these packages.
+[host]
+xcode-clt = { path = "/Library/Developer/CommandLineTools/usr/bin/clang", install = "xcode-select --install", when = { os = "darwin" } }
+cc = { command = "cc", apt = "build-essential", dnf = "gcc-c++", pacman = "base-devel", when = { os = "linux" } }
+make = { command = "make", apt = "build-essential", dnf = "make", pacman = "base-devel", when = { os = "linux" } }
+
 [build]
 needs = ["cc", "make"]
 source = { url = "https://www.lua.org/ftp/lua-{{version}}.tar.gz", sha256 = "2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333", strip = 1 }

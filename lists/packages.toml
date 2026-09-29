@@ -3,6 +3,14 @@
 # with no #name has no manifest, oku infers one from the newest release.
 # What could not move is in packages-todo.md.
 
+# What the machine needs that no package here provides, which oku checks and
+# does not install. macOS ships git, ssh, python3 and less, and git and python3
+# run from the Command Line Tools. files/git/config.tmpl sends github.com
+# through ssh, which bootstrap/linux.sh installs on Linux.
+[host]
+xcode-clt = { path = "/Library/Developer/CommandLineTools/usr/bin/clang", install = "xcode-select --install", when = { os = "darwin" } }
+ssh = { command = "ssh", apt = "openssh-client", dnf = "openssh-clients", pacman = "openssh", when = { os = "linux" } }
+
 [packages]
 
 # cli

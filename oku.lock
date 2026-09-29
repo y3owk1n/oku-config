@@ -248,7 +248,7 @@ sha256 = 'faa8a26f1e7c0c3b8632633503f82e571a798212d8e6fe9baba77f0c73509867'
 [[package]]
 name = 'brotli'
 ref = './packages/brotli.toml'
-manifest_sha256 = 'f4d7507099f7165764951db620037e6e1dcdb650b8d98ad40ea13ef78befdda0'
+manifest_sha256 = 'ad7b483ae5d94f00235b2593cffacecb6a1630b7b05d83d58d8b14726d1b9332'
 version = '1.2.0'
 tag = 'v1.2.0'
 
@@ -288,7 +288,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package]]
 name = 'btop'
 ref = './packages/btop.toml'
-manifest_sha256 = '6deca646505697313be5da7de82a1f57270fb744d990e6eb06a8eb8d95c138f7'
+manifest_sha256 = '31998edc60518a6f87bee7b4f3d9ec31562ed6a500f027e282350d0c96846685'
 version = '1.4.7'
 tag = 'v1.4.7'
 
@@ -331,7 +331,7 @@ sha256 = '3dd0f96d7ada463152d20300186f6cfc6ab94b57e218f49e3ac86db42ac695a6'
 [[package]]
 name = 'coreutils'
 ref = './packages/coreutils.toml'
-manifest_sha256 = '2d202458716f97cc94d4524532abb8678b77df4a00c579a59d33ae9af8eea80d'
+manifest_sha256 = '2357840f32265981f2ee63493c28ae5866eec45ec9b8567a73f845996e14327f'
 version = '9.12'
 tag = 'v9.12'
 
@@ -388,7 +388,7 @@ version = '1.0.160'
 [[package]]
 name = 'eza'
 ref = './packages/eza.toml'
-manifest_sha256 = 'f18574bf6d784b5e8a98ab9fd5850a5a14d2690a774685fad61cc2fb8100a86f'
+manifest_sha256 = 'c30e9cdb43373162dc4d4b9eb22f8d98f3a57e850c352d7153aeb2627dc628c0'
 version = '0.23.5'
 tag = 'v0.23.5'
 
@@ -723,7 +723,7 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 [[package]]
 name = 'ghostscript'
 ref = './packages/ghostscript.toml'
-manifest_sha256 = '3ecbe5b76407bbcb93c35c9454ef2d1cb9827ec0126bd1f935d5445309a74abf'
+manifest_sha256 = '2c7481831e456e07ef7ea297cb7186ac2ee254f7727ecb2472fd3fc8abf4252d'
 version = '10.08.0'
 
 [package.platform]
@@ -745,7 +745,7 @@ sha256 = 'c20492bc8ebb96c87fa2e52a0926e1cda8cde95d66145e018ac713fed5da38cf'
 [[package]]
 name = 'ghostty'
 ref = './packages/ghostty.toml'
-manifest_sha256 = '8a8e5aa5761440e079ceebec74342107512d141e772499953eb89fc1d36bcaf5'
+manifest_sha256 = '0fb4516cd4c2ac07835cc6295aa5b0381baf99ab18e5d0e7ebb55868c1aa7577'
 version = '1.3.1'
 
 [package.platform]
@@ -772,7 +772,7 @@ tag = 'v1.3.1'
 [[package]]
 name = 'gifsicle'
 ref = './packages/gifsicle.toml'
-manifest_sha256 = '0b808f1666946c13430000b11eeb18e88bf82cff6155d2bf17708abf835e6cfd'
+manifest_sha256 = '04a392183bed119ad51aedf4adf290ed53b09873e0f19c9ce22e7b0b55b13b8c'
 version = '1.96'
 tag = 'v1.96'
 
@@ -821,7 +821,7 @@ sha256 = 'ac9c8efac980bb0505ead384d087e2acb6486fd8498691a2165fa174ec6118c2'
 [[package]]
 name = 'imagemagick'
 ref = './packages/imagemagick.toml'
-manifest_sha256 = 'b88b77a1279167969543407a62886cde604915f19dc1cc65324b5b400b29fd88'
+manifest_sha256 = 'b4e1cff67ebe1da66cd9ac10a931b05b9940f8069224ebb486280e1a595f96e4'
 version = '7.1.2-32'
 
 [package.platform]
@@ -837,7 +837,7 @@ strategy = 'build'
 [[package.dep]]
 name = 'pkgconf'
 ref = './packages/pkgconf.toml'
-manifest_sha256 = 'd9a4e6cb0ba7845e1cf5dce83ab6d69cb1d8386551a735f5c9092b1254e48725'
+manifest_sha256 = 'cddba2f715deeb8a571fb038c8374a5325b4edeb34123c3dbe3d6eef56f6a2dd'
 version = '3.0.7'
 tag = 'pkgconf-3.0.7'
 
@@ -860,7 +860,7 @@ sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
 [[package.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
+manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
 version = '3.2.0'
 
 [package.dep.platform]
@@ -899,7 +899,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -922,7 +922,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep]]
 name = 'libtiff'
 ref = './packages/libtiff.toml'
-manifest_sha256 = '3f7ee3774909dd31a983ee10b41bfe14670f79a3a6c933b564a7ed5485693656'
+manifest_sha256 = '7fd3c698324988298285033a006151ab4e95210449bb99a08fe395db75884b72'
 version = '4.7.2'
 tag = 'v4.7.2'
 
@@ -968,7 +968,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
+manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
 version = '3.2.0'
 
 [package.dep.dep.platform]
@@ -1007,7 +1007,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
+manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
 version = '3.2.0'
 
 [package.dep.dep.platform]
@@ -1046,7 +1046,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'libwebp-lib'
 ref = './packages/libwebp-lib.toml'
-manifest_sha256 = '4a1c76bc4205b3228785e5da8d0839e8085afd94bf9c3f7c973001baa7537663'
+manifest_sha256 = '45bb95c99c52c0229ddd52fdebab08b6929e0b01ee61cbcc04d467c03b60ea66'
 version = '1.6.0'
 tag = 'v1.6.0'
 
@@ -1092,7 +1092,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '958a1a7d6be992401ed230c95d6a71a194fe5ccfa57a19f4232ded3db35d1b10'
+manifest_sha256 = '8761e279a43697a0526f6734e46f25fca88bfdcd8ec1bdca12a47505a4aa7d76'
 version = '2.14.3'
 
 [package.dep.platform]
@@ -1137,7 +1137,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -1160,7 +1160,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -1183,7 +1183,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep]]
 name = 'xz'
 ref = './packages/xz.toml'
-manifest_sha256 = '1ef55f559710b517b58a002384aa268675247615337b0d156cccfc3070eb68b4'
+manifest_sha256 = '9aa1423d4ec449105712e2b73db39f0a61f357f1357c814cca957dca9cada1be'
 version = '5.8.4'
 tag = 'v5.8.4'
 
@@ -1206,7 +1206,7 @@ sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
 [[package.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
+manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
 version = '3.2.0'
 
 [package.dep.platform]
@@ -1245,7 +1245,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -1268,7 +1268,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep]]
 name = 'libtiff'
 ref = './packages/libtiff.toml'
-manifest_sha256 = '3f7ee3774909dd31a983ee10b41bfe14670f79a3a6c933b564a7ed5485693656'
+manifest_sha256 = '7fd3c698324988298285033a006151ab4e95210449bb99a08fe395db75884b72'
 version = '4.7.2'
 tag = 'v4.7.2'
 
@@ -1314,7 +1314,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
+manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
 version = '3.2.0'
 
 [package.dep.dep.platform]
@@ -1353,7 +1353,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
+manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
 version = '3.2.0'
 
 [package.dep.dep.platform]
@@ -1392,7 +1392,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'libwebp-lib'
 ref = './packages/libwebp-lib.toml'
-manifest_sha256 = '4a1c76bc4205b3228785e5da8d0839e8085afd94bf9c3f7c973001baa7537663'
+manifest_sha256 = '45bb95c99c52c0229ddd52fdebab08b6929e0b01ee61cbcc04d467c03b60ea66'
 version = '1.6.0'
 tag = 'v1.6.0'
 
@@ -1438,7 +1438,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '958a1a7d6be992401ed230c95d6a71a194fe5ccfa57a19f4232ded3db35d1b10'
+manifest_sha256 = '8761e279a43697a0526f6734e46f25fca88bfdcd8ec1bdca12a47505a4aa7d76'
 version = '2.14.3'
 
 [package.dep.platform]
@@ -1483,7 +1483,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -1506,7 +1506,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -1529,7 +1529,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep]]
 name = 'xz'
 ref = './packages/xz.toml'
-manifest_sha256 = '1ef55f559710b517b58a002384aa268675247615337b0d156cccfc3070eb68b4'
+manifest_sha256 = '9aa1423d4ec449105712e2b73db39f0a61f357f1357c814cca957dca9cada1be'
 version = '5.8.4'
 tag = 'v5.8.4'
 
@@ -1575,7 +1575,7 @@ sha256 = 'fab782a66f7d3019da64f6572db9fc5d3a4bcb19f9fa13e2d8a62e3693d6396e'
 [[package]]
 name = 'jpegoptim'
 ref = './packages/jpegoptim.toml'
-manifest_sha256 = '1dd83ed90c19da2eb58f7644d6283408a3c43e978a328867b6c786b6109e81ae'
+manifest_sha256 = '59dc8339249e3b43781dcbaaf4696ff7ca0e2fb59bbedac43791b981fa32b4de'
 version = '1.5.6'
 tag = 'v1.5.6'
 
@@ -1592,7 +1592,7 @@ strategy = 'build'
 [[package.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
+manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
 version = '3.2.0'
 
 [package.dep.platform]
@@ -1631,7 +1631,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
+manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
 version = '3.2.0'
 
 [package.dep.platform]
@@ -1775,7 +1775,7 @@ sha256 = '69f5eebe203e0f3942fe37986209a1725741be19c152950a4283b376c95ec798'
 [[package]]
 name = 'lua'
 ref = './packages/lua.toml'
-manifest_sha256 = '773e83423d5120463d3dcee417c5ca2f7d64d43ccab4dfd78192d33f2a38096b'
+manifest_sha256 = '97d21d9fbc1ad4062d055bc05082c68ebd95eefc5ec22e05bbf676b8b21c8392'
 version = '5.1.5'
 
 [package.platform]
@@ -1797,7 +1797,7 @@ sha256 = '2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333'
 [[package]]
 name = 'luarocks'
 ref = './packages/luarocks.toml'
-manifest_sha256 = '11447e22ae7f986d02320a67c2cb7cbb6660ae635943fc361988e1003957111f'
+manifest_sha256 = '1d171021fe3d0a4b657ba36a321a846e23135b95dad537cfb6e5ab10f1b05894'
 version = '3.13.0'
 tag = 'v3.13.0'
 
@@ -1820,7 +1820,7 @@ sha256 = '245bf6ec560c042cb8948e3d661189292587c5949104677f1eecddc54dbe7e37'
 [[package.dep]]
 name = 'lua'
 ref = './packages/lua.toml'
-manifest_sha256 = '773e83423d5120463d3dcee417c5ca2f7d64d43ccab4dfd78192d33f2a38096b'
+manifest_sha256 = '97d21d9fbc1ad4062d055bc05082c68ebd95eefc5ec22e05bbf676b8b21c8392'
 version = '5.1.5'
 
 [package.dep.platform]
@@ -1842,7 +1842,7 @@ sha256 = '2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333'
 [[package.dep]]
 name = 'lua'
 ref = './packages/lua.toml'
-manifest_sha256 = '773e83423d5120463d3dcee417c5ca2f7d64d43ccab4dfd78192d33f2a38096b'
+manifest_sha256 = '97d21d9fbc1ad4062d055bc05082c68ebd95eefc5ec22e05bbf676b8b21c8392'
 version = '5.1.5'
 
 [package.dep.platform]
@@ -1886,7 +1886,7 @@ sha256 = 'db8e124527f7f8048e3e6c91821b9c52ef173d92c01e47d221bf1337afd962fb'
 [[package]]
 name = 'mimi'
 ref = './packages/mimi.toml'
-manifest_sha256 = '66ea987a59222b17808360e08deb3d20916ed53d3b643d448d80b3f1bd00c274'
+manifest_sha256 = 'b8d8fc9a6709c1a4aa325f09b2a0c933cf77554103463d845feb0ce1e67f52af'
 version = '2026.09.27-8fbd775'
 tag = 'main'
 tag_commit = '8fbd775a4434c023ae1146d6449c18aa2e658c38'
@@ -1938,7 +1938,7 @@ sha256 = 'b98f2cc69fd9147fe4d405d859c57504571adec0d3611c3eefd04107c7ac00d0'
 [[package]]
 name = 'mole'
 ref = './packages/mole.toml'
-manifest_sha256 = '683fe1cdc21a2c32f460455d46bb9205cce93f25e1fad61dadeb1bf8e2a7c0f4'
+manifest_sha256 = 'd2de62f69c4618f4fc5d3ee6dbf0ecc2fa2f1b1224ba176a1553ff6ea1d0a69a'
 version = '1.56.0'
 tag = 'V1.56.0'
 
@@ -1963,7 +1963,7 @@ sha256 = 'a012b25b571bd0138a03dcd25375ceba866fe5ca822f426d2c66a4de56fd3f4b'
 [[package]]
 name = 'neru'
 ref = './packages/neru.toml'
-manifest_sha256 = '30d79447a07a24a4d01e4929e003379aee4b55a08d29b0d0e89bc8cb9b89cd0a'
+manifest_sha256 = 'd3fba7b7f424607a9a385e9262396ef736d8f3b5ff23e0ace7923c2735849226'
 version = '2026.09.29-55c7f18'
 tag = 'main'
 tag_commit = '55c7f1821ed60184b879d0f7ff001062651380af'
@@ -2008,25 +2008,25 @@ sha256 = '211ffced9dcb9633a55eac6364816ec0ddd951389a740e88fa8b3337971bdda0'
 name = 'nvim'
 ref = './packages/nvim.toml'
 manifest_sha256 = 'e3ae4d0f5cabfa79a7b360bbd09bcf50c508487ceff65665b86c01b6f7952b50'
-version = '2026.09.28-6512282'
+version = '2026.09.29-eddadd7'
 tag = 'nightly'
-tag_commit = '6512282c55651d21a64c9e43624b84f013cdde14'
+tag_commit = 'eddadd7ab33ece402ea43e9c0823f817404dc012'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz'
-sha256 = 'c43f4b7a71e5e1b93220eee94564a7a762169c8afc277df3099db10daeb7895b'
+sha256 = 'c60a722525a324dc89b3155b6d492a508e5b81804957fa522c561dcd115782f6'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz'
-sha256 = '50908f8162f70d71a1859c2bc3544177679728c9e773d573321920a5cd8517b5'
+sha256 = '9119d283b4e0f6b4115a1d1af24f3f3b167b507c1b4a012b005de24f62130c0c'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-arm64.tar.gz'
-sha256 = '247c3a238ebcb53d9a9c8584c4bb9014d65fd50248fe732f3b297f9e4c89e5e0'
+sha256 = '1f83e58ea953657709a5204c9b359ddbef9b7959638d156e8c3fdc70a2c3806c'
 
 [[package]]
 name = 'opencode'
@@ -2054,7 +2054,7 @@ sha256 = 'c63486624621924bf43be5c01abd252885661a734814224f6d70188a33aea858'
 [[package]]
 name = 'optipng'
 ref = './packages/optipng.toml'
-manifest_sha256 = 'af4244b322277ba7cb62c21d9d26cfabe8d22d212a111c99ae18afe92b83e00c'
+manifest_sha256 = '1ac0b71c12cd40bbc36f84482b0d4528bbc4f6c9ea33c606e571af4e8b9eff7c'
 version = '7.9.1'
 
 [package.platform]
@@ -2088,7 +2088,7 @@ sha256 = '7ca77868f3a0d7d9f57b3f98615aad30cc59d23cc84bbff13f78846df0b493d4'
 [[package]]
 name = 'pngquant'
 ref = './packages/pngquant.toml'
-manifest_sha256 = 'c34b0e562765c075cafd69dfccf643ff4c7a44efb208fae1661f6d9577f5346a'
+manifest_sha256 = 'a5bf822b8ddb5bc531233051c570bcae281662d9ea0e07df6e1e0d7202a4d4ab'
 version = '3.0.3'
 
 [package.platform]
@@ -2151,7 +2151,7 @@ sha256 = '69cdf3e8bacecc99fd420186d26dd5769c004ee218034457b3691a1cf408967c'
 [[package]]
 name = 'poppler'
 ref = './packages/poppler.toml'
-manifest_sha256 = '64195270678ad2980d098757b3a3d2b706f087f5a139beddb89540b311e29add'
+manifest_sha256 = '9d1bae56fd56e7bae28b2b9ec3da3f2dade1f70efddac80a50782a2f02748d0f'
 version = '26.09.0'
 
 [package.platform]
@@ -2196,7 +2196,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '958a1a7d6be992401ed230c95d6a71a194fe5ccfa57a19f4232ded3db35d1b10'
+manifest_sha256 = '8761e279a43697a0526f6734e46f25fca88bfdcd8ec1bdca12a47505a4aa7d76'
 version = '2.14.3'
 
 [package.dep.platform]
@@ -2241,7 +2241,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -2264,7 +2264,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -2287,7 +2287,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep]]
 name = 'fontconfig'
 ref = './packages/fontconfig.toml'
-manifest_sha256 = '4e2340ff25879ceeb25af553052098370eafcea57e9450b123e83000694ec454'
+manifest_sha256 = '6e06e60a5d8b9c1dfe9debdcb4f2474a9dd77f3e31cda69a8c5bd0d434f0ccd9'
 version = '2.15.0'
 
 [package.dep.platform]
@@ -2309,7 +2309,7 @@ sha256 = '63a0658d0e06e0fa886106452b58ef04f21f58202ea02a94c39de0d3335d7c0e'
 [[package.dep.dep]]
 name = 'pkgconf'
 ref = './packages/pkgconf.toml'
-manifest_sha256 = 'd9a4e6cb0ba7845e1cf5dce83ab6d69cb1d8386551a735f5c9092b1254e48725'
+manifest_sha256 = 'cddba2f715deeb8a571fb038c8374a5325b4edeb34123c3dbe3d6eef56f6a2dd'
 version = '3.0.7'
 tag = 'pkgconf-3.0.7'
 
@@ -2332,7 +2332,7 @@ sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
 [[package.dep.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '958a1a7d6be992401ed230c95d6a71a194fe5ccfa57a19f4232ded3db35d1b10'
+manifest_sha256 = '8761e279a43697a0526f6734e46f25fca88bfdcd8ec1bdca12a47505a4aa7d76'
 version = '2.14.3'
 
 [package.dep.dep.platform]
@@ -2377,7 +2377,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -2400,7 +2400,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -2423,7 +2423,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -2446,7 +2446,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '958a1a7d6be992401ed230c95d6a71a194fe5ccfa57a19f4232ded3db35d1b10'
+manifest_sha256 = '8761e279a43697a0526f6734e46f25fca88bfdcd8ec1bdca12a47505a4aa7d76'
 version = '2.14.3'
 
 [package.dep.dep.platform]
@@ -2491,7 +2491,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -2514,7 +2514,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -2537,7 +2537,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -2560,7 +2560,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
+manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
 version = '3.2.0'
 
 [package.dep.platform]
@@ -2599,7 +2599,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -2622,7 +2622,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep]]
 name = 'libtiff'
 ref = './packages/libtiff.toml'
-manifest_sha256 = '3f7ee3774909dd31a983ee10b41bfe14670f79a3a6c933b564a7ed5485693656'
+manifest_sha256 = '7fd3c698324988298285033a006151ab4e95210449bb99a08fe395db75884b72'
 version = '4.7.2'
 tag = 'v4.7.2'
 
@@ -2668,7 +2668,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
+manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
 version = '3.2.0'
 
 [package.dep.dep.platform]
@@ -2707,7 +2707,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
+manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
 version = '3.2.0'
 
 [package.dep.dep.platform]
@@ -2746,7 +2746,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'openjpeg'
 ref = './packages/openjpeg.toml'
-manifest_sha256 = 'e0e7af3fb406b8318e2c0435888c9b6171efec9fa2252b185a6e963a4ee5a5b5'
+manifest_sha256 = '366ac9ea0e4849a2b3b6c08c9233df5ec9c7bc1fb980e5595233a7550fbbbd3c'
 version = '2.5.4'
 tag = 'v2.5.4'
 
@@ -2786,7 +2786,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '958a1a7d6be992401ed230c95d6a71a194fe5ccfa57a19f4232ded3db35d1b10'
+manifest_sha256 = '8761e279a43697a0526f6734e46f25fca88bfdcd8ec1bdca12a47505a4aa7d76'
 version = '2.14.3'
 
 [package.dep.platform]
@@ -2831,7 +2831,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -2854,7 +2854,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -2877,7 +2877,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep]]
 name = 'fontconfig'
 ref = './packages/fontconfig.toml'
-manifest_sha256 = '4e2340ff25879ceeb25af553052098370eafcea57e9450b123e83000694ec454'
+manifest_sha256 = '6e06e60a5d8b9c1dfe9debdcb4f2474a9dd77f3e31cda69a8c5bd0d434f0ccd9'
 version = '2.15.0'
 
 [package.dep.platform]
@@ -2899,7 +2899,7 @@ sha256 = '63a0658d0e06e0fa886106452b58ef04f21f58202ea02a94c39de0d3335d7c0e'
 [[package.dep.dep]]
 name = 'pkgconf'
 ref = './packages/pkgconf.toml'
-manifest_sha256 = 'd9a4e6cb0ba7845e1cf5dce83ab6d69cb1d8386551a735f5c9092b1254e48725'
+manifest_sha256 = 'cddba2f715deeb8a571fb038c8374a5325b4edeb34123c3dbe3d6eef56f6a2dd'
 version = '3.0.7'
 tag = 'pkgconf-3.0.7'
 
@@ -2922,7 +2922,7 @@ sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
 [[package.dep.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '958a1a7d6be992401ed230c95d6a71a194fe5ccfa57a19f4232ded3db35d1b10'
+manifest_sha256 = '8761e279a43697a0526f6734e46f25fca88bfdcd8ec1bdca12a47505a4aa7d76'
 version = '2.14.3'
 
 [package.dep.dep.platform]
@@ -2967,7 +2967,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -2990,7 +2990,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -3013,7 +3013,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -3036,7 +3036,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '958a1a7d6be992401ed230c95d6a71a194fe5ccfa57a19f4232ded3db35d1b10'
+manifest_sha256 = '8761e279a43697a0526f6734e46f25fca88bfdcd8ec1bdca12a47505a4aa7d76'
 version = '2.14.3'
 
 [package.dep.dep.platform]
@@ -3081,7 +3081,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -3104,7 +3104,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -3127,7 +3127,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -3150,7 +3150,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
+manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
 version = '3.2.0'
 
 [package.dep.platform]
@@ -3189,7 +3189,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -3212,7 +3212,7 @@ sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 [[package.dep]]
 name = 'libtiff'
 ref = './packages/libtiff.toml'
-manifest_sha256 = '3f7ee3774909dd31a983ee10b41bfe14670f79a3a6c933b564a7ed5485693656'
+manifest_sha256 = '7fd3c698324988298285033a006151ab4e95210449bb99a08fe395db75884b72'
 version = '4.7.2'
 tag = 'v4.7.2'
 
@@ -3258,7 +3258,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
+manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
 version = '3.2.0'
 
 [package.dep.dep.platform]
@@ -3297,7 +3297,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = 'bcaf80742286124b7843ddf7e0349d0bfac6bc9a3856690c9cf471b1319b7d96'
+manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
 version = '3.2.0'
 
 [package.dep.dep.platform]
@@ -3336,7 +3336,7 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'openjpeg'
 ref = './packages/openjpeg.toml'
-manifest_sha256 = 'e0e7af3fb406b8318e2c0435888c9b6171efec9fa2252b185a6e963a4ee5a5b5'
+manifest_sha256 = '366ac9ea0e4849a2b3b6c08c9233df5ec9c7bc1fb980e5595233a7550fbbbd3c'
 version = '2.5.4'
 tag = 'v2.5.4'
 
@@ -3530,7 +3530,7 @@ sha256 = '0b48d8f349f6b73849e338fe8dfa5dc14077f58baee98e01e2aa784d6721b340'
 [[package]]
 name = 'skills-anthropic'
 ref = './packages/skills-anthropic.toml'
-manifest_sha256 = '474af7afe6e9fc0bb77a2b4a451e4466a0ab723a1b1264a10af63d0a6a518ffd'
+manifest_sha256 = '8647515c194404a844f08ae003eea37ac59660ab448f9e9857558ea4bd61b8c3'
 version = '2026.09.29-8a1541c'
 tag = 'main'
 tag_commit = '8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4'
@@ -3548,7 +3548,7 @@ strategy = 'build'
 [[package]]
 name = 'skills-caveman'
 ref = './packages/skills-caveman.toml'
-manifest_sha256 = '205eb512a5e8d343daed4f4c2834fd1f91ed36c2bbdbfbd4b96f78f80d237213'
+manifest_sha256 = 'c1af259b049872f42eab69cc002b9218336c196ab330b1b1d8508d4d2bc42b5d'
 version = '2026.09.22-2fd153c'
 tag = 'main'
 tag_commit = '2fd153c67988e980fb0b2455c90832159a6a5a25'
@@ -3566,7 +3566,7 @@ strategy = 'build'
 [[package]]
 name = 'skills-cursor'
 ref = './packages/skills-cursor.toml'
-manifest_sha256 = 'c3ce250f0af9558c91c53ece8f2a415cdd7fb1010335527087111f96d48fbcfc'
+manifest_sha256 = 'a82a734158a4c7f00041615a9288cc913990a7d38cae2c10b056081e74632e02'
 version = '2026.09.28-adf3218'
 tag = 'main'
 tag_commit = 'adf3218ca2f5b9971eedc07a76bef22df7701539'
@@ -3584,7 +3584,7 @@ strategy = 'build'
 [[package]]
 name = 'skills-emil'
 ref = './packages/skills-emil.toml'
-manifest_sha256 = '4ae7a6dd17029692f1649e4550d84662833f97208a880553f3978ec3abb4ad1c'
+manifest_sha256 = 'b3335da6959b5f90d1e42aa57891366d715dcc210e28643e010adcc04f8b6c84'
 version = '2026.09.23-d16ebe6'
 tag = 'main'
 tag_commit = 'd16ebe60d09a5ba2afcb7054ede9d0a10c9f6128'
@@ -3602,7 +3602,7 @@ strategy = 'build'
 [[package]]
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
-manifest_sha256 = '0c8d9b9d01b43706533a6edb8bc8da4e4a1f9e0c952b042fe433d6925aab618a'
+manifest_sha256 = '5cc8e8443c38454f118d7d6840227cfd5a081ab979537d599894f452f87158bc'
 version = '2026.09.28-db2db46'
 tag = 'main'
 tag_commit = 'db2db460a26fa84fb65c8d903b213925fbdee9ed'
@@ -3672,7 +3672,7 @@ commands = true
 [[package]]
 name = 'stripe-cli'
 ref = 'github:stripe/stripe-cli'
-commit = 'a7213fd88d34d8f5a754848b21e7fdb5754faa41'
+commit = 'ea9245d54a93626f9b88124ff56cedb71ef270cf'
 manifest_sha256 = 'a1f28c24ef1e91ac3473c88a3cb28701a1706ba4c39c75984e6bc89727d1e047'
 version = '1.52.0'
 tag = 'v1.52.0'
@@ -3795,7 +3795,7 @@ sha256 = 'a8435c93cfb5f8bbfeea4b134cfad1ac66b67632b75e438c63b1a8ae043bef0e'
 [[package]]
 name = 'uts'
 ref = './packages/uts.toml'
-manifest_sha256 = '1c8f9a4b9c762d3118d44a27ac34d4d31140f35437434c201f1a122c5c3de72d'
+manifest_sha256 = '8878640dc51e0c354d2ac930dc9a3d3a0d18cd905f538390d623e93a05f7f233'
 version = '2026.09.29-f32c2c9'
 tag = 'main'
 tag_commit = 'f32c2c9fddeb2d7f7441bde8a377110a9b9fedfa'
@@ -3933,7 +3933,7 @@ sha256 = 'f713f65adfd4815e099a16c250c1f759257799fdc42b5bb6149fcd83aaf3ad5e'
 [[package]]
 name = 'xz'
 ref = './packages/xz.toml'
-manifest_sha256 = '1ef55f559710b517b58a002384aa268675247615337b0d156cccfc3070eb68b4'
+manifest_sha256 = '9aa1423d4ec449105712e2b73db39f0a61f357f1357c814cca957dca9cada1be'
 version = '5.8.4'
 tag = 'v5.8.4'
 
@@ -4046,7 +4046,7 @@ sha256 = 'f1f16c5d6298d63dee467eedea1cdcd8490e43e493bea43acd416dc9033ef641'
 [[package]]
 name = 'zstd'
 ref = './packages/zstd.toml'
-manifest_sha256 = '0f2e03a9006a09d51ea9c4e33a18a7d9615c137745d6e1ea6de75d62bfe14cb0'
+manifest_sha256 = '56ff31418ec27bc97f1aac97258d8dd46b8815b5cd52273958bc3a6b3d306ae1'
 version = '1.5.7'
 tag = 'v1.5.7'
 
@@ -4063,7 +4063,7 @@ strategy = 'build'
 [[package.dep]]
 name = 'lz4'
 ref = './packages/lz4.toml'
-manifest_sha256 = 'c7c5b83aa3273db33afe39f00028c85a82179e74fabcdb3dcd345fc81ad230c9'
+manifest_sha256 = '591c19fccbd7b70a4810240edd2198a39077d5abdf6db50d98dc6785734f9a32'
 version = '1.10.0'
 tag = 'v1.10.0'
 
@@ -4080,7 +4080,7 @@ strategy = 'build'
 [[package.dep]]
 name = 'lz4'
 ref = './packages/lz4.toml'
-manifest_sha256 = 'c7c5b83aa3273db33afe39f00028c85a82179e74fabcdb3dcd345fc81ad230c9'
+manifest_sha256 = '591c19fccbd7b70a4810240edd2198a39077d5abdf6db50d98dc6785734f9a32'
 version = '1.10.0'
 tag = 'v1.10.0'
 

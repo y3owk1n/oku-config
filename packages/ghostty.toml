@@ -16,6 +16,11 @@ app = ["Ghostty.app"]
 bin = ["Ghostty.app/Contents/MacOS/ghostty"]
 man = ["Ghostty.app/Contents/Resources/man/man1/ghostty.1"]
 
+# The AppImage mounts itself through FUSE to run, which oku checks and does not
+# install. bootstrap/linux.sh installs it.
+[host]
+fuse = { apt = "libfuse2t64", dnf = "fuse-libs", pacman = "fuse2", when = { os = "linux" } }
+
 # Upstream ships no Linux binary. The AppImage comes from pkgforge-dev, which
 # the install page of ghostty.org links, and follows that repo's releases,
 # whose files GitHub reports a sha256 for. An AppImage needs FUSE, which

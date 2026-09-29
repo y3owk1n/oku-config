@@ -10,6 +10,13 @@ from = "git-tags"
 repo = "https://github.com/luarocks/luarocks"
 strip_prefix = "v"
 
+# What the build needs of the machine, which oku checks and does not install.
+# The Command Line Tools give macOS its compiler, make and git. On Linux
+# bootstrap/linux.sh installs these packages.
+[host]
+xcode-clt = { path = "/Library/Developer/CommandLineTools/usr/bin/clang", install = "xcode-select --install", when = { os = "darwin" } }
+make = { command = "make", apt = "build-essential", dnf = "make", pacman = "base-devel", when = { os = "linux" } }
+
 [build]
 needs = ["make"]
 source = { url = "https://luarocks.org/releases/luarocks-{{version}}.tar.gz", strip = 1 }

@@ -12,6 +12,15 @@ from = "gitlab-releases"
 repo = "libtiff/libtiff"
 strip_prefix = "v"
 
+# What the build needs of the machine, which oku checks and does not install.
+# The Command Line Tools give macOS its compiler, make and git. On Linux
+# bootstrap/linux.sh installs these packages.
+[host]
+xcode-clt = { path = "/Library/Developer/CommandLineTools/usr/bin/clang", install = "xcode-select --install", when = { os = "darwin" } }
+cc = { command = "cc", apt = "build-essential", dnf = "gcc-c++", pacman = "base-devel", when = { os = "linux" } }
+make = { command = "make", apt = "build-essential", dnf = "make", pacman = "base-devel", when = { os = "linux" } }
+zlib = { apt = "zlib1g-dev", dnf = "zlib-devel", pacman = "zlib", when = { os = "linux" } }
+
 [build]
 needs = ["cc", "make"]
 source = { url = "https://download.osgeo.org/libtiff/tiff-{{version}}.tar.gz", strip = 1 }

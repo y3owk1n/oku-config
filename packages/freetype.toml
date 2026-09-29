@@ -13,6 +13,16 @@ from = "redirect"
 repo = "https://sourceforge.net/projects/freetype/files/latest/download"
 regex = '/freetype2/([0-9.]+)/'
 
+# What the build needs of the machine, which oku checks and does not install.
+# The Command Line Tools give macOS its compiler, make and git. On Linux
+# bootstrap/linux.sh installs these packages.
+[host]
+xcode-clt = { path = "/Library/Developer/CommandLineTools/usr/bin/clang", install = "xcode-select --install", when = { os = "darwin" } }
+cc = { command = "cc", apt = "build-essential", dnf = "gcc-c++", pacman = "base-devel", when = { os = "linux" } }
+make = { command = "make", apt = "build-essential", dnf = "make", pacman = "base-devel", when = { os = "linux" } }
+zlib = { apt = "zlib1g-dev", dnf = "zlib-devel", pacman = "zlib", when = { os = "linux" } }
+bzip2 = { apt = "libbz2-dev", dnf = "bzip2-devel", pacman = "bzip2", when = { os = "linux" } }
+
 [build]
 needs = ["cc", "make"]
 source = { url = "https://downloads.sourceforge.net/project/freetype/freetype2/{{version}}/freetype-{{version}}.tar.xz", strip = 1 }

@@ -9,6 +9,14 @@ from = "github-releases"
 repo = "eza-community/eza"
 strip_prefix = "v"
 
+# What the build needs of the machine, which oku checks and does not install.
+# The Command Line Tools give macOS its compiler, make and git. On Linux
+# bootstrap/linux.sh installs these packages.
+[host]
+xcode-clt = { path = "/Library/Developer/CommandLineTools/usr/bin/clang", install = "xcode-select --install", when = { os = "darwin" } }
+cc = { command = "cc", apt = "build-essential", dnf = "gcc-c++", pacman = "base-devel", when = { os = "linux" } }
+git = { command = "git", apt = "git", dnf = "git", pacman = "git", when = { os = "linux" } }
+
 # vendored-libgit2 makes libgit2-sys compile its bundled libgit2 with cc alone,
 # so the build needs no system libgit2, no cmake and no pkg-config. The man
 # pages are markdown that only pandoc can convert, so they are left out.

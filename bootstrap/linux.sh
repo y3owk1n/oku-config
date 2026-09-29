@@ -9,7 +9,7 @@
 #
 # neru links the X11 and Wayland libraries of the system, tesseract and
 # pipewire, as its docs/LINUX_SETUP.md lists them. On Fedora liboeffis-devel is
-# its own package, other than those docs say. Debian 12 and Ubuntu 22.04
+# its own package. Debian 12 and Ubuntu 22.04
 # have no libei, so neru cannot build there. The script says so, and then the
 # neru line in lists/packages.toml needs `when = { os = "darwin" }` on that
 # machine.
