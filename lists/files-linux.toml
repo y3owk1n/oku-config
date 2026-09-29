@@ -3,3 +3,6 @@
 
 [files]
 "{{config}}/neru/config.toml" = { render = "../files/neru/config.toml.tmpl", when = { os = "linux" }, vars = { neru-shell = "/bin/sh", neru-shell-arg = "-lc" } }
+
+# ghostty loads the host's mesa through this, see packages/ghostty.toml.
+"{{config}}/ghostty/egl-mesa.json" = { link = "../files/ghostty/egl-mesa.json", when = { os = "linux" } }

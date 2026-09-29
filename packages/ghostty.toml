@@ -25,11 +25,16 @@ fuse = { apt = "libfuse2t64", dnf = "fuse-libs", pacman = "fuse2", when = { os =
 # the install page of ghostty.org links, and follows that repo's releases,
 # whose files GitHub reports a sha256 for. An AppImage needs FUSE, which
 # bootstrap/linux.sh installs.
+#
+# The arm64 machine is a Fedora VM whose virgl GPU stops at OpenGL 4.1, and
+# ghostty needs 4.3. The mesa in the AppImage has only softpipe, at 3.3, so the
+# launcher points EGL at the host's mesa, whose llvmpipe has 4.6. The same fix
+# as nixGL with LIBGL_ALWAYS_SOFTWARE in the nix config.
 [[artifact]]
 match = { os = "linux", arch = "arm64" }
 version = { from = "github-releases", repo = "pkgforge-dev/ghostty-appimage", strip_prefix = "v" }
 url = "https://github.com/pkgforge-dev/ghostty-appimage/releases/download/{{tag}}/Ghostty-{{version}}-aarch64.AppImage"
-bin = ["ghostty"]
+bin = [{ name = "ghostty", run = "/bin/sh", args = ["-c", "LIBGL_ALWAYS_SOFTWARE=true __EGL_VENDOR_LIBRARY_FILENAMES=${XDG_CONFIG_HOME:-$HOME/.config}/ghostty/egl-mesa.json exec \"$0\" \"$@\"", "{{pkg}}/Ghostty-{{version}}-aarch64.AppImage"] }]
 
 [[artifact]]
 match = { os = "linux", arch = "amd64" }
