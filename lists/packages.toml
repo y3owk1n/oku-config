@@ -74,7 +74,7 @@ kanata = { ref = "../packages/kanata.toml", when = [{ os = "darwin" }, { os = "l
 affinity = { ref = "../packages/affinity.toml", when = { os = "darwin" } }
 skhd = { ref = "../packages/skhd.toml", service = true, when = { os = "darwin" } }
 utm = { ref = "../packages/utm.toml", when = { os = "darwin" } }
-virtualbuddy = { ref = "../packages/virtualbuddy.toml", when = { os = "darwin" } }
+# virtualbuddy = { ref = "../packages/virtualbuddy.toml", when = { os = "darwin" } }
 
 # messaging
 # Discord and WhatsApp update themselves, see packages-todo.md.
