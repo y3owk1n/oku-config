@@ -306,23 +306,23 @@ sha256 = '6270de0ef4c84cf0eea61cb148b3ad9ae91a11e9c3309867ffc6b3751024c252'
 name = 'claude-code'
 ref = './packages/claude-code.toml'
 manifest_sha256 = '1b9285b5b755fe2cf571042fcd0a46c0f3fb4de4b3198c9c3a896a78a200498a'
-version = '2.1.283'
+version = '2.1.284'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.283/darwin-arm64/claude'
-sha256 = 'd8cb1e5c79684cc12a8bfc813e3a2073406921b6245744b3009be3ab5651d21e'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.284/darwin-arm64/claude'
+sha256 = '50a14c2f50f56668380fdda490167f1d3630d5cc18fb8aed3073c2c7ea7314fe'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.283/linux-x64/claude'
-sha256 = '1859583ce32920595c61ef868bee52e1b1594f7486db209935e01f1e5e804ae2'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.284/linux-x64/claude'
+sha256 = '5cd90aabd83f8a15136c35aa37bb1d92b348993573316643dc3fe4e04afbf88f'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.283/linux-arm64/claude'
-sha256 = '346d294f0103d6fc0de11ac953579b5c62dfa90698a4cfc486b6f927c615e697'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.284/linux-arm64/claude'
+sha256 = '3dd0f96d7ada463152d20300186f6cfc6ab94b57e218f49e3ac86db42ac695a6'
 
 [[package]]
 name = 'coreutils'
@@ -366,20 +366,20 @@ sha256 = '5f046098b36ff985d0f99fec6f22cf74961db60386ff9d40df39fd99660aae2c'
 name = 'discord'
 ref = './packages/discord.toml'
 manifest_sha256 = 'f890bd32c39952f1328a9549f354266f4d0e56b2f51a2bf29c1d923a207789cf'
-version = '0.0.413'
+version = '0.0.414'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://stable.dl2.discordapp.net/apps/osx/0.0.413/Discord.dmg'
-sha256 = '4bd4cd81c78095f0bf866437b92c78c06ebf2671e8b2f97635fd5556efa6f25b'
-version = '0.0.413'
+url = 'https://stable.dl2.discordapp.net/apps/osx/0.0.414/Discord.dmg'
+sha256 = 'f9b76e7de1928de5aece6e9c51d2e0f2f8cfd9db590bb50dd324f476783f24fe'
+version = '0.0.414'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://stable.dl2.discordapp.net/apps/linux/1.0.159/discord-1.0.159.tar.gz'
-sha256 = 'bdc731ee87a59cff44f843e7c477971d1cc5c58dd60b025a94d6c611ef9400a1'
-version = '1.0.159'
+url = 'https://stable.dl2.discordapp.net/apps/linux/1.0.160/discord-1.0.160.tar.gz'
+sha256 = '3c3c874c23143aed0127c0d7ccb9ae246a80fc3d9685a33832e0541e885cf4d4'
+version = '1.0.160'
 
 [[package]]
 name = 'eza'
@@ -601,23 +601,23 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 name = 'freebuff'
 ref = './packages/freebuff.toml'
 manifest_sha256 = '5a05ed5b3b754299066e214b6b8ac17044226cff4b4fa856f6b6d699c8eb6508'
-version = '0.1.0'
+version = '0.1.2'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.1.0/freebuff-darwin-arm64.tar.gz'
-sha256 = '61162d40633a86e0c1d467f2bcb06b7405de36fab5f7c89428e5622903bebfff'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.1.2/freebuff-darwin-arm64.tar.gz'
+sha256 = '529b4b2352690c9d3cfc8436e8b15649bc043eb58e07781d6986c6f0f2577f4e'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.1.0/freebuff-linux-x64.tar.gz'
-sha256 = 'b904f3fe1e4c010676badefdf465a35df639a07c7d4d9d82fba8170d41aa3bb9'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.1.2/freebuff-linux-x64.tar.gz'
+sha256 = '2a149ec595d8f27ec8654b5ab072c22020d5e4f4bd0a0d2c0a1a334b6a063f71'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.1.0/freebuff-linux-arm64.tar.gz'
-sha256 = 'c96ef984c330b004dc9cc8f5547b753dccaa40c4488f150510bd112a3714dc0d'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.1.2/freebuff-linux-arm64.tar.gz'
+sha256 = 'ef43f44264cae55d86f5d0df45f4c948543d0bf92525c1b296b910badc2f0c71'
 
 [[package]]
 name = 'fzf'
@@ -895,25 +895,25 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep]]
 name = 'libtiff'
@@ -1133,48 +1133,48 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep]]
 name = 'xz'
@@ -1241,25 +1241,25 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep]]
 name = 'libtiff'
@@ -1479,48 +1479,48 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep]]
 name = 'xz'
@@ -2225,48 +2225,48 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep]]
 name = 'fontconfig'
@@ -2361,71 +2361,71 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep.dep]]
 name = 'freetype'
@@ -2475,71 +2475,71 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep]]
 name = 'jpeg-turbo'
@@ -2583,25 +2583,25 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep]]
 name = 'libtiff'
@@ -2815,48 +2815,48 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep]]
 name = 'fontconfig'
@@ -2951,71 +2951,71 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep.dep]]
 name = 'freetype'
@@ -3065,71 +3065,71 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep]]
 name = 'jpeg-turbo'
@@ -3173,25 +3173,25 @@ sha256 = '2efc974dbd63b4444c0e8494b92f2e80c2d7e635b4b80eac2916985ddd8f72a6'
 [[package.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = 'c3b4b30f5a8214415601a921f077fdf4acb0369bc81fc2256c1c5b5a54a621e4'
-version = '1.6.58'
-tag = 'v1.6.58'
+manifest_sha256 = 'ae5d40e3c3819a8c0dbf4616a3a015bec238d90cf5879af3c375b717c79b2b9f'
+version = '1.6.59'
+tag = 'v1.6.59'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz'
-sha256 = '28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775'
+url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
+sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
 
 [[package.dep]]
 name = 'libtiff'
@@ -3551,9 +3551,9 @@ strategy = 'build'
 name = 'skills-cursor'
 ref = './packages/skills-cursor.toml'
 manifest_sha256 = 'c3ce250f0af9558c91c53ece8f2a415cdd7fb1010335527087111f96d48fbcfc'
-version = '2026.09.25-ecc249f'
+version = '2026.09.28-adf3218'
 tag = 'main'
-tag_commit = 'ecc249f1e306fc64ddf83c7bed16cacf7c2239db'
+tag_commit = 'adf3218ca2f5b9971eedc07a76bef22df7701539'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -3656,7 +3656,7 @@ commands = true
 [[package]]
 name = 'stripe-cli'
 ref = 'github:stripe/stripe-cli'
-commit = '56ce423582b19f1c6550cd925e199e8a26127026'
+commit = 'a7213fd88d34d8f5a754848b21e7fdb5754faa41'
 manifest_sha256 = 'a1f28c24ef1e91ac3473c88a3cb28701a1706ba4c39c75984e6bc89727d1e047'
 version = '1.52.0'
 tag = 'v1.52.0'
@@ -3894,13 +3894,13 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 name = 'whatsapp'
 ref = './packages/whatsapp.toml'
 manifest_sha256 = '899c45c2fb9ba4689b30e5aa2d93d556606c3cf234030f31f378111ac8ee6b96'
-version = '26.38.22'
+version = '26.39.12'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://web.whatsapp.com/desktop/mac_native/release/?version=2.26.38.22&extension=zip&configuration=Release&branch=master&is_buck=true'
-sha256 = '5464958d95178c121c8569dd2b1c3630b7e61ecd895b504ff172985e42f58342'
+url = 'https://web.whatsapp.com/desktop/mac_native/release/?version=2.26.39.12&extension=zip&configuration=Release&branch=master&is_buck=true'
+sha256 = 'f713f65adfd4815e099a16c250c1f759257799fdc42b5bb6149fcd83aaf3ad5e'
 
 [[package]]
 name = 'xz'
