@@ -5,10 +5,11 @@ homepage = "http://www.libpng.org/pub/png/libpng.html"
 license = "libpng-2.0"
 
 # The version follows the git tags. oku sorts betas such as v1.7.0beta89 behind
-# every release, so the newest is a release. The source path holds libpng16,
-# so each package that depends on libpng asks for ~1.6. SourceForge publishes
-# no checksum, so oku.lock pins each version's archive when oku first downloads
-# it.
+# every release, so the newest is a release. The library is libpng16,
+# so each package that depends on libpng asks for ~1.6. The source is the tag
+# archive, since SourceForge uploads lag the tags. It ships a generated
+# configure. No checksum is published, so oku.lock pins each version's archive
+# when oku first downloads it.
 [version]
 from = "git-tags"
 repo = "https://github.com/pnggroup/libpng"
@@ -16,7 +17,7 @@ strip_prefix = "v"
 
 [build]
 needs = ["cc", "make"]
-source = { url = "https://downloads.sourceforge.net/project/libpng/libpng16/{{version}}/libpng-{{version}}.tar.xz", strip = 1 }
+source = { url = "https://github.com/pnggroup/libpng/archive/refs/tags/v{{version}}.tar.gz", strip = 1 }
 
 [[build.step]]
 run = "./configure --prefix={{prefix}} --disable-silent-rules && make -j{{jobs}} && make install"
