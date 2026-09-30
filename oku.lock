@@ -310,23 +310,23 @@ sha256 = '6270de0ef4c84cf0eea61cb148b3ad9ae91a11e9c3309867ffc6b3751024c252'
 name = 'claude-code'
 ref = './packages/claude-code.toml'
 manifest_sha256 = '1b9285b5b755fe2cf571042fcd0a46c0f3fb4de4b3198c9c3a896a78a200498a'
-version = '2.1.284'
+version = '2.1.285'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.284/darwin-arm64/claude'
-sha256 = '50a14c2f50f56668380fdda490167f1d3630d5cc18fb8aed3073c2c7ea7314fe'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.285/darwin-arm64/claude'
+sha256 = '51f09bd1e021d9fa8a1864c179799bd37cb39962a937935c5cf6823398e86db4'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.284/linux-x64/claude'
-sha256 = '5cd90aabd83f8a15136c35aa37bb1d92b348993573316643dc3fe4e04afbf88f'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.285/linux-x64/claude'
+sha256 = '33dad1ec615a2e08cc78b494f05c110e49916de2c79d78ec8799ebf46b233d29'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.284/linux-arm64/claude'
-sha256 = '3dd0f96d7ada463152d20300186f6cfc6ab94b57e218f49e3ac86db42ac695a6'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.285/linux-arm64/claude'
+sha256 = '24fac77749bed3d91365d6b6915aa4b824e14318ecb6bc17adbc192f01c9173d'
 
 [[package]]
 name = 'coreutils'
@@ -605,23 +605,23 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 name = 'freebuff'
 ref = './packages/freebuff.toml'
 manifest_sha256 = '5a05ed5b3b754299066e214b6b8ac17044226cff4b4fa856f6b6d699c8eb6508'
-version = '0.1.2'
+version = '0.1.6'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.1.2/freebuff-darwin-arm64.tar.gz'
-sha256 = '529b4b2352690c9d3cfc8436e8b15649bc043eb58e07781d6986c6f0f2577f4e'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.1.6/freebuff-darwin-arm64.tar.gz'
+sha256 = 'b9239a86be999741e4a17bfc70717cac5d0e998b7fe07a9037db76ad99efc28f'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.1.2/freebuff-linux-x64.tar.gz'
-sha256 = '2a149ec595d8f27ec8654b5ab072c22020d5e4f4bd0a0d2c0a1a334b6a063f71'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.1.6/freebuff-linux-x64.tar.gz'
+sha256 = '4c322d28c028776ab4f40b47a0a7327a1ae7b62bb1dc545874eb130492862b33'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.1.2/freebuff-linux-arm64.tar.gz'
-sha256 = 'ef43f44264cae55d86f5d0df45f4c948543d0bf92525c1b296b910badc2f0c71'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.1.6/freebuff-linux-arm64.tar.gz'
+sha256 = '94550ccd1ef88305e1513f70c3298da369141226d5ccd7d327c9308d5952caf7'
 
 [[package]]
 name = 'fzf'
@@ -1964,9 +1964,9 @@ sha256 = 'a012b25b571bd0138a03dcd25375ceba866fe5ca822f426d2c66a4de56fd3f4b'
 name = 'neru'
 ref = './packages/neru.toml'
 manifest_sha256 = 'd3fba7b7f424607a9a385e9262396ef736d8f3b5ff23e0ace7923c2735849226'
-version = '2026.09.29-1c47ad5'
+version = '2026.09.30-3e9dc90'
 tag = 'main'
-tag_commit = '1c47ad529dca1fc64f3ace01f19bb50b2b3c0d3a'
+tag_commit = '3e9dc90e0cf75d93fd0f8a82c18dc33e2cf5b9e1'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -2008,25 +2008,25 @@ sha256 = '211ffced9dcb9633a55eac6364816ec0ddd951389a740e88fa8b3337971bdda0'
 name = 'nvim'
 ref = './packages/nvim.toml'
 manifest_sha256 = 'e3ae4d0f5cabfa79a7b360bbd09bcf50c508487ceff65665b86c01b6f7952b50'
-version = '2026.09.29-eddadd7'
+version = '2026.09.30-d5e7c7e'
 tag = 'nightly'
-tag_commit = 'eddadd7ab33ece402ea43e9c0823f817404dc012'
+tag_commit = 'd5e7c7e55ce090bb186edac909262a62920b3fa1'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz'
-sha256 = 'c60a722525a324dc89b3155b6d492a508e5b81804957fa522c561dcd115782f6'
+sha256 = 'fa994f670b6464e545b5573e1ae2ef2054021bd3ebe893d907152d3d966daa2b'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz'
-sha256 = '9119d283b4e0f6b4115a1d1af24f3f3b167b507c1b4a012b005de24f62130c0c'
+sha256 = 'f983d60e803df89f6d9cf386bf8e2339f207022bdf58657725d021f89c00c8a5'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-arm64.tar.gz'
-sha256 = '1f83e58ea953657709a5204c9b359ddbef9b7959638d156e8c3fdc70a2c3806c'
+sha256 = '0b4bb632bb57ea0fdad58604cce045411000bf2eba15833113448854ad6bb40a'
 
 [[package]]
 name = 'opencode'
@@ -3567,9 +3567,9 @@ strategy = 'build'
 name = 'skills-cursor'
 ref = './packages/skills-cursor.toml'
 manifest_sha256 = 'a82a734158a4c7f00041615a9288cc913990a7d38cae2c10b056081e74632e02'
-version = '2026.09.28-adf3218'
+version = '2026.09.30-fae2c6e'
 tag = 'main'
-tag_commit = 'adf3218ca2f5b9971eedc07a76bef22df7701539'
+tag_commit = 'fae2c6ed95821bd85f614a73e4842e13229fa5e5'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -3603,9 +3603,9 @@ strategy = 'build'
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
 manifest_sha256 = '5cc8e8443c38454f118d7d6840227cfd5a081ab979537d599894f452f87158bc'
-version = '2026.09.28-db2db46'
+version = '2026.09.30-a9c1da4'
 tag = 'main'
-tag_commit = 'db2db460a26fa84fb65c8d903b213925fbdee9ed'
+tag_commit = 'a9c1da49ec4eab488dc99c69ae20a7ffaa4897d4'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -3672,7 +3672,7 @@ commands = true
 [[package]]
 name = 'stripe-cli'
 ref = 'github:stripe/stripe-cli'
-commit = 'ea9245d54a93626f9b88124ff56cedb71ef270cf'
+commit = '19bfd1ab2a3da743601f3da3249c9b4e0e20853e'
 manifest_sha256 = 'a1f28c24ef1e91ac3473c88a3cb28701a1706ba4c39c75984e6bc89727d1e047'
 version = '1.52.0'
 tag = 'v1.52.0'
