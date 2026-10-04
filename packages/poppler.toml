@@ -26,16 +26,17 @@ zlib = { apt = "zlib1g-dev", dnf = "zlib-devel", pacman = "zlib", when = { os = 
 [build]
 needs = ["cc", "make"]
 source = { url = "https://poppler.freedesktop.org/poppler-{{version}}.tar.xz", strip = 1 }
-deps = ["./cmake.toml", "./freetype.toml", "./fontconfig.toml", "./jpeg-turbo.toml", { ref = "./libpng.toml", version = "~1.6" }, "./libtiff.toml", "./openjpeg.toml"]
+deps = ["./cmake.toml", "./pkgconf.toml", "./brotli.toml", "./freetype.toml", "./fontconfig.toml", "./jpeg-turbo.toml", { ref = "./libpng.toml", version = "~1.6" }, "./libtiff.toml", "./openjpeg.toml"]
 
 [runtime]
-deps = ["./freetype.toml", "./fontconfig.toml", "./jpeg-turbo.toml", { ref = "./libpng.toml", version = "~1.6" }, "./libtiff.toml", "./openjpeg.toml"]
+deps = ["./brotli.toml", "./freetype.toml", "./fontconfig.toml", "./jpeg-turbo.toml", { ref = "./libpng.toml", version = "~1.6" }, "./libtiff.toml", "./openjpeg.toml"]
 
 # The command line tools and the library they share, nothing else. cairo is
 # off, so there is no pdftocairo. The glib, Qt and C++ bindings, signatures
 # (NSS, GPGME), curl, Boost, HarfBuzz and colour management (lcms2) are off
 # as well.
-# JPEG 2000 images decode through openjpeg. zlib comes from the system.
+# JPEG 2000 images decode through openjpeg. Brotli streams decode through
+# brotli, which cmake finds with pkg-config. zlib comes from the system.
 # The two RPATH flags are for Linux. cmake passes its own -rpath, so the linker
 # ignores the LD_RUN_PATH that oku sets, and cmake drops the paths on install.
 # With the flags a library finds the others of this package and its deps.
