@@ -310,23 +310,23 @@ sha256 = '6270de0ef4c84cf0eea61cb148b3ad9ae91a11e9c3309867ffc6b3751024c252'
 name = 'claude-code'
 ref = './packages/claude-code.toml'
 manifest_sha256 = '1b9285b5b755fe2cf571042fcd0a46c0f3fb4de4b3198c9c3a896a78a200498a'
-version = '2.1.288'
+version = '2.1.289'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.288/darwin-arm64/claude'
-sha256 = 'bbe93063f7a0879a1021b2891e5c9354e5b3b98433e32efe6750f7710afed750'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.289/darwin-arm64/claude'
+sha256 = '03d66745e3bb69ec727d66023696f3820bc0a00a8a5ba725eb6706d0c67cbe69'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.288/linux-x64/claude'
-sha256 = '0298068b686e7fdbaf9402a7a587bb7f49c0b0e084de09f69145a0719207640c'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.289/linux-x64/claude'
+sha256 = 'a186b99e4a9c88366cd49df2f7dad56c61fc306ef0140b19ee64b7c42a8d1348'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.288/linux-arm64/claude'
-sha256 = '359ab6a058fcde9741dff54979a212fd134cdf8e8cfc2f8de02bc350b9e2b9d5'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.289/linux-arm64/claude'
+sha256 = 'd100d5e41dcbee220c80d3a3099292e4b5a508b57cafd181856efedf29f84f28'
 
 [[package]]
 name = 'coreutils'
@@ -2151,24 +2151,24 @@ sha256 = '69cdf3e8bacecc99fd420186d26dd5769c004ee218034457b3691a1cf408967c'
 [[package]]
 name = 'poppler'
 ref = './packages/poppler.toml'
-manifest_sha256 = '9d1bae56fd56e7bae28b2b9ec3da3f2dade1f70efddac80a50782a2f02748d0f'
-version = '26.09.0'
+manifest_sha256 = 'ba7773817b85708143c46aca1bf36377cb995755ecb4cc8f17cf9d80011f2e9d'
+version = '26.10.0'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://poppler.freedesktop.org/poppler-26.09.0.tar.xz'
-sha256 = '8059eadb6805340768f138c465b57f8164c92b4a0773c37ef031ea6c0d987b2e'
+url = 'https://poppler.freedesktop.org/poppler-26.10.0.tar.xz'
+sha256 = '6792cb7c69205007ad87d2e936cecc5b3a31fac29ab54ffc3175fdb6b2a6ce35'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://poppler.freedesktop.org/poppler-26.09.0.tar.xz'
-sha256 = '8059eadb6805340768f138c465b57f8164c92b4a0773c37ef031ea6c0d987b2e'
+url = 'https://poppler.freedesktop.org/poppler-26.10.0.tar.xz'
+sha256 = '6792cb7c69205007ad87d2e936cecc5b3a31fac29ab54ffc3175fdb6b2a6ce35'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://poppler.freedesktop.org/poppler-26.09.0.tar.xz'
-sha256 = '8059eadb6805340768f138c465b57f8164c92b4a0773c37ef031ea6c0d987b2e'
+url = 'https://poppler.freedesktop.org/poppler-26.10.0.tar.xz'
+sha256 = '6792cb7c69205007ad87d2e936cecc5b3a31fac29ab54ffc3175fdb6b2a6ce35'
 
 [[package.dep]]
 name = 'cmake'
@@ -2189,6 +2189,69 @@ url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-lin
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
 
 [package.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
+sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+
+[[package.dep]]
+name = 'pkgconf'
+ref = './packages/pkgconf.toml'
+manifest_sha256 = 'cddba2f715deeb8a571fb038c8374a5325b4edeb34123c3dbe3d6eef56f6a2dd'
+version = '3.0.7'
+tag = 'pkgconf-3.0.7'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
+sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
+sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
+sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
+
+[[package.dep]]
+name = 'brotli'
+ref = './packages/brotli.toml'
+manifest_sha256 = 'ad7b483ae5d94f00235b2593cffacecb6a1630b7b05d83d58d8b14726d1b9332'
+version = '1.2.0'
+tag = 'v1.2.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
+sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+
+[package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
@@ -2749,6 +2812,46 @@ ref = './packages/openjpeg.toml'
 manifest_sha256 = '366ac9ea0e4849a2b3b6c08c9233df5ec9c7bc1fb980e5595233a7550fbbbd3c'
 version = '2.5.4'
 tag = 'v2.5.4'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
+sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
+sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+
+[[package.dep]]
+name = 'brotli'
+ref = './packages/brotli.toml'
+manifest_sha256 = 'ad7b483ae5d94f00235b2593cffacecb6a1630b7b05d83d58d8b14726d1b9332'
+version = '1.2.0'
+tag = 'v1.2.0'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
@@ -3567,9 +3670,9 @@ strategy = 'build'
 name = 'skills-cursor'
 ref = './packages/skills-cursor.toml'
 manifest_sha256 = 'a82a734158a4c7f00041615a9288cc913990a7d38cae2c10b056081e74632e02'
-version = '2026.10.03-23e4138'
+version = '2026.10.04-e43c7ee'
 tag = 'main'
-tag_commit = '23e4138daa01c42d4969f7a5465f82704e64f798'
+tag_commit = 'e43c7ee26e0038c6c1fa8380dd34ce86ff94cb2a'
 
 [package.platform]
 [package.platform.darwin-arm64]
