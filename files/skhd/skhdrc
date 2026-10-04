@@ -8,11 +8,14 @@
 .define mimi_tile : mimi tiling cmd "{{1}}"
 .define mimi_tile_sub : mimi tiling cmd "{{1}}" "{{2}}"
 
+.define firefox ["firefox"]
+
 # launchers
 hyper - f : @open("finder")
-hyper - b : @open("safari")
+# hyper - b : @open("safari")
 # hyper - b : @open("helium")
 # hyper - b : @open("Brave Browser")
+hyper - b : @open("firefox")
 hyper - t : @open("ghostty")
 hyper - n : @open("notes")
 hyper - r : @open("reminders")
@@ -99,3 +102,14 @@ alt + shift - c : @mimi_resize("center")
 # alt + shift - l : @mimi_tile_sub("swap", "right")
 # alt + shift - j : @mimi_tile_sub("swap", "down")
 # alt + shift - k : @mimi_tile_sub("swap", "up")
+
+# custom firefox overrides for next and prev tabs
+ctrl - h [
+  @firefox | cmd + alt - left
+  *             ~
+]
+
+ctrl - l [
+  @firefox | cmd + alt - right
+  *             ~
+]
