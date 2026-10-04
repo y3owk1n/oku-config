@@ -206,12 +206,6 @@ AppleLanguages = ["en-SG", "ms-MY", "zh-Hant-MY"]
 DSDontWriteNetworkStores = true
 DSDontWriteUSBStores = true
 
-# Helium browser, menu key equivalents. @ is Command, ^ is Control.
-[defaults."net.imput.helium".NSUserKeyEquivalents]
-"Pin Tab" = "@d"
-"Select Next Tab" = "^l"
-"Select Previous Tab" = "^h"
-
 # Safari. Read the Safari caveat in macos-notes.md first: the terminal that runs
 # oku needs Full Disk Access, because these settings live in Safari's container.
 # The Nix config wrote the switches as integers 1 and 0, and so does this list.
