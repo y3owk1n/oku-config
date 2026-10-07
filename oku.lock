@@ -632,47 +632,47 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 name = 'freebuff'
 ref = './packages/freebuff.toml'
 manifest_sha256 = '5a05ed5b3b754299066e214b6b8ac17044226cff4b4fa856f6b6d699c8eb6508'
-version = '0.2.16'
+version = '0.2.19'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.2.16/freebuff-darwin-arm64.tar.gz'
-sha256 = '9f4ee04bd73f744eece3e9daccd204099f16bd33aa2018eb1bb349765cd33f97'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.2.19/freebuff-darwin-arm64.tar.gz'
+sha256 = '6c903f88eeb865ddc4d82aa3e0ccaa1fdae682371edcefd951bdb208f0b17c0e'
 verified = 'first-use'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.2.16/freebuff-linux-x64.tar.gz'
-sha256 = 'd3334b766970e615563dbfe78293818f5b7f00fa76a1d5434d1d151f4d0d04c4'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.2.19/freebuff-linux-x64.tar.gz'
+sha256 = 'f047c596173a9347c40f0b37c38930d6b20f42be515d91ed7a48f1c28b965bb4'
 verified = 'first-use'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.2.16/freebuff-linux-arm64.tar.gz'
-sha256 = '3d5e9049da25d176eedd8193aef12c1c485096c6a42d3927c3e183c38c62adc1'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.2.19/freebuff-linux-arm64.tar.gz'
+sha256 = 'fed40b31298de9b983ab71c1d449ca13c3a13b5e86e32f9e83f3ff5e51263a10'
 verified = 'first-use'
 
 [[package]]
 name = 'friendly'
 ref = './packages/friendly.toml'
 manifest_sha256 = 'd0a9964121ac62a32dc7609eadd16dbfffbb2808e665cdf25f0f9744c8fd1035'
-version = '2026.10.06-e088829'
+version = '2026.10.07-6b0ece4'
 tag = 'main'
-tag_commit = 'e088829c5d29707079a86551be896b66b47fde63'
+tag_commit = '6b0ece42fde39de75db6c8f08d5435db38e32688'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
-vendor_sha256 = '19f5ff61640676e2fcb10ae58afd66882aeb7f48fbd662a9a7fb2e5726775dfc'
+vendor_sha256 = 'd5cc5746670a8e55b32b0147c82099d410104e9ee785cfbb6fe023b22d9665ad'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'build'
-vendor_sha256 = '19f5ff61640676e2fcb10ae58afd66882aeb7f48fbd662a9a7fb2e5726775dfc'
+vendor_sha256 = 'd5cc5746670a8e55b32b0147c82099d410104e9ee785cfbb6fe023b22d9665ad'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
-vendor_sha256 = '19f5ff61640676e2fcb10ae58afd66882aeb7f48fbd662a9a7fb2e5726775dfc'
+vendor_sha256 = 'd5cc5746670a8e55b32b0147c82099d410104e9ee785cfbb6fe023b22d9665ad'
 
 [[package.dep]]
 name = 'go'
@@ -2138,27 +2138,27 @@ sha256 = '211ffced9dcb9633a55eac6364816ec0ddd951389a740e88fa8b3337971bdda0'
 name = 'nvim'
 ref = './packages/nvim.toml'
 manifest_sha256 = 'e3ae4d0f5cabfa79a7b360bbd09bcf50c508487ceff65665b86c01b6f7952b50'
-version = '2026.10.05-561857c'
+version = '2026.10.07-898e6f8'
 tag = 'nightly'
-tag_commit = '561857c4a88072407c79e9707e6f2e81bce097d2'
+tag_commit = '898e6f884e1331b92dc9deb5148091b32df017ca'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz'
-sha256 = '475d8a6cf7abd0b435a3073a28fbbdcf5df94085b02945d4170e9bfe9a9d660d'
+sha256 = 'a1deefb81500f63c4f282ff77154754dfefffe15f823cc485a086f3f1ab37c97'
 verified = 'published'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz'
-sha256 = 'c9cbec5e1c707d0bb0f0a423a4d5b29d2122597db12b59e4371633237d6c4e4a'
+sha256 = 'c031e2274ea276810cfd9a7b191ceaefe8079f55fca70b664fc825b2154c164a'
 verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-arm64.tar.gz'
-sha256 = 'de671356cfa275c5573ef6bcd7500d560f9b7491a0c198fb99268822231e2ac9'
+sha256 = '275f28bd72c0c559af4e590d3208b58a1836371eff0e545128dc65a30d37c0a4'
 verified = 'published'
 
 [[package]]
@@ -3868,9 +3868,9 @@ strategy = 'build'
 name = 'skills-cursor'
 ref = './packages/skills-cursor.toml'
 manifest_sha256 = 'a82a734158a4c7f00041615a9288cc913990a7d38cae2c10b056081e74632e02'
-version = '2026.10.06-9f451cf'
+version = '2026.10.07-d0ef80d'
 tag = 'main'
-tag_commit = '9f451cf875ad1239912762f67741e8e5ba6ac0f1'
+tag_commit = 'd0ef80d86795816da932a153458c5dbe192d294e'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -3904,9 +3904,9 @@ strategy = 'build'
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
 manifest_sha256 = '5cc8e8443c38454f118d7d6840227cfd5a081ab979537d599894f452f87158bc'
-version = '2026.10.06-e8c3143'
+version = '2026.10.07-c46de9b'
 tag = 'main'
-tag_commit = 'e8c3143b1cd191280befcd6c9538284bb43399a8'
+tag_commit = 'c46de9b6799e3fa028fe824ef317324a4f36b98d'
 
 [package.platform]
 [package.platform.darwin-arm64]
