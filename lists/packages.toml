@@ -91,3 +91,4 @@ mimi = { ref = "../packages/mimi.toml", service = true, when = { os = "darwin" }
 # On Windows it builds with go alone and runs as a scheduled task.
 neru = { ref = "../packages/neru.toml", service = true }
 uts = "../packages/uts.toml"
+friendly = "../packages/friendly.toml"

@@ -1,0 +1,36 @@
+[package]
+name = "friendly"
+description = "Friendly TUI client"
+homepage = "https://github.com/y3owk1n/cli"
+
+# Built from main, before a release. `oku update friendly` takes the newest commit.
+[version]
+from = "git-branch"
+repo = "https://github.com/y3owk1n/cli"
+branch = "main"
+
+# What the build needs of the machine, which oku checks and does not install.
+# The Command Line Tools give macOS its compiler, make and git. On Linux
+# bootstrap/linux.sh installs these packages.
+[host]
+xcode-clt = { path = "/Library/Developer/CommandLineTools/usr/bin/clang", install = "xcode-select --install", when = { os = "darwin" } }
+git = { command = "git", apt = "git", dnf = "git", pacman = "git", when = { os = "linux" } }
+
+[build]
+needs = ["git"]
+deps = [{ ref = "./go.toml", version = "~1.26" }]
+source = { git = "https://github.com/y3owk1n/cli", tag = "{{tag}}" }
+
+[[build.step]]
+vendor = "go"
+
+[[build.step]]
+run = """
+set -eu
+go build -mod=vendor -trimpath -ldflags="-s -w" -o friendly ./cmd
+"""
+shell = "sh"
+env = { CGO_ENABLED = "0", GOFLAGS = "-buildvcs=false" }
+
+[[build.step]]
+install = { bin = ["friendly"] }

@@ -50,3 +50,8 @@ startup_command = "nvim config.toml.tmpl"
 name = "btop"
 path = "~"
 startup_command = "btop"
+
+[[session]]
+name = "friendly"
+path = "~"
+startup_command = "friendly"
