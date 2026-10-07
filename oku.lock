@@ -321,25 +321,25 @@ sha256 = '6270de0ef4c84cf0eea61cb148b3ad9ae91a11e9c3309867ffc6b3751024c252'
 name = 'claude-code'
 ref = './packages/claude-code.toml'
 manifest_sha256 = '1b9285b5b755fe2cf571042fcd0a46c0f3fb4de4b3198c9c3a896a78a200498a'
-version = '2.1.291'
+version = '2.1.292'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.291/darwin-arm64/claude'
-sha256 = '9a1d2ed6bb4421e8fc80c892c0413f293be3ee50ae3d7dda1a7622197a056690'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.292/darwin-arm64/claude'
+sha256 = '97a01e5bc74a199e67189435d0331ea3a24eac2e07db4b76d9148c5b0386138f'
 verified = 'first-use'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.291/linux-x64/claude'
-sha256 = '078fad28d0297c9a25d306b635b2d8816c6839347520f29eb54ffea5d56142fb'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.292/linux-x64/claude'
+sha256 = 'a967e7b1d8b4e47ee421d5433027880347952b0c0857abf880e2c942a4ec93b3'
 verified = 'first-use'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.291/linux-arm64/claude'
-sha256 = 'c18473a04cc4f077435d5d9081f09ebea46e699eb2825cea64741c4bccb87647'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.292/linux-arm64/claude'
+sha256 = '24caa9e6ff13bf227049a2626f1c816fc895023050f0ec3b12dbf14d897367e0'
 verified = 'first-use'
 
 [[package]]
@@ -515,23 +515,26 @@ sha256 = '2ab6aba60ee84412dff9188720703376cb4e7aaf7e0b5e43aa8249f2acae5bf8'
 name = 'firefox'
 ref = './packages/firefox.toml'
 manifest_sha256 = 'a6f57aa3dd145c6d801bca7cf79189f1d7fd03e9f9412e714d60d73efb047829'
-version = '157.0'
+version = '157.0.1'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/157.0/mac/en-US/Firefox%20157.0.dmg'
-sha256 = 'df6d8c79b6126bcf24cb70ebab9371916a662028e2d706e462d432e78fdf396c'
+url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/157.0.1/mac/en-US/Firefox%20157.0.1.dmg'
+sha256 = '40a0a649120635460256dae9ad63e40377f77326cbc9c449a5d0a1d7f5dd7982'
+verified = 'first-use'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/157.0/linux-x86_64/en-US/firefox-157.0.tar.xz'
-sha256 = '42f2c62a562316982ef5a796738c57602bf84a984f5c616e80bcff4627f78fff'
+url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/157.0.1/linux-x86_64/en-US/firefox-157.0.1.tar.xz'
+sha256 = '0d92bf39cdd174f5f361008509310bdefbce72a57ca10523a43b32d62dc699b6'
+verified = 'first-use'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/157.0/linux-aarch64/en-US/firefox-157.0.tar.xz'
-sha256 = '73fc3d6f6f4d3fcdeee59db90156568af9959405120ad686e535f572995074d0'
+url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/157.0.1/linux-aarch64/en-US/firefox-157.0.1.tar.xz'
+sha256 = 'b99d44d1d64bf8133db1c28e77cafdf82216af90c0a94802f0f6578c9b722d7d'
+verified = 'first-use'
 
 [[package]]
 name = 'fish'
@@ -629,26 +632,73 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 name = 'freebuff'
 ref = './packages/freebuff.toml'
 manifest_sha256 = '5a05ed5b3b754299066e214b6b8ac17044226cff4b4fa856f6b6d699c8eb6508'
-version = '0.2.13'
+version = '0.2.16'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.2.13/freebuff-darwin-arm64.tar.gz'
-sha256 = '0fcaf291c91b4115be24e0f11d98d921d44962bd5277e1f47a673fc1cebd51ea'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.2.16/freebuff-darwin-arm64.tar.gz'
+sha256 = '9f4ee04bd73f744eece3e9daccd204099f16bd33aa2018eb1bb349765cd33f97'
 verified = 'first-use'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.2.13/freebuff-linux-x64.tar.gz'
-sha256 = '8ccb39df1a5642ffe529b26fe2b62fa6be8ed56ed7a30736523babb90a2899ce'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.2.16/freebuff-linux-x64.tar.gz'
+sha256 = 'd3334b766970e615563dbfe78293818f5b7f00fa76a1d5434d1d151f4d0d04c4'
 verified = 'first-use'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.2.13/freebuff-linux-arm64.tar.gz'
-sha256 = '4fc178b1840fb56f3792f5f7321fabd6c8909ad18fd8b271b0dfc1e7928d831d'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.2.16/freebuff-linux-arm64.tar.gz'
+sha256 = '3d5e9049da25d176eedd8193aef12c1c485096c6a42d3927c3e183c38c62adc1'
 verified = 'first-use'
+
+[[package]]
+name = 'friendly'
+ref = './packages/friendly.toml'
+manifest_sha256 = 'd0a9964121ac62a32dc7609eadd16dbfffbb2808e665cdf25f0f9744c8fd1035'
+version = '2026.10.06-e088829'
+tag = 'main'
+tag_commit = 'e088829c5d29707079a86551be896b66b47fde63'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+vendor_sha256 = '19f5ff61640676e2fcb10ae58afd66882aeb7f48fbd662a9a7fb2e5726775dfc'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
+vendor_sha256 = '19f5ff61640676e2fcb10ae58afd66882aeb7f48fbd662a9a7fb2e5726775dfc'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'build'
+vendor_sha256 = '19f5ff61640676e2fcb10ae58afd66882aeb7f48fbd662a9a7fb2e5726775dfc'
+
+[[package.dep]]
+name = 'go'
+ref = './packages/go.toml'
+manifest_sha256 = '4e86afdeda4063d8c7cc15bedb7857112496c03e8608295229e30bd61a6dd9d8'
+version = '1.26.8'
+tag = 'go1.26.8'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://dl.google.com/go/go1.26.8.darwin-arm64.tar.gz'
+sha256 = 'a012b25b571bd0138a03dcd25375ceba866fe5ca822f426d2c66a4de56fd3f4b'
+verified = 'checksum-file'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://dl.google.com/go/go1.26.8.linux-amd64.tar.gz'
+sha256 = 'd0f743b33e8d8945e6b1f432edd15785c70507121d6e2a723b21285eddf8b57b'
+verified = 'checksum-file'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://dl.google.com/go/go1.26.8.linux-arm64.tar.gz'
+sha256 = '211ffced9dcb9633a55eac6364816ec0ddd951389a740e88fa8b3337971bdda0'
+verified = 'checksum-file'
 
 [[package]]
 name = 'fzf'
@@ -1796,27 +1846,29 @@ verified = 'manifest'
 name = 'lazygit'
 ref = './packages/lazygit.toml'
 manifest_sha256 = 'cc927bbbb42456c52ec496797aba9c4d1a42bb8b17b22595eb43fa5acf3fe6f8'
-version = '0.65.1'
-tag = 'v0.65.1'
+version = '0.66.0'
+tag = 'v0.66.0'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/jesseduffield/lazygit/releases/download/v0.65.1/lazygit_0.65.1_darwin_arm64.tar.gz'
-sha256 = '65a367c6ea9a88efebaaf7998a6835eedb987e04916cef677264ff9b31b1b13e'
+url = 'https://github.com/jesseduffield/lazygit/releases/download/v0.66.0/lazygit_0.66.0_darwin_arm64.tar.gz'
+sha256 = 'e9fe2fe1f1bbc1b4c3214b33e8e0d57a4d6e3c2276aa9aa713f9bcbdc223e65c'
 verified = 'checksum-file'
 commands = true
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/jesseduffield/lazygit/releases/download/v0.65.1/lazygit_0.65.1_linux_x86_64.tar.gz'
-sha256 = '02beacbcda0fa342e50ae3480ba8147307353af3fb28e1d5f790e02329c201a6'
+url = 'https://github.com/jesseduffield/lazygit/releases/download/v0.66.0/lazygit_0.66.0_linux_x86_64.tar.gz'
+sha256 = '5b45541155d20bd32bf2cc5ab5b7e3d91c2eebf0fb1242281350edc27d59d2b7'
+verified = 'checksum-file'
 commands = true
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/jesseduffield/lazygit/releases/download/v0.65.1/lazygit_0.65.1_linux_arm64.tar.gz'
-sha256 = '49abecdf6adf4f2dfdb11bf7b9bfada267ea523612ed809d1c6d87f6c04000a7'
+url = 'https://github.com/jesseduffield/lazygit/releases/download/v0.66.0/lazygit_0.66.0_linux_arm64.tar.gz'
+sha256 = '9a4fc4656897ac9f7877b835473ce1a75620cc267f554c57fc4ff266407f3257'
+verified = 'checksum-file'
 commands = true
 
 [[package]]
@@ -2015,8 +2067,8 @@ sha256 = 'b98f2cc69fd9147fe4d405d859c57504571adec0d3611c3eefd04107c7ac00d0'
 name = 'mole'
 ref = './packages/mole.toml'
 manifest_sha256 = 'd2de62f69c4618f4fc5d3ee6dbf0ecc2fa2f1b1224ba176a1553ff6ea1d0a69a'
-version = '1.57.0'
-tag = 'V1.57.0'
+version = '1.58.0'
+tag = 'V1.58.0'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -3816,9 +3868,9 @@ strategy = 'build'
 name = 'skills-cursor'
 ref = './packages/skills-cursor.toml'
 manifest_sha256 = 'a82a734158a4c7f00041615a9288cc913990a7d38cae2c10b056081e74632e02'
-version = '2026.10.06-df58112'
+version = '2026.10.06-9f451cf'
 tag = 'main'
-tag_commit = 'df581122cde17e6e27686b5a448bde23e4ad4318'
+tag_commit = '9f451cf875ad1239912762f67741e8e5ba6ac0f1'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -3852,9 +3904,9 @@ strategy = 'build'
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
 manifest_sha256 = '5cc8e8443c38454f118d7d6840227cfd5a081ab979537d599894f452f87158bc'
-version = '2026.10.06-7ff7dbf'
+version = '2026.10.06-e8c3143'
 tag = 'main'
-tag_commit = '7ff7dbf8669fa3392c294ee745dc8d8c3cee842c'
+tag_commit = 'e8c3143b1cd191280befcd6c9538284bb43399a8'
 
 [package.platform]
 [package.platform.darwin-arm64]
