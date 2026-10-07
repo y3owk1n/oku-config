@@ -655,29 +655,31 @@ verified = 'first-use'
 
 [[package]]
 name = 'friendly'
-ref = './packages/friendly.toml'
-manifest_sha256 = 'd0a9964121ac62a32dc7609eadd16dbfffbb2808e665cdf25f0f9744c8fd1035'
-version = '2026.10.07-6b0ece4'
+ref = 'github:friendly-social-ai/cli'
+commit = '128c74b6ba475bdab4537735952e49d807f28779'
+manifest_sha256 = 'd64eff147a910830eef84fd61270a5a85ad67069e225e870a302dcf5c15bcd62'
+version = '2026.10.07-128c74b'
 tag = 'main'
-tag_commit = '6b0ece42fde39de75db6c8f08d5435db38e32688'
+tag_commit = '128c74b6ba475bdab4537735952e49d807f28779'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
-vendor_sha256 = 'd5cc5746670a8e55b32b0147c82099d410104e9ee785cfbb6fe023b22d9665ad'
+vendor_sha256 = '8d1dae8e56ef8f6bb398dcc6db414ee4d05f11f72f9eb996f30c47a82a404500'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'build'
-vendor_sha256 = 'd5cc5746670a8e55b32b0147c82099d410104e9ee785cfbb6fe023b22d9665ad'
+vendor_sha256 = '8d1dae8e56ef8f6bb398dcc6db414ee4d05f11f72f9eb996f30c47a82a404500'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
-vendor_sha256 = 'd5cc5746670a8e55b32b0147c82099d410104e9ee785cfbb6fe023b22d9665ad'
+vendor_sha256 = '8d1dae8e56ef8f6bb398dcc6db414ee4d05f11f72f9eb996f30c47a82a404500'
 
 [[package.dep]]
 name = 'go'
-ref = './packages/go.toml'
-manifest_sha256 = '4e86afdeda4063d8c7cc15bedb7857112496c03e8608295229e30bd61a6dd9d8'
+ref = 'github:friendly-social-ai/cli#.oku/go.toml'
+commit = '128c74b6ba475bdab4537735952e49d807f28779'
+manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
 version = '1.26.8'
 tag = 'go1.26.8'
 
@@ -3904,9 +3906,9 @@ strategy = 'build'
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
 manifest_sha256 = '5cc8e8443c38454f118d7d6840227cfd5a081ab979537d599894f452f87158bc'
-version = '2026.10.07-c46de9b'
+version = '2026.10.07-04b5af3'
 tag = 'main'
-tag_commit = 'c46de9b6799e3fa028fe824ef317324a4f36b98d'
+tag_commit = '04b5af3c0ec02fc6a4330e4f441c15571adfdb76'
 
 [package.platform]
 [package.platform.darwin-arm64]
