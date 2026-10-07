@@ -32,6 +32,7 @@ bind -N "last-session (via sesh) " L run-shell "sesh last" # overwrite last-sess
 
 bind C-g display-popup -T "Lazygit" -w 90% -h 80% -d "#{pane_current_path}" -E "lazygit"
 bind C-t display-popup -T "Terminal" -w 90% -h 80% -d "#{pane_current_path}" -E $SHELL
+bind C-d display-popup -T "Friendly" -w 90% -h 80% -d "#{pane_current_path}" -E "friendly"
 
 bind-key -T copy-mode-vi 'v' send -X begin-selection # start selecting text with "v"
 bind-key -T copy-mode-vi 'y' send -X copy-selection # copy text with "y"
