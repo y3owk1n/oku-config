@@ -78,6 +78,9 @@
 "{{config}}/opencode/tui.json" = { link = "../files/opencode/tui.json" }
 "{{config}}/opencode/themes/stylix.json" = { render = "../files/opencode/themes/stylix.json.tmpl" }
 
+# friendly
+"{{config}}/friendly/theme.toml" = { render = "../files/friendly/theme.toml.tmpl" }
+
 # My own scripts, which were Nix packages. They are links, so they keep their
 # execute bit. ~/.local/bin is on PATH through the oku hook, because oku lives
 # there.
