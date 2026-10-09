@@ -1,4 +1,3 @@
-set  -g default-terminal "screen"
 set  -g base-index      1
 setw -g pane-base-index 1
 # We need to set default-shell before calling new-session
@@ -25,14 +24,34 @@ run-shell {{config}}/tmux/vim-tmux-navigator.tmux
 source-file {{config}}/tmux/theme.conf
 
 set -g default-terminal "tmux-256color"
-set -ga terminal-overrides ",xterm-ghostty:Tc"
 set -ga terminal-features ",*:usstyle,*:RGB,*:strikethrough"
 
 bind -N "last-session (via sesh) " L run-shell "sesh last" # overwrite last-session with sesh last
 
-bind C-g display-popup -T "Lazygit" -w 90% -h 80% -d "#{pane_current_path}" -E "lazygit"
-bind C-t display-popup -T "Terminal" -w 90% -h 80% -d "#{pane_current_path}" -E $SHELL
-bind C-d display-popup -T "Friendly" -w 90% -h 80% -d "#{pane_current_path}" -E "friendly"
+# Modal floating panes, centred. -K sends every key to the pane, as a popup did,
+# so vim-tmux-navigator's C-hjkl reach lazygit. allow-set-title off keeps the
+# -T title shown in the border. remain-on-exit failed-key keeps a crashed app on
+# screen until a key is pressed.
+set -g pane-border-status top-floating
+set -g pane-border-format " #{pane_title} "
+bind C-g new-pane -OK -T "Lazygit" -x 90% -y 80% -X 5% -Y 10% -c "#{pane_current_path}" "lazygit" \; set -p allow-set-title off \; set -p remain-on-exit failed-key
+bind C-t new-pane -OK -T "Terminal" -x 90% -y 80% -X 5% -Y 10% -c "#{pane_current_path}" \; set -p allow-set-title off
+bind C-d new-pane -OK -T "Friendly" -x 90% -y 80% -X 5% -Y 10% -c "#{pane_current_path}" "friendly" \; set -p allow-set-title off \; set -p remain-on-exit failed-key
+
+# Say when a command of 10s or more finishes in a window I am not looking at.
+# Fish sends each OSC 133 end twice, the second with status 0, so only the
+# first event for a command start time counts.
+set-hook -g pane-command-finished {
+  if -F "#{&&:#{e|>=:#{hook_command_duration},10},#{!=:#{hook_command_start_time},#{@notified_start}}}" {
+    set -pF @notified_start "#{hook_command_start_time}"
+    if -F "#{||:#{!:#{window_active}},#{!:#{session_attached}}}" {
+      display-message -d 5000 "#{?#{==:#{hook_command_status},0},done,failed (#{hook_command_status})} in #{session_name}:#{window_index} #{window_name} after #{hook_command_duration}s"
+    }
+  }
+}
+
+set -s clear-on-attach off
+set -g pane-scrollbars modal
 
 bind-key -T copy-mode-vi 'v' send -X begin-selection # start selecting text with "v"
 bind-key -T copy-mode-vi 'y' send -X copy-selection # copy text with "y"

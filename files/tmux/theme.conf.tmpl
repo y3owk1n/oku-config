@@ -37,6 +37,27 @@ set-window-option -g window-status-activity-style "fg=#{{theme.base05}},bg=#{{th
 # style for command messages
 set-option -g message-command-style "fg=#{{theme.base06}},bg=#{{theme.base01}}"
 
+# tmux 3.8 builtin theme colours, which its default styles use (menus, copy
+# mode matches, fill-character, scrollbars, tree and switch modes)
+set-option -g theme "dark"
+set-option -g dark-theme-black "#{{theme.base00}}"
+set-option -g dark-theme-white "#{{theme.base07}}"
+set-option -g dark-theme-dark-grey "#{{theme.base01}}"
+set-option -g dark-theme-light-grey "#{{theme.base03}}"
+set-option -g dark-theme-red "#{{theme.base08}}"
+set-option -g dark-theme-green "#{{theme.base0B}}"
+set-option -g dark-theme-yellow "#{{theme.base0A}}"
+set-option -g dark-theme-blue "#{{theme.base0D}}"
+set-option -g dark-theme-cyan "#{{theme.base0C}}"
+set-option -g dark-theme-magenta "#{{theme.base0E}}"
+
+# copy mode cursor line, like the nvim cursorline
+set-window-option -g copy-mode-current-line-style "bg=#{{theme.base01}}"
+
+# popups, on the terminal background as before 3.8
+set-option -g popup-style "fg=#{{theme.base05}},bg=#{{theme.base00}}"
+set-option -g popup-border-style "fg=#{{theme.base04}},bg=#{{theme.base00}}"
+
 # Optional active/inactive pane state
 # BASE16_TMUX_OPTION_ACTIVE is a legacy variable
 if-shell '[ "$TINTED_TMUX_OPTION_ACTIVE" = "1" ] || [ "$BASE16_TMUX_OPTION_ACTIVE" = "1" ]' {
