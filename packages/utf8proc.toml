@@ -1,0 +1,29 @@
+[package]
+name = "utf8proc"
+description = "Library for Unicode data, which tmux uses for character widths"
+homepage = "https://juliastrings.github.io/utf8proc/"
+license = "MIT"
+
+# The source is the archive of a git tag. GitHub reports no checksum for it,
+# so oku.lock pins each version's archive when oku first downloads it.
+[version]
+from = "github-releases"
+repo = "JuliaStrings/utf8proc"
+strip_prefix = "v"
+
+# What the build needs of the machine, which oku checks and does not install.
+# The Command Line Tools give macOS its compiler, make and git. On Linux
+# bootstrap/linux.sh installs these packages.
+[host]
+xcode-clt = { path = "/Library/Developer/CommandLineTools/usr/bin/clang", install = "xcode-select --install", when = { os = "darwin" } }
+cc = { command = "cc", apt = "build-essential", dnf = "gcc-c++", pacman = "base-devel", when = { os = "linux" } }
+make = { command = "make", apt = "build-essential", dnf = "make", pacman = "base-devel", when = { os = "linux" } }
+
+[build]
+needs = ["cc", "make"]
+source = { url = "https://github.com/JuliaStrings/utf8proc/archive/refs/tags/v{{version}}.tar.gz", strip = 1 }
+when = [{ os = "darwin" }, { os = "linux" }]
+
+[[build.step]]
+run = "make -j{{jobs}} prefix={{prefix}} && make install prefix={{prefix}}"
+shell = "sh"

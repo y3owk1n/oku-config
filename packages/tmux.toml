@@ -4,24 +4,42 @@ description = "Terminal multiplexer"
 homepage = "https://github.com/tmux/tmux"
 license = "ISC"
 
-# The tmux project builds these in its own tmux-builds repo. The archive holds
-# the program only, with no man page, and there is no checksum file.
+# The version follows the upstream releases, whose tags have no prefix. The
+# tmux-builds repo with ready programs tags its releases by hand and can lag
+# behind, so tmux is built from the release archive, which holds the configure
+# script. The archive is a file of the GitHub release, so oku checks it against
+# the sha256 that GitHub reports.
 [version]
 from = "github-releases"
-repo = "tmux/tmux-builds"
-strip_prefix = "v"
+repo = "tmux/tmux"
 
-[[artifact]]
-match = { os = "darwin", arch = "arm64" }
-url = "https://github.com/tmux/tmux-builds/releases/download/{{tag}}/tmux-{{version}}-macos-arm64.tar.gz"
-bin = ["tmux"]
+# What the build needs of the machine, which oku checks and does not install.
+# The Command Line Tools give macOS its compiler, make and git. On Linux
+# bootstrap/linux.sh installs these packages.
+[host]
+xcode-clt = { path = "/Library/Developer/CommandLineTools/usr/bin/clang", install = "xcode-select --install", when = { os = "darwin" } }
+cc = { command = "cc", apt = "build-essential", dnf = "gcc-c++", pacman = "base-devel", when = { os = "linux" } }
+make = { command = "make", apt = "build-essential", dnf = "make", pacman = "base-devel", when = { os = "linux" } }
+yacc = { command = "yacc", apt = "bison", dnf = "byacc", pacman = "bison", when = { os = "linux" } }
+ncurses = { apt = "libncurses-dev", dnf = "ncurses-devel", pacman = "ncurses", when = { os = "linux" } }
 
-[[artifact]]
-match = { os = "linux", arch = "arm64" }
-url = "https://github.com/tmux/tmux-builds/releases/download/{{tag}}/tmux-{{version}}-linux-arm64.tar.gz"
-bin = ["tmux"]
+[build]
+needs = ["cc", "make", "yacc"]
+source = { url = "https://github.com/tmux/tmux/releases/download/{{tag}}/tmux-{{version}}.tar.gz", strip = 1 }
+deps = ["./pkgconf.toml", "./libevent.toml", "./utf8proc.toml"]
+when = [{ os = "darwin" }, { os = "linux" }]
 
-[[artifact]]
-match = { os = "linux", arch = "amd64" }
-url = "https://github.com/tmux/tmux-builds/releases/download/{{tag}}/tmux-{{version}}-linux-x86_64.tar.gz"
-bin = ["tmux"]
+[runtime]
+deps = ["./libevent.toml", "./utf8proc.toml"]
+
+# ncurses comes from the system, so tmux reads the system terminfo, which holds
+# the tmux-256color of default-terminal. An ncurses from oku would look in its
+# own store path and miss it. On macOS configure asks for a choice about
+# jemalloc, and tmux-builds leaves it off, as does this build.
+[[build.step]]
+run = """
+./configure --prefix={{prefix}} --disable-dependency-tracking --enable-utf8proc --disable-jemalloc
+make -j{{jobs}}
+make install
+"""
+shell = "sh"

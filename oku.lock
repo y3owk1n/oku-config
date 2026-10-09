@@ -4189,26 +4189,155 @@ verified = 'first-use'
 [[package]]
 name = 'tmux'
 ref = './packages/tmux.toml'
-manifest_sha256 = 'aa64595e7bf517bf101977f7919deca18cef61c9f68d666207c6de3c47ced47c'
-version = '3.7c'
-tag = 'v3.7c'
+manifest_sha256 = '3eaae5f4c6bd37d5249106c660525bdbc5c43ff298796d10e518f3010464dc23'
+version = '3.8'
 
 [package.platform]
 [package.platform.darwin-arm64]
-strategy = 'artifact'
-url = 'https://github.com/tmux/tmux-builds/releases/download/v3.7c/tmux-3.7c-macos-arm64.tar.gz'
-sha256 = '0a763dd0380aa980d239509654da1bc7455843706a3c050f6709c8cd2e13d12d'
+strategy = 'build'
+url = 'https://github.com/tmux/tmux/releases/download/3.8/tmux-3.8.tar.gz'
+sha256 = 'e79c699c7e949dccd0a4a125e17b8d1261e311b16979dbc8eb34542f3966d82e'
 verified = 'published'
 
 [package.platform.linux-amd64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/tmux/tmux-builds/releases/download/v3.7c/tmux-3.7c-linux-x86_64.tar.gz'
-sha256 = 'cc56bd1cc873eb6089c615f0496b072385bda8a6d944069f38564a5d49c128aa'
+strategy = 'build'
+url = 'https://github.com/tmux/tmux/releases/download/3.8/tmux-3.8.tar.gz'
+sha256 = 'e79c699c7e949dccd0a4a125e17b8d1261e311b16979dbc8eb34542f3966d82e'
+verified = 'manifest'
 
 [package.platform.linux-arm64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/tmux/tmux-builds/releases/download/v3.7c/tmux-3.7c-linux-arm64.tar.gz'
-sha256 = '29dcb978da2a4b0cf6790f9e004865dac239a3ba03bbf776dddacce23d03831b'
+strategy = 'build'
+url = 'https://github.com/tmux/tmux/releases/download/3.8/tmux-3.8.tar.gz'
+sha256 = 'e79c699c7e949dccd0a4a125e17b8d1261e311b16979dbc8eb34542f3966d82e'
+verified = 'manifest'
+
+[[package.dep]]
+name = 'pkgconf'
+ref = './packages/pkgconf.toml'
+manifest_sha256 = '240a68735aeef089a4c9246edd7ddfea0101df8a152bb92ac6cf07e09422a1bc'
+version = '3.0.7'
+tag = 'pkgconf-3.0.7'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
+sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
+verified = 'published'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
+sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
+verified = 'manifest'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
+sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
+verified = 'manifest'
+
+[[package.dep]]
+name = 'libevent'
+ref = './packages/libevent.toml'
+manifest_sha256 = '6ff33395831db52641ebd3db9fa386ede1150fe4ea1f90642b1b5d0a8d604b85'
+version = '2.1.13-stable'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+url = 'https://github.com/libevent/libevent/releases/download/release-2.1.13-stable/libevent-2.1.13-stable.tar.gz'
+sha256 = 'f7e9383b8c0baa81b687e5b5eecc01beefaf1b19b64151d95ed61647fe7a315c'
+verified = 'first-use'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://github.com/libevent/libevent/releases/download/release-2.1.13-stable/libevent-2.1.13-stable.tar.gz'
+sha256 = 'f7e9383b8c0baa81b687e5b5eecc01beefaf1b19b64151d95ed61647fe7a315c'
+verified = 'first-use'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://github.com/libevent/libevent/releases/download/release-2.1.13-stable/libevent-2.1.13-stable.tar.gz'
+sha256 = 'f7e9383b8c0baa81b687e5b5eecc01beefaf1b19b64151d95ed61647fe7a315c'
+verified = 'first-use'
+
+[[package.dep]]
+name = 'utf8proc'
+ref = './packages/utf8proc.toml'
+manifest_sha256 = '69e8679404e511ccb1457ad171f0abb308e8c992e1c967c14a24756bb050c42e'
+version = '2.12.0'
+tag = 'v2.12.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+url = 'https://github.com/JuliaStrings/utf8proc/archive/refs/tags/v2.12.0.tar.gz'
+sha256 = 'f564011d38b2888d583d510b08e69ffa15aa117155db1b9b49ef1dfe1fa25111'
+verified = 'first-use'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://github.com/JuliaStrings/utf8proc/archive/refs/tags/v2.12.0.tar.gz'
+sha256 = 'f564011d38b2888d583d510b08e69ffa15aa117155db1b9b49ef1dfe1fa25111'
+verified = 'first-use'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://github.com/JuliaStrings/utf8proc/archive/refs/tags/v2.12.0.tar.gz'
+sha256 = 'f564011d38b2888d583d510b08e69ffa15aa117155db1b9b49ef1dfe1fa25111'
+verified = 'first-use'
+
+[[package.dep]]
+name = 'libevent'
+ref = './packages/libevent.toml'
+manifest_sha256 = '6ff33395831db52641ebd3db9fa386ede1150fe4ea1f90642b1b5d0a8d604b85'
+version = '2.1.13-stable'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+url = 'https://github.com/libevent/libevent/releases/download/release-2.1.13-stable/libevent-2.1.13-stable.tar.gz'
+sha256 = 'f7e9383b8c0baa81b687e5b5eecc01beefaf1b19b64151d95ed61647fe7a315c'
+verified = 'first-use'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://github.com/libevent/libevent/releases/download/release-2.1.13-stable/libevent-2.1.13-stable.tar.gz'
+sha256 = 'f7e9383b8c0baa81b687e5b5eecc01beefaf1b19b64151d95ed61647fe7a315c'
+verified = 'first-use'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://github.com/libevent/libevent/releases/download/release-2.1.13-stable/libevent-2.1.13-stable.tar.gz'
+sha256 = 'f7e9383b8c0baa81b687e5b5eecc01beefaf1b19b64151d95ed61647fe7a315c'
+verified = 'first-use'
+
+[[package.dep]]
+name = 'utf8proc'
+ref = './packages/utf8proc.toml'
+manifest_sha256 = '69e8679404e511ccb1457ad171f0abb308e8c992e1c967c14a24756bb050c42e'
+version = '2.12.0'
+tag = 'v2.12.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+url = 'https://github.com/JuliaStrings/utf8proc/archive/refs/tags/v2.12.0.tar.gz'
+sha256 = 'f564011d38b2888d583d510b08e69ffa15aa117155db1b9b49ef1dfe1fa25111'
+verified = 'first-use'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'build'
+url = 'https://github.com/JuliaStrings/utf8proc/archive/refs/tags/v2.12.0.tar.gz'
+sha256 = 'f564011d38b2888d583d510b08e69ffa15aa117155db1b9b49ef1dfe1fa25111'
+verified = 'first-use'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'build'
+url = 'https://github.com/JuliaStrings/utf8proc/archive/refs/tags/v2.12.0.tar.gz'
+sha256 = 'f564011d38b2888d583d510b08e69ffa15aa117155db1b9b49ef1dfe1fa25111'
+verified = 'first-use'
 
 [[package]]
 name = 'tree-sitter'

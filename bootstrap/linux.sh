@@ -41,7 +41,7 @@ if command -v apt-get >/dev/null 2>&1; then
 	$SUDO apt-get update
 	$SUDO apt-get install -y --no-install-recommends \
 		build-essential pkg-config git curl ca-certificates xz-utils unzip bzip2 file python3 gperf \
-		zlib1g-dev libbz2-dev libexpat1-dev openssh-client libfuse2t64
+		zlib1g-dev libbz2-dev libexpat1-dev libncurses-dev bison openssh-client libfuse2t64
 	$SUDO apt-get install -y --no-install-recommends \
 		libcairo2-dev libwayland-dev libx11-dev libxtst-dev libxrandr-dev libxrender-dev \
 		libxext-dev libxfixes-dev libxkbcommon-dev libei-dev liboeffis-dev libfontconfig-dev \
@@ -50,7 +50,7 @@ if command -v apt-get >/dev/null 2>&1; then
 elif command -v dnf >/dev/null 2>&1; then
 	$SUDO dnf install -y \
 		gcc gcc-c++ make pkgconf-pkg-config git curl ca-certificates xz unzip bzip2 file python3 gperf \
-		zlib-devel bzip2-devel expat-devel openssh-clients fuse fuse-libs \
+		zlib-devel bzip2-devel expat-devel ncurses-devel byacc openssh-clients fuse fuse-libs \
 		tar gzip diffutils findutils which perl-core \
 		cairo-devel wayland-devel libX11-devel libXtst-devel libXrandr-devel libXrender-devel \
 		libXext-devel libXfixes-devel libxkbcommon-devel libei-devel liboeffis-devel fontconfig-devel \
@@ -59,13 +59,13 @@ elif command -v dnf >/dev/null 2>&1; then
 elif command -v pacman >/dev/null 2>&1; then
 	$SUDO pacman -S --needed --noconfirm \
 		base-devel git curl ca-certificates xz unzip bzip2 file python gperf \
-		zlib expat openssh fuse2 \
+		zlib expat ncurses bison openssh fuse2 \
 		cairo wayland libx11 libxtst libxrandr libxrender libxext libxfixes libxkbcommon libei \
 		fontconfig tesseract tesseract-data-eng libpipewire wayland-protocols ttf-dejavu
 else
 	echo "no apt-get, dnf or pacman here. Install a C and C++ compiler, make, pkg-config," >&2
-	echo "git, curl, xz, unzip, bzip2, file, python3, gperf, an ssh client, and the" >&2
-	echo "headers of zlib, bzip2 and expat." >&2
+	echo "git, curl, xz, unzip, bzip2, file, python3, gperf, yacc, an ssh client, and" >&2
+	echo "the headers of zlib, bzip2, expat and ncurses." >&2
 	exit 1
 fi
 

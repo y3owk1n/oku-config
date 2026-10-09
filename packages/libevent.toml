@@ -1,0 +1,34 @@
+[package]
+name = "libevent"
+description = "Library for event notification, which tmux runs on"
+homepage = "https://libevent.org"
+license = "BSD-3-Clause"
+
+# The project marks its 2.2 alphas as normal GitHub releases, so following
+# releases would pick an alpha. The version is fixed on purpose to the stable
+# branch. The release archive holds the configure script, a git tag does not.
+[version]
+value = "2.1.13-stable"
+
+# What the build needs of the machine, which oku checks and does not install.
+# The Command Line Tools give macOS its compiler, make and git. On Linux
+# bootstrap/linux.sh installs these packages.
+[host]
+xcode-clt = { path = "/Library/Developer/CommandLineTools/usr/bin/clang", install = "xcode-select --install", when = { os = "darwin" } }
+cc = { command = "cc", apt = "build-essential", dnf = "gcc-c++", pacman = "base-devel", when = { os = "linux" } }
+make = { command = "make", apt = "build-essential", dnf = "make", pacman = "base-devel", when = { os = "linux" } }
+
+[build]
+needs = ["cc", "make"]
+source = { url = "https://github.com/libevent/libevent/releases/download/release-{{version}}/libevent-{{version}}.tar.gz", strip = 1 }
+when = [{ os = "darwin" }, { os = "linux" }]
+
+# OpenSSL stays off, so the library needs nothing beyond the system.
+[[build.step]]
+run = """
+./configure --prefix={{prefix}} --disable-dependency-tracking --disable-static \
+  --disable-openssl --disable-samples --disable-libevent-regress --disable-debug-mode
+make -j{{jobs}}
+make install
+"""
+shell = "sh"
