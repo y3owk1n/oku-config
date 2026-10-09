@@ -661,29 +661,29 @@ verified = 'first-use'
 [[package]]
 name = 'friendly'
 ref = 'github:friendly-social-ai/cli'
-commit = '54a6b466b1c5b5113a5f6c8d3743dc8632ab33e3'
-manifest_sha256 = '23893d236efc64c695871d29207007ee43b23917abc946cb8262bb37f5e5d8ff'
-version = '2026.10.09-54a6b46'
+commit = '3dca6b4f12abd214d1dc2d36fb8f51d27f622503'
+manifest_sha256 = '92a04ac80255329839f47562ce6eda56562c458b457bb9357406dc0fb01a3163'
+version = '2026.10.09-3dca6b4'
 tag = 'main'
-tag_commit = '54a6b466b1c5b5113a5f6c8d3743dc8632ab33e3'
+tag_commit = '3dca6b4f12abd214d1dc2d36fb8f51d27f622503'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
-vendor_sha256 = 'b3b7fd32f7aff97e4976f8a2f4cb6f3716852cec7b3ac463294e47fe404a9fd1'
+vendor_sha256 = '32c6957538e682fdc489fdce38313e3aee363c709feb5700e3249da7cc64b1cc'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'build'
-vendor_sha256 = 'b3b7fd32f7aff97e4976f8a2f4cb6f3716852cec7b3ac463294e47fe404a9fd1'
+vendor_sha256 = '32c6957538e682fdc489fdce38313e3aee363c709feb5700e3249da7cc64b1cc'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
-vendor_sha256 = 'b3b7fd32f7aff97e4976f8a2f4cb6f3716852cec7b3ac463294e47fe404a9fd1'
+vendor_sha256 = '32c6957538e682fdc489fdce38313e3aee363c709feb5700e3249da7cc64b1cc'
 
 [[package.dep]]
 name = 'go'
 ref = 'github:friendly-social-ai/cli#.oku/go.toml'
-commit = '54a6b466b1c5b5113a5f6c8d3743dc8632ab33e3'
+commit = '3dca6b4f12abd214d1dc2d36fb8f51d27f622503'
 manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
 version = '1.26.9'
 tag = 'go1.26.9'
@@ -706,35 +706,6 @@ strategy = 'artifact'
 url = 'https://dl.google.com/go/go1.26.9.linux-arm64.tar.gz'
 sha256 = '4a97373d49fcacdcf3694fea368a500b00ee3e963974f3e7514132717632f052'
 verified = 'checksum-file'
-
-[[package.dep]]
-name = 'typst'
-ref = 'github:typst/typst'
-commit = 'e58a63af09032a486b12241d08ebd04131483221'
-manifest_sha256 = 'a57d62a067ecbd6284b1a8cf73ae9b316786967b7328a0434c88063c2a2a9bb5'
-version = '0.15.1'
-tag = 'v0.15.1'
-inferred = true
-manifest = "[package]\nname = \"typst\"\nhomepage = \"https://github.com/typst/typst\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"typst/typst\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/typst/typst/releases/download/{{tag}}/typst-x86_64-unknown-linux-musl.tar.xz\"\nstrip = 1\nbin = [\"typst\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/typst/typst/releases/download/{{tag}}/typst-x86_64-apple-darwin.tar.xz\"\nstrip = 1\nbin = [\"typst\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/typst/typst/releases/download/{{tag}}/typst-aarch64-unknown-linux-musl.tar.xz\"\nstrip = 1\nbin = [\"typst\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/typst/typst/releases/download/{{tag}}/typst-aarch64-apple-darwin.tar.xz\"\nstrip = 1\nbin = [\"typst\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm\" }\nurl = \"https://github.com/typst/typst/releases/download/{{tag}}/typst-armv7-unknown-linux-musleabi.tar.xz\"\nstrip = 1\nbin = [\"typst\"]\n"
-
-[package.dep.platform]
-[package.dep.platform.darwin-arm64]
-strategy = 'artifact'
-url = 'https://github.com/typst/typst/releases/download/v0.15.1/typst-aarch64-apple-darwin.tar.xz'
-sha256 = '48f62ed034aa3a7978309579ac6ca00045e2ef0da73114e8af27cfd8e74dc05a'
-verified = 'published'
-
-[package.dep.platform.linux-amd64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/typst/typst/releases/download/v0.15.1/typst-x86_64-unknown-linux-musl.tar.xz'
-sha256 = 'a6d077d0a95eed5a2eba715b2dae06be954f624ccbf85758a03f389ded33118c'
-verified = 'published'
-
-[package.dep.platform.linux-arm64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/typst/typst/releases/download/v0.15.1/typst-aarch64-unknown-linux-musl.tar.xz'
-sha256 = '5aa8d74a3d906e60ea12a66ac2f37f8eef1b14cbad7182a745e393a10c23dcee'
-verified = 'published'
 
 [[package]]
 name = 'fzf'
