@@ -25,6 +25,7 @@ git = { command = "git", apt = "git", dnf = "git", pacman = "git", when = { os =
 needs = ["cc", "make", "git"]
 source = { git = "https://github.com/uclouvain/openjpeg", tag = "{{tag}}" }
 deps = ["./cmake.toml"]
+when = [{ os = "darwin" }, { os = "linux" }]
 
 # The two RPATH flags are for Linux. cmake passes its own -rpath, so the linker
 # ignores the LD_RUN_PATH that oku sets, and cmake drops the paths on install.

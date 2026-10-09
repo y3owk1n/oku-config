@@ -24,6 +24,7 @@ make = { command = "make", apt = "build-essential", dnf = "make", pacman = "base
 [build]
 needs = ["cc", "make"]
 source = { url = "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10080/ghostscript-{{version}}.tar.xz", sha256 = "c20492bc8ebb96c87fa2e52a0926e1cda8cde95d66145e018ac713fed5da38cf", strip = 1 }
+when = [{ os = "darwin" }, { os = "linux" }]
 
 [[build.step]]
 run = "./configure --prefix={{prefix}} --without-x --disable-cups --disable-gtk --without-libidn --without-tesseract --without-libpaper && make -j{{jobs}} && make install"

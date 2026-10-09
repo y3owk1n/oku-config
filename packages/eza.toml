@@ -24,6 +24,7 @@ git = { command = "git", apt = "git", dnf = "git", pacman = "git", when = { os =
 needs = ["cc", "git"]
 deps = ["./rust.toml"]
 source = { git = "https://github.com/eza-community/eza", tag = "{{tag}}" }
+when = [{ os = "darwin" }, { os = "linux" }]
 
 [[build.step]]
 vendor = "cargo"

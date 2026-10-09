@@ -22,6 +22,7 @@ git = { command = "git", apt = "git", dnf = "git", pacman = "git", when = { os =
 [build]
 needs = ["cc", "make", "git"]
 source = { git = "https://github.com/lz4/lz4", tag = "{{tag}}" }
+when = [{ os = "darwin" }, { os = "linux" }]
 
 [[build.step]]
 run = "make -j{{jobs}} PREFIX={{prefix}} && make install PREFIX={{prefix}}"

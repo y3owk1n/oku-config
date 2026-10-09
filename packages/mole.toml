@@ -24,6 +24,7 @@ git = { command = "git", apt = "git", dnf = "git", pacman = "git", when = { os =
 needs = ["git"]
 deps = [{ ref = "./go.toml", version = "~1.26" }]
 source = { git = "https://github.com/tw93/Mole", tag = "{{tag}}" }
+when = [{ os = "darwin" }, { os = "linux" }]
 
 [[build.step]]
 vendor = "go"

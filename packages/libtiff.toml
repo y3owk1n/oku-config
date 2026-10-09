@@ -25,6 +25,7 @@ zlib = { apt = "zlib1g-dev", dnf = "zlib-devel", pacman = "zlib", when = { os = 
 needs = ["cc", "make"]
 source = { url = "https://download.osgeo.org/libtiff/tiff-{{version}}.tar.gz", strip = 1 }
 deps = ["./cmake.toml", "./jpeg-turbo.toml"]
+when = [{ os = "darwin" }, { os = "linux" }]
 
 [runtime]
 deps = ["./jpeg-turbo.toml"]

@@ -24,6 +24,7 @@ expat = { apt = "libexpat1-dev", dnf = "expat-devel", pacman = "expat", when = {
 needs = ["cc", "make", "gperf", "python3"]
 source = { url = "https://www.freedesktop.org/software/fontconfig/release/fontconfig-{{version}}.tar.xz", sha256 = "63a0658d0e06e0fa886106452b58ef04f21f58202ea02a94c39de0d3335d7c0e", strip = 1 }
 deps = ["./pkgconf.toml", "./freetype.toml", { ref = "./libpng.toml", version = "~1.6" }]
+when = [{ os = "darwin" }, { os = "linux" }]
 
 [runtime]
 deps = ["./freetype.toml", { ref = "./libpng.toml", version = "~1.6" }]

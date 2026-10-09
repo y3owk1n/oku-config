@@ -22,6 +22,7 @@ make = { command = "make", apt = "build-essential", dnf = "make", pacman = "base
 [build]
 needs = ["cc", "make"]
 source = { url = "https://ftp.gnu.org/gnu/coreutils/coreutils-{{version}}.tar.xz", strip = 1 }
+when = [{ os = "darwin" }, { os = "linux" }]
 
 # Every program gets a g prefix, such as gls and gdate, so none of them takes
 # the place of a macOS tool. This release has no --without-gmp flag any more.

@@ -27,6 +27,7 @@ make = { command = "make", apt = "build-essential", dnf = "make", pacman = "base
 needs = ["cc", "make"]
 source = { url = "https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-{{version}}.tar.gz", strip = 1 }
 deps = ["./cmake.toml"]
+when = [{ os = "darwin" }, { os = "linux" }]
 
 # The two RPATH flags are for Linux. cmake passes its own -rpath, so the linker
 # ignores the LD_RUN_PATH that oku sets, and cmake drops the paths on install.

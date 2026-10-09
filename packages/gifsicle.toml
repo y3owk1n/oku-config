@@ -23,6 +23,7 @@ make = { command = "make", apt = "build-essential", dnf = "make", pacman = "base
 [build]
 needs = ["cc", "make"]
 source = { url = "https://www.lcdf.org/gifsicle/gifsicle-{{version}}.tar.gz", strip = 1 }
+when = [{ os = "darwin" }, { os = "linux" }]
 
 # gifview needs X11, which macOS does not have.
 [[build.step]]

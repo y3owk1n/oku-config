@@ -25,6 +25,7 @@ make = { command = "make", apt = "build-essential", dnf = "make", pacman = "base
 [build]
 needs = ["cc", "make"]
 source = { url = "https://downloads.sourceforge.net/project/optipng/OptiPNG/optipng-{{version}}/optipng-{{version}}.tar.gz", strip = 1 }
+when = [{ os = "darwin" }, { os = "linux" }]
 
 # oku links man pages from share/man only.
 [[build.step]]

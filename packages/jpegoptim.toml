@@ -24,6 +24,7 @@ git = { command = "git", apt = "git", dnf = "git", pacman = "git", when = { os =
 needs = ["cc", "make", "git"]
 source = { git = "https://github.com/tjko/jpegoptim", tag = "{{tag}}" }
 deps = ["./jpeg-turbo.toml"]
+when = [{ os = "darwin" }, { os = "linux" }]
 
 [runtime]
 deps = ["./jpeg-turbo.toml"]

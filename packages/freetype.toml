@@ -27,6 +27,7 @@ bzip2 = { apt = "libbz2-dev", dnf = "bzip2-devel", pacman = "bzip2", when = { os
 needs = ["cc", "make"]
 source = { url = "https://downloads.sourceforge.net/project/freetype/freetype2/{{version}}/freetype-{{version}}.tar.xz", strip = 1 }
 deps = ["./cmake.toml", { ref = "./libpng.toml", version = "~1.6" }]
+when = [{ os = "darwin" }, { os = "linux" }]
 
 [runtime]
 deps = [{ ref = "./libpng.toml", version = "~1.6" }]

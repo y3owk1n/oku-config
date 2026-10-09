@@ -21,6 +21,7 @@ make = { command = "make", apt = "build-essential", dnf = "make", pacman = "base
 needs = ["make"]
 source = { url = "https://luarocks.org/releases/luarocks-{{version}}.tar.gz", strip = 1 }
 deps = ["./lua.toml"]
+when = [{ os = "darwin" }, { os = "linux" }]
 
 # The luarocks script starts the lua it was configured with.
 [runtime]

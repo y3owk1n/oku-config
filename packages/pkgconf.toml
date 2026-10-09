@@ -23,6 +23,7 @@ make = { command = "make", apt = "build-essential", dnf = "make", pacman = "base
 [build]
 needs = ["cc", "make"]
 source = { url = "https://github.com/pkgconf/pkgconf/releases/download/{{tag}}/pkgconf-{{version}}.tar.xz", strip = 1 }
+when = [{ os = "darwin" }, { os = "linux" }]
 
 # Configure scripts ask for the name pkg-config, so the link gives it to them.
 # The search path comes from PKG_CONFIG_PATH, which oku sets for every build

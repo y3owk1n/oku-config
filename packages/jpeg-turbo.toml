@@ -24,6 +24,7 @@ git = { command = "git", apt = "git", dnf = "git", pacman = "git", when = { os =
 needs = ["cc", "make", "git"]
 source = { git = "https://github.com/libjpeg-turbo/libjpeg-turbo", tag = "{{tag}}" }
 deps = ["./cmake.toml"]
+when = [{ os = "darwin" }, { os = "linux" }]
 
 # The shared library holds a static helper, which needs position independent
 # code. The gcc of Debian makes that by default, the gcc of Fedora does not.

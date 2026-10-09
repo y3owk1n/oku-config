@@ -27,6 +27,7 @@ zlib = { apt = "zlib1g-dev", dnf = "zlib-devel", pacman = "zlib", when = { os = 
 needs = ["cc", "make"]
 source = { url = "https://poppler.freedesktop.org/poppler-{{version}}.tar.xz", strip = 1 }
 deps = ["./cmake.toml", "./pkgconf.toml", "./brotli.toml", "./freetype.toml", "./fontconfig.toml", "./jpeg-turbo.toml", { ref = "./libpng.toml", version = "~1.6" }, "./libtiff.toml", "./openjpeg.toml"]
+when = [{ os = "darwin" }, { os = "linux" }]
 
 [runtime]
 deps = ["./brotli.toml", "./freetype.toml", "./fontconfig.toml", "./jpeg-turbo.toml", { ref = "./libpng.toml", version = "~1.6" }, "./libtiff.toml", "./openjpeg.toml"]

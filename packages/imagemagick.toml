@@ -26,6 +26,7 @@ bzip2 = { apt = "libbz2-dev", dnf = "bzip2-devel", pacman = "bzip2", when = { os
 needs = ["cc", "make", "git"]
 source = { git = "https://github.com/ImageMagick/ImageMagick", tag = "{{tag}}" }
 deps = ["./pkgconf.toml", "./jpeg-turbo.toml", { ref = "./libpng.toml", version = "~1.6" }, "./libtiff.toml", "./libwebp-lib.toml", "./freetype.toml", "./xz.toml"]
+when = [{ os = "darwin" }, { os = "linux" }]
 
 [runtime]
 deps = ["./jpeg-turbo.toml", { ref = "./libpng.toml", version = "~1.6" }, "./libtiff.toml", "./libwebp-lib.toml", "./freetype.toml", "./xz.toml"]

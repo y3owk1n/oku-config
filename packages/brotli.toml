@@ -24,6 +24,7 @@ git = { command = "git", apt = "git", dnf = "git", pacman = "git", when = { os =
 needs = ["cc", "make", "git"]
 source = { git = "https://github.com/google/brotli", tag = "{{tag}}" }
 deps = ["./cmake.toml"]
+when = [{ os = "darwin" }, { os = "linux" }]
 
 # The absolute install name dir lets the brotli program find its own libraries
 # in the store.

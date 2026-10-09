@@ -26,6 +26,7 @@ zlib = { apt = "zlib1g-dev", dnf = "zlib-devel", pacman = "zlib", when = { os = 
 needs = ["cc", "make", "git"]
 source = { git = "https://github.com/facebook/zstd", tag = "{{tag}}" }
 deps = ["./lz4.toml"]
+when = [{ os = "darwin" }, { os = "linux" }]
 
 [runtime]
 deps = ["./lz4.toml"]

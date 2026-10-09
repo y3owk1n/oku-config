@@ -261,7 +261,7 @@ verified = 'checksum-file'
 [[package]]
 name = 'brotli'
 ref = './packages/brotli.toml'
-manifest_sha256 = 'ad7b483ae5d94f00235b2593cffacecb6a1630b7b05d83d58d8b14726d1b9332'
+manifest_sha256 = '0f201ff5339c6e5760e6cd10188923ada2e13d5e1b0dbc7a05086095216abaf4'
 version = '1.2.0'
 tag = 'v1.2.0'
 
@@ -302,7 +302,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package]]
 name = 'btop'
 ref = './packages/btop.toml'
-manifest_sha256 = '31998edc60518a6f87bee7b4f3d9ec31562ed6a500f027e282350d0c96846685'
+manifest_sha256 = 'ad1ccd6aabfdda409fa611c6ffebaa8c75897e496eb81108586e10d0b8cf4a04'
 version = '1.4.7'
 tag = 'v1.4.7'
 
@@ -314,11 +314,13 @@ strategy = 'build'
 strategy = 'artifact'
 url = 'https://github.com/aristocratos/btop/releases/download/v1.4.7/btop-x86_64-unknown-linux-musl.tar.gz'
 sha256 = '5099054dd6a101bd12eb6ff3702a9a6a3f57aaa27923a0da478ae5b517faf335'
+verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/aristocratos/btop/releases/download/v1.4.7/btop-aarch64-unknown-linux-musl.tar.gz'
 sha256 = '6270de0ef4c84cf0eea61cb148b3ad9ae91a11e9c3309867ffc6b3751024c252'
+verified = 'published'
 
 [[package]]
 name = 'claude-code'
@@ -348,7 +350,7 @@ verified = 'first-use'
 [[package]]
 name = 'coreutils'
 ref = './packages/coreutils.toml'
-manifest_sha256 = '2357840f32265981f2ee63493c28ae5866eec45ec9b8567a73f845996e14327f'
+manifest_sha256 = 'de2e3354f5586b2a17628f517eb8efd5b6fbd16bad662dbb00c08bebb8781cd2'
 version = '9.12'
 tag = 'v9.12'
 
@@ -409,7 +411,7 @@ version = '1.0.161'
 [[package]]
 name = 'eza'
 ref = './packages/eza.toml'
-manifest_sha256 = 'c30e9cdb43373162dc4d4b9eb22f8d98f3a57e850c352d7153aeb2627dc628c0'
+manifest_sha256 = 'ee02bbceee69cf8a5f9d363dad25b748fa507a7d8bd29d674ca11eb8825fb78f'
 version = '0.23.5'
 tag = 'v0.23.5'
 
@@ -429,7 +431,7 @@ vendor_sha256 = '9e2b544906cef85c54fa15a06960d8d2fa249aa7e65f183bf831d56a39458b4
 [[package.dep]]
 name = 'rust'
 ref = './packages/rust.toml'
-manifest_sha256 = '5c7a01646842fd44ae181aad5b5093c0d68611cf12057a88f9cd6c2aa251b2eb'
+manifest_sha256 = '71649119111a90a09672c0315ca6b3e44704ffc9649bfc1c74e02570ad8b42a5'
 version = '1.99.0'
 
 [package.dep.platform]
@@ -837,7 +839,7 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 [[package]]
 name = 'ghostscript'
 ref = './packages/ghostscript.toml'
-manifest_sha256 = '2c7481831e456e07ef7ea297cb7186ac2ee254f7727ecb2472fd3fc8abf4252d'
+manifest_sha256 = 'a97f527b0ced59cf11bd72392aa4563f23d518a3144c2e7fdb2cb5c7f26b8d14'
 version = '10.08.0'
 
 [package.platform]
@@ -851,11 +853,13 @@ verified = 'manifest'
 strategy = 'build'
 url = 'https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10080/ghostscript-10.08.0.tar.xz'
 sha256 = 'c20492bc8ebb96c87fa2e52a0926e1cda8cde95d66145e018ac713fed5da38cf'
+verified = 'manifest'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10080/ghostscript-10.08.0.tar.xz'
 sha256 = 'c20492bc8ebb96c87fa2e52a0926e1cda8cde95d66145e018ac713fed5da38cf'
+verified = 'manifest'
 
 [[package]]
 name = 'ghostty'
@@ -887,7 +891,7 @@ tag = 'v1.3.1'
 [[package]]
 name = 'gifsicle'
 ref = './packages/gifsicle.toml'
-manifest_sha256 = '04a392183bed119ad51aedf4adf290ed53b09873e0f19c9ce22e7b0b55b13b8c'
+manifest_sha256 = 'caae6c2c2648f3aad8796b5f42b6392983fc48e75d6a6cbea57c3a2be4338e6e'
 version = '1.96'
 tag = 'v1.96'
 
@@ -902,11 +906,13 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://www.lcdf.org/gifsicle/gifsicle-1.96.tar.gz'
 sha256 = 'fd23d279681a6dfe3c15264e33f344045b3ba473da4d19f49e67a50994b077fb'
+verified = 'first-use'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://www.lcdf.org/gifsicle/gifsicle-1.96.tar.gz'
 sha256 = 'fd23d279681a6dfe3c15264e33f344045b3ba473da4d19f49e67a50994b077fb'
+verified = 'first-use'
 
 [[package]]
 name = 'git-lfs'
@@ -938,7 +944,7 @@ sha256 = 'ac9c8efac980bb0505ead384d087e2acb6486fd8498691a2165fa174ec6118c2'
 [[package]]
 name = 'imagemagick'
 ref = './packages/imagemagick.toml'
-manifest_sha256 = 'b4e1cff67ebe1da66cd9ac10a931b05b9940f8069224ebb486280e1a595f96e4'
+manifest_sha256 = 'd8f50a9df521d177a6b0377cd3935787982a7a80602ee164f151fbbcbb2dde67'
 version = '7.1.2-32'
 
 [package.platform]
@@ -954,7 +960,7 @@ strategy = 'build'
 [[package.dep]]
 name = 'pkgconf'
 ref = './packages/pkgconf.toml'
-manifest_sha256 = 'cddba2f715deeb8a571fb038c8374a5325b4edeb34123c3dbe3d6eef56f6a2dd'
+manifest_sha256 = '240a68735aeef089a4c9246edd7ddfea0101df8a152bb92ac6cf07e09422a1bc'
 version = '3.0.7'
 tag = 'pkgconf-3.0.7'
 
@@ -969,16 +975,18 @@ verified = 'published'
 strategy = 'build'
 url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
 sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
+verified = 'manifest'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
 sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
+verified = 'manifest'
 
 [[package.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
+manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
 version = '3.2.0'
 
 [package.dep.platform]
@@ -1018,7 +1026,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -1033,16 +1041,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep]]
 name = 'libtiff'
 ref = './packages/libtiff.toml'
-manifest_sha256 = '7fd3c698324988298285033a006151ab4e95210449bb99a08fe395db75884b72'
+manifest_sha256 = 'bea7941f4ddcada559e1dbc150a222aef98a067a8add5bc824a343a11165505f'
 version = '4.7.2'
 tag = 'v4.7.2'
 
@@ -1057,11 +1067,13 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz'
 sha256 = '672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a'
+verified = 'first-use'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz'
 sha256 = '672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a'
+verified = 'first-use'
 
 [[package.dep.dep]]
 name = 'cmake'
@@ -1090,7 +1102,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
+manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
 version = '3.2.0'
 
 [package.dep.dep.platform]
@@ -1130,7 +1142,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
+manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
 version = '3.2.0'
 
 [package.dep.dep.platform]
@@ -1170,7 +1182,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep]]
 name = 'libwebp-lib'
 ref = './packages/libwebp-lib.toml'
-manifest_sha256 = '45bb95c99c52c0229ddd52fdebab08b6929e0b01ee61cbcc04d467c03b60ea66'
+manifest_sha256 = '3a80f68c33be2c4a7cd427393bcef093ada97a288a68e6022ca50f15c96a4786'
 version = '1.6.0'
 tag = 'v1.6.0'
 
@@ -1185,11 +1197,13 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz'
 sha256 = 'e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564'
+verified = 'first-use'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz'
 sha256 = 'e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564'
+verified = 'first-use'
 
 [[package.dep.dep]]
 name = 'cmake'
@@ -1218,7 +1232,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '8761e279a43697a0526f6734e46f25fca88bfdcd8ec1bdca12a47505a4aa7d76'
+manifest_sha256 = '55256ce5ef95fba5ae7e8b9ca93f51a5e484b643ff0b7a20806e51639f70a024'
 version = '2.14.3'
 
 [package.dep.platform]
@@ -1232,11 +1246,13 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
 sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+verified = 'first-use'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
 sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+verified = 'first-use'
 
 [[package.dep.dep]]
 name = 'cmake'
@@ -1265,7 +1281,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -1280,16 +1296,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -1304,16 +1322,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep]]
 name = 'xz'
 ref = './packages/xz.toml'
-manifest_sha256 = '9aa1423d4ec449105712e2b73db39f0a61f357f1357c814cca957dca9cada1be'
+manifest_sha256 = 'ef8b06ff9333527e1c886c37753766a0eb562bdf17024a518817d1e595453bc3'
 version = '5.8.4'
 tag = 'v5.8.4'
 
@@ -1328,16 +1348,18 @@ verified = 'published'
 strategy = 'build'
 url = 'https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz'
 sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
+verified = 'manifest'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz'
 sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
+verified = 'manifest'
 
 [[package.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
+manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
 version = '3.2.0'
 
 [package.dep.platform]
@@ -1377,7 +1399,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -1392,16 +1414,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep]]
 name = 'libtiff'
 ref = './packages/libtiff.toml'
-manifest_sha256 = '7fd3c698324988298285033a006151ab4e95210449bb99a08fe395db75884b72'
+manifest_sha256 = 'bea7941f4ddcada559e1dbc150a222aef98a067a8add5bc824a343a11165505f'
 version = '4.7.2'
 tag = 'v4.7.2'
 
@@ -1416,11 +1440,13 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz'
 sha256 = '672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a'
+verified = 'first-use'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz'
 sha256 = '672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a'
+verified = 'first-use'
 
 [[package.dep.dep]]
 name = 'cmake'
@@ -1449,7 +1475,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
+manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
 version = '3.2.0'
 
 [package.dep.dep.platform]
@@ -1489,7 +1515,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
+manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
 version = '3.2.0'
 
 [package.dep.dep.platform]
@@ -1529,7 +1555,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep]]
 name = 'libwebp-lib'
 ref = './packages/libwebp-lib.toml'
-manifest_sha256 = '45bb95c99c52c0229ddd52fdebab08b6929e0b01ee61cbcc04d467c03b60ea66'
+manifest_sha256 = '3a80f68c33be2c4a7cd427393bcef093ada97a288a68e6022ca50f15c96a4786'
 version = '1.6.0'
 tag = 'v1.6.0'
 
@@ -1544,11 +1570,13 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz'
 sha256 = 'e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564'
+verified = 'first-use'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz'
 sha256 = 'e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564'
+verified = 'first-use'
 
 [[package.dep.dep]]
 name = 'cmake'
@@ -1577,7 +1605,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '8761e279a43697a0526f6734e46f25fca88bfdcd8ec1bdca12a47505a4aa7d76'
+manifest_sha256 = '55256ce5ef95fba5ae7e8b9ca93f51a5e484b643ff0b7a20806e51639f70a024'
 version = '2.14.3'
 
 [package.dep.platform]
@@ -1591,11 +1619,13 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
 sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+verified = 'first-use'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
 sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+verified = 'first-use'
 
 [[package.dep.dep]]
 name = 'cmake'
@@ -1624,7 +1654,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -1639,16 +1669,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -1663,16 +1695,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep]]
 name = 'xz'
 ref = './packages/xz.toml'
-manifest_sha256 = '9aa1423d4ec449105712e2b73db39f0a61f357f1357c814cca957dca9cada1be'
+manifest_sha256 = 'ef8b06ff9333527e1c886c37753766a0eb562bdf17024a518817d1e595453bc3'
 version = '5.8.4'
 tag = 'v5.8.4'
 
@@ -1687,11 +1721,13 @@ verified = 'published'
 strategy = 'build'
 url = 'https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz'
 sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
+verified = 'manifest'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz'
 sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
+verified = 'manifest'
 
 [[package]]
 name = 'jetbrains-mono-nerd-font'
@@ -1720,7 +1756,7 @@ sha256 = 'fab782a66f7d3019da64f6572db9fc5d3a4bcb19f9fa13e2d8a62e3693d6396e'
 [[package]]
 name = 'jpegoptim'
 ref = './packages/jpegoptim.toml'
-manifest_sha256 = '59dc8339249e3b43781dcbaaf4696ff7ca0e2fb59bbedac43791b981fa32b4de'
+manifest_sha256 = '56b4993de1da97f17d5812a7caeee903c28fd574bb66650e35a8d87649cb4915'
 version = '1.5.6'
 tag = 'v1.5.6'
 
@@ -1737,7 +1773,7 @@ strategy = 'build'
 [[package.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
+manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
 version = '3.2.0'
 
 [package.dep.platform]
@@ -1777,7 +1813,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
+manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
 version = '3.2.0'
 
 [package.dep.platform]
@@ -1954,7 +1990,7 @@ sha256 = '2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333'
 [[package]]
 name = 'luarocks'
 ref = './packages/luarocks.toml'
-manifest_sha256 = '1d171021fe3d0a4b657ba36a321a846e23135b95dad537cfb6e5ab10f1b05894'
+manifest_sha256 = 'b39dab346ce97911d75757166f54ffc33e30081ce6612e5bfe1b24ec05084e10'
 version = '3.13.0'
 tag = 'v3.13.0'
 
@@ -1969,11 +2005,13 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://luarocks.org/releases/luarocks-3.13.0.tar.gz'
 sha256 = '245bf6ec560c042cb8948e3d661189292587c5949104677f1eecddc54dbe7e37'
+verified = 'first-use'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://luarocks.org/releases/luarocks-3.13.0.tar.gz'
 sha256 = '245bf6ec560c042cb8948e3d661189292587c5949104677f1eecddc54dbe7e37'
+verified = 'first-use'
 
 [[package.dep]]
 name = 'lua'
@@ -2102,7 +2140,7 @@ sha256 = 'b98f2cc69fd9147fe4d405d859c57504571adec0d3611c3eefd04107c7ac00d0'
 [[package]]
 name = 'mole'
 ref = './packages/mole.toml'
-manifest_sha256 = 'd2de62f69c4618f4fc5d3ee6dbf0ecc2fa2f1b1224ba176a1553ff6ea1d0a69a'
+manifest_sha256 = 'b3eab2b99ef01741e7a15eb8138099a633c61409907c5abbdfb39c0ab3b2b5da'
 version = '1.58.0'
 tag = 'V1.58.0'
 
@@ -2230,7 +2268,7 @@ verified = 'published'
 [[package]]
 name = 'optipng'
 ref = './packages/optipng.toml'
-manifest_sha256 = '1ac0b71c12cd40bbc36f84482b0d4528bbc4f6c9ea33c606e571af4e8b9eff7c'
+manifest_sha256 = '10a174fef3b6cb1a00524ba075e02b898799dc21dc47736c040e93132f79026e'
 version = '7.9.1'
 
 [package.platform]
@@ -2244,11 +2282,13 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://downloads.sourceforge.net/project/optipng/OptiPNG/optipng-7.9.1/optipng-7.9.1.tar.gz'
 sha256 = 'c2579be58c2c66dae9d63154edcb3d427fef64cb00ec0aff079c9d156ec46f29'
+verified = 'first-use'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://downloads.sourceforge.net/project/optipng/OptiPNG/optipng-7.9.1/optipng-7.9.1.tar.gz'
 sha256 = 'c2579be58c2c66dae9d63154edcb3d427fef64cb00ec0aff079c9d156ec46f29'
+verified = 'first-use'
 
 [[package]]
 name = 'orbstack'
@@ -2291,7 +2331,7 @@ vendor_sha256 = '54e379e8254c0a9b244e3bc31d1dae84ab2e56eb038cc36ea2d2313ba1b5a64
 [[package.dep]]
 name = 'rust'
 ref = './packages/rust.toml'
-manifest_sha256 = '5c7a01646842fd44ae181aad5b5093c0d68611cf12057a88f9cd6c2aa251b2eb'
+manifest_sha256 = '71649119111a90a09672c0315ca6b3e44704ffc9649bfc1c74e02570ad8b42a5'
 version = '1.99.0'
 
 [package.dep.platform]
@@ -2330,7 +2370,7 @@ sha256 = '69cdf3e8bacecc99fd420186d26dd5769c004ee218034457b3691a1cf408967c'
 [[package]]
 name = 'poppler'
 ref = './packages/poppler.toml'
-manifest_sha256 = 'ba7773817b85708143c46aca1bf36377cb995755ecb4cc8f17cf9d80011f2e9d'
+manifest_sha256 = '14b01f33b698f516a5e6a9249f76fa157eb65c9586d0514a934237a310b7025a'
 version = '26.10.0'
 
 [package.platform]
@@ -2344,11 +2384,13 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://poppler.freedesktop.org/poppler-26.10.0.tar.xz'
 sha256 = '6792cb7c69205007ad87d2e936cecc5b3a31fac29ab54ffc3175fdb6b2a6ce35'
+verified = 'first-use'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://poppler.freedesktop.org/poppler-26.10.0.tar.xz'
 sha256 = '6792cb7c69205007ad87d2e936cecc5b3a31fac29ab54ffc3175fdb6b2a6ce35'
+verified = 'first-use'
 
 [[package.dep]]
 name = 'cmake'
@@ -2377,7 +2419,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep]]
 name = 'pkgconf'
 ref = './packages/pkgconf.toml'
-manifest_sha256 = 'cddba2f715deeb8a571fb038c8374a5325b4edeb34123c3dbe3d6eef56f6a2dd'
+manifest_sha256 = '240a68735aeef089a4c9246edd7ddfea0101df8a152bb92ac6cf07e09422a1bc'
 version = '3.0.7'
 tag = 'pkgconf-3.0.7'
 
@@ -2392,16 +2434,18 @@ verified = 'published'
 strategy = 'build'
 url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
 sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
+verified = 'manifest'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
 sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
+verified = 'manifest'
 
 [[package.dep]]
 name = 'brotli'
 ref = './packages/brotli.toml'
-manifest_sha256 = 'ad7b483ae5d94f00235b2593cffacecb6a1630b7b05d83d58d8b14726d1b9332'
+manifest_sha256 = '0f201ff5339c6e5760e6cd10188923ada2e13d5e1b0dbc7a05086095216abaf4'
 version = '1.2.0'
 tag = 'v1.2.0'
 
@@ -2442,7 +2486,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '8761e279a43697a0526f6734e46f25fca88bfdcd8ec1bdca12a47505a4aa7d76'
+manifest_sha256 = '55256ce5ef95fba5ae7e8b9ca93f51a5e484b643ff0b7a20806e51639f70a024'
 version = '2.14.3'
 
 [package.dep.platform]
@@ -2456,11 +2500,13 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
 sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+verified = 'first-use'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
 sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+verified = 'first-use'
 
 [[package.dep.dep]]
 name = 'cmake'
@@ -2489,7 +2535,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -2504,16 +2550,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -2528,16 +2576,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep]]
 name = 'fontconfig'
 ref = './packages/fontconfig.toml'
-manifest_sha256 = '6e06e60a5d8b9c1dfe9debdcb4f2474a9dd77f3e31cda69a8c5bd0d434f0ccd9'
+manifest_sha256 = '5f726f59c59f1c627f4287e2bbbae7fb6f7950218a3762fa38c9d5a48436d5d3'
 version = '2.15.0'
 
 [package.dep.platform]
@@ -2551,16 +2601,18 @@ verified = 'manifest'
 strategy = 'build'
 url = 'https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.15.0.tar.xz'
 sha256 = '63a0658d0e06e0fa886106452b58ef04f21f58202ea02a94c39de0d3335d7c0e'
+verified = 'manifest'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.15.0.tar.xz'
 sha256 = '63a0658d0e06e0fa886106452b58ef04f21f58202ea02a94c39de0d3335d7c0e'
+verified = 'manifest'
 
 [[package.dep.dep]]
 name = 'pkgconf'
 ref = './packages/pkgconf.toml'
-manifest_sha256 = 'cddba2f715deeb8a571fb038c8374a5325b4edeb34123c3dbe3d6eef56f6a2dd'
+manifest_sha256 = '240a68735aeef089a4c9246edd7ddfea0101df8a152bb92ac6cf07e09422a1bc'
 version = '3.0.7'
 tag = 'pkgconf-3.0.7'
 
@@ -2575,16 +2627,18 @@ verified = 'published'
 strategy = 'build'
 url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
 sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
+verified = 'manifest'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
 sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
+verified = 'manifest'
 
 [[package.dep.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '8761e279a43697a0526f6734e46f25fca88bfdcd8ec1bdca12a47505a4aa7d76'
+manifest_sha256 = '55256ce5ef95fba5ae7e8b9ca93f51a5e484b643ff0b7a20806e51639f70a024'
 version = '2.14.3'
 
 [package.dep.dep.platform]
@@ -2598,11 +2652,13 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
 sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+verified = 'first-use'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
 sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+verified = 'first-use'
 
 [[package.dep.dep.dep]]
 name = 'cmake'
@@ -2631,7 +2687,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -2646,16 +2702,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -2670,16 +2728,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -2694,16 +2754,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '8761e279a43697a0526f6734e46f25fca88bfdcd8ec1bdca12a47505a4aa7d76'
+manifest_sha256 = '55256ce5ef95fba5ae7e8b9ca93f51a5e484b643ff0b7a20806e51639f70a024'
 version = '2.14.3'
 
 [package.dep.dep.platform]
@@ -2717,11 +2779,13 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
 sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+verified = 'first-use'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
 sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+verified = 'first-use'
 
 [[package.dep.dep.dep]]
 name = 'cmake'
@@ -2750,7 +2814,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -2765,16 +2829,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -2789,16 +2855,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -2813,16 +2881,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
+manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
 version = '3.2.0'
 
 [package.dep.platform]
@@ -2862,7 +2932,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -2877,16 +2947,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep]]
 name = 'libtiff'
 ref = './packages/libtiff.toml'
-manifest_sha256 = '7fd3c698324988298285033a006151ab4e95210449bb99a08fe395db75884b72'
+manifest_sha256 = 'bea7941f4ddcada559e1dbc150a222aef98a067a8add5bc824a343a11165505f'
 version = '4.7.2'
 tag = 'v4.7.2'
 
@@ -2901,11 +2973,13 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz'
 sha256 = '672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a'
+verified = 'first-use'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz'
 sha256 = '672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a'
+verified = 'first-use'
 
 [[package.dep.dep]]
 name = 'cmake'
@@ -2934,7 +3008,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
+manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
 version = '3.2.0'
 
 [package.dep.dep.platform]
@@ -2974,7 +3048,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
+manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
 version = '3.2.0'
 
 [package.dep.dep.platform]
@@ -3014,7 +3088,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep]]
 name = 'openjpeg'
 ref = './packages/openjpeg.toml'
-manifest_sha256 = '366ac9ea0e4849a2b3b6c08c9233df5ec9c7bc1fb980e5595233a7550fbbbd3c'
+manifest_sha256 = '514db145803799940ddee1dbca3aefbf8996f7c65ccd40b6f5f94899325ed349'
 version = '2.5.4'
 tag = 'v2.5.4'
 
@@ -3055,7 +3129,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep]]
 name = 'brotli'
 ref = './packages/brotli.toml'
-manifest_sha256 = 'ad7b483ae5d94f00235b2593cffacecb6a1630b7b05d83d58d8b14726d1b9332'
+manifest_sha256 = '0f201ff5339c6e5760e6cd10188923ada2e13d5e1b0dbc7a05086095216abaf4'
 version = '1.2.0'
 tag = 'v1.2.0'
 
@@ -3096,7 +3170,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '8761e279a43697a0526f6734e46f25fca88bfdcd8ec1bdca12a47505a4aa7d76'
+manifest_sha256 = '55256ce5ef95fba5ae7e8b9ca93f51a5e484b643ff0b7a20806e51639f70a024'
 version = '2.14.3'
 
 [package.dep.platform]
@@ -3110,11 +3184,13 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
 sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+verified = 'first-use'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
 sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+verified = 'first-use'
 
 [[package.dep.dep]]
 name = 'cmake'
@@ -3143,7 +3219,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -3158,16 +3234,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -3182,16 +3260,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep]]
 name = 'fontconfig'
 ref = './packages/fontconfig.toml'
-manifest_sha256 = '6e06e60a5d8b9c1dfe9debdcb4f2474a9dd77f3e31cda69a8c5bd0d434f0ccd9'
+manifest_sha256 = '5f726f59c59f1c627f4287e2bbbae7fb6f7950218a3762fa38c9d5a48436d5d3'
 version = '2.15.0'
 
 [package.dep.platform]
@@ -3205,16 +3285,18 @@ verified = 'manifest'
 strategy = 'build'
 url = 'https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.15.0.tar.xz'
 sha256 = '63a0658d0e06e0fa886106452b58ef04f21f58202ea02a94c39de0d3335d7c0e'
+verified = 'manifest'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.15.0.tar.xz'
 sha256 = '63a0658d0e06e0fa886106452b58ef04f21f58202ea02a94c39de0d3335d7c0e'
+verified = 'manifest'
 
 [[package.dep.dep]]
 name = 'pkgconf'
 ref = './packages/pkgconf.toml'
-manifest_sha256 = 'cddba2f715deeb8a571fb038c8374a5325b4edeb34123c3dbe3d6eef56f6a2dd'
+manifest_sha256 = '240a68735aeef089a4c9246edd7ddfea0101df8a152bb92ac6cf07e09422a1bc'
 version = '3.0.7'
 tag = 'pkgconf-3.0.7'
 
@@ -3229,16 +3311,18 @@ verified = 'published'
 strategy = 'build'
 url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
 sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
+verified = 'manifest'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.7/pkgconf-3.0.7.tar.xz'
 sha256 = 'c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a'
+verified = 'manifest'
 
 [[package.dep.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '8761e279a43697a0526f6734e46f25fca88bfdcd8ec1bdca12a47505a4aa7d76'
+manifest_sha256 = '55256ce5ef95fba5ae7e8b9ca93f51a5e484b643ff0b7a20806e51639f70a024'
 version = '2.14.3'
 
 [package.dep.dep.platform]
@@ -3252,11 +3336,13 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
 sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+verified = 'first-use'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
 sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+verified = 'first-use'
 
 [[package.dep.dep.dep]]
 name = 'cmake'
@@ -3285,7 +3371,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -3300,16 +3386,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -3324,16 +3412,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -3348,16 +3438,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep.dep]]
 name = 'freetype'
 ref = './packages/freetype.toml'
-manifest_sha256 = '8761e279a43697a0526f6734e46f25fca88bfdcd8ec1bdca12a47505a4aa7d76'
+manifest_sha256 = '55256ce5ef95fba5ae7e8b9ca93f51a5e484b643ff0b7a20806e51639f70a024'
 version = '2.14.3'
 
 [package.dep.dep.platform]
@@ -3371,11 +3463,13 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
 sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+verified = 'first-use'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
 sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+verified = 'first-use'
 
 [[package.dep.dep.dep]]
 name = 'cmake'
@@ -3404,7 +3498,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -3419,16 +3513,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -3443,16 +3539,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -3467,16 +3565,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
+manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
 version = '3.2.0'
 
 [package.dep.platform]
@@ -3516,7 +3616,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep]]
 name = 'libpng'
 ref = './packages/libpng.toml'
-manifest_sha256 = '6dbd43d7ee3423bc9afb8938278cf00dbb362585f550a1de89ffb72416871061'
+manifest_sha256 = 'bf03c7e3cb9a314c328249909922e3e099aa64b7b9a6e8dcc068cdce97e36ab6'
 version = '1.6.59'
 tag = 'v1.6.59'
 
@@ -3531,16 +3631,18 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz'
 sha256 = '2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5'
+verified = 'first-use'
 
 [[package.dep]]
 name = 'libtiff'
 ref = './packages/libtiff.toml'
-manifest_sha256 = '7fd3c698324988298285033a006151ab4e95210449bb99a08fe395db75884b72'
+manifest_sha256 = 'bea7941f4ddcada559e1dbc150a222aef98a067a8add5bc824a343a11165505f'
 version = '4.7.2'
 tag = 'v4.7.2'
 
@@ -3555,11 +3657,13 @@ verified = 'first-use'
 strategy = 'build'
 url = 'https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz'
 sha256 = '672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a'
+verified = 'first-use'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz'
 sha256 = '672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a'
+verified = 'first-use'
 
 [[package.dep.dep]]
 name = 'cmake'
@@ -3588,7 +3692,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
+manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
 version = '3.2.0'
 
 [package.dep.dep.platform]
@@ -3628,7 +3732,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
-manifest_sha256 = '7605ced392ec878ee5909f0dc2fd86d9cab179b6fd4f005d7ca0af06929e102f'
+manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
 version = '3.2.0'
 
 [package.dep.dep.platform]
@@ -3668,7 +3772,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package.dep]]
 name = 'openjpeg'
 ref = './packages/openjpeg.toml'
-manifest_sha256 = '366ac9ea0e4849a2b3b6c08c9233df5ec9c7bc1fb980e5595233a7550fbbbd3c'
+manifest_sha256 = '514db145803799940ddee1dbca3aefbf8996f7c65ccd40b6f5f94899325ed349'
 version = '2.5.4'
 tag = 'v2.5.4'
 
@@ -3873,10 +3977,10 @@ verified = 'published'
 [[package]]
 name = 'skills-anthropic'
 ref = './packages/skills-anthropic.toml'
-manifest_sha256 = '8647515c194404a844f08ae003eea37ac59660ab448f9e9857558ea4bd61b8c3'
-version = '2026.10.05-683bc88'
+manifest_sha256 = 'fe187ffaeb5c2bdca53d8a35297f870d2aa5a43b1087cc400af395ec85eb6e65'
+version = '2026.10.09-9d63080'
 tag = 'main'
-tag_commit = '683bc88e56f3e09ba94f7055977f3d3aa499f202'
+tag_commit = '9d630808e4add0a7146de4af9384155d5dee350a'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -3891,7 +3995,7 @@ strategy = 'build'
 [[package]]
 name = 'skills-caveman'
 ref = './packages/skills-caveman.toml'
-manifest_sha256 = 'c1af259b049872f42eab69cc002b9218336c196ab330b1b1d8508d4d2bc42b5d'
+manifest_sha256 = 'b537c338347eeb91180d1e710d8001df8043f5cf13ddcffb8762a65d840f2715'
 version = '2026.10.08-2e08b91'
 tag = 'main'
 tag_commit = '2e08b9177c07bb7249a8a2d1a6758e5db281d002'
@@ -3909,7 +4013,7 @@ strategy = 'build'
 [[package]]
 name = 'skills-cursor'
 ref = './packages/skills-cursor.toml'
-manifest_sha256 = 'a82a734158a4c7f00041615a9288cc913990a7d38cae2c10b056081e74632e02'
+manifest_sha256 = 'f14e9e0ad27c8f08839e713b96fadd53b11a7d4c53e662980666d0dcfd6c310e'
 version = '2026.10.08-ccb5507'
 tag = 'main'
 tag_commit = 'ccb5507cec1546dc88135c1139c811e6c59115ba'
@@ -3927,7 +4031,7 @@ strategy = 'build'
 [[package]]
 name = 'skills-emil'
 ref = './packages/skills-emil.toml'
-manifest_sha256 = 'b3335da6959b5f90d1e42aa57891366d715dcc210e28643e010adcc04f8b6c84'
+manifest_sha256 = '088a5cf1c5645235c33a1dd2a1d6aa9d2377dc8ed319c13ff4ff23d7b2e72119'
 version = '2026.10.02-e8a175d'
 tag = 'main'
 tag_commit = 'e8a175de22ae1e49370fc144c1f3bb9aeedf988d'
@@ -3945,7 +4049,7 @@ strategy = 'build'
 [[package]]
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
-manifest_sha256 = '5cc8e8443c38454f118d7d6840227cfd5a081ab979537d599894f452f87158bc'
+manifest_sha256 = '7fba70fc11069a991452cc72d0a8a6cd292c9574f4c11c4e0ae4f07041f21dc0'
 version = '2026.10.09-c003e96'
 tag = 'main'
 tag_commit = 'c003e96852fa9534aee40b2cb85a96d8bd38732d'
@@ -4284,7 +4388,7 @@ verified = 'first-use'
 [[package]]
 name = 'xz'
 ref = './packages/xz.toml'
-manifest_sha256 = '9aa1423d4ec449105712e2b73db39f0a61f357f1357c814cca957dca9cada1be'
+manifest_sha256 = 'ef8b06ff9333527e1c886c37753766a0eb562bdf17024a518817d1e595453bc3'
 version = '5.8.4'
 tag = 'v5.8.4'
 
@@ -4299,11 +4403,13 @@ verified = 'published'
 strategy = 'build'
 url = 'https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz'
 sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
+verified = 'manifest'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz'
 sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
+verified = 'manifest'
 
 [[package]]
 name = 'yaml-language-server'
@@ -4401,7 +4507,7 @@ sha256 = 'f1f16c5d6298d63dee467eedea1cdcd8490e43e493bea43acd416dc9033ef641'
 [[package]]
 name = 'zstd'
 ref = './packages/zstd.toml'
-manifest_sha256 = '56ff31418ec27bc97f1aac97258d8dd46b8815b5cd52273958bc3a6b3d306ae1'
+manifest_sha256 = 'dd12f9f56640da8dc0d394344e26d1ea90ecf9891d4567ce924a5309a49af1a6'
 version = '1.5.7'
 tag = 'v1.5.7'
 
@@ -4418,7 +4524,7 @@ strategy = 'build'
 [[package.dep]]
 name = 'lz4'
 ref = './packages/lz4.toml'
-manifest_sha256 = '591c19fccbd7b70a4810240edd2198a39077d5abdf6db50d98dc6785734f9a32'
+manifest_sha256 = '0f4bf67abebf77f5ce4beca19bfd4ab1b4d01925cfcb1e2cfa8d8dae3fcb92db'
 version = '1.10.0'
 tag = 'v1.10.0'
 
@@ -4435,7 +4541,7 @@ strategy = 'build'
 [[package.dep]]
 name = 'lz4'
 ref = './packages/lz4.toml'
-manifest_sha256 = '591c19fccbd7b70a4810240edd2198a39077d5abdf6db50d98dc6785734f9a32'
+manifest_sha256 = '0f4bf67abebf77f5ce4beca19bfd4ab1b4d01925cfcb1e2cfa8d8dae3fcb92db'
 version = '1.10.0'
 tag = 'v1.10.0'
 

@@ -27,6 +27,7 @@ zlib = { apt = "zlib1g-dev", dnf = "zlib-devel", pacman = "zlib", when = { os = 
 [build]
 needs = ["cc", "make"]
 source = { url = "https://github.com/pnggroup/libpng/archive/refs/tags/v{{version}}.tar.gz", strip = 1 }
+when = [{ os = "darwin" }, { os = "linux" }]
 
 [[build.step]]
 run = "./configure --prefix={{prefix}} --disable-silent-rules && make -j{{jobs}} && make install"
