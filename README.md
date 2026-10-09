@@ -177,5 +177,5 @@ manifest yet. macOS ships git, ssh, python3 and less.
 The tools with no macOS program from upstream are built from source, the way
 their Homebrew formulae do it: eza, pngquant, gifsicle, optipng, jpegoptim,
 brotli, xz, zstd, lua 5.1, luarocks, GNU coreutils with a `g` prefix, btop, mole,
-ghostscript, imagemagick and poppler. They need the Command Line Tools
+ghostscript, imagemagick, poppler and ttyd. They need the Command Line Tools
 (`xcode-select --install`) and they compile on the first sync.

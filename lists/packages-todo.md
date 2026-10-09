@@ -29,8 +29,8 @@ from source, the way their Homebrew formulae do it (`lists/built.toml`,
 
 - The source builds need the Command Line Tools on the machine first, and they compile on the first sync. A build cache (`oku cache`) would let a new machine download the results.
 - eza: no man pages, because upstream writes them in markdown and converts them with pandoc.
-- Most source builds follow upstream, so `oku update` takes a new release: xz, gifsicle, luarocks, coreutils, brotli, lz4, zstd, jpeg-turbo, jpegoptim, btop, eza, imagemagick, openjpeg, cmake, libpng, libtiff, pkgconf, libwebp-lib and pngquant. pngquant gets each version's sha256 from crates.io, and xz and pkgconf from GitHub. oku pins the digest of a source archive in `oku.lock` the first time it downloads it.
-- lua, freetype, fontconfig, optipng, ghostscript and poppler hold a fixed version, each for a reason that the top of its manifest gives. Take a newer one by editing `value` and `sha256` there.
+- Most source builds follow upstream, so `oku update` takes a new release: xz, gifsicle, luarocks, coreutils, brotli, lz4, zstd, jpeg-turbo, jpegoptim, btop, eza, ttyd, libuv, json-c, imagemagick, openjpeg, cmake, libpng, libtiff, pkgconf, libwebp-lib and pngquant. pngquant gets each version's sha256 from crates.io, and xz and pkgconf from GitHub. oku pins the digest of a source archive in `oku.lock` the first time it downloads it.
+- lua, freetype, fontconfig, optipng, ghostscript, poppler and libwebsockets hold a fixed version, each for a reason that the top of its manifest gives. Take a newer one by editing `value` and `sha256` there.
 - mole: built from source, because the release holds the two Go helpers only. The tree sits in `libexec/mole` and `bin/mole` links to it. `mo update` and `mo remove` have no use here, take a new version with `oku update mole`.
 - coreutils: every program has a `g` prefix, such as `gls` and `gdate`, so none takes the place of a macOS tool.
 - ghostscript: built with its bundled libraries, without X11, cups and tesseract.
@@ -41,6 +41,8 @@ from source, the way their Homebrew formulae do it (`lists/built.toml`,
 - mimi, neru, skhd: macOS asks for Accessibility permission again after each update, because the program moves to a new store path. The same happened with Nix. Their services find the other oku programs by name, because oku puts the profile first on the PATH of a service.
 - ffmpeg and ffprobe: the static builds of the ffmpeg-static project, a third party. The macOS arm64 build reports ffmpeg 6.0 under the tag b6.1.1. A source build would replace it.
 - devbox: installs, but it drives nix, so it only works on a machine that still has nix.
+- ttyd: built from source on macOS, with TLS off in libwebsockets, so `ttyd --ssl` does not work there. vhs needs plain HTTP on localhost only. Linux takes the static program of the release.
+- vhs: it drives a headless Chromium through rod. With no Chrome or Chromium installed, the first `vhs` run downloads one to `~/.cache/rod`, outside oku.
 - ast-grep: only `ast-grep` is linked, not the short name `sg`.
 - ghostty: set `auto-update = off` so the app does not replace itself behind oku.
 - asr, cmd, diagnose: my own scripts. They are in `files/bin/` and linked into `~/.local/bin` by `lists/files.toml`.

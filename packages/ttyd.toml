@@ -1,0 +1,57 @@
+[package]
+name = "ttyd"
+description = "Shares a terminal over the web, which vhs records through"
+homepage = "https://github.com/tsl0922/ttyd"
+license = "MIT"
+
+# Tags have no prefix.
+[version]
+from = "github-releases"
+repo = "tsl0922/ttyd"
+
+# Linux gets the static program from the release. Upstream builds none for
+# macOS, so macOS builds from source, as Homebrew does.
+[[artifact]]
+match = { os = "linux", arch = "arm64" }
+url = "https://github.com/tsl0922/ttyd/releases/download/{{tag}}/ttyd.aarch64"
+sha256_url = "https://github.com/tsl0922/ttyd/releases/download/{{tag}}/SHA256SUMS"
+bin = [{ name = "ttyd", run = "{{pkg}}/ttyd.aarch64" }]
+
+[[artifact]]
+match = { os = "linux", arch = "amd64" }
+url = "https://github.com/tsl0922/ttyd/releases/download/{{tag}}/ttyd.x86_64"
+sha256_url = "https://github.com/tsl0922/ttyd/releases/download/{{tag}}/SHA256SUMS"
+bin = [{ name = "ttyd", run = "{{pkg}}/ttyd.x86_64" }]
+
+# What the build needs of the machine, which oku checks and does not install.
+# The Command Line Tools give macOS its compiler, make, git and zlib.
+[host]
+xcode-clt = { path = "/Library/Developer/CommandLineTools/usr/bin/clang", install = "xcode-select --install", when = { os = "darwin" } }
+
+# oku resolves the deps for every platform of the lock, so the libraries, which
+# build on macOS alone, name it.
+[build]
+needs = ["cc", "make", "git"]
+source = { git = "https://github.com/tsl0922/ttyd", tag = "{{tag}}" }
+deps = [
+  "./cmake.toml",
+  { ref = "./libuv.toml", when = { os = "darwin" } },
+  { ref = "./json-c.toml", when = { os = "darwin" } },
+  { ref = "./libwebsockets.toml", when = { os = "darwin" } },
+]
+when = { os = "darwin" }
+
+[runtime]
+deps = [
+  { ref = "./libuv.toml", when = { os = "darwin" } },
+  { ref = "./json-c.toml", when = { os = "darwin" } },
+  { ref = "./libwebsockets.toml", when = { os = "darwin" } },
+]
+
+[[build.step]]
+run = """
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX={{prefix}}
+cmake --build build -j{{jobs}}
+cmake --install build
+"""
+shell = "sh"

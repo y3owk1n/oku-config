@@ -1,0 +1,32 @@
+[package]
+name = "json-c"
+description = "JSON library for C, which ttyd uses"
+homepage = "https://github.com/json-c/json-c"
+license = "MIT"
+
+# Tags look like json-c-0.19-20260627, so the version keeps the date.
+[version]
+from = "github-releases"
+repo = "json-c/json-c"
+strip_prefix = "json-c-"
+
+# What the build needs of the machine, which oku checks and does not install.
+# ttyd builds from source on macOS alone, so this library does too.
+[host]
+xcode-clt = { path = "/Library/Developer/CommandLineTools/usr/bin/clang", install = "xcode-select --install", when = { os = "darwin" } }
+
+[build]
+needs = ["cc", "make", "git"]
+source = { git = "https://github.com/json-c/json-c", tag = "{{tag}}" }
+deps = ["./cmake.toml"]
+when = { os = "darwin" }
+
+[[build.step]]
+run = """
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX={{prefix}} \
+  -DCMAKE_INSTALL_LIBDIR={{prefix}}/lib -DCMAKE_INSTALL_NAME_DIR={{prefix}}/lib \
+  -DBUILD_STATIC_LIBS=OFF -DBUILD_TESTING=OFF -DBUILD_APPS=OFF
+cmake --build build -j{{jobs}}
+cmake --install build
+"""
+shell = "sh"

@@ -23,6 +23,7 @@ mkcert = "github:FiloSottile/mkcert"
 rip2 = "../packages/rip2.toml" # the program is rip
 ripgrep = "../packages/ripgrep.toml"
 stripe-cli = "github:stripe/stripe-cli" # the program is stripe
+vhs = "../packages/vhs.toml" # runs ttyd from built.toml and ffmpeg
 
 # shell
 atuin = { ref = "../packages/atuin.toml", service = true }

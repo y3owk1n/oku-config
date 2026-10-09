@@ -661,29 +661,29 @@ verified = 'first-use'
 [[package]]
 name = 'friendly'
 ref = 'github:friendly-social-ai/cli'
-commit = '3dca6b4f12abd214d1dc2d36fb8f51d27f622503'
+commit = '79407e8a4dbdbb64fae67c5fb0863b318d5d0fd6'
 manifest_sha256 = '92a04ac80255329839f47562ce6eda56562c458b457bb9357406dc0fb01a3163'
-version = '2026.10.09-3dca6b4'
+version = '2026.10.09-79407e8'
 tag = 'main'
-tag_commit = '3dca6b4f12abd214d1dc2d36fb8f51d27f622503'
+tag_commit = '79407e8a4dbdbb64fae67c5fb0863b318d5d0fd6'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
-vendor_sha256 = '32c6957538e682fdc489fdce38313e3aee363c709feb5700e3249da7cc64b1cc'
+vendor_sha256 = '8d368726c0d6a494bc543aacc2ac5e76bb87593e5f0dbfbed1977bd74f1d46e2'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'build'
-vendor_sha256 = '32c6957538e682fdc489fdce38313e3aee363c709feb5700e3249da7cc64b1cc'
+vendor_sha256 = '8d368726c0d6a494bc543aacc2ac5e76bb87593e5f0dbfbed1977bd74f1d46e2'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
-vendor_sha256 = '32c6957538e682fdc489fdce38313e3aee363c709feb5700e3249da7cc64b1cc'
+vendor_sha256 = '8d368726c0d6a494bc543aacc2ac5e76bb87593e5f0dbfbed1977bd74f1d46e2'
 
 [[package.dep]]
 name = 'go'
 ref = 'github:friendly-social-ai/cli#.oku/go.toml'
-commit = '3dca6b4f12abd214d1dc2d36fb8f51d27f622503'
+commit = '79407e8a4dbdbb64fae67c5fb0863b318d5d0fd6'
 manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
 version = '1.26.9'
 tag = 'go1.26.9'
@@ -4021,9 +4021,9 @@ strategy = 'build'
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
 manifest_sha256 = '7fba70fc11069a991452cc72d0a8a6cd292c9574f4c11c4e0ae4f07041f21dc0'
-version = '2026.10.09-c003e96'
+version = '2026.10.09-2d3f1cd'
 tag = 'main'
-tag_commit = 'c003e96852fa9534aee40b2cb85a96d8bd38732d'
+tag_commit = '2d3f1cd436b18ea12f24130de4df781355925b08'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4338,6 +4338,308 @@ sha256 = '6260b621bf5ab87027dfb463bf955504ef32cdcda62b81f28447753e48c83a62'
 commands = true
 
 [[package]]
+name = 'ttyd'
+ref = './packages/ttyd.toml'
+manifest_sha256 = '863ed9ac38339159c1a31ec32dc3f98bd07b782c5f2ef3862ce086d97864c449'
+version = '1.7.7'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/tsl0922/ttyd/releases/download/1.7.7/ttyd.x86_64'
+sha256 = '8a217c968aba172e0dbf3f34447218dc015bc4d5e59bf51db2f2cd12b7be4f55'
+verified = 'checksum-file'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/tsl0922/ttyd/releases/download/1.7.7/ttyd.aarch64'
+sha256 = 'b38acadd89d1d396a0f5649aa52c539edbad07f4bc7348b27b4f4b7219dd4165'
+verified = 'checksum-file'
+
+[[package.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
+sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
+sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
+
+[[package.dep]]
+name = 'libuv'
+ref = './packages/libuv.toml'
+manifest_sha256 = '7a723541790ade2e41f45aa696449edc0965b4b8041c591e64f678a4760441ad'
+version = '1.53.0'
+tag = 'v1.53.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[[package.dep]]
+name = 'json-c'
+ref = './packages/json-c.toml'
+manifest_sha256 = 'b0e6e300e6b08f0a9437b8e2e7eb548ad6c22a20bec22b6a18c5446ed3a19834'
+version = '0.19-20260627'
+tag = 'json-c-0.19-20260627'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[[package.dep]]
+name = 'libwebsockets'
+ref = './packages/libwebsockets.toml'
+manifest_sha256 = '4bb5ad743db320af63b80653db4ae70e6ea2ea0f3a8c47bd99079dd5b5c3e83c'
+version = '5.0.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+url = 'https://github.com/warmcat/libwebsockets/archive/refs/tags/v5.0.0.tar.gz'
+sha256 = 'f853c6582101cfcee3a5a9e28ae92ab19d9735c5f31f0bb2e9794b5106123962'
+verified = 'manifest'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[[package.dep.dep]]
+name = 'libuv'
+ref = './packages/libuv.toml'
+manifest_sha256 = '7a723541790ade2e41f45aa696449edc0965b4b8041c591e64f678a4760441ad'
+version = '1.53.0'
+tag = 'v1.53.0'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[[package.dep.dep]]
+name = 'libuv'
+ref = './packages/libuv.toml'
+manifest_sha256 = '7a723541790ade2e41f45aa696449edc0965b4b8041c591e64f678a4760441ad'
+version = '1.53.0'
+tag = 'v1.53.0'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[[package.dep]]
+name = 'libuv'
+ref = './packages/libuv.toml'
+manifest_sha256 = '7a723541790ade2e41f45aa696449edc0965b4b8041c591e64f678a4760441ad'
+version = '1.53.0'
+tag = 'v1.53.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[[package.dep]]
+name = 'json-c'
+ref = './packages/json-c.toml'
+manifest_sha256 = 'b0e6e300e6b08f0a9437b8e2e7eb548ad6c22a20bec22b6a18c5446ed3a19834'
+version = '0.19-20260627'
+tag = 'json-c-0.19-20260627'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[[package.dep]]
+name = 'libwebsockets'
+ref = './packages/libwebsockets.toml'
+manifest_sha256 = '4bb5ad743db320af63b80653db4ae70e6ea2ea0f3a8c47bd99079dd5b5c3e83c'
+version = '5.0.0'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+url = 'https://github.com/warmcat/libwebsockets/archive/refs/tags/v5.0.0.tar.gz'
+sha256 = 'f853c6582101cfcee3a5a9e28ae92ab19d9735c5f31f0bb2e9794b5106123962'
+verified = 'manifest'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[[package.dep.dep]]
+name = 'libuv'
+ref = './packages/libuv.toml'
+manifest_sha256 = '7a723541790ade2e41f45aa696449edc0965b4b8041c591e64f678a4760441ad'
+version = '1.53.0'
+tag = 'v1.53.0'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[[package.dep.dep]]
+name = 'libuv'
+ref = './packages/libuv.toml'
+manifest_sha256 = '7a723541790ade2e41f45aa696449edc0965b4b8041c591e64f678a4760441ad'
+version = '1.53.0'
+tag = 'v1.53.0'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[[package]]
 name = 'utm'
 ref = './packages/utm.toml'
 manifest_sha256 = 'd787f13708d049b7cb04dac5d0f240d6ce0cbda9a1405ad6d9e2449391e351b8'
@@ -4399,6 +4701,360 @@ strategy = 'artifact'
 url = 'https://dl.google.com/go/go1.26.9.linux-arm64.tar.gz'
 sha256 = '4a97373d49fcacdcf3694fea368a500b00ee3e963974f3e7514132717632f052'
 verified = 'checksum-file'
+
+[[package]]
+name = 'vhs'
+ref = './packages/vhs.toml'
+manifest_sha256 = '2f3b5ad476e78d252d0fdf7694b80807fe12a2c616cf300381cc738f8570750c'
+version = '0.12.1'
+tag = 'v0.12.1'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/charmbracelet/vhs/releases/download/v0.12.1/vhs_0.12.1_Darwin_arm64.tar.gz'
+sha256 = 'b5b524ed60c949eb80dfb685a18eeb135eb863c97f7279689b4e153363cd27c5'
+verified = 'checksum-file'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/charmbracelet/vhs/releases/download/v0.12.1/vhs_0.12.1_Linux_x86_64.tar.gz'
+sha256 = 'eb33787a5b1cebf91fe0b18bd231e2d71d36c1ff4babd99ddac1a6ab411efd10'
+verified = 'checksum-file'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/charmbracelet/vhs/releases/download/v0.12.1/vhs_0.12.1_Linux_arm64.tar.gz'
+sha256 = '0b27029809fcc2ca2c381cceb854cbe03479a0f229b963e9bc3a2f2c36ffd3e7'
+verified = 'checksum-file'
+
+[[package.dep]]
+name = 'ttyd'
+ref = './packages/ttyd.toml'
+manifest_sha256 = '863ed9ac38339159c1a31ec32dc3f98bd07b782c5f2ef3862ce086d97864c449'
+version = '1.7.7'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/tsl0922/ttyd/releases/download/1.7.7/ttyd.x86_64'
+sha256 = '8a217c968aba172e0dbf3f34447218dc015bc4d5e59bf51db2f2cd12b7be4f55'
+verified = 'checksum-file'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/tsl0922/ttyd/releases/download/1.7.7/ttyd.aarch64'
+sha256 = 'b38acadd89d1d396a0f5649aa52c539edbad07f4bc7348b27b4f4b7219dd4165'
+verified = 'checksum-file'
+
+[[package.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[package.dep.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
+sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
+
+[package.dep.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
+sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
+
+[[package.dep.dep]]
+name = 'libuv'
+ref = './packages/libuv.toml'
+manifest_sha256 = '7a723541790ade2e41f45aa696449edc0965b4b8041c591e64f678a4760441ad'
+version = '1.53.0'
+tag = 'v1.53.0'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[[package.dep.dep]]
+name = 'json-c'
+ref = './packages/json-c.toml'
+manifest_sha256 = 'b0e6e300e6b08f0a9437b8e2e7eb548ad6c22a20bec22b6a18c5446ed3a19834'
+version = '0.19-20260627'
+tag = 'json-c-0.19-20260627'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[[package.dep.dep]]
+name = 'libwebsockets'
+ref = './packages/libwebsockets.toml'
+manifest_sha256 = '4bb5ad743db320af63b80653db4ae70e6ea2ea0f3a8c47bd99079dd5b5c3e83c'
+version = '5.0.0'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+url = 'https://github.com/warmcat/libwebsockets/archive/refs/tags/v5.0.0.tar.gz'
+sha256 = 'f853c6582101cfcee3a5a9e28ae92ab19d9735c5f31f0bb2e9794b5106123962'
+verified = 'manifest'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[[package.dep.dep.dep]]
+name = 'libuv'
+ref = './packages/libuv.toml'
+manifest_sha256 = '7a723541790ade2e41f45aa696449edc0965b4b8041c591e64f678a4760441ad'
+version = '1.53.0'
+tag = 'v1.53.0'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.dep.dep.platform]
+[package.dep.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[[package.dep.dep.dep]]
+name = 'libuv'
+ref = './packages/libuv.toml'
+manifest_sha256 = '7a723541790ade2e41f45aa696449edc0965b4b8041c591e64f678a4760441ad'
+version = '1.53.0'
+tag = 'v1.53.0'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.dep.dep.platform]
+[package.dep.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[[package.dep.dep]]
+name = 'libuv'
+ref = './packages/libuv.toml'
+manifest_sha256 = '7a723541790ade2e41f45aa696449edc0965b4b8041c591e64f678a4760441ad'
+version = '1.53.0'
+tag = 'v1.53.0'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[[package.dep.dep]]
+name = 'json-c'
+ref = './packages/json-c.toml'
+manifest_sha256 = 'b0e6e300e6b08f0a9437b8e2e7eb548ad6c22a20bec22b6a18c5446ed3a19834'
+version = '0.19-20260627'
+tag = 'json-c-0.19-20260627'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[[package.dep.dep]]
+name = 'libwebsockets'
+ref = './packages/libwebsockets.toml'
+manifest_sha256 = '4bb5ad743db320af63b80653db4ae70e6ea2ea0f3a8c47bd99079dd5b5c3e83c'
+version = '5.0.0'
+
+[package.dep.dep.platform]
+[package.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+url = 'https://github.com/warmcat/libwebsockets/archive/refs/tags/v5.0.0.tar.gz'
+sha256 = 'f853c6582101cfcee3a5a9e28ae92ab19d9735c5f31f0bb2e9794b5106123962'
+verified = 'manifest'
+
+[[package.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[[package.dep.dep.dep]]
+name = 'libuv'
+ref = './packages/libuv.toml'
+manifest_sha256 = '7a723541790ade2e41f45aa696449edc0965b4b8041c591e64f678a4760441ad'
+version = '1.53.0'
+tag = 'v1.53.0'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.dep.dep.platform]
+[package.dep.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[[package.dep.dep.dep]]
+name = 'libuv'
+ref = './packages/libuv.toml'
+manifest_sha256 = '7a723541790ade2e41f45aa696449edc0965b4b8041c591e64f678a4760441ad'
+version = '1.53.0'
+tag = 'v1.53.0'
+
+[package.dep.dep.dep.platform]
+[package.dep.dep.dep.platform.darwin-arm64]
+strategy = 'build'
+
+[[package.dep.dep.dep.dep]]
+name = 'cmake'
+ref = './packages/cmake.toml'
+manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
+version = '4.4.4'
+tag = 'v4.4.4'
+
+[package.dep.dep.dep.dep.platform]
+[package.dep.dep.dep.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
+sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+verified = 'checksum-file'
+
+[[package.dep]]
+name = 'ffmpeg'
+ref = './packages/ffmpeg.toml'
+manifest_sha256 = '39c883b8b6fa4ef53ab7bf199062b651b6eb78e915ffbfe488274aad0307218b'
+version = '6.1.1'
+tag = 'b6.1.1'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/eugeneware/ffmpeg-static/releases/download/b6.1.1/ffmpeg-darwin-arm64.gz'
+sha256 = '8923876afa8db5585022d7860ec7e589af192f441c56793971276d450ed3bbfa'
+verified = 'published'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/eugeneware/ffmpeg-static/releases/download/b6.1.1/ffmpeg-linux-x64.gz'
+sha256 = 'bfe8a8fc511530457b528c48d77b5737527b504a3797a9bc4866aeca69c2dffa'
+verified = 'published'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/eugeneware/ffmpeg-static/releases/download/b6.1.1/ffmpeg-linux-arm64.gz'
+sha256 = '754a678672298bc68156adff58aa7385a592c2b30b1d0ae8750c45c915c4bac0'
+verified = 'published'
 
 [[package]]
 name = 'vscode-langservers-extracted'

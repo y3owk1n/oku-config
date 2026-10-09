@@ -1,0 +1,40 @@
+[package]
+name = "libwebsockets"
+description = "WebSocket library, which ttyd serves the terminal through"
+homepage = "https://libwebsockets.org"
+license = "MIT"
+
+# Upstream publishes tags and no GitHub releases, and one tag is not a version,
+# so the version is fixed. The sha256 is the one of Homebrew's formula. Take a
+# newer one by editing value and sha256.
+[version]
+value = "5.0.0"
+
+# What the build needs of the machine, which oku checks and does not install.
+# ttyd builds from source on macOS alone, so this library does too.
+[host]
+xcode-clt = { path = "/Library/Developer/CommandLineTools/usr/bin/clang", install = "xcode-select --install", when = { os = "darwin" } }
+
+[build]
+needs = ["cc", "make"]
+source = { url = "https://github.com/warmcat/libwebsockets/archive/refs/tags/v{{version}}.tar.gz", sha256 = "f853c6582101cfcee3a5a9e28ae92ab19d9735c5f31f0bb2e9794b5106123962", strip = 1 }
+deps = ["./cmake.toml", "./libuv.toml"]
+when = { os = "darwin" }
+
+[runtime]
+deps = ["./libuv.toml"]
+
+# TLS stays off, so the library needs nothing beyond the system and libuv. vhs
+# talks to ttyd over plain HTTP on localhost. HTTP/3 forces GnuTLS from 5.0.0,
+# which ttyd cannot build against, so it stays off too, as Homebrew does.
+# The install name dir comes from the prefix and the lib dir, which upstream
+# joins itself, so neither takes an absolute path here.
+[[build.step]]
+run = """
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX={{prefix}} \
+  -DLWS_WITH_LIBUV=ON -DLWS_WITH_SSL=OFF -DLWS_WITH_HTTP3=OFF -DLWS_IPV6=ON \
+  -DLWS_UNIX_SOCK=ON -DLWS_WITHOUT_TESTAPPS=ON -DLWS_WITH_STATIC=OFF
+cmake --build build -j{{jobs}}
+cmake --install build
+"""
+shell = "sh"

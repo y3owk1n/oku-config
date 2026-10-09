@@ -1,0 +1,33 @@
+[package]
+name = "libuv"
+description = "Library for asynchronous I/O, which ttyd runs on"
+homepage = "https://libuv.org"
+license = "MIT"
+
+# The source is a git tag, which needs no sha256, so oku follows new releases.
+[version]
+from = "github-releases"
+repo = "libuv/libuv"
+strip_prefix = "v"
+
+# What the build needs of the machine, which oku checks and does not install.
+# ttyd builds from source on macOS alone, so this library does too.
+[host]
+xcode-clt = { path = "/Library/Developer/CommandLineTools/usr/bin/clang", install = "xcode-select --install", when = { os = "darwin" } }
+
+[build]
+needs = ["cc", "make", "git"]
+source = { git = "https://github.com/libuv/libuv", tag = "{{tag}}" }
+deps = ["./cmake.toml"]
+when = { os = "darwin" }
+
+# The absolute install name dir lets ttyd find the library in the store.
+[[build.step]]
+run = """
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX={{prefix}} \
+  -DCMAKE_INSTALL_LIBDIR={{prefix}}/lib -DCMAKE_INSTALL_NAME_DIR={{prefix}}/lib \
+  -DLIBUV_BUILD_TESTS=OFF -DLIBUV_BUILD_BENCH=OFF
+cmake --build build -j{{jobs}}
+cmake --install build
+"""
+shell = "sh"

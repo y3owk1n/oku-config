@@ -1,0 +1,43 @@
+[package]
+name = "vhs"
+description = "Records terminal sessions to GIF and video from a tape script"
+homepage = "https://github.com/charmbracelet/vhs"
+license = "MIT"
+
+[version]
+from = "github-releases"
+repo = "charmbracelet/vhs"
+strip_prefix = "v"
+
+# vhs runs ttyd and ffmpeg from PATH, so both are runtime deps. It drives a
+# headless Chromium through rod, which downloads one to ~/.cache/rod on first
+# use when it finds no browser, see lists/packages-todo.md.
+[runtime]
+deps = ["./ttyd.toml", "./ffmpeg.toml"]
+
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://github.com/charmbracelet/vhs/releases/download/{{tag}}/vhs_{{version}}_Darwin_arm64.tar.gz"
+sha256_url = "https://github.com/charmbracelet/vhs/releases/download/{{tag}}/checksums.txt"
+strip = 1
+bin = ["vhs"]
+completions = { fish = "completions/vhs.fish", zsh = "completions/vhs.zsh", bash = "completions/vhs.bash" }
+man = ["manpages/vhs.1.gz"]
+
+[[artifact]]
+match = { os = "linux", arch = "arm64" }
+url = "https://github.com/charmbracelet/vhs/releases/download/{{tag}}/vhs_{{version}}_Linux_arm64.tar.gz"
+sha256_url = "https://github.com/charmbracelet/vhs/releases/download/{{tag}}/checksums.txt"
+strip = 1
+bin = ["vhs"]
+completions = { fish = "completions/vhs.fish", zsh = "completions/vhs.zsh", bash = "completions/vhs.bash" }
+man = ["manpages/vhs.1.gz"]
+
+[[artifact]]
+match = { os = "linux", arch = "amd64" }
+url = "https://github.com/charmbracelet/vhs/releases/download/{{tag}}/vhs_{{version}}_Linux_x86_64.tar.gz"
+sha256_url = "https://github.com/charmbracelet/vhs/releases/download/{{tag}}/checksums.txt"
+strip = 1
+bin = ["vhs"]
+completions = { fish = "completions/vhs.fish", zsh = "completions/vhs.zsh", bash = "completions/vhs.bash" }
+man = ["manpages/vhs.1.gz"]
