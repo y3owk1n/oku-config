@@ -85,10 +85,7 @@ poppins = "../packages/poppins.toml"
 symbols-nerd-font = "../packages/symbols-nerd-font.toml"
 
 # my own tools
-mimi = { ref = "../packages/mimi.toml", service = true, when = { os = "darwin" } }
-# neru also builds on Linux, with the libraries of bootstrap/linux.sh. There
-# `service = true` does nothing, run `neru services install` once instead.
-# On Windows it builds with go alone and runs as a scheduled task.
-neru = { ref = "../packages/neru.toml", service = true }
-uts = "../packages/uts.toml"
+mimi = { ref = "github:y3owk1n/mimi#mimi-main", service = true, when = { os = "darwin" } }
+neru = { ref = "github:y3owk1n/neru#neru-main", service = true }
+uts = "github:y3owk1n/uts#uts-main"
 friendly = "github:friendly-social-ai/cli"
