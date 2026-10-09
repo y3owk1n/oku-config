@@ -659,11 +659,11 @@ verified = 'first-use'
 [[package]]
 name = 'friendly'
 ref = 'github:friendly-social-ai/cli'
-commit = 'b188e02beb7a1295f6722978b1206c74276f5ffe'
+commit = '54a6b466b1c5b5113a5f6c8d3743dc8632ab33e3'
 manifest_sha256 = '23893d236efc64c695871d29207007ee43b23917abc946cb8262bb37f5e5d8ff'
-version = '2026.10.09-b188e02'
+version = '2026.10.09-54a6b46'
 tag = 'main'
-tag_commit = 'b188e02beb7a1295f6722978b1206c74276f5ffe'
+tag_commit = '54a6b466b1c5b5113a5f6c8d3743dc8632ab33e3'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -681,7 +681,7 @@ vendor_sha256 = 'b3b7fd32f7aff97e4976f8a2f4cb6f3716852cec7b3ac463294e47fe404a9fd
 [[package.dep]]
 name = 'go'
 ref = 'github:friendly-social-ai/cli#.oku/go.toml'
-commit = 'b188e02beb7a1295f6722978b1206c74276f5ffe'
+commit = '54a6b466b1c5b5113a5f6c8d3743dc8632ab33e3'
 manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
 version = '1.26.9'
 tag = 'go1.26.9'
