@@ -11,7 +11,7 @@ strip_prefix = "v"
 
 # vhs runs ttyd and ffmpeg from PATH, so both are runtime deps. It drives a
 # headless Chromium through rod, which downloads one to ~/.cache/rod on first
-# use when it finds no browser, see lists/packages-todo.md.
+# use when it finds no browser.
 [runtime]
 deps = ["./ttyd.toml", "./ffmpeg.toml"]
 

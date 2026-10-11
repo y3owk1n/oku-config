@@ -2,7 +2,6 @@
 # darwin.toml, and Linux in linux.toml. Sources are relative to this file.
 # link: a symlink into this repo, an edit shows at once.
 # render: a template with {{variables}}, written read-only by `oku sync`.
-# Notes and manual steps are in files-notes.md.
 
 [files]
 

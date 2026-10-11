@@ -2,7 +2,6 @@
 # in darwin.toml.
 # A ref that starts with ../packages/ is a manifest in this repo. A github: ref
 # with no #name has no manifest, oku infers one from the newest release.
-# What could not move is in packages-todo.md.
 #
 # Some manifests build from source, the way their Homebrew formulae do it, and
 # say so at their top. They need the Command Line Tools on macOS, and the

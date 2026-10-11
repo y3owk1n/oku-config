@@ -43,8 +43,7 @@ status is-interactive; and begin
     type -q bat; and alias cat bat
     alias gg lazygit
 
-    # eza has no macOS program from upstream yet, see lists/packages-todo.md.
-    # Without it ls stays the system one.
+    # Without eza ls stays the system one.
     if type -q eza
         alias eza 'eza --icons auto --git'
         alias la 'eza -a'

@@ -4697,7 +4697,7 @@ verified = 'checksum-file'
 [[package]]
 name = 'vhs'
 ref = './packages/vhs.toml'
-manifest_sha256 = '2f3b5ad476e78d252d0fdf7694b80807fe12a2c616cf300381cc738f8570750c'
+manifest_sha256 = '859e366395c686f6005955b284660b8c5baabf9092f6fa7592833da95420719a'
 version = '0.12.1'
 tag = 'v0.12.1'
 

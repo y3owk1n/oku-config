@@ -1,6 +1,6 @@
 # Desktop apps that more than one OS gets. The macOS-only ones are in
 # darwin.toml. The top of each manifest says where its versions come from.
-# Discord has no arm64 Linux build. It updates itself, see packages-todo.md.
+# Discord has no arm64 Linux build.
 
 [packages]
 brave = "../packages/brave.toml"

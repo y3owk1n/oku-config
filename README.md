@@ -1,8 +1,7 @@
 # oku config
 
 My machines, described for [oku](https://github.com/y3owk1n/oku): the packages,
-the program configs, the theme, the macOS settings and the secrets. It replaces
-my nix-darwin and home-manager setup.
+the program configs, the theme, the macOS settings and the secrets.
 
 oku is a cross-platform package manager with no central registry. It uses TOML
 manifests, a lockfile and an immutable store, and it applies a change all the
@@ -26,10 +25,6 @@ way or not at all.
 | `secrets/` | The sops file with my SSH key. Only ciphertext |
 | `bootstrap/macos.sh` | What needs root on a new Mac. I run it once, by hand |
 | `bootstrap/linux.sh` | The system packages that the source builds need, for apt, dnf and pacman |
-
-Each list has a notes file beside it: `lists/packages-todo.md` (what did not
-move and why), `lists/files-notes.md`, `lists/ai-notes.md` and
-`lists/macos-notes.md`.
 
 ## A new Mac
 
@@ -167,16 +162,3 @@ opencode and the nvim palette file render again in one generation. Then run
 - An agent skill: see `files/skills/add-skill/SKILL.md`.
 - A secret: edit `secrets/secrets.yaml` with `sops`, then name the value in a
   `secret` entry or under `[secrets]`.
-
-## What did not move
-
-`lists/packages-todo.md` has the full list. In short: the Karabiner driver
-has to be turned on once, which `bootstrap/macos.sh` does, and Tailscale asks
-you to approve its extension on first launch. The policy settings of Brave and the two PAM modules for Touch ID in tmux have no
-manifest yet. macOS ships git, ssh, python3 and less.
-
-The tools with no macOS program from upstream are built from source, the way
-their Homebrew formulae do it: eza, pngquant, gifsicle, optipng, jpegoptim,
-brotli, xz, zstd, lua 5.1, luarocks, GNU coreutils with a `g` prefix, btop, mole,
-ghostscript, imagemagick, poppler and ttyd. They need the Command Line Tools
-(`xcode-select --install`) and they compile on the first sync.

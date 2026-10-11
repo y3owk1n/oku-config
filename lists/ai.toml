@@ -1,5 +1,5 @@
 # Agent skills, the global instructions file and the quick agent.
-# Notes and the steps to add or update a skill: ./ai-notes.md
+# The steps to add or update a skill: ../files/skills/add-skill/SKILL.md
 
 [packages]
 # External skill repos, each pinned to one commit. The [files] entries below
