@@ -1814,7 +1814,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package]]
 name = 'jq'
 ref = 'github:jqlang/jq'
-commit = 'b904884b94ca48e025a12697ab172711e6c134d8'
+commit = '611c575a97f0fbaaea9c334b2c70ffe3fa733f41'
 manifest_sha256 = 'f9e766ea364fbe94f87f4e0e08f9147c14d038f36cc18d8d73953c8f0fa50b23'
 version = '1.8.2'
 signer_workflow = 'jqlang/jq/.github/workflows/ci.yml'
@@ -3993,9 +3993,9 @@ strategy = 'build'
 name = 'skills-emil'
 ref = './packages/skills-emil.toml'
 manifest_sha256 = '088a5cf1c5645235c33a1dd2a1d6aa9d2377dc8ed319c13ff4ff23d7b2e72119'
-version = '2026.10.11-6465079'
+version = '2026.10.11-2d22863'
 tag = 'main'
-tag_commit = '6465079742eb019bc419caf2c352ecda03f5dfd8'
+tag_commit = '2d228630ba1446365f614a108cb8252f1feda202'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4011,9 +4011,9 @@ strategy = 'build'
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
 manifest_sha256 = '7fba70fc11069a991452cc72d0a8a6cd292c9574f4c11c4e0ae4f07041f21dc0'
-version = '2026.10.10-c2a6784'
+version = '2026.10.11-02cad61'
 tag = 'main'
-tag_commit = 'c2a67849be260701852b0977ba15eb5f3a0ce2a4'
+tag_commit = '02cad61166c4c20edbc8a3f71bd720eed4c1f49b'
 
 [package.platform]
 [package.platform.darwin-arm64]
