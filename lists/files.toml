@@ -1,13 +1,13 @@
-# Program config files. Sources are relative to this file.
+# Program config files that more than one OS gets. What macOS alone gets is in
+# darwin.toml, and Linux in linux.toml. Sources are relative to this file.
 # link: a symlink into this repo, an edit shows at once.
 # render: a template with {{variables}}, written read-only by `oku sync`.
 # Notes and manual steps are in files-notes.md.
 
 [files]
 
-# Directories that change all day
+# nvim, a directory that changes all day
 "{{config}}/nvim" = { link = "../files/nvim" }
-"{{config}}/kanata" = { link = "../files/kanata", when = { os = "darwin" } }
 
 # The palette that nvim (base16-pro-max) reads
 "{{config}}/stylix/palette.json" = { render = "../files/stylix/palette.json.tmpl" }
@@ -22,11 +22,12 @@
 
 # git
 "{{config}}/git/config" = { render = "../files/git/config.tmpl" }
-"{{config}}/git/config-darwin" = { link = "../files/git/config-darwin", when = { os = "darwin" } }
 
-# ssh. The private key belongs to the secrets list.
+# ssh. The private key comes from the sops file. oku decrypts it on sync with
+# the age key at ~/.config/sops/age/keys.txt, which I copy to a new machine by
+# hand.
+"{{home}}/.ssh/id_ed25519" = { secret = "../secrets/secrets.yaml", key = "ssh/id_ed25519" }
 "{{home}}/.ssh/config" = { link = "../files/ssh/config" }
-"{{home}}/.ssh/config-darwin" = { link = "../files/ssh/config-darwin", when = { os = "darwin" } }
 "{{home}}/.ssh/id_ed25519.pub" = { text = "{{sshpubkey}} {{email}}\n", mode = "0644" }
 "{{home}}/.ssh/allowed_signers" = { text = "{{email}} {{sshpubkey}}\n", mode = "0644" }
 
@@ -66,13 +67,8 @@
 # editorconfig
 "{{home}}/.editorconfig" = { link = "../files/editorconfig/editorconfig" }
 
-# mimi and skhd are macOS only. neru's exec_shell differs by OS, and the Linux
-# and Windows entries are in files-linux.toml and files-windows.toml, because
-# TOML allows a key once per table.
-"{{config}}/mimi/config.toml" = { render = "../files/mimi/config.toml.tmpl", when = { os = "darwin" } }
-"{{config}}/mimi/tiling" = { link = "../files/mimi/tiling", when = { os = "darwin" } }
-"{{config}}/neru/config.toml" = { render = "../files/neru/config.toml.tmpl", when = { os = "darwin" }, vars = { neru-shell = "/bin/dash", neru-shell-arg = "-lc" } }
-"{{config}}/skhd/skhdrc" = { link = "../files/skhd/skhdrc", when = { os = "darwin" } }
+# neru. Each OS list sets {{neru-shell}} and {{neru-shell-arg}}.
+"{{config}}/neru/config.toml" = { render = "../files/neru/config.toml.tmpl" }
 
 # opencode
 "{{config}}/opencode/tui.json" = { link = "../files/opencode/tui.json" }

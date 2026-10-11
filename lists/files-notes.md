@@ -1,5 +1,9 @@
 # Notes for lists/files.toml
 
+The macOS-only entries of these notes (kanata, mimi, skhd, the darwin parts of
+git and ssh) are in `darwin.toml`, and the Linux one (ghostty's mesa) is in
+`linux.toml`.
+
 ## Before the first sync
 
 oku refuses a path that exists and that it did not write. Every path of
@@ -110,9 +114,10 @@ first (switch home-manager off, or delete the links). These need a look:
 - The apps, their launchd agents and the ad-hoc codesign step belong to the
   package and service lists, not to this one.
 - neru: `exec_shell` is `{{neru-shell}}` and its one argument is
-  `{{neru-shell-arg}}`, set per entry: `/bin/dash -lc` on macOS in files.toml,
-  `/bin/sh -lc` on Linux in files-linux.toml and `cmd.exe /c` on Windows in
-  files-windows.toml.
+  `{{neru-shell-arg}}`. Each OS list sets both under `[vars]`: `/bin/dash -lc`
+  in darwin.toml, `/bin/sh -lc` in linux.toml and `cmd.exe /c` in
+  windows.toml. A new OS list must set them too, or the sync stops at the
+  template.
 - neru: `font_family = "JetBrainsMonoNLNFP-Bold"` is a PostScript name and not
   the `font` variable, so it stays literal.
 - skhd is a link, not a template, because its own `{{1}}` syntax would need an

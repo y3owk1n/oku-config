@@ -1,21 +1,22 @@
-# Every package, font and app, moved over from nix-system-config-v2.
+# Every package and font that more than one OS gets. What macOS alone gets is
+# in darwin.toml.
 # A ref that starts with ../packages/ is a manifest in this repo. A github: ref
 # with no #name has no manifest, oku infers one from the newest release.
 # What could not move is in packages-todo.md.
-
-# What the machine needs that no package here provides, which oku checks and
-# does not install. macOS ships git, ssh, python3 and less, and git and python3
-# run from the Command Line Tools. files/git/config.tmpl sends github.com
-# through ssh, which bootstrap/linux.sh installs on Linux.
-[host]
-xcode-clt = { path = "/Library/Developer/CommandLineTools/usr/bin/clang", install = "xcode-select --install", when = { os = "darwin" } }
-ssh = { command = "ssh", apt = "openssh-client", dnf = "openssh-clients", pacman = "openssh", when = { os = "linux" } }
+#
+# Some manifests build from source, the way their Homebrew formulae do it, and
+# say so at their top. They need the Command Line Tools on macOS, and the
+# packages of bootstrap/linux.sh on Linux. Their libraries (cmake, lz4, libpng,
+# jpeg-turbo, libuv, json-c, libwebsockets and others) are deps only, so they
+# are not listed.
 
 [packages]
 
 # cli
 ast-grep = "../packages/ast-grep.toml"
 bat = "../packages/bat.toml"
+btop = "../packages/btop.toml" # the static program of the release on Linux, the source needs C++23
+eza = "../packages/eza.toml"
 fd = "../packages/fd.toml"
 fzf = "github:junegunn/fzf"
 jq = "github:jqlang/jq"
@@ -23,7 +24,29 @@ mkcert = "github:FiloSottile/mkcert"
 rip2 = "../packages/rip2.toml" # the program is rip
 ripgrep = "../packages/ripgrep.toml"
 stripe-cli = "github:stripe/stripe-cli" # the program is stripe
-vhs = "../packages/vhs.toml" # runs ttyd from built.toml and ffmpeg
+ttyd = "../packages/ttyd.toml" # for vhs. Built from source on macOS alone, upstream builds no macOS one
+vhs = "../packages/vhs.toml" # runs ttyd and ffmpeg
+
+# compression
+brotli = "../packages/brotli.toml"
+xz = "../packages/xz.toml"
+zstd = "../packages/zstd.toml" # brings lz4 as a dep
+
+# images
+gifsicle = "../packages/gifsicle.toml"
+imagemagick = "../packages/imagemagick.toml" # zlib, bzip2 and expat come from the system on Linux
+jpegoptim = "../packages/jpegoptim.toml"
+libwebp = "../packages/libwebp.toml" # cwebp and dwebp
+optipng = "../packages/optipng.toml"
+pngquant = "../packages/pngquant.toml"
+
+# documents
+ghostscript = "../packages/ghostscript.toml" # the program is gs
+poppler = "../packages/poppler.toml" # pdftoppm and pdftotext
+
+# media tools for uts
+ffmpeg = "../packages/ffmpeg.toml"
+ffprobe = "../packages/ffprobe.toml"
 
 # shell
 atuin = { ref = "../packages/atuin.toml", service = true }
@@ -50,11 +73,9 @@ fish-lsp = "npm:fish-lsp"
 prettierd = "npm:@fsouza/prettierd"
 vscode-langservers-extracted = "npm:vscode-langservers-extracted"
 yaml-language-server = "npm:yaml-language-server"
-
-# media tools for uts
-ffmpeg = "../packages/ffmpeg.toml"
-ffprobe = "../packages/ffprobe.toml"
-libwebp = "../packages/libwebp.toml" # cwebp and dwebp
+# lua 5.1 for Neovim plugins
+lua = "../packages/lua.toml"
+luarocks = "../packages/luarocks.toml"
 
 # security
 age = "github:FiloSottile/age" # age, age-keygen and the plugins
@@ -71,22 +92,12 @@ opencode = "../packages/opencode.toml"
 # keyboard remapper, which upstream builds for x86-64 Linux only
 kanata = { ref = "../packages/kanata.toml", when = [{ os = "darwin" }, { os = "linux", arch = "amd64" }] }
 
-# macos apps
-affinity = { ref = "../packages/affinity.toml", when = { os = "darwin" } }
-skhd = { ref = "../packages/skhd.toml", service = true, when = { os = "darwin" } }
-utm = { ref = "../packages/utm.toml", when = { os = "darwin" } }
-# virtualbuddy = { ref = "../packages/virtualbuddy.toml", when = { os = "darwin" } }
-
-# messaging
-# Discord and WhatsApp update themselves, see packages-todo.md.
-
 # fonts
 jetbrains-mono-nerd-font = "../packages/jetbrains-mono-nerd-font.toml"
 poppins = "../packages/poppins.toml"
 symbols-nerd-font = "../packages/symbols-nerd-font.toml"
 
 # my own tools
-mimi = { ref = "github:y3owk1n/mimi#mimi-main", service = true, when = { os = "darwin" } }
 neru = { ref = "github:y3owk1n/neru#neru-main", service = true }
 uts = "github:y3owk1n/uts#uts-main"
 friendly = "github:friendly-social-ai/cli"

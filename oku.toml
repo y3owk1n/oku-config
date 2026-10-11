@@ -2,17 +2,14 @@
 # includes. Nothing here needs root. What does is in bootstrap/.
 
 include = [
-  "./lists/packages.toml", # every package and font
-  "./lists/apps.toml",     # macOS apps, written from the Homebrew cask data
-  "./lists/rust-built.toml", # tools built from source with cargo
-  "./lists/built.toml",    # tools built from source with cc and make
-  "./lists/built-media.toml", # imagemagick and poppler, built from source
-  "./lists/files.toml",    # program configs and templates
-  "./lists/files-linux.toml", # the Linux side of entries that differ by OS
-  "./lists/files-windows.toml", # the Windows side of entries that differ by OS
+  "./lists/packages.toml", # every shared package and font
+  "./lists/apps.toml",     # desktop apps that are not macOS-only
+  "./lists/files.toml",    # program configs, templates and the SSH key
   "./lists/ai.toml",       # agent skills and instructions
-  "./lists/macos.toml",    # macOS settings, skipped on other systems
-  "./lists/system-apps.toml" # system apps
+  # What one OS alone gets. Nothing inside these needs a when of its own.
+  { ref = "./lists/darwin.toml", when = { os = "darwin" } },
+  { ref = "./lists/linux.toml", when = { os = "linux" } },
+  { ref = "./lists/windows.toml", when = { os = "windows" } },
 ]
 
 # oku.lock pins every package for these platforms besides the machine that
@@ -55,11 +52,6 @@ base0C = "5ab5a0"
 base0D = "6aadcf"
 base0E = "c595d4"
 base0F = "bf8a6e"
-
-# The private SSH key, from the sops file. oku decrypts it on sync with the age
-# key at ~/.config/sops/age/keys.txt, which I copy to a new machine by hand.
-[files]
-"{{home}}/.ssh/id_ed25519" = { secret = "./secrets/secrets.yaml", key = "ssh/id_ed25519" }
 
 # Variables for every shell and for oku exec. Fish's own startup values, such
 # as the XDG folders, the locale and TERM, stay in files/fish/config.fish.

@@ -2,9 +2,9 @@
 
 One line each: the package, why it is not in a list, and what to do. Most of
 what was here has moved since: the apps came from the Homebrew cask data
-(`lists/apps.toml`), and the tools with no macOS program from upstream are built
-from source, the way their Homebrew formulae do it (`lists/built.toml`,
-`lists/rust-built.toml`, `lists/built-media.toml`).
+(`lists/apps.toml` and `lists/darwin.toml`), and the tools with no macOS program
+from upstream are built from source, the way their Homebrew formulae do it
+(`lists/packages.toml`).
 
 ## Covered by macOS itself
 
@@ -16,8 +16,8 @@ from source, the way their Homebrew formulae do it (`lists/built.toml`,
 
 ## Needs a step by hand after oku
 
-- tailscale: oku puts the standalone app in /Applications (`lists/system-apps.toml`). On first launch you approve its network extension and the VPN configuration. Before removing it, turn the extension off with `tailscale configure sysext deactivate`, or oku refuses.
-- karabiner driver for kanata: oku puts the Manager app in /Applications and runs the daemon as a root service (`lists/system-apps.toml`). `bootstrap/macos.sh` turns the driver on once. The driver stays at 6.2.0 while kanata is older than v1.13.0, see packages/karabiner-driver.toml.
+- tailscale: oku puts the standalone app in /Applications (`lists/darwin.toml`). On first launch you approve its network extension and the VPN configuration. Before removing it, turn the extension off with `tailscale configure sysext deactivate`, or oku refuses.
+- karabiner driver for kanata: oku puts the Manager app in /Applications and runs the daemon as a root service (`lists/darwin.toml`). `bootstrap/macos.sh` turns the driver on once. The driver stays at 6.2.0 while kanata is older than v1.13.0, see packages/karabiner-driver.toml.
 
 ## Not moved yet
 

@@ -58,8 +58,8 @@ agent parts of `modules/home/packages/common-ai.nix` from the Nix config.
    path that exists and that it did not write, and names it. The paths are the
    25 links in each of the three skill directories, `~/.claude/CLAUDE.md` and
    `~/.claude/agents/quick.md`. Keep `~/.claude/skills/synced`.
-3. Run `oku sync`. A new include needs no `oku update`. A later edit of
-   `lists/ai.toml` does.
+3. Run `oku sync`. A new include needs no `oku update`, and nor does a later
+   edit of `lists/ai.toml`.
 4. Delete `.agent-skills-managed.json` from the three skill directories.
 5. Check: `ls ~/.claude/skills/*/SKILL.md | wc -l` prints 25 plus the `synced`
    ones, and the other two directories print 25.
@@ -94,6 +94,6 @@ Each `packages/skills-<source>.toml` follows the main branch of its repo, and
 ### Add a skill
 
 `files/skills/add-skill/SKILL.md` has the steps for a local skill and for a new
-repo. In short: three link entries per skill in `lists/ai.toml`, one per target,
-then `oku update`. A change of `lists/ai.toml` always needs `oku update`, not
-`oku sync`, because `oku.lock` pins the content of an included list.
+repo. In short: one link entry per skill in `lists/ai.toml`, with the other two
+targets in `also`, then `oku sync`. oku reads a local include as it is, so a
+change of `lists/ai.toml` needs no `oku update`.

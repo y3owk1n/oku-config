@@ -1,0 +1,7 @@
+# What Windows alone gets. ../oku.toml includes this list under
+# when = { os = "windows" }.
+
+# neru wants an absolute exec_shell. cmd.exe is its own default on Windows.
+[vars]
+neru-shell = "C:/Windows/System32/cmd.exe"
+neru-shell-arg = "/c"

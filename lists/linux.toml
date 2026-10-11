@@ -1,0 +1,15 @@
+# What Linux alone gets. ../oku.toml includes this list under
+# when = { os = "linux" }, so no entry here needs a when of its own.
+
+# files/git/config.tmpl sends github.com through ssh.
+[host]
+ssh = { command = "ssh", apt = "openssh-client", dnf = "openssh-clients", pacman = "openssh" }
+
+# neru's exec_shell and its one argument, for files/neru/config.toml.tmpl.
+[vars]
+neru-shell = "/bin/sh"
+neru-shell-arg = "-lc"
+
+[files]
+# ghostty loads the host's mesa through this, see packages/ghostty.toml.
+"{{config}}/ghostty/egl-mesa.json" = { link = "../files/ghostty/egl-mesa.json" }

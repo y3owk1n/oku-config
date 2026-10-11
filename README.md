@@ -12,14 +12,15 @@ way or not at all.
 
 | Path | What it holds |
 |---|---|
-| `oku.toml` | The lists to include, the node of the npm packages, my variables, the Forest Ink theme and the SSH key entry |
+| `oku.toml` | The lists to include, one per OS under a `when`, the node of the npm packages, my variables, the Forest Ink theme and `[env]` |
 | `oku.lock` | Resolved versions and hashes. oku writes it, change it with oku commands only |
-| `lists/packages.toml` | Packages with a prebuilt download, and the fonts |
-| `lists/apps.toml` | macOS apps, written from the Homebrew cask data |
-| `lists/built.toml`, `lists/rust-built.toml`, `lists/built-media.toml` | Tools that oku builds from source |
-| `lists/files.toml` | Program configs: links, fixed text and templates |
+| `lists/packages.toml` | Packages and fonts for every OS, prebuilt or built from source, grouped by what they are for |
+| `lists/apps.toml` | Desktop apps for more than one OS, written from the Homebrew cask data |
+| `lists/files.toml` | Program configs for every OS: links, fixed text, templates and the SSH key |
 | `lists/ai.toml` | Agent skills and instructions, linked into three tools |
-| `lists/macos.toml` | 202 macOS settings. Skipped on other systems |
+| `lists/darwin.toml` | What macOS alone gets: apps, the window tools, the system-scope apps, configs and `[host]` |
+| `lists/macos.toml` | 202 macOS settings, included from `lists/darwin.toml` |
+| `lists/linux.toml`, `lists/windows.toml` | What Linux or Windows alone gets |
 | `packages/` | My own package manifests |
 | `files/` | The configs and templates that `lists/files.toml` and `lists/ai.toml` place |
 | `secrets/` | The sops file with my SSH key. Only ciphertext |
@@ -57,17 +58,14 @@ move and why), `lists/files-notes.md`, `lists/ai-notes.md` and
 
    A new machine has no SSH key yet, so use the https URL there.
 
-4. If the user name is not `kylewong`, edit one line: `NewWindowTargetPath` in
-   `lists/macos.toml`.
-
-5. Set a GitHub token. About 20 packages ask the GitHub API for their newest
+4. Set a GitHub token. About 20 packages ask the GitHub API for their newest
    release, and an anonymous machine reaches the rate limit:
 
    ```sh
    export GITHUB_TOKEN=<a token with no scopes>
    ```
 
-6. Look before applying. A dry run checks everything and changes nothing:
+5. Look before applying. A dry run checks everything and changes nothing:
 
    ```sh
    oku sync --dry-run --yes
@@ -76,22 +74,22 @@ move and why), `lists/files-notes.md`, `lists/ai-notes.md` and
    `--yes` approves the install step of the five npm packages. Without it oku
    asks for each one.
 
-7. Apply it. The first sync downloads about 9 GB and compiles about thirty
+6. Apply it. The first sync downloads about 9 GB and compiles about thirty
    packages, so it takes a while:
 
    ```sh
    oku sync --yes
    ```
 
-8. Run `oku sync --system` for the apps and services in
-   `lists/system-apps.toml`: Tailscale, and the Karabiner driver and daemon
+7. Run `oku sync --system` for the system-scope apps and services in
+   `lists/darwin.toml`: Tailscale, and the Karabiner driver and daemon
    that kanata needs.
 
    Then run `bootstrap/macos.sh`. It asks before each group: host name,
    firewall, time zone, login window, Touch ID for sudo, fish as the login
    shell, and turning on the Karabiner driver.
 
-9. Once, by hand: `bat cache --build`, `gh auth login`, `atuin login`. Grant
+8. Once, by hand: `bat cache --build`, `gh auth login`, `atuin login`. Grant
    Accessibility to mimi, neru and skhd when macOS asks.
 
 `oku rollback` goes back one generation: packages, files, settings and
@@ -113,8 +111,8 @@ because older releases have no libei, and the script says what to do there.
    sh ~/.config/oku/bootstrap/linux.sh
    ```
 
-3. `oku sync --yes`. oku skips the macOS apps, the macOS settings in
-   `lists/macos.toml` and every entry with `when = { os = "darwin" }`.
+3. `oku sync --yes`. oku skips `lists/darwin.toml`, with the macOS apps and
+   settings in it, because `oku.toml` includes it under `when = { os = "darwin" }`.
 
 `oku.lock` pins the Linux downloads too, because `[lock] platforms` in
 `oku.toml` names them. That includes what the Go, Rust and npm builds download:
@@ -157,9 +155,12 @@ opencode and the nvim palette file render again in one generation. Then run
 ## Adding things
 
 - A package: `oku add github:owner/repo`, or write `packages/<name>.toml` and
-  add it to `lists/packages.toml`.
+  add it to `lists/packages.toml`. One that only macOS gets goes in
+  `lists/darwin.toml`, with no `when`.
 - A config file: put it under `files/<program>/` and add an entry to
-  `lists/files.toml`. Name a template `.tmpl`.
+  `lists/files.toml`, or to the OS list when one OS alone gets it. Name a
+  template `.tmpl`. A value that differs by OS goes under `[vars]` in each OS
+  list, as `neru-shell` does.
 - A macOS setting: add the key under its domain in `lists/macos.toml`. Check the
   type on a Mac that has it with `defaults read-type <domain> <key>`. A float
   needs a decimal point.

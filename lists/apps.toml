@@ -1,14 +1,8 @@
-# Desktop apps. The top of each manifest says where its versions come from.
-# orbstack and whatsapp have no Linux build, and discord none for arm64 Linux.
+# Desktop apps that more than one OS gets. The macOS-only ones are in
+# darwin.toml. The top of each manifest says where its versions come from.
+# Discord has no arm64 Linux build. It updates itself, see packages-todo.md.
 
 [packages]
 brave = "../packages/brave.toml"
 discord = { ref = "../packages/discord.toml", when = [{ os = "darwin" }, { os = "linux", arch = "amd64" }] }
 firefox = "../packages/firefox.toml"
-orbstack = { ref = "../packages/orbstack.toml", when = { os = "darwin" } }
-whatsapp = { ref = "../packages/whatsapp.toml", when = { os = "darwin" } }
-
-# docker finds `docker compose` and `docker buildx` here.
-[files]
-"{{home}}/.docker/cli-plugins/docker-buildx" = { link = "{{pkg.orbstack}}/OrbStack.app/Contents/MacOS/xbin/docker-buildx", when = { os = "darwin" } }
-"{{home}}/.docker/cli-plugins/docker-compose" = { link = "{{pkg.orbstack}}/OrbStack.app/Contents/MacOS/xbin/docker-compose", when = { os = "darwin" } }

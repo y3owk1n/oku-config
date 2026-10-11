@@ -9,27 +9,7 @@ ref = './lists/apps.toml'
 sha256 = ''
 
 [[include]]
-ref = './lists/rust-built.toml'
-sha256 = ''
-
-[[include]]
-ref = './lists/built.toml'
-sha256 = ''
-
-[[include]]
-ref = './lists/built-media.toml'
-sha256 = ''
-
-[[include]]
 ref = './lists/files.toml'
-sha256 = ''
-
-[[include]]
-ref = './lists/files-linux.toml'
-sha256 = ''
-
-[[include]]
-ref = './lists/files-windows.toml'
 sha256 = ''
 
 [[include]]
@@ -37,11 +17,19 @@ ref = './lists/ai.toml'
 sha256 = ''
 
 [[include]]
+ref = './lists/darwin.toml'
+sha256 = ''
+
+[[include]]
 ref = './lists/macos.toml'
 sha256 = ''
 
 [[include]]
-ref = './lists/system-apps.toml'
+ref = './lists/linux.toml'
+sha256 = ''
+
+[[include]]
+ref = './lists/windows.toml'
 sha256 = ''
 
 [[package]]

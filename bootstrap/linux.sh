@@ -11,7 +11,7 @@
 # pipewire, as its docs/LINUX_SETUP.md lists them. On Fedora liboeffis-devel is
 # its own package. Debian 12 and Ubuntu 22.04
 # have no libei, so neru cannot build there. The script says so, and then the
-# neru line in lists/packages.toml needs `when = { os = "darwin" }` on that
+# neru line moves from lists/packages.toml to lists/darwin.toml on that
 # machine.
 #
 # fuse is for the AppImage of ghostty, which mounts itself to run.
@@ -72,7 +72,7 @@ fi
 if [ -n "$NERU" ]; then
 	echo
 	echo "neru cannot build here: $NERU."
-	echo "Give its line in lists/packages.toml when = { os = \"darwin\" } on this machine."
+	echo "Move its line from lists/packages.toml to lists/darwin.toml on this machine."
 fi
 
 # fish from oku as the login shell, as bootstrap/macos.sh does. The chsh of

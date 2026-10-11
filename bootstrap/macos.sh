@@ -338,7 +338,7 @@ fi
 # ---------------------------------------------------------------------------
 # 9. Karabiner DriverKit VirtualHIDDevice (kanata needs it)
 # ---------------------------------------------------------------------------
-# packages/karabiner-driver.toml in lists/system-apps.toml puts the Manager app
+# packages/karabiner-driver.toml in lists/darwin.toml puts the Manager app
 # in /Applications and runs the daemon as a root service, after
 # `oku sync --system`. What is left is to turn the driver on once, then allow
 # it in System Settings > General > Login Items & Extensions > Driver
@@ -357,7 +357,7 @@ fi
 # ---------------------------------------------------------------------------
 # 10. Tailscale (advice only, nothing is installed here)
 # ---------------------------------------------------------------------------
-# packages/tailscale.toml in lists/system-apps.toml puts the standalone app in
+# packages/tailscale.toml in lists/darwin.toml puts the standalone app in
 # /Applications after `oku sync --system`. On its first launch it asks to turn
 # on its network extension, and you approve that and the VPN configuration
 # once and sign in. None of that can be done unattended.
