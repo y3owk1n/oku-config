@@ -918,7 +918,7 @@ sha256 = 'ac9c8efac980bb0505ead384d087e2acb6486fd8498691a2165fa174ec6118c2'
 name = 'imagemagick'
 ref = './packages/imagemagick.toml'
 manifest_sha256 = 'd8f50a9df521d177a6b0377cd3935787982a7a80602ee164f151fbbcbb2dde67'
-version = '7.1.2-32'
+version = '7.1.2-33'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -2058,21 +2058,21 @@ sha256 = 'db8e124527f7f8048e3e6c91821b9c52ef173d92c01e47d221bf1337afd962fb'
 [[package]]
 name = 'mimi'
 ref = 'github:y3owk1n/mimi#mimi-main'
-commit = 'c1eff797a001f33fc0033140857fb5310da1ada9'
-manifest_sha256 = '3a588cf8b0887c5f2fb407ce6c037dbbaeab50ada89c9568b9e7660277fe930e'
-version = '2026.10.10-c1eff79'
+commit = 'ac7b7f9dad33711b75644597b8ef569d4464ebf9'
+manifest_sha256 = '8f46313f0fe2255da0f41fb86705c21e702b920e81321a5cb34dd1ba4b250f20'
+version = '2026.10.11-ac7b7f9'
 tag = 'main'
-tag_commit = 'c1eff797a001f33fc0033140857fb5310da1ada9'
+tag_commit = 'ac7b7f9dad33711b75644597b8ef569d4464ebf9'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
-vendor_sha256 = '57c96443cdb57e8b66883f800ec66fbb806d679fb42757aa4403fe4a3c0b7a9c'
+vendor_sha256 = 'd9ba83eedb7788ead60ff8e6cfc575847f8aac2ebdf3adaef871236a5cda117c'
 
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/mimi#.oku/go.toml'
-commit = 'c1eff797a001f33fc0033140857fb5310da1ada9'
+commit = 'ac7b7f9dad33711b75644597b8ef569d4464ebf9'
 manifest_sha256 = '850dfc0af428be9b5da144c08de9d6c247b2bd41a401c160d99a076a8ce62691'
 version = '1.26.9'
 tag = 'go1.26.9'
@@ -2114,13 +2114,13 @@ sha256 = 'b98f2cc69fd9147fe4d405d859c57504571adec0d3611c3eefd04107c7ac00d0'
 name = 'mole'
 ref = './packages/mole.toml'
 manifest_sha256 = 'b3eab2b99ef01741e7a15eb8138099a633c61409907c5abbdfb39c0ab3b2b5da'
-version = '1.58.0'
-tag = 'V1.58.0'
+version = '1.59.1'
+tag = 'V1.59.1'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
-vendor_sha256 = 'f09966fbbfa813463809f39ef2d7996d681617e22d5c608a8a704ebd48619cc1'
+vendor_sha256 = 'ff5c178fd9329b037de57a9bdec3cc6bafdd48932dad58f5c09ef815a55714d8'
 
 [[package.dep]]
 name = 'go'
@@ -2197,7 +2197,7 @@ tag_commit = '7e1ae5115f1f7088abe329892948708fc809d45e'
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz'
-sha256 = '9d5f3fc10e411fac811f1716a8f11ccf21d7d0cdb657a14ebf78d48e9c61c3ae'
+sha256 = '074222039d7f4d7793f0b7c5c5aee2c329b41035b1e919236240fb2edcbe4b08'
 verified = 'published'
 
 [package.platform.linux-amd64-glibc]
@@ -3987,9 +3987,9 @@ strategy = 'build'
 name = 'skills-cursor'
 ref = './packages/skills-cursor.toml'
 manifest_sha256 = 'f14e9e0ad27c8f08839e713b96fadd53b11a7d4c53e662980666d0dcfd6c310e'
-version = '2026.10.11-9d76bca'
+version = '2026.10.11-11713c6'
 tag = 'main'
-tag_commit = '9d76bcab133aefcccb16121d7be874e6aa823729'
+tag_commit = '11713c683fe4add4fd403ea880580abbc9e0875f'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4005,9 +4005,9 @@ strategy = 'build'
 name = 'skills-emil'
 ref = './packages/skills-emil.toml'
 manifest_sha256 = '088a5cf1c5645235c33a1dd2a1d6aa9d2377dc8ed319c13ff4ff23d7b2e72119'
-version = '2026.10.02-e8a175d'
+version = '2026.10.11-6465079'
 tag = 'main'
-tag_commit = 'e8a175de22ae1e49370fc144c1f3bb9aeedf988d'
+tag_commit = '6465079742eb019bc419caf2c352ecda03f5dfd8'
 
 [package.platform]
 [package.platform.darwin-arm64]
