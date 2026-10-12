@@ -98,6 +98,14 @@ vim.lsp.config("nixd", {
 })
 
 -- =========================================================
+--  Taplo overrides (so that toml templates are not excluded)
+-- =========================================================
+
+vim.lsp.config("taplo", {
+  cmd = { "taplo", "lsp", "--config", vim.fn.stdpath("config") .. "/taplo.toml", "stdio" },
+})
+
+-- =========================================================
 --  Tailwind overrides
 -- =========================================================
 
@@ -171,6 +179,7 @@ enable_lsp_if_available({
   "prismals",
   "rust_analyzer",
   "tailwindcss",
+  "taplo",
   "vtsls",
   "yamlls",
 })

@@ -134,6 +134,11 @@ vim.filetype.add({
 
 vim.treesitter.language.register("markdown", "markdown.mdx")
 
+-- oku templates, e.g. config.toml.tmpl
+vim.filetype.add({
+  pattern = { [".*%.toml%.tmpl"] = "toml" },
+})
+
 -- =========================================================
 --  Git Diff
 -- =========================================================

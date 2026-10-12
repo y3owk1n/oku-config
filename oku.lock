@@ -4148,6 +4148,34 @@ sha256 = '67ec55f18ee2afac0a8fb57f7811977f4ad6df1debd4a187fa0db3dbb5d401d5'
 verified = 'first-use'
 
 [[package]]
+name = 'taplo'
+ref = 'github:tamasfe/taplo'
+commit = '08f343be02ce1b20296470396a42f0fa47820449'
+manifest_sha256 = '0dd612fed062d11624b87937fc6a11fc001d24c2199b7446e844bbdeddb48533'
+version = '0.10.0'
+inferred = true
+manifest = "[package]\nname = \"taplo\"\nhomepage = \"https://github.com/tamasfe/taplo\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"tamasfe/taplo\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/tamasfe/taplo/releases/download/{{tag}}/taplo-linux-x86_64.gz\"\nbin = [\"taplo\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/tamasfe/taplo/releases/download/{{tag}}/taplo-darwin-x86_64.gz\"\nbin = [\"taplo\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/tamasfe/taplo/releases/download/{{tag}}/taplo-linux-aarch64.gz\"\nbin = [\"taplo\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/tamasfe/taplo/releases/download/{{tag}}/taplo-darwin-aarch64.gz\"\nbin = [\"taplo\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm\" }\nurl = \"https://github.com/tamasfe/taplo/releases/download/{{tag}}/taplo-linux-armv7.gz\"\nbin = [\"taplo\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"riscv64\" }\nurl = \"https://github.com/tamasfe/taplo/releases/download/{{tag}}/taplo-linux-riscv64.gz\"\nbin = [\"taplo\"]\n"
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://github.com/tamasfe/taplo/releases/download/0.10.0/taplo-darwin-aarch64.gz'
+sha256 = '713734314c3e71894b9e77513c5349835eefbd52908445a0d73b0c7dc469347d'
+verified = 'first-use'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/tamasfe/taplo/releases/download/0.10.0/taplo-linux-x86_64.gz'
+sha256 = '8fe196b894ccf9072f98d4e1013a180306e17d244830b03986ee5e8eabeb6156'
+verified = 'first-use'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://github.com/tamasfe/taplo/releases/download/0.10.0/taplo-linux-aarch64.gz'
+sha256 = '033681d01eec8376c3fd38fa3703c79316f5e14bb013d859943b60a07bccdcc3'
+verified = 'first-use'
+
+[[package]]
 name = 'tmux'
 ref = './packages/tmux.toml'
 manifest_sha256 = '3eaae5f4c6bd37d5249106c660525bdbc5c43ff298796d10e518f3010464dc23'

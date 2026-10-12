@@ -1,0 +1,3 @@
+# Taplo reads only *.toml by default. Templates such as config.toml.tmpl are
+# toml too. A project with its own .taplo.toml replaces this file.
+include = ["**/*.toml", "**/*.toml.tmpl"]
