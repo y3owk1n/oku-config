@@ -354,7 +354,7 @@ verified = 'first-use'
 [[package]]
 name = 'difftastic'
 ref = 'github:Wilfred/difftastic'
-commit = '8a26f10e77f2a1d1a56b35bbc29c60f4c2ab1ea2'
+commit = 'e50e2fd97ce0f8075a85008d9bb4e0f71e90424f'
 manifest_sha256 = '6f6be2ead2b9ee388a9218c1f131c1a15566e234dac7b6e65b933786219bd38f'
 version = '0.71.0'
 inferred = true
@@ -702,27 +702,29 @@ name = 'fzf'
 ref = 'github:junegunn/fzf'
 commit = 'c0a193e031f01fb50bf6f7be4381990a3753f7cf'
 manifest_sha256 = 'faeb904b44161238caefcffb88c80fa6f790053860ba757580a7ec433e0e42d2'
-version = '0.74.4'
-tag = 'v0.74.4'
+version = '0.74.5'
+tag = 'v0.74.5'
 inferred = true
 manifest = "[package]\nname = \"fzf\"\nhomepage = \"https://github.com/junegunn/fzf\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"junegunn/fzf\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf-{{version}}-linux_amd64.tar.gz\"\nsha256_url = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf_{{version}}_checksums.txt\"\nbin = [\"fzf\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf-{{version}}-darwin_amd64.tar.gz\"\nsha256_url = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf_{{version}}_checksums.txt\"\nbin = [\"fzf\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf-{{version}}-linux_arm64.tar.gz\"\nsha256_url = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf_{{version}}_checksums.txt\"\nbin = [\"fzf\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf-{{version}}-darwin_arm64.tar.gz\"\nsha256_url = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf_{{version}}_checksums.txt\"\nbin = [\"fzf\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm\" }\nurl = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf-{{version}}-linux_armv7.tar.gz\"\nsha256_url = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf_{{version}}_checksums.txt\"\nbin = [\"fzf\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"riscv64\" }\nurl = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf-{{version}}-linux_riscv64.tar.gz\"\nsha256_url = \"https://github.com/junegunn/fzf/releases/download/{{tag}}/fzf_{{version}}_checksums.txt\"\nbin = [\"fzf\"]\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-darwin_arm64.tar.gz'
-sha256 = '4f6a113bfc0c7959e0005c78d566a51afc4fcefc956f43735c62a9deb19e92ae'
+url = 'https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-darwin_arm64.tar.gz'
+sha256 = 'ada808c7401b9949ce8842274ac16a6b6193fd32dcada396884a6a9a89e5985a'
 verified = 'checksum-file'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-linux_amd64.tar.gz'
-sha256 = '05e6813a337cc722c3ed07e54a764b75cc5d671e2e60459db0ba696ee5fa7504'
+url = 'https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-linux_amd64.tar.gz'
+sha256 = 'd47d7f882972c7d674dbbba998ffa4116e68379616ffac7695d0671e9a722c5f'
+verified = 'checksum-file'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/junegunn/fzf/releases/download/v0.74.4/fzf-0.74.4-linux_arm64.tar.gz'
-sha256 = '5d673b849f494f0d64ec471d8640b153ca8849e3846a31da17abdcfce8df6b46'
+url = 'https://github.com/junegunn/fzf/releases/download/v0.74.5/fzf-0.74.5-linux_arm64.tar.gz'
+sha256 = 'cf058001da21724a469b714a29cf4aab9cbe860d218a0d6c1b5b661efad7784c'
+verified = 'checksum-file'
 
 [[package]]
 name = 'gh'
@@ -1814,7 +1816,7 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 [[package]]
 name = 'jq'
 ref = 'github:jqlang/jq'
-commit = '611c575a97f0fbaaea9c334b2c70ffe3fa733f41'
+commit = '80fc7a169d3a3942a07f587abc4346d119fc525d'
 manifest_sha256 = 'f9e766ea364fbe94f87f4e0e08f9147c14d038f36cc18d8d73953c8f0fa50b23'
 version = '1.8.2'
 signer_workflow = 'jqlang/jq/.github/workflows/ci.yml'
@@ -1877,28 +1879,28 @@ verified = 'manifest'
 name = 'lazygit'
 ref = './packages/lazygit.toml'
 manifest_sha256 = 'cc927bbbb42456c52ec496797aba9c4d1a42bb8b17b22595eb43fa5acf3fe6f8'
-version = '0.66.0'
-tag = 'v0.66.0'
+version = '0.66.1'
+tag = 'v0.66.1'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/jesseduffield/lazygit/releases/download/v0.66.0/lazygit_0.66.0_darwin_arm64.tar.gz'
-sha256 = 'e9fe2fe1f1bbc1b4c3214b33e8e0d57a4d6e3c2276aa9aa713f9bcbdc223e65c'
+url = 'https://github.com/jesseduffield/lazygit/releases/download/v0.66.1/lazygit_0.66.1_darwin_arm64.tar.gz'
+sha256 = 'c66b15f666216142a2f39143f5540c6a572473f03fab014dae07c33cd76e719a'
 verified = 'checksum-file'
 commands = true
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/jesseduffield/lazygit/releases/download/v0.66.0/lazygit_0.66.0_linux_x86_64.tar.gz'
-sha256 = '5b45541155d20bd32bf2cc5ab5b7e3d91c2eebf0fb1242281350edc27d59d2b7'
+url = 'https://github.com/jesseduffield/lazygit/releases/download/v0.66.1/lazygit_0.66.1_linux_x86_64.tar.gz'
+sha256 = '7b3f30c2c06a42cf575280f907e58d7ea08411408b6b62bc926bc91cbc6c3f46'
 verified = 'checksum-file'
 commands = true
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/jesseduffield/lazygit/releases/download/v0.66.0/lazygit_0.66.0_linux_arm64.tar.gz'
-sha256 = '9a4fc4656897ac9f7877b835473ce1a75620cc267f554c57fc4ff266407f3257'
+url = 'https://github.com/jesseduffield/lazygit/releases/download/v0.66.1/lazygit_0.66.1_linux_arm64.tar.gz'
+sha256 = 'add91327af13343f37d2d610512d0982ef5c75da5cc962b5159748adc8a11a86'
 verified = 'checksum-file'
 commands = true
 
@@ -2127,11 +2129,11 @@ verified = 'checksum-file'
 [[package]]
 name = 'neru'
 ref = 'github:y3owk1n/neru#neru-main'
-commit = '8efb605af5195477f3b11fdb9b360e84d760ee0a'
+commit = '3174d845fcb8b7ca701c7935903820521be9b9fa'
 manifest_sha256 = 'e22f0cbf4f14f4dd7dcbc262b6d6cc069d3a9c6ed77e6bcbe8a2cbef681c8542'
-version = '2026.10.11-8efb605'
+version = '2026.10.12-3174d84'
 tag = 'main'
-tag_commit = '8efb605af5195477f3b11fdb9b360e84d760ee0a'
+tag_commit = '3174d845fcb8b7ca701c7935903820521be9b9fa'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -2149,7 +2151,7 @@ vendor_sha256 = '22df635c77134304b158d10e10c8ace5c6b0d9a732d1522517c809af7b0da7c
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/neru#.oku/go.toml'
-commit = '8efb605af5195477f3b11fdb9b360e84d760ee0a'
+commit = '3174d845fcb8b7ca701c7935903820521be9b9fa'
 manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
 version = '1.26.9'
 tag = 'go1.26.9'
@@ -2177,53 +2179,53 @@ verified = 'checksum-file'
 name = 'nvim'
 ref = './packages/nvim.toml'
 manifest_sha256 = 'e3ae4d0f5cabfa79a7b360bbd09bcf50c508487ceff65665b86c01b6f7952b50'
-version = '2026.10.09-7e1ae51'
+version = '2026.10.12-89370c0'
 tag = 'nightly'
-tag_commit = '7e1ae5115f1f7088abe329892948708fc809d45e'
+tag_commit = '89370c06d73b471187e1c43743ce01bb8bd7e8d4'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz'
-sha256 = '074222039d7f4d7793f0b7c5c5aee2c329b41035b1e919236240fb2edcbe4b08'
+sha256 = '7981a6b7f98ac8c487d1163c8e9d8b82680acf635a55a53f0fbc68b8449b3a39'
 verified = 'published'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz'
-sha256 = '97c107c0d76cb32f83579c988fde66a2051ef5c7ccafa86ad028e621e41ece1a'
+sha256 = '43486a08954d841078ed5ea9697c91c21f69272afc236a4f0ae6fa7a3770ab32'
 verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-arm64.tar.gz'
-sha256 = '43480c9107f1cc35a50434db4df50f13c5bf0d0be1fde34e97cb1bd5ade252c5'
+sha256 = 'f5fe1dce406ca299b215b7299a852402aa265cf636aa76072d9cffa226075d9f'
 verified = 'published'
 
 [[package]]
 name = 'opencode'
 ref = './packages/opencode.toml'
 manifest_sha256 = '016840d429a3f5cc1dc46121795c49ab9c4fb71c8d2ea6ea14b558e03c77e1f8'
-version = '1.18.35'
-tag = 'v1.18.35'
+version = '1.19.0'
+tag = 'v1.19.0'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/anomalyco/opencode/releases/download/v1.18.35/opencode-darwin-arm64.zip'
-sha256 = '80b05124357a77cd57945bfde36082a028e829c198d222d5e146617f49a2c4b7'
+url = 'https://github.com/anomalyco/opencode/releases/download/v1.19.0/opencode-darwin-arm64.zip'
+sha256 = '0d5f511948d6fbfedf9bb16753c0ac42613dcc8de75d9deb7e8d0cf584c8fba6'
 verified = 'published'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/anomalyco/opencode/releases/download/v1.18.35/opencode-linux-x64.tar.gz'
-sha256 = 'c8f888b451f5494a18f858fffb0e0b68f4e4baa9c241761c5f206884f0fa640d'
+url = 'https://github.com/anomalyco/opencode/releases/download/v1.19.0/opencode-linux-x64.tar.gz'
+sha256 = '7bb9e61ad6feacf2e89c10a6a2c1840e3de4220bb50ba1fc7110f31806076aec'
 verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/anomalyco/opencode/releases/download/v1.18.35/opencode-linux-arm64.tar.gz'
-sha256 = 'f7f2ba59ee8aa94d388f9696575a32d20e71c2ee48def9f80fc693a60fec6c72'
+url = 'https://github.com/anomalyco/opencode/releases/download/v1.19.0/opencode-linux-arm64.tar.gz'
+sha256 = 'e9841d43d3e1a8f36ed2691592d3b8b4fb097e606c8b559a277a1b845840e26b'
 verified = 'published'
 
 [[package]]
@@ -2255,13 +2257,14 @@ verified = 'first-use'
 name = 'orbstack'
 ref = './packages/orbstack.toml'
 manifest_sha256 = '915ec733324f697c7c6f293200751e04e91d24e9f882f74c2435400cb98ee618'
-version = '2.2.3_20963'
+version = '2.2.4_21120'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://cdn-updates.orbstack.dev/arm64/OrbStack_v2.2.3_20963_arm64.dmg'
-sha256 = '7ca77868f3a0d7d9f57b3f98615aad30cc59d23cc84bbff13f78846df0b493d4'
+url = 'https://cdn-updates.orbstack.dev/arm64/OrbStack_v2.2.4_21120_arm64.dmg'
+sha256 = 'f0c698e709c99fb3ee87f92c3a0445c6b8f5a10d6a0edd4f4d461925d194b86a'
+verified = 'first-use'
 
 [[package]]
 name = 'pngquant'
@@ -3975,9 +3978,9 @@ strategy = 'build'
 name = 'skills-cursor'
 ref = './packages/skills-cursor.toml'
 manifest_sha256 = 'f14e9e0ad27c8f08839e713b96fadd53b11a7d4c53e662980666d0dcfd6c310e'
-version = '2026.10.11-11713c6'
+version = '2026.10.12-1b6d44f'
 tag = 'main'
-tag_commit = '11713c683fe4add4fd403ea880580abbc9e0875f'
+tag_commit = '1b6d44ff26d4e242f4e8f68c391e6d2f7ca16def'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4011,9 +4014,9 @@ strategy = 'build'
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
 manifest_sha256 = '7fba70fc11069a991452cc72d0a8a6cd292c9574f4c11c4e0ae4f07041f21dc0'
-version = '2026.10.11-02cad61'
+version = '2026.10.12-993eb2c'
 tag = 'main'
-tag_commit = '02cad61166c4c20edbc8a3f71bd720eed4c1f49b'
+tag_commit = '993eb2c3151997ce08a49635c10fd8c8ef3713c7'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -5152,13 +5155,13 @@ sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
 name = 'whatsapp'
 ref = './packages/whatsapp.toml'
 manifest_sha256 = '899c45c2fb9ba4689b30e5aa2d93d556606c3cf234030f31f378111ac8ee6b96'
-version = '26.40.20'
+version = '26.41.14'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://web.whatsapp.com/desktop/mac_native/release/?version=2.26.40.20&extension=zip&configuration=Release&branch=master&is_buck=true'
-sha256 = 'adf7cc11f6e2d4ccbc4657c010ccba5f48bbf515f460910e3ad549e03e980e50'
+url = 'https://web.whatsapp.com/desktop/mac_native/release/?version=2.26.41.14&extension=zip&configuration=Release&branch=master&is_buck=true'
+sha256 = 'f73d9589c8ac8650287f671e6680b6e610e421a1d2570c88f01e5d30a059f9ea'
 verified = 'first-use'
 
 [[package]]
