@@ -855,26 +855,26 @@ tag = 'v1.3.1'
 name = 'gifsicle'
 ref = './packages/gifsicle.toml'
 manifest_sha256 = 'caae6c2c2648f3aad8796b5f42b6392983fc48e75d6a6cbea57c3a2be4338e6e'
-version = '1.96'
-tag = 'v1.96'
+version = '1.97'
+tag = 'v1.97'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://www.lcdf.org/gifsicle/gifsicle-1.96.tar.gz'
-sha256 = 'fd23d279681a6dfe3c15264e33f344045b3ba473da4d19f49e67a50994b077fb'
+url = 'https://www.lcdf.org/gifsicle/gifsicle-1.97.tar.gz'
+sha256 = '17d98f305372e8c6c47c3fa7c75a9ebd9a8dea0b47c739d0b3be6c30a1c1da7a'
 verified = 'first-use'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://www.lcdf.org/gifsicle/gifsicle-1.96.tar.gz'
-sha256 = 'fd23d279681a6dfe3c15264e33f344045b3ba473da4d19f49e67a50994b077fb'
+url = 'https://www.lcdf.org/gifsicle/gifsicle-1.97.tar.gz'
+sha256 = '17d98f305372e8c6c47c3fa7c75a9ebd9a8dea0b47c739d0b3be6c30a1c1da7a'
 verified = 'first-use'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://www.lcdf.org/gifsicle/gifsicle-1.96.tar.gz'
-sha256 = 'fd23d279681a6dfe3c15264e33f344045b3ba473da4d19f49e67a50994b077fb'
+url = 'https://www.lcdf.org/gifsicle/gifsicle-1.97.tar.gz'
+sha256 = '17d98f305372e8c6c47c3fa7c75a9ebd9a8dea0b47c739d0b3be6c30a1c1da7a'
 verified = 'first-use'
 
 [[package]]
@@ -1196,25 +1196,25 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 name = 'freetype'
 ref = './packages/freetype.toml'
 manifest_sha256 = '55256ce5ef95fba5ae7e8b9ca93f51a5e484b643ff0b7a20806e51639f70a024'
-version = '2.14.3'
+version = '2.15.0'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [[package.dep.dep]]
@@ -1569,25 +1569,25 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 name = 'freetype'
 ref = './packages/freetype.toml'
 manifest_sha256 = '55256ce5ef95fba5ae7e8b9ca93f51a5e484b643ff0b7a20806e51639f70a024'
-version = '2.14.3'
+version = '2.15.0'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [[package.dep.dep]]
@@ -2129,11 +2129,11 @@ verified = 'checksum-file'
 [[package]]
 name = 'neru'
 ref = 'github:y3owk1n/neru#neru-main'
-commit = '3174d845fcb8b7ca701c7935903820521be9b9fa'
+commit = 'bba935d7a0d2202965e67b65272374286f62b89b'
 manifest_sha256 = 'e22f0cbf4f14f4dd7dcbc262b6d6cc069d3a9c6ed77e6bcbe8a2cbef681c8542'
-version = '2026.10.12-3174d84'
+version = '2026.10.13-bba935d'
 tag = 'main'
-tag_commit = '3174d845fcb8b7ca701c7935903820521be9b9fa'
+tag_commit = 'bba935d7a0d2202965e67b65272374286f62b89b'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -2151,7 +2151,7 @@ vendor_sha256 = '22df635c77134304b158d10e10c8ace5c6b0d9a732d1522517c809af7b0da7c
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/neru#.oku/go.toml'
-commit = '3174d845fcb8b7ca701c7935903820521be9b9fa'
+commit = 'bba935d7a0d2202965e67b65272374286f62b89b'
 manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
 version = '1.26.9'
 tag = 'go1.26.9'
@@ -2451,25 +2451,25 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 name = 'freetype'
 ref = './packages/freetype.toml'
 manifest_sha256 = '55256ce5ef95fba5ae7e8b9ca93f51a5e484b643ff0b7a20806e51639f70a024'
-version = '2.14.3'
+version = '2.15.0'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [[package.dep.dep]]
@@ -2603,25 +2603,25 @@ verified = 'manifest'
 name = 'freetype'
 ref = './packages/freetype.toml'
 manifest_sha256 = '55256ce5ef95fba5ae7e8b9ca93f51a5e484b643ff0b7a20806e51639f70a024'
-version = '2.14.3'
+version = '2.15.0'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [[package.dep.dep.dep]]
@@ -2730,25 +2730,25 @@ verified = 'first-use'
 name = 'freetype'
 ref = './packages/freetype.toml'
 manifest_sha256 = '55256ce5ef95fba5ae7e8b9ca93f51a5e484b643ff0b7a20806e51639f70a024'
-version = '2.14.3'
+version = '2.15.0'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [[package.dep.dep.dep]]
@@ -3135,25 +3135,25 @@ sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
 name = 'freetype'
 ref = './packages/freetype.toml'
 manifest_sha256 = '55256ce5ef95fba5ae7e8b9ca93f51a5e484b643ff0b7a20806e51639f70a024'
-version = '2.14.3'
+version = '2.15.0'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [[package.dep.dep]]
@@ -3287,25 +3287,25 @@ verified = 'manifest'
 name = 'freetype'
 ref = './packages/freetype.toml'
 manifest_sha256 = '55256ce5ef95fba5ae7e8b9ca93f51a5e484b643ff0b7a20806e51639f70a024'
-version = '2.14.3'
+version = '2.15.0'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [[package.dep.dep.dep]]
@@ -3414,25 +3414,25 @@ verified = 'first-use'
 name = 'freetype'
 ref = './packages/freetype.toml'
 manifest_sha256 = '55256ce5ef95fba5ae7e8b9ca93f51a5e484b643ff0b7a20806e51639f70a024'
-version = '2.14.3'
+version = '2.15.0'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz'
-sha256 = '36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f'
+url = 'https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz'
+sha256 = '93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5'
 verified = 'first-use'
 
 [[package.dep.dep.dep]]
@@ -3978,9 +3978,9 @@ strategy = 'build'
 name = 'skills-cursor'
 ref = './packages/skills-cursor.toml'
 manifest_sha256 = 'f14e9e0ad27c8f08839e713b96fadd53b11a7d4c53e662980666d0dcfd6c310e'
-version = '2026.10.12-1b6d44f'
+version = '2026.10.13-fe53d9e'
 tag = 'main'
-tag_commit = '1b6d44ff26d4e242f4e8f68c391e6d2f7ca16def'
+tag_commit = 'fe53d9e9093dbb9ae298563b1a9d702dd6e2ca08'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4014,9 +4014,9 @@ strategy = 'build'
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
 manifest_sha256 = '7fba70fc11069a991452cc72d0a8a6cd292c9574f4c11c4e0ae4f07041f21dc0'
-version = '2026.10.12-993eb2c'
+version = '2026.10.12-30a58d4'
 tag = 'main'
-tag_commit = '993eb2c3151997ce08a49635c10fd8c8ef3713c7'
+tag_commit = '30a58d4498f270af1c1e981a7d78a15cf5740841'
 
 [package.platform]
 [package.platform.darwin-arm64]
