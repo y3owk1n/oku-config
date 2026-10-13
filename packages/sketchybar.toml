@@ -1,0 +1,28 @@
+[package]
+name = "sketchybar"
+description = "Status bar for macOS, configured from the shell"
+homepage = "https://github.com/FelixKratz/SketchyBar"
+license = "GPL-3.0"
+
+# The source is a git tag, which needs no sha256, so oku follows new releases.
+[version]
+from = "github-releases"
+repo = "FelixKratz/SketchyBar"
+strip_prefix = "v"
+
+# What the build needs of the machine, which oku checks and does not install.
+# The Command Line Tools give macOS its compiler, make and git.
+[host]
+xcode-clt = { path = "/Library/Developer/CommandLineTools/usr/bin/clang", install = "xcode-select --install" }
+
+# Releases carry no assets, so macOS builds from source, as Homebrew does.
+# Upstream builds for macOS alone.
+[build]
+needs = ["cc", "make", "git"]
+source = { git = "https://github.com/FelixKratz/SketchyBar", tag = "{{tag}}" }
+when = { os = "darwin" }
+
+# The makefile has no install target.
+[[build.step]]
+run = "make -j{{jobs}} && mkdir -p {{prefix}}/bin && cp bin/sketchybar {{prefix}}/bin/"
+shell = "sh"
