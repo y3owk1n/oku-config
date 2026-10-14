@@ -122,12 +122,14 @@ commands = true
 strategy = 'artifact'
 url = 'https://github.com/atuinsh/atuin/releases/download/v18.23.0/atuin-x86_64-unknown-linux-musl.tar.gz'
 sha256 = 'd1b40dd6e7cd3d823867ffe22b39a025bc420f7875926ae9ca974155378da14d'
+verified = 'checksum-file'
 commands = true
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/atuinsh/atuin/releases/download/v18.23.0/atuin-aarch64-unknown-linux-musl.tar.gz'
 sha256 = 'faf91adc71e6b661b21ed4f486babbd7af9d17363d4276da4a0251f83c72498d'
+verified = 'checksum-file'
 commands = true
 
 [[package]]
@@ -169,11 +171,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-x64.tar.gz'
 sha256 = '1084aa36196bba4c3a5e69a1ee388a6e4ff729dad09445fbcd434b28fe3c24af'
+verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-arm64.tar.gz'
 sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
+verified = 'checksum-file'
 
 [[package.dep]]
 name = 'node'
@@ -193,11 +197,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-x64.tar.gz'
 sha256 = '1084aa36196bba4c3a5e69a1ee388a6e4ff729dad09445fbcd434b28fe3c24af'
+verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-arm64.tar.gz'
 sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
+verified = 'checksum-file'
 
 [[package]]
 name = 'bat'
@@ -217,11 +223,13 @@ verified = 'published'
 strategy = 'artifact'
 url = 'https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-x86_64-unknown-linux-musl.tar.gz'
 sha256 = '0dcd8ac79732c0d5b136f11f4ee00e581440e16a44eab5b3105b611bbf2cf191'
+verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-aarch64-unknown-linux-musl.tar.gz'
 sha256 = '6369242c584065f195fb20cb36fbd7cb63ae690605bbe89868a7596b596c2c23'
+verified = 'published'
 
 [[package]]
 name = 'brave'
@@ -283,11 +291,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package]]
 name = 'btop'
@@ -371,11 +381,13 @@ verified = 'published'
 strategy = 'artifact'
 url = 'https://github.com/Wilfred/difftastic/releases/download/0.71.0/difft-0.71.0-x86_64-unknown-linux-gnu.tar.gz'
 sha256 = '61aea5394a53c56f144637cf39b3a0c0dafa27769731745e5851ff276e6478da'
+verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Wilfred/difftastic/releases/download/0.71.0/difft-0.71.0-aarch64-unknown-linux-gnu.tar.gz'
 sha256 = '5f046098b36ff985d0f99fec6f22cf74961db60386ff9d40df39fd99660aae2c'
+verified = 'published'
 
 [[package]]
 name = 'discord'
@@ -452,11 +464,13 @@ verified = 'published'
 strategy = 'artifact'
 url = 'https://github.com/sharkdp/fd/releases/download/v10.5.0/fd-v10.5.0-x86_64-unknown-linux-musl.tar.gz'
 sha256 = '761c72dc8e120d85b22292063be8a796e2eeb20eb3e4f38b8fa2343ccf3514a7'
+verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/sharkdp/fd/releases/download/v10.5.0/fd-v10.5.0-aarch64-unknown-linux-musl.tar.gz'
 sha256 = 'd76c4317f7d5dba69f8a2a15856c90c777e7f0dd4e85f0de8c76de6992c374d4'
+verified = 'published'
 
 [[package]]
 name = 'ffmpeg'
@@ -476,11 +490,13 @@ verified = 'published'
 strategy = 'artifact'
 url = 'https://github.com/eugeneware/ffmpeg-static/releases/download/b6.1.1/ffmpeg-linux-x64.gz'
 sha256 = 'bfe8a8fc511530457b528c48d77b5737527b504a3797a9bc4866aeca69c2dffa'
+verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/eugeneware/ffmpeg-static/releases/download/b6.1.1/ffmpeg-linux-arm64.gz'
 sha256 = '754a678672298bc68156adff58aa7385a592c2b30b1d0ae8750c45c915c4bac0'
+verified = 'published'
 
 [[package]]
 name = 'ffprobe'
@@ -500,11 +516,13 @@ verified = 'published'
 strategy = 'artifact'
 url = 'https://github.com/eugeneware/ffmpeg-static/releases/download/b6.1.1/ffprobe-linux-x64.gz'
 sha256 = '25d9b6ccb05e3d9de9e04e31e2506d8dd7f9f0418981965ac6df12e8d3afd067'
+verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/eugeneware/ffmpeg-static/releases/download/b6.1.1/ffprobe-linux-arm64.gz'
 sha256 = '2ab6aba60ee84412dff9188720703376cb4e7aaf7e0b5e43aa8249f2acae5bf8'
+verified = 'published'
 
 [[package]]
 name = 'firefox'
@@ -548,11 +566,13 @@ verified = 'published'
 strategy = 'artifact'
 url = 'https://github.com/fish-shell/fish-shell/releases/download/4.9.3/fish-4.9.3-linux-x86_64.tar.xz'
 sha256 = '8f643d10ad1abb0ef7072764c01ceb5cf61b2d373fda400cf60f0bad69b7e095'
+verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/fish-shell/fish-shell/releases/download/4.9.3/fish-4.9.3-linux-aarch64.tar.xz'
 sha256 = '57349f0111728c64b703a84e611aa97ff4d1fa8466385d64e67bd5bc3ffa49fc'
+verified = 'published'
 
 [[package]]
 name = 'fish-lsp'
@@ -593,11 +613,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-x64.tar.gz'
 sha256 = '1084aa36196bba4c3a5e69a1ee388a6e4ff729dad09445fbcd434b28fe3c24af'
+verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-arm64.tar.gz'
 sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
+verified = 'checksum-file'
 
 [[package.dep]]
 name = 'node'
@@ -617,11 +639,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-x64.tar.gz'
 sha256 = '1084aa36196bba4c3a5e69a1ee388a6e4ff729dad09445fbcd434b28fe3c24af'
+verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-arm64.tar.gz'
 sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
+verified = 'checksum-file'
 
 [[package]]
 name = 'freebuff'
@@ -745,12 +769,14 @@ commands = true
 strategy = 'artifact'
 url = 'https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_linux_amd64.tar.gz'
 sha256 = 'bb766f710eef8ede859c18578c72c327597cd4c8a85b06001b1f3843c6019386'
+verified = 'checksum-file'
 commands = true
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_linux_arm64.tar.gz'
 sha256 = '7862c86c72f43df3a2d93ddde6f473285b4e2af61b494849846827e513ef6484'
+verified = 'checksum-file'
 commands = true
 
 [[package]]
@@ -769,11 +795,13 @@ sha256 = 'd152725064c64f862da5158cd630d4c67973edfb58bdabaa44054ffef03b9d03'
 strategy = 'artifact'
 url = 'https://registry.npmjs.org/@actions/languageserver/-/languageserver-0.3.61.tgz'
 sha256 = 'd152725064c64f862da5158cd630d4c67973edfb58bdabaa44054ffef03b9d03'
+verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://registry.npmjs.org/@actions/languageserver/-/languageserver-0.3.61.tgz'
 sha256 = 'd152725064c64f862da5158cd630d4c67973edfb58bdabaa44054ffef03b9d03'
+verified = 'published'
 
 [[package.dep]]
 name = 'node'
@@ -793,11 +821,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-x64.tar.gz'
 sha256 = '1084aa36196bba4c3a5e69a1ee388a6e4ff729dad09445fbcd434b28fe3c24af'
+verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-arm64.tar.gz'
 sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
+verified = 'checksum-file'
 
 [[package]]
 name = 'ghostscript'
@@ -841,6 +871,7 @@ version = '1.3.1'
 strategy = 'artifact'
 url = 'https://github.com/pkgforge-dev/ghostty-appimage/releases/download/v1.3.1/Ghostty-1.3.1-x86_64.AppImage'
 sha256 = 'fde48d2b716afd1978766879bbf1aae30dd305e8ad86a1037a2614a14d82dc28'
+verified = 'published'
 version = '1.3.1'
 tag = 'v1.3.1'
 
@@ -848,6 +879,7 @@ tag = 'v1.3.1'
 strategy = 'artifact'
 url = 'https://github.com/pkgforge-dev/ghostty-appimage/releases/download/v1.3.1/Ghostty-1.3.1-aarch64.AppImage'
 sha256 = '55b7d1e2073b80954e23167a70f9e5994189d81e954d36dad4d2dc2d2fe6c121'
+verified = 'published'
 version = '1.3.1'
 tag = 'v1.3.1'
 
@@ -898,11 +930,13 @@ verified = 'published'
 strategy = 'artifact'
 url = 'https://github.com/git-lfs/git-lfs/releases/download/v3.8.0/git-lfs-linux-amd64-v3.8.0.tar.gz'
 sha256 = 'e455e00f15d9b95661b8d53498ffb0c3367962cf1ec73c31ab7369516cd6ab8d'
+verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/git-lfs/git-lfs/releases/download/v3.8.0/git-lfs-linux-arm64-v3.8.0.tar.gz'
 sha256 = 'ac9c8efac980bb0505ead384d087e2acb6486fd8498691a2165fa174ec6118c2'
+verified = 'published'
 
 [[package]]
 name = 'imagemagick'
@@ -938,13 +972,13 @@ verified = 'published'
 strategy = 'build'
 url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.8/pkgconf-3.0.8.tar.xz'
 sha256 = '943f0bc88bcaeceb630b00262e2a8ad5ea4fac3fba72a4267d8b9ec6b35d1194'
-verified = 'manifest'
+verified = 'published'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.8/pkgconf-3.0.8.tar.xz'
 sha256 = '943f0bc88bcaeceb630b00262e2a8ad5ea4fac3fba72a4267d8b9ec6b35d1194'
-verified = 'manifest'
+verified = 'published'
 
 [[package.dep]]
 name = 'jpeg-turbo'
@@ -980,11 +1014,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep]]
 name = 'libpng'
@@ -1056,11 +1092,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep.dep]]
 name = 'jpeg-turbo'
@@ -1096,11 +1134,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep.dep]]
 name = 'jpeg-turbo'
@@ -1136,11 +1176,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep]]
 name = 'libwebp-lib'
@@ -1186,11 +1228,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep]]
 name = 'freetype'
@@ -1235,11 +1279,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep.dep]]
 name = 'libpng'
@@ -1311,13 +1357,13 @@ verified = 'published'
 strategy = 'build'
 url = 'https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz'
 sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
-verified = 'manifest'
+verified = 'published'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz'
 sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
-verified = 'manifest'
+verified = 'published'
 
 [[package.dep]]
 name = 'jpeg-turbo'
@@ -1353,11 +1399,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep]]
 name = 'libpng'
@@ -1429,11 +1477,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep.dep]]
 name = 'jpeg-turbo'
@@ -1469,11 +1519,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep.dep]]
 name = 'jpeg-turbo'
@@ -1509,11 +1561,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep]]
 name = 'libwebp-lib'
@@ -1559,11 +1613,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep]]
 name = 'freetype'
@@ -1608,11 +1664,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep.dep]]
 name = 'libpng'
@@ -1684,13 +1742,13 @@ verified = 'published'
 strategy = 'build'
 url = 'https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz'
 sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
-verified = 'manifest'
+verified = 'published'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz'
 sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
-verified = 'manifest'
+verified = 'published'
 
 [[package]]
 name = 'jetbrains-mono-nerd-font'
@@ -1710,11 +1768,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/JetBrainsMono.zip'
 sha256 = 'fab782a66f7d3019da64f6572db9fc5d3a4bcb19f9fa13e2d8a62e3693d6396e'
+verified = 'checksum-file'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/JetBrainsMono.zip'
 sha256 = 'fab782a66f7d3019da64f6572db9fc5d3a4bcb19f9fa13e2d8a62e3693d6396e'
+verified = 'checksum-file'
 
 [[package]]
 name = 'jpegoptim'
@@ -1767,11 +1827,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep]]
 name = 'jpeg-turbo'
@@ -1807,11 +1869,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package]]
 name = 'jq'
@@ -1861,6 +1925,7 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/jtroo/kanata/releases/download/v1.12.0/linux-binaries-x64.zip'
 sha256 = '0bedd91567c5d7c54679061baadc37e4f83fb71750003999bc1d11f2c9754f36'
+verified = 'checksum-file'
 
 [[package]]
 name = 'karabiner-driver'
@@ -1944,11 +2009,13 @@ verified = 'manifest'
 strategy = 'build'
 url = 'https://www.lua.org/ftp/lua-5.1.5.tar.gz'
 sha256 = '2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333'
+verified = 'manifest'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://www.lua.org/ftp/lua-5.1.5.tar.gz'
 sha256 = '2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333'
+verified = 'manifest'
 
 [[package]]
 name = 'luarocks'
@@ -1993,11 +2060,13 @@ verified = 'manifest'
 strategy = 'build'
 url = 'https://www.lua.org/ftp/lua-5.1.5.tar.gz'
 sha256 = '2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333'
+verified = 'manifest'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://www.lua.org/ftp/lua-5.1.5.tar.gz'
 sha256 = '2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333'
+verified = 'manifest'
 
 [[package.dep]]
 name = 'lua'
@@ -2016,11 +2085,13 @@ verified = 'manifest'
 strategy = 'build'
 url = 'https://www.lua.org/ftp/lua-5.1.5.tar.gz'
 sha256 = '2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333'
+verified = 'manifest'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://www.lua.org/ftp/lua-5.1.5.tar.gz'
 sha256 = '2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333'
+verified = 'manifest'
 
 [[package]]
 name = 'marksman'
@@ -2039,11 +2110,13 @@ verified = 'published'
 strategy = 'artifact'
 url = 'https://github.com/artempyanykh/marksman/releases/download/2026-02-08/marksman-linux-x64'
 sha256 = 'be5098e8213219269c47fc0d916a66fa31ce0602ec967475c722260aabf26087'
+verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/artempyanykh/marksman/releases/download/2026-02-08/marksman-linux-arm64'
 sha256 = 'db8e124527f7f8048e3e6c91821b9c52ef173d92c01e47d221bf1337afd962fb'
+verified = 'published'
 
 [[package]]
 name = 'mimi'
@@ -2284,12 +2357,14 @@ vendor_sha256 = '54e379e8254c0a9b244e3bc31d1dae84ab2e56eb038cc36ea2d2313ba1b5a64
 strategy = 'build'
 url = 'https://static.crates.io/crates/pngquant/pngquant-3.0.3.crate'
 sha256 = '68a12bdd8825f9989f4ee9a6ab0b42727dae57728b939ef63453366697a07232'
+verified = 'published'
 vendor_sha256 = '54e379e8254c0a9b244e3bc31d1dae84ab2e56eb038cc36ea2d2313ba1b5a641'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://static.crates.io/crates/pngquant/pngquant-3.0.3.crate'
 sha256 = '68a12bdd8825f9989f4ee9a6ab0b42727dae57728b939ef63453366697a07232'
+verified = 'published'
 vendor_sha256 = '54e379e8254c0a9b244e3bc31d1dae84ab2e56eb038cc36ea2d2313ba1b5a641'
 
 [[package.dep]]
@@ -2325,11 +2400,13 @@ verified = 'manifest'
 strategy = 'artifact'
 url = 'https://github.com/itfoundry/Poppins/raw/v4.003/products/Poppins-4.003-GoogleFonts-TTF.zip'
 sha256 = '69cdf3e8bacecc99fd420186d26dd5769c004ee218034457b3691a1cf408967c'
+verified = 'manifest'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/itfoundry/Poppins/raw/v4.003/products/Poppins-4.003-GoogleFonts-TTF.zip'
 sha256 = '69cdf3e8bacecc99fd420186d26dd5769c004ee218034457b3691a1cf408967c'
+verified = 'manifest'
 
 [[package]]
 name = 'poppler'
@@ -2374,11 +2451,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep]]
 name = 'pkgconf'
@@ -2398,13 +2477,13 @@ verified = 'published'
 strategy = 'build'
 url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.8/pkgconf-3.0.8.tar.xz'
 sha256 = '943f0bc88bcaeceb630b00262e2a8ad5ea4fac3fba72a4267d8b9ec6b35d1194'
-verified = 'manifest'
+verified = 'published'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.8/pkgconf-3.0.8.tar.xz'
 sha256 = '943f0bc88bcaeceb630b00262e2a8ad5ea4fac3fba72a4267d8b9ec6b35d1194'
-verified = 'manifest'
+verified = 'published'
 
 [[package.dep]]
 name = 'brotli'
@@ -2441,11 +2520,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep]]
 name = 'freetype'
@@ -2490,11 +2571,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep.dep]]
 name = 'libpng'
@@ -2591,13 +2674,13 @@ verified = 'published'
 strategy = 'build'
 url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.8/pkgconf-3.0.8.tar.xz'
 sha256 = '943f0bc88bcaeceb630b00262e2a8ad5ea4fac3fba72a4267d8b9ec6b35d1194'
-verified = 'manifest'
+verified = 'published'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.8/pkgconf-3.0.8.tar.xz'
 sha256 = '943f0bc88bcaeceb630b00262e2a8ad5ea4fac3fba72a4267d8b9ec6b35d1194'
-verified = 'manifest'
+verified = 'published'
 
 [[package.dep.dep]]
 name = 'freetype'
@@ -2642,11 +2725,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep.dep.dep]]
 name = 'libpng'
@@ -2769,11 +2854,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep.dep.dep]]
 name = 'libpng'
@@ -2887,11 +2974,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep]]
 name = 'libpng'
@@ -2963,11 +3052,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep.dep]]
 name = 'jpeg-turbo'
@@ -3003,11 +3094,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep.dep]]
 name = 'jpeg-turbo'
@@ -3043,11 +3136,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep]]
 name = 'openjpeg'
@@ -3084,11 +3179,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep]]
 name = 'brotli'
@@ -3125,11 +3222,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep]]
 name = 'freetype'
@@ -3174,11 +3273,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep.dep]]
 name = 'libpng'
@@ -3275,13 +3376,13 @@ verified = 'published'
 strategy = 'build'
 url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.8/pkgconf-3.0.8.tar.xz'
 sha256 = '943f0bc88bcaeceb630b00262e2a8ad5ea4fac3fba72a4267d8b9ec6b35d1194'
-verified = 'manifest'
+verified = 'published'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.8/pkgconf-3.0.8.tar.xz'
 sha256 = '943f0bc88bcaeceb630b00262e2a8ad5ea4fac3fba72a4267d8b9ec6b35d1194'
-verified = 'manifest'
+verified = 'published'
 
 [[package.dep.dep]]
 name = 'freetype'
@@ -3326,11 +3427,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep.dep.dep]]
 name = 'libpng'
@@ -3453,11 +3556,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep.dep.dep]]
 name = 'libpng'
@@ -3571,11 +3676,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep]]
 name = 'libpng'
@@ -3647,11 +3754,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep.dep]]
 name = 'jpeg-turbo'
@@ -3687,11 +3796,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep.dep]]
 name = 'jpeg-turbo'
@@ -3727,11 +3838,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package.dep]]
 name = 'openjpeg'
@@ -3768,11 +3881,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
 sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
 sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+verified = 'checksum-file'
 
 [[package]]
 name = 'prettierd'
@@ -3813,11 +3928,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-x64.tar.gz'
 sha256 = '1084aa36196bba4c3a5e69a1ee388a6e4ff729dad09445fbcd434b28fe3c24af'
+verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-arm64.tar.gz'
 sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
+verified = 'checksum-file'
 
 [[package.dep]]
 name = 'node'
@@ -3837,11 +3954,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-x64.tar.gz'
 sha256 = '1084aa36196bba4c3a5e69a1ee388a6e4ff729dad09445fbcd434b28fe3c24af'
+verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-arm64.tar.gz'
 sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
+verified = 'checksum-file'
 
 [[package]]
 name = 'rip2'
@@ -3889,11 +4008,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-unknown-linux-musl.tar.gz'
 sha256 = '33e15bcf1624b25cdd2a55813a47a2f95dbe126268203e76aa6a585d1e7b149c'
+verified = 'checksum-file'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-aarch64-unknown-linux-gnu.tar.gz'
 sha256 = 'a740b91c82eaf9914cfedd353572f2791cbe0162c84101ee0951058f4dcbc90d'
+verified = 'checksum-file'
 
 [[package]]
 name = 'sesh'
@@ -4014,9 +4135,9 @@ strategy = 'build'
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
 manifest_sha256 = '7fba70fc11069a991452cc72d0a8a6cd292c9574f4c11c4e0ae4f07041f21dc0'
-version = '2026.10.14-954ce95'
+version = '2026.10.14-4233ed1'
 tag = 'main'
-tag_commit = '954ce953412867a57b7e067c076fa7fd395ea115'
+tag_commit = '4233ed1caded8c38f4bc14b14afe1f93ebcaf966'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4076,12 +4197,14 @@ commands = true
 strategy = 'artifact'
 url = 'https://github.com/starship/starship/releases/download/v1.26.0/starship-x86_64-unknown-linux-gnu.tar.gz'
 sha256 = '321f0dd7af8340a5f2e6a8fec6538a04f617486f9ec70d878f91c09cd8deef22'
+verified = 'checksum-file'
 commands = true
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/starship/starship/releases/download/v1.26.0/starship-aarch64-unknown-linux-musl.tar.gz'
 sha256 = 'dc30189378d2f2e287384e8a692d3f95ad1df64cf0e8c36aa9201516028aed6b'
+verified = 'checksum-file'
 commands = true
 
 [[package]]
@@ -4131,11 +4254,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/NerdFontsSymbolsOnly.zip'
 sha256 = 'fdca3682534f6f65e1ccb2345b0362ccf67d9b8eca7c8025330946e93e2473bc'
+verified = 'checksum-file'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/NerdFontsSymbolsOnly.zip'
 sha256 = 'fdca3682534f6f65e1ccb2345b0362ccf67d9b8eca7c8025330946e93e2473bc'
+verified = 'checksum-file'
 
 [[package]]
 name = 'tailscale-app'
@@ -4195,13 +4320,13 @@ verified = 'published'
 strategy = 'build'
 url = 'https://github.com/tmux/tmux/releases/download/3.8/tmux-3.8.tar.gz'
 sha256 = 'e79c699c7e949dccd0a4a125e17b8d1261e311b16979dbc8eb34542f3966d82e'
-verified = 'manifest'
+verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/tmux/tmux/releases/download/3.8/tmux-3.8.tar.gz'
 sha256 = 'e79c699c7e949dccd0a4a125e17b8d1261e311b16979dbc8eb34542f3966d82e'
-verified = 'manifest'
+verified = 'published'
 
 [[package.dep]]
 name = 'pkgconf'
@@ -4221,13 +4346,13 @@ verified = 'published'
 strategy = 'build'
 url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.8/pkgconf-3.0.8.tar.xz'
 sha256 = '943f0bc88bcaeceb630b00262e2a8ad5ea4fac3fba72a4267d8b9ec6b35d1194'
-verified = 'manifest'
+verified = 'published'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.8/pkgconf-3.0.8.tar.xz'
 sha256 = '943f0bc88bcaeceb630b00262e2a8ad5ea4fac3fba72a4267d8b9ec6b35d1194'
-verified = 'manifest'
+verified = 'published'
 
 [[package.dep]]
 name = 'libevent'
@@ -5121,11 +5246,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-x64.tar.gz'
 sha256 = '1084aa36196bba4c3a5e69a1ee388a6e4ff729dad09445fbcd434b28fe3c24af'
+verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-arm64.tar.gz'
 sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
+verified = 'checksum-file'
 
 [[package.dep]]
 name = 'node'
@@ -5145,11 +5272,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-x64.tar.gz'
 sha256 = '1084aa36196bba4c3a5e69a1ee388a6e4ff729dad09445fbcd434b28fe3c24af'
+verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-arm64.tar.gz'
 sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
+verified = 'checksum-file'
 
 [[package]]
 name = 'whatsapp'
@@ -5182,13 +5311,13 @@ verified = 'published'
 strategy = 'build'
 url = 'https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz'
 sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
-verified = 'manifest'
+verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
 url = 'https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz'
 sha256 = '0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9'
-verified = 'manifest'
+verified = 'published'
 
 [[package]]
 name = 'yaml-language-server'
@@ -5229,11 +5358,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-x64.tar.gz'
 sha256 = '1084aa36196bba4c3a5e69a1ee388a6e4ff729dad09445fbcd434b28fe3c24af'
+verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-arm64.tar.gz'
 sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
+verified = 'checksum-file'
 
 [[package.dep]]
 name = 'node'
@@ -5253,11 +5384,13 @@ verified = 'checksum-file'
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-x64.tar.gz'
 sha256 = '1084aa36196bba4c3a5e69a1ee388a6e4ff729dad09445fbcd434b28fe3c24af'
+verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-arm64.tar.gz'
 sha256 = '5ced2d48d1d7198739b7f86804de0171aefb6823b684b12341d3321afc3cb0b2'
+verified = 'checksum-file'
 
 [[package]]
 name = 'zoxide'
@@ -5277,11 +5410,13 @@ verified = 'published'
 strategy = 'artifact'
 url = 'https://github.com/ajeetdsouza/zoxide/releases/download/v0.10.0/zoxide-0.10.0-x86_64-unknown-linux-musl.tar.gz'
 sha256 = '2d93385b99f3e82cf2701609a1bffcad863fbeb75aa3fe7eb6be4d29be68b1ae'
+verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/ajeetdsouza/zoxide/releases/download/v0.10.0/zoxide-0.10.0-aarch64-unknown-linux-musl.tar.gz'
 sha256 = 'f1f16c5d6298d63dee467eedea1cdcd8490e43e493bea43acd416dc9033ef641'
+verified = 'published'
 
 [[package]]
 name = 'zstd'
