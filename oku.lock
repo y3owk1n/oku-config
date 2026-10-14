@@ -2202,11 +2202,11 @@ verified = 'checksum-file'
 [[package]]
 name = 'neru'
 ref = 'github:y3owk1n/neru#neru-main'
-commit = '8eace01756cfc85883e07f91014db772c0d97bf3'
-manifest_sha256 = '238cb2366cc9a493824e2849fb9bc6f34f4fe111a10f3f770b3a84959b1f4d06'
-version = '2026.10.14-8eace01'
+commit = 'fe77a3683c03b3b34b1d7c254ddd7a0fd8a00472'
+manifest_sha256 = 'f379339f52e3db3db53cab26f66be0f2f6df4890cf33e61877ef07d7f797e705'
+version = '2026.10.14-fe77a36'
 tag = 'main'
-tag_commit = '8eace01756cfc85883e07f91014db772c0d97bf3'
+tag_commit = 'fe77a3683c03b3b34b1d7c254ddd7a0fd8a00472'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -2224,7 +2224,7 @@ vendor_sha256 = 'feaee372d3c32e051e59ff544fde89eb9d4fb9db9d0a6366760fbf714e30fb2
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/neru#.oku/go.toml'
-commit = '8eace01756cfc85883e07f91014db772c0d97bf3'
+commit = 'fe77a3683c03b3b34b1d7c254ddd7a0fd8a00472'
 manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
 version = '1.26.9'
 tag = 'go1.26.9'
