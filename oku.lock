@@ -235,25 +235,25 @@ verified = 'published'
 name = 'brave'
 ref = './packages/brave.toml'
 manifest_sha256 = 'e2c3678f42df68c2c72bed052520fccf8280e79a6322ac13f7895eaff8070aa4'
-version = '1.97.56'
+version = '1.97.57'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/brave/brave-browser/releases/download/v1.97.56/Brave-Browser-arm64.dmg'
-sha256 = '3da1fb6e8b369c9dd1152afdf4d3cb24cb3c6215fabc520f8bff7cbb87f08587'
+url = 'https://github.com/brave/brave-browser/releases/download/v1.97.57/Brave-Browser-arm64.dmg'
+sha256 = '90d05322722d209d3a0211278b879a392b57e7124f83e15839bd669dc31b3eae'
 verified = 'checksum-file'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/brave/brave-browser/releases/download/v1.97.56/brave-browser-1.97.56-linux-amd64.zip'
-sha256 = '8acac76eae35942e30cc63e05adc772f632ad87be8a5ffb3d8a6e280380584ec'
+url = 'https://github.com/brave/brave-browser/releases/download/v1.97.57/brave-browser-1.97.57-linux-amd64.zip'
+sha256 = '8a08822ca82528b30c6f553988ec7214e6999ef362f6eff148d386f0053f903c'
 verified = 'checksum-file'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/brave/brave-browser/releases/download/v1.97.56/brave-browser-1.97.56-linux-arm64.zip'
-sha256 = 'f18823bfe8bf626a7412a2cc142ba851f991665ca31af8d750f80dbb8371f984'
+url = 'https://github.com/brave/brave-browser/releases/download/v1.97.57/brave-browser-1.97.57-linux-arm64.zip'
+sha256 = '96d040fa02ac6c9872b3864c08849779c72be4d4859e76ebfe6aedfc186922c8'
 verified = 'checksum-file'
 
 [[package]]
@@ -326,25 +326,25 @@ verified = 'published'
 name = 'claude-code'
 ref = './packages/claude-code.toml'
 manifest_sha256 = '1b9285b5b755fe2cf571042fcd0a46c0f3fb4de4b3198c9c3a896a78a200498a'
-version = '2.1.299'
+version = '2.1.300'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.299/darwin-arm64/claude'
-sha256 = 'ba5ab7b8c195fa03ab8d5bf3915c76153b576a2c40e79a5c46e265e7ed9744b3'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.300/darwin-arm64/claude'
+sha256 = '475517caa611e3318a2f298fa071287ec98955538df78c58f709ecc01e5ae2d3'
 verified = 'first-use'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.299/linux-x64/claude'
-sha256 = '2d894a4b1bfaaa9aab72aeff7803e3c73bc2510f279a171f6b8f59f72d17d077'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.300/linux-x64/claude'
+sha256 = '674deba0bba9aee479f4503c438b49303b6fdd304b9a471b14977aaec5215453'
 verified = 'first-use'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.299/linux-arm64/claude'
-sha256 = '4cd5ab006b49dc12a247fed4dbc42a925ad1aea1e711d9aa24587d285ee87c2f'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.300/linux-arm64/claude'
+sha256 = 'ae2295ae2da156936bf5831ab01971ce924d0c9a0af174e28d96fffa8d5fa0a6'
 verified = 'first-use'
 
 [[package]]
@@ -364,7 +364,7 @@ verified = 'first-use'
 [[package]]
 name = 'difftastic'
 ref = 'github:Wilfred/difftastic'
-commit = '6aaffc62ce766122923ddd7b591f2bf0ae4f864a'
+commit = '6ee8d012d9b9fc2acb4fbe48af6dfcb64ea33381'
 manifest_sha256 = '6f6be2ead2b9ee388a9218c1f131c1a15566e234dac7b6e65b933786219bd38f'
 version = '0.71.0'
 inferred = true
@@ -675,29 +675,29 @@ verified = 'first-use'
 [[package]]
 name = 'friendly'
 ref = 'github:friendly-social-ai/cli'
-commit = 'd0d10ee734dad373e58ef9c07904d025e0a2be92'
+commit = '9e77a851861f224103ce568ed7378126472b8713'
 manifest_sha256 = '92a04ac80255329839f47562ce6eda56562c458b457bb9357406dc0fb01a3163'
-version = '2026.10.13-d0d10ee'
+version = '2026.10.15-9e77a85'
 tag = 'main'
-tag_commit = 'd0d10ee734dad373e58ef9c07904d025e0a2be92'
+tag_commit = '9e77a851861f224103ce568ed7378126472b8713'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
-vendor_sha256 = '88040704762c84ae62e4201eee6a2de1ada165b01963afe4bd01727d060b2e43'
+vendor_sha256 = '49f01d2583c97f9c9dd42aad521b9055a9c1601d3df91800768fe0d9070fee8d'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'build'
-vendor_sha256 = '88040704762c84ae62e4201eee6a2de1ada165b01963afe4bd01727d060b2e43'
+vendor_sha256 = '49f01d2583c97f9c9dd42aad521b9055a9c1601d3df91800768fe0d9070fee8d'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
-vendor_sha256 = '88040704762c84ae62e4201eee6a2de1ada165b01963afe4bd01727d060b2e43'
+vendor_sha256 = '49f01d2583c97f9c9dd42aad521b9055a9c1601d3df91800768fe0d9070fee8d'
 
 [[package.dep]]
 name = 'go'
 ref = 'github:friendly-social-ai/cli#.oku/go.toml'
-commit = 'd0d10ee734dad373e58ef9c07904d025e0a2be92'
+commit = '9e77a851861f224103ce568ed7378126472b8713'
 manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
 version = '1.26.9'
 tag = 'go1.26.9'
@@ -724,7 +724,7 @@ verified = 'checksum-file'
 [[package]]
 name = 'fzf'
 ref = 'github:junegunn/fzf'
-commit = 'c0a193e031f01fb50bf6f7be4381990a3753f7cf'
+commit = 'c8c2d0828a94a00879ceb6f95112a42e3ea322cf'
 manifest_sha256 = 'faeb904b44161238caefcffb88c80fa6f790053860ba757580a7ec433e0e42d2'
 version = '0.74.5'
 tag = 'v0.74.5'
@@ -2202,11 +2202,11 @@ verified = 'checksum-file'
 [[package]]
 name = 'neru'
 ref = 'github:y3owk1n/neru#neru-main'
-commit = 'fe77a3683c03b3b34b1d7c254ddd7a0fd8a00472'
+commit = '427ea06465a59de4260b24a45866a44784f8ba8a'
 manifest_sha256 = 'f379339f52e3db3db53cab26f66be0f2f6df4890cf33e61877ef07d7f797e705'
-version = '2026.10.14-fe77a36'
+version = '2026.10.15-427ea06'
 tag = 'main'
-tag_commit = 'fe77a3683c03b3b34b1d7c254ddd7a0fd8a00472'
+tag_commit = '427ea06465a59de4260b24a45866a44784f8ba8a'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -2224,7 +2224,7 @@ vendor_sha256 = 'feaee372d3c32e051e59ff544fde89eb9d4fb9db9d0a6366760fbf714e30fb2
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/neru#.oku/go.toml'
-commit = 'fe77a3683c03b3b34b1d7c254ddd7a0fd8a00472'
+commit = '427ea06465a59de4260b24a45866a44784f8ba8a'
 manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
 version = '1.26.9'
 tag = 'go1.26.9'
@@ -4099,9 +4099,9 @@ strategy = 'build'
 name = 'skills-cursor'
 ref = './packages/skills-cursor.toml'
 manifest_sha256 = 'f14e9e0ad27c8f08839e713b96fadd53b11a7d4c53e662980666d0dcfd6c310e'
-version = '2026.10.14-1e5c90a'
+version = '2026.10.15-e5136d8'
 tag = 'main'
-tag_commit = '1e5c90a4b6f249917bd21fe361b3a2a7deb741b8'
+tag_commit = 'e5136d82418d2db3165ea1050d17577cd618cc05'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4210,7 +4210,7 @@ commands = true
 [[package]]
 name = 'stripe-cli'
 ref = 'github:stripe/stripe-cli'
-commit = 'f2a0bf3f4b442cd9102000f98f2eafa7aec6908d'
+commit = 'c584f97835df74627c816279f81bd73c4de35e89'
 manifest_sha256 = 'a1f28c24ef1e91ac3473c88a3cb28701a1706ba4c39c75984e6bc89727d1e047'
 version = '1.53.1'
 tag = 'v1.53.1'
@@ -4277,12 +4277,9 @@ verified = 'first-use'
 
 [[package]]
 name = 'taplo'
-ref = 'github:tamasfe/taplo'
-commit = '08f343be02ce1b20296470396a42f0fa47820449'
-manifest_sha256 = '0dd612fed062d11624b87937fc6a11fc001d24c2199b7446e844bbdeddb48533'
+ref = './packages/taplo.toml'
+manifest_sha256 = '0b26ee1293fa26ed7f142f3d1f68ca222032258eff4d933d8d0074b6511a3242'
 version = '0.10.0'
-inferred = true
-manifest = "[package]\nname = \"taplo\"\nhomepage = \"https://github.com/tamasfe/taplo\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"tamasfe/taplo\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/tamasfe/taplo/releases/download/{{tag}}/taplo-linux-x86_64.gz\"\nbin = [\"taplo\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/tamasfe/taplo/releases/download/{{tag}}/taplo-darwin-x86_64.gz\"\nbin = [\"taplo\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/tamasfe/taplo/releases/download/{{tag}}/taplo-linux-aarch64.gz\"\nbin = [\"taplo\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/tamasfe/taplo/releases/download/{{tag}}/taplo-darwin-aarch64.gz\"\nbin = [\"taplo\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm\" }\nurl = \"https://github.com/tamasfe/taplo/releases/download/{{tag}}/taplo-linux-armv7.gz\"\nbin = [\"taplo\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"riscv64\" }\nurl = \"https://github.com/tamasfe/taplo/releases/download/{{tag}}/taplo-linux-riscv64.gz\"\nbin = [\"taplo\"]\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
