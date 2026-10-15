@@ -1,0 +1,31 @@
+[package]
+name = "taplo"
+description = "TOML toolkit and language server"
+homepage = "https://github.com/tamasfe/taplo"
+license = "MIT"
+
+# A manifest here, not github:tamasfe/taplo, because GitHub's API answers 422
+# to commits/HEAD for this repo and oku cannot resolve the ref (oku#499).
+[version]
+from = "github-releases"
+repo = "tamasfe/taplo"
+
+[[artifact]]
+match = { os = "darwin", arch = "arm64" }
+url = "https://github.com/tamasfe/taplo/releases/download/{{tag}}/taplo-darwin-aarch64.gz"
+bin = ["taplo"]
+
+[[artifact]]
+match = { os = "darwin", arch = "amd64" }
+url = "https://github.com/tamasfe/taplo/releases/download/{{tag}}/taplo-darwin-x86_64.gz"
+bin = ["taplo"]
+
+[[artifact]]
+match = { os = "linux", arch = "arm64" }
+url = "https://github.com/tamasfe/taplo/releases/download/{{tag}}/taplo-linux-aarch64.gz"
+bin = ["taplo"]
+
+[[artifact]]
+match = { os = "linux", arch = "amd64" }
+url = "https://github.com/tamasfe/taplo/releases/download/{{tag}}/taplo-linux-x86_64.gz"
+bin = ["taplo"]
