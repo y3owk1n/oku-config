@@ -16,6 +16,8 @@ setw -g clock-mode-style  12
 set  -s escape-time       0
 set  -g history-limit     50000
 
+set -g @vim_navigator_pattern '(\S+/)?g?\.?(view|l?n?vim?x?|fzf|fude)(diff)?(-wrapped)?'
+
 # vim-tmux-navigator, vendored from github.com/christoomey/vim-tmux-navigator
 # at e41c431a0c7b7388ae7ba341f01a0d217eb3a432
 run-shell {{config}}/tmux/vim-tmux-navigator.tmux

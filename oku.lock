@@ -722,6 +722,55 @@ sha256 = '4a97373d49fcacdcf3694fea368a500b00ee3e963974f3e7514132717632f052'
 verified = 'checksum-file'
 
 [[package]]
+name = 'fude'
+ref = 'github:y3owk1n/fude'
+commit = 'dcfd1dc794b0f3ba6cdd64c3a73989cde2e26750'
+manifest_sha256 = '8b4c0646e096028b71d61cefc3a8bd63f14011146563c625804fb0fa3ae48a40'
+version = '2026.10.16-dcfd1dc'
+tag = 'main'
+tag_commit = 'dcfd1dc794b0f3ba6cdd64c3a73989cde2e26750'
+
+[package.platform]
+[package.platform.darwin-arm64]
+strategy = 'build'
+vendor_sha256 = '9de99ffa3d0a6c9f719d330d8c2890a2992ec9bcaf329cab02e22d89818df650'
+
+[package.platform.linux-amd64-glibc]
+strategy = 'build'
+vendor_sha256 = '9de99ffa3d0a6c9f719d330d8c2890a2992ec9bcaf329cab02e22d89818df650'
+
+[package.platform.linux-arm64-glibc]
+strategy = 'build'
+vendor_sha256 = '9de99ffa3d0a6c9f719d330d8c2890a2992ec9bcaf329cab02e22d89818df650'
+
+[[package.dep]]
+name = 'go'
+ref = 'github:y3owk1n/fude#.oku/go.toml'
+commit = 'dcfd1dc794b0f3ba6cdd64c3a73989cde2e26750'
+manifest_sha256 = '850dfc0af428be9b5da144c08de9d6c247b2bd41a401c160d99a076a8ce62691'
+version = '1.26.9'
+tag = 'go1.26.9'
+
+[package.dep.platform]
+[package.dep.platform.darwin-arm64]
+strategy = 'artifact'
+url = 'https://dl.google.com/go/go1.26.9.darwin-arm64.tar.gz'
+sha256 = 'f9bb7c0a02506c5d9bf0d1eb1f7ee6c7684f844ae49558308a0427b830e022cc'
+verified = 'checksum-file'
+
+[package.dep.platform.linux-amd64-glibc]
+strategy = 'artifact'
+url = 'https://dl.google.com/go/go1.26.9.linux-amd64.tar.gz'
+sha256 = '42d158b4d8f7b61ac0a830567c940a86098fb7aac52e467a5ebec03ef5cc2f8d'
+verified = 'checksum-file'
+
+[package.dep.platform.linux-arm64-glibc]
+strategy = 'artifact'
+url = 'https://dl.google.com/go/go1.26.9.linux-arm64.tar.gz'
+sha256 = '4a97373d49fcacdcf3694fea368a500b00ee3e963974f3e7514132717632f052'
+verified = 'checksum-file'
+
+[[package]]
 name = 'fzf'
 ref = 'github:junegunn/fzf'
 commit = 'c8c2d0828a94a00879ceb6f95112a42e3ea322cf'
@@ -2121,11 +2170,11 @@ verified = 'published'
 [[package]]
 name = 'mimi'
 ref = 'github:y3owk1n/mimi#mimi-main'
-commit = '9c220e83e9063098dceaec23d0e2861b97f65bd5'
+commit = 'a945f8e22d78bfec6c9ee6f0a98dca9a747e69d8'
 manifest_sha256 = '8f46313f0fe2255da0f41fb86705c21e702b920e81321a5cb34dd1ba4b250f20'
-version = '2026.10.13-9c220e8'
+version = '2026.10.15-a945f8e'
 tag = 'main'
-tag_commit = '9c220e83e9063098dceaec23d0e2861b97f65bd5'
+tag_commit = 'a945f8e22d78bfec6c9ee6f0a98dca9a747e69d8'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -2135,7 +2184,7 @@ vendor_sha256 = 'd9ba83eedb7788ead60ff8e6cfc575847f8aac2ebdf3adaef871236a5cda117
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/mimi#.oku/go.toml'
-commit = '9c220e83e9063098dceaec23d0e2861b97f65bd5'
+commit = 'a945f8e22d78bfec6c9ee6f0a98dca9a747e69d8'
 manifest_sha256 = '850dfc0af428be9b5da144c08de9d6c247b2bd41a401c160d99a076a8ce62691'
 version = '1.26.9'
 tag = 'go1.26.9'
@@ -2202,11 +2251,11 @@ verified = 'checksum-file'
 [[package]]
 name = 'neru'
 ref = 'github:y3owk1n/neru#neru-main'
-commit = '427ea06465a59de4260b24a45866a44784f8ba8a'
+commit = '9a0fbc758006ff5964204b0c5a1eb3d4d6eb8b83'
 manifest_sha256 = 'f379339f52e3db3db53cab26f66be0f2f6df4890cf33e61877ef07d7f797e705'
-version = '2026.10.15-427ea06'
+version = '2026.10.15-9a0fbc7'
 tag = 'main'
-tag_commit = '427ea06465a59de4260b24a45866a44784f8ba8a'
+tag_commit = '9a0fbc758006ff5964204b0c5a1eb3d4d6eb8b83'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -2224,7 +2273,7 @@ vendor_sha256 = 'feaee372d3c32e051e59ff544fde89eb9d4fb9db9d0a6366760fbf714e30fb2
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/neru#.oku/go.toml'
-commit = '427ea06465a59de4260b24a45866a44784f8ba8a'
+commit = '9a0fbc758006ff5964204b0c5a1eb3d4d6eb8b83'
 manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
 version = '1.26.9'
 tag = 'go1.26.9'
@@ -4135,9 +4184,9 @@ strategy = 'build'
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
 manifest_sha256 = '7fba70fc11069a991452cc72d0a8a6cd292c9574f4c11c4e0ae4f07041f21dc0'
-version = '2026.10.14-4233ed1'
+version = '2026.10.15-c2477f3'
 tag = 'main'
-tag_commit = '4233ed1caded8c38f4bc14b14afe1f93ebcaf966'
+tag_commit = 'c2477f311c19982ef6e246085438e6cfec3e35ea'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4801,29 +4850,29 @@ verified = 'published'
 [[package]]
 name = 'uts'
 ref = 'github:y3owk1n/uts#uts-main'
-commit = '9018467e3ad46c4b1e8821379ab3b1c0be51d716'
+commit = 'd502d2460794465a980c6edd7091a4d311a3b5cd'
 manifest_sha256 = 'cd33e4dfb3bbd211ed4b99d1affae910ae280f0b7714769148165908285231ed'
-version = '2026.10.10-9018467'
+version = '2026.10.15-d502d24'
 tag = 'main'
-tag_commit = '9018467e3ad46c4b1e8821379ab3b1c0be51d716'
+tag_commit = 'd502d2460794465a980c6edd7091a4d311a3b5cd'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
-vendor_sha256 = 'c811091b33bc4d469b6486407436ba84f17e2d8f0e1a0ef300a4920b793909d7'
+vendor_sha256 = 'bbd624ed59a208513a0d851a7df4704125ddde7fa8a6093dc1352f91ff5919db'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'build'
-vendor_sha256 = 'c811091b33bc4d469b6486407436ba84f17e2d8f0e1a0ef300a4920b793909d7'
+vendor_sha256 = 'bbd624ed59a208513a0d851a7df4704125ddde7fa8a6093dc1352f91ff5919db'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
-vendor_sha256 = 'c811091b33bc4d469b6486407436ba84f17e2d8f0e1a0ef300a4920b793909d7'
+vendor_sha256 = 'bbd624ed59a208513a0d851a7df4704125ddde7fa8a6093dc1352f91ff5919db'
 
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/uts#.oku/go.toml'
-commit = '9018467e3ad46c4b1e8821379ab3b1c0be51d716'
+commit = 'd502d2460794465a980c6edd7091a4d311a3b5cd'
 manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
 version = '1.26.9'
 tag = 'go1.26.9'

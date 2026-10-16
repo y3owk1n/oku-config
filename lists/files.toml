@@ -73,6 +73,10 @@
 "{{config}}/opencode/tui.json" = { link = "../files/opencode/tui.json" }
 "{{config}}/opencode/themes/stylix.json" = { render = "../files/opencode/themes/stylix.json.tmpl" }
 
+# fude
+"{{config}}/fude/config.toml" = { render = "../files/fude/config.toml.tmpl" }
+"{{config}}/fude/taplo.toml" = { link = "../files/fude/taplo.toml" }
+
 # friendly
 "{{config}}/friendly/theme.toml" = { render = "../files/friendly/theme.toml.tmpl" }
 

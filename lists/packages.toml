@@ -14,34 +14,34 @@
 # cli
 ast-grep = "../packages/ast-grep.toml"
 bat = "../packages/bat.toml"
-btop = "../packages/btop.toml" # the static program of the release on Linux, the source needs C++23
+btop = "../packages/btop.toml"          # the static program of the release on Linux, the source needs C++23
 eza = "../packages/eza.toml"
 fd = "../packages/fd.toml"
 fzf = "github:junegunn/fzf"
 jq = "github:jqlang/jq"
 mkcert = "github:FiloSottile/mkcert"
-rip2 = "../packages/rip2.toml" # the program is rip
+rip2 = "../packages/rip2.toml"          # the program is rip
 ripgrep = "../packages/ripgrep.toml"
 stripe-cli = "github:stripe/stripe-cli" # the program is stripe
-ttyd = "../packages/ttyd.toml" # for vhs. Built from source on macOS alone, upstream builds no macOS one
-vhs = "../packages/vhs.toml" # runs ttyd and ffmpeg
+ttyd = "../packages/ttyd.toml"          # for vhs. Built from source on macOS alone, upstream builds no macOS one
+vhs = "../packages/vhs.toml"            # runs ttyd and ffmpeg
 
 # compression
 brotli = "../packages/brotli.toml"
 xz = "../packages/xz.toml"
-zstd = "../packages/zstd.toml" # brings lz4 as a dep
+zstd = "../packages/zstd.toml"     # brings lz4 as a dep
 
 # images
 gifsicle = "../packages/gifsicle.toml"
 imagemagick = "../packages/imagemagick.toml" # zlib, bzip2 and expat come from the system on Linux
 jpegoptim = "../packages/jpegoptim.toml"
-libwebp = "../packages/libwebp.toml" # cwebp and dwebp
+libwebp = "../packages/libwebp.toml"         # cwebp and dwebp
 optipng = "../packages/optipng.toml"
 pngquant = "../packages/pngquant.toml"
 
 # documents
 ghostscript = "../packages/ghostscript.toml" # the program is gs
-poppler = "../packages/poppler.toml" # pdftoppm and pdftotext
+poppler = "../packages/poppler.toml"         # pdftoppm and pdftotext
 
 # media tools for uts
 ffmpeg = "../packages/ffmpeg.toml"
@@ -90,7 +90,10 @@ freebuff = "../packages/freebuff.toml"
 opencode = "../packages/opencode.toml"
 
 # keyboard remapper, which upstream builds for x86-64 Linux only
-kanata = { ref = "../packages/kanata.toml", when = [{ os = "darwin" }, { os = "linux", arch = "amd64" }] }
+kanata = { ref = "../packages/kanata.toml", when = [
+  { os = "darwin" },
+  { os = "linux", arch = "amd64" },
+] }
 
 # fonts
 jetbrains-mono-nerd-font = "../packages/jetbrains-mono-nerd-font.toml"
@@ -101,3 +104,4 @@ symbols-nerd-font = "../packages/symbols-nerd-font.toml"
 neru = { ref = "github:y3owk1n/neru#neru-main", service = true }
 uts = "github:y3owk1n/uts#uts-main"
 friendly = "github:friendly-social-ai/cli"
+fude = "github:y3owk1n/fude"

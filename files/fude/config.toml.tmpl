@@ -1,0 +1,431 @@
+
+# fude's config. Every setting is optional, and fude starts without this
+# file. A mistake here shows with its line, and that setting keeps its
+# default.
+
+theme = "~/.config/stylix/palette.json"
+
+# Columns that >, <, <C-t> and <C-d> shift by. 0 means the tab width, 8.
+indent_width = 4
+indent_guides = false
+
+# Milliseconds a key waits when it starts a longer mapping.
+key_timeout = 500
+
+# Files over this many megabytes open with syntax and LSP off.
+large_file = 50
+
+# Ask the language server for completions while typing. Without it,
+# <C-x><C-o> in insert mode asks.
+autocomplete = true
+
+# Line numbers, and numbers counted from the cursor's line. :set number
+# and :set relative_number change them for one window.
+number = true
+relative_number = true
+
+# Where clients attach, instead of a path per process. A client on another
+# machine reaches it with
+#   ssh -L /tmp/fude.sock:{{home}}/.local/state/fude/fude.sock host
+# and dials /tmp/fude.sock.
+socket = "{{home}}/.local/state/fude/fude.sock"
+
+wrap = false
+
+scroll_off = 8
+
+ignore_case = true
+smart_case = true
+
+expand_tab = true
+
+icons = true
+
+format_on_save = true
+format_timeout = 500
+
+clipboard = true
+
+sign_column = true
+
+# Keymaps map keys to keys, in Vim notation. A mapping's keys are never
+# mapped again.
+[keymap.normal]
+"<Leader>w" = ":w<CR>"
+"<Leader>q" = ":q<CR>"
+"<Leader>t" = ":timeline<CR>"
+# Accept or reject the newest proposal a client sent for this buffer.
+"<Leader>a" = ":accept<CR>"
+"<Leader>r" = ":reject<CR>"
+"<Leader><Leader>" = ":files<CR>"
+"<Leader>sg" = ":grep<CR>"
+"<Leader>sw" = ":grep <C-r><C-w><CR>"
+"<Leader>gd" = "<Plug>(git.preview)"
+
+"<C-h>" = "<Plug>(window.left)"
+"<C-j>" = "<Plug>(window.down)"
+"<C-k>" = "<Plug>(window.up)"
+"<C-l>" = "<Plug>(window.right)"
+
+# The names key hints show for the keys mappings start with.
+[keymap.groups]
+"<Leader>s" = "search"
+"<Leader>g" = "git"
+
+[keymap.insert]
+jk = "<Esc>"
+
+[keymap.listing]
+"<C-h>" = ""
+"<C-l>" = ""
+
+# Settings for one filetype. A filetype is a file's extension, or the
+# type whose files patterns match its name. lsp names the filetype's
+# language servers, whose [lsp.<name>] tables are below. Every one starts.
+# The first one that formats or renames does it for the file.
+[filetype.go]
+lsp = ["gopls", "golangci_lint_ls"]
+format = ["goimports", "gofumpt"]
+
+[filetype.bash]
+lsp = ["bashls"]
+
+[filetype.fish]
+lsp = ["fish_lsp"]
+
+[filetype.c]
+lsp = ["clangd"]
+
+[filetype.cpp]
+lsp = ["clangd"]
+
+[filetype.json]
+lsp = ["jsonls", "biome"]
+format = ["biome", "prettierd"]
+format_first = true
+
+# jsonc files are json with comments, and the server accepts their comments.
+[filetype.jsonc]
+lsp = ["jsonls", "biome"]
+format = ["biome", "prettierd"]
+format_first = true
+
+[filetype.yaml]
+lsp = ["yamlls", "gh_actions_ls"]
+
+[filetype.markdown]
+lsp = ["marksman"]
+format = ["prettierd"]
+
+[filetype.just]
+files = ["justfile", "Justfile", ".justfile", "*.just"]
+lsp = ["just"]
+
+[filetype.dockerfile]
+files = ["Dockerfile", "*.Dockerfile", "Containerfile"]
+lsp = ["docker_language_server"]
+
+[filetype.typescript]
+lsp = ["vtsls", "eslint", "biome", "tailwindcss"]
+format = ["biome", "prettierd"]
+format_first = true
+
+[filetype.tsx]
+lsp = ["vtsls", "eslint", "biome", "tailwindcss"]
+format = ["biome", "prettierd"]
+format_first = true
+
+[filetype.javascript]
+lsp = ["vtsls", "eslint", "biome", "tailwindcss"]
+format = ["biome", "prettierd"]
+format_first = true
+
+[filetype.css]
+lsp = ["tailwindcss", "biome"]
+format = ["biome", "prettierd"]
+format_first = true
+
+[filetype.html]
+lsp = ["tailwindcss"]
+
+# Templates such as chezmoi's config.toml.tmpl are toml files.
+[filetype.toml]
+files = ["*.toml.tmpl"]
+lsp = ["taplo"]
+
+[filetype.lua]
+lsp = ["lua_ls"]
+
+[filetype.nix]
+lsp = ["nixd"]
+
+[filetype.rust]
+lsp = ["rust_analyzer"]
+
+[filetype.prisma]
+lsp = ["prismals"]
+
+# These formatters read the text on stdin and write it on stdout. Each
+# runs in the folder of the first root file found, or the file's folder.
+# biome runs only in a project with its config, and prettierd elsewhere.
+[formatter.goimports]
+command = ["goimports", "-srcdir", "{path}"]
+
+[formatter.biome]
+command = ["biome", "format", "--stdin-file-path", "{path}"]
+root = ["biome.json", "biome.jsonc", ".biome.json", ".biome.jsonc"]
+workspace_required = true
+
+[formatter.prettierd]
+command = ["prettierd", "{path}"]
+root = [
+	".prettierrc",
+	".prettierrc.json",
+	".prettierrc.yml",
+	".prettierrc.yaml",
+	".prettierrc.json5",
+	".prettierrc.js",
+	".prettierrc.cjs",
+	".prettierrc.mjs",
+	".prettierrc.ts",
+	".prettierrc.cts",
+	".prettierrc.mts",
+	".prettierrc.toml",
+	"prettier.config.js",
+	"prettier.config.cjs",
+	"prettier.config.mjs",
+	"prettier.config.ts",
+	"prettier.config.cts",
+	"prettier.config.mts",
+	"package.json",
+]
+
+# Language servers. fude looks command up on the PATH it starts with, and
+# an unset command is the server's name. A server oku installs for one project
+# starts only in that project's shell, and elsewhere fude says once that it
+# is not installed. root names the files that mark a project's root, most
+# wanted first, and fude starts one server per root. settings and
+# init_options mean what they do in Neovim's vim.lsp.config.
+[lsp.gopls]
+root = ["go.work", "go.mod", ".git"]
+
+# golangci-lint itself must be on PATH too. These flags are for its v2.
+[lsp.golangci_lint_ls]
+command = ["golangci-lint-langserver"]
+root = [
+	".golangci.yml",
+	".golangci.yaml",
+	".golangci.toml",
+	".golangci.json",
+	"go.work",
+	"go.mod",
+	".git",
+]
+init_options = { command = [
+	"golangci-lint",
+	"run",
+	"--output.text.path=",
+	"--output.tab.path=",
+	"--output.html.path=",
+	"--output.checkstyle.path=",
+	"--output.junit-xml.path=",
+	"--output.teamcity.path=",
+	"--output.sarif.path=",
+	"--show-stats=false",
+	"--output.json.path=stdout",
+] }
+
+[lsp.bashls]
+command = ["bash-language-server", "start"]
+root = [".git"]
+
+[lsp.fish_lsp]
+command = ["fish-lsp", "start"]
+root = ["config.fish", ".git"]
+
+[lsp.clangd]
+root = [
+	".clangd",
+	"compile_commands.json",
+	"compile_flags.txt",
+	".clang-tidy",
+	".clang-format",
+	"configure.ac",
+	".git",
+]
+
+[lsp.jsonls]
+command = ["vscode-json-language-server", "--stdio"]
+root = [".git"]
+init_options = { provideFormatter = true }
+
+[lsp.yamlls]
+command = ["yaml-language-server", "--stdio"]
+root = [".git"]
+
+[lsp.yamlls.settings]
+redhat = { telemetry = { enabled = false } }
+yaml = { format = { enable = true } }
+
+# gh_actions_ls is for workflow files only. It fails to start without
+# init_options, even empty ones.
+[lsp.gh_actions_ls]
+command = ["gh-actions-language-server", "--stdio"]
+root = [".git"]
+files = [
+	".github/workflows/*.yml",
+	".github/workflows/*.yaml",
+	".forgejo/workflows/*.yml",
+	".forgejo/workflows/*.yaml",
+	".gitea/workflows/*.yml",
+	".gitea/workflows/*.yaml",
+]
+init_options = {}
+
+# eslint and biome start only in a project with their config.
+[lsp.eslint]
+command = ["vscode-eslint-language-server", "--stdio"]
+root = [
+	".eslintrc",
+	".eslintrc.js",
+	".eslintrc.cjs",
+	".eslintrc.yaml",
+	".eslintrc.yml",
+	".eslintrc.json",
+	"eslint.config.js",
+	"eslint.config.mjs",
+	"eslint.config.cjs",
+	"eslint.config.ts",
+	"eslint.config.mts",
+	"eslint.config.cts",
+]
+workspace_required = true
+
+[lsp.eslint.settings]
+validate = "on"
+useESLintClass = false
+experimental = {}
+codeActionOnSave = { enable = false, mode = "all" }
+format = true
+quiet = false
+onIgnoredFiles = "off"
+rulesCustomizations = []
+run = "onType"
+problems = { shortenToSingleLine = false }
+nodePath = ""
+workingDirectory = { mode = "auto" }
+codeAction = { disableRuleComment = { enable = true, location = "separateLine" }, showDocumentation = { enable = true } }
+
+[lsp.biome]
+command = ["biome", "lsp-proxy"]
+root = ["biome.json", "biome.jsonc"]
+workspace_required = true
+
+[lsp.marksman]
+command = ["marksman", "server"]
+root = [".marksman.toml", ".git"]
+
+[lsp.just]
+command = ["just-lsp"]
+root = [".git"]
+
+[lsp.docker_language_server]
+command = ["docker-language-server", "start", "--stdio"]
+root = [
+	"docker-bake.hcl",
+	"docker-bake.json",
+	"compose.yaml",
+	"compose.yml",
+	"docker-compose.yaml",
+	"docker-compose.yml",
+	"Dockerfile",
+]
+
+[lsp.vtsls]
+command = ["vtsls", "--stdio"]
+root = [
+	"package-lock.json",
+	"yarn.lock",
+	"pnpm-lock.yaml",
+	"bun.lockb",
+	"bun.lock",
+	".git",
+]
+
+[lsp.tailwindcss]
+command = ["tailwindcss-language-server", "--stdio"]
+root = [
+	"tailwind.config.js",
+	"tailwind.config.cjs",
+	"tailwind.config.mjs",
+	"tailwind.config.ts",
+	"postcss.config.js",
+	"postcss.config.cjs",
+	"postcss.config.mjs",
+	"postcss.config.ts",
+	".git",
+]
+
+[lsp.tailwindcss.settings.tailwindCSS]
+validate = true
+classAttributes = ["class", "className", "class:list", "classList", "ngClass"]
+lint = { cssConflict = "warning", invalidApply = "error", invalidScreen = "error", invalidVariant = "error", invalidConfigPath = "error", invalidTailwindDirective = "error", recommendedVariantOrder = "warning" }
+
+# taplo reads the config that lets it check toml templates too.
+[lsp.taplo]
+command = ["taplo", "lsp", "--config", "~/.config/fude/taplo.toml", "stdio"]
+root = [".taplo.toml", "taplo.toml", ".git"]
+
+[lsp.lua_ls]
+command = ["lua-language-server"]
+root = [
+	".emmyrc.json",
+	".luarc.json",
+	".luarc.jsonc",
+	".luacheckrc",
+	".stylua.toml",
+	"stylua.toml",
+	"selene.toml",
+	"selene.yml",
+	".git",
+]
+settings = { Lua = { telemetry = { enable = false } } }
+
+[lsp.nixd]
+root = ["flake.nix", ".git"]
+
+# nixd completes nixpkgs and this Mac's darwin options from the system
+# flake.
+[lsp.nixd.settings.nixd]
+nixpkgs = { expr = 'import (builtins.getFlake "{{home}}/nix-system-config-v2").inputs.nixpkgs { }' }
+
+[lsp.nixd.settings.nixd.options]
+darwin = { expr = '(builtins.getFlake "{{home}}/nix-system-config-v2").darwinConfigurations."Kyles-MacBook-Air".options' }
+flake-parts = { expr = '(builtins.getFlake "{{home}}/nix-system-config-v2").debug.options' }
+
+[lsp.rust_analyzer]
+command = ["rust-analyzer"]
+root = ["Cargo.toml", "rust-project.json", ".git"]
+
+[lsp.prismals]
+command = ["prisma-language-server", "--stdio"]
+root = [".git", "package.json"]
+
+# # A test plugin from fude's repo. It adds the operator gs (upper case), the
+# # object aL (the whole text), and gS and :Shout (insert "!"). Delete this
+# # table to run without it.
+# [[plugin]]
+# path = "{{home}}/Dev/fude/plugin/testdata/kit/kit.wasm"
+# capabilities = ["buffer.read", "buffer.write"]
+
+# # A test plugin that shows "ready" on the statusline of the buffer it read
+# # when it loads.
+# [[plugin]]
+# path = "{{home}}/Dev/fude/plugin/testdata/seg/seg.wasm"
+# capabilities = ["ui"]
+
+# # A test plugin whose key gP shows **hi** in a float. K on the float moves
+# # into it.
+# [[plugin]]
+# path = "{{home}}/Dev/fude/plugin/testdata/pop/pop.wasm"
+# capabilities = ["ui"]
