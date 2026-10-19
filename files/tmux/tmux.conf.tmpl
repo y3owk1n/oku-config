@@ -17,6 +17,9 @@ set  -s escape-time       0
 set  -g history-limit     50000
 
 set -g @vim_navigator_pattern '(\S+/)?g?\.?(view|l?n?vim?x?|fzf|fude)(diff)?(-wrapped)?'
+# fude tail and fude relay share the editor's process name but draw no
+# screen, so C-hjkl moves out of their panes.
+set -g @vim_navigator_check 'ps -o state= -o comm= -t "#{pane_tty}" | grep -iqE "^[^TXZ ]+ +@vim_navigator_pattern$" && ! ps -o args= -t "#{pane_tty}" | grep -qE "(^|/)fude +(tail|relay)( |$)"'
 
 # vim-tmux-navigator, vendored from github.com/christoomey/vim-tmux-navigator
 # at e41c431a0c7b7388ae7ba341f01a0d217eb3a432

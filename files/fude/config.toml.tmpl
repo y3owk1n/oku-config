@@ -1,4 +1,3 @@
-
 # fude's config. Every setting is optional, and fude starts without this
 # file. A mistake here shows with its line, and that setting keeps its
 # default.
@@ -6,14 +5,20 @@
 theme = "~/.config/stylix/palette.json"
 
 # Columns that >, <, <C-t> and <C-d> shift by. 0 means the tab width, 8.
+tab_width = 4
 indent_width = 4
 indent_guides = false
 
+flash_time = 150
+
+buffer_line = false
+
+color_column = 120
+
+center = true
+
 # Milliseconds a key waits when it starts a longer mapping.
 key_timeout = 500
-
-# Files over this many megabytes open with syntax and LSP off.
-large_file = 50
 
 # Ask the language server for completions while typing. Without it,
 # <C-x><C-o> in insert mode asks.
@@ -51,15 +56,9 @@ sign_column = true
 # Keymaps map keys to keys, in Vim notation. A mapping's keys are never
 # mapped again.
 [keymap.normal]
-"<Leader>w" = ":w<CR>"
-"<Leader>q" = ":q<CR>"
-"<Leader>t" = ":timeline<CR>"
-# Accept or reject the newest proposal a client sent for this buffer.
-"<Leader>a" = ":accept<CR>"
-"<Leader>r" = ":reject<CR>"
-"<Leader><Leader>" = ":files<CR>"
-"<Leader>sg" = ":grep<CR>"
-"<Leader>sw" = ":grep <C-r><C-w><CR>"
+"<Leader><Leader>" = ":pick files<CR>"
+"<Leader>sg" = ":pick grep<CR>"
+"<Leader>sw" = ":pick grep <C-r><C-w><CR>"
 "<Leader>gd" = "<Plug>(git.preview)"
 
 "<C-h>" = "<Plug>(window.left)"
@@ -71,9 +70,7 @@ sign_column = true
 [keymap.groups]
 "<Leader>s" = "search"
 "<Leader>g" = "git"
-
-[keymap.insert]
-jk = "<Esc>"
+"<Leader>d" = "debug"
 
 [keymap.listing]
 "<C-h>" = ""
@@ -179,25 +176,25 @@ workspace_required = true
 [formatter.prettierd]
 command = ["prettierd", "{path}"]
 root = [
-	".prettierrc",
-	".prettierrc.json",
-	".prettierrc.yml",
-	".prettierrc.yaml",
-	".prettierrc.json5",
-	".prettierrc.js",
-	".prettierrc.cjs",
-	".prettierrc.mjs",
-	".prettierrc.ts",
-	".prettierrc.cts",
-	".prettierrc.mts",
-	".prettierrc.toml",
-	"prettier.config.js",
-	"prettier.config.cjs",
-	"prettier.config.mjs",
-	"prettier.config.ts",
-	"prettier.config.cts",
-	"prettier.config.mts",
-	"package.json",
+  ".prettierrc",
+  ".prettierrc.json",
+  ".prettierrc.yml",
+  ".prettierrc.yaml",
+  ".prettierrc.json5",
+  ".prettierrc.js",
+  ".prettierrc.cjs",
+  ".prettierrc.mjs",
+  ".prettierrc.ts",
+  ".prettierrc.cts",
+  ".prettierrc.mts",
+  ".prettierrc.toml",
+  "prettier.config.js",
+  "prettier.config.cjs",
+  "prettier.config.mjs",
+  "prettier.config.ts",
+  "prettier.config.cts",
+  "prettier.config.mts",
+  "package.json",
 ]
 
 # Language servers. fude looks command up on the PATH it starts with, and
@@ -213,26 +210,26 @@ root = ["go.work", "go.mod", ".git"]
 [lsp.golangci_lint_ls]
 command = ["golangci-lint-langserver"]
 root = [
-	".golangci.yml",
-	".golangci.yaml",
-	".golangci.toml",
-	".golangci.json",
-	"go.work",
-	"go.mod",
-	".git",
+  ".golangci.yml",
+  ".golangci.yaml",
+  ".golangci.toml",
+  ".golangci.json",
+  "go.work",
+  "go.mod",
+  ".git",
 ]
 init_options = { command = [
-	"golangci-lint",
-	"run",
-	"--output.text.path=",
-	"--output.tab.path=",
-	"--output.html.path=",
-	"--output.checkstyle.path=",
-	"--output.junit-xml.path=",
-	"--output.teamcity.path=",
-	"--output.sarif.path=",
-	"--show-stats=false",
-	"--output.json.path=stdout",
+  "golangci-lint",
+  "run",
+  "--output.text.path=",
+  "--output.tab.path=",
+  "--output.html.path=",
+  "--output.checkstyle.path=",
+  "--output.junit-xml.path=",
+  "--output.teamcity.path=",
+  "--output.sarif.path=",
+  "--show-stats=false",
+  "--output.json.path=stdout",
 ] }
 
 [lsp.bashls]
@@ -245,13 +242,13 @@ root = ["config.fish", ".git"]
 
 [lsp.clangd]
 root = [
-	".clangd",
-	"compile_commands.json",
-	"compile_flags.txt",
-	".clang-tidy",
-	".clang-format",
-	"configure.ac",
-	".git",
+  ".clangd",
+  "compile_commands.json",
+  "compile_flags.txt",
+  ".clang-tidy",
+  ".clang-format",
+  "configure.ac",
+  ".git",
 ]
 
 [lsp.jsonls]
@@ -273,12 +270,12 @@ yaml = { format = { enable = true } }
 command = ["gh-actions-language-server", "--stdio"]
 root = [".git"]
 files = [
-	".github/workflows/*.yml",
-	".github/workflows/*.yaml",
-	".forgejo/workflows/*.yml",
-	".forgejo/workflows/*.yaml",
-	".gitea/workflows/*.yml",
-	".gitea/workflows/*.yaml",
+  ".github/workflows/*.yml",
+  ".github/workflows/*.yaml",
+  ".forgejo/workflows/*.yml",
+  ".forgejo/workflows/*.yaml",
+  ".gitea/workflows/*.yml",
+  ".gitea/workflows/*.yaml",
 ]
 init_options = {}
 
@@ -286,18 +283,18 @@ init_options = {}
 [lsp.eslint]
 command = ["vscode-eslint-language-server", "--stdio"]
 root = [
-	".eslintrc",
-	".eslintrc.js",
-	".eslintrc.cjs",
-	".eslintrc.yaml",
-	".eslintrc.yml",
-	".eslintrc.json",
-	"eslint.config.js",
-	"eslint.config.mjs",
-	"eslint.config.cjs",
-	"eslint.config.ts",
-	"eslint.config.mts",
-	"eslint.config.cts",
+  ".eslintrc",
+  ".eslintrc.js",
+  ".eslintrc.cjs",
+  ".eslintrc.yaml",
+  ".eslintrc.yml",
+  ".eslintrc.json",
+  "eslint.config.js",
+  "eslint.config.mjs",
+  "eslint.config.cjs",
+  "eslint.config.ts",
+  "eslint.config.mts",
+  "eslint.config.cts",
 ]
 workspace_required = true
 
@@ -332,38 +329,38 @@ root = [".git"]
 [lsp.docker_language_server]
 command = ["docker-language-server", "start", "--stdio"]
 root = [
-	"docker-bake.hcl",
-	"docker-bake.json",
-	"compose.yaml",
-	"compose.yml",
-	"docker-compose.yaml",
-	"docker-compose.yml",
-	"Dockerfile",
+  "docker-bake.hcl",
+  "docker-bake.json",
+  "compose.yaml",
+  "compose.yml",
+  "docker-compose.yaml",
+  "docker-compose.yml",
+  "Dockerfile",
 ]
 
 [lsp.vtsls]
 command = ["vtsls", "--stdio"]
 root = [
-	"package-lock.json",
-	"yarn.lock",
-	"pnpm-lock.yaml",
-	"bun.lockb",
-	"bun.lock",
-	".git",
+  "package-lock.json",
+  "yarn.lock",
+  "pnpm-lock.yaml",
+  "bun.lockb",
+  "bun.lock",
+  ".git",
 ]
 
 [lsp.tailwindcss]
 command = ["tailwindcss-language-server", "--stdio"]
 root = [
-	"tailwind.config.js",
-	"tailwind.config.cjs",
-	"tailwind.config.mjs",
-	"tailwind.config.ts",
-	"postcss.config.js",
-	"postcss.config.cjs",
-	"postcss.config.mjs",
-	"postcss.config.ts",
-	".git",
+  "tailwind.config.js",
+  "tailwind.config.cjs",
+  "tailwind.config.mjs",
+  "tailwind.config.ts",
+  "postcss.config.js",
+  "postcss.config.cjs",
+  "postcss.config.mjs",
+  "postcss.config.ts",
+  ".git",
 ]
 
 [lsp.tailwindcss.settings.tailwindCSS]
@@ -379,15 +376,15 @@ root = [".taplo.toml", "taplo.toml", ".git"]
 [lsp.lua_ls]
 command = ["lua-language-server"]
 root = [
-	".emmyrc.json",
-	".luarc.json",
-	".luarc.jsonc",
-	".luacheckrc",
-	".stylua.toml",
-	"stylua.toml",
-	"selene.toml",
-	"selene.yml",
-	".git",
+  ".emmyrc.json",
+  ".luarc.json",
+  ".luarc.jsonc",
+  ".luacheckrc",
+  ".stylua.toml",
+  "stylua.toml",
+  "selene.toml",
+  "selene.yml",
+  ".git",
 ]
 settings = { Lua = { telemetry = { enable = false } } }
 
@@ -410,22 +407,3 @@ root = ["Cargo.toml", "rust-project.json", ".git"]
 [lsp.prismals]
 command = ["prisma-language-server", "--stdio"]
 root = [".git", "package.json"]
-
-# # A test plugin from fude's repo. It adds the operator gs (upper case), the
-# # object aL (the whole text), and gS and :Shout (insert "!"). Delete this
-# # table to run without it.
-# [[plugin]]
-# path = "{{home}}/Dev/fude/plugin/testdata/kit/kit.wasm"
-# capabilities = ["buffer.read", "buffer.write"]
-
-# # A test plugin that shows "ready" on the statusline of the buffer it read
-# # when it loads.
-# [[plugin]]
-# path = "{{home}}/Dev/fude/plugin/testdata/seg/seg.wasm"
-# capabilities = ["ui"]
-
-# # A test plugin whose key gP shows **hi** in a float. K on the float moves
-# # into it.
-# [[plugin]]
-# path = "{{home}}/Dev/fude/plugin/testdata/pop/pop.wasm"
-# capabilities = ["ui"]

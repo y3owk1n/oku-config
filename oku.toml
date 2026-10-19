@@ -2,14 +2,14 @@
 # includes. Nothing here needs root. What does is in bootstrap/.
 
 include = [
-  "./lists/packages.toml", # every shared package and font
-  "./lists/apps.toml",     # desktop apps that are not macOS-only
-  "./lists/files.toml",    # program configs, templates and the SSH key
-  "./lists/ai.toml",       # agent skills and instructions
-  # What one OS alone gets. Nothing inside these needs a when of its own.
-  { ref = "./lists/darwin.toml", when = { os = "darwin" } },
-  { ref = "./lists/linux.toml", when = { os = "linux" } },
-  { ref = "./lists/windows.toml", when = { os = "windows" } },
+	"./lists/packages.toml", # every shared package and font
+	"./lists/apps.toml",     # desktop apps that are not macOS-only
+	"./lists/files.toml",    # program configs, templates and the SSH key
+	"./lists/ai.toml",       # agent skills and instructions
+	# What one OS alone gets. Nothing inside these needs a when of its own.
+	{ ref = "./lists/darwin.toml", when = { os = "darwin" } },
+	{ ref = "./lists/linux.toml", when = { os = "linux" } },
+	{ ref = "./lists/windows.toml", when = { os = "windows" } },
 ]
 
 # oku.lock pins every package for these platforms besides the machine that
@@ -56,9 +56,9 @@ base0F = "bf8a6e"
 # Variables for every shell and for oku exec. Fish's own startup values, such
 # as the XDG folders, the locale and TERM, stay in files/fish/config.fish.
 [env]
-EDITOR = "nvim"
-VISUAL = "nvim"
-GIT_EDITOR = "nvim"
+EDITOR = "fude"
+VISUAL = "fude"
+GIT_EDITOR = "fude"
 PAGER = "less"
 LESS = "-R"
 CLICOLOR = "1"

@@ -54,7 +54,7 @@ status is-interactive; and begin
     end
     alias s 'sesh connect $(sesh list --icons | fzf --ansi)'
     alias tx 'tmux kill-server'
-    alias vim nvim
+    alias vim fude
     alias x exit
 
     set fish_greeting # Disable greeting
