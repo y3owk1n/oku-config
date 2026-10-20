@@ -326,25 +326,25 @@ verified = 'published'
 name = 'claude-code'
 ref = './packages/claude-code.toml'
 manifest_sha256 = '1b9285b5b755fe2cf571042fcd0a46c0f3fb4de4b3198c9c3a896a78a200498a'
-version = '2.1.303'
+version = '2.1.304'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.303/darwin-arm64/claude'
-sha256 = 'd2da3b003dc08b88b7230469014fe3e1dc6fe94bc8f648e89b34175d30269370'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.304/darwin-arm64/claude'
+sha256 = 'b9ac5374839f14abf3f1f45610637c332b5daee5ce0d1634726cef87aab78e6a'
 verified = 'first-use'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.303/linux-x64/claude'
-sha256 = '375988f457756524234695cf2d8f64ace99c5f68682e47ea24862a843c191450'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.304/linux-x64/claude'
+sha256 = 'ea0f135784631619a7a409d07322ecec964f9cc4fd377508ed1ba3f141f27912'
 verified = 'first-use'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.303/linux-arm64/claude'
-sha256 = 'f384f49826336d4ac0484ac6ac9d8d16f64d244d186ce227cbd7cc088c03315d'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.304/linux-arm64/claude'
+sha256 = 'c487117526509ab6d2ee6013e14f181faf68d6d6afe6bb0d4b2b4a9feca5ecb3'
 verified = 'first-use'
 
 [[package]]
@@ -393,22 +393,22 @@ verified = 'published'
 name = 'discord'
 ref = './packages/discord.toml'
 manifest_sha256 = 'f890bd32c39952f1328a9549f354266f4d0e56b2f51a2bf29c1d923a207789cf'
-version = '0.0.416'
+version = '0.0.418'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://stable.dl2.discordapp.net/apps/osx/0.0.416/Discord.dmg'
-sha256 = '9bcada2ac203337ec523930de5ace261c1839250bfd4e648999af93f5be9a646'
+url = 'https://stable.dl2.discordapp.net/apps/osx/0.0.418/Discord.dmg'
+sha256 = 'ba265ab1d7eca0e8bb587fff41664416c0c9564cf19277c2f5d42c8e74440e16'
 verified = 'first-use'
-version = '0.0.416'
+version = '0.0.418'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://stable.dl2.discordapp.net/apps/linux/1.0.162/discord-1.0.162.tar.gz'
-sha256 = 'db4595899685d755a32ed9f9bc556e248c13d40eff7ad9f8afddb732c52b229b'
+url = 'https://stable.dl2.discordapp.net/apps/linux/1.0.164/discord-1.0.164.tar.gz'
+sha256 = 'e1d327dda80df6259fe19649d4ebd3b51328b680f15a411c8a7bac57a692e7ae'
 verified = 'first-use'
-version = '1.0.162'
+version = '1.0.164'
 
 [[package]]
 name = 'eza'
@@ -528,25 +528,25 @@ verified = 'published'
 name = 'firefox'
 ref = './packages/firefox.toml'
 manifest_sha256 = 'a6f57aa3dd145c6d801bca7cf79189f1d7fd03e9f9412e714d60d73efb047829'
-version = '158.0'
+version = '158.0.1'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/158.0/mac/en-US/Firefox%20158.0.dmg'
-sha256 = 'dfe8508ee8880cec1578253eb02b9154b5971a55e832d97396f463cd07b5ef67'
+url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/158.0.1/mac/en-US/Firefox%20158.0.1.dmg'
+sha256 = '1d7aa96b51fc9110185047de18228ac87238fba5e42bba53c9d696f88878cba6'
 verified = 'first-use'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/158.0/linux-x86_64/en-US/firefox-158.0.tar.xz'
-sha256 = '9549b054ec4cf85f50f6a19d8c6fb79580312e71ebc4ec2cb217ec9af09dc12a'
+url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/158.0.1/linux-x86_64/en-US/firefox-158.0.1.tar.xz'
+sha256 = 'dce45470139242cf294eb6ada3d192a9bb334696842b02b71ade448a139eb41a'
 verified = 'first-use'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/158.0/linux-aarch64/en-US/firefox-158.0.tar.xz'
-sha256 = 'ad647ee920828da7495de7a5f3eb5ddad457b107e4932b3fac49ce700bbbb2b2'
+url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/158.0.1/linux-aarch64/en-US/firefox-158.0.1.tar.xz'
+sha256 = '7f880a6607b9608fc35f8814f7fbe7163c71e9680a8d3c0b27f35ff2fcfcb653'
 verified = 'first-use'
 
 [[package]]
@@ -651,123 +651,123 @@ verified = 'checksum-file'
 name = 'freebuff'
 ref = './packages/freebuff.toml'
 manifest_sha256 = '5a05ed5b3b754299066e214b6b8ac17044226cff4b4fa856f6b6d699c8eb6508'
-version = '0.2.29'
+version = '0.2.30'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.2.29/freebuff-darwin-arm64.tar.gz'
-sha256 = 'e72323d464cc5a30fcad58e16971a970b4e89c9dd5f02991cf43ac15e46022ee'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.2.30/freebuff-darwin-arm64.tar.gz'
+sha256 = 'cc26b221b1dacab9afee3e6cf9e0010ba01ac3ef16c708ee9c10c99f8818aee5'
 verified = 'first-use'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.2.29/freebuff-linux-x64.tar.gz'
-sha256 = 'a9729858a173c6671d043c8af0cda45999dd3e408233159c2a0d8673c1c2f073'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.2.30/freebuff-linux-x64.tar.gz'
+sha256 = 'f3f3776bee033ccda17dab54c6d42cb24438b24b4f3139abddd6e5ecc45d6029'
 verified = 'first-use'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.2.29/freebuff-linux-arm64.tar.gz'
-sha256 = '06d2954f6aacac05bc0bab98f5defd816ed57fb79a11c94aa08c5e437972fe06'
+url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.2.30/freebuff-linux-arm64.tar.gz'
+sha256 = 'd766c0ce808c89e81ee653f682f7ba766713504a32d7a2bedff90d44f42de412'
 verified = 'first-use'
 
 [[package]]
 name = 'friendly'
 ref = 'github:friendly-social-ai/cli'
-commit = '9e77a851861f224103ce568ed7378126472b8713'
+commit = '3173b14afebab126528efbd12c0d40d318188d43'
 manifest_sha256 = '92a04ac80255329839f47562ce6eda56562c458b457bb9357406dc0fb01a3163'
-version = '2026.10.15-9e77a85'
+version = '2026.10.20-3173b14'
 tag = 'main'
-tag_commit = '9e77a851861f224103ce568ed7378126472b8713'
+tag_commit = '3173b14afebab126528efbd12c0d40d318188d43'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
-vendor_sha256 = '49f01d2583c97f9c9dd42aad521b9055a9c1601d3df91800768fe0d9070fee8d'
+vendor_sha256 = 'b0c52fe6874241a5f0767aa749ff946dd082000862fa65705676920f852273a1'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'build'
-vendor_sha256 = '49f01d2583c97f9c9dd42aad521b9055a9c1601d3df91800768fe0d9070fee8d'
+vendor_sha256 = 'b0c52fe6874241a5f0767aa749ff946dd082000862fa65705676920f852273a1'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
-vendor_sha256 = '49f01d2583c97f9c9dd42aad521b9055a9c1601d3df91800768fe0d9070fee8d'
+vendor_sha256 = 'b0c52fe6874241a5f0767aa749ff946dd082000862fa65705676920f852273a1'
 
 [[package.dep]]
 name = 'go'
 ref = 'github:friendly-social-ai/cli#.oku/go.toml'
-commit = '9e77a851861f224103ce568ed7378126472b8713'
+commit = '3173b14afebab126528efbd12c0d40d318188d43'
 manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
-version = '1.26.9'
-tag = 'go1.26.9'
+version = '1.26.10'
+tag = 'go1.26.10'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.26.9.darwin-arm64.tar.gz'
-sha256 = 'f9bb7c0a02506c5d9bf0d1eb1f7ee6c7684f844ae49558308a0427b830e022cc'
+url = 'https://dl.google.com/go/go1.26.10.darwin-arm64.tar.gz'
+sha256 = '0b5183492292ada170f9b561a834863808dd02edba599e4ad0e89899330020b3'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.26.9.linux-amd64.tar.gz'
-sha256 = '42d158b4d8f7b61ac0a830567c940a86098fb7aac52e467a5ebec03ef5cc2f8d'
+url = 'https://dl.google.com/go/go1.26.10.linux-amd64.tar.gz'
+sha256 = 'ccfe7ae822d2c2f41f4fe7c956199967a4dac22d0ee0d2b2bfdb440aab3b20c5'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.26.9.linux-arm64.tar.gz'
-sha256 = '4a97373d49fcacdcf3694fea368a500b00ee3e963974f3e7514132717632f052'
+url = 'https://dl.google.com/go/go1.26.10.linux-arm64.tar.gz'
+sha256 = '3f4227ce7b206a513e794f1393adb473a07b46e94d18bd15d1c684bbb7319797'
 verified = 'checksum-file'
 
 [[package]]
 name = 'fude'
-ref = 'github:y3owk1n/fude'
-commit = '3560c850d0a6fed1f0746eabadcc3cb27b0479e8'
-manifest_sha256 = '320b12c09daff03a9ad51fa5e6f14caf687bd91d73e11e2636517bfca2a5d6d6'
-version = '2026.10.19-3560c85'
+ref = 'github:y3owk1n/fude#fude-main'
+commit = '5abac4789d2bf8f675c48880f798640b5782fe06'
+manifest_sha256 = '0f1b182a61f843389ad4213d5a9d4c8b18559b6602f83391ba1aef8c2017165a'
+version = '2026.10.20-5abac47'
 tag = 'main'
-tag_commit = '3560c850d0a6fed1f0746eabadcc3cb27b0479e8'
+tag_commit = '5abac4789d2bf8f675c48880f798640b5782fe06'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
-vendor_sha256 = '419e13ea2d3423fd7ef43c45c7714a803ffc0950a026f9a1143c3dafb21b2b29'
+vendor_sha256 = '6fcf572700fd5aba62c3f2446642db26b533cbd6dbfe3dea5b8410ea638504ea'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'build'
-vendor_sha256 = '419e13ea2d3423fd7ef43c45c7714a803ffc0950a026f9a1143c3dafb21b2b29'
+vendor_sha256 = '6fcf572700fd5aba62c3f2446642db26b533cbd6dbfe3dea5b8410ea638504ea'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
-vendor_sha256 = '419e13ea2d3423fd7ef43c45c7714a803ffc0950a026f9a1143c3dafb21b2b29'
+vendor_sha256 = '6fcf572700fd5aba62c3f2446642db26b533cbd6dbfe3dea5b8410ea638504ea'
 
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/fude#.oku/go.toml'
-commit = '3560c850d0a6fed1f0746eabadcc3cb27b0479e8'
-manifest_sha256 = '850dfc0af428be9b5da144c08de9d6c247b2bd41a401c160d99a076a8ce62691'
-version = '1.26.9'
-tag = 'go1.26.9'
+commit = '5abac4789d2bf8f675c48880f798640b5782fe06'
+manifest_sha256 = '4e86afdeda4063d8c7cc15bedb7857112496c03e8608295229e30bd61a6dd9d8'
+version = '1.26.10'
+tag = 'go1.26.10'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.26.9.darwin-arm64.tar.gz'
-sha256 = 'f9bb7c0a02506c5d9bf0d1eb1f7ee6c7684f844ae49558308a0427b830e022cc'
+url = 'https://dl.google.com/go/go1.26.10.darwin-arm64.tar.gz'
+sha256 = '0b5183492292ada170f9b561a834863808dd02edba599e4ad0e89899330020b3'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.26.9.linux-amd64.tar.gz'
-sha256 = '42d158b4d8f7b61ac0a830567c940a86098fb7aac52e467a5ebec03ef5cc2f8d'
+url = 'https://dl.google.com/go/go1.26.10.linux-amd64.tar.gz'
+sha256 = 'ccfe7ae822d2c2f41f4fe7c956199967a4dac22d0ee0d2b2bfdb440aab3b20c5'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.26.9.linux-arm64.tar.gz'
-sha256 = '4a97373d49fcacdcf3694fea368a500b00ee3e963974f3e7514132717632f052'
+url = 'https://dl.google.com/go/go1.26.10.linux-arm64.tar.gz'
+sha256 = '3f4227ce7b206a513e794f1393adb473a07b46e94d18bd15d1c684bbb7319797'
 verified = 'checksum-file'
 
 [[package]]
@@ -961,7 +961,7 @@ verified = 'first-use'
 [[package]]
 name = 'git-lfs'
 ref = 'github:git-lfs/git-lfs'
-commit = '0043a645047926f4bd7f7091299095528253d575'
+commit = '58a763d09d5fe4b7ea85c89ec799d71c5b0dc1da'
 manifest_sha256 = '8ae4f8efd0cf61ea579a055bdbeadb90a5e0d3f238825f6c8043febc6788c018'
 version = '3.8.0'
 tag = 'v3.8.0'
@@ -1007,26 +1007,26 @@ strategy = 'build'
 name = 'pkgconf'
 ref = './packages/pkgconf.toml'
 manifest_sha256 = '240a68735aeef089a4c9246edd7ddfea0101df8a152bb92ac6cf07e09422a1bc'
-version = '3.0.9'
-tag = 'pkgconf-3.0.9'
+version = '3.0.10'
+tag = 'pkgconf-3.0.10'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.9/pkgconf-3.0.9.tar.xz'
-sha256 = '6ab2d3b8087dcf500e34003a6a8934dca55d0a3d6066aeafb03c352db3e68bfd'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.10/pkgconf-3.0.10.tar.xz'
+sha256 = '9371b2f6372da574d4c6dc96fe9b1463037bcf6afcb6671c1555afde7b17e2de'
 verified = 'published'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.9/pkgconf-3.0.9.tar.xz'
-sha256 = '6ab2d3b8087dcf500e34003a6a8934dca55d0a3d6066aeafb03c352db3e68bfd'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.10/pkgconf-3.0.10.tar.xz'
+sha256 = '9371b2f6372da574d4c6dc96fe9b1463037bcf6afcb6671c1555afde7b17e2de'
 verified = 'published'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.9/pkgconf-3.0.9.tar.xz'
-sha256 = '6ab2d3b8087dcf500e34003a6a8934dca55d0a3d6066aeafb03c352db3e68bfd'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.10/pkgconf-3.0.10.tar.xz'
+sha256 = '9371b2f6372da574d4c6dc96fe9b1463037bcf6afcb6671c1555afde7b17e2de'
 verified = 'published'
 
 [[package.dep]]
@@ -1929,7 +1929,7 @@ verified = 'checksum-file'
 [[package]]
 name = 'jq'
 ref = 'github:jqlang/jq'
-commit = '633ae6058a05b0240c798f6b7b60d3b0a87cab8e'
+commit = '175b8e3c510ecf3b58debf866663a25e216da053'
 manifest_sha256 = 'f9e766ea364fbe94f87f4e0e08f9147c14d038f36cc18d8d73953c8f0fa50b23'
 version = '1.8.2'
 signer_workflow = 'jqlang/jq/.github/workflows/ci.yml'
@@ -2170,30 +2170,30 @@ verified = 'published'
 [[package]]
 name = 'mimi'
 ref = 'github:y3owk1n/mimi#mimi-main'
-commit = 'a945f8e22d78bfec6c9ee6f0a98dca9a747e69d8'
+commit = '03a9e9b4d396e36dfc452188ea97e9ada468184b'
 manifest_sha256 = '8f46313f0fe2255da0f41fb86705c21e702b920e81321a5cb34dd1ba4b250f20'
-version = '2026.10.15-a945f8e'
+version = '2026.10.20-03a9e9b'
 tag = 'main'
-tag_commit = 'a945f8e22d78bfec6c9ee6f0a98dca9a747e69d8'
+tag_commit = '03a9e9b4d396e36dfc452188ea97e9ada468184b'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
-vendor_sha256 = 'd9ba83eedb7788ead60ff8e6cfc575847f8aac2ebdf3adaef871236a5cda117c'
+vendor_sha256 = '4b8f4eb4167afe3373d82070487745a67efed209e4735231f208bb30c35c1fb3'
 
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/mimi#.oku/go.toml'
-commit = 'a945f8e22d78bfec6c9ee6f0a98dca9a747e69d8'
+commit = '03a9e9b4d396e36dfc452188ea97e9ada468184b'
 manifest_sha256 = '850dfc0af428be9b5da144c08de9d6c247b2bd41a401c160d99a076a8ce62691'
-version = '1.26.9'
-tag = 'go1.26.9'
+version = '1.26.10'
+tag = 'go1.26.10'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.26.9.darwin-arm64.tar.gz'
-sha256 = 'f9bb7c0a02506c5d9bf0d1eb1f7ee6c7684f844ae49558308a0427b830e022cc'
+url = 'https://dl.google.com/go/go1.26.10.darwin-arm64.tar.gz'
+sha256 = '0b5183492292ada170f9b561a834863808dd02edba599e4ad0e89899330020b3'
 verified = 'checksum-file'
 
 [[package]]
@@ -2238,90 +2238,90 @@ vendor_sha256 = '34b3f6b58f888e5984fbeac931bf42e06aa92f7279011bc45624b9398216669
 name = 'go'
 ref = './packages/go.toml'
 manifest_sha256 = '4e86afdeda4063d8c7cc15bedb7857112496c03e8608295229e30bd61a6dd9d8'
-version = '1.26.9'
-tag = 'go1.26.9'
+version = '1.26.10'
+tag = 'go1.26.10'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.26.9.darwin-arm64.tar.gz'
-sha256 = 'f9bb7c0a02506c5d9bf0d1eb1f7ee6c7684f844ae49558308a0427b830e022cc'
+url = 'https://dl.google.com/go/go1.26.10.darwin-arm64.tar.gz'
+sha256 = '0b5183492292ada170f9b561a834863808dd02edba599e4ad0e89899330020b3'
 verified = 'checksum-file'
 
 [[package]]
 name = 'neru'
 ref = 'github:y3owk1n/neru#neru-main'
-commit = '11b6e4804e7dcc0b728b5c32c6411261879e4326'
+commit = 'ca35d3142db8b0615745df4f6104cc5477161911'
 manifest_sha256 = 'f379339f52e3db3db53cab26f66be0f2f6df4890cf33e61877ef07d7f797e705'
-version = '2026.10.18-11b6e48'
+version = '2026.10.19-ca35d31'
 tag = 'main'
-tag_commit = '11b6e4804e7dcc0b728b5c32c6411261879e4326'
+tag_commit = 'ca35d3142db8b0615745df4f6104cc5477161911'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
-vendor_sha256 = 'feaee372d3c32e051e59ff544fde89eb9d4fb9db9d0a6366760fbf714e30fb29'
+vendor_sha256 = '1728a4f0994a397958405fb8283d0edbe5dc9503f3a84ba7b3e67eae4116c0ad'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'build'
-vendor_sha256 = 'feaee372d3c32e051e59ff544fde89eb9d4fb9db9d0a6366760fbf714e30fb29'
+vendor_sha256 = '1728a4f0994a397958405fb8283d0edbe5dc9503f3a84ba7b3e67eae4116c0ad'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
-vendor_sha256 = 'feaee372d3c32e051e59ff544fde89eb9d4fb9db9d0a6366760fbf714e30fb29'
+vendor_sha256 = '1728a4f0994a397958405fb8283d0edbe5dc9503f3a84ba7b3e67eae4116c0ad'
 
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/neru#.oku/go.toml'
-commit = '11b6e4804e7dcc0b728b5c32c6411261879e4326'
+commit = 'ca35d3142db8b0615745df4f6104cc5477161911'
 manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
-version = '1.26.9'
-tag = 'go1.26.9'
+version = '1.26.10'
+tag = 'go1.26.10'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.26.9.darwin-arm64.tar.gz'
-sha256 = 'f9bb7c0a02506c5d9bf0d1eb1f7ee6c7684f844ae49558308a0427b830e022cc'
+url = 'https://dl.google.com/go/go1.26.10.darwin-arm64.tar.gz'
+sha256 = '0b5183492292ada170f9b561a834863808dd02edba599e4ad0e89899330020b3'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.26.9.linux-amd64.tar.gz'
-sha256 = '42d158b4d8f7b61ac0a830567c940a86098fb7aac52e467a5ebec03ef5cc2f8d'
+url = 'https://dl.google.com/go/go1.26.10.linux-amd64.tar.gz'
+sha256 = 'ccfe7ae822d2c2f41f4fe7c956199967a4dac22d0ee0d2b2bfdb440aab3b20c5'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.26.9.linux-arm64.tar.gz'
-sha256 = '4a97373d49fcacdcf3694fea368a500b00ee3e963974f3e7514132717632f052'
+url = 'https://dl.google.com/go/go1.26.10.linux-arm64.tar.gz'
+sha256 = '3f4227ce7b206a513e794f1393adb473a07b46e94d18bd15d1c684bbb7319797'
 verified = 'checksum-file'
 
 [[package]]
 name = 'nvim'
 ref = './packages/nvim.toml'
 manifest_sha256 = 'e3ae4d0f5cabfa79a7b360bbd09bcf50c508487ceff65665b86c01b6f7952b50'
-version = '2026.10.17-0851e7d'
+version = '2026.10.20-17f4332'
 tag = 'nightly'
-tag_commit = '0851e7dabed9fc9c019e22088029f36e9f3ec3e3'
+tag_commit = '17f43325b1f549d127bb58ed3fcd528d15f98595'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz'
-sha256 = 'e93ef6829fd45c9c4a93ef06899506880abaf489a0400598549ffbfae0754cc5'
+sha256 = '75d754a2c8eec1f9d240da96ca37b8655f401a4a18885eda6fece6a1d171e574'
 verified = 'published'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz'
-sha256 = '2b077774d6517b4777f4d2f4a4876c23f1c7ebbb11d3f125e6213c825426a366'
+sha256 = 'cfef509c16d76c61916b05e6c3f9b92ab4d4a5c431ef2f1303dc3c4a7209e782'
 verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-arm64.tar.gz'
-sha256 = '893c517798eadbb69ed5dec1da36a7729e05b14587dae28a78d3398581a41bdc'
+sha256 = '58655f76db27bde2d77fc92bc92410a25396ad86c173540995b74b35f661a42a'
 verified = 'published'
 
 [[package]]
@@ -2512,26 +2512,26 @@ verified = 'checksum-file'
 name = 'pkgconf'
 ref = './packages/pkgconf.toml'
 manifest_sha256 = '240a68735aeef089a4c9246edd7ddfea0101df8a152bb92ac6cf07e09422a1bc'
-version = '3.0.9'
-tag = 'pkgconf-3.0.9'
+version = '3.0.10'
+tag = 'pkgconf-3.0.10'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.9/pkgconf-3.0.9.tar.xz'
-sha256 = '6ab2d3b8087dcf500e34003a6a8934dca55d0a3d6066aeafb03c352db3e68bfd'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.10/pkgconf-3.0.10.tar.xz'
+sha256 = '9371b2f6372da574d4c6dc96fe9b1463037bcf6afcb6671c1555afde7b17e2de'
 verified = 'published'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.9/pkgconf-3.0.9.tar.xz'
-sha256 = '6ab2d3b8087dcf500e34003a6a8934dca55d0a3d6066aeafb03c352db3e68bfd'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.10/pkgconf-3.0.10.tar.xz'
+sha256 = '9371b2f6372da574d4c6dc96fe9b1463037bcf6afcb6671c1555afde7b17e2de'
 verified = 'published'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.9/pkgconf-3.0.9.tar.xz'
-sha256 = '6ab2d3b8087dcf500e34003a6a8934dca55d0a3d6066aeafb03c352db3e68bfd'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.10/pkgconf-3.0.10.tar.xz'
+sha256 = '9371b2f6372da574d4c6dc96fe9b1463037bcf6afcb6671c1555afde7b17e2de'
 verified = 'published'
 
 [[package.dep]]
@@ -2709,26 +2709,26 @@ verified = 'manifest'
 name = 'pkgconf'
 ref = './packages/pkgconf.toml'
 manifest_sha256 = '240a68735aeef089a4c9246edd7ddfea0101df8a152bb92ac6cf07e09422a1bc'
-version = '3.0.9'
-tag = 'pkgconf-3.0.9'
+version = '3.0.10'
+tag = 'pkgconf-3.0.10'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.9/pkgconf-3.0.9.tar.xz'
-sha256 = '6ab2d3b8087dcf500e34003a6a8934dca55d0a3d6066aeafb03c352db3e68bfd'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.10/pkgconf-3.0.10.tar.xz'
+sha256 = '9371b2f6372da574d4c6dc96fe9b1463037bcf6afcb6671c1555afde7b17e2de'
 verified = 'published'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.9/pkgconf-3.0.9.tar.xz'
-sha256 = '6ab2d3b8087dcf500e34003a6a8934dca55d0a3d6066aeafb03c352db3e68bfd'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.10/pkgconf-3.0.10.tar.xz'
+sha256 = '9371b2f6372da574d4c6dc96fe9b1463037bcf6afcb6671c1555afde7b17e2de'
 verified = 'published'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.9/pkgconf-3.0.9.tar.xz'
-sha256 = '6ab2d3b8087dcf500e34003a6a8934dca55d0a3d6066aeafb03c352db3e68bfd'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.10/pkgconf-3.0.10.tar.xz'
+sha256 = '9371b2f6372da574d4c6dc96fe9b1463037bcf6afcb6671c1555afde7b17e2de'
 verified = 'published'
 
 [[package.dep.dep]]
@@ -3411,26 +3411,26 @@ verified = 'manifest'
 name = 'pkgconf'
 ref = './packages/pkgconf.toml'
 manifest_sha256 = '240a68735aeef089a4c9246edd7ddfea0101df8a152bb92ac6cf07e09422a1bc'
-version = '3.0.9'
-tag = 'pkgconf-3.0.9'
+version = '3.0.10'
+tag = 'pkgconf-3.0.10'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.9/pkgconf-3.0.9.tar.xz'
-sha256 = '6ab2d3b8087dcf500e34003a6a8934dca55d0a3d6066aeafb03c352db3e68bfd'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.10/pkgconf-3.0.10.tar.xz'
+sha256 = '9371b2f6372da574d4c6dc96fe9b1463037bcf6afcb6671c1555afde7b17e2de'
 verified = 'published'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.9/pkgconf-3.0.9.tar.xz'
-sha256 = '6ab2d3b8087dcf500e34003a6a8934dca55d0a3d6066aeafb03c352db3e68bfd'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.10/pkgconf-3.0.10.tar.xz'
+sha256 = '9371b2f6372da574d4c6dc96fe9b1463037bcf6afcb6671c1555afde7b17e2de'
 verified = 'published'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.9/pkgconf-3.0.9.tar.xz'
-sha256 = '6ab2d3b8087dcf500e34003a6a8934dca55d0a3d6066aeafb03c352db3e68bfd'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.10/pkgconf-3.0.10.tar.xz'
+sha256 = '9371b2f6372da574d4c6dc96fe9b1463037bcf6afcb6671c1555afde7b17e2de'
 verified = 'published'
 
 [[package.dep.dep]]
@@ -4148,9 +4148,9 @@ strategy = 'build'
 name = 'skills-cursor'
 ref = './packages/skills-cursor.toml'
 manifest_sha256 = 'f14e9e0ad27c8f08839e713b96fadd53b11a7d4c53e662980666d0dcfd6c310e'
-version = '2026.10.19-8838150'
+version = '2026.10.20-88d4751'
 tag = 'main'
-tag_commit = '8838150c6b4829ea3c01782631213776d86df14a'
+tag_commit = '88d47514b82e7c44f00f2b2a72ff6dd12158038c'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4184,9 +4184,9 @@ strategy = 'build'
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
 manifest_sha256 = '7fba70fc11069a991452cc72d0a8a6cd292c9574f4c11c4e0ae4f07041f21dc0'
-version = '2026.10.18-daaf156'
+version = '2026.10.19-ba1503c'
 tag = 'main'
-tag_commit = 'daaf156ee00ed91cc7e6bdd937c1b4973152d141'
+tag_commit = 'ba1503c64472b82256d9de95e2e62c5901a38e8b'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4201,7 +4201,7 @@ strategy = 'build'
 [[package]]
 name = 'sops'
 ref = 'github:getsops/sops'
-commit = 'e39ca97b6209f9132ea40d22beb37d796060cb32'
+commit = '453e7e6ab01b1340dca9f9025fd8430229320f97'
 manifest_sha256 = '15d32539c7533f6d4072a2cf2b4793251c7d8f2d825b1050855a5d7047f45ded'
 version = '3.13.3'
 tag = 'v3.13.3'
@@ -4259,7 +4259,7 @@ commands = true
 [[package]]
 name = 'stripe-cli'
 ref = 'github:stripe/stripe-cli'
-commit = '7839c312a40ed89ecc48d16fc5fb8bca7dbfac49'
+commit = '2130c716df4b21c5f96c9c902fbd2e6d6f9ba279'
 manifest_sha256 = 'a1f28c24ef1e91ac3473c88a3cb28701a1706ba4c39c75984e6bc89727d1e047'
 version = '1.54.0'
 tag = 'v1.54.0'
@@ -4378,26 +4378,26 @@ verified = 'published'
 name = 'pkgconf'
 ref = './packages/pkgconf.toml'
 manifest_sha256 = '240a68735aeef089a4c9246edd7ddfea0101df8a152bb92ac6cf07e09422a1bc'
-version = '3.0.9'
-tag = 'pkgconf-3.0.9'
+version = '3.0.10'
+tag = 'pkgconf-3.0.10'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'build'
-url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.9/pkgconf-3.0.9.tar.xz'
-sha256 = '6ab2d3b8087dcf500e34003a6a8934dca55d0a3d6066aeafb03c352db3e68bfd'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.10/pkgconf-3.0.10.tar.xz'
+sha256 = '9371b2f6372da574d4c6dc96fe9b1463037bcf6afcb6671c1555afde7b17e2de'
 verified = 'published'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'build'
-url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.9/pkgconf-3.0.9.tar.xz'
-sha256 = '6ab2d3b8087dcf500e34003a6a8934dca55d0a3d6066aeafb03c352db3e68bfd'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.10/pkgconf-3.0.10.tar.xz'
+sha256 = '9371b2f6372da574d4c6dc96fe9b1463037bcf6afcb6671c1555afde7b17e2de'
 verified = 'published'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'build'
-url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.9/pkgconf-3.0.9.tar.xz'
-sha256 = '6ab2d3b8087dcf500e34003a6a8934dca55d0a3d6066aeafb03c352db3e68bfd'
+url = 'https://github.com/pkgconf/pkgconf/releases/download/pkgconf-3.0.10/pkgconf-3.0.10.tar.xz'
+sha256 = '9371b2f6372da574d4c6dc96fe9b1463037bcf6afcb6671c1555afde7b17e2de'
 verified = 'published'
 
 [[package.dep]]
@@ -4874,26 +4874,26 @@ name = 'go'
 ref = 'github:y3owk1n/uts#.oku/go.toml'
 commit = 'd502d2460794465a980c6edd7091a4d311a3b5cd'
 manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
-version = '1.26.9'
-tag = 'go1.26.9'
+version = '1.26.10'
+tag = 'go1.26.10'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.26.9.darwin-arm64.tar.gz'
-sha256 = 'f9bb7c0a02506c5d9bf0d1eb1f7ee6c7684f844ae49558308a0427b830e022cc'
+url = 'https://dl.google.com/go/go1.26.10.darwin-arm64.tar.gz'
+sha256 = '0b5183492292ada170f9b561a834863808dd02edba599e4ad0e89899330020b3'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.26.9.linux-amd64.tar.gz'
-sha256 = '42d158b4d8f7b61ac0a830567c940a86098fb7aac52e467a5ebec03ef5cc2f8d'
+url = 'https://dl.google.com/go/go1.26.10.linux-amd64.tar.gz'
+sha256 = 'ccfe7ae822d2c2f41f4fe7c956199967a4dac22d0ee0d2b2bfdb440aab3b20c5'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.26.9.linux-arm64.tar.gz'
-sha256 = '4a97373d49fcacdcf3694fea368a500b00ee3e963974f3e7514132717632f052'
+url = 'https://dl.google.com/go/go1.26.10.linux-arm64.tar.gz'
+sha256 = '3f4227ce7b206a513e794f1393adb473a07b46e94d18bd15d1c684bbb7319797'
 verified = 'checksum-file'
 
 [[package]]

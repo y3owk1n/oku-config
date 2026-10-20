@@ -104,4 +104,4 @@ symbols-nerd-font = "../packages/symbols-nerd-font.toml"
 neru = { ref = "github:y3owk1n/neru#neru-main", service = true }
 uts = "github:y3owk1n/uts#uts-main"
 friendly = "github:friendly-social-ai/cli"
-fude = "github:y3owk1n/fude"
+fude = "github:y3owk1n/fude#fude-main"

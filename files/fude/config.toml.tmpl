@@ -4,54 +4,35 @@
 
 theme = "~/.config/stylix/palette.json"
 
-# Columns that >, <, <C-t> and <C-d> shift by. 0 means the tab width, 8.
 tab_width = 4
 indent_width = 4
-indent_guides = false
-
-flash_time = 150
-
-buffer_line = false
-
 color_column = 120
-
 center = true
-
-# Milliseconds a key waits when it starts a longer mapping.
 key_timeout = 500
-
-# Ask the language server for completions while typing. Without it,
-# <C-x><C-o> in insert mode asks.
 autocomplete = true
-
-# Line numbers, and numbers counted from the cursor's line. :set number
-# and :set relative_number change them for one window.
 number = true
 relative_number = true
-
-# Where clients attach, instead of a path per process. A client on another
-# machine reaches it with
-#   ssh -L /tmp/fude.sock:{{home}}/.local/state/fude/fude.sock host
-# and dials /tmp/fude.sock.
-socket = "{{home}}/.local/state/fude/fude.sock"
-
 wrap = false
-
 scroll_off = 8
-
 ignore_case = true
 smart_case = true
-
 expand_tab = true
-
 icons = true
-
 format_on_save = true
 format_timeout = 500
-
 clipboard = true
-
 sign_column = true
+
+# A module's options sit in a table named after it. :set takes them as
+# module.option, such as :set flash.time 150.
+[module.flash]
+time = 150
+
+[module.bufferline]
+enabled = false
+
+[module.guides]
+enabled = false
 
 # Keymaps map keys to keys, in Vim notation. A mapping's keys are never
 # mapped again.
@@ -59,6 +40,7 @@ sign_column = true
 "<Leader><Leader>" = ":pick files<CR>"
 "<Leader>sg" = ":pick grep<CR>"
 "<Leader>sw" = ":pick grep <C-r><C-w><CR>"
+"<Leader>sr" = ":pick resume<CR>"
 "<Leader>gd" = "<Plug>(git.preview)"
 
 "<C-h>" = "<Plug>(window.left)"
