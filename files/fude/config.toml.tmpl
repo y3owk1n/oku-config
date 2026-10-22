@@ -430,3 +430,9 @@ root = [
 [lsp.prismals]
 command = ["prisma-language-server", "--stdio"]
 root = [".git", "package.json"]
+
+# supermaven plugin -> https://github.com/y3owk1n/fude-supermaven
+[[plugin]]
+path = "{{home}}/Dev/fude-supermaven/fude-supermaven.wasm"
+capabilities = ["buffer.read", "buffer.write", "ui", "process"]
+programs = ["sh"]
