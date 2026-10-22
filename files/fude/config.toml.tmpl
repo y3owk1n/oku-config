@@ -304,9 +304,24 @@ problems = { shortenToSingleLine = false }
 nodePath = ""
 workingDirectory = { mode = "auto" }
 codeAction = { disableRuleComment = { enable = true, location = "separateLine" }, showDocumentation = { enable = true } }
+workspaceFolder = { uri = "{root_uri}", name = "{root_name}" }
 
+# 4 lets eslint run the project's own eslint when it asks.
+[lsp.eslint.answers]
+"eslint/confirmESLintExecution" = 4
+
+# The project's own biome runs first, so it matches its biome.json.
 [lsp.biome]
-command = ["biome", "lsp-proxy"]
+command = [
+  [
+    "{root}/node_modules/.bin/biome",
+    "lsp-proxy",
+  ],
+  [
+    "biome",
+    "lsp-proxy",
+  ],
+]
 root = ["biome.json", "biome.jsonc"]
 workspace_required = true
 
@@ -330,14 +345,17 @@ root = [
   "Dockerfile",
 ]
 
+# The lockfiles rank the same, so the nearest one wins in a monorepo.
 [lsp.vtsls]
 command = ["vtsls", "--stdio"]
 root = [
-  "package-lock.json",
-  "yarn.lock",
-  "pnpm-lock.yaml",
-  "bun.lockb",
-  "bun.lock",
+  [
+    "package-lock.json",
+    "yarn.lock",
+    "pnpm-lock.yaml",
+    "bun.lockb",
+    "bun.lock",
+  ],
   ".git",
 ]
 
@@ -365,17 +383,22 @@ lint = { cssConflict = "warning", invalidApply = "error", invalidScreen = "error
 command = ["taplo", "lsp", "--config", "~/.config/fude/taplo.toml", "stdio"]
 root = [".taplo.toml", "taplo.toml", ".git"]
 
+# The server's own configs rank first, then the linters' and formatters'.
 [lsp.lua_ls]
 command = ["lua-language-server"]
 root = [
-  ".emmyrc.json",
-  ".luarc.json",
-  ".luarc.jsonc",
-  ".luacheckrc",
-  ".stylua.toml",
-  "stylua.toml",
-  "selene.toml",
-  "selene.yml",
+  [
+    ".emmyrc.json",
+    ".luarc.json",
+    ".luarc.jsonc",
+  ],
+  [
+    ".luacheckrc",
+    ".stylua.toml",
+    "stylua.toml",
+    "selene.toml",
+    "selene.yml",
+  ],
   ".git",
 ]
 settings = { Lua = { telemetry = { enable = false } } }
@@ -392,9 +415,17 @@ nixpkgs = { expr = 'import (builtins.getFlake "{{home}}/nix-system-config-v2").i
 darwin = { expr = '(builtins.getFlake "{{home}}/nix-system-config-v2").darwinConfigurations."Kyles-MacBook-Air".options' }
 flake-parts = { expr = '(builtins.getFlake "{{home}}/nix-system-config-v2").debug.options' }
 
+# A Cargo workspace gets one server, not one for each crate.
 [lsp.rust_analyzer]
 command = ["rust-analyzer"]
-root = ["Cargo.toml", "rust-project.json", ".git"]
+root = [
+  { name = "Cargo.toml", contains = [
+    "[workspace]",
+  ] },
+  "Cargo.toml",
+  "rust-project.json",
+  ".git",
+]
 
 [lsp.prismals]
 command = ["prisma-language-server", "--stdio"]
