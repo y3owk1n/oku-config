@@ -724,29 +724,29 @@ verified = 'checksum-file'
 [[package]]
 name = 'fude'
 ref = 'github:y3owk1n/fude#fude-main'
-commit = 'a9648319377577be7d5a7ab0cc661df707490680'
+commit = 'bf71cd9ef24a08fc735812ffc8cce800dc1fdc06'
 manifest_sha256 = '66ff60bd58747a7f6a11d5f2db10a376f39b677863725ee8414bc0b8c5bb4b0d'
-version = '2026.10.24-a964831'
+version = '2026.10.25-bf71cd9'
 tag = 'main'
-tag_commit = 'a9648319377577be7d5a7ab0cc661df707490680'
+tag_commit = 'bf71cd9ef24a08fc735812ffc8cce800dc1fdc06'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
-vendor_sha256 = '2f4669778c92b503f7fcffc0e6401d15dd39d7ca89dd6235cc448fbc6ea83c71'
+vendor_sha256 = 'e4c4be66b35d86dbf4fd593e27dcdee19b9532a33a97036e7b4664ca0a6f798d'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'build'
-vendor_sha256 = '2f4669778c92b503f7fcffc0e6401d15dd39d7ca89dd6235cc448fbc6ea83c71'
+vendor_sha256 = 'e4c4be66b35d86dbf4fd593e27dcdee19b9532a33a97036e7b4664ca0a6f798d'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
-vendor_sha256 = '2f4669778c92b503f7fcffc0e6401d15dd39d7ca89dd6235cc448fbc6ea83c71'
+vendor_sha256 = 'e4c4be66b35d86dbf4fd593e27dcdee19b9532a33a97036e7b4664ca0a6f798d'
 
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/fude#.oku/go.toml'
-commit = 'a9648319377577be7d5a7ab0cc661df707490680'
+commit = 'bf71cd9ef24a08fc735812ffc8cce800dc1fdc06'
 manifest_sha256 = '4e86afdeda4063d8c7cc15bedb7857112496c03e8608295229e30bd61a6dd9d8'
 version = '1.27.3'
 tag = 'go1.27.3'
@@ -803,28 +803,28 @@ verified = 'checksum-file'
 name = 'gh'
 ref = './packages/gh.toml'
 manifest_sha256 = '2355918be6f6adc3557316aac1398c8fc55c44c5073385f04ec3c254e84afecd'
-version = '2.103.0'
-tag = 'v2.103.0'
+version = '2.103.2'
+tag = 'v2.103.2'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/cli/cli/releases/download/v2.103.0/gh_2.103.0_macOS_arm64.zip'
-sha256 = '54be566e9f614bea5de8021e95b9ad33dfee3b9d2ea120c9c294c00defaa5014'
+url = 'https://github.com/cli/cli/releases/download/v2.103.2/gh_2.103.2_macOS_arm64.zip'
+sha256 = '5416000f5d17580a187339e0c4068a01ca5c87f7d4fe6ca64933696f967bc418'
 verified = 'checksum-file'
 commands = true
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/cli/cli/releases/download/v2.103.0/gh_2.103.0_linux_amd64.tar.gz'
-sha256 = 'fdd768eb70f6409f80fcfa9f3a1c0adf0fc98d827ab3ce0bed2ac22762c5d786'
+url = 'https://github.com/cli/cli/releases/download/v2.103.2/gh_2.103.2_linux_amd64.tar.gz'
+sha256 = '62ccf747115ddc61237efffdde66a3c8f70ba249433dc64f70801089b59c59c8'
 verified = 'checksum-file'
 commands = true
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/cli/cli/releases/download/v2.103.0/gh_2.103.0_linux_arm64.tar.gz'
-sha256 = '7f322df34e624d14f5ec0c4acb121fd6dfa14392fdbbd1066aa8e0a05ac3721e'
+url = 'https://github.com/cli/cli/releases/download/v2.103.2/gh_2.103.2_linux_arm64.tar.gz'
+sha256 = '4c3e99a50bd8b181a3fe9d69b25dd978bac768148d88f01507c6b4d1ef61a443'
 verified = 'checksum-file'
 commands = true
 
@@ -1929,7 +1929,7 @@ verified = 'checksum-file'
 [[package]]
 name = 'jq'
 ref = 'github:jqlang/jq'
-commit = 'da4da65c0cfffe0481ebf26ad64346eb45e4f34d'
+commit = 'ac35c7dcbb991fa0f3c3196dd00ca479211e9847'
 manifest_sha256 = 'f9e766ea364fbe94f87f4e0e08f9147c14d038f36cc18d8d73953c8f0fa50b23'
 version = '1.8.2'
 signer_workflow = 'jqlang/jq/.github/workflows/ci.yml'
@@ -2251,11 +2251,11 @@ verified = 'checksum-file'
 [[package]]
 name = 'neru'
 ref = 'github:y3owk1n/neru#neru-main'
-commit = 'ca35d3142db8b0615745df4f6104cc5477161911'
+commit = '0e600c13c66e9ba16bc52acb9e969067427e72cc'
 manifest_sha256 = 'f379339f52e3db3db53cab26f66be0f2f6df4890cf33e61877ef07d7f797e705'
-version = '2026.10.19-ca35d31'
+version = '2026.10.25-0e600c1'
 tag = 'main'
-tag_commit = 'ca35d3142db8b0615745df4f6104cc5477161911'
+tag_commit = '0e600c13c66e9ba16bc52acb9e969067427e72cc'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -2273,7 +2273,7 @@ vendor_sha256 = '1728a4f0994a397958405fb8283d0edbe5dc9503f3a84ba7b3e67eae4116c0a
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/neru#.oku/go.toml'
-commit = 'ca35d3142db8b0615745df4f6104cc5477161911'
+commit = '0e600c13c66e9ba16bc52acb9e969067427e72cc'
 manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
 version = '1.26.10'
 tag = 'go1.26.10'
@@ -2301,27 +2301,27 @@ verified = 'checksum-file'
 name = 'nvim'
 ref = './packages/nvim.toml'
 manifest_sha256 = 'e3ae4d0f5cabfa79a7b360bbd09bcf50c508487ceff65665b86c01b6f7952b50'
-version = '2026.10.23-7b87ce8'
+version = '2026.10.25-6591646'
 tag = 'nightly'
-tag_commit = '7b87ce822e6fd45a4d9993599c2854afdb0dc4dd'
+tag_commit = '659164699f8d884a90b23829c0a0c5cc1ab38873'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz'
-sha256 = '2663a879db6f59e120b42af3a2bedfa1644cd3606a43196f1f524dc4df63f45e'
+sha256 = '98216d3240fa3251c040cb89ea5296fea59a5f8f8ffd9254f735561a31991cf4'
 verified = 'published'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz'
-sha256 = 'b5d9ef2865f7f08b938cc739d97252af44ff18f38f8eb2f467a4e5d044d5bfce'
+sha256 = '851b91980e9e38f719b5a0ad5634a35e0c926de704eb89a240dbc11b400f9e54'
 verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-arm64.tar.gz'
-sha256 = '38293fc3904465860ccd3f473277177270b70e00ca52d26d8fa85f7f758469d3'
+sha256 = '6a1cd95ece3cd5d90d52f2f6e2091cf5a805db16a4c298bd3caf33dbb8b9e6e9'
 verified = 'published'
 
 [[package]]
@@ -4130,9 +4130,9 @@ strategy = 'build'
 name = 'skills-caveman'
 ref = './packages/skills-caveman.toml'
 manifest_sha256 = 'b537c338347eeb91180d1e710d8001df8043f5cf13ddcffb8762a65d840f2715'
-version = '2026.10.24-bae9bea'
+version = '2026.10.25-9b68f7e'
 tag = 'main'
-tag_commit = 'bae9beaf3aa6dc509f05f3d3ed239c827f6e51bb'
+tag_commit = '9b68f7ed12b05e7efaff18e65c5a3fc2849fd0a4'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4148,9 +4148,9 @@ strategy = 'build'
 name = 'skills-cursor'
 ref = './packages/skills-cursor.toml'
 manifest_sha256 = 'f14e9e0ad27c8f08839e713b96fadd53b11a7d4c53e662980666d0dcfd6c310e'
-version = '2026.10.24-9580c23'
+version = '2026.10.25-99b609a'
 tag = 'main'
-tag_commit = '9580c23696ac8d7abed0c166f2f9918800afb819'
+tag_commit = '99b609a72323b70204eab407c622f436e858e112'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4184,9 +4184,9 @@ strategy = 'build'
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
 manifest_sha256 = '7fba70fc11069a991452cc72d0a8a6cd292c9574f4c11c4e0ae4f07041f21dc0'
-version = '2026.10.23-e55b60b'
+version = '2026.10.25-481d523'
 tag = 'main'
-tag_commit = 'e55b60b1014cccfb9ac62f97e0d20b5b649f4a54'
+tag_commit = '481d523374745e77d0cf9c53a4115ab5dd7c8481'
 
 [package.platform]
 [package.platform.darwin-arm64]
