@@ -303,8 +303,8 @@ verified = 'checksum-file'
 name = 'btop'
 ref = './packages/btop.toml'
 manifest_sha256 = 'ad1ccd6aabfdda409fa611c6ffebaa8c75897e496eb81108586e10d0b8cf4a04'
-version = '1.4.7'
-tag = 'v1.4.7'
+version = '1.4.8'
+tag = 'v1.4.8'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -312,14 +312,14 @@ strategy = 'build'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/aristocratos/btop/releases/download/v1.4.7/btop-x86_64-unknown-linux-musl.tar.gz'
-sha256 = '5099054dd6a101bd12eb6ff3702a9a6a3f57aaa27923a0da478ae5b517faf335'
+url = 'https://github.com/aristocratos/btop/releases/download/v1.4.8/btop-x86_64-unknown-linux-musl.tar.gz'
+sha256 = 'af589cf82cc9ea9c29ce050b9239a13bef2d1492256d476156e1054a42ce89ad'
 verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/aristocratos/btop/releases/download/v1.4.7/btop-aarch64-unknown-linux-musl.tar.gz'
-sha256 = '6270de0ef4c84cf0eea61cb148b3ad9ae91a11e9c3309867ffc6b3751024c252'
+url = 'https://github.com/aristocratos/btop/releases/download/v1.4.8/btop-aarch64-unknown-linux-musl.tar.gz'
+sha256 = '95328e26ab08f42033af26628e2d169206a5a420f35669ce17459ef85114c14c'
 verified = 'published'
 
 [[package]]
@@ -724,29 +724,29 @@ verified = 'checksum-file'
 [[package]]
 name = 'fude'
 ref = 'github:y3owk1n/fude#fude-main'
-commit = 'bf71cd9ef24a08fc735812ffc8cce800dc1fdc06'
+commit = '03f70d509e111ea9f59b46b218047da08956a7ac'
 manifest_sha256 = '66ff60bd58747a7f6a11d5f2db10a376f39b677863725ee8414bc0b8c5bb4b0d'
-version = '2026.10.25-bf71cd9'
+version = '2026.10.26-03f70d5'
 tag = 'main'
-tag_commit = 'bf71cd9ef24a08fc735812ffc8cce800dc1fdc06'
+tag_commit = '03f70d509e111ea9f59b46b218047da08956a7ac'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
-vendor_sha256 = 'e4c4be66b35d86dbf4fd593e27dcdee19b9532a33a97036e7b4664ca0a6f798d'
+vendor_sha256 = '7ef4895fa9f5cb4223eccade69b94ff610926fff827ba87676530f007fd42125'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'build'
-vendor_sha256 = 'e4c4be66b35d86dbf4fd593e27dcdee19b9532a33a97036e7b4664ca0a6f798d'
+vendor_sha256 = '7ef4895fa9f5cb4223eccade69b94ff610926fff827ba87676530f007fd42125'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
-vendor_sha256 = 'e4c4be66b35d86dbf4fd593e27dcdee19b9532a33a97036e7b4664ca0a6f798d'
+vendor_sha256 = '7ef4895fa9f5cb4223eccade69b94ff610926fff827ba87676530f007fd42125'
 
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/fude#.oku/go.toml'
-commit = 'bf71cd9ef24a08fc735812ffc8cce800dc1fdc06'
+commit = '03f70d509e111ea9f59b46b218047da08956a7ac'
 manifest_sha256 = '4e86afdeda4063d8c7cc15bedb7857112496c03e8608295229e30bd61a6dd9d8'
 version = '1.27.3'
 tag = 'go1.27.3'
@@ -773,7 +773,7 @@ verified = 'checksum-file'
 [[package]]
 name = 'fzf'
 ref = 'github:junegunn/fzf'
-commit = 'b412a450538e5f4a1d7057732e75d945dafa18a6'
+commit = '26ff936df038b6a62ec42cf18db27b2ea2bb8ec3'
 manifest_sha256 = 'faeb904b44161238caefcffb88c80fa6f790053860ba757580a7ec433e0e42d2'
 version = '0.74.5'
 tag = 'v0.74.5'
@@ -2170,11 +2170,11 @@ verified = 'published'
 [[package]]
 name = 'mimi'
 ref = 'github:y3owk1n/mimi#mimi-main'
-commit = '03a9e9b4d396e36dfc452188ea97e9ada468184b'
+commit = '0f75e233decf97aebd831eaec9c4c30a77e2f5ba'
 manifest_sha256 = '8f46313f0fe2255da0f41fb86705c21e702b920e81321a5cb34dd1ba4b250f20'
-version = '2026.10.20-03a9e9b'
+version = '2026.10.25-0f75e23'
 tag = 'main'
-tag_commit = '03a9e9b4d396e36dfc452188ea97e9ada468184b'
+tag_commit = '0f75e233decf97aebd831eaec9c4c30a77e2f5ba'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -2184,7 +2184,7 @@ vendor_sha256 = '4b8f4eb4167afe3373d82070487745a67efed209e4735231f208bb30c35c1fb
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/mimi#.oku/go.toml'
-commit = '03a9e9b4d396e36dfc452188ea97e9ada468184b'
+commit = '0f75e233decf97aebd831eaec9c4c30a77e2f5ba'
 manifest_sha256 = '850dfc0af428be9b5da144c08de9d6c247b2bd41a401c160d99a076a8ce62691'
 version = '1.26.10'
 tag = 'go1.26.10'
@@ -2226,8 +2226,8 @@ sha256 = 'b98f2cc69fd9147fe4d405d859c57504571adec0d3611c3eefd04107c7ac00d0'
 name = 'mole'
 ref = './packages/mole.toml'
 manifest_sha256 = 'b3eab2b99ef01741e7a15eb8138099a633c61409907c5abbdfb39c0ab3b2b5da'
-version = '1.62.0'
-tag = 'V1.62.0'
+version = '1.64.0'
+tag = 'V1.64.0'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -2251,11 +2251,11 @@ verified = 'checksum-file'
 [[package]]
 name = 'neru'
 ref = 'github:y3owk1n/neru#neru-main'
-commit = '0e600c13c66e9ba16bc52acb9e969067427e72cc'
+commit = '6282e6761e242adb91a978e94f74e89eb4ca44aa'
 manifest_sha256 = 'f379339f52e3db3db53cab26f66be0f2f6df4890cf33e61877ef07d7f797e705'
-version = '2026.10.25-0e600c1'
+version = '2026.10.25-6282e67'
 tag = 'main'
-tag_commit = '0e600c13c66e9ba16bc52acb9e969067427e72cc'
+tag_commit = '6282e6761e242adb91a978e94f74e89eb4ca44aa'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -2273,7 +2273,7 @@ vendor_sha256 = '1728a4f0994a397958405fb8283d0edbe5dc9503f3a84ba7b3e67eae4116c0a
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/neru#.oku/go.toml'
-commit = '0e600c13c66e9ba16bc52acb9e969067427e72cc'
+commit = '6282e6761e242adb91a978e94f74e89eb4ca44aa'
 manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
 version = '1.26.10'
 tag = 'go1.26.10'
@@ -2301,27 +2301,27 @@ verified = 'checksum-file'
 name = 'nvim'
 ref = './packages/nvim.toml'
 manifest_sha256 = 'e3ae4d0f5cabfa79a7b360bbd09bcf50c508487ceff65665b86c01b6f7952b50'
-version = '2026.10.25-6591646'
+version = '2026.10.26-187d13a'
 tag = 'nightly'
-tag_commit = '659164699f8d884a90b23829c0a0c5cc1ab38873'
+tag_commit = '187d13aa6047e1914244e8033b2d2f3379a0b97f'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz'
-sha256 = '98216d3240fa3251c040cb89ea5296fea59a5f8f8ffd9254f735561a31991cf4'
+sha256 = '4978c85d19ee8922b946fe87bf391e49516b20596ef8b16687f11a62563b8683'
 verified = 'published'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz'
-sha256 = '851b91980e9e38f719b5a0ad5634a35e0c926de704eb89a240dbc11b400f9e54'
+sha256 = '3729cae8f22765642f437be53c14f75b07dc5ebc6cb12930fb1b387e02d0bc9f'
 verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-arm64.tar.gz'
-sha256 = '6a1cd95ece3cd5d90d52f2f6e2091cf5a805db16a4c298bd3caf33dbb8b9e6e9'
+sha256 = 'f470454969f07ed34acc9368367f134abe6f5906312105e8bb9aec602df8a2d2'
 verified = 'published'
 
 [[package]]
@@ -4184,9 +4184,9 @@ strategy = 'build'
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
 manifest_sha256 = '7fba70fc11069a991452cc72d0a8a6cd292c9574f4c11c4e0ae4f07041f21dc0'
-version = '2026.10.25-481d523'
+version = '2026.10.26-8f04138'
 tag = 'main'
-tag_commit = '481d523374745e77d0cf9c53a4115ab5dd7c8481'
+tag_commit = '8f04138777c1b6996e709993362a7b0a12888ecf'
 
 [package.platform]
 [package.platform.darwin-arm64]
