@@ -674,30 +674,30 @@ verified = 'first-use'
 
 [[package]]
 name = 'friendly'
-ref = 'github:friendly-social-ai/cli'
-commit = '0fca1e8d166d2d14a819dac76fa6f1e3e46d6bbe'
-manifest_sha256 = '4733c4ed947630b560f03ef3167e9e238f5922fe8b7294387b43c0946dfa2ed0'
-version = '2026.10.24-0fca1e8'
+ref = 'git+https://git.getfriend.ly/ai/cli'
+commit = 'a2ee1c78431aa6f880e4253dd35333791940c95d'
+manifest_sha256 = 'be656ed494e6459d129948f54b32a3ec42fa4da0788f3684cf2d9a2fdd9385ff'
+version = '2026.10.26-a2ee1c7'
 tag = 'main'
-tag_commit = '0fca1e8d166d2d14a819dac76fa6f1e3e46d6bbe'
+tag_commit = 'a2ee1c78431aa6f880e4253dd35333791940c95d'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
-vendor_sha256 = 'f18281925c8a14bf6d7078dfa9fe5cebfc2e04d929523106336d4702763fd23e'
+vendor_sha256 = '03007b93ccbab2a512460e6b8fe6476f29804026bf370e1c0895b9033aa3813f'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'build'
-vendor_sha256 = 'f18281925c8a14bf6d7078dfa9fe5cebfc2e04d929523106336d4702763fd23e'
+vendor_sha256 = '03007b93ccbab2a512460e6b8fe6476f29804026bf370e1c0895b9033aa3813f'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
-vendor_sha256 = 'f18281925c8a14bf6d7078dfa9fe5cebfc2e04d929523106336d4702763fd23e'
+vendor_sha256 = '03007b93ccbab2a512460e6b8fe6476f29804026bf370e1c0895b9033aa3813f'
 
 [[package.dep]]
 name = 'go'
-ref = 'github:friendly-social-ai/cli#.oku/go.toml'
-commit = '0fca1e8d166d2d14a819dac76fa6f1e3e46d6bbe'
+ref = 'git+https://git.getfriend.ly/ai/cli#.oku/go.toml'
+commit = 'a2ee1c78431aa6f880e4253dd35333791940c95d'
 manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
 version = '1.27.3'
 tag = 'go1.27.3'
@@ -2251,11 +2251,11 @@ verified = 'checksum-file'
 [[package]]
 name = 'neru'
 ref = 'github:y3owk1n/neru#neru-main'
-commit = '6282e6761e242adb91a978e94f74e89eb4ca44aa'
+commit = '2096c8642ccd48a5132a1707a32af796d4c3f4a2'
 manifest_sha256 = 'f379339f52e3db3db53cab26f66be0f2f6df4890cf33e61877ef07d7f797e705'
-version = '2026.10.25-6282e67'
+version = '2026.10.26-2096c86'
 tag = 'main'
-tag_commit = '6282e6761e242adb91a978e94f74e89eb4ca44aa'
+tag_commit = '2096c8642ccd48a5132a1707a32af796d4c3f4a2'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -2273,7 +2273,7 @@ vendor_sha256 = '1728a4f0994a397958405fb8283d0edbe5dc9503f3a84ba7b3e67eae4116c0a
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/neru#.oku/go.toml'
-commit = '6282e6761e242adb91a978e94f74e89eb4ca44aa'
+commit = '2096c8642ccd48a5132a1707a32af796d4c3f4a2'
 manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
 version = '1.26.10'
 tag = 'go1.26.10'
@@ -4069,28 +4069,28 @@ verified = 'checksum-file'
 name = 'sesh'
 ref = './packages/sesh.toml'
 manifest_sha256 = '896c2280241ed87d361b98ce5663651076312bec4d153549b689d47eb3f6e9ad'
-version = '2.33.0'
-tag = 'v2.33.0'
+version = '2.34.0'
+tag = 'v2.34.0'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/joshmedeski/sesh/releases/download/v2.33.0/sesh_Darwin_arm64.tar.gz'
-sha256 = '3d930e169bba2dfae639f122a0d49b53e1e65c23985e2e25613d8e3586fc5875'
+url = 'https://github.com/joshmedeski/sesh/releases/download/v2.34.0/sesh_Darwin_arm64.tar.gz'
+sha256 = 'dc483f35774e8be50a86dd06df7fc068a727cd09033c7bf75c8792f1aec5df4f'
 verified = 'checksum-file'
 commands = true
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/joshmedeski/sesh/releases/download/v2.33.0/sesh_Linux_x86_64.tar.gz'
-sha256 = 'e04fe35778eaf768a1fbbaa6e01d008ae22038c52b8d7834d38c9e7ad4822daa'
+url = 'https://github.com/joshmedeski/sesh/releases/download/v2.34.0/sesh_Linux_x86_64.tar.gz'
+sha256 = 'ca5742e47ee31b3181c4cb4fa0b6486bf357982600f313a2a5794303cb2063f2'
 verified = 'checksum-file'
 commands = true
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/joshmedeski/sesh/releases/download/v2.33.0/sesh_Linux_arm64.tar.gz'
-sha256 = '11bc0367b1cacebaa0b8e9d7db7479ad5e12a8a779a3a475268473c9b95cbf19'
+url = 'https://github.com/joshmedeski/sesh/releases/download/v2.34.0/sesh_Linux_arm64.tar.gz'
+sha256 = '8f9b369ac2164846120da4ebdce465a6803737a8a0879a334635441d050dcef5'
 verified = 'checksum-file'
 commands = true
 
