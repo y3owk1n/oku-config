@@ -277,26 +277,26 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package]]
@@ -326,25 +326,25 @@ verified = 'published'
 name = 'claude-code'
 ref = './packages/claude-code.toml'
 manifest_sha256 = '1b9285b5b755fe2cf571042fcd0a46c0f3fb4de4b3198c9c3a896a78a200498a'
-version = '2.1.310'
+version = '2.1.312'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.310/darwin-arm64/claude'
-sha256 = 'ffb64331bc0ee1b69efb7c2c428bd3ab516bc31b75bf60886b356c97c1c25ffd'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.312/darwin-arm64/claude'
+sha256 = '6b5ec691195e551b02c41df9f7d723f4ea61eaa03c2df90acefe3736f1aeb620'
 verified = 'first-use'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.310/linux-x64/claude'
-sha256 = 'b73676430af12f97316a798b8371f81d640f90a58bdcb8f3ce56a835bb47df56'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.312/linux-x64/claude'
+sha256 = '4f4178ce41d83e23341ebfbaecdbcf8ea6bf7baea0690025abe49eeec3a5d01d'
 verified = 'first-use'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.310/linux-arm64/claude'
-sha256 = '9c64d9a7442436b65fcd7cc02c1aa0051bb5a7041e7788576ed3b5f29c447d54'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.312/linux-arm64/claude'
+sha256 = 'dc4af28917455e009d26704b82a438353a06149e825b6cdf782908b2d28661f5'
 verified = 'first-use'
 
 [[package]]
@@ -364,7 +364,7 @@ verified = 'first-use'
 [[package]]
 name = 'difftastic'
 ref = 'github:Wilfred/difftastic'
-commit = '44fe6642617de7a9baca5a702a3a3057d4c0fea6'
+commit = '0b92338c6042152b1fc91c30ed01cf0449070844'
 manifest_sha256 = '6f6be2ead2b9ee388a9218c1f131c1a15566e234dac7b6e65b933786219bd38f'
 version = '0.71.0'
 inferred = true
@@ -393,22 +393,22 @@ verified = 'published'
 name = 'discord'
 ref = './packages/discord.toml'
 manifest_sha256 = 'f890bd32c39952f1328a9549f354266f4d0e56b2f51a2bf29c1d923a207789cf'
-version = '0.0.419'
+version = '0.0.420'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://stable.dl2.discordapp.net/apps/osx/0.0.419/Discord.dmg'
-sha256 = 'f19b31eaf6b97dc1d16e54d99438a637a5cedf22841fff7e2b27dd17d4cf8c12'
+url = 'https://stable.dl2.discordapp.net/apps/osx/0.0.420/Discord.dmg'
+sha256 = 'f1f809f79873a375ebaff8dd09858bf1cd9ac91167853a928f747b9f891c8dc8'
 verified = 'first-use'
-version = '0.0.419'
+version = '0.0.420'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://stable.dl2.discordapp.net/apps/linux/1.0.166/discord-1.0.166.tar.gz'
-sha256 = 'ed3695be64182ce80911168c1c3e342b80d9c5eb0c512a8d62516c10d8a86ffb'
+url = 'https://stable.dl2.discordapp.net/apps/linux/1.0.167/discord-1.0.167.tar.gz'
+sha256 = 'e48fa6696dc8dc19ae4f08ab6abf4f90a329a0251bd78a3b000d0cdfcdfd38c6'
 verified = 'first-use'
-version = '1.0.166'
+version = '1.0.167'
 
 [[package]]
 name = 'eza'
@@ -528,25 +528,25 @@ verified = 'published'
 name = 'firefox'
 ref = './packages/firefox.toml'
 manifest_sha256 = 'a6f57aa3dd145c6d801bca7cf79189f1d7fd03e9f9412e714d60d73efb047829'
-version = '158.0.1'
+version = '159.0'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/158.0.1/mac/en-US/Firefox%20158.0.1.dmg'
-sha256 = '1d7aa96b51fc9110185047de18228ac87238fba5e42bba53c9d696f88878cba6'
+url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/159.0/mac/en-US/Firefox%20159.0.dmg'
+sha256 = '0772404ae6e068d7cc03cecf4bb06a855f10287a77b624ffa41c6d092a64ea13'
 verified = 'first-use'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/158.0.1/linux-x86_64/en-US/firefox-158.0.1.tar.xz'
-sha256 = 'dce45470139242cf294eb6ada3d192a9bb334696842b02b71ade448a139eb41a'
+url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/159.0/linux-x86_64/en-US/firefox-159.0.tar.xz'
+sha256 = '54536fcd120af484d4c56272a5a1cf4af57b9c713d1a3b1e775da192dd541fcd'
 verified = 'first-use'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/158.0.1/linux-aarch64/en-US/firefox-158.0.1.tar.xz'
-sha256 = '7f880a6607b9608fc35f8814f7fbe7163c71e9680a8d3c0b27f35ff2fcfcb653'
+url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/159.0/linux-aarch64/en-US/firefox-159.0.tar.xz'
+sha256 = 'de7b16588bf3ab11774f6c1b1461dafde943c1cf0ea93dc15aa5f7bd99aa1191'
 verified = 'first-use'
 
 [[package]]
@@ -803,28 +803,28 @@ verified = 'checksum-file'
 name = 'gh'
 ref = './packages/gh.toml'
 manifest_sha256 = '2355918be6f6adc3557316aac1398c8fc55c44c5073385f04ec3c254e84afecd'
-version = '2.103.2'
-tag = 'v2.103.2'
+version = '2.103.3'
+tag = 'v2.103.3'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/cli/cli/releases/download/v2.103.2/gh_2.103.2_macOS_arm64.zip'
-sha256 = '5416000f5d17580a187339e0c4068a01ca5c87f7d4fe6ca64933696f967bc418'
+url = 'https://github.com/cli/cli/releases/download/v2.103.3/gh_2.103.3_macOS_arm64.zip'
+sha256 = 'd700207eae9ae98fe2b89535c2c087c07823d4628c56364695a5a07ef311c062'
 verified = 'checksum-file'
 commands = true
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/cli/cli/releases/download/v2.103.2/gh_2.103.2_linux_amd64.tar.gz'
-sha256 = '62ccf747115ddc61237efffdde66a3c8f70ba249433dc64f70801089b59c59c8'
+url = 'https://github.com/cli/cli/releases/download/v2.103.3/gh_2.103.3_linux_amd64.tar.gz'
+sha256 = '4c806978ffce1cec70853302a56d70ac6da4f19bae7adca4e1a8ab00633dd91d'
 verified = 'checksum-file'
 commands = true
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/cli/cli/releases/download/v2.103.2/gh_2.103.2_linux_arm64.tar.gz'
-sha256 = '4c3e99a50bd8b181a3fe9d69b25dd978bac768148d88f01507c6b4d1ef61a443'
+url = 'https://github.com/cli/cli/releases/download/v2.103.3/gh_2.103.3_linux_arm64.tar.gz'
+sha256 = 'ee32df2323c8847f5fac6cb6b4b69ca75828e9329a8f22f677021f7b3306ce63'
 verified = 'checksum-file'
 commands = true
 
@@ -907,14 +907,15 @@ verified = 'manifest'
 name = 'ghostty'
 ref = './packages/ghostty.toml'
 manifest_sha256 = '3811bb19e8d99bb8ffd89500c3bf6b819ed11aa8dff2f070b568a0afec09f39b'
-version = '1.3.1'
+version = '1.4.0'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://release.files.ghostty.org/1.3.1/Ghostty.dmg'
-sha256 = '18cff2b0a6cee90eead9c7d3064e808a252a40baf214aa752c1ecb793b8f5f69'
-version = '1.3.1'
+url = 'https://release.files.ghostty.org/1.4.0/Ghostty.dmg'
+sha256 = '3a02075dbd24318d778426af41dee5507d53ecc4578ede96912ec9ce6d18d3e8'
+verified = 'first-use'
+version = '1.4.0'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
@@ -1033,7 +1034,7 @@ verified = 'published'
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
 manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
-version = '3.2.0'
+version = '3.2.1'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
@@ -1049,26 +1050,26 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep]]
@@ -1127,33 +1128,33 @@ verified = 'first-use'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
 manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
-version = '3.2.0'
+version = '3.2.1'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
@@ -1169,33 +1170,33 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
 manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
-version = '3.2.0'
+version = '3.2.1'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
@@ -1211,26 +1212,26 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep]]
@@ -1263,26 +1264,26 @@ verified = 'first-use'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep]]
@@ -1314,26 +1315,26 @@ verified = 'first-use'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
@@ -1418,7 +1419,7 @@ verified = 'published'
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
 manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
-version = '3.2.0'
+version = '3.2.1'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
@@ -1434,26 +1435,26 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep]]
@@ -1512,33 +1513,33 @@ verified = 'first-use'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
 manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
-version = '3.2.0'
+version = '3.2.1'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
@@ -1554,33 +1555,33 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
 manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
-version = '3.2.0'
+version = '3.2.1'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
@@ -1596,26 +1597,26 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep]]
@@ -1648,26 +1649,26 @@ verified = 'first-use'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep]]
@@ -1699,26 +1700,26 @@ verified = 'first-use'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
@@ -1846,7 +1847,7 @@ strategy = 'build'
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
 manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
-version = '3.2.0'
+version = '3.2.1'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
@@ -1862,33 +1863,33 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
 manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
-version = '3.2.0'
+version = '3.2.1'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
@@ -1904,26 +1905,26 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package]]
@@ -2226,8 +2227,8 @@ sha256 = 'b98f2cc69fd9147fe4d405d859c57504571adec0d3611c3eefd04107c7ac00d0'
 name = 'mole'
 ref = './packages/mole.toml'
 manifest_sha256 = 'b3eab2b99ef01741e7a15eb8138099a633c61409907c5abbdfb39c0ab3b2b5da'
-version = '1.64.0'
-tag = 'V1.64.0'
+version = '1.65.0'
+tag = 'V1.65.0'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -2301,53 +2302,53 @@ verified = 'checksum-file'
 name = 'nvim'
 ref = './packages/nvim.toml'
 manifest_sha256 = 'e3ae4d0f5cabfa79a7b360bbd09bcf50c508487ceff65665b86c01b6f7952b50'
-version = '2026.10.26-187d13a'
+version = '2026.10.28-61e71cc'
 tag = 'nightly'
-tag_commit = '187d13aa6047e1914244e8033b2d2f3379a0b97f'
+tag_commit = '61e71ccf8aa17a2fb6fe5caa115daf21a0b3e9fa'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz'
-sha256 = '4978c85d19ee8922b946fe87bf391e49516b20596ef8b16687f11a62563b8683'
+sha256 = '89dad956be6bbb86c8d41f33721e9ec60e1cbf46187a7b8a9335d7b61f47cf52'
 verified = 'published'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz'
-sha256 = '3729cae8f22765642f437be53c14f75b07dc5ebc6cb12930fb1b387e02d0bc9f'
+sha256 = '53cef190c21b09de553eb7762d909b7cb52cb587291b2398104d452be771c843'
 verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-arm64.tar.gz'
-sha256 = 'f470454969f07ed34acc9368367f134abe6f5906312105e8bb9aec602df8a2d2'
+sha256 = '78e0fdcfcca0e5184f342a7cdcb1329a7e6c278dc3d0ab90213d3a29ac823077'
 verified = 'published'
 
 [[package]]
 name = 'opencode'
 ref = './packages/opencode.toml'
 manifest_sha256 = '016840d429a3f5cc1dc46121795c49ab9c4fb71c8d2ea6ea14b558e03c77e1f8'
-version = '1.19.4'
-tag = 'v1.19.4'
+version = '2.2.0'
+tag = 'v2.2.0'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/anomalyco/opencode/releases/download/v1.19.4/opencode-darwin-arm64.zip'
-sha256 = 'c400a2f8c8ab7e99478a7f4dd1a466b57bf33888e520d85c55780a5464c4b689'
+url = 'https://github.com/anomalyco/opencode/releases/download/v2.2.0/opencode-darwin-arm64.zip'
+sha256 = 'c71b1cd96541539ad38e2a75377d2f43d2a27567289a14371a182e9a0800db3d'
 verified = 'published'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/anomalyco/opencode/releases/download/v1.19.4/opencode-linux-x64.tar.gz'
-sha256 = '849bd6b3d959a1d2ef200ed1634a51c79a45ca236aa26665d75debd694805cce'
+url = 'https://github.com/anomalyco/opencode/releases/download/v2.2.0/opencode-linux-x64.tar.gz'
+sha256 = '6d597970a8cc448f1b9a9f645532584b339dd3ab9583bb5f063f13d83e54768f'
 verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/anomalyco/opencode/releases/download/v1.19.4/opencode-linux-arm64.tar.gz'
-sha256 = '8568230ccd847dc93e95b9f6894379077d3e014a16b48040743573e77c23e85f'
+url = 'https://github.com/anomalyco/opencode/releases/download/v2.2.0/opencode-linux-arm64.tar.gz'
+sha256 = '1f1ce0fc07b9245a815ffa9d652dbb80e6b0f07e5bf74ea87d2b1c0339fbac52'
 verified = 'published'
 
 [[package]]
@@ -2486,26 +2487,26 @@ verified = 'first-use'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep]]
@@ -2555,26 +2556,26 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep]]
@@ -2606,26 +2607,26 @@ verified = 'first-use'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
@@ -2760,26 +2761,26 @@ verified = 'first-use'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep.dep.dep]]
@@ -2889,26 +2890,26 @@ verified = 'first-use'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep.dep.dep]]
@@ -2993,7 +2994,7 @@ verified = 'first-use'
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
 manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
-version = '3.2.0'
+version = '3.2.1'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
@@ -3009,26 +3010,26 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep]]
@@ -3087,33 +3088,33 @@ verified = 'first-use'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
 manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
-version = '3.2.0'
+version = '3.2.1'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
@@ -3129,33 +3130,33 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
 manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
-version = '3.2.0'
+version = '3.2.1'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
@@ -3171,26 +3172,26 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep]]
@@ -3214,26 +3215,26 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep]]
@@ -3257,26 +3258,26 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep]]
@@ -3308,26 +3309,26 @@ verified = 'first-use'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
@@ -3462,26 +3463,26 @@ verified = 'first-use'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep.dep.dep]]
@@ -3591,26 +3592,26 @@ verified = 'first-use'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep.dep.dep]]
@@ -3695,7 +3696,7 @@ verified = 'first-use'
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
 manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
-version = '3.2.0'
+version = '3.2.1'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
@@ -3711,26 +3712,26 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep]]
@@ -3789,33 +3790,33 @@ verified = 'first-use'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
 manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
-version = '3.2.0'
+version = '3.2.1'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
@@ -3831,33 +3832,33 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
 name = 'jpeg-turbo'
 ref = './packages/jpeg-turbo.toml'
 manifest_sha256 = '729c7b6b407ca273367b97bf13aa394a99977bdbe277e4844d9ae760015bdd3b'
-version = '3.2.0'
+version = '3.2.1'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
@@ -3873,26 +3874,26 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package.dep]]
@@ -3916,26 +3917,26 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-x86_64.tar.gz'
+sha256 = 'ed85135c5a5135b45e50423cb406dea04ca3338da0b8ef3c9ede963559680be0'
 verified = 'checksum-file'
 
 [package.dep.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-linux-aarch64.tar.gz'
+sha256 = '301d5063ab259577c1b57ce5490b1aab9ea5c56dc4c822f73499553dab94925f'
 verified = 'checksum-file'
 
 [[package]]
@@ -4148,9 +4149,9 @@ strategy = 'build'
 name = 'skills-cursor'
 ref = './packages/skills-cursor.toml'
 manifest_sha256 = 'f14e9e0ad27c8f08839e713b96fadd53b11a7d4c53e662980666d0dcfd6c310e'
-version = '2026.10.25-99b609a'
+version = '2026.10.27-c742dd6'
 tag = 'main'
-tag_commit = '99b609a72323b70204eab407c622f436e858e112'
+tag_commit = 'c742dd61706fbacc1b95f1a20b7b988cf096ce6c'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4184,9 +4185,9 @@ strategy = 'build'
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
 manifest_sha256 = '7fba70fc11069a991452cc72d0a8a6cd292c9574f4c11c4e0ae4f07041f21dc0'
-version = '2026.10.26-8f04138'
+version = '2026.10.27-96da9cc'
 tag = 'main'
-tag_commit = '8f04138777c1b6996e709993362a7b0a12888ecf'
+tag_commit = '96da9cc7f1aa10580a3741664e2a77c721206c00'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4201,7 +4202,7 @@ strategy = 'build'
 [[package]]
 name = 'sops'
 ref = 'github:getsops/sops'
-commit = '453e7e6ab01b1340dca9f9025fd8430229320f97'
+commit = '91eacd394a512ca4b3c999eef679be97bca95bce'
 manifest_sha256 = '15d32539c7533f6d4072a2cf2b4793251c7d8f2d825b1050855a5d7047f45ded'
 version = '3.13.3'
 tag = 'v3.13.3'
@@ -4259,30 +4260,30 @@ commands = true
 [[package]]
 name = 'stripe-cli'
 ref = 'github:stripe/stripe-cli'
-commit = '2713dc4726cefb2ae5c9107330f0c0d5f922140f'
+commit = 'b93a4f3e0562b551febc89f5d349ff27cf4450c1'
 manifest_sha256 = 'a1f28c24ef1e91ac3473c88a3cb28701a1706ba4c39c75984e6bc89727d1e047'
-version = '1.55.1'
-tag = 'v1.55.1'
+version = '1.55.3'
+tag = 'v1.55.3'
 inferred = true
 manifest = "[package]\nname = \"stripe-cli\"\nhomepage = \"https://github.com/stripe/stripe-cli\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"stripe/stripe-cli\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe_{{version}}_linux_x86_64.tar.gz\"\nsha256_url = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe-linux-checksums.txt\"\nbin = [\"stripe\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe_{{version}}_mac-os_x86_64.tar.gz\"\nsha256_url = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe-mac-checksums.txt\"\nbin = [\"stripe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe_{{version}}_linux_arm64.tar.gz\"\nsha256_url = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe-linux-checksums.txt\"\nbin = [\"stripe\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe_{{version}}_mac-os_arm64.tar.gz\"\nsha256_url = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe-mac-checksums.txt\"\nbin = [\"stripe\"]\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/stripe/stripe-cli/releases/download/v1.55.1/stripe_1.55.1_mac-os_arm64.tar.gz'
-sha256 = 'dc207481fa4a05c6c70d921c001c3c0002a03597ea6a77c8f760ca53f455cf82'
+url = 'https://github.com/stripe/stripe-cli/releases/download/v1.55.3/stripe_1.55.3_mac-os_arm64.tar.gz'
+sha256 = 'e9b7a7e5101a9be71308de782a2658fa75cdde3dcf0b78493079451019912fbf'
 verified = 'checksum-file'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/stripe/stripe-cli/releases/download/v1.55.1/stripe_1.55.1_linux_x86_64.tar.gz'
-sha256 = 'c7a1eb723ecd29aaa3c7ec3d16139d6f01126ea9df91bb6a161b9616ad8fba68'
+url = 'https://github.com/stripe/stripe-cli/releases/download/v1.55.3/stripe_1.55.3_linux_x86_64.tar.gz'
+sha256 = 'a894f7891eac5eabb67a5ad5b4820a236626a805b9be544fb4c6e41c5ad91043'
 verified = 'checksum-file'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/stripe/stripe-cli/releases/download/v1.55.1/stripe_1.55.1_linux_arm64.tar.gz'
-sha256 = '794a7d866d60bae274f91947442cf8cbaab2b33002481ab8dbab1c01f10e8ac2'
+url = 'https://github.com/stripe/stripe-cli/releases/download/v1.55.3/stripe_1.55.3_linux_arm64.tar.gz'
+sha256 = '52215f1bebf4a86e4221f2eeb62f56e499de4fc0a1b1bcb19a2d3c2bf84d76f2'
 verified = 'checksum-file'
 
 [[package]]
@@ -4315,13 +4316,13 @@ verified = 'checksum-file'
 name = 'tailscale-app'
 ref = './packages/tailscale.toml'
 manifest_sha256 = '4201aee4a64a6af359fb98f3070236e360ddfb9e1f92b590577c4a6369b56a0f'
-version = '1.104.2'
+version = '1.104.4'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://pkgs.tailscale.com/stable/Tailscale-1.104.2-macos.pkg'
-sha256 = '1724d2e021d3c5f817f427f628260c013531a528f1258a7d477735d198b11f55'
+url = 'https://pkgs.tailscale.com/stable/Tailscale-1.104.4-macos.pkg'
+sha256 = 'ee8800f6597acd040ab45f3fece21cb89fb691968a6a2e2a30d1f2f2707b41d2'
 verified = 'first-use'
 
 [[package]]
@@ -4557,26 +4558,14 @@ verified = 'checksum-file'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
-verified = 'checksum-file'
-
-[package.dep.platform.linux-amd64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
-verified = 'checksum-file'
-
-[package.dep.platform.linux-arm64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package.dep]]
@@ -4594,14 +4583,14 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package.dep]]
@@ -4619,14 +4608,14 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package.dep]]
@@ -4646,14 +4635,14 @@ verified = 'manifest'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
@@ -4671,14 +4660,14 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
@@ -4696,14 +4685,14 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package.dep]]
@@ -4721,14 +4710,14 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package.dep]]
@@ -4746,14 +4735,14 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package.dep]]
@@ -4773,14 +4762,14 @@ verified = 'manifest'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
@@ -4798,14 +4787,14 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
@@ -4823,14 +4812,14 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package]]
@@ -4948,26 +4937,14 @@ verified = 'checksum-file'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.platform]
 [package.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
-verified = 'checksum-file'
-
-[package.dep.dep.platform.linux-amd64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-x86_64.tar.gz'
-sha256 = 'e5bb807f7728cb60cd8b27ebc97a2edb469b68655f21e844a600c3575b76f5bb'
-verified = 'checksum-file'
-
-[package.dep.dep.platform.linux-arm64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-linux-aarch64.tar.gz'
-sha256 = 'a1b6cc63636a0e55c63257cf3315a8a5f129e42fade25db1afea4ff8ab06f25e'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
@@ -4985,14 +4962,14 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
@@ -5010,14 +4987,14 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
@@ -5037,14 +5014,14 @@ verified = 'manifest'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package.dep.dep.dep]]
@@ -5062,14 +5039,14 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.dep.platform]
 [package.dep.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package.dep.dep.dep]]
@@ -5087,14 +5064,14 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.dep.platform]
 [package.dep.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
@@ -5112,14 +5089,14 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
@@ -5137,14 +5114,14 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package.dep.dep]]
@@ -5164,14 +5141,14 @@ verified = 'manifest'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.platform]
 [package.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package.dep.dep.dep]]
@@ -5189,14 +5166,14 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.dep.platform]
 [package.dep.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package.dep.dep.dep]]
@@ -5214,14 +5191,14 @@ strategy = 'build'
 name = 'cmake'
 ref = './packages/cmake.toml'
 manifest_sha256 = 'f9e61186d096055ff52ad1c66b792bfb2b4d9db4d767fce2cf1f2fbecbd18de0'
-version = '4.4.4'
-tag = 'v4.4.4'
+version = '4.4.5'
+tag = 'v4.4.5'
 
 [package.dep.dep.dep.dep.platform]
 [package.dep.dep.dep.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-macos-universal.tar.gz'
-sha256 = '4b7b73704b1db9b374e5c9ab8e17ac6148b817b6396ee75cd94a852cbac9d305'
+url = 'https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5-macos-universal.tar.gz'
+sha256 = '679e77a96b9ef9484cc6c1445255fc4f84206b48a65420efbedf16bdab55fbff'
 verified = 'checksum-file'
 
 [[package.dep]]
@@ -5330,13 +5307,13 @@ verified = 'checksum-file'
 name = 'whatsapp'
 ref = './packages/whatsapp.toml'
 manifest_sha256 = '899c45c2fb9ba4689b30e5aa2d93d556606c3cf234030f31f378111ac8ee6b96'
-version = '26.42.19'
+version = '26.43.20'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://web.whatsapp.com/desktop/mac_native/release/?version=2.26.42.19&extension=zip&configuration=Release&branch=master&is_buck=true'
-sha256 = '0e628211320fcb49fc62afd78708603cdd2f3c34f062ef229f7ef01ba50358f6'
+url = 'https://web.whatsapp.com/desktop/mac_native/release/?version=2.26.43.20&extension=zip&configuration=Release&branch=master&is_buck=true'
+sha256 = 'b95f82cbdeddfdf12f2f0f393dfd8d9a8ebd128d8fbf171840a50e0fbcc59913'
 verified = 'first-use'
 
 [[package]]

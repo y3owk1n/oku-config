@@ -57,6 +57,10 @@ status is-interactive; and begin
     alias vim fude
     alias x exit
 
+    if type -q ghostty
+        alias ssh 'ghostty +ssh --'
+    end
+
     set fish_greeting # Disable greeting
 
     # Disable Fish's native history by using a dummy session
