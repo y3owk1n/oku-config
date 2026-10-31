@@ -438,8 +438,11 @@ command = ["prisma-language-server", "--stdio"]
 root = [".git", "package.json"]
 
 # supermaven plugin -> https://github.com/y3owk1n/fude-supermaven
+# fude builds main's newest commit with TinyGo, plugins.lock pins it, and
+# :plugin update moves it on.
 [[plugin]]
-path = "{{home}}/Dev/fude-supermaven/fude-supermaven.wasm"
+repo = "github.com/y3owk1n/fude-supermaven"
+version = "main"
 capabilities = ["buffer.read", "buffer.write", "ui", "process"]
 programs = ["sh"]
 options = { ignore_filetypes = ["markdown", "text"] }

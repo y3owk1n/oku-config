@@ -105,3 +105,7 @@ neru = { ref = "github:y3owk1n/neru#neru-main", service = true }
 uts = "github:y3owk1n/uts#uts-main"
 friendly = "git+https://git.getfriend.ly/ai/cli"
 fude = "github:y3owk1n/fude#fude-main"
+# fude builds a plugin from a repo with no release, such as
+# fude-supermaven's main, with TinyGo. TinyGo runs binaryen's wasm-opt.
+tinygo = { ref = "github:y3owk1n/fude#.oku/tinygo.toml", version = "^0.43" }
+binaryen = { ref = "github:y3owk1n/fude#.oku/binaryen.toml" }

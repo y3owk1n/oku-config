@@ -76,6 +76,9 @@
 # fude
 "{{config}}/fude/config.toml" = { render = "../files/fude/config.toml.tmpl" }
 "{{config}}/fude/taplo.toml" = { link = "../files/fude/taplo.toml" }
+# fude writes plugins.lock through the link, so the commit of each plugin
+# it installs stays here.
+"{{config}}/fude/plugins.lock" = { link = "../files/fude/plugins.lock" }
 
 # friendly
 "{{config}}/friendly/theme.toml" = { render = "../files/friendly/theme.toml.tmpl" }

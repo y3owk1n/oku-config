@@ -1,0 +1,4 @@
+[[plugin]]
+repo = 'github.com/y3owk1n/fude-supermaven'
+version = 'main'
+commit = '2f55e2642526ef461c16a2b20a6e6d871f3a78c9'
