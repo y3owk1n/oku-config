@@ -675,31 +675,6 @@ sha256 = 'f7a1e486dbc8b286847815b477d4fb5e9fb963ed4489c3e1588853d685f589f9'
 verified = 'checksum-file'
 
 [[package]]
-name = 'freebuff'
-ref = './packages/freebuff.toml'
-manifest_sha256 = '5a05ed5b3b754299066e214b6b8ac17044226cff4b4fa856f6b6d699c8eb6508'
-version = '0.2.35'
-
-[package.platform]
-[package.platform.darwin-arm64]
-strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.2.35/freebuff-darwin-arm64.tar.gz'
-sha256 = 'f3c15573d3a9a43f2e185a8a825792eef8280a7a23bad65be7dff3c6e96648a8'
-verified = 'first-use'
-
-[package.platform.linux-amd64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.2.35/freebuff-linux-x64.tar.gz'
-sha256 = '41b1e82659cd5c9185ebb201b1e4ddaff0a2fc1c68e14a2d18577b0de6e29335'
-verified = 'first-use'
-
-[package.platform.linux-arm64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/CodebuffAI/codebuff-community/releases/download/freebuff-v0.2.35/freebuff-linux-arm64.tar.gz'
-sha256 = 'd199e7c4922babc003a09f860297ba19b2fe463b0389b261fc1729496ce21f46'
-verified = 'first-use'
-
-[[package]]
 name = 'friendly'
 ref = 'git+https://git.getfriend.ly/ai/cli'
 commit = 'a2ee1c78431aa6f880e4253dd35333791940c95d'
@@ -2350,32 +2325,6 @@ verified = 'published'
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-arm64.tar.gz'
 sha256 = '073aaac37c2479e2855c50dd0dbb36a25d214e4b3481d5c8ffcfbe221a31e273'
-verified = 'published'
-
-[[package]]
-name = 'opencode'
-ref = './packages/opencode.toml'
-manifest_sha256 = '016840d429a3f5cc1dc46121795c49ab9c4fb71c8d2ea6ea14b558e03c77e1f8'
-version = '2.2.5'
-tag = 'v2.2.5'
-
-[package.platform]
-[package.platform.darwin-arm64]
-strategy = 'artifact'
-url = 'https://github.com/anomalyco/opencode/releases/download/v2.2.5/opencode-darwin-arm64.zip'
-sha256 = '25ba9908979fa7d764792c82589b4b5768ab1511154e0317d98aa77d216ce767'
-verified = 'published'
-
-[package.platform.linux-amd64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/anomalyco/opencode/releases/download/v2.2.5/opencode-linux-x64.tar.gz'
-sha256 = '09f44302c10fd036912f59c81fd1aef5df45dd06f649197f9dfc9bbe2a79614e'
-verified = 'published'
-
-[package.platform.linux-arm64-glibc]
-strategy = 'artifact'
-url = 'https://github.com/anomalyco/opencode/releases/download/v2.2.5/opencode-linux-arm64.tar.gz'
-sha256 = '5a528f42caf576c6cdece6a191eb273d3db54effa5518e0402684d8f8026aeb6'
 verified = 'published'
 
 [[package]]

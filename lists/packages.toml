@@ -86,8 +86,8 @@ ghostty = "../packages/ghostty.toml"
 
 # coding agents
 claude-code = "../packages/claude-code.toml"
-freebuff = "../packages/freebuff.toml"
-opencode = "../packages/opencode.toml"
+# freebuff = "../packages/freebuff.toml"
+# opencode = "../packages/opencode.toml"
 
 # keyboard remapper, which upstream builds for x86-64 Linux only
 kanata = { ref = "../packages/kanata.toml", when = [
