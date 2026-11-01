@@ -23,8 +23,7 @@ text = "#{{theme.base05}}"
 [general]
 hide_overlay_in_screen_share = true
 passthrough_unbounded_keys = true
-exec_shell = "{{neru-shell}}"
-exec_shell_args = ["{{neru-shell-arg}}"]
+shell = ["{{neru-shell}}", "{{neru-shell-arg}}"]
 
 # ============================================================================
 # Hotkeys
@@ -72,7 +71,7 @@ text_color = "#00000000"
 # "shift+l" = "__disabled__"
 "Shift+M" = "__disabled__"
 "Shift+I" = "__disabled__"
-"Shift+U" = "__disabled__"
+# "Shift+U" = "__disabled__"
 "Shift+R" = "__disabled__"
 "`" = "__disabled__"
 
@@ -82,9 +81,12 @@ text_color = "#00000000"
 "." = "action reset"
 "p" = "action left_click --toggle"
 "i" = "action move_mouse"
-"u" = "action left_click"
-"e" = "action middle_click"
-"o" = "action right_click"
+"u" = "run 'action snap --strategy segment' 'action left_click'"
+"Shift+U" = "action left_click"
+"e" = "run 'action snap --strategy segment' 'action middle_click'"
+"Shift+E" = "action middle_click"
+"o" = "run 'action snap --strategy segment' 'action right_click'"
+"Shift+O" = "action right_click"
 "s" = "action feed ctrl+s"
 "f" = "action feed ctrl+f"
 
