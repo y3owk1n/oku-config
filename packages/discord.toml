@@ -12,15 +12,15 @@ homepage = "https://discord.com"
 # The image holds one app for both Intel and Apple silicon.
 [[artifact]]
 match = { os = "darwin" }
-version = { from = "redirect", repo = "https://discord.com/api/download?platform=osx", regex = '/osx/([0-9.]+)/' }
-url = "https://stable.dl2.discordapp.net/apps/osx/{{version}}/Discord.dmg"
+version = { from = "redirect", repo = "https://discord.com/api/download?platform=osx", regex = '/osx/universal/([0-9.]+)/' }
+url = "https://stable.dl2.discordapp.net/distro/app/stable/osx/universal/{{version}}/Discord.dmg"
 app = ["Discord.app"]
 
 # Discord builds Linux for x86-64 only.
 [[artifact]]
 match = { os = "linux", arch = "amd64" }
-version = { from = "redirect", repo = "https://discord.com/api/download?platform=linux&format=tar.gz", regex = '/linux/([0-9.]+)/' }
-url = "https://stable.dl2.discordapp.net/apps/linux/{{version}}/discord-{{version}}.tar.gz"
+version = { from = "redirect", repo = "https://discord.com/api/download?platform=linux&format=tar.gz", regex = '/linux/x64/([0-9.]+)/' }
+url = "https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/{{version}}/Discord.tar.gz"
 strip = 1
 bin = ["discord"]
 app = [{ path = "discord", name = "Discord", icon = "discord.png" }]
