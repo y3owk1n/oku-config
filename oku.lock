@@ -36,13 +36,13 @@ sha256 = ''
 name = 'affinity'
 ref = './packages/affinity.toml'
 manifest_sha256 = '57fcbe2b46adc03986a3eeda4c19d815df14efd215bf730c0ef7204216aa5121'
-version = '3.3.1+4940'
+version = '3.3.3+5004'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://affinity-update.s3.amazonaws.com/mac2/retail/Affinity%20Affinity%20Store%204940.zip'
-sha256 = 'c4714eaab9e312dfcc5ab7e37ec7276a702a2a74daedcb98a08e54ac0abe8248'
+url = 'https://affinity-update.s3.amazonaws.com/mac2/retail/Affinity%20Affinity%20Store%205004.zip'
+sha256 = '91fb16eadeea616831da95dcd7093cae4ce81d979640e5588a01cdd8c462025f'
 verified = 'first-use'
 
 [[package]]
@@ -79,27 +79,27 @@ verified = 'sigstore'
 name = 'ast-grep'
 ref = './packages/ast-grep.toml'
 manifest_sha256 = '03d9d1d82fe4bd99b360bf47e866447a1ff531735a4f1a3fbc784e93a49b4f73'
-version = '0.51.0'
+version = '0.51.1'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/ast-grep/ast-grep/releases/download/0.51.0/app-aarch64-apple-darwin.zip'
-sha256 = 'e18e13c27ed6c4b3ec4de00745b0755dee9dc26c035e226f4dd5d147dca99cc8'
+url = 'https://github.com/ast-grep/ast-grep/releases/download/0.51.1/app-aarch64-apple-darwin.zip'
+sha256 = 'a95772097b4d02bd9d45ed63b300c37041ae3c36632b3bf19250cc7c10187dc4'
 verified = 'published'
 commands = true
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/ast-grep/ast-grep/releases/download/0.51.0/app-x86_64-unknown-linux-gnu.zip'
-sha256 = 'a7eead5552d3a8daad70f5d50d935da44bd0c138e946b5b0a96b1d38169fa639'
+url = 'https://github.com/ast-grep/ast-grep/releases/download/0.51.1/app-x86_64-unknown-linux-gnu.zip'
+sha256 = '42514f77ae0c8a25d7d32154d31d3e7e16f3ab894f8ce76ce417de234ee49157'
 verified = 'published'
 commands = true
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/ast-grep/ast-grep/releases/download/0.51.0/app-aarch64-unknown-linux-gnu.zip'
-sha256 = '73af0ebe5958acee012754a5b2826a186580ef83333092408a7a01096fc30b8b'
+url = 'https://github.com/ast-grep/ast-grep/releases/download/0.51.1/app-aarch64-unknown-linux-gnu.zip'
+sha256 = 'db02fae2d8eace5fc40c55242068882452dd03eab38a1d950d5fd981cf112926'
 verified = 'published'
 commands = true
 
@@ -353,25 +353,25 @@ verified = 'published'
 name = 'claude-code'
 ref = './packages/claude-code.toml'
 manifest_sha256 = '1b9285b5b755fe2cf571042fcd0a46c0f3fb4de4b3198c9c3a896a78a200498a'
-version = '2.1.316'
+version = '2.1.317'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.316/darwin-arm64/claude'
-sha256 = '64c327e92b2c5e0f78c0a980c5a518121e1f0d140ca771ca5dd4488d1a2dcb3f'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.317/darwin-arm64/claude'
+sha256 = '09f153b46b5df9e8b3454716d682a91901de020cbca630f61dec1a015b32b5e9'
 verified = 'first-use'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.316/linux-x64/claude'
-sha256 = 'fd13c70000fec3f2116dfbcbb6121210b4a29328bf0e46210a59dd594a67d824'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.317/linux-x64/claude'
+sha256 = 'eb224419e344575faa4a1f39b290b649425a10cd5ee2ef1d003480cd9ae57eb0'
 verified = 'first-use'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.316/linux-arm64/claude'
-sha256 = '55cdb8e162d190432696ea54010e0fca2e18d06fa7a7127fd563b9ffd4f22624'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.317/linux-arm64/claude'
+sha256 = '563a0d60ad0c223d9415768210997acb0f7134ea51dc3c238e88bc2e18ddeefa'
 verified = 'first-use'
 
 [[package]]
@@ -391,7 +391,7 @@ verified = 'first-use'
 [[package]]
 name = 'difftastic'
 ref = 'github:Wilfred/difftastic'
-commit = 'd8f1c1da12096851d88c9f0f5fbff7f47dc5b7f8'
+commit = '00e2173018a24920e9d03ab7b8011c9605a6d971'
 manifest_sha256 = '6f6be2ead2b9ee388a9218c1f131c1a15566e234dac7b6e65b933786219bd38f'
 version = '0.72.0'
 inferred = true
@@ -419,20 +419,20 @@ verified = 'published'
 [[package]]
 name = 'discord'
 ref = './packages/discord.toml'
-manifest_sha256 = 'f890bd32c39952f1328a9549f354266f4d0e56b2f51a2bf29c1d923a207789cf'
+manifest_sha256 = '5bdd325fd3556b3a92c8a9e4b1a46d4e8dd39cf0694d0889e99d5af457f97daf'
 version = '0.0.420'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://stable.dl2.discordapp.net/apps/osx/0.0.420/Discord.dmg'
-sha256 = 'f1f809f79873a375ebaff8dd09858bf1cd9ac91167853a928f747b9f891c8dc8'
+url = 'https://stable.dl2.discordapp.net/distro/app/stable/osx/universal/0.0.420/Discord.dmg'
+sha256 = '8ca239ce3b1102bdbfb341d6261e3eb5cdf2a26643b3efac3cfa2f19f871ed42'
 verified = 'first-use'
 version = '0.0.420'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://stable.dl2.discordapp.net/apps/linux/1.0.168/discord-1.0.168.tar.gz'
+url = 'https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.168/Discord.tar.gz'
 sha256 = 'f25a97173c895a3f64d49261609f9c91309b20c1d4eb7670a2cb4caf808041c0'
 verified = 'first-use'
 version = '1.0.168'
@@ -555,25 +555,25 @@ verified = 'published'
 name = 'firefox'
 ref = './packages/firefox.toml'
 manifest_sha256 = 'a6f57aa3dd145c6d801bca7cf79189f1d7fd03e9f9412e714d60d73efb047829'
-version = '159.0'
+version = '159.0.1'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/159.0/mac/en-US/Firefox%20159.0.dmg'
-sha256 = '0772404ae6e068d7cc03cecf4bb06a855f10287a77b624ffa41c6d092a64ea13'
+url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/159.0.1/mac/en-US/Firefox%20159.0.1.dmg'
+sha256 = '0c214da4439c1eb4cea28a3c141ff112d511aa32c67f9d12e91116569c8d8dda'
 verified = 'first-use'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/159.0/linux-x86_64/en-US/firefox-159.0.tar.xz'
-sha256 = '54536fcd120af484d4c56272a5a1cf4af57b9c713d1a3b1e775da192dd541fcd'
+url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/159.0.1/linux-x86_64/en-US/firefox-159.0.1.tar.xz'
+sha256 = '469ce17120018e1c95411d254cf3c5f8db2dd1768a7acde5a2a089b00072ac65'
 verified = 'first-use'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/159.0/linux-aarch64/en-US/firefox-159.0.tar.xz'
-sha256 = 'de7b16588bf3ab11774f6c1b1461dafde943c1cf0ea93dc15aa5f7bd99aa1191'
+url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/159.0.1/linux-aarch64/en-US/firefox-159.0.1.tar.xz'
+sha256 = '847651efd44351972a281afa54845708faffb358692f551af391dd77736bbd6b'
 verified = 'first-use'
 
 [[package]]
@@ -677,29 +677,29 @@ verified = 'checksum-file'
 [[package]]
 name = 'friendly'
 ref = 'git+https://git.getfriend.ly/ai/cli'
-commit = 'a2ee1c78431aa6f880e4253dd35333791940c95d'
+commit = '6a6c0325127f284200e4bddcee51181792c6e0e8'
 manifest_sha256 = 'be656ed494e6459d129948f54b32a3ec42fa4da0788f3684cf2d9a2fdd9385ff'
-version = '2026.10.26-a2ee1c7'
+version = '2026.11.02-6a6c032'
 tag = 'main'
-tag_commit = 'a2ee1c78431aa6f880e4253dd35333791940c95d'
+tag_commit = '6a6c0325127f284200e4bddcee51181792c6e0e8'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
-vendor_sha256 = '03007b93ccbab2a512460e6b8fe6476f29804026bf370e1c0895b9033aa3813f'
+vendor_sha256 = 'f0a4f77faa73fb3b4394dadde6ab9cdcd8e9aec3e0c1f196ad3137a0167f4aba'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'build'
-vendor_sha256 = '03007b93ccbab2a512460e6b8fe6476f29804026bf370e1c0895b9033aa3813f'
+vendor_sha256 = 'f0a4f77faa73fb3b4394dadde6ab9cdcd8e9aec3e0c1f196ad3137a0167f4aba'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'build'
-vendor_sha256 = '03007b93ccbab2a512460e6b8fe6476f29804026bf370e1c0895b9033aa3813f'
+vendor_sha256 = 'f0a4f77faa73fb3b4394dadde6ab9cdcd8e9aec3e0c1f196ad3137a0167f4aba'
 
 [[package.dep]]
 name = 'go'
 ref = 'git+https://git.getfriend.ly/ai/cli#.oku/go.toml'
-commit = 'a2ee1c78431aa6f880e4253dd35333791940c95d'
+commit = '6a6c0325127f284200e4bddcee51181792c6e0e8'
 manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
 version = '1.27.3'
 tag = 'go1.27.3'
@@ -775,7 +775,7 @@ verified = 'checksum-file'
 [[package]]
 name = 'fzf'
 ref = 'github:junegunn/fzf'
-commit = '26ff936df038b6a62ec42cf18db27b2ea2bb8ec3'
+commit = '99bfd5aa0f66133d7dcfbf18f8044eb765f04649'
 manifest_sha256 = 'faeb904b44161238caefcffb88c80fa6f790053860ba757580a7ec433e0e42d2'
 version = '0.74.5'
 tag = 'v0.74.5'
@@ -994,7 +994,7 @@ verified = 'published'
 name = 'imagemagick'
 ref = './packages/imagemagick.toml'
 manifest_sha256 = 'd8f50a9df521d177a6b0377cd3935787982a7a80602ee164f151fbbcbb2dde67'
-version = '7.1.2-34'
+version = '7.1.2-35'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -1932,7 +1932,7 @@ verified = 'checksum-file'
 [[package]]
 name = 'jq'
 ref = 'github:jqlang/jq'
-commit = '992db9b7e5e3059b764bf430bd97716829e99578'
+commit = '5c001b18d7237cce1fdba63608732163f978dd23'
 manifest_sha256 = 'f9e766ea364fbe94f87f4e0e08f9147c14d038f36cc18d8d73953c8f0fa50b23'
 version = '1.8.2'
 signer_workflow = 'jqlang/jq/.github/workflows/ci.yml'
@@ -2173,11 +2173,11 @@ verified = 'published'
 [[package]]
 name = 'mimi'
 ref = 'github:y3owk1n/mimi#mimi-main'
-commit = '0f75e233decf97aebd831eaec9c4c30a77e2f5ba'
+commit = 'e5c0bb1743fa4c73c82c59cef467d46684a61b61'
 manifest_sha256 = '8f46313f0fe2255da0f41fb86705c21e702b920e81321a5cb34dd1ba4b250f20'
-version = '2026.10.25-0f75e23'
+version = '2026.11.01-e5c0bb1'
 tag = 'main'
-tag_commit = '0f75e233decf97aebd831eaec9c4c30a77e2f5ba'
+tag_commit = 'e5c0bb1743fa4c73c82c59cef467d46684a61b61'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -2187,7 +2187,7 @@ vendor_sha256 = '4b8f4eb4167afe3373d82070487745a67efed209e4735231f208bb30c35c1fb
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/mimi#.oku/go.toml'
-commit = '0f75e233decf97aebd831eaec9c4c30a77e2f5ba'
+commit = 'e5c0bb1743fa4c73c82c59cef467d46684a61b61'
 manifest_sha256 = '850dfc0af428be9b5da144c08de9d6c247b2bd41a401c160d99a076a8ce62691'
 version = '1.26.10'
 tag = 'go1.26.10'
@@ -2254,11 +2254,11 @@ verified = 'checksum-file'
 [[package]]
 name = 'neru'
 ref = 'github:y3owk1n/neru#neru-main'
-commit = 'e4e444e1ceb661bcd5592a3aeef7c12db04856c1'
+commit = '13ff4734f6dcee2ba5bb08e469f28528c13ae4ab'
 manifest_sha256 = 'f379339f52e3db3db53cab26f66be0f2f6df4890cf33e61877ef07d7f797e705'
-version = '2026.11.01-e4e444e'
+version = '2026.11.02-13ff473'
 tag = 'main'
-tag_commit = 'e4e444e1ceb661bcd5592a3aeef7c12db04856c1'
+tag_commit = '13ff4734f6dcee2ba5bb08e469f28528c13ae4ab'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -2276,7 +2276,7 @@ vendor_sha256 = '1728a4f0994a397958405fb8283d0edbe5dc9503f3a84ba7b3e67eae4116c0a
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/neru#.oku/go.toml'
-commit = 'e4e444e1ceb661bcd5592a3aeef7c12db04856c1'
+commit = '13ff4734f6dcee2ba5bb08e469f28528c13ae4ab'
 manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
 version = '1.26.10'
 tag = 'go1.26.10'
@@ -2304,27 +2304,27 @@ verified = 'checksum-file'
 name = 'nvim'
 ref = './packages/nvim.toml'
 manifest_sha256 = 'e3ae4d0f5cabfa79a7b360bbd09bcf50c508487ceff65665b86c01b6f7952b50'
-version = '2026.11.01-facba8d'
+version = '2026.11.02-6332ba6'
 tag = 'nightly'
-tag_commit = 'facba8d36b418c9aae032e049c0313cd6e09ce91'
+tag_commit = '6332ba64fe56f922c5cd2d93e4cfa23673966b6d'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz'
-sha256 = '64b0bb48156f28a3ebf34cc1bc7fae1d3c0698a88baa62c9df620b1f630b4c7c'
+sha256 = '517a4a8942eaad0253df05ecf660d4ac56c3aecf15e5fb2d1a9ee6e378862fdb'
 verified = 'published'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz'
-sha256 = '738d5f9d677bd3cbd4ed56b5708d7cef33edd1c9648a723bb6ecce3939eee901'
+sha256 = 'ca96172fcf8a117ab0333e07cdaeb7eb57de5d53753f64c448dd888090311c47'
 verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-arm64.tar.gz'
-sha256 = '073aaac37c2479e2855c50dd0dbb36a25d214e4b3481d5c8ffcfbe221a31e273'
+sha256 = '108acf2644963a4aa4c5796af7491822514ce893db642539bff43c39a8f861ec'
 verified = 'published'
 
 [[package]]
@@ -4107,9 +4107,9 @@ strategy = 'build'
 name = 'skills-caveman'
 ref = './packages/skills-caveman.toml'
 manifest_sha256 = 'b537c338347eeb91180d1e710d8001df8043f5cf13ddcffb8762a65d840f2715'
-version = '2026.10.25-9b68f7e'
+version = '2026.11.02-2e068f7'
 tag = 'main'
-tag_commit = '9b68f7ed12b05e7efaff18e65c5a3fc2849fd0a4'
+tag_commit = '2e068f735253cce28256744804785f01887d9646'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4143,9 +4143,9 @@ strategy = 'build'
 name = 'skills-emil'
 ref = './packages/skills-emil.toml'
 manifest_sha256 = '088a5cf1c5645235c33a1dd2a1d6aa9d2377dc8ed319c13ff4ff23d7b2e72119'
-version = '2026.10.28-a81dbca'
+version = '2026.11.02-f1090be'
 tag = 'main'
-tag_commit = 'a81dbca07f2217b7103e510c0f13f8d5b017afc9'
+tag_commit = 'f1090bec277140d02ed202440185ad9d02ac1490'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4161,9 +4161,9 @@ strategy = 'build'
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
 manifest_sha256 = '7fba70fc11069a991452cc72d0a8a6cd292c9574f4c11c4e0ae4f07041f21dc0'
-version = '2026.10.31-c0d63c3'
+version = '2026.11.02-4aaea19'
 tag = 'main'
-tag_commit = 'c0d63c339d6cd2fc26135590a54cf1f362269451'
+tag_commit = '4aaea19d9cff3e0908e12a8c1d504b8c5ec34610'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4178,7 +4178,7 @@ strategy = 'build'
 [[package]]
 name = 'sops'
 ref = 'github:getsops/sops'
-commit = '91eacd394a512ca4b3c999eef679be97bca95bce'
+commit = 'cbb1216640c95c11f55a7e091ffa2748a319d4d8'
 manifest_sha256 = '15d32539c7533f6d4072a2cf2b4793251c7d8f2d825b1050855a5d7047f45ded'
 version = '3.13.3'
 tag = 'v3.13.3'
@@ -4236,7 +4236,7 @@ commands = true
 [[package]]
 name = 'stripe-cli'
 ref = 'github:stripe/stripe-cli'
-commit = '3292c3301c85bcf9ab034e6e6146dbcf67c27416'
+commit = '2a0f453462e6cd48a436f42350cf518002773c4d'
 manifest_sha256 = 'a1f28c24ef1e91ac3473c88a3cb28701a1706ba4c39c75984e6bc89727d1e047'
 version = '1.55.6'
 tag = 'v1.55.6'
@@ -5310,13 +5310,13 @@ verified = 'checksum-file'
 name = 'whatsapp'
 ref = './packages/whatsapp.toml'
 manifest_sha256 = '899c45c2fb9ba4689b30e5aa2d93d556606c3cf234030f31f378111ac8ee6b96'
-version = '26.43.27'
+version = '26.44.15'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://web.whatsapp.com/desktop/mac_native/release/?version=2.26.43.27&extension=zip&configuration=Release&branch=master&is_buck=true'
-sha256 = 'fcd3415e8aafa420d9cc9b58574ade194ff616592998661a22db8061bcfdafb0'
+url = 'https://web.whatsapp.com/desktop/mac_native/release/?version=2.26.44.15&extension=zip&configuration=Release&branch=master&is_buck=true'
+sha256 = 'f928e799668084a901052fcd2a200456ad3b6135f37d30f1e69b630728c6106c'
 verified = 'first-use'
 
 [[package]]
