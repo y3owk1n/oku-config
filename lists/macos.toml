@@ -307,3 +307,21 @@ disableHotPlug = true
 # App Store updates apps by itself. User scope copy, see bootstrap/macos.sh.
 [defaults."com.apple.commerce"]
 AutoUpdate = true
+
+# Rex, as I set it in its Settings. remoteControl lets `rex do` run the
+# app's actions. The session picker on ctrl+b ctrl+b needs that to switch
+# sessions. The dark theme is the imported stylix, which has an ID of its
+# own on each Mac, see the README.
+[defaults."com.superlogical.rex"]
+"rex.client.remoteControl" = true
+"Workspace.appearance" = "dark"
+"Workspace.inactivePaneFadeMode" = "both"
+"Workspace.interfaceStyle" = "useTheme"
+"Workspace.paneDensity" = "comfortable"
+"Workspace.sidebarPosition" = "left"
+"Workspace.tabIconTintMode" = "off"
+"Workspace.tabStyle" = "vertical"
+"Workspace.terminalFontName" = "JetBrainsMonoNL Nerd Font Mono"
+"Workspace.terminalFontPointSize" = 14.0
+"Workspace.terminalSmoothScrolling" = true
+"Workspace.terminalUsesDisplayP3" = false

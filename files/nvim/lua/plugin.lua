@@ -6,10 +6,23 @@ local nvim_tmux_navigation = require("nvim-tmux-navigation")
 
 nvim_tmux_navigation.setup({})
 
-vim.keymap.set("n", "<c-h>", "<cmd>NvimTmuxNavigateLeft<cr>", { desc = "Navigate left" })
-vim.keymap.set("n", "<c-j>", "<cmd>NvimTmuxNavigateDown<cr>", { desc = "Navigate down" })
-vim.keymap.set("n", "<c-k>", "<cmd>NvimTmuxNavigateUp<cr>", { desc = "Navigate up" })
-vim.keymap.set("n", "<c-l>", "<cmd>NvimTmuxNavigateRight<cr>", { desc = "Navigate right" })
+-- In Rex, moving past the last window focuses the Rex pane that way, as
+-- ctrl+hjkl does outside an editor in ~/.config/rex/init.lua.
+local function navigate(tmux_cmd, wincmd, direction)
+  return function()
+    if not vim.env.REX_BLOCK then return vim.cmd(tmux_cmd) end
+    local win = vim.api.nvim_get_current_win()
+    vim.cmd.wincmd(wincmd)
+    if vim.api.nvim_get_current_win() == win then
+      vim.system({ "rex", "focus", direction, "--wrap" })
+    end
+  end
+end
+
+vim.keymap.set("n", "<c-h>", navigate("NvimTmuxNavigateLeft", "h", "left"), { desc = "Navigate left" })
+vim.keymap.set("n", "<c-j>", navigate("NvimTmuxNavigateDown", "j", "down"), { desc = "Navigate down" })
+vim.keymap.set("n", "<c-k>", navigate("NvimTmuxNavigateUp", "k", "up"), { desc = "Navigate up" })
+vim.keymap.set("n", "<c-l>", navigate("NvimTmuxNavigateRight", "l", "right"), { desc = "Navigate right" })
 
 -- =========================================================
 --  Formatting

@@ -87,6 +87,17 @@ way or not at all.
 8. Once, by hand: `bat cache --build`, `gh auth login`, `atuin login`. Grant
    Accessibility to mimi, neru and skhd when macOS asks.
 
+9. Install the Rex beta from its download page. It is a terminal and
+   multiplexer beside ghostty, tmux and sesh, and oku does not install it.
+   The sync already linked `~/.config/rex/init.lua` and set its settings,
+   Remote Control included. Import the theme, then pick
+   `stylix` as the Dark theme in Settings > Themes:
+
+   ```sh
+   rex do client.theme.import path=$HOME/.config/rex/themes/stylix
+   rex config reload
+   ```
+
 `oku rollback` goes back one generation: packages, files, settings and
 secrets together.
 
@@ -138,6 +149,8 @@ oku doctor           # check the setup, including the age key
 
 Edit a config under `files/` that is a `link` (nvim, kanata, fish, the agent
 files) and it is live at once. Edit a `.tmpl` or a list and run `oku sync`.
+Rex reads `files/rex/` only on `rex config reload`. `rex config check` finds
+mistakes first.
 
 ## The theme
 
@@ -145,7 +158,9 @@ files) and it is live at once. Edit a `.tmpl` or a list and run `oku sync`.
 under `files/` uses them as `{{theme.base00}}` and so on. Change a colour, run
 `oku sync`, and ghostty, tmux, fish, starship, lazygit, bat, btop, mimi, neru,
 opencode and the nvim palette file render again in one generation. Then run
-`bat cache --build` and restart the terminal.
+`bat cache --build` and restart the terminal. Rex keeps its own copy of the
+theme, so import `~/.config/rex/themes/stylix` again, as in step 9 of a new
+Mac, and pick the new copy.
 
 ## Adding things
 

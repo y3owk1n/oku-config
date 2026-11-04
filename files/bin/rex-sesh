@@ -1,0 +1,90 @@
+#!/usr/bin/env bash
+# A session picker for Rex, modelled on sesh. It lists Rex sessions, the
+# presets of ~/.config/rex/sessions.lua and zoxide's directories, and opens
+# the pick through the sesh_open action of ~/.config/rex/init.lua.
+# ctrl+b ctrl+b runs it in a floating pane. Switching a session from here
+# needs Remote Control on in Rex's settings, which lists/macos.toml sets.
+
+set -euo pipefail
+
+# Each line is the shown text, then the kind and the target, tab-separated.
+list() {
+	case $1 in
+	all)
+		list sessions
+		list presets
+		list zoxide
+		;;
+	sessions)
+		rex ls --json | jq -r '.sessions[] | " \(.label)\tsession\t\(.session_id)"'
+		;;
+	presets)
+		rex do sesh_presets --json | jq -r '.presets[] | " \(.name)\tpreset\t\(.name)"'
+		;;
+	zoxide)
+		zoxide query -l | sed "s|^$HOME|~|" | awk '{ printf " %s\tdir\t%s\n", $0, $0 }'
+		;;
+	find)
+		fd -H -d 2 -t d -E .Trash . ~ | sed "s|^$HOME|~|; s|/$||" | awk '{ printf " %s\tdir\t%s\n", $0, $0 }'
+		;;
+	esac
+}
+
+preview() {
+	local kind=$1 target=$2
+	case $kind in
+	session)
+		env -u REX_BLOCK rex capture -s "$target" --trim | tail -n "${FZF_PREVIEW_LINES:-40}"
+		;;
+	preset)
+		local path cmd
+		IFS=$'\t' read -r path cmd < <(rex do sesh_presets --json |
+			jq -r --arg n "$target" '.presets[] | select(.name == $n) | "\(.path)\t\(.preview)"')
+		bash -c "${cmd//\{\}/\"$path\"}"
+		;;
+	dir)
+		eza --tree --level=1 --color=always --group-directories-first -a "${target/#\~/$HOME}"
+		;;
+	esac
+}
+
+case ${1:-} in
+list)
+	list "$2"
+	exit
+	;;
+preview)
+	preview "$2" "$3"
+	exit
+	;;
+kill)
+	[ "$2" = session ] && rex kill "$3" >/dev/null
+	exit
+	;;
+esac
+
+self=$0
+pick=$(
+	list all | fzf --no-sort --ansi --border-label ' sessions ' --prompt '⚡  ' \
+		--delimiter '\t' --with-nth 1 \
+		--header '  ^a all ^t rex ^g configs ^x zoxide ^d rex kill ^f find' \
+		--bind 'tab:down,btab:up' \
+		--bind "ctrl-a:change-prompt(⚡  )+reload($self list all)" \
+		--bind "ctrl-t:change-prompt(🪟  )+reload($self list sessions)" \
+		--bind "ctrl-g:change-prompt(⚙️  )+reload($self list presets)" \
+		--bind "ctrl-x:change-prompt(📁  )+reload($self list zoxide)" \
+		--bind "ctrl-f:change-prompt(🔎  )+reload($self list find)" \
+		--bind "ctrl-d:execute-silent($self kill {2} {3})+change-prompt(⚡  )+reload($self list all)" \
+		--preview-window 'right:55%' \
+		--preview "$self preview {2} {3}"
+) || exit 0
+
+IFS=$'\t' read -r _ kind target <<<"$pick"
+case $kind in
+session) rex do sesh_open "session_id=$target" >/dev/null ;;
+preset) rex do sesh_open "label=$target" >/dev/null ;;
+dir)
+	path=${target/#\~/$HOME}
+	rex do sesh_open "label=$(basename "$path" | tr . _)" "path=$path" >/dev/null
+	;;
+esac

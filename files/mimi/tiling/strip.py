@@ -82,8 +82,8 @@ PEEK = 4
 # a new window is placed this way: move, consume, expel, and dragging still
 # rearrange what is there, and that order stays. On startup and reload every
 # window is new, so the strip comes up in this order.
-PRIORITY = ["com.apple.Safari", "com.brave.Browser", "org.mozilla.firefox", "com.mitchellh.ghostty", "com.apple.Terminal",
-            "com.apple.Notes", "com.hnc.Discord", "com.apple.mail", "net.whatsapp.WhatsApp"]
+PRIORITY = ["com.apple.Safari", "com.brave.Browser", "org.mozilla.firefox", "com.mitchellh.ghostty", "com.superlogical.rex",
+            "com.apple.Terminal", "com.apple.Notes", "com.hnc.Discord", "com.apple.mail", "net.whatsapp.WhatsApp"]
 # {number: (width, height)} for the windows that refuse a smaller size, set
 # from the input once it is read. A column is at least as wide as its
 # widest such window, and its rows each at least as tall as theirs, so the

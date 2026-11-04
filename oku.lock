@@ -353,25 +353,25 @@ verified = 'published'
 name = 'claude-code'
 ref = './packages/claude-code.toml'
 manifest_sha256 = '1b9285b5b755fe2cf571042fcd0a46c0f3fb4de4b3198c9c3a896a78a200498a'
-version = '2.1.317'
+version = '2.1.318'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.317/darwin-arm64/claude'
-sha256 = '09f153b46b5df9e8b3454716d682a91901de020cbca630f61dec1a015b32b5e9'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.318/darwin-arm64/claude'
+sha256 = '677a2ea7bf576cedd20e191d973914ed8a41796f53a63b1923381ddc4d5b5e7d'
 verified = 'first-use'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.317/linux-x64/claude'
-sha256 = 'eb224419e344575faa4a1f39b290b649425a10cd5ee2ef1d003480cd9ae57eb0'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.318/linux-x64/claude'
+sha256 = '708c77b204db30086ff6f1ed34577bda03e1be74ced80557cbf7b54249ebf0bd'
 verified = 'first-use'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.317/linux-arm64/claude'
-sha256 = '563a0d60ad0c223d9415768210997acb0f7134ea51dc3c238e88bc2e18ddeefa'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.318/linux-arm64/claude'
+sha256 = '53a0d7e219d7b0804ecba5dbc002745e89f786cc946d2de85a6470d5b2d1fb06'
 verified = 'first-use'
 
 [[package]]
@@ -391,7 +391,7 @@ verified = 'first-use'
 [[package]]
 name = 'difftastic'
 ref = 'github:Wilfred/difftastic'
-commit = '00e2173018a24920e9d03ab7b8011c9605a6d971'
+commit = '87aad1aea4aacdf3cab68d2006e614d4994ece69'
 manifest_sha256 = '6f6be2ead2b9ee388a9218c1f131c1a15566e234dac7b6e65b933786219bd38f'
 version = '0.72.0'
 inferred = true
@@ -726,11 +726,11 @@ verified = 'checksum-file'
 [[package]]
 name = 'fude'
 ref = 'github:y3owk1n/fude#fude-main'
-commit = 'a6f678aebcd81cbf2f1360f579aeb8c879669a63'
+commit = '25e28d9e2b978a1fe1df28b9b2f68ea8fe9fd35e'
 manifest_sha256 = '66ff60bd58747a7f6a11d5f2db10a376f39b677863725ee8414bc0b8c5bb4b0d'
-version = '2026.10.31-a6f678a'
+version = '2026.11.04-25e28d9'
 tag = 'main'
-tag_commit = 'a6f678aebcd81cbf2f1360f579aeb8c879669a63'
+tag_commit = '25e28d9e2b978a1fe1df28b9b2f68ea8fe9fd35e'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -748,7 +748,7 @@ vendor_sha256 = 'f13da1a4657445c4f86333a6fa5be8c5cb407a7ea0fd16ae16caad2608536eb
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/fude#.oku/go.toml'
-commit = 'a6f678aebcd81cbf2f1360f579aeb8c879669a63'
+commit = '25e28d9e2b978a1fe1df28b9b2f68ea8fe9fd35e'
 manifest_sha256 = '4e86afdeda4063d8c7cc15bedb7857112496c03e8608295229e30bd61a6dd9d8'
 version = '1.27.3'
 tag = 'go1.27.3'
@@ -2229,8 +2229,8 @@ sha256 = 'b98f2cc69fd9147fe4d405d859c57504571adec0d3611c3eefd04107c7ac00d0'
 name = 'mole'
 ref = './packages/mole.toml'
 manifest_sha256 = 'b3eab2b99ef01741e7a15eb8138099a633c61409907c5abbdfb39c0ab3b2b5da'
-version = '1.67.0'
-tag = 'V1.67.0'
+version = '1.68.0'
+tag = 'V1.68.0'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -2304,27 +2304,27 @@ verified = 'checksum-file'
 name = 'nvim'
 ref = './packages/nvim.toml'
 manifest_sha256 = 'e3ae4d0f5cabfa79a7b360bbd09bcf50c508487ceff65665b86c01b6f7952b50'
-version = '2026.11.02-6332ba6'
+version = '2026.11.03-b4d549f'
 tag = 'nightly'
-tag_commit = '6332ba64fe56f922c5cd2d93e4cfa23673966b6d'
+tag_commit = 'b4d549f439e833f4e4b58770ac03caa641a71efe'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz'
-sha256 = '517a4a8942eaad0253df05ecf660d4ac56c3aecf15e5fb2d1a9ee6e378862fdb'
+sha256 = 'eb779233c05139d2f3d0517581d180f5ca7a3dd8e007b3b3b65bd8be48ec282f'
 verified = 'published'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz'
-sha256 = 'ca96172fcf8a117ab0333e07cdaeb7eb57de5d53753f64c448dd888090311c47'
+sha256 = '69de2c55fb9fdd4e6fb9f07ea4feab759711b960993d15810feac4932f5a19bb'
 verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-arm64.tar.gz'
-sha256 = '108acf2644963a4aa4c5796af7491822514ce893db642539bff43c39a8f861ec'
+sha256 = '71dbb11c7da67f4f848a9c4d985a0886a37a7bbbcfbc82681a8210ff8a1cceaa'
 verified = 'published'
 
 [[package]]
@@ -4125,9 +4125,9 @@ strategy = 'build'
 name = 'skills-cursor'
 ref = './packages/skills-cursor.toml'
 manifest_sha256 = 'f14e9e0ad27c8f08839e713b96fadd53b11a7d4c53e662980666d0dcfd6c310e'
-version = '2026.11.01-ae5650f'
+version = '2026.11.04-bb68f23'
 tag = 'main'
-tag_commit = 'ae5650febf4320793844c12c4adaa937f417f8da'
+tag_commit = 'bb68f2365eceafa0cb2d253112f675acf5f144cc'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4161,9 +4161,9 @@ strategy = 'build'
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
 manifest_sha256 = '7fba70fc11069a991452cc72d0a8a6cd292c9574f4c11c4e0ae4f07041f21dc0'
-version = '2026.11.02-4aaea19'
+version = '2026.11.04-8a35366'
 tag = 'main'
-tag_commit = '4aaea19d9cff3e0908e12a8c1d504b8c5ec34610'
+tag_commit = '8a3536678a528cc012b9e62484290e79d0be410f'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4236,7 +4236,7 @@ commands = true
 [[package]]
 name = 'stripe-cli'
 ref = 'github:stripe/stripe-cli'
-commit = '2a0f453462e6cd48a436f42350cf518002773c4d'
+commit = 'e2b54d27d3dbb0a6ad9641074f84b159ef85c958'
 manifest_sha256 = 'a1f28c24ef1e91ac3473c88a3cb28701a1706ba4c39c75984e6bc89727d1e047'
 version = '1.55.6'
 tag = 'v1.55.6'
@@ -4292,13 +4292,13 @@ verified = 'checksum-file'
 name = 'tailscale-app'
 ref = './packages/tailscale.toml'
 manifest_sha256 = '4201aee4a64a6af359fb98f3070236e360ddfb9e1f92b590577c4a6369b56a0f'
-version = '1.104.4'
+version = '1.104.5'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://pkgs.tailscale.com/stable/Tailscale-1.104.4-macos.pkg'
-sha256 = 'ee8800f6597acd040ab45f3fece21cb89fb691968a6a2e2a30d1f2f2707b41d2'
+url = 'https://pkgs.tailscale.com/stable/Tailscale-1.104.5-macos.pkg'
+sha256 = 'f1a2afb589dc16487cff9f23c59d0021a1a4dcf8476d2637ab493c628422b810'
 verified = 'first-use'
 
 [[package]]

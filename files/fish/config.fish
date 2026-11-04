@@ -52,8 +52,12 @@ status is-interactive; and begin
         alias ls eza
         alias lt 'eza --tree'
     end
-    alias s 'sesh connect $(sesh list --icons | fzf --ansi)'
-    alias tx 'tmux kill-server'
+    if set -q REX_SESSION
+        alias s rex-sesh
+    else if type -q sesh
+        alias s 'sesh connect $(sesh list --icons | fzf --ansi)'
+    end
+    type -q tmux; and alias tx 'tmux kill-server'
     alias vim fude
     alias x exit
 

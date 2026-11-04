@@ -47,6 +47,15 @@ karabiner-driver = { ref = "../packages/karabiner-driver.toml", service = true, 
 "{{config}}/mimi/tiling" = { link = "../files/mimi/tiling" }
 "{{config}}/skhd/skhdrc" = { link = "../files/skhd/skhdrc" }
 
+# Rex, a terminal and multiplexer beside ghostty, tmux and sesh. The app is
+# the Rex beta, installed by hand. themes/stylix is the theme in Ghostty's
+# format. Rex imports it once, see the README.
+"{{config}}/rex/init.lua" = { link = "../files/rex/init.lua" }
+"{{config}}/rex/sessions.lua" = { link = "../files/rex/sessions.lua" }
+"{{config}}/rex/themes/stylix" = { render = "../files/ghostty/themes/stylix.tmpl" }
+"{{config}}/fish/conf.d/rex.fish" = { link = "../files/fish/conf.d/rex.fish" }
+"{{home}}/.local/bin/rex-sesh" = { link = "../files/bin/rex-sesh" }
+
 # docker finds `docker compose` and `docker buildx` here.
 "{{home}}/.docker/cli-plugins/docker-buildx" = { link = "{{pkg.orbstack}}/OrbStack.app/Contents/MacOS/xbin/docker-buildx" }
 "{{home}}/.docker/cli-plugins/docker-compose" = { link = "{{pkg.orbstack}}/OrbStack.app/Contents/MacOS/xbin/docker-compose" }
