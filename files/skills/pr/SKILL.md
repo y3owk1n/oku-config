@@ -9,7 +9,7 @@ description: "Commit changes and open a pull request."
 
 - **No AI attribution.** Never mention Claude, Anthropic, or AI in commits, PR title, body, or branch name.
 - **Never push to `main`.** New branch always.
-- **Explicit staging only.** No `git add -A` or `git add .` — stage paths individually.
+- **Explicit staging only.** No `git add -A` or `git add .`. Stage paths individually.
 - **One change per commit, one change per PR.**
 - **PR title is a conventional commit subject.** PRs land as squash merges, so the title becomes the commit message on `main`.
 
@@ -17,7 +17,7 @@ description: "Commit changes and open a pull request."
 
 1. **Branch.** Already on a feature branch: skip. Otherwise `git switch -c <type>/<short-kebab-summary>`.
 2. **Verify.** Run the repo's checks (`just ci`, `make test`, `npm test`). Open only on green. Skip when `/ship` already ran the fast checks.
-3. **Stage selectively.** `git add <paths> && git status --short` — named paths only.
+3. **Stage selectively.** `git add <paths> && git status --short`, named paths only.
 4. **Commit.** Compose the message, then grep it for attribution leaks (`claude|anthropic|co-authored|generated with`) before committing.
 5. **Check for a template.** `cat .github/pull_request_template.md 2>/dev/null`
 6. **Write PR body.** Compose the body using the template below. Open with `This PR <verb> ...`.

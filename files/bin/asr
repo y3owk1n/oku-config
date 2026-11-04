@@ -7,7 +7,7 @@ set -euo pipefail
 # Get the list of available scripts
 scripts=$(atuin scripts list | grep '^- ' | awk '{print $2}')
 
-# If there are no scripts, exit gracefully
+# If there are no scripts, exit
 if [[ -z $scripts ]]; then
   echo "⚠️  No Atuin scripts found."
   exit 0

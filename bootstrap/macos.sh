@@ -12,7 +12,7 @@
 #     sh ~/.config/oku/bootstrap/macos.sh
 #
 # It prints each group, asks before it, and calls sudo itself where needed.
-# Every group is safe to run again: it sets a value, it never appends twice.
+# Every group is safe to run again. It sets a value and never appends twice.
 # Answer n to skip a group.
 
 set -eu
@@ -48,7 +48,6 @@ group() {
 # so it also works when the script itself is piped in.
 ask() {
     printf '%s [y/N] ' "$1"
-    answer=""
     read -r answer </dev/tty || answer=""
     case "$answer" in
         y | Y | yes | YES) return 0 ;;
@@ -81,7 +80,6 @@ fi
 group "Age key for secrets (check only)"
 if [ -s "$AGE_KEY" ]; then
     say "Found $AGE_KEY"
-    # The key must not be readable by others.
     mode=$(stat -f '%Lp' "$AGE_KEY")
     if [ "$mode" != "600" ] && [ "$mode" != "400" ]; then
         say "WARNING: its mode is $mode. Run: chmod 600 $AGE_KEY"
@@ -135,7 +133,7 @@ fi
 # ---------------------------------------------------------------------------
 # nix-darwin runs "systemsetup -settimezone". That still works on current
 # macOS, as root. It can print "Error:-99 File:... InternetServices" lines,
-# which are noise: the check below reads /etc/localtime to see the real result.
+# which are noise. The check below reads /etc/localtime to see the real result.
 # A fixed zone only holds when "Set time zone automatically" is off in
 # System Settings > General > Date & Time.
 

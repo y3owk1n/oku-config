@@ -44,7 +44,7 @@ Open with: "What are we building and for whom?" Then sharpen with:
 - A: [minimal vertical slice]
 - B: [slightly broader but still narrow]
 - C: [full scope]
-- **Recommendation**: A — tracer bullets, not a cathedral
+- **Recommendation**: A. Tracer bullets, not a cathedral
 
 ### 2. Vocabulary
 
@@ -52,7 +52,7 @@ Before questioning, read the PRD: `cat prd/glossary.md prd/behaviours.md prd/dec
 
 As terms surface, sharpen them:
 
-**Q4: "[term]" — what do you mean exactly?**
+**Q4: "[term]", what do you mean exactly?**
 
 - A: [definition 1]
 - B: [definition 2]
@@ -60,19 +60,19 @@ As terms surface, sharpen them:
 
 If the term conflicts with `prd/glossary.md`: "Your glossary defines 'X' as Y, but you seem to mean Z. Which is it?"
 
-If the term is fuzzy: "You're saying '[vague term]': do you mean [A] or [B]? Those are different things."
+If the term is fuzzy: "You're saying '[vague term]'. Do you mean [A] or [B]? Those are different things."
 
 Stress-test with concrete scenarios. Invent edge cases that force precision.
 
 Cross-reference with code. When the user states how something works, check whether the code agrees. Surface contradictions.
 
-Cross-reference with `prd/decisions.md` too. A plan that contradicts a recorded decision is either a mistake or a decision to reverse — make the user say which.
+Cross-reference with `prd/decisions.md` too. A plan that contradicts a recorded decision is either a mistake or a decision to reverse. Make the user say which.
 
 ### 3. Design
 
 For each decision in the plan:
 
-**Q5: "[decision]" — why this way?**
+**Q5: "[decision]", why this way?**
 
 - A: [alternative considered]
 - B: [alternative considered]
@@ -105,7 +105,7 @@ For each interface:
 
 - A: [minimal interface]
 - B: [slightly richer]
-- **Recommendation**: A — you can always add, you can rarely remove
+- **Recommendation**: A. You can always add, you can rarely remove
 
 ### 5. Boundaries
 
@@ -116,13 +116,13 @@ For each out-of-scope claim:
 - A: not enough time
 - B: not enough info
 - C: genuinely unrelated
-- **Recommendation**: [if B, flag it — unknowns are risks, not scope-outs]
+- **Recommendation**: [if B, flag it. Unknowns are risks, not scope-outs]
 
 **Q11: Does this create a follow-up that blocks something bigger?**
 
 - A: no
 - B: yes, [what] blocks [what]
-- **Recommendation**: [if B, pull it in now — a blocked dependency is a scheduling bug]
+- **Recommendation**: [if B, pull it in now. A blocked dependency is a scheduling bug]
 
 ## Close
 
@@ -133,14 +133,14 @@ Summarise what changed:
 - Scope adjusted (what moved in or out)
 - Open questions (anything unresolved)
 
-Then emit a **PRD delta** — the interview's output, in the form the PRD can absorb:
+Then emit a **PRD delta**, the interview's output, in the form the PRD can absorb:
 
-- **Terms** → `prd/glossary.md`
-- **Decisions** that were hard to reverse, surprising, and a real trade-off → `prd/decisions.md`. Missing any of the three, do not record it.
-- **Boundaries that moved** → `prd/architecture.md`
-- **Behaviours proposed** → list them for the user. **Never write `prd/behaviours.md`.**
+- **Terms** -> `prd/glossary.md`
+- **Decisions** that were hard to reverse, surprising, and a real trade-off -> `prd/decisions.md`. Missing any of the three, do not record it.
+- **Boundaries that moved** -> `prd/architecture.md`
+- **Behaviours proposed** -> list them for the user. **Never write `prd/behaviours.md`.**
 
-Offer to apply the delta via `/prd` in update mode. Do not apply it unasked — an interview that silently rewrites the PRD is one the user cannot review.
+Offer to apply the delta via `/prd` in update mode. Do not apply it unasked. An interview that silently rewrites the PRD is one the user cannot review.
 
 ## Completion
 

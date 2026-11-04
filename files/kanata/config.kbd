@@ -77,7 +77,7 @@
 )
 
 (defalias
-  ;; alias to cancel tap-hold keys if typing rapidly but restore after a shord idle period
+  ;; alias to cancel tap-hold keys if typing rapidly but restore after a short idle period
   tp (multi
     (layer-switch dvorak-tp)
     (on-idle-fakekey to-dvorak tap 35)

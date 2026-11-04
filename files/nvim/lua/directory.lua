@@ -1,7 +1,7 @@
 -- Decoration for the builtin "dir" listing (:h dir).
 --
 -- Icons (inline virt_text) and git signs (sign_text) are placed as persistent
--- extmarks from the DirReadPost hook: both are laid out before decoration
+-- extmarks from the DirReadPost hook. Both are laid out before decoration
 -- providers run, so ephemeral marks are silently dropped for them.
 -- Symlink targets and file classification are eol/overlay text, which does
 -- work ephemerally, so they go through a decoration provider (:h dir-decorate).
@@ -60,7 +60,7 @@ local function place_git_signs(buf, cwd)
     return
   end
 
-  -- the buffer name carries a trailing slash; relpath tolerates it and yields
+  -- the buffer name carries a trailing slash. relpath tolerates it and yields
   -- "." when the listing is the worktree root itself
   local rel = vim.fs.relpath(root, cwd)
   if not rel then
@@ -111,7 +111,7 @@ local function place_icons(buf)
   for i, name in ipairs(vim.api.nvim_buf_get_lines(buf, 0, -1, false)) do
     local icon, hl = "󰉋", "Directory"
     if name:sub(-1) ~= "/" then
-      -- ext is derived from name; mini.icons' devicons mock ignores it outright
+      -- ext is derived from name. mini.icons' devicons mock ignores it outright
       icon, hl = devicons.get_icon(name, nil, { default = true })
     end
     vim.api.nvim_buf_set_extmark(buf, ns_icon, i - 1, 0, {
@@ -163,7 +163,7 @@ vim.api.nvim_set_decoration_provider(ns_classify, {
 })
 
 --- User DirReadPost handler. Register it after any handler that sorts or
---- filters the listing: extmarks anchor to rows, not to entry names.
+--- filters the listing, because extmarks anchor to rows, not to entry names.
 ---@param args table autocmd callback args
 function M.render(args)
   local buf = args.buf or 0

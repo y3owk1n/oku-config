@@ -40,7 +40,7 @@
 - Never mirror implementation. Test through public
   interfaces. Mock at system boundaries only.
 
-## Search Protocol
+## Search protocol
 
 - Public URLs -> ctx_fetch_and_index(url), then ctx_search.
 - Inline WebFetch only for private/authenticated URLs.

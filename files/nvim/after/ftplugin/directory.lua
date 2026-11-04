@@ -6,8 +6,8 @@
 -- The plugin uses :keepalt, so CTRL-^ works the same either way.
 vim.bo.bufhidden = "wipe"
 
--- vim.wo[0][0] is :setlocal semantics: does not leak into the next buffer
--- opened in this window.
+-- vim.wo[0][0] has :setlocal semantics, so it does not leak into the next
+-- buffer opened in this window.
 local wo = vim.wo[0][0]
 wo.foldcolumn = "0"
 wo.number = false

@@ -1,11 +1,11 @@
-# Markdown Report Format
+# Markdown report format
 
-The architectural review as a Markdown file. Mermaid code blocks for diagrams — GitHub renders them natively, so the report works in issues, PRs, and terminals with Mermaid preview.
+The architectural review as a Markdown file. Mermaid code blocks for diagrams. GitHub renders them natively, so the report works in issues, PRs, and terminals with Mermaid preview.
 
 ## Template
 
 ````markdown
-# Architecture Review — {{repo}}
+# Architecture review: {{repo}}
 
 {{date}}
 
@@ -28,7 +28,7 @@ The architectural review as a Markdown file. Mermaid code blocks for diagrams �
 
 - locality: bugs concentrate in one module
 - leverage: one interface, N call sites
-- interface shrinks; implementation absorbs the wrappers
+- interface shrinks, implementation absorbs the wrappers
 
 **Before / After**:
 
@@ -50,7 +50,7 @@ flowchart LR
   class A deep
 ```
 
-> ⚠️ Contradicts decision 0007, but worth reopening because…
+> ⚠️ Contradicts decision 0007, but worth reopening because...
 
 ---
 
@@ -60,7 +60,7 @@ flowchart LR
 
 ---
 
-## Top Recommendation
+## Top recommendation
 
 **{{Candidate name}}**: one sentence on why. Anchor link: [→ Candidate 1](#1-candidate-title).
 
@@ -70,7 +70,7 @@ flowchart LR
 
 ### Mermaid flowchart (dependencies, call flow)
 
-Use for "X calls Y calls Z." Sequence diagrams for "before: 6 round-trips; after: 1."
+Use for "X calls Y calls Z." Sequence diagrams for "before: 6 round-trips, after: 1."
 
 ```mermaid
 flowchart LR
@@ -126,4 +126,4 @@ After: `Interface: ██` / `Implementation: ███████████�
 
 - Glossary terms only (module, seam, depth, adapter, leverage, locality).
 - Wins bullets ≤6 words each, named in glossary terms.
-- Mermaid code blocks render on GitHub. Keep diagrams simple — no custom themes.
+- Mermaid code blocks render on GitHub. Keep diagrams simple. No custom themes.

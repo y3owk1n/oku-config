@@ -20,7 +20,7 @@ for f in $(find skills -name "*.md"); do d=$(dirname "$f")
   done
 done
 
-# 3. No orphan reference files — every sibling is pointed at by some SKILL.md
+# 3. No orphan reference files. Every sibling is pointed at by some SKILL.md
 for f in $(find skills -name "*.md" ! -name "SKILL.md"); do
   grep -rq "$(basename $f)" $(dirname $f)/SKILL.md skills/*/SKILL.md 2>/dev/null \
     || echo "orphan: $f"
@@ -51,12 +51,12 @@ done
 
 ## Reading the output
 
-**unresolved** — a pointer to a skill that was renamed or never existed. The most common
+**unresolved**: a pointer to a skill that was renamed or never existed. The most common
 breakage after a rename, and invisible until an agent tries to follow it.
 
-**missing / orphan** — a sibling file and its pointer drifted apart. An orphan is usually a
+**missing / orphan**: a sibling file and its pointer drifted apart. An orphan is usually a
 file that was split out and then forgotten, which means its content is unreachable.
 
-**name mismatch / no description / no completion** — the skill will not load, will never be
+**name mismatch / no description / no completion**: the skill will not load, will never be
 selected, or will never be finishable. Check 6 catching a difference means a skill on disk that no
 target sees, or a link that points at nothing.

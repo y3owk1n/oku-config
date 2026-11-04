@@ -9,7 +9,7 @@ A discipline for hard bugs. Skip phases only when explicitly justified.
 
 ## Redact
 
-Redact every secret: write `<REDACTED>` in its place. Build loops against env vars so credentials stay in the environment. Captured artifacts carry auth headers — quote only the lines with signal.
+Redact every secret: write `<REDACTED>` in its place. Build loops against env vars so credentials stay in the environment. Captured artifacts carry auth headers. Quote only the lines with signal.
 
 ## Phase 1: Build a feedback loop
 
@@ -34,11 +34,11 @@ Treat the loop as a product. Once you have _a_ loop, tighten it:
 - Sharper signal? Assert on the specific symptom, not "didn't crash".
 - More deterministic? Pin time, seed RNG, isolate filesystem, freeze network.
 
-A 30-second flaky loop is barely better than no loop; a 2-second deterministic one is a debugging superpower.
+A 30-second flaky loop is barely better than no loop. A 2-second deterministic one is a debugging superpower.
 
 ### Non-deterministic bugs
 
-The goal is a **higher reproduction rate**. Loop the trigger 100x, parallelise, add stress, narrow timing windows. A 50%-flake bug is debuggable; 1% is not.
+The goal is a **higher reproduction rate**. Loop the trigger 100x, parallelise, add stress, narrow timing windows. A 50%-flake bug is debuggable, 1% is not.
 
 ### When you genuinely cannot build a loop
 
@@ -77,13 +77,13 @@ Do not proceed until you have reproduced **and** minimised.
 
 Generate **3-5 ranked hypotheses** before testing any. Single-hypothesis generation anchors on the first plausible idea.
 
-Each hypothesis must be **falsifiable** — state the prediction:
+Each hypothesis must be **falsifiable**. State the prediction:
 
 > "If <X> is the cause, then <changing Y> will make the bug disappear / <changing Z> will make it worse."
 
-If you cannot state the prediction, the hypothesis is a vibe: discard or sharpen it.
+If you cannot state the prediction, the hypothesis is a vibe. Discard or sharpen it.
 
-Show the ranked list to the user before testing. They often have domain knowledge that re-ranks instantly. Don't block on it; proceed with your ranking if the user is AFK.
+Show the ranked list to the user before testing. They often have domain knowledge that re-ranks instantly. Don't block on it. Proceed with your ranking if the user is AFK.
 
 ## Phase 4: Instrument
 
@@ -114,7 +114,7 @@ If a correct seam exists:
 
 ## Phase 6: Cleanup
 
-Delete the throwaway harnesses and prototypes. State the confirmed hypothesis in the commit or PR body — the next person to hit this reads that line, not the diff.
+Delete the throwaway harnesses and prototypes. State the confirmed hypothesis in the commit or PR body. The next person to hit this reads that line, not the diff.
 
 ## Completion
 

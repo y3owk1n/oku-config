@@ -1,4 +1,4 @@
-# Wide Refactors
+# Wide refactors
 
 A **wide refactor** is one mechanical change (rename a column, retype a shared symbol) whose blast radius fans across the whole codebase. It breaks the vertical-slicing rule because every layer changes for the same reason.
 

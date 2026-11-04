@@ -6,11 +6,11 @@ disable-model-invocation: true
 
 # Spec
 
-One pass: `prd/features/<slug>.md` → a spec issue → its ticket sub-issues.
+One pass: `prd/features/<slug>.md`, then a spec issue, then its ticket sub-issues.
 
-The spec issue is **generated** from the feature file and stamped with its hash. Never hand-edit a spec issue — edit the feature file and let `/ship` regenerate it. Tickets are **authored**, transient, and die on merge; they carry no stamp and are never regenerated.
+The spec issue is **generated** from the feature file and stamped with its hash. Never hand-edit a spec issue. Edit the feature file and let `/ship` regenerate it. Tickets are **authored**, transient, and die on merge. They carry no stamp and are never regenerated.
 
-GitHub is the tracker. There is no local-markdown mode — `prd/features/<slug>.md` already is the offline artefact.
+GitHub is the tracker. There is no local-markdown mode. `prd/features/<slug>.md` already is the offline artefact.
 
 ## Process
 
@@ -23,7 +23,7 @@ gh auth status && git remote get-url origin
 ls prd/features/ 2>/dev/null || echo "NO_FEATURES"
 ```
 
-No feature file? Stop and dispatch `/prd` in **feature** mode. This skill renders; it does not invent.
+No feature file? Stop and dispatch `/prd` in **feature** mode. This skill renders. It does not invent.
 
 ### 2. Read the PRD
 
@@ -73,9 +73,9 @@ Break the feature into **tracer bullets**: narrow but complete paths through eve
 - Vertical, never a horizontal slice of one layer.
 - Prefactors first. "Make the change easy, then make the easy change."
 - Declare **blocking edges**: which tickets must land first. No blockers means it can start now.
-- **Wide refactors** break the vertical rule. Use expand-contract sequencing — see `WIDE-REFACTORS.md`.
+- **Wide refactors** break the vertical rule. Use expand-contract sequencing from `WIDE-REFACTORS.md`.
 
-Assign each ticket the behaviours it touches, by number, from the feature file. A ticket touching none gets no test — that is allowed and must be stated on the ticket, not left implicit.
+Assign each ticket the behaviours it touches, by number, from the feature file. A ticket touching none gets no test. That is allowed and must be stated on the ticket, not left implicit.
 
 ### 6. Quiz the user, once
 
@@ -87,7 +87,7 @@ Ask:
 - Are the blocking edges real, or just an ordering preference?
 - Any ticket claiming zero behaviours that should claim one?
 
-Iterate until approved. This is the only human stop in this skill — make it count rather than splitting it across two.
+Iterate until approved. This is the only human stop in this skill. Make it count rather than splitting it across two.
 
 ### 7. Publish the tickets
 
@@ -118,7 +118,7 @@ The end-to-end behaviour this makes work, from the user's side. Not a layer-by-l
 
 - #<n> from prd/behaviours.md
 
-or: None — this ticket adds no test.
+or: None. This ticket adds no test.
 
 ## Blocked by
 

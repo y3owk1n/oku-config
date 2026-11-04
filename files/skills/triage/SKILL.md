@@ -8,11 +8,11 @@ disable-model-invocation: true
 
 Move issues on the project issue tracker through a small state machine of triage roles.
 
-If this repo treats external pull requests as a request surface, triage covers them too — a PR is an issue with attached code, using the same roles and states.
+If this repo takes requests through external pull requests, triage covers them too. A PR is an issue with attached code, using the same roles and states.
 
 ## Labels
 
-The vocabulary lives in `LABELS.md` — read it before assigning. `/spec` and `/ship` read the same file, so it is the one place labels are defined.
+The vocabulary lives in `LABELS.md`. Read it before assigning. `/spec` and `/ship` read the same file, so it is the one place labels are defined.
 
 ## Invocation
 
@@ -79,7 +79,7 @@ When an issue moves to `status:ready-for-agent`, attach a brief with:
 - **Spec reference**: the parent spec issue, or the `prd/features/<slug>.md` it belongs to, if any.
 - **Behaviours touched**: entries from `prd/behaviours.md` this work affects, by number. None is a valid answer and means no test.
 
-Keep briefs under 200 words. The brief is the contract the agent works against — make it specific enough that the agent can execute without guessing.
+Keep briefs under 200 words. The brief is the contract the agent works against. Make it specific enough that the agent can execute without guessing.
 
 ## Completion
 

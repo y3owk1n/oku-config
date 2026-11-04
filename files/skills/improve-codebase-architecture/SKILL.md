@@ -4,7 +4,7 @@ description: "Scan codebase for deepening opportunities — refactors that turn 
 disable-model-invocation: true
 ---
 
-# Improve Codebase Architecture
+# Improve codebase architecture
 
 Surface architectural friction and propose **deepening opportunities**: refactors that turn shallow modules into deep ones. The aim is testability and AI-navigability.
 
@@ -15,9 +15,9 @@ Use these terms exactly. Prefer: module, interface, implementation, depth, seam,
 | Term               | Meaning                                                                   |
 | ------------------ | ------------------------------------------------------------------------- |
 | **module**         | A unit of code with one responsibility                                    |
-| **interface**      | The public surface a module exposes to callers                            |
+| **interface**      | What a module exposes to callers                                          |
 | **implementation** | Everything behind the interface                                           |
-| **depth**          | Ratio of implementation to interface — high = deep, low = shallow         |
+| **depth**          | Ratio of implementation to interface. High is deep, low is shallow        |
 | **seam**           | A place where two modules meet and can be swapped or tested independently |
 | **adapter**        | A module that translates between two interfaces at a seam                 |
 | **leverage**       | One interface serving many call sites                                     |
@@ -32,14 +32,14 @@ The **deletion test**: would deleting a module concentrate complexity, or just m
 **Scope before you scan: YAGNI.** Deepening pays off where future changes happen. Decide where to look before you look.
 
 - If the user named a direction (module, subsystem, pain point), take it.
-- Otherwise, walk back the commit history (`git log --oneline`) to find hot spots — files and areas that keep coming up. Let those paths pull your attention.
+- Otherwise, walk back the commit history (`git log --oneline`) to find hot spots, the files and areas that keep coming up. Focus on those paths.
 
 Read `prd/glossary.md`, `prd/architecture.md`, and `prd/decisions.md` for the area you're touching first.
 
 Then walk the codebase. Note where you experience friction:
 
 - Where does understanding one concept require bouncing between many small modules?
-- Where are modules **shallow** — interface nearly as complex as implementation?
+- Where are modules **shallow**, with the interface nearly as complex as the implementation?
 - Where have pure functions been extracted just for testability, but real bugs hide in how they're called (no **locality**)?
 - Where do tightly-coupled modules leak across their seams?
 - Which parts are untested, or hard to test through their current interface?
@@ -64,7 +64,7 @@ See `MD-REPORT.md` for the full template and diagram patterns.
 
 Use `prd/glossary.md` vocabulary for the domain. If the glossary defines "Order," say "the Order intake module," not "the FooBarHandler."
 
-If a candidate contradicts an entry in `prd/decisions.md`, only surface it when the friction is real enough to warrant revisiting. Mark clearly: _"contradicts the '{decision title}' decision, but worth reopening because…"_.
+If a candidate contradicts an entry in `prd/decisions.md`, only surface it when the friction is real enough to warrant revisiting. Mark clearly: _"contradicts the '{decision title}' decision, but worth reopening because..."_.
 
 For each candidate, render a card with:
 
@@ -88,7 +88,7 @@ Side effects happen inline as decisions crystallise:
 - **Naming a deepened module not in `prd/glossary.md`?** Add the term. Create the file lazily if it doesn't exist.
 - **Sharpening a fuzzy term?** Update `prd/glossary.md` right there.
 - **Boundary moved?** Update `prd/architecture.md`.
-- **User rejects with a load-bearing reason?** Offer a `prd/decisions.md` entry: _"Record this so future reviews don't re-suggest it?"_ Only when the reason matters to a future explorer; skip ephemeral and self-evident ones.
+- **User rejects with a load-bearing reason?** Offer a `prd/decisions.md` entry: _"Record this so future reviews don't re-suggest it?"_ Only when the reason matters to a future explorer. Skip ephemeral and self-evident ones.
 
 ## Completion
 

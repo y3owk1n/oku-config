@@ -5,7 +5,7 @@ description: "Two-axis review of a diff: Standards (repo conventions) and Spec (
 
 # Review
 
-Manual review, outside a ticket. Inside a ticket `/implement` applies the same rules inline — do not dispatch this from `/ship`.
+Manual review, outside a ticket. Inside a ticket `/implement` applies the same rules inline. Do not dispatch this from `/ship`.
 
 The rubric lives in your context (`## Review`). This skill resolves _what_ to review and handles the case where there is no spec.
 
@@ -13,7 +13,7 @@ The rubric lives in your context (`## Review`). This skill resolves _what_ to re
 
 | Argument           | Change set                                                                                                 |
 | ------------------ | ---------------------------------------------------------------------------------------------------------- |
-| none               | `git diff main...` — current branch against main. If the branch _is_ main, `git diff` on the working tree. |
+| none               | `git diff main...`: current branch against main. If the branch _is_ main, `git diff` on the working tree. |
 | a PR number or URL | `gh pr diff <n>`                                                                                           |
 | a path or glob     | `git diff -- <path>`                                                                                       |
 | `--staged`         | `git diff --cached`                                                                                        |
@@ -31,19 +31,19 @@ Use glossary vocabulary in findings. Say "the Builder", not "the function in lib
 gh pr view <n> --json body 2>/dev/null
 ```
 
-The PR body links a ticket (`Closes #n`); read that ticket and its parent spec.
+The PR body links a ticket (`Closes #n`). Read that ticket and its parent spec.
 
-**No PR, no ticket, no spec — run Standards only and say so in one line.** Do not go hunting for a plausible spec, and do not infer one from the diff. A spec reconstructed from the code it is meant to judge always passes.
+**No PR, no ticket, no spec. Run Standards only and say so in one line.** Do not go hunting for a plausible spec, and do not infer one from the diff. A spec reconstructed from the code it is meant to judge always passes.
 
 ## 3. Standards axis
 
-Conventions, naming, structure, imports, types, error handling, testing patterns, performance, security. Cite the repo rule you are applying — a convention visible elsewhere in the codebase, `CLAUDE.md`, or `prd/decisions.md`. A finding you cannot ground in a repo rule is a preference; drop it.
+Conventions, naming, structure, imports, types, error handling, testing patterns, performance, security. Cite the repo rule you are applying: a convention visible elsewhere in the codebase, `CLAUDE.md`, or `prd/decisions.md`. A finding you cannot ground in a repo rule is a preference. Drop it.
 
 **Tests get the same rule the code does.** Flag any new test that asserts the toolchain works (install, build, compile, lint, file-exists, config-parses) or mirrors implementation. Flag a test with no behaviour in `prd/behaviours.md` and no public boundary behind it.
 
 ## 4. Spec axis
 
-Wrong behaviour, unmet acceptance criteria, API mismatch, unintended side effects, scope creep. Scope creep counts: work the spec did not ask for is a finding even when the code is good.
+Wrong behaviour, unmet acceptance criteria, API mismatch, unintended side effects, scope creep. Scope creep counts. Work the spec did not ask for is a finding even when the code is good.
 
 Check the diff against the non-goals in `prd/product.md` too, if it exists. A change that quietly starts doing something the project decided not to do reads as a feature in review and as a commitment forever after.
 

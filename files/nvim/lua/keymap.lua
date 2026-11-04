@@ -39,7 +39,7 @@ for i = 1, 9 do
 end
 
 -- =========================================================
---  Movement enhancements
+--  Movement tweaks
 -- =========================================================
 
 vim.keymap.set({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true, desc = "Move down" })

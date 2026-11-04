@@ -3,7 +3,7 @@
 GitHub, via `gh`. Four operations drive a run: **read**, **compute the frontier**,
 **record a PR**, **confirm done**.
 
-The spec is an issue. Tickets are its **sub-issues** — `/spec` publishes them with
+The spec is an issue. Tickets are its **sub-issues**. `/spec` publishes them with
 `gh issue create --parent`, so the native link is real and search is never needed.
 
 ## Read
@@ -13,7 +13,7 @@ gh issue view <n> --json number,title,state,body,labels,parent
 gh issue view <spec> --json subIssues
 ```
 
-Ascending issue number is dependency order: `/spec` publishes blockers first.
+Ascending issue number is dependency order. `/spec` publishes blockers first.
 
 ## Frontier
 
@@ -54,6 +54,6 @@ There is no local-markdown mode. `prd/features/<slug>.md` is the offline artefac
 duplicating the tracker into `.scratch/` was the drift this workflow exists to remove.
 
 For GitLab, substitute `glab issue` / `glab mr` and treat merge requests as pull
-requests; blocking edges are GitLab's **blocked by** links. Confirm the mapping with the
-user in the preflight before starting — a wrong frontier query silently works the wrong
-ticket first.
+requests. Blocking edges are GitLab's **blocked by** links. Confirm the mapping with
+the user in the preflight before starting. A wrong frontier query silently works the
+wrong ticket first.

@@ -80,7 +80,7 @@ vim.api.nvim_create_autocmd("LspProgress", {
   end,
 })
 
---  This uses primitives from my notifier plugin
+--  This uses functions from my notifier plugin
 --  Won't work on vanilla vim.notify
 
 -- vim.api.nvim_create_autocmd("LspProgress", {

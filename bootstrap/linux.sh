@@ -9,10 +9,9 @@
 #
 # neru links the X11 and Wayland libraries of the system, tesseract and
 # pipewire, as its docs/LINUX_SETUP.md lists them. On Fedora liboeffis-devel is
-# its own package. Debian 12 and Ubuntu 22.04
-# have no libei, so neru cannot build there. The script says so, and then the
-# neru line moves from lists/packages.toml to lists/darwin.toml on that
-# machine.
+# its own package. Debian 12 and Ubuntu 22.04 have no libei, so neru cannot
+# build there. The script says so, and then the neru line moves from
+# lists/packages.toml to lists/darwin.toml on that machine.
 #
 # fuse is for the AppImage of ghostty, which mounts itself to run.
 #

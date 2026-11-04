@@ -27,7 +27,7 @@ vim.lsp.config("lua_ls", {
     }
 
     -- get all mini files in the runtimepath
-    -- the reason is that all standalon mini are in the same `lua/mini` folder...
+    -- the reason is that all standalone mini are in the same `lua/mini` folder...
     vim.list_extend(library, vim.api.nvim_get_runtime_file("lua/mini", true))
 
     client.config.settings.Lua = vim.tbl_deep_extend("force", client.config.settings.Lua, {

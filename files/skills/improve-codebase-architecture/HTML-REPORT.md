@@ -1,6 +1,6 @@
-# HTML Report Format
+# HTML report format
 
-The architectural review is a single self-contained HTML file in the OS temp directory. Tailwind and Mermaid come from CDNs. Mermaid handles graph-shaped diagrams; hand-built divs and inline SVG handle editorial visuals (mass diagrams, cross-sections).
+The architectural review is a single self-contained HTML file in the OS temp directory. Tailwind and Mermaid come from CDNs. Mermaid handles graph-shaped diagrams. Hand-built divs and inline SVG handle editorial visuals (mass diagrams, cross-sections).
 
 ## Scaffold
 
@@ -9,7 +9,7 @@ The architectural review is a single self-contained HTML file in the OS temp dir
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Architecture review — {{repo}}</title>
+    <title>Architecture review: {{repo}}</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="module">
       import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
@@ -62,7 +62,7 @@ Pick the pattern that fits. Mix them.
 
 ### Mermaid graph
 
-Use for "X calls Y calls Z, and look at the mess." Sequence diagrams for "before: 6 round-trips; after: 1."
+Use for "X calls Y calls Z, and look at the mess." Sequence diagrams for "before: 6 round-trips, after: 1."
 
 ```html
 <div class="rounded-lg border border-slate-200 bg-white p-4">
@@ -87,7 +87,7 @@ Stack horizontal bands (`h-12 border-l-4`) to show layers. Before: 6 thin layers
 
 ### Mass diagram
 
-Two rectangles per module: interface surface area vs implementation. Before: nearly equal (shallow). After: interface short, implementation tall (deep).
+Two rectangles per module: interface size vs implementation size. Before: nearly equal (shallow). After: interface short, implementation tall (deep).
 
 ### Call-graph collapse
 

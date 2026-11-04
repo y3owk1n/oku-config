@@ -1,5 +1,5 @@
 -- =========================================================
---  Tmux Navigation
+--  Tmux navigation
 -- =========================================================
 
 local nvim_tmux_navigation = require("nvim-tmux-navigation")
@@ -153,7 +153,7 @@ vim.filetype.add({
 })
 
 -- =========================================================
---  Git Diff
+--  Git diff
 -- =========================================================
 
 local mini_diff = require("mini.diff")
@@ -203,7 +203,7 @@ mini_icons.setup({
 mini_icons.mock_nvim_web_devicons()
 
 -- =========================================================
---  LSP Rename
+--  LSP rename
 -- =========================================================
 
 local lsp_rename = require("custom.lsp-rename")
@@ -334,7 +334,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
--- This only handles neovim instance and do not highlight when switching panes in tmux
+-- This only handles the neovim instance and does not highlight when switching panes in tmux
 vim.api.nvim_create_autocmd("CursorMoved", {
   group = augroup,
   desc = "Highlight when cursor moved significantly",

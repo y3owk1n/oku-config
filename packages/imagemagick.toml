@@ -43,7 +43,7 @@ deps = ["./jpeg-turbo.toml", { ref = "./libpng.toml", version = "~1.6" }, "./lib
 # for each of them keeps the files the repo holds.
 # On Linux libtool passes its own -rpath, so the linker ignores the LD_RUN_PATH
 # that oku sets, and magick would not find libtiff and the other deps. The -L
-# flags put the deps before the libraries of the system: Fedora's libjpeg.so is
+# flags put the deps before the libraries of the system. Fedora's libjpeg.so is
 # jpeg-turbo with the libjpeg 6.2 ABI, and -ljpeg took it over the store's.
 [[build.step]]
 run = """

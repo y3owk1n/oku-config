@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Performance Diagnostic Tool for Software Development
-# Comprehensive monitoring for memory leaks, CPU spikes, and performance issues
-# Usage: ./diagnose.sh [duration_in_seconds]
+# Performance diagnostic tool for software development
+# Monitors a process for memory leaks, CPU spikes, and performance issues
+# Usage: diagnose [duration_in_seconds]
 
 set -uo pipefail
 
@@ -181,7 +181,7 @@ detect_memory_trend() {
   fi
 }
 
-# Main monitoring function with enhanced diagnostics
+# Main monitoring function
 monitor_process() {
   local pid=$1
   local cmd=$2

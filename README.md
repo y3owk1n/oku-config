@@ -121,7 +121,7 @@ because older releases have no libei, and the script says what to do there.
    settings in it, because `oku.toml` includes it under `when = { os = "darwin" }`.
 
 `oku.lock` pins the Linux downloads too, because `[lock] platforms` in
-`oku.toml` names them. That includes what the Go, Rust and npm builds download:
+`oku.toml` names them. That includes what the Go, Rust and npm builds download.
 oku pins those from the Mac. So a Linux machine installs from the lock that the
 Mac wrote, and `oku sync --locked` proves it.
 

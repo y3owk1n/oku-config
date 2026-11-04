@@ -24,7 +24,7 @@ vim.opt.winborder = "rounded"
 vim.opt.wrap = false
 
 -- =========================================================
---  Window Behaviour
+--  Window behaviour
 -- =========================================================
 
 vim.opt.splitbelow = true
@@ -241,7 +241,7 @@ vim.schedule(function()
 end)
 
 -- =========================================================
---  Syntax / Highlighting
+--  Syntax / highlighting
 -- =========================================================
 
 -- Only highlight with treesitter

@@ -15,7 +15,7 @@ Write only the sections that have content. An empty heading is worse than a miss
 
 ## Users
 
-**{Actor}** — {what they do with it, what they do immediately before and after.}
+**{Actor}**: {what they do with it, what they do immediately before and after.}
 
 ## Why this shape
 
@@ -42,7 +42,7 @@ _Avoid_: {rejected synonyms}
 
 Rules:
 
-- Be opinionated. Pick the best word; list the alternatives under `_Avoid_`.
+- Be opinionated. Pick the best word. List the alternatives under `_Avoid_`.
 - Define what it IS, not what it does.
 - Only terms specific to this project. General programming concepts do not belong.
 - Group under subheadings when natural clusters emerge.
@@ -64,7 +64,7 @@ Newest first. One decision per `##` block.
 
 A decision earns a block only when all three hold: hard to reverse, surprising without context, and the result of a real trade-off. Missing any one, skip it.
 
-Derived decisions carry `_(inferred — unconfirmed)_` until the user confirms.
+Derived decisions carry `_(inferred, unconfirmed)_` until the user confirms.
 
 ## architecture.md
 
@@ -73,11 +73,11 @@ Derived decisions carry `_(inferred — unconfirmed)_` until the user confirms.
 
 ## Modules
 
-**{Module}** — {one responsibility}. Interface: {what it exposes}.
+**{Module}**: {one responsibility}. Interface: {what it exposes}.
 
 ## Seams
 
-**{Name}** — {where two modules meet}. Testable because {reason}.
+**{Name}**: {where two modules meet}. Testable because {reason}.
 
 ## Boundaries
 
@@ -94,7 +94,7 @@ Human-written. Cap 15. Agents propose, never write.
 What must never break. A test may exist only if it maps to an entry here or to a
 public boundary in architecture.md.
 
-1. {Behaviour, stated as an observable outcome — not an implementation.}
+1. {Behaviour, stated as an observable outcome, not an implementation.}
 2. ...
 ```
 
@@ -122,9 +122,9 @@ This file renders to the spec issue. Write it for someone who has not read the c
 
 ## Behaviours touched
 
-- #{n} from behaviours.md — {how this feature affects it}
+- #{n} from behaviours.md: {how this feature affects it}
 
-{If none: "None — this feature adds no test." Say it explicitly.}
+{If none: "None. This feature adds no test." Say it explicitly.}
 
 ## Seams
 
@@ -133,13 +133,13 @@ This file renders to the spec issue. Write it for someone who has not read the c
 ## Decisions
 
 {Modules built or modified, interfaces changed, schema changes, API contracts.
-No file paths and no code — they go stale within a week.
+No file paths and no code. They go stale within a week.
 
 Exception: a snippet that encodes a decision more precisely than prose can
 (state machine, reducer, schema, type shape). Trim to the decision-rich part.}
 
 ## Out of scope
 
-{What this feature does not do. Distinguish "not now" from "not ever" — the
+{What this feature does not do. Distinguish "not now" from "not ever". The
 first is a follow-up, the second belongs in product.md non-goals.}
 ```

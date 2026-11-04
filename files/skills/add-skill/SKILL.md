@@ -3,7 +3,7 @@ name: add-skill
 description: "Add a skill repo or a local skill to the oku configuration."
 ---
 
-# Add Skill
+# Add skill
 
 The config repo is `~/.config/oku`. Three places control all skills:
 
