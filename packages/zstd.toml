@@ -31,6 +31,8 @@ when = [{ os = "darwin" }, { os = "linux" }]
 [runtime]
 deps = ["./lz4.toml"]
 
+# lz4 1.11 dropped the obsolete contentChecksum_t alias that zstd 1.5.7 still
+# uses, and the new name works with older lz4 too.
 [[build.step]]
-run = "make -j{{jobs}} PREFIX={{prefix}} && make install PREFIX={{prefix}}"
+run = "sed -i.bak 's/(contentChecksum_t)/(LZ4F_contentChecksum_t)/' programs/fileio.c && make -j{{jobs}} PREFIX={{prefix}} && make install PREFIX={{prefix}}"
 shell = "sh"
