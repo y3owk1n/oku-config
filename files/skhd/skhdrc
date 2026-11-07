@@ -27,6 +27,7 @@ hyper - p : @open("Passwords")
 hyper - s : @open("System Settings")
 hyper - a : @open("Activity Monitor")
 
+hyper - 0x32 : @mimi_space("recent")
 hyper - 1 : @mimi_space("1")
 hyper - 2 : @mimi_space("2")
 hyper - 3 : @mimi_space("3")
