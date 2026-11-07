@@ -323,5 +323,6 @@ AutoUpdate = true
 "Workspace.tabStyle" = "horizontal"
 "Workspace.terminalFontName" = "JetBrainsMonoNL Nerd Font Mono"
 "Workspace.terminalFontPointSize" = 14.0
+"Workspace.terminalPaddingColor" = "background"
 "Workspace.terminalSmoothScrolling" = true
 "Workspace.terminalUsesDisplayP3" = false
