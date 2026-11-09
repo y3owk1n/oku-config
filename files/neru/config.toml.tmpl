@@ -30,8 +30,15 @@ shell = ["{{neru-shell}}", "{{neru-shell-arg}}"]
 # ============================================================================
 [hotkeys]
 "Ctrl+F" = "recursive_grid --cursor-selection-mode hold --capture-scope window,screen"
+"Ctrl+Shift+F" = "vim --cursor-selection-mode hold"
 # "Ctrl+F" = "bisect --cursor-selection-mode hold --capture-scope window,screen"
 "Ctrl+S" = "scroll"
+
+# ============================================================================
+# Vim
+# ============================================================================
+[vim]
+enabled = true
 
 # ============================================================================
 # Hints
@@ -89,6 +96,7 @@ text_color = "#00000000"
 "Shift+O" = "action right_click"
 "s" = "action feed ctrl+s"
 "f" = "action feed ctrl+f"
+"Shift+F" = "action feed ctrl+shift+f"
 
 # "Ctrl+F" = "run 'idle' 'recursive_grid --cursor-selection-mode hold --zoom-to-depth 2'"
 "Ctrl+C" = "idle"
@@ -97,6 +105,7 @@ text_color = "#00000000"
 "Ctrl+H" = "action scroll_left"
 "Ctrl+L" = "action scroll_right"
 "Ctrl+S" = "macro move_and_scroll"
+"Ctrl+Shift+F" = "macro move_and_vim"
 
 "Shift+H" = "action move_cell --direction left"
 "Shift+L" = "action move_cell --direction right"
@@ -194,6 +203,7 @@ scroll_step = 100
 "o" = "action right_click"
 
 "f" = "action feed ctrl+f"
+"Shift+F" = "action feed ctrl+shift+f"
 
 # ============================================================================
 # Held repeat
@@ -243,3 +253,4 @@ font_family = "JetBrainsMonoNLNFP-Bold"
 # ============================================================================
 [macros]
 move_and_scroll = "run 'action move_mouse --selection' 'scroll'"
+move_and_vim = "run 'action move_mouse --selection' 'vim --cursor-selection-mode hold'"

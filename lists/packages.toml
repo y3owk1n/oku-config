@@ -101,7 +101,8 @@ poppins = "../packages/poppins.toml"
 symbols-nerd-font = "../packages/symbols-nerd-font.toml"
 
 # my own tools
-neru = { ref = "github:y3owk1n/neru#neru-main", service = true }
+# Back to github:y3owk1n/neru#neru-main once feat/vim-screen-buffer merges.
+neru = { ref = "../packages/neru.toml", service = true }
 uts = "github:y3owk1n/uts#uts-main"
 friendly = "git+https://git.getfriend.ly/ai/cli"
 fude = "github:y3owk1n/fude#fude-main"
