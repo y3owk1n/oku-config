@@ -279,6 +279,7 @@ WebKitRespectStandardStyleKeyEquivalents = 1
 "New Traworld Window" = "^4"
 "New Madani TRX Window" = "^5"
 "New Wakesport Window" = "^6"
+"New Parlo Window" = "^7"
 
 # No personalised ads from Apple.
 [defaults."com.apple.AdLib"]
