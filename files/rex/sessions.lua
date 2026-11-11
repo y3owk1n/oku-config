@@ -7,6 +7,12 @@ local presets = {
   preview = "eza --tree --level=1 --color=always --group-directories-first -a {}",
 
   { name = "home (~)", path = "~" },
+  {
+    name = "start kanata",
+    path = "~/.config/oku/files/kanata",
+    preview = "bat --color=always ~/.config/oku/files/kanata/config.kbd",
+    command = "sudo kanata -n -c ~/.config/kanata/config.kbd",
+  },
   { name = "downloads", path = "~/Downloads" },
   { name = "dot config", path = "~/.config" },
   { name = "oku config", path = "~/.config/oku" },
