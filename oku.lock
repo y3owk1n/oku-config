@@ -79,27 +79,27 @@ verified = 'sigstore'
 name = 'ast-grep'
 ref = './packages/ast-grep.toml'
 manifest_sha256 = '03d9d1d82fe4bd99b360bf47e866447a1ff531735a4f1a3fbc784e93a49b4f73'
-version = '0.51.1'
+version = '0.51.2'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/ast-grep/ast-grep/releases/download/0.51.1/app-aarch64-apple-darwin.zip'
-sha256 = 'a95772097b4d02bd9d45ed63b300c37041ae3c36632b3bf19250cc7c10187dc4'
+url = 'https://github.com/ast-grep/ast-grep/releases/download/0.51.2/app-aarch64-apple-darwin.zip'
+sha256 = 'ea4f4082d25e5f8e0450add6fd488dd008a373c90483cc2031759c8431f1dcfb'
 verified = 'published'
 commands = true
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/ast-grep/ast-grep/releases/download/0.51.1/app-x86_64-unknown-linux-gnu.zip'
-sha256 = '42514f77ae0c8a25d7d32154d31d3e7e16f3ab894f8ce76ce417de234ee49157'
+url = 'https://github.com/ast-grep/ast-grep/releases/download/0.51.2/app-x86_64-unknown-linux-gnu.zip'
+sha256 = '40604c21c38d4c7581c56bdddeef277c56bf3c0113620aa96e78ae87e82366df'
 verified = 'published'
 commands = true
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/ast-grep/ast-grep/releases/download/0.51.1/app-aarch64-unknown-linux-gnu.zip'
-sha256 = 'db02fae2d8eace5fc40c55242068882452dd03eab38a1d950d5fd981cf112926'
+url = 'https://github.com/ast-grep/ast-grep/releases/download/0.51.2/app-aarch64-unknown-linux-gnu.zip'
+sha256 = 'c3ab2bd43959db28621dc1551c13ea5fe5db4c1fc7b18086dade6b65042c78d0'
 verified = 'published'
 commands = true
 
@@ -107,28 +107,28 @@ commands = true
 name = 'atuin'
 ref = './packages/atuin.toml'
 manifest_sha256 = '7c90e9c1e0f945008cebd35931706479f6238c65581adf9bbc2c5f23caebe902'
-version = '18.24.5'
-tag = 'v18.24.5'
+version = '18.24.6'
+tag = 'v18.24.6'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/atuinsh/atuin/releases/download/v18.24.5/atuin-aarch64-apple-darwin.tar.gz'
-sha256 = '644e92d5667e2ebbc00758c71d5974bc907d238eaa6cdc32b24eb73dce7f9a5a'
+url = 'https://github.com/atuinsh/atuin/releases/download/v18.24.6/atuin-aarch64-apple-darwin.tar.gz'
+sha256 = '756b7d2f8cb919d29888ea52b2fb19aba92ed52ddbca456839088ccc63257f5b'
 verified = 'checksum-file'
 commands = true
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/atuinsh/atuin/releases/download/v18.24.5/atuin-x86_64-unknown-linux-musl.tar.gz'
-sha256 = '54182762c9d91a4f779748f622749ff6963956db005feb13e62d037196b05618'
+url = 'https://github.com/atuinsh/atuin/releases/download/v18.24.6/atuin-x86_64-unknown-linux-musl.tar.gz'
+sha256 = '49b6e7a93cd6d8c77ee02bdb0eef0acff4c80ddaa0efb00c8179285771043698'
 verified = 'checksum-file'
 commands = true
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/atuinsh/atuin/releases/download/v18.24.5/atuin-aarch64-unknown-linux-musl.tar.gz'
-sha256 = 'b44b3f264652b847b2e524ec397aa498c13076ed75cf213239ed2b9a0de2f99d'
+url = 'https://github.com/atuinsh/atuin/releases/download/v18.24.6/atuin-aarch64-unknown-linux-musl.tar.gz'
+sha256 = '0dcc72a06738f913040cdd990298a37d9ef062c8849026d0a3410d2def4c6bf7'
 verified = 'checksum-file'
 commands = true
 
@@ -157,52 +157,52 @@ vendor_sha256 = '90d3f5e39ab327bea4f69955db3b589836e0851db641214d3e3a22be8838af0
 name = 'node'
 ref = './packages/node.toml'
 manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
-version = '22.23.4'
-tag = 'v22.23.4'
+version = '22.23.5'
+tag = 'v22.23.5'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-darwin-arm64.tar.gz'
-sha256 = 'c9e1dbc748b33ed2d14f42445191ecaf14c56259c7a9a26d0042c49ec2b66428'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-darwin-arm64.tar.gz'
+sha256 = 'e7131995759b61a0170b646010d2ad35a5d37b4cb0d471f3e8317eac6f742f3d'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-x64.tar.gz'
-sha256 = 'b8492284c76a54baf58d61668dd0e41ee0fc98adabf9503d30f05d08f55b4406'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-x64.tar.gz'
+sha256 = 'c54118104acc524633b5abe106bbf44a53126ec8b4e5fa105cb92b5d7de8a1a1'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-arm64.tar.gz'
-sha256 = 'f7a1e486dbc8b286847815b477d4fb5e9fb963ed4489c3e1588853d685f589f9'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-arm64.tar.gz'
+sha256 = '8bd3dc69eee8f3f226315a80d7d1d4faccf217a4c8fae500168ac2e38f3bdba3'
 verified = 'checksum-file'
 
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
 manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
-version = '22.23.4'
-tag = 'v22.23.4'
+version = '22.23.5'
+tag = 'v22.23.5'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-darwin-arm64.tar.gz'
-sha256 = 'c9e1dbc748b33ed2d14f42445191ecaf14c56259c7a9a26d0042c49ec2b66428'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-darwin-arm64.tar.gz'
+sha256 = 'e7131995759b61a0170b646010d2ad35a5d37b4cb0d471f3e8317eac6f742f3d'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-x64.tar.gz'
-sha256 = 'b8492284c76a54baf58d61668dd0e41ee0fc98adabf9503d30f05d08f55b4406'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-x64.tar.gz'
+sha256 = 'c54118104acc524633b5abe106bbf44a53126ec8b4e5fa105cb92b5d7de8a1a1'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-arm64.tar.gz'
-sha256 = 'f7a1e486dbc8b286847815b477d4fb5e9fb963ed4489c3e1588853d685f589f9'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-arm64.tar.gz'
+sha256 = '8bd3dc69eee8f3f226315a80d7d1d4faccf217a4c8fae500168ac2e38f3bdba3'
 verified = 'checksum-file'
 
 [[package]]
@@ -234,7 +234,7 @@ verified = 'published'
 [[package]]
 name = 'binaryen'
 ref = 'github:y3owk1n/fude#.oku/binaryen.toml'
-commit = 'a6cc9b83a5449ded91c0c2e24d8e7bfa14a9ef37'
+commit = 'c6a6b0543849745e98ed04d484e73d3c3ca5ab43'
 manifest_sha256 = '0ca832aee0604733c3a3cbb9d002d43c15834de8a87dd4ce640a4a1dddf2302b'
 version = '133'
 tag = 'version_133'
@@ -262,25 +262,25 @@ verified = 'checksum-file'
 name = 'brave'
 ref = './packages/brave.toml'
 manifest_sha256 = 'e2c3678f42df68c2c72bed052520fccf8280e79a6322ac13f7895eaff8070aa4'
-version = '1.99.55'
+version = '1.99.57'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/brave/brave-browser/releases/download/v1.99.55/Brave-Browser-arm64.dmg'
-sha256 = '05dd300d93f6cc7b56c9b5b95cfbad5facbd5a6ae8c1f7d0d6be0d162f870b1d'
+url = 'https://github.com/brave/brave-browser/releases/download/v1.99.57/Brave-Browser-arm64.dmg'
+sha256 = '922934b233ddecfa49a9dc5629d40469fdb0b2d59c49547697eea0eec4087711'
 verified = 'checksum-file'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/brave/brave-browser/releases/download/v1.99.55/brave-browser-1.99.55-linux-amd64.zip'
-sha256 = 'ace5409dfb5a6238e3c09576fab56ef76d31e00ed6d62f10d0b41685ab3fe200'
+url = 'https://github.com/brave/brave-browser/releases/download/v1.99.57/brave-browser-1.99.57-linux-amd64.zip'
+sha256 = '734bd9e1d24bc0a94c03b0a43845107dd8a29f572c652023cf7177f5fc3a5f38'
 verified = 'checksum-file'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/brave/brave-browser/releases/download/v1.99.55/brave-browser-1.99.55-linux-arm64.zip'
-sha256 = '1b542c83474770a94606e03e4a57536d586b905a22861a3440095729f388e7fc'
+url = 'https://github.com/brave/brave-browser/releases/download/v1.99.57/brave-browser-1.99.57-linux-arm64.zip'
+sha256 = '1bdad41be7adc541fb82b5265ed1e8c3d4a36c964ea1ad9254f9f64305285473'
 verified = 'checksum-file'
 
 [[package]]
@@ -353,25 +353,25 @@ verified = 'published'
 name = 'claude-code'
 ref = './packages/claude-code.toml'
 manifest_sha256 = '1b9285b5b755fe2cf571042fcd0a46c0f3fb4de4b3198c9c3a896a78a200498a'
-version = '2.1.319'
+version = '2.1.323'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.319/darwin-arm64/claude'
-sha256 = '1f53587e92dee8e089fa349188a4cda64fa34ace6e7b0ca2ee278ddaa3cc2ebd'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.323/darwin-arm64/claude'
+sha256 = '5432918d904a9b6afef7bb79d20df24d76052eabc1f41bceb84091d21f8889a7'
 verified = 'first-use'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.319/linux-x64/claude'
-sha256 = 'dabafec82ca1319fa43d8be36a10fc61b1d11821cb98ad5df04ad95e199b8eed'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.323/linux-x64/claude'
+sha256 = '604d29a6869409106b6a1110bdadcc8b72e8654a5a865d23258f938a696e348e'
 verified = 'first-use'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://downloads.claude.ai/claude-code-releases/2.1.319/linux-arm64/claude'
-sha256 = 'a7e687fd1cb054d651c7588223de3786c99d4c682365e3c3ae1e59ce7f3a591f'
+url = 'https://downloads.claude.ai/claude-code-releases/2.1.323/linux-arm64/claude'
+sha256 = '452dddff140b5caf00a5410333a3d6db82c73ea2dec74b1541fae18e97d47dca'
 verified = 'first-use'
 
 [[package]]
@@ -555,25 +555,25 @@ verified = 'published'
 name = 'firefox'
 ref = './packages/firefox.toml'
 manifest_sha256 = 'a6f57aa3dd145c6d801bca7cf79189f1d7fd03e9f9412e714d60d73efb047829'
-version = '159.0.1'
+version = '160.0'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/159.0.1/mac/en-US/Firefox%20159.0.1.dmg'
-sha256 = '0c214da4439c1eb4cea28a3c141ff112d511aa32c67f9d12e91116569c8d8dda'
+url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/160.0/mac/en-US/Firefox%20160.0.dmg'
+sha256 = 'b270ccc60eb899bd0277bd078d7bd8690f5c4fc3e44b4fa9ee78ed2a3e89f0ca'
 verified = 'first-use'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/159.0.1/linux-x86_64/en-US/firefox-159.0.1.tar.xz'
-sha256 = '469ce17120018e1c95411d254cf3c5f8db2dd1768a7acde5a2a089b00072ac65'
+url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/160.0/linux-x86_64/en-US/firefox-160.0.tar.xz'
+sha256 = 'fde774e9757c8878534c05ec210db592bf6a1b244c57941ffb2e364c04f35fcd'
 verified = 'first-use'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/159.0.1/linux-aarch64/en-US/firefox-159.0.1.tar.xz'
-sha256 = '847651efd44351972a281afa54845708faffb358692f551af391dd77736bbd6b'
+url = 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/160.0/linux-aarch64/en-US/firefox-160.0.tar.xz'
+sha256 = '0fd9e4fd7ab97f7b1eec42f70e809080679498ebabd78fd692f0b94f9b6bf92f'
 verified = 'first-use'
 
 [[package]]
@@ -626,52 +626,52 @@ vendor_sha256 = '052b75b2adc5a27a67de66690103caf62f29abd6b15e329172d7248356d2c6f
 name = 'node'
 ref = './packages/node.toml'
 manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
-version = '22.23.4'
-tag = 'v22.23.4'
+version = '22.23.5'
+tag = 'v22.23.5'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-darwin-arm64.tar.gz'
-sha256 = 'c9e1dbc748b33ed2d14f42445191ecaf14c56259c7a9a26d0042c49ec2b66428'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-darwin-arm64.tar.gz'
+sha256 = 'e7131995759b61a0170b646010d2ad35a5d37b4cb0d471f3e8317eac6f742f3d'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-x64.tar.gz'
-sha256 = 'b8492284c76a54baf58d61668dd0e41ee0fc98adabf9503d30f05d08f55b4406'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-x64.tar.gz'
+sha256 = 'c54118104acc524633b5abe106bbf44a53126ec8b4e5fa105cb92b5d7de8a1a1'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-arm64.tar.gz'
-sha256 = 'f7a1e486dbc8b286847815b477d4fb5e9fb963ed4489c3e1588853d685f589f9'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-arm64.tar.gz'
+sha256 = '8bd3dc69eee8f3f226315a80d7d1d4faccf217a4c8fae500168ac2e38f3bdba3'
 verified = 'checksum-file'
 
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
 manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
-version = '22.23.4'
-tag = 'v22.23.4'
+version = '22.23.5'
+tag = 'v22.23.5'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-darwin-arm64.tar.gz'
-sha256 = 'c9e1dbc748b33ed2d14f42445191ecaf14c56259c7a9a26d0042c49ec2b66428'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-darwin-arm64.tar.gz'
+sha256 = 'e7131995759b61a0170b646010d2ad35a5d37b4cb0d471f3e8317eac6f742f3d'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-x64.tar.gz'
-sha256 = 'b8492284c76a54baf58d61668dd0e41ee0fc98adabf9503d30f05d08f55b4406'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-x64.tar.gz'
+sha256 = 'c54118104acc524633b5abe106bbf44a53126ec8b4e5fa105cb92b5d7de8a1a1'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-arm64.tar.gz'
-sha256 = 'f7a1e486dbc8b286847815b477d4fb5e9fb963ed4489c3e1588853d685f589f9'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-arm64.tar.gz'
+sha256 = '8bd3dc69eee8f3f226315a80d7d1d4faccf217a4c8fae500168ac2e38f3bdba3'
 verified = 'checksum-file'
 
 [[package]]
@@ -701,36 +701,36 @@ name = 'go'
 ref = 'git+https://git.getfriend.ly/ai/cli#.oku/go.toml'
 commit = 'bdb1009014a530e70ed10e2462e32d7457d0cb96'
 manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
-version = '1.27.3'
-tag = 'go1.27.3'
+version = '1.27.4'
+tag = 'go1.27.4'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.27.3.darwin-arm64.tar.gz'
-sha256 = 'dd3908cf20959d798c1e06ebe5b72213f0505ce01373b40ce3110975a6cd99c2'
+url = 'https://dl.google.com/go/go1.27.4.darwin-arm64.tar.gz'
+sha256 = '91a44a2b8a716600ad94a4f143e156116620db8828086a6e3602291be9bd0bb4'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.27.3.linux-amd64.tar.gz'
-sha256 = '65efbc80fdc1fa2cd2631cad5b481777a68e8725f34e89f50fc6ac714e379b40'
+url = 'https://dl.google.com/go/go1.27.4.linux-amd64.tar.gz'
+sha256 = '7226736c2339719cda28fbf3a54d71aa63bcefe376e98cef00034268dab24840'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.27.3.linux-arm64.tar.gz'
-sha256 = 'a06e99309dbcbdca1a8ccd2282c3ee146e55930886e26b4f1193269587165f49'
+url = 'https://dl.google.com/go/go1.27.4.linux-arm64.tar.gz'
+sha256 = '3392582988a273a87ab5043ee1b2c9c17a2c3c00580bf9326c47a2e0aaaeac92'
 verified = 'checksum-file'
 
 [[package]]
 name = 'fude'
 ref = 'github:y3owk1n/fude#fude-main'
-commit = 'a6cc9b83a5449ded91c0c2e24d8e7bfa14a9ef37'
+commit = 'c6a6b0543849745e98ed04d484e73d3c3ca5ab43'
 manifest_sha256 = '66ff60bd58747a7f6a11d5f2db10a376f39b677863725ee8414bc0b8c5bb4b0d'
-version = '2026.11.08-a6cc9b8'
+version = '2026.11.11-c6a6b05'
 tag = 'main'
-tag_commit = 'a6cc9b83a5449ded91c0c2e24d8e7bfa14a9ef37'
+tag_commit = 'c6a6b0543849745e98ed04d484e73d3c3ca5ab43'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -748,34 +748,34 @@ vendor_sha256 = '4714e481403c2ba50eba32ba33b22e931d1323aee5d24624a3243947192f7b7
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/fude#.oku/go.toml'
-commit = 'a6cc9b83a5449ded91c0c2e24d8e7bfa14a9ef37'
+commit = 'c6a6b0543849745e98ed04d484e73d3c3ca5ab43'
 manifest_sha256 = '4e86afdeda4063d8c7cc15bedb7857112496c03e8608295229e30bd61a6dd9d8'
-version = '1.27.3'
-tag = 'go1.27.3'
+version = '1.27.4'
+tag = 'go1.27.4'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.27.3.darwin-arm64.tar.gz'
-sha256 = 'dd3908cf20959d798c1e06ebe5b72213f0505ce01373b40ce3110975a6cd99c2'
+url = 'https://dl.google.com/go/go1.27.4.darwin-arm64.tar.gz'
+sha256 = '91a44a2b8a716600ad94a4f143e156116620db8828086a6e3602291be9bd0bb4'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.27.3.linux-amd64.tar.gz'
-sha256 = '65efbc80fdc1fa2cd2631cad5b481777a68e8725f34e89f50fc6ac714e379b40'
+url = 'https://dl.google.com/go/go1.27.4.linux-amd64.tar.gz'
+sha256 = '7226736c2339719cda28fbf3a54d71aa63bcefe376e98cef00034268dab24840'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.27.3.linux-arm64.tar.gz'
-sha256 = 'a06e99309dbcbdca1a8ccd2282c3ee146e55930886e26b4f1193269587165f49'
+url = 'https://dl.google.com/go/go1.27.4.linux-arm64.tar.gz'
+sha256 = '3392582988a273a87ab5043ee1b2c9c17a2c3c00580bf9326c47a2e0aaaeac92'
 verified = 'checksum-file'
 
 [[package]]
 name = 'fzf'
 ref = 'github:junegunn/fzf'
-commit = 'c7bf2b8eea25952dd257a466c0afa72faae206fb'
+commit = '4499615fe9c06c0651aa5650e5d0d0a5face99a8'
 manifest_sha256 = 'faeb904b44161238caefcffb88c80fa6f790053860ba757580a7ec433e0e42d2'
 version = '0.75.0'
 tag = 'v0.75.0'
@@ -858,26 +858,26 @@ verified = 'published'
 name = 'node'
 ref = './packages/node.toml'
 manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
-version = '22.23.4'
-tag = 'v22.23.4'
+version = '22.23.5'
+tag = 'v22.23.5'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-darwin-arm64.tar.gz'
-sha256 = 'c9e1dbc748b33ed2d14f42445191ecaf14c56259c7a9a26d0042c49ec2b66428'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-darwin-arm64.tar.gz'
+sha256 = 'e7131995759b61a0170b646010d2ad35a5d37b4cb0d471f3e8317eac6f742f3d'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-x64.tar.gz'
-sha256 = 'b8492284c76a54baf58d61668dd0e41ee0fc98adabf9503d30f05d08f55b4406'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-x64.tar.gz'
+sha256 = 'c54118104acc524633b5abe106bbf44a53126ec8b4e5fa105cb92b5d7de8a1a1'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-arm64.tar.gz'
-sha256 = 'f7a1e486dbc8b286847815b477d4fb5e9fb963ed4489c3e1588853d685f589f9'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-arm64.tar.gz'
+sha256 = '8bd3dc69eee8f3f226315a80d7d1d4faccf217a4c8fae500168ac2e38f3bdba3'
 verified = 'checksum-file'
 
 [[package]]
@@ -2173,30 +2173,30 @@ verified = 'published'
 [[package]]
 name = 'mimi'
 ref = 'github:y3owk1n/mimi#mimi-main'
-commit = '86776db3c80bb1ae2baadb8544cf4609302bdcbd'
-manifest_sha256 = '8f46313f0fe2255da0f41fb86705c21e702b920e81321a5cb34dd1ba4b250f20'
-version = '2026.11.09-86776db'
+commit = '286ed8047629eca5a3eace3c9fe6b86a0418a260'
+manifest_sha256 = '2c7999c154ad608bb29beefbfe24aebed04fe008f223bb06d94216a812c8c9c4'
+version = '2026.11.10-286ed80'
 tag = 'main'
-tag_commit = '86776db3c80bb1ae2baadb8544cf4609302bdcbd'
+tag_commit = '286ed8047629eca5a3eace3c9fe6b86a0418a260'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'build'
-vendor_sha256 = '4b8f4eb4167afe3373d82070487745a67efed209e4735231f208bb30c35c1fb3'
+vendor_sha256 = 'e1eea9ff4d526e1a68fc2e42f36a6d048d06ab452cd9f41d68da60727e590d6b'
 
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/mimi#.oku/go.toml'
-commit = '86776db3c80bb1ae2baadb8544cf4609302bdcbd'
+commit = '286ed8047629eca5a3eace3c9fe6b86a0418a260'
 manifest_sha256 = '850dfc0af428be9b5da144c08de9d6c247b2bd41a401c160d99a076a8ce62691'
-version = '1.26.10'
-tag = 'go1.26.10'
+version = '1.27.4'
+tag = 'go1.27.4'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.26.10.darwin-arm64.tar.gz'
-sha256 = '0b5183492292ada170f9b561a834863808dd02edba599e4ad0e89899330020b3'
+url = 'https://dl.google.com/go/go1.27.4.darwin-arm64.tar.gz'
+sha256 = '91a44a2b8a716600ad94a4f143e156116620db8828086a6e3602291be9bd0bb4'
 verified = 'checksum-file'
 
 [[package]]
@@ -2229,8 +2229,8 @@ sha256 = 'b98f2cc69fd9147fe4d405d859c57504571adec0d3611c3eefd04107c7ac00d0'
 name = 'mole'
 ref = './packages/mole.toml'
 manifest_sha256 = 'b3eab2b99ef01741e7a15eb8138099a633c61409907c5abbdfb39c0ab3b2b5da'
-version = '1.70.0'
-tag = 'V1.70.0'
+version = '1.71.0'
+tag = 'V1.71.0'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -2241,23 +2241,24 @@ vendor_sha256 = 'ee961e4b8c1997147aa3c8947fc8b7f037790d1a5d5eef04fcb0fffc16a00f2
 name = 'go'
 ref = './packages/go.toml'
 manifest_sha256 = '4e86afdeda4063d8c7cc15bedb7857112496c03e8608295229e30bd61a6dd9d8'
-version = '1.26.10'
-tag = 'go1.26.10'
+version = '1.26.11'
+tag = 'go1.26.11'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.26.10.darwin-arm64.tar.gz'
-sha256 = '0b5183492292ada170f9b561a834863808dd02edba599e4ad0e89899330020b3'
+url = 'https://dl.google.com/go/go1.26.11.darwin-arm64.tar.gz'
+sha256 = 'e3a42e67a7a8acf450ebada2b074c7ca863000ca514907b7185b45e8f5cdff57'
 verified = 'checksum-file'
 
 [[package]]
 name = 'neru'
-ref = './packages/neru.toml'
-manifest_sha256 = '7abde3d36999e494b1867a794c9a22b89bda68814ce9e5056dc65c7c13aa9e17'
-version = '2026.11.09-1a65ade'
-tag = 'feat/vim-screen-buffer'
-tag_commit = '1a65ade14946c71a8bb62db6b5684dda519553d8'
+ref = 'github:y3owk1n/neru#neru-main'
+commit = '0870c99efaefc77aa74d8d728ee5b2df05e41b63'
+manifest_sha256 = '67c24f88a5334434846662ce04a41e7c6dbb414ee27a89ec7e717a43213514a1'
+version = '2026.11.13-0870c99'
+tag = 'main'
+tag_commit = '0870c99efaefc77aa74d8d728ee5b2df05e41b63'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -2274,55 +2275,56 @@ vendor_sha256 = '4be056cfbb2b196654f8a8f53b44960b1d7d474817b0f9133a805392c135319
 
 [[package.dep]]
 name = 'go'
-ref = './packages/go.toml'
-manifest_sha256 = '4e86afdeda4063d8c7cc15bedb7857112496c03e8608295229e30bd61a6dd9d8'
-version = '1.27.3'
-tag = 'go1.27.3'
+ref = 'github:y3owk1n/neru#.oku/go.toml'
+commit = '0870c99efaefc77aa74d8d728ee5b2df05e41b63'
+manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
+version = '1.27.4'
+tag = 'go1.27.4'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.27.3.darwin-arm64.tar.gz'
-sha256 = 'dd3908cf20959d798c1e06ebe5b72213f0505ce01373b40ce3110975a6cd99c2'
+url = 'https://dl.google.com/go/go1.27.4.darwin-arm64.tar.gz'
+sha256 = '91a44a2b8a716600ad94a4f143e156116620db8828086a6e3602291be9bd0bb4'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.27.3.linux-amd64.tar.gz'
-sha256 = '65efbc80fdc1fa2cd2631cad5b481777a68e8725f34e89f50fc6ac714e379b40'
+url = 'https://dl.google.com/go/go1.27.4.linux-amd64.tar.gz'
+sha256 = '7226736c2339719cda28fbf3a54d71aa63bcefe376e98cef00034268dab24840'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.27.3.linux-arm64.tar.gz'
-sha256 = 'a06e99309dbcbdca1a8ccd2282c3ee146e55930886e26b4f1193269587165f49'
+url = 'https://dl.google.com/go/go1.27.4.linux-arm64.tar.gz'
+sha256 = '3392582988a273a87ab5043ee1b2c9c17a2c3c00580bf9326c47a2e0aaaeac92'
 verified = 'checksum-file'
 
 [[package]]
 name = 'nvim'
 ref = './packages/nvim.toml'
 manifest_sha256 = 'e3ae4d0f5cabfa79a7b360bbd09bcf50c508487ceff65665b86c01b6f7952b50'
-version = '2026.11.07-c868e1a'
+version = '2026.11.10-5a53f3b'
 tag = 'nightly'
-tag_commit = 'c868e1ab3d11ac2a0cc3c284b16808f3de5adf31'
+tag_commit = '5a53f3bb9e41e5d2866545323d6fd0d160dc31c4'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz'
-sha256 = 'a3e7851be5124bd55fac1de82ac1d4200fef4c7a3bf1805e5707067cb70b78a4'
+sha256 = '292ca53cf59302b07ad0f6a60d3c6c65a30128558bb5605397195680c983186f'
 verified = 'published'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz'
-sha256 = '25b78146d4d8772e47a07b101f76c14e1ac77e60dd09b455883a0deccc370978'
+sha256 = '87010a5bacf71b7c0179252397c2568195912cbe12bbc99ae082683cba3ecd85'
 verified = 'published'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
 url = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-arm64.tar.gz'
-sha256 = 'ba03a92ab0f20da9cbc532cd74068d7e94011d255a494941ff9e5da051a0bb88'
+sha256 = '1d35e2ff55be37c3cc9bd778a0490f0c28ad55356caf59d66b2b066ba02099bc'
 verified = 'published'
 
 [[package]]
@@ -3938,52 +3940,52 @@ vendor_sha256 = '62fc7f6aa5bf2da521ef14c26b703fe3367f7dd7a1023cff97104216eb30fe6
 name = 'node'
 ref = './packages/node.toml'
 manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
-version = '22.23.4'
-tag = 'v22.23.4'
+version = '22.23.5'
+tag = 'v22.23.5'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-darwin-arm64.tar.gz'
-sha256 = 'c9e1dbc748b33ed2d14f42445191ecaf14c56259c7a9a26d0042c49ec2b66428'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-darwin-arm64.tar.gz'
+sha256 = 'e7131995759b61a0170b646010d2ad35a5d37b4cb0d471f3e8317eac6f742f3d'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-x64.tar.gz'
-sha256 = 'b8492284c76a54baf58d61668dd0e41ee0fc98adabf9503d30f05d08f55b4406'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-x64.tar.gz'
+sha256 = 'c54118104acc524633b5abe106bbf44a53126ec8b4e5fa105cb92b5d7de8a1a1'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-arm64.tar.gz'
-sha256 = 'f7a1e486dbc8b286847815b477d4fb5e9fb963ed4489c3e1588853d685f589f9'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-arm64.tar.gz'
+sha256 = '8bd3dc69eee8f3f226315a80d7d1d4faccf217a4c8fae500168ac2e38f3bdba3'
 verified = 'checksum-file'
 
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
 manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
-version = '22.23.4'
-tag = 'v22.23.4'
+version = '22.23.5'
+tag = 'v22.23.5'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-darwin-arm64.tar.gz'
-sha256 = 'c9e1dbc748b33ed2d14f42445191ecaf14c56259c7a9a26d0042c49ec2b66428'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-darwin-arm64.tar.gz'
+sha256 = 'e7131995759b61a0170b646010d2ad35a5d37b4cb0d471f3e8317eac6f742f3d'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-x64.tar.gz'
-sha256 = 'b8492284c76a54baf58d61668dd0e41ee0fc98adabf9503d30f05d08f55b4406'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-x64.tar.gz'
+sha256 = 'c54118104acc524633b5abe106bbf44a53126ec8b4e5fa105cb92b5d7de8a1a1'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-arm64.tar.gz'
-sha256 = 'f7a1e486dbc8b286847815b477d4fb5e9fb963ed4489c3e1588853d685f589f9'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-arm64.tar.gz'
+sha256 = '8bd3dc69eee8f3f226315a80d7d1d4faccf217a4c8fae500168ac2e38f3bdba3'
 verified = 'checksum-file'
 
 [[package]]
@@ -4105,9 +4107,9 @@ strategy = 'build'
 name = 'skills-caveman'
 ref = './packages/skills-caveman.toml'
 manifest_sha256 = 'b537c338347eeb91180d1e710d8001df8043f5cf13ddcffb8762a65d840f2715'
-version = '2026.11.09-3dc497a'
+version = '2026.11.12-f5523a8'
 tag = 'main'
-tag_commit = '3dc497a7f858c774d6e15b25e8c6120ef3a0eda8'
+tag_commit = 'f5523a8e7bd09c30a2e218ca1afe7a1dab5c09ce'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4123,9 +4125,9 @@ strategy = 'build'
 name = 'skills-cursor'
 ref = './packages/skills-cursor.toml'
 manifest_sha256 = 'f14e9e0ad27c8f08839e713b96fadd53b11a7d4c53e662980666d0dcfd6c310e'
-version = '2026.11.07-6b03002'
+version = '2026.11.12-ec56937'
 tag = 'main'
-tag_commit = '6b0300214a09fd6029cfb7077043125758cd1fd2'
+tag_commit = 'ec569379616a4826b98f0f0a205dd3411b573611'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4141,9 +4143,9 @@ strategy = 'build'
 name = 'skills-emil'
 ref = './packages/skills-emil.toml'
 manifest_sha256 = '088a5cf1c5645235c33a1dd2a1d6aa9d2377dc8ed319c13ff4ff23d7b2e72119'
-version = '2026.11.09-715c180'
+version = '2026.11.12-f7ce8c0'
 tag = 'main'
-tag_commit = '715c1807e08c497cfd1dc4feb450a2a3300ef2a9'
+tag_commit = 'f7ce8c02d6e3c8f0d980a44c57bcc41a40254349'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4159,9 +4161,9 @@ strategy = 'build'
 name = 'skills-shadcn'
 ref = './packages/skills-shadcn.toml'
 manifest_sha256 = '7fba70fc11069a991452cc72d0a8a6cd292c9574f4c11c4e0ae4f07041f21dc0'
-version = '2026.11.08-8ab2771'
+version = '2026.11.11-dd41d19'
 tag = 'main'
-tag_commit = '8ab27715521cbd4f87ae6886cd989cbb678f6de7'
+tag_commit = 'dd41d19e2f80ff6891951f7ced74c2c9a650b065'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4176,7 +4178,7 @@ strategy = 'build'
 [[package]]
 name = 'sops'
 ref = 'github:getsops/sops'
-commit = 'cbb1216640c95c11f55a7e091ffa2748a319d4d8'
+commit = '9aa10f12bcd82400b7eb73331dd7a87a93bb17f7'
 manifest_sha256 = '15d32539c7533f6d4072a2cf2b4793251c7d8f2d825b1050855a5d7047f45ded'
 version = '3.13.3'
 tag = 'v3.13.3'
@@ -4234,30 +4236,30 @@ commands = true
 [[package]]
 name = 'stripe-cli'
 ref = 'github:stripe/stripe-cli'
-commit = '2ad4184bca509810ddaf087911bd2069cf8d1eed'
+commit = '8f629abe7dda19fd489165cfcd4dfa38d85e2302'
 manifest_sha256 = 'a1f28c24ef1e91ac3473c88a3cb28701a1706ba4c39c75984e6bc89727d1e047'
-version = '1.55.8'
-tag = 'v1.55.8'
+version = '1.55.11'
+tag = 'v1.55.11'
 inferred = true
 manifest = "[package]\nname = \"stripe-cli\"\nhomepage = \"https://github.com/stripe/stripe-cli\"\n\n[version]\nfrom = \"github-releases\"\nrepo = \"stripe/stripe-cli\"\nstrip_prefix = \"v\"\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"amd64\" }\nurl = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe_{{version}}_linux_x86_64.tar.gz\"\nsha256_url = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe-linux-checksums.txt\"\nbin = [\"stripe\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"amd64\" }\nurl = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe_{{version}}_mac-os_x86_64.tar.gz\"\nsha256_url = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe-mac-checksums.txt\"\nbin = [\"stripe\"]\n\n[[artifact]]\nmatch = { os = \"linux\", arch = \"arm64\" }\nurl = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe_{{version}}_linux_arm64.tar.gz\"\nsha256_url = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe-linux-checksums.txt\"\nbin = [\"stripe\"]\n\n[[artifact]]\nmatch = { os = \"darwin\", arch = \"arm64\" }\nurl = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe_{{version}}_mac-os_arm64.tar.gz\"\nsha256_url = \"https://github.com/stripe/stripe-cli/releases/download/{{tag}}/stripe-mac-checksums.txt\"\nbin = [\"stripe\"]\n"
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://github.com/stripe/stripe-cli/releases/download/v1.55.8/stripe_1.55.8_mac-os_arm64.tar.gz'
-sha256 = '7e38bc433b869dd93e7dc6fc342623f2283d76eb196f0b2586b858a462ff298a'
+url = 'https://github.com/stripe/stripe-cli/releases/download/v1.55.11/stripe_1.55.11_mac-os_arm64.tar.gz'
+sha256 = '0b78f1bc5efb7c7b00cf5e5cddd673d674a030b68dd7a6f025ff180f67154502'
 verified = 'checksum-file'
 
 [package.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/stripe/stripe-cli/releases/download/v1.55.8/stripe_1.55.8_linux_x86_64.tar.gz'
-sha256 = 'a5ee5994bc87f1e9a5557dfb25f6f34d52fc7081756efa4da2d695581c671aec'
+url = 'https://github.com/stripe/stripe-cli/releases/download/v1.55.11/stripe_1.55.11_linux_x86_64.tar.gz'
+sha256 = 'c710bdb63045ea8e4c3d218efe4c269a90a32bd807c1306a29438e54f80bcfdc'
 verified = 'checksum-file'
 
 [package.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://github.com/stripe/stripe-cli/releases/download/v1.55.8/stripe_1.55.8_linux_arm64.tar.gz'
-sha256 = '55bf211b2fcd5f58d751f238b518a8f661b4be612d68595d30db420dad961fe7'
+url = 'https://github.com/stripe/stripe-cli/releases/download/v1.55.11/stripe_1.55.11_linux_arm64.tar.gz'
+sha256 = '026132ef249b838734df3fa21f41d5b637101c09ccb287015f5bd12df60f38fe'
 verified = 'checksum-file'
 
 [[package]]
@@ -4290,13 +4292,13 @@ verified = 'checksum-file'
 name = 'tailscale-app'
 ref = './packages/tailscale.toml'
 manifest_sha256 = '4201aee4a64a6af359fb98f3070236e360ddfb9e1f92b590577c4a6369b56a0f'
-version = '1.104.5'
+version = '1.104.6'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://pkgs.tailscale.com/stable/Tailscale-1.104.5-macos.pkg'
-sha256 = 'f1a2afb589dc16487cff9f23c59d0021a1a4dcf8476d2637ab493c628422b810'
+url = 'https://pkgs.tailscale.com/stable/Tailscale-1.104.6-macos.pkg'
+sha256 = '6933e28302e5692a4be78da1a2e178445eb6e9d5539197647e64f187d5682c53'
 verified = 'first-use'
 
 [[package]]
@@ -4327,7 +4329,7 @@ verified = 'first-use'
 [[package]]
 name = 'tinygo'
 ref = 'github:y3owk1n/fude#.oku/tinygo.toml'
-commit = 'a6cc9b83a5449ded91c0c2e24d8e7bfa14a9ef37'
+commit = 'c6a6b0543849745e98ed04d484e73d3c3ca5ab43'
 manifest_sha256 = '04dabcfad170880f2d1a5a020e7b9b89faa843fb46a4079ad3da5101c6a39542'
 version = '0.43.0'
 tag = 'v0.43.0'
@@ -4840,11 +4842,11 @@ verified = 'published'
 [[package]]
 name = 'uts'
 ref = 'github:y3owk1n/uts#uts-main'
-commit = '37ccbafa43be3cbd31ca8c07301b058ec199d9de'
+commit = '99247a60115ed55a47a245a90d698940523741f1'
 manifest_sha256 = 'cd33e4dfb3bbd211ed4b99d1affae910ae280f0b7714769148165908285231ed'
-version = '2026.11.05-37ccbaf'
+version = '2026.11.10-99247a6'
 tag = 'main'
-tag_commit = '37ccbafa43be3cbd31ca8c07301b058ec199d9de'
+tag_commit = '99247a60115ed55a47a245a90d698940523741f1'
 
 [package.platform]
 [package.platform.darwin-arm64]
@@ -4862,28 +4864,28 @@ vendor_sha256 = 'bbd624ed59a208513a0d851a7df4704125ddde7fa8a6093dc1352f91ff5919d
 [[package.dep]]
 name = 'go'
 ref = 'github:y3owk1n/uts#.oku/go.toml'
-commit = '37ccbafa43be3cbd31ca8c07301b058ec199d9de'
+commit = '99247a60115ed55a47a245a90d698940523741f1'
 manifest_sha256 = '2022b9ea9d9e33afb9ca6a565a6ec9b4655f57311f5c8db4f0a5d6fe81b191ae'
-version = '1.26.10'
-tag = 'go1.26.10'
+version = '1.26.11'
+tag = 'go1.26.11'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.26.10.darwin-arm64.tar.gz'
-sha256 = '0b5183492292ada170f9b561a834863808dd02edba599e4ad0e89899330020b3'
+url = 'https://dl.google.com/go/go1.26.11.darwin-arm64.tar.gz'
+sha256 = 'e3a42e67a7a8acf450ebada2b074c7ca863000ca514907b7185b45e8f5cdff57'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.26.10.linux-amd64.tar.gz'
-sha256 = 'ccfe7ae822d2c2f41f4fe7c956199967a4dac22d0ee0d2b2bfdb440aab3b20c5'
+url = 'https://dl.google.com/go/go1.26.11.linux-amd64.tar.gz'
+sha256 = '9849f4e04ee35303714e34fbc3ac8ab44ea3e448a95aa182f91e3b9b79c710ec'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://dl.google.com/go/go1.26.10.linux-arm64.tar.gz'
-sha256 = '3f4227ce7b206a513e794f1393adb473a07b46e94d18bd15d1c684bbb7319797'
+url = 'https://dl.google.com/go/go1.26.11.linux-arm64.tar.gz'
+sha256 = '6c2f29b458b5add0835f18b776f69c8881a6d88428f1484a6da55755e620757e'
 verified = 'checksum-file'
 
 [[package]]
@@ -5256,65 +5258,65 @@ vendor_sha256 = '82e13674de56d0089177cffec31095ae9cf58cfc0d9d18a850e306178f24632
 name = 'node'
 ref = './packages/node.toml'
 manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
-version = '22.23.4'
-tag = 'v22.23.4'
+version = '22.23.5'
+tag = 'v22.23.5'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-darwin-arm64.tar.gz'
-sha256 = 'c9e1dbc748b33ed2d14f42445191ecaf14c56259c7a9a26d0042c49ec2b66428'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-darwin-arm64.tar.gz'
+sha256 = 'e7131995759b61a0170b646010d2ad35a5d37b4cb0d471f3e8317eac6f742f3d'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-x64.tar.gz'
-sha256 = 'b8492284c76a54baf58d61668dd0e41ee0fc98adabf9503d30f05d08f55b4406'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-x64.tar.gz'
+sha256 = 'c54118104acc524633b5abe106bbf44a53126ec8b4e5fa105cb92b5d7de8a1a1'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-arm64.tar.gz'
-sha256 = 'f7a1e486dbc8b286847815b477d4fb5e9fb963ed4489c3e1588853d685f589f9'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-arm64.tar.gz'
+sha256 = '8bd3dc69eee8f3f226315a80d7d1d4faccf217a4c8fae500168ac2e38f3bdba3'
 verified = 'checksum-file'
 
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
 manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
-version = '22.23.4'
-tag = 'v22.23.4'
+version = '22.23.5'
+tag = 'v22.23.5'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-darwin-arm64.tar.gz'
-sha256 = 'c9e1dbc748b33ed2d14f42445191ecaf14c56259c7a9a26d0042c49ec2b66428'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-darwin-arm64.tar.gz'
+sha256 = 'e7131995759b61a0170b646010d2ad35a5d37b4cb0d471f3e8317eac6f742f3d'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-x64.tar.gz'
-sha256 = 'b8492284c76a54baf58d61668dd0e41ee0fc98adabf9503d30f05d08f55b4406'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-x64.tar.gz'
+sha256 = 'c54118104acc524633b5abe106bbf44a53126ec8b4e5fa105cb92b5d7de8a1a1'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-arm64.tar.gz'
-sha256 = 'f7a1e486dbc8b286847815b477d4fb5e9fb963ed4489c3e1588853d685f589f9'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-arm64.tar.gz'
+sha256 = '8bd3dc69eee8f3f226315a80d7d1d4faccf217a4c8fae500168ac2e38f3bdba3'
 verified = 'checksum-file'
 
 [[package]]
 name = 'whatsapp'
 ref = './packages/whatsapp.toml'
 manifest_sha256 = '899c45c2fb9ba4689b30e5aa2d93d556606c3cf234030f31f378111ac8ee6b96'
-version = '26.45.13'
+version = '26.45.21'
 
 [package.platform]
 [package.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://web.whatsapp.com/desktop/mac_native/release/?version=2.26.45.13&extension=zip&configuration=Release&branch=master&is_buck=true'
-sha256 = '29c12f980448668107782f6f1b52fe28f60e8a6729032177f6002eedd917cb3f'
+url = 'https://web.whatsapp.com/desktop/mac_native/release/?version=2.26.45.21&extension=zip&configuration=Release&branch=master&is_buck=true'
+sha256 = '27e43197d81bbb33e3f695fa1fe2ba3956618499a2be92caacbeca1c748ccde8'
 verified = 'first-use'
 
 [[package]]
@@ -5368,52 +5370,52 @@ vendor_sha256 = 'd7884bc6cf857e81c461caae7f635cf34875a0064c01b0485bb6b53536d47fc
 name = 'node'
 ref = './packages/node.toml'
 manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
-version = '22.23.4'
-tag = 'v22.23.4'
+version = '22.23.5'
+tag = 'v22.23.5'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-darwin-arm64.tar.gz'
-sha256 = 'c9e1dbc748b33ed2d14f42445191ecaf14c56259c7a9a26d0042c49ec2b66428'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-darwin-arm64.tar.gz'
+sha256 = 'e7131995759b61a0170b646010d2ad35a5d37b4cb0d471f3e8317eac6f742f3d'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-x64.tar.gz'
-sha256 = 'b8492284c76a54baf58d61668dd0e41ee0fc98adabf9503d30f05d08f55b4406'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-x64.tar.gz'
+sha256 = 'c54118104acc524633b5abe106bbf44a53126ec8b4e5fa105cb92b5d7de8a1a1'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-arm64.tar.gz'
-sha256 = 'f7a1e486dbc8b286847815b477d4fb5e9fb963ed4489c3e1588853d685f589f9'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-arm64.tar.gz'
+sha256 = '8bd3dc69eee8f3f226315a80d7d1d4faccf217a4c8fae500168ac2e38f3bdba3'
 verified = 'checksum-file'
 
 [[package.dep]]
 name = 'node'
 ref = './packages/node.toml'
 manifest_sha256 = 'dac06b5356b71310287375b86870692576109d54d5cca334ee7c9b039722e572'
-version = '22.23.4'
-tag = 'v22.23.4'
+version = '22.23.5'
+tag = 'v22.23.5'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-darwin-arm64.tar.gz'
-sha256 = 'c9e1dbc748b33ed2d14f42445191ecaf14c56259c7a9a26d0042c49ec2b66428'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-darwin-arm64.tar.gz'
+sha256 = 'e7131995759b61a0170b646010d2ad35a5d37b4cb0d471f3e8317eac6f742f3d'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-amd64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-x64.tar.gz'
-sha256 = 'b8492284c76a54baf58d61668dd0e41ee0fc98adabf9503d30f05d08f55b4406'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-x64.tar.gz'
+sha256 = 'c54118104acc524633b5abe106bbf44a53126ec8b4e5fa105cb92b5d7de8a1a1'
 verified = 'checksum-file'
 
 [package.dep.platform.linux-arm64-glibc]
 strategy = 'artifact'
-url = 'https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-arm64.tar.gz'
-sha256 = 'f7a1e486dbc8b286847815b477d4fb5e9fb963ed4489c3e1588853d685f589f9'
+url = 'https://nodejs.org/dist/v22.23.5/node-v22.23.5-linux-arm64.tar.gz'
+sha256 = '8bd3dc69eee8f3f226315a80d7d1d4faccf217a4c8fae500168ac2e38f3bdba3'
 verified = 'checksum-file'
 
 [[package]]
@@ -5463,8 +5465,8 @@ strategy = 'build'
 name = 'lz4'
 ref = './packages/lz4.toml'
 manifest_sha256 = '0f4bf67abebf77f5ce4beca19bfd4ab1b4d01925cfcb1e2cfa8d8dae3fcb92db'
-version = '1.11.0'
-tag = 'v1.11.0'
+version = '1.11.1'
+tag = 'v1.11.1'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
@@ -5480,8 +5482,8 @@ strategy = 'build'
 name = 'lz4'
 ref = './packages/lz4.toml'
 manifest_sha256 = '0f4bf67abebf77f5ce4beca19bfd4ab1b4d01925cfcb1e2cfa8d8dae3fcb92db'
-version = '1.11.0'
-tag = 'v1.11.0'
+version = '1.11.1'
+tag = 'v1.11.1'
 
 [package.dep.platform]
 [package.dep.platform.darwin-arm64]
