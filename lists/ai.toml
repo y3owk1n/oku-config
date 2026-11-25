@@ -8,6 +8,7 @@ skills-anthropic = "../packages/skills-anthropic.toml"
 skills-caveman = "../packages/skills-caveman.toml"
 skills-cursor = "../packages/skills-cursor.toml"
 skills-emil = "../packages/skills-emil.toml"
+skills-mblode = "../packages/skills-mblode.toml"
 skills-shadcn = "../packages/skills-shadcn.toml"
 
 [files]
@@ -45,4 +46,5 @@ skills-shadcn = "../packages/skills-shadcn.toml"
 "{{home}}/.claude/skills/emil_find-animation-opportunities" = { link = "{{pkg.skills-emil}}/skills/find-animation-opportunities", also = ["{{home}}/.agents/skills/emil_find-animation-opportunities", "{{config}}/opencode/skills/emil_find-animation-opportunities"] }
 "{{home}}/.claude/skills/emil_improve-animations" = { link = "{{pkg.skills-emil}}/skills/improve-animations", also = ["{{home}}/.agents/skills/emil_improve-animations", "{{config}}/opencode/skills/emil_improve-animations"] }
 "{{home}}/.claude/skills/emil_prototype" = { link = "{{pkg.skills-emil}}/skills/prototype", also = ["{{home}}/.agents/skills/emil_prototype", "{{config}}/opencode/skills/emil_prototype"] }
+"{{home}}/.claude/skills/mblode_test-audit" = { link = "{{pkg.skills-mblode}}/skills/test-audit", also = ["{{home}}/.agents/skills/mblode_test-audit", "{{config}}/opencode/skills/mblode_test-audit"] }
 "{{home}}/.claude/skills/shadcn_shadcn" = { link = "{{pkg.skills-shadcn}}/skills/shadcn", also = ["{{home}}/.agents/skills/shadcn_shadcn", "{{config}}/opencode/skills/shadcn_shadcn"] }

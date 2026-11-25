@@ -1,0 +1,34 @@
+# Agent skills from github.com/mblode/agent-skills, following its main branch.
+# oku.lock records the commit, so every machine links the same files.
+# `oku update skills-mblode` takes the newest commit.
+
+[package]
+name = "skills-mblode"
+description = "Agent skills from the mblode/agent-skills repo"
+homepage = "https://github.com/mblode/agent-skills"
+
+[version]
+from = "git-branch"
+repo = "https://github.com/mblode/agent-skills"
+branch = "main"
+
+# What the build needs of the machine, which oku checks and does not install.
+# The Command Line Tools give macOS its compiler, make and git. On Linux
+# bootstrap/linux.sh installs these packages.
+[host]
+xcode-clt = { path = "/Library/Developer/CommandLineTools/usr/bin/clang", install = "xcode-select --install", when = { os = "darwin" } }
+git = { command = "git", apt = "git", dnf = "git", pacman = "git", when = { os = "linux" } }
+
+# The package only holds files. lists/ai.toml links the skills out of it.
+[build]
+needs = ["git"]
+source = { git = "https://github.com/mblode/agent-skills", tag = "{{tag}}" }
+when = [{ os = "darwin" }, { os = "linux" }]
+
+[[build.step]]
+run = """
+set -eu
+rm -rf .git
+cp -R . {{prefix}}
+"""
+shell = "sh"
