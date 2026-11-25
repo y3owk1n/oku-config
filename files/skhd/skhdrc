@@ -12,11 +12,11 @@
 
 # launchers
 hyper - f : @open("finder")
-hyper - b : @open("safari")
+# hyper - b : @open("safari")
 # hyper - b : @open("helium")
 # hyper - b : @open("Brave Browser")
-# hyper - b : @open("firefox")
-hyper - t : @open("Rex Beta")
+hyper - b : @open("firefox")
+hyper - t : @open("Rex")
 hyper - n : @open("notes")
 hyper - r : @open("reminders")
 hyper - m : @open("mail")
